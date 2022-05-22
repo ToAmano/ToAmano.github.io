@@ -1,10 +1,17 @@
-# wannier90 install to ohtaka
+# wannier90 installation
 
-2022/5/18 wannier90をohtakaへinstall
+## 日付：2022/5/18
+## 
+
+## 状況
+Quantum Espresso v7.0に付属してくるWannier90をIntel Compilerでinstallしたが，実行時にforttlから警告文が出るのでWannier90だけ別途インストールした．
+
+## 環境
+
 
 # インストール手順
 
-インストールの手順は単純だった．基本的はinstall.READMEに書いてある通り．
+インストールはmakeを利用して行う．基本的はinstall.READMEに書いてある通り．
 
 ```bash
 cp ./config/make.inc.ifort ./make.inc
@@ -40,7 +47,7 @@ LIBS   =  -L$(LIBDIR) -lmkl_core -lmkl_intel_lp64 -lmkl_sequential -lpthread
 #LIBS = -L$(LIBDIR)  -llapack -lf77blas -lcblas -latlas
 ```
 
-今回は`LIBDIR` をmodule load intelに対応する形に変更．ちなみにMKLROOTは自動でloadされていた．
+環境にあわせて`LIBDIR` を変更する．
 
 ```bash
 echo ${MKLROOT}
@@ -55,11 +62,5 @@ makeの実行
 make all -j 4
 ```
 
-## pw2wannier90.xのコンパイル
-
+## 注意：pw2wannier90.xについて
 make allではpw2wannierはinstallできない．そこでpw2wannier90.xについてはQE付属のものを利用する．詳細はQEのinstallのページを参照．
-
-↓ これをmakefileに追加しても失敗した．残念．
-
-pw2wannier: objdir serialobjs
-(cd $(ROOTDIR)/pwscf/v6.4 && $(MAKE) -f $(REALMAKEFILE) pw2wannier)

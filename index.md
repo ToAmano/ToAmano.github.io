@@ -31,7 +31,20 @@ For more details see [Basic writing and formatting syntax](https://docs.github.c
 
 ### software installation
 
-[Link](wannier90 install to ohtaka 2c985be4302e4aa48a93baeea6ecf05d.md)
+[QuantumEspresso with Intel Compiler]
+[Wannier90 with Intel Compiler](wannier90 install to ohtaka 2c985be4302e4aa48a93baeea6ecf05d.md)
+[VASP with Intel Compiler]
+
+
+### Coding/Software
+[Emacs]
+[Python]
+
+
+### Mathematics/Physics
+
+
+
 
 ### Jekyll Themes
 
