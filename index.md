@@ -43,15 +43,19 @@ For more details see [Basic writing and formatting syntax](https://docs.github.c
 1. [Emacs]
 2. [Python]
 3. [bash]
-4. [LaTeX](latex.md)
+4. [LaTeX](latex/latex_top.md)
 
 
 ### Mathematics/Physics
-1. [VASP](physics/vasp/vasp_top.md)
+1. [physics](physics/physics/physics_top.md)
 
-2. [QE](physics/qe/qe_top.md)
+2. [VASP](physics/vasp/vasp_top.md)
+
+3. [QE](physics/qe/qe_top.md)
 
 
+
+### 
 
 
 <!--
