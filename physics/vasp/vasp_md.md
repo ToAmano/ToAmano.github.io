@@ -17,6 +17,7 @@
 MD計算で得られたXDATCARを利用する前に，計算が正常に行われているか確認することが必要である．OUTCARやREPORTファイルからこれらの情報を抽出して計算をモニタリングすることが可能である．
 
 1. エネルギーの変化
+
 ``` bash
 # extract energy from OUTCAR 
 grep "free  energy" OUTCAR|awk ' {print $5}' > energy.dat
@@ -26,6 +27,7 @@ gnuplot -e "set terminal jpeg; set xlabel 'N_{step}'; set ylabel 'Total energy (
 ```
 
 2. 温度の変化
+
 ```bash
 # extract temperature from REPORT
 grep " tmprt>" REPORT|awk ' {print $2, $3}' > temperature.dat
