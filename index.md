@@ -40,11 +40,13 @@ For more details see [Basic writing and formatting syntax](https://docs.github.c
 
 
 ### Coding/Software
-1. [Emacs]
-2. [Python]
+1. [Python]
+2. [C/C++]
 3. [bash]
 4. [LaTeX](latex/latex_top.md)
-
+5. [Emacs]
+6. [gnuplot]
+7. [github]
 
 ### Mathematics/Physics
 1. [physics](physics/physics/physics_top.md)
