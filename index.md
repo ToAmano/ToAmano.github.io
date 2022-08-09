@@ -56,7 +56,6 @@ For more details see [Basic writing and formatting syntax](https://docs.github.c
 3. [QE](physics/qe/qe_top.md)
 
 
-
 ### 
 
 
