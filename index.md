@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## Welcome 
 
 <!-- 
 You can use the [editor on GitHub](https://github.com/dirac6582/homepage.io/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
@@ -42,11 +42,11 @@ For more details see [Basic writing and formatting syntax](https://docs.github.c
 ### Coding/Software
 1. [Python]
 2. [C/C++]
-3. [bash]
+3. [bash](bash/bash_top.md)
 4. [LaTeX](latex/latex_top.md)
-5. [Emacs]
-6. [gnuplot]
-7. [github]
+5. [Emacs](emacs/emacs_top.md)
+6. [gnuplot](gnuplot/gnuplot_top.md)
+7. [github](github/github_top.md)
 
 ### Mathematics/Physics
 1. [physics](physics/physics/physics_top.md)
@@ -56,7 +56,7 @@ For more details see [Basic writing and formatting syntax](https://docs.github.c
 3. [QE](physics/qe/qe_top.md)
 
 
-### 
+### others
 
 
 <!--

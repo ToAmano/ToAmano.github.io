@@ -82,3 +82,12 @@ https://texblog.org/2007/08/01/placing-figurestables-side-by-side-minipage/
 https://zenn.dev/junkato/articles/github-actions-to-generate-pdfs-for-pages
 
 
+
+## 化学式を描く
+<!-- https://aprikose.sumomo.ne.jp/madchemiker/latex/chemfig/chemfig1/ -->
+TikZをベースとした`chemfig`パッケージがある．
+```tex
+% ベンゼンの例
+\usepackage{chemfig}
+\chemfig{*6(-=-=-=)} 
+```

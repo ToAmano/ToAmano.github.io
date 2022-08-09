@@ -28,6 +28,11 @@ https://tex.stackexchange.com/questions/14506/pgfplots-prevent-single-plot-from-
 https://tex.stackexchange.com/questions/6114/hide-tick-numbers-in-a-tikz-pgf-axis-environment
 yticklabels
 
+
+### 複数の図を入れる
+https://tex.stackexchange.com/questions/457844/align-two-tikz-pictures-vertically-in-standalone-environment
+
+
 ## compileをスピードアップする．
 
 https://tex.stackexchange.com/questions/45/how-to-speed-up-latex-compilation-with-several-tikz-pictures
