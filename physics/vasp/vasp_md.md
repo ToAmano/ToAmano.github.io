@@ -18,7 +18,7 @@ MD計算で得られたXDATCARを利用する前に，計算が正常に行わ�
 
 1. エネルギーの変化
 
-``` bash
+```bash
 # extract energy from OUTCAR 
 grep "free  energy" OUTCAR|awk ' {print $5}' > energy.dat
 
