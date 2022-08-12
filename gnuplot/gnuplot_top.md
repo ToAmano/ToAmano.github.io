@@ -1,5 +1,13 @@
 # gnuplot
 
+
+## 設定ファイル
+gnuplotの設定ファイルは`.gnuplot`である．pathについては
+```gnuplot
+show loadpath
+```
+
+
 ## 軸の設定について
 
 ### ラベルがはみ出す

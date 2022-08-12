@@ -29,7 +29,7 @@ latexmkとはTeXからPDFファイルを作成するまでの流れを自動で�
 
 <!--http://www2.yukawa.kyoto-u.ac.jp/~koudai.sugimoto/dokuwiki/doku.php?id=latex:latexmk%E3%81%AE%E8%A8%AD%E5%AE%9A
 -->
-
+<!-- https://sites.google.com/site/lifeslash7830/home/tex/latexmkdeshittashedingnitsuite -->
 
 
 
@@ -73,8 +73,14 @@ https://tex.stackexchange.com/questions/141363/draw-realistic-3d-crystal-structu
 [asymptote公式マニュアル](https://asymptote.sourceforge.io/asymptote.pdf)
 
 
+## スライド資料を作成する．
+スライド資料を作るdocumentclassとして，beamerがある．
+<!-- https://qiita.com/sh05_sh05/items/3d7ea00c97971de15851
+https://risa.is.tokushima-u.ac.jp/~tetsushi/howtomakeslides.pdf
+-->
+
 ## minipage
-<!--
+<!-- 
 https://texblog.org/2007/08/01/placing-figurestables-side-by-side-minipage/
 -->
 

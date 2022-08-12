@@ -57,7 +57,8 @@ For more details see [Basic writing and formatting syntax](https://docs.github.c
 
 
 ### others
-
+[その他のソフトウェアなど](others/others_top.md)
+[MacのOSXのソフトなど](mac/mac_top.md)
 
 <!--
 ### Jekyll Themes

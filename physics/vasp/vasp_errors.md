@@ -124,3 +124,12 @@ ALGOをDからNへ変更する．
 
 
 [EFIELD_PEAD](https://www.vasp.at/wiki/index.php/EFIELD_PEAD)
+
+
+## ZBRENT: fatal error in bracketing please rerun with smaller EDIFF, or copy CONTCAR to POSCAR and continue
+
+[My Community](https://www.vasp.at/forum/viewtopic.php?t=9233)
+
+## Error EDDDAV: Call to ZHEGV failed. Returncode = 31 1 32
+
+[https://www.vasp.at/forum/viewtopic.php?f=2&t=10409&p=10434](https://www.vasp.at/forum/viewtopic.php?f=2&t=10409&p=10434)
