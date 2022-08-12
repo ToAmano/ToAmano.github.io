@@ -72,6 +72,11 @@ mergeに失敗した場合
 git merge --abort
 ```
 
+## ローカルのリモートブランチ（）を最新化
+```git
+git fetch
+```
+
 ## リモートのブランチ一覧
 ```bash
 #ローカルのブランチ一覧
@@ -106,5 +111,8 @@ $ git branch -d issue
 ```
 6. github上でissueを閉じる．
 
+
 ## vscodeとの連携
-ブランチをグラフで確認できる拡張機能`git graph`が便利．
+
+1. ブランチをグラフで確認できる拡張機能`git graph`
+1. コミット履歴を
