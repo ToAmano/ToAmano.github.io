@@ -121,3 +121,64 @@ file --mime hoge.php
 ```bash
 lsof -i -P | grep 8080
 ```
+
+
+## 色付け
+<!-- https://fhiyo.github.io/2017/11/14/colorize-terminal-output.html -->
+シェルの出力を色付けする方法について．基本的にはhomebrewから新しくコマンドをinstallしてくる必要がある．
+
+1. ls
+
+まずは気に入ったカラーテーマの設定ファイルを設定ファイルをダウンロードしてくる必要がある．
+```bash
+dircolorsPATH=/path/to/dircolors.ansi-modify-dark
+#以下で読み込み
+if [ -f  ${dircolorsPATH} ];then
+    if type dircolors >/dev/null 2>&1;then
+        eval $(dircolors ${dircolorsPATH} )
+    elif type gdircolors >/dev/null 2>&1;then
+        eval $(gdircolors ${dircolorsPATH} )
+    fi
+else
+    echo error DO NOT exist ${dircolorsPATH}
+fi
+```
+
+デフォルトのbsd系のlsではなく，gnu-lsをインストールしてくる．
+```
+brew install gls
+```
+この状態で`ls`と打つと`gls`の方を実行してくれる．
+
+2. cat 
+ccat(colorlized cat)をインストールする．
+```bash
+brew install ccat
+```
+
+3. [grc(ping/makeなど)](https://github.com/garabik/grc)
+grcというパッケージがあり，これで多くのコマンドの出力に色をつけることができる．
+```bash
+brew install grc
+```
+grcコマンドとgrcatという二つのコマンドがインストールされ，
+自動で各種コマンドへのAliasを通すには
+```bash
+[[ -s "${HOMEBREW_HOME}/etc/grc.zsh" ]] && source ${HOMEBREW_HOME}/etc/grc.zsh
+```
+を.zshrcに追記する．より細かいカスタマイズがやりたい場合はgithubページを参照．
+
+
+4. diff
+colordiffをインストールする．
+```bash
+brew install colordiff
+```
+
+5. less
+<!-- https://atmarkit.itmedia.co.jp/flinux/rensai/linuxtips/357colorlsless.html
+ -->
+grcでサポートされておらず，source-highlightを利用する．
+```bash
+brew install source-highlight
+```

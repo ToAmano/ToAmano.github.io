@@ -24,6 +24,9 @@ MacTeXの特徴として，
 1. パスを通す(nessesary)
 
 
+
+
+
 1. latexmk(option)
 latexmkとはTeXからPDFファイルを作成するまでの流れを自動で行ってくれるもの．例えばTeX文書が参考文献を含む場合にはPDFファイルを作成するには複数回コンパイルが必要であるが，latexmkはこの複数回のコンパイルをコマンド一つで自動でやってくれる．コマンドはMacTeXのインストールで自動で入っているが，`.latexmkrc`という設定ファイルをホームディレクトリに設置する必要がある．TeXコンパイラとして何を利用するかで設定が異なる．
 
@@ -32,6 +35,7 @@ latexmkとはTeXからPDFファイルを作成するまでの流れを自動で�
 <!-- https://sites.google.com/site/lifeslash7830/home/tex/latexmkdeshittashedingnitsuite -->
 
 
+<!-- https://sites.google.com/site/lifeslash7830/home/tex/lualatexwoshittemiru -->
 
 
 ## predifinedな変数
