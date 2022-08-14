@@ -2,10 +2,14 @@
 
 
 ## zshの設定ファイル
+
 [zshの外部プラグインまとめ - Qiita](https://qiita.com/mollifier/items/1220c0eeaa93e82f8afc)
 
-
 [シェル出力に色をつける](https://fhiyo.github.io/2017/11/14/colorize-terminal-output.html)
+
+## dotfiles
+
+[dotfileの設定](dotfiles.md)
 
 
 ## 設定ファイルの読み込み
