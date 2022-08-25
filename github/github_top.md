@@ -85,17 +85,27 @@ git branch
 git branch -r
 ```
 
+## gitでコミット済のファイルを消去後に復活させる
+https://dbcls.rois.ac.jp/~yayamamo/fsyl/2014/06/git%E3%81%A7%E3%82%B3%E3%83%9F%E3%83%83%E3%83%88%E6%B8%88%E3%81%AE%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92%E6%B6%88%E5%8E%BB%E5%BE%8C%E3%81%AB%E5%BE%A9%E6%B4%BB%E3%81%95%E3%81%9B%E3%82%8B/
+```bash
+git rev-list -n 1 HEAD --
+```
+
 ## リモートのブランチAをローカルブランチBにpullする場合．
 <!-- https://qiita.com/hinatades/items/d47dec72a87c5fed50f7 -->
 ```bash
 git pull origin A:B
+```
+## ローカルブランチをリモートブランチAにpushする場合
+```
+git push origin A
 ```
 
 ## githubでの一人開発について
 <!-- https://qiita.com/braveryk7/items/5208263cd06a8878f0c2-->
 一人開発でもissueとpull-requestを活用することで進捗履歴を残すことができる．
 1. issueを立てる．Labelを作成して割り当てておくとよい．
-2. issueに対応するbranchを作成．branch名はissueの名前に対応しておくと良くて，例えば`features/hoge`のようにする．作業をしてpushまで行う．
+2. issueに対応するbranchをローカルに作成．branch名はissueの名前に対応しておくと良くて，例えば`features/hoge`のようにする．作業をしてpushまで行う．
 3. pushしたブランチに合わせてpull-requestを作る．
 4. mergeして，github上のbranchを削除．
 5. ローカルにmergeして，ローカルのbranchを削除．
@@ -112,7 +122,29 @@ $ git branch -d issue
 6. github上でissueを閉じる．
 
 
+## [A successful Git branching model](https://nvie.com/posts/a-successful-git-branching-model/)
+<!-- https://qiita.com/homhom44/items/9f13c646fa2619ae63d0 -->
+1. master
+   公開用（リモートにも存在）
+2. release
+   リリース直前の細かい作業
+3. hotfix
+   公開後の急を要するbugfix
+4. develop
+   開発用（リモートにも存在）
+5. feature
+   開発用，1つ1つの機能はこちらで実装
+
+
 ## vscodeとの連携
 
 1. ブランチをグラフで確認できる拡張機能`git graph`
 1. コミット履歴を
+1. 追加のさまざまなgit操作を可能にする`GitLens`
+
+<!-- https://qiita.com/y-tsutsu/items/2ba96b16b220fb5913be -->
+
+
+## 複数のgithubアカウントを使い分けたいとき
+<!-- https://zenn.dev/taichifukumoto/articles/how-to-use-multiple-github-accounts
+ -->

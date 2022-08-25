@@ -32,3 +32,9 @@
 【VASP+MD】WebofScience-新しいバージョンのVASPトラジェクトリファイルをGROMACS形式に変換する-LiJicunによるブログ投稿
 https://blog.sciencenet.cn/blog-548663-1077843.html
 -->
+
+
+<!--
+https://amorphous.tf.chiba-u.jp/memo.files/vasp/vasp.html
+https://jpdebug.com/p/2592083
+-->

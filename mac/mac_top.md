@@ -2,6 +2,9 @@
 
 
 
+## iterm
+
+[iterm](iterm.md)
 
 ## カレンダーに予報天気を表示する
 
@@ -35,3 +38,10 @@ chromeでは，/を押すと検索ボックスに移動できる．
 
 EMACSとCHROMEの連携
 [https://minorugh.xsrv.jp/post/2018/1203-emacs-chrome-together/](https://minorugh.xsrv.jp/post/2018/1203-emacs-chrome-together/)
+
+
+## 自分の設定したカスタムショトカまとめ
+
+- `cmd+space` :: alfread → これはまずspotlightのショトカなので，環境設定→キーボード→spotlightから無効化した上で設定．
+- `shif+space`   :: Things
+- `shift+return` :: iterm2 hotkey

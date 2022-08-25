@@ -151,6 +151,11 @@ def multiply(x, y):
 ```bash
 # コンピュータのセットアップ
 $ verdi computer setup -L tutor -H localhost -T core.local -S core.direct -w `echo $PWD/work` -n
+
+# セットアップにyamlファイルを利用することもできる．
+$ verdi computer setup --config ohtaka.yaml -n
+$ verdi -p ta computer configure core.ssh ohtaka
+
 # セットアップしたコンピュータを利用可能なように設定
 $ verdi computer configure core.local tutor --safe-interval 1 -n
 ```
@@ -220,7 +225,7 @@ Port number [22]: 22
 Look for keys [Y/n]: y
 SSH key file [/Users/amano/.ssh/id_sauron_imacnew]: /Users/amano/.ssh/id_rsa_sauron
 Connection timeout in s [60]: 180
-Allow ssh agent [Y/n]: y
+Allow ssh agent [Y/n]: Y #重要
 SSH proxy jump []:
 SSH proxy command []:
 Compress file transfers [Y/n]: y
@@ -314,13 +319,23 @@ $ verdi code list
 $ verdi code show qe-7.0-pw
 ```
 
-### [実際にAiiDAにjobを投げる](https://aiida.readthedocs.io/projects/aiida-core/en/v2.0.3/howto/run_codes.html#how-to-run-codes)
+### [AiiDAにjobを投入する](https://aiida.readthedocs.io/projects/aiida-core/en/v2.0.3/howto/run_codes.html#how-to-run-codes)
+
+AiiDAにjobを投げるのにはいくつかのやり方がある．一つは`verdi shell`でインターラクティブにやる方法だが，ここでは入力ファイルを作成してjob投入するやり方をとる．この方法でも`verdi run`コマンドを利用する方法と，pythonコードとして実行する方法がある．いずれの場合も入力ファイルはpythonで書く必要があり，pythonコードとして実行する場合は追加でprofileやdaemonの情報が取得されるようにしてやる必要がある．
 
 ```bash
+# verdiコマンドの場合
 verdi run submit.py
+
+# pythonコードの場合，submit.pyの先頭に
+# #!/usr/bin/env python
+# from aiida import load_profile
+# load_profile()
+# を書く必要がある．
+python submit.py
 ```
 
-### [実際にAiiDAにjobを投げる2](https://aiida.readthedocs.io/projects/aiida-core/en/v2.0.3/topics/processes/usage.html#topics-processes-usage-launching)
+### [実際にAiiDAにjobを投げる例](https://aiida.readthedocs.io/projects/aiida-core/en/v2.0.3/topics/processes/usage.html#topics-processes-usage-launching)
 
 <!-- https://eminamitani.github.io/website/2021/03/25/aiida_2/ -->
 
@@ -346,7 +361,87 @@ Label                    Type string         Count
 SSSP/1.1/PBE/efficiency  pseudo.family.sssp  85
 ```
 
-#### step2: k点の設定
+#### step2: 計算の設定ファイル(.py)の作成
+
+```python
+# -*- coding: utf-8 -*-
+######################################################
+# Si bulk phonon calculation
+######################################################
+from aiida.orm import Code, StructureData
+from aiida.plugins import DataFactory
+from aiida import orm
+from aiida.plugins import CalculationFactory
+from aiida.engine import launch
+from aiida.orm import load_group
+from ase.io import read # 構造を読み込む用
+
+# code
+# codename = 'qe-7.0-pw@sauron'
+codename = 'qe-6.6-pw@ohtaka'
+code = Code.get_from_string(codename)
+
+# codeから，対応するbuilderを取得
+builder = code.get_builder()
+
+
+# control & system etc...
+parameters = {
+    'CONTROL': {
+        'calculation': 'scf',
+        'wf_collect': True,
+    },
+    'SYSTEM': {
+        'ecutwfc': 80.,
+        'ecutrho': 320.,
+        'nbnd': 12,
+    }
+}
+
+#structureはとりあえず手元のqeファイルから読みこむ
+si=read("Si.scf.in",format="espresso-in")
+s = StructureData(ase=si)
+
+#kpoint
+# The DataFactory is a useful and robust tool for loading data types based on their entry point, e.g. 'array.kpoints' in this case.
+KpointsData = DataFactory('array.kpoints')
+kpoints = KpointsData()
+kpoints.set_kpoints_mesh([12, 12, 12])
+
+#pseudo
+family = load_group('SSSP/1.1/PBE/efficiency')
+
+
+inputs = {
+    'code': code,
+    'structure': s,
+    'pseudos': family.get_pseudos(structure=s),
+    'kpoints': kpoints,
+    'parameters': orm.Dict(dict=parameters),
+    'metadata': {
+        "description": " test qe calculation",
+        'options': {
+        'resources':  {'num_machines': 1,'tot_num_mpiprocs':24},
+        'max_wallclock_seconds': 1*30*60, # h/m/s
+        'withmpi': True,
+        "queue_name": "i8cpu", # que name
+#        "queue_name": "sky6126", # que name
+        },
+    }
+}
+
+# job submission
+job=launch.submit(CalculationFactory('quantumespresso.pw'), **inputs)
+
+# after submission
+print('launched WorkChain<{}> for structure {}'.format(job.pk, s.get_formula()))
+print("Use `verdi process list` or `verdi process show {}` to check the progress".format(job.pk))
+
+# 計算完了後に自動でstdoutを取得できたらいいんだけどなぁ．
+# verdi calcjob outputcat 125
+```
+
+- k点の設定
 
 ```python
 The DataFactory is a useful and robust tool for loading data types based on their entry point, e.g. 'array.kpoints' in this case. 
@@ -394,8 +489,6 @@ output_trajectory   129  TrajectoryData
 remote_folder       126  RemoteData
 retrieved           127  FolderData
 
-# 特定のprocessについての結果をグラフ化する．
-$ verdi node graph generate 125
 ```
 
 計算終了後，stateが0になっていれば計算が成功していることを意味し，失敗していればそれ以外のstateになっているので原因を確認する．結果をより詳しく見る方法をいくつかリストアップする．
@@ -405,12 +498,51 @@ $ verdi node graph generate 125
 ```bash
 # コードのinputを取得
 $ verdi calcjob inputcat 125
+# インプットファイルの一覧
+$ verdi calcjob inputls 125 -c
+
 # コードのstdoutを取得
 $ verdi calcjob outputcat 125
+
+# Shows the parser results of the calculation
+$ verdi calcjob res 125
 ```
+
+
 
 1. `verdi data`コマンド
 
 ```bash
 
 ```
+
+
+1. `verdi node graph generate` コマンド
+
+   ノードの関連を可視化してくれるコマンド．
+    ```bash
+    # とりあえず実行
+    verdi node graph generate 1026
+
+    # pkを表示する場合. 
+    verdi node graph generate 1026 --identifier pk
+    ```
+
+
+## 擬ポテンシャルのインストール(色々なライブラリ)
+
+QEで使う擬ポテンシャルを色々インストールする．
+
+```bash
+# SSSPはefficiencyとprecision, PBEとPBEsol
+$ aiida-pseudo install sssp -p efficiency -x PBE
+$ aiida-pseudo install sssp -p precision -x PBE
+$ aiida-pseudo install sssp -p efficiency -x PBEsol
+$ aiida-pseudo install sssp -p precision -x PBEsol
+# pseudo-dojo
+$ aiida-pseudo install pseudo_dojo
+
+# インストールされたことの確認
+$ aiida-pseudo list
+```
+
