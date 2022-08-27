@@ -102,6 +102,12 @@ https://blog.stenyan.jp/entry/iterm2
 
 
 
+## トラブルシューティング
+
+- option+→他いくつかのショートカットが効かない
+  <!-- https://apple.stackexchange.com/questions/154292/iterm-going-one-word-backwards-and-forwards -->
+  Preferences > Profiles > Keys > key Mappingsで左下のpresetsをクリックしてNatural Text Editingを選ぶと通常のテキストエディタと同様のショートカットが効くようになるが，これだとcmd+→でのタブ移動ができなくなる．「このショートカットだけは効かせたい」という場合はkey Mappingsの設定を直接弄るのが良い．左下のExportから設定を保存しておくと万が一の時に復帰できるのでお勧め．
+
 ## その他
 
 - finderからiterm2を開く

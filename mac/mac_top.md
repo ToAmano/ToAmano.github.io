@@ -14,10 +14,10 @@
 
 pdfの書類をCopy-Pasteする時に，改行が入ってしまう問題がある． これは，一旦コピーしたものをchromeなどの検索窓に貼り付けて再度コピーすることで回避することができる．
 
-## ショートカットキー
+## ショートカットキーほかキーボードに関すること
 
-- `ctrl+D`の文字を消せるけど，`ctrl+H`で左側の文字を消せる．
-
+- `ctrl+D`で右側の文字を消せるけど，`ctrl+H`で左側の文字を消せる．
+- capslockを使いたくない場合，環境設定 > キーボード > 修飾キーから動作を変更可能．emacsを使う人はESCに割り当てておくと便利．
 
 
 ## google chrome
@@ -39,6 +39,11 @@ chromeでは，/を押すと検索ボックスに移動できる．
 EMACSとCHROMEの連携
 [https://minorugh.xsrv.jp/post/2018/1203-emacs-chrome-together/](https://minorugh.xsrv.jp/post/2018/1203-emacs-chrome-together/)
 
+
+
+## intel oneapi
+
+[HPC kit](https://software.intel.com/content/www/us/en/develop/tools/oneapi/hpc-toolkit/download.html)
 
 ## 自分の設定したカスタムショトカまとめ
 
