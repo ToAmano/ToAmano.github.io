@@ -86,12 +86,12 @@ $ verdi quicksetup
   warnings.warn(f'Creating AiiDA configuration folder `{path}`.')
 Report: enter ? for help.
 Report: enter ! to ignore the default and set no value.
-Profile name [quicksetup]: ta
-Email Address (for sharing data) [()]: tragic44cg@icloud.com
-First name [()]: Tomohito
-Last name [()]: Amano
-Institution [()]: u-tokyo
-Success: created new profile `ta`.
+Profile name [quicksetup]: hoge
+Email Address (for sharing data) [()]: example@com
+First name [()]: hoge
+Last name [()]: hoge
+Institution [()]: hoge
+Success: created new profile `hoge`.
 Report: initialising the profile storage.
 Report: initialising empty storage schema
 Success: storage initialisation completed.
@@ -110,7 +110,8 @@ $ verdi status
  ✔ version:     AiiDA v2.0.3
  ✔ config:      /Users/amano/.aiida
  ✔ profile:     ta
- ✔ storage:     Storage for 'ta' [open] @ postgresql://aiida_qs_amano_a88f57638875427b9c74c9eb1a467894:***@localhost:5432/ta_amano_a88f57638875427b9c74c9eb1a467894 / file:///Users/amano/.aiida/repository/ta
+ ✔ storage:     Storage for 'home' [open] ****
+ file://**
 Warning: RabbitMQ v3.10.7 is not supported and will cause unexpected problems!
 Warning: It can cause long-running workflows to crash and jobs to be submitted multiple times.
 Warning: See https://github.com/aiidateam/aiida-core/wiki/RabbitMQ-version-to-use for details.
