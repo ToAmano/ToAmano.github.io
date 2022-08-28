@@ -101,6 +101,10 @@ git pull origin A:B
 git push origin A
 ```
 
+## コミットメッセージ
+
+<!-- https://qiita.com/itosho/items/9565c6ad2ffc24c09364 -->
+
 ## githubでの一人開発について
 <!-- https://qiita.com/braveryk7/items/5208263cd06a8878f0c2-->
 一人開発でもissueとpull-requestを活用することで進捗履歴を残すことができる．

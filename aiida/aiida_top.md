@@ -129,16 +129,22 @@ rabbitmqに関するwarningが出ているが上でconfファイルをいじっ�
 # 計算結果のワークフローを可視化してくれる
 conda install graphviz
 
-# 言わずと知れた物質計算御用達のpythonパッケージ．
+# 言わずと知れた物質計算御用達のpythonパッケージ．AiiDAと相互に結晶構造のやり取りができる．
 conda install ase
+conda install pymatgen
 
 # aseの構造を可視化してくれるパッケージ.
 conda install nglview
 
-# aiida restapiを起動するのに必要だった
+# aiida rest apiを起動するのに必要だった
 pip install flask_cors
 pip install flask_restful
 
+```
+
+その他あると便利なソフトウェア．
+
+```bash
 # バンド図を可視化する際に使う場合がある
 brew install grace
 ```
@@ -157,6 +163,30 @@ brew install grace
 - [AiiDAデータの取り扱い](aiida_data.md)
 
 ## 細かい設定あれこれ
+
+- [コマンドの自動補完](https://aiida.readthedocs.io/projects/aiida-core/en/v2.0.3/howto/installation.html)
+  
+  verdiコマンドの補完の設定が可能．**非常に便利なので設定推奨**．AiiDAをconda環境内にインストールした場合，.zshrcに設定を書くわけにいかないのでcondaのenvironmentファイルに書くことになる．設定ファイルに書いたら仮想環境を再起動することで自動補完が有効になる．
+
+  ```bash
+  # 仮想環境起動
+  conda activate aiida
+
+  # 仮想環境内に設定ファイルを作成
+  cd $CONDA_PREFIX
+  mkdir -p ./etc/conda/activate.d
+  mkdir -p ./etc/conda/deactivate.d
+  touch ./etc/conda/activate.d/env_vars.sh
+  touch ./etc/conda/deactivate.d/env_vars.sh
+
+  # 設定ファイル./etc/conda/activate.d/env_vars.shに以下の自動保管のためのコマンドを書き込み
+  eval "$(_VERDI_COMPLETE=zsh_source verdi)"
+  ```
+
+- [複数プロファイルの設定]
+  
+  全く別のプロジェクトAとプロジェクトBがあってどちらもAiiDAで計算を実行したい場合，AとBのデータが入り乱れてデータベースがぐちゃぐちゃになることが予想できる．これを避ける一つの方法としてAとB用に別々のプロファイルを作成してデータベースを分けるという方法がある．
+
 
 <!--  [job schedulerの設定(これはちょっとおかしいかも)](setting_jobscheduler.md)
 https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/calculations/usage.html

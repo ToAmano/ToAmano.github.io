@@ -27,5 +27,20 @@ pythonを使う場合，プロジェクトごとに仮想環境を作成し，�
 
 1. [pymatgen](pymatgen.md)
 
+
 2. [ase](ase.md)
 
+
+
+## その他
+
+自作モジュールのパッケージ化．CLIも含めることができる．
+<!-- https://gist.github.com/3panda/7508508a89bd1ea1990217142eaf3c9c  -->
+<!-- https://qtatsu.hatenablog.com/entry/2021/01/03/171032 -->
+
+docstring
+<!-- https://qiita.com/simonritchie/items/49e0813508cad4876b5a -->
+
+
+コーディングスタイル
+<!-- https://peps.python.org/pep-0008/#imports -->
