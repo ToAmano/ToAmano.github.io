@@ -146,13 +146,15 @@ brew install grace
 ## tutorials, usage
 
 自分の勉強で利用したチュートリアルやusageをいくつかリストアップ．
-[まずは基本的な使い方をチェック](basic_tutorial.md)
-[QEなどpython以外のコードの実行とリモートPCへの接続(QEの例)](add_computer.md)
-[バンド計算を例にworkflowを試す](workflow_tutorial.md)
-[AiiDAにおけるK点の取り扱い](aiida_kpoints.md)
-[AiiDAにおける構造データの取り扱い](aiida_structure.md)
-[AiiDA+quantum espresso フォノン計算](aiida_ph.md)
-[AiiDA cp.x カーパリネロ分子動力学計算](aiida_cp.md)
+
+- [まずは基本的な使い方をチェック](basic_tutorial.md)
+- [QEなどpython以外のコードの実行とリモートPCへの接続(QEの例)](add_computer.md)
+- [バンド計算を例にworkflowを試す](workflow_tutorial.md)
+- [AiiDAにおけるK点の取り扱い](aiida_kpoints.md)
+- [AiiDAにおける結晶構造データの取り扱い](aiida_structure.md)
+- [AiiDA+quantum espresso フォノン計算](aiida_ph.md)
+- [AiiDA cp.x カーパリネロ分子動力学計算](aiida_cp.md)
+- [AiiDAデータの取り扱い](aiida_data.md)
 
 ## 細かい設定あれこれ
 
@@ -162,3 +164,9 @@ https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/calculations/u
 
 
 ## [既存の計算結果をAiiDAに追加](https://aiida.readthedocs.io/projects/aiida-core/en/v2.0.3/howto/plugin_codes.html#how-to-plugin-codes)
+
+
+## REST API
+
+https://aiida-tutorials.readthedocs.io/en/tutorial-qe-short/source/sections/qe.html#from-calculations-to-workflows
+https://www.materialscloud.org/explore/connect
