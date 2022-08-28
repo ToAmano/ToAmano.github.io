@@ -161,12 +161,15 @@ brew install grace
 <!--  [job schedulerの設定(これはちょっとおかしいかも)](setting_jobscheduler.md)
 https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/calculations/usage.html
 -->
-
-
-## [既存の計算結果をAiiDAに追加](https://aiida.readthedocs.io/projects/aiida-core/en/v2.0.3/howto/plugin_codes.html#how-to-plugin-codes)
+ - [既存の計算結果をAiiDAに追加](https://aiida.readthedocs.io/projects/aiida-core/en/v2.0.3/howto/plugin_codes.html#how-to-plugin-codes)
 
 
 ## REST API
 
 https://aiida-tutorials.readthedocs.io/en/tutorial-qe-short/source/sections/qe.html#from-calculations-to-workflows
 https://www.materialscloud.org/explore/connect
+
+
+## エラー類
+
+[エラー類](aiida_errors.md)
