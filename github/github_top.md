@@ -101,6 +101,25 @@ git pull origin A:B
 git push origin A
 ```
 
+
+## タグの使い方
+
+```bash
+# タグを打つ
+git tag -a <tag-name> -m "comment"
+
+# タグを消す
+$ git tag -d <tag-name>
+
+# タグをリモートへ送る
+git push origin --tags
+```
+
+## リリースの使い方
+
+タグを打ったコミットに対してリリースを作成できる．
+https://semver.org/
+
 ## コミットメッセージ
 
 <!-- https://qiita.com/itosho/items/9565c6ad2ffc24c09364 -->

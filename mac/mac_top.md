@@ -91,3 +91,4 @@ EMACSとCHROMEの連携
 
 - Alfread4
 　spotlightの代わりとして活用できる．
+

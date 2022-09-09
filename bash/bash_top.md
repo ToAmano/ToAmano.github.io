@@ -126,6 +126,9 @@ file --mime hoge.php
 lsof -i -P | grep 8080
 ```
 
+## ssh-agent
+<!-- https://laboradian.com/how-to-use-ssh-agent/#_exec -->
+
 
 ## 色付け
 <!-- https://fhiyo.github.io/2017/11/14/colorize-terminal-output.html -->

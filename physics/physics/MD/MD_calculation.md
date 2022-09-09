@@ -16,6 +16,25 @@ $$
 
 で与えられることを用いて逆に温度を定義する． 運動エネルギーは保存量ではないので，シュミレーション中温度は揺らぐことになる．
 
+## verletの方法
+
+ベレの方法(Verlet algorithm）は分子動力学法などにおいて、原子間（粒子間）に働く力をもとに原子（粒子）を逐次的に動かす単純な差分法の一つ．
+
+原子（粒子）の質量を M、座標を R、力を F とすると、運動方程式は
+$$
+\frac {d^{2}{\boldsymbol {R}}}{dt^{2}}}={\boldsymbol {F}} M{\frac {d^{2}{\boldsymbol {R}}}{dt^{2}}}={\boldsymbol {F}}
+$$
+である．加速度 d2R/dt2 を中心差分で近似すると、時間刻み幅を Δt として
+$$
+{\displaystyle {\frac {d^{2}{\boldsymbol {R}}(t)}{dt^{2}}}\approx {\frac {{\boldsymbol {R}}(t+\Delta t)-2{\boldsymbol {R}}(t)+{\boldsymbol {R}}(t-\Delta t)}{(\Delta t)^{2}}}}{\displaystyle {\frac {d^{2}{\boldsymbol {R}}(t)}{dt^{2}}}\approx {\frac {{\boldsymbol {R}}(t+\Delta t)-2{\boldsymbol {R}}(t)+{\boldsymbol {R}}(t-\Delta t)}{(\Delta t)^{2}}}}
+$$
+となる．以上から得られた
+$$
+{\displaystyle {\boldsymbol {R}}_{I}(t+\Delta t)=2{\boldsymbol {R}}_{I}(t)-{\boldsymbol {R}}_{I}(t-\Delta t)+{\frac {{\boldsymbol {F}}_{I}}{M_{I}}}(\Delta t)^{2}}{\displaystyle {\boldsymbol {R}}_{I}(t+\Delta t)=2{\boldsymbol {R}}_{I}(t)-{\boldsymbol {R}}_{I}(t-\Delta t)+{\frac {{\boldsymbol {F}}_{I}}{M_{I}}}(\Delta t)^{2}}
+$$
+によって原子の位置を更新する．ただし I は原子のインデックスである．QEに実装されているカー・パリネロ法はこのアルゴリズムを利用している．
+
+
 
 ## カノニカルアンサンブル（NVT）
 

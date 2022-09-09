@@ -15,6 +15,11 @@ itermをインストールしたらまず設定したいのはshell integration.
 
 ## [User interface]
 
+- preferenceの保存
+iterm2全体の設定を保存するにはgeneral > Preferenceから保存先のディレクトリを選択する．いつ変更を保存するかはmanual，automaticなどをお好みで選べる．意図しない変更を保存しないためにmanualが安全だが，意図する変更をした後にちゃんと保存し直すことを忘れないように．
+ちなみにこれとは別にプロファイルの保存やキーマッピングの保存などいくつか保存できるものがある．
+
+
 ## [各種のfeatures](https://iterm2.com/features.html)
 
 - 画面分割(split panes)
@@ -80,6 +85,19 @@ https://www.karakaram.com/iterm2-password-manager/
 
 ## プロファイルのカスタマイズ
 
+変更できるのは大きく以下の8項目
+
+- General：プロファイル全般の設定
+- Colors：色の設定
+- Text：文字関連の設定
+- Windows：ウインドウ設定
+- Terminal：ターミナルの設定
+- Session：セッション開始時やログ関連の設定
+- Keys：キー関連の設定
+- Advanced：その他の機能の設定
+  
+### カラープロファイル
+
 iterm2用のカラープロファイルを提供しているサードパーティが色々あるので，調べて自分好みのプロファイルを探してくるのが良い．
 
 - [doracula](https://draculatheme.com/iterm)
@@ -107,6 +125,11 @@ https://blog.stenyan.jp/entry/iterm2
 - option+→他いくつかのショートカットが効かない
   <!-- https://apple.stackexchange.com/questions/154292/iterm-going-one-word-backwards-and-forwards -->
   Preferences > Profiles > Keys > key Mappingsで左下のpresetsをクリックしてNatural Text Editingを選ぶと通常のテキストエディタと同様のショートカットが効くようになるが，これだとcmd+→でのタブ移動ができなくなる．「このショートカットだけは効かせたい」という場合はkey Mappingsの設定を直接弄るのが良い．左下のExportから設定を保存しておくと万が一の時に復帰できるのでお勧め．
+  ```
+  # option+→に単語移動を割り当てる場合
+  ⌥← に Send Escape Sequence = b を設定
+  ⌥→ に Send Escape Sequence = f を設定
+  ```
 
 ## その他
 

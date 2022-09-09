@@ -11,7 +11,7 @@ Todo :: pwのinput構造を入力としてバンドまで計算するworkflowを
 
 ## q2r
 
-注意!! q2rを使う場合は最初のpw計算でibrav=0としておかないと，IFCファイルのparseに失敗してしまう．
+注意!! q2rを使う場合は最初のpw計算でibrav=0としておかないと，IFCファイルのparseに失敗してしまう．([ソースコード](https://github.com/aiidateam/aiida-quantumespresso/blob/main/src/aiida_quantumespresso/data/force_constants.py))
 
 q2r計算のインプットとアウトプットは以下のようになっている．
 
@@ -203,4 +203,4 @@ Aiidaにはバンド図専用のデータタイプが用意されており，バ
 verdi data core.bands export 1026 --format mpl_singlefile > make_plot.py
 ```
 
-とは言え，実際には例えば実験データと一緒にプロットしたい，プロットの色を変えたいなど細かいカスタマイズをしたくなる．このような場合はpythonでnodeをロードした後いじっていくことになる．
+とは言え，実際には例えば実験データと一緒にプロットしたい，プロットの色を変えたいなど細かいカスタマイズをしたくなる．このような場合はpythonでこのnodeをロードした後いじっていくことになる．

@@ -101,3 +101,8 @@ TikZをベースとした`chemfig`パッケージがある．
 \usepackage{chemfig}
 \chemfig{*6(-=-=-=)} 
 ```
+
+
+
+- subfloatやsubcaptionから(a)，(b)を消す
+<!-- https://tex.stackexchange.com/questions/165508/remove-a-b-from-subfigure-numbering-but-keep-the-subfigure-caption -->
