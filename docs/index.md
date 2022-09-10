@@ -13,23 +13,45 @@ For more details see [Basic writing and formatting syntax](https://docs.github.c
 
 ## Software installation
 
-[QuantumEspresso with Intel Compiler]
+利用するソフトのインストールについて
 
-[Wannier90 with Intel Compiler](wannier90_install_to_ohtaka.md)
-[VASP 5.4 with Intel Compiler]
+### [QuantumEspresso with Intel Compiler]
+  
+
+### [Wannier90 with Intel Compiler](wannier90_install_to_ohtaka.md)
+
+    wannier90のみをインストールする場合
+
+### [VASP 5.4 with Intel Compiler]
 
 
-### Coding/Software
-1. [Python](python/python_top.md)
-2. [C/C++]
-3. [fortran]
-4. [bash](bash/bash_top.md)
-5. [LaTeX](latex/latex_top.md)
-6. [Emacs](emacs/emacs_top.md)
-7. [gnuplot](gnuplot/gnuplot_top.md)
-8. [github](github/github_top.md)
+## Coding/Software
 
-### Mathematics/Physics/related Softwares
+### [Python](python/python_top.md)
+
+### [C/C++]
+### [fortran]
+### [bash](bash/bash_top.md)
+
+    bashのさまざまな操作について．
+
+### [LaTeX](latex/latex_top.md)
+
+    LaTeX文書の作成について．
+
+### [Emacs](emacs/emacs_top.md)
+
+    emacsエディタの操作，カスタマイズについて．
+
+### [gnuplot](gnuplot/gnuplot_top.md)
+
+    画像描画ソフトgnuplotの使い方について．
+
+### [github](github/github_top.md)
+
+    gitやgithubの使い方について．
+
+## Mathematics/Physics/related Softwares
 1. [physics](physics/physics/physics_top.md)
 
 2. [VASP](physics/vasp/vasp_top.md)
