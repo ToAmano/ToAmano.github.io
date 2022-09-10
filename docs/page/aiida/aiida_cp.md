@@ -1,3 +1,7 @@
+---
+exclude: true
+---
+
 # AiiDA cp.x
 
 

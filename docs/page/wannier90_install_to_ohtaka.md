@@ -1,3 +1,7 @@
+---
+exclude: true
+---
+
 # wannier90 installation
 
 ## 日付：2022/5/18
