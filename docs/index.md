@@ -12,13 +12,14 @@ For more details see [Basic writing and formatting syntax](https://docs.github.c
 
 個人のメモ書き用サイトです．内容が間違っている場合があります．
 
-
+---
 ## Software installation
 
 マニュアルインストールが必要なソフトウェアのインストールについてのまとめ．
 
 ### [QuantumEspresso with Intel Compiler]
   
+---
 
 ### [Wannier90 with Intel Compiler](page/installation/wannier90_install_to_ohtaka.md)
 
@@ -28,6 +29,7 @@ wannier90のみをインストールする場合はこちらを参照．
 ### [VASP 5.4 with Intel Compiler]
 
 
+---
 ## Coding/Software
 
 よく使うツールについてのメモ．
