@@ -10,65 +10,91 @@ description: The top-page of my personal website.
 For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
 -->
 
+個人のメモ書き用サイトです．内容が間違っている場合があります．
+
 
 ## Software installation
 
-利用するソフトのインストールについて
+マニュアルインストールが必要なソフトウェアのインストールについてのまとめ．
 
 ### [QuantumEspresso with Intel Compiler]
   
 
-### [Wannier90 with Intel Compiler](wannier90_install_to_ohtaka.md)
+### [Wannier90 with Intel Compiler](page/installation/wannier90_install_to_ohtaka.md)
 
-    wannier90のみをインストールする場合
+wannier90のみをインストールする場合はこちらを参照．
 
+---
 ### [VASP 5.4 with Intel Compiler]
 
 
 ## Coding/Software
 
-### [Python](python/python_top.md)
+よく使うツールについてのメモ．
 
+### [Python](page/python/python_top.md)
+
+---
 ### [C/C++]
+
+---
 ### [fortran]
-### [bash](bash/bash_top.md)
 
-    bashのさまざまな操作について．
+---
+### [bash](page/bash/bash_top.md)
 
-### [LaTeX](latex/latex_top.md)
+bashのさまざまな操作について．
 
-    LaTeX文書の作成について．
+---
+### [LaTeX](page/latex/latex_top.md)
 
-### [Emacs](emacs/emacs_top.md)
+LaTeX文書の作成について．
 
-    emacsエディタの操作，カスタマイズについて．
+---
+### [Emacs](page/emacs/emacs_top.md)
 
-### [gnuplot](gnuplot/gnuplot_top.md)
+emacsエディタの操作，カスタマイズについて．
 
-    画像描画ソフトgnuplotの使い方について．
+---
+### [gnuplot](page/gnuplot/gnuplot_top.md)
 
-### [github](github/github_top.md)
+画像描画ソフトgnuplotの使い方について．
 
-    gitやgithubの使い方について．
+---
+### [github](page/github/github_top.md)
 
+gitやgithubの使い方について．
+
+---
 ## Mathematics/Physics/related Softwares
-1. [physics](physics/physics/physics_top.md)
 
-2. [VASP](physics/vasp/vasp_top.md)
+数学，物理，化学と，さらに関連するソフトウェアについて．
 
-3. [QE](physics/qe/qe_top.md)
+### [physics](page/physics/physics/physics_top.md)
 
-4. [AiiDA](aiida/aiida_top.md)
-### others
-[その他のソフトウェアなど](others/others_top.md)
-[MacのOSXのソフトなど](mac/mac_top.md)
+---
+### [VASP](page/physics/vasp/vasp_top.md)
 
-<!--
-### Jekyll Themes
+第一原理計算ソフトウェアVASPの使い方について
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/dirac6582/homepage.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+---
+### [Quantum Espresso](page/physics/qe/qe_top.md)
 
-### Support or Contact
+フリーの第一原理計算ソフトウェアQuantum Espressoの使い方について
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
--->
+---
+### [AiiDA](page/aiida/aiida_top.md)
+
+---
+## others
+
+その他のメモについて．
+
+### [その他のソフトウェアなど](page/others/others_top.md)
+
+---
+### [MacのOSXの設定・ソフトなど](page/mac/mac_top.md)
+
+### [大学入試過去問集]
+
+---
