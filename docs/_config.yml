@@ -59,7 +59,8 @@ plugins:
 
 minima:
   skin: solarized-dark
-
+  
 header_pages:
   - about.md
   - index.md
+  
