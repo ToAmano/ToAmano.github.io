@@ -30,6 +30,7 @@ twitter_username: jekyllrb
 github_username:  jekyll
 
 # Build settings
+# if you are using minima, then check https://github.com/jekyll/minima for more information
 theme: minima
 plugins:
   - jekyll-feed
@@ -53,3 +54,12 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+
+
+minima:
+  skin: solarized
+
+header_pages:
+  - about.md
+  - index.md
