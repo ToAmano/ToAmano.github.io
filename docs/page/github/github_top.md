@@ -47,7 +47,6 @@ git config --global user.email "アドレス"
 1. 
 
 
-
 ## ローカルでのバージョン管理
 
 バージョン管理したいディレクトリに移動する．
@@ -134,6 +133,7 @@ git push origin --tags
 タグを打ったコミットに対してリリースを作成できる．
 https://semver.org/
 
+
 ## コミットメッセージ
 
 <!-- https://qiita.com/itosho/items/9565c6ad2ffc24c09364 -->
@@ -185,3 +185,15 @@ $ git branch -d issue
 ## 複数のgithubアカウントを使い分けたいとき
 <!-- https://zenn.dev/taichifukumoto/articles/how-to-use-multiple-github-accounts
  -->
+
+## github-pagesの使い方
+
+<!--
+https://qiita.com/noraworld/items/f0da9ecb608476fe3a02#jekyll-remote-theme
+
+https://www.mk-mode.com/blog/2019/01/27/jekyll-with-minimal-mistakes/
+
+https://simondosda.github.io/posts/2021-09-15-blog-github-pages-3-content.html
+
+https://www.smashingmagazine.com/2014/08/build-blog-jekyll-github-pages/
+-->

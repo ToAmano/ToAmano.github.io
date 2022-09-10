@@ -1,4 +1,10 @@
-# Mac(OSX)に関する設定
+=---
+=# Feel free to add content and custom Front Matter to this file.
+=# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+=title: MacTop
+=layout: home
+=description: Mac(OSX)に関する設定
+=---
 
 
 
@@ -27,6 +33,15 @@
 
 - openineditor_lite/
   finder拡張機能．現在のディレクトリをエディタやターミナルで開いてくれる．
+  
+- デフォルトの表示スタイルの変更
+　finderの設定は設定しているディレクトリだけで有効．全てのディレクトリに適用したい場合，
+  表示 > 表示オプション > デフォルトとして保存
+  とする．ただしこれだと今後新しくできるディレクトリにしか適用されない．そこで面倒ではあるが全てのディレクトリの.DS_Storeファイルを削除する必要がある．
+  ```bash
+  sudo find / -name .DS_Store -delete; killall Finder
+  ```
+  
 
 
 ## メニューバー
