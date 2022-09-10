@@ -1,7 +1,15 @@
+---
+layout: default
+title:  "LaTeXトップページ"
+date:   2022-09-04 10:03:40 +0900
+categories: latex
+---
+
 # LaTeX各種設定
 
 
 ## 環境設定
+
 TeXを利用するための環境設定としては，TeX自体のインストール・パスの設定が必須だが，加えて快適に文書を作成するにはエディターの設定も必要である場合が多い．
 
 1. MacTeXのinstall(nessesary)

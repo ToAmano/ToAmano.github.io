@@ -1,20 +1,34 @@
+---
+layout: default
+title:  "LaTeXトップページ"
+date:   2022-09-04 10:03:40 +0900
+categories: git 
+---
 
 # git/githubの使い方
 
 ## install(option)
+
 gitコマンドはMacの初期状態でも入っている．
+
 ```bash
 $ which git 
 /usr/bin/git
 ```
-追加で色々使いたいのでhomebrew経由でインストールし直す．
+
+他のコマンドでもやっているのでgit自体をhomebrew経由でインストールし直す．
+
 ```bash
 $ brew install git
-$ brew install git-gui #gitkなど
 ```
 <!-- https://dev.classmethod.jp/articles/vscode-git-graph-extension/ -->
 
+gitコマンドには含まれていないコマンドをいくつかインストールする．
 
+```bash
+$ brew install git-gui #gitkなど
+$ brew install hub     #
+```
 
 
 ## 初期設定(.gitconfigファイルの設定)
