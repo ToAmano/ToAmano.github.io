@@ -2,6 +2,11 @@
 
 
 ## 環境設定
+MacTeXのinstall via homebrew
+```
+brew install mactex
+```
+
 latexmk
 http://www2.yukawa.kyoto-u.ac.jp/~koudai.sugimoto/dokuwiki/doku.php?id=latex:latexmk%E3%81%AE%E8%A8%AD%E5%AE%9A
 
