@@ -31,9 +31,9 @@ github_username:  dirac6582
 
 # Build settings
 # if you are using minima, then check https://github.com/jekyll/minima for more information
-theme: minima
-plugins:
-  - jekyll-feed
+# theme: minima
+#plugins:
+#  - jekyll-feed
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -55,10 +55,11 @@ plugins:
 #   - vendor/gems/
 #   - vendor/ruby/
 
-
-
+remote_theme: jekyll/minima
+plugins:
+   - jekyll-feed
 minima:
-  skin: solarized-dark
+  skin: solarized-light
   
 header_pages:
   - about.md
