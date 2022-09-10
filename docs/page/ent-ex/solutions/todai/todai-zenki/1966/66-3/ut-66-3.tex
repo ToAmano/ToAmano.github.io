@@ -1,0 +1,52 @@
+\documentclass[a4j]{jarticle}
+\usepackage{amsmath}
+\usepackage{ascmac}
+\usepackage{amssymb}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{framed}
+\usepackage{fancyhdr}
+\usepackage{latexsym}
+\usepackage{indent}
+\usepackage{cases}
+\allowdisplaybreaks
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{東京大学前期$1966$年$3$番}
+\begin{document}
+\input{macros}
+     \begin{oframed}
+     平面上に点列$P_0,P_1,P_2,\cdots,P_n,\cdots$があり，$P_0$，$P_1$の座標はそれぞれ
+     (0,0)，(1,0)である．また，任意の自然数$n$に対し，線分$P_nP_{n+1}$の長さは，線分
+     $P_{n-1}P_n$の長さの$2$倍で，半直線$P_nP_{n+1}$が半直線$P_{n-1}P_n$となす角は
+     $120^\circ$である．$P_{3n}$の座標を求めよ．
+     \end{oframed}
+
+\setlength{\columnseprule}{0.4pt}
+\begin{multicols}{2}
+{\bf[解]}$e(\theta)=\cos\theta+i\sin\theta$とし，複素数平面で置き換えて考える．
+$\vector{P_{n-1}P_n}$を表す複素数を$a_n$とすれば，題意より
+     \begin{align*}
+     \left\{
+          \begin{array}{l}
+          a_{n+1}=2e\left(\dfrac{2\pi}{3}\right)a_n  \\
+          a_1=1
+          \end{array}
+     \right.
+     \end{align*}
+だから，繰り返し用いて$a_n=\left\{2e\left(\dfrac{2\pi}{3}\right)\right\}^{n-1}$である．
+従って$P_{3n}$を表す複素数$b_{n}$として
+$a=2e\left(\dfrac{2\pi}{3}\right)$とおけば，
+     \begin{align*}
+     b_n&=\sum_{k=1}^{3n}(a_k) \\
+     &=\sum_{k=1}^{3n}(a^{k-1}) \\
+     &=\frac{1-a^{3n}}{1-a} \\
+     &=\frac{2+\sqrt{3}i}{7}(1-2^{3n}) 
+     \end{align*}
+であるから，求める座標は
+      \[P_{3n}\left(\dfrac{2}{7}(1-2^{3n}),\dfrac{\sqrt{3}}{7}(1-2^{3n})\right)\]
+である．$\cdots$(答)
+\newpage
+\end{multicols}
+\end{document}

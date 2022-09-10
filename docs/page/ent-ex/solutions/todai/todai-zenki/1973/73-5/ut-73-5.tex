@@ -1,0 +1,55 @@
+\documentclass[a4j]{jarticle}
+\usepackage{amsmath}
+\usepackage{ascmac}
+\usepackage{amssymb}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{framed}
+\usepackage{fancyhdr}
+\usepackage{latexsym}
+\usepackage{indent}
+\usepackage{cases}
+\usepackage[dvips]{graphicx}
+\usepackage{color}
+\allowdisplaybreaks
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{東京大学前期$1973$年$5$番}
+\begin{document}
+\input{macros}
+     \begin{oframed}
+     $t$は$1$より大きい実数とする．$xy$平面上に置いて，不等式
+         \begin{enumerate}[(1)]
+         \item $0<x$
+         \item $\dfrac{t}{(1+t^2)x}\le y\le\dfrac{1}{1+x^2}$
+         \end{enumerate}
+    を同時に満たす点$(x,y)$全体のつくる図形の面積を$t$の関数と考えて$f(t)$とおく．$f(t)$の導関数$f'(t)$を求めよ．
+     \end{oframed}
+
+\setlength{\columnseprule}{0.4pt}
+\begin{multicols}{2}
+{\bf[解]} $y$の存在条件から，($1<t$)
+     \begin{align*}
+      &\frac{t}{(1+t^2)x}\le\frac{1}{1+x^2}　\\
+       \Longleftrightarrow &(x-t)\left(x-\frac{1}{t}\right)\ge0 \\ 
+       \Longleftrightarrow &\frac{1}{t}\le x\le t
+     \end{align*}
+である．
+
+従って，
+     \begin{align}
+     f(t)&=\int_{1/t}^t\left(\frac{1}{1+x^2}-\frac{t}{(1+t^2)x}\right)dx \nonumber\\
+     &=\int_{1/t}^t\left(\frac{1}{1+x^2}dx-\frac{t}{1+t^2}\frac{1}{x}\right)dx\label{1}
+     \end{align}
+両辺$t$で微分する．各項計算して，
+     \begin{align*}
+      \cdot&\left[\int_{1/t}^t\left(\frac{1}{1+x^2}dx\right)\right]'=\frac{2}{1+t^2} \\
+     \cdot&\left[\frac{t}{1+t^2}\int_{1/t}^t\frac{1}{x}dx\right]'=\frac{2}{1+t^2}+\frac{1-t^2}{(1+t^2)^2}2\log t
+     \end{align*}
+であるから，\eqref{1}に代入して
+     \[f'(t)=\frac{-2(1-t^2)}{(1+t^2)^2}\log t\]
+である．$\cdots$(答)   
+\newpage
+\end{multicols}
+\end{document}

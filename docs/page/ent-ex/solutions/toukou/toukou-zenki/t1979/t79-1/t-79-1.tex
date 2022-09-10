@@ -1,0 +1,98 @@
+\documentclass[a4j]{jarticle}
+\usepackage{amsmath}
+\usepackage{ascmac}
+\usepackage{amssymb}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{framed}
+\usepackage{fancyhdr}
+\usepackage{latexsym}
+\usepackage{indent}
+\usepackage{cases}
+\usepackage[dvips]{graphicx}
+\usepackage{color}
+\allowdisplaybreaks
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{東工大前期$1979$年$1$番}
+\begin{document}
+\input{macros}
+     \begin{oframed}
+     直線$l:x=y=z$と直線$m:x/2=(y-1)/3=-z$上にそれぞれ点列$P_1,P_2,\cdots,P_n,\cdots$および$Q_1,Q_2,\cdots,Q_n\cdots$
+     があり，全ての$n$について線分$P_nQ_n$と$m$，線分$Q_nP_{n+1}$と$l$とはそれぞれ直交しているとする．$n$を限りなく大
+     きくするとき，点$P_n$，$Q_n$はそれぞれどのような点に近づくか．それらの点の座標を求めよ．
+     \end{oframed}
+
+\setlength{\columnseprule}{0.4pt}
+\begin{multicols}{2}
+{\bf[解]} $\vec{a}=(1,1,1)$，$\vec{b}=(2,3,-1)$，$\vec{c}=(0,1,0)$とすると，$\vec{a}$，$\vec{b}$はそれぞれ，
+$l$，$m$の方向ベクトルである．$P_n$，$Q_n$が各直線上にあるので，実数$t_n$，$s_n$を用いて
+     \begin{align*}
+     &\vector{OP_n}=t_n\vec{a}&\vector{OQ_n}=\vec{c}+s_n\vec{b}
+     \end{align*}
+と表される．題意の条件から
+     \begin{align}
+          &\begin{cases}
+          \vec{b}\cdot\vector{P_nQ_n} \\
+          \vec{a}\cdot\vector{Q_nP_{n+1}}
+          \end{cases}\nonumber \\
+     \Longleftrightarrow     
+          &\begin{cases}
+          \vec{b}\cdot(\vec{c}+s_n\vec{b}-t_n\vec{a})=0 \\
+          \vec{a}\cdot(\vec{c}+s_n\vec{b}-t_{n+1}\vec{a})=0
+          \end{cases}\nonumber \\
+     \Longleftrightarrow
+          &\begin{cases}
+          \vec{b}\cdot\vec{c}+s_n|\vec{b}|^2-t_n\vec{a}\cdot\vec{b}=0 \\
+          \vec{a}\cdot\vec{c}+s_n\vec{a}\cdot\vec{b}-t_{n+1}|\vec{a}|^2=0 
+          \end{cases}\label{1}
+     \end{align}
+ここで，
+     \begin{align*}
+     &|\vec{a}|^2=3&|\vec{b}|^2=14 \\
+     &\vec{a}\cdot\vec{c}=1&\vec{b}\cdot\vec{c}=3 \\
+     &\vec{a}\cdot\vec{b}=4
+     \end{align*}
+を代入して
+     \begin{align} 
+          \begin{cases}
+          3+14s_n-4t_n=0 \\
+          1+4s_n-3t_{n+1}=0
+          \end{cases}\label{2}
+     \end{align}
+\eqref{2}から$s_n$を消去して
+     \begin{align*}
+     t_{n+1}=\frac{1}{21}(8t_n+1) \\
+     t_{n+1}-\frac{1}{13}=\frac{8}{21}\left(t_n-\frac{1}{13}\right) 
+     \end{align*}
+繰り返し用いて
+     \begin{align}
+     t_n=\frac{1}{13}+\left(\frac{8}{21}\right)^{n-1}\left(t_1-\frac{1}{13}\right)\nonumber \\
+     \limit{n}{\infty}\frac{1}{13}\label{3}
+     \end{align}
+故に\eqref{2}から
+     \begin{align}
+     \lim_{n\to\infty}s_n&=\lim_{n\to\infty}\left(\frac{4t_n-3}{14}\right)\nonumber \\
+     &=\frac{1}{14}\left(4\lim_{n\to\infty}t_n-3\right)\nonumber\\
+     &=\frac{1}{14}\left(4\frac{1}{13}-3\right)&(\because\eqref{3})\nonumber \\
+     &=\frac{-5}{26}\label{4}
+     \end{align}          
+である．以上の結果から，
+     \begin{align*}
+     \vector{OP_n}&=t_n\vec{a}\\
+     &\limit{n}{\infty}\frac{1}{13}\vec{a} \\
+     &=\left(\frac{1}{13},\frac{1}{13},\frac{1}{13}\right) \\ 
+     \vector{OQ_n}&=\vec{c}+s_n\vec{b}\\
+     &\limit{n}{\infty}\vec{c}-\frac{5}{26}\vec{b} \\
+     &=\left(\frac{-5}{13},\frac{11}{26},\frac{5}{26}\right)
+     \end{align*}
+となって，求める点は
+     \begin{align*}
+     &P_n\to\left(\frac{1}{13},\frac{1}{13},\frac{1}{13}\right) \\
+     &Q_n\to\left(\frac{-5}{13},\frac{11}{26},\frac{5}{26}\right)
+     \end{align*}
+である．$\cdots$(答)     
+\newpage
+\end{multicols}
+\end{document}

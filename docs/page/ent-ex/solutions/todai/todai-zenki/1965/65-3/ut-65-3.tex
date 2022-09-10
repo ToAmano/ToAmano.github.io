@@ -1,0 +1,64 @@
+\documentclass[a4j]{jarticle}
+\usepackage{amsmath}
+\usepackage{ascmac}
+\usepackage{amssymb}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{framed}
+\usepackage{fancyhdr}
+\usepackage{latexsym}
+\usepackage{indent}
+\usepackage{cases}
+\allowdisplaybreaks
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{東京大学前期$1965$年$3$番}
+\begin{document}
+\input{macros}
+     \begin{oframed}
+     直線$l$は双曲線$xy=1$の第一象限にある部分に接し，$l$と$x$軸との交点の$x$座標は$2$より小
+     さくないとする．
+     
+     この条件のもとで$l$が変動するとき，四直線$l$，$y=0$，$x=1$および$x=2$で囲まれる
+     部分の面積の最大値を求めよ．
+     \end{oframed}
+
+\setlength{\columnseprule}{0.4pt}
+\begin{multicols}{2}
+{\bf[解]}題意の接点を$P(t,1/t)$とする．ただし$t>0$とする．このとき$(1/x)'=-1/x^2$だから
+     \begin{align*}
+     l:y=\frac{-1}{t^2}(x-t)+\frac{1}{t} \\
+     \therefore l:y=\frac{-1}{t^2}x+\frac{2}{t}\equiv f(x)
+     \end{align*}
+となるので，これと$x$軸の交点は$Q(2t,0)$となる．題意の条件より
+     \begin{align}
+     1\le2t\label{1}
+     \end{align}
+となる．題意の面積を$S(t)$とすると，$t$の値で場合分けして以下のようになる．
+     \begin{indentation}{2zw}{0pt}
+     \noindent \underline{(i)$1\le2t\le2$つまり$1/2\le t\le 1$の時}　　\\
+     グラフが右図のようになるので
+          \begin{align*}
+          S(t)&=\int_1^{2t}f(x)dx  \\
+          &=\left[\frac{-1}{2t^2}x^2+\frac{2}{t}x\right]_1^{2t} \\
+          &=\frac{-1}{2t^2}(4t^2-1)+\frac{2}{t}(2t-1)  \\
+          &=2-\frac{2}{t}+\frac{1}{2t^2}　　\\
+          &=\frac{1}{2}(s-2)^2
+          \end{align*}
+     となる．ただし$s=1/t$として，$1\le s\le2$である．この時の最大値は，
+     $s=1$のときの$\frac{1}{2}$である．     
+     
+     \noindent \underline{(ii)$2\le2t$つまり$1\le t$の時}　　\\
+          \begin{align*}
+          S(t)&=\int_1^2f(x)dx \\
+          &=\left[\frac{-1}{2t^2}x^2+\frac{2}{t}x\right]_1^2  \\
+          &=\frac{-3}{2t^2}+\frac{2}{t}　　\\
+          &=\frac{-3}{2}\left(s-\frac{2}{3}\right)^2+\frac{2}{3}
+          \end{align*}
+      となる．この時は$0<s\le1$だから$s=2/3$で最大値$2/3$をとる．
+     \end{indentation}          
+以上から$\max S(t)=S(3/2)=2/3\cdots$(答)である．
+\newpage
+\end{multicols}
+\end{document}

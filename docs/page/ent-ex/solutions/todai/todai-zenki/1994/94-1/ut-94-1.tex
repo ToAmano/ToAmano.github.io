@@ -1,0 +1,92 @@
+\documentclass[a4j]{jarticle}
+\usepackage{amsmath}
+\usepackage{ascmac}
+\usepackage{amssymb}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{framed}
+\usepackage{latexsym}
+\usepackage{indent}
+\title{}
+\begin{document}
+\input{macros}
+\begin{oframed}
+     \begin{align*}
+     f(x)=x^4+x^3+\frac{1}{2}x^2+\frac{1}{6}x+\frac{1}{24} , 
+     g(x)=x^5+x^4+\frac{1}{2}x^3+\frac{1}{6}x^2+\frac{1}{24}x+\frac{1}{120}
+     \end{align*}
+とする．このとき以下のことが成り立つことを示せ．
+     \begin{enumerate}[(1)]
+     \item 任意の実数$x$に対し，$f(x)>0$である．
+     \item 方程式$g(x)=0$はただひとつの実数解$\alpha$をもち，$-1<\alpha<0$となる．
+     \end{enumerate}     
+\end{oframed}
+
+\setlength{\columnseprule}{0.4pt}
+\begin{multicols}{2}
+{\bf[解]}
+     \begin{enumerate}[(1)]
+     \item 微分計算により
+          \begin{align*}
+          f'(x)&=4x^3+3x^2+x+\frac{1}{6} \\
+          f''(x)&=12(x+\frac{1}{4})^2+\frac{1}{4}>0 
+          \end{align*}
+     であるから，$f'(x)$は単調増加．故に$f'(x)$が$3$次式であることと併せて，$f'(t)=0$
+     なる$t$がただひとつ存在する．したがって
+           \begin{align*}
+           f(t)&=(\frac{1}{4}x+\frac{1}{16})f'(t)+\frac{1}{32}(2t^2+2t+1)  \\
+           &=\frac{1}{32}(2t^2+2t+1) \\
+           &=\frac{1}{32}\left\{2\left(t+\frac{1}{2}\right)^2+\frac{1}{2}\right\} >0
+           \end{align*}
+      となって，下表をうる．
+           \begin{align*}
+                \begin{array}{|c|c|c|c|} \hline
+                x  &      &    t            &        \\ \hline
+                f'   &  -  &   0            &  +   \\ \hline
+                f    &\se&   \text{正} &  \ne \\ \hline
+               \end{array}
+          \end{align*}       
+      ゆえに題意は示された．$\Box$      
+      
+      \item 微分計算から
+           \begin{align*}
+           g'(x)&=5x^4+4x^3+\frac{3}{2}x^2+\frac{1}{3}x+\frac{1}{24} \\
+           g''(x)&=20x^3+12x^2+3x+\frac{1}{3}  \\
+           g'''(x)&=60\left(x+\frac{1}{5}\right)^2+\frac{3}{5}>0
+           \end{align*}
+      だから，前問と同様に$g''(t)=0$なる実数$t$がただひとつ存在し，下表を得る．    
+           \begin{align*}
+                \begin{array}{|c|c|c|c|} \hline
+                x     &      &    t       &        \\ \hline
+                g''    &  -  &   0       &  +   \\ \hline
+                g'    &\se&             &  \ne \\ \hline
+               \end{array}
+          \end{align*}
+      したがって
+           \begin{align*}
+           g'(x)&\ge g'(t) \\
+           &=\left(\frac{1}{4}x+\frac{1}{20}\right)g''(t)+%
+           40\left\{6\left(t+\frac{1}{3}\right)^2+\frac{1}{3}\right\} \\
+           &=40\left\{6\left(t+\frac{1}{3}\right)^2+\frac{1}{3}\right\}>0
+           \end{align*}  
+      から$g'(x)>0$であるので$g(x)$は単調増加で，$g(x)$が$5$次であること，
+      および$g(0)>0$，$g(-1)=\dfrac{-11}{30}$から題意は示された．$\Box$     
+      \end{enumerate}
+{\bf[別解]}
+     \begin{enumerate}[(1)]
+     \item 与式を変形する．
+          \begin{align*}
+          f(x)=\left(x^2+\frac{1}{2}x\right)^2+\frac{1}{4}\left(x+\frac{1}{3}\right)^2+\frac{1}{72}
+          \end{align*}
+     で，確かに$f(x)>0$である．よって示された．$\Box$
+     
+     \item 前問と同様に
+          \begin{align*}
+          g'(x)&=5x^4+4x^3+\frac{3}{2}x^2+\frac{1}{3}x+\frac{1}{24}     \\
+          &=5(x^2+\frac{2}{5}x)^2+\frac{7}{10}(x+\frac{5}{21})^2+\frac{3}{1512} 
+          \end{align*}
+     ゆえ$g'(x)>0$である．これと$g(-1)<0$および$g(0)>0$から示すべきことは明らか．$\Box$     
+     \end{enumerate}      
+\newpage
+\end{multicols}
+\end{document}

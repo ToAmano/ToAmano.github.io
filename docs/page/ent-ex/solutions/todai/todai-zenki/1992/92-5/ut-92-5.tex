@@ -1,0 +1,76 @@
+\documentclass[a4j]{jarticle}
+\usepackage{amsmath}
+\usepackage{ascmac}
+\usepackage{amssymb}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{framed}
+\usepackage{fancyhdr}
+\usepackage{latexsym}
+\usepackage{indent}
+\usepackage{cases}
+\usepackage[dvips]{graphicx}
+\usepackage{color}
+\allowdisplaybreaks
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{東京大学前期$1992$年$5$番}
+\begin{document}
+\input{macros}
+     \begin{oframed}
+     $xy$平面において，曲線$=x^3/6+1/(2x)$上の点，$(1,2/3)$を出発し，この曲線上を進む点$P$があ
+     る．出発してから$t$秒後の$P$の速度$\vec{v}$の大きさは$t/2$に等しく，$\vec{v}$の$x$成分は
+     正または$0$であるとする．
+          \begin{enumerate}[(1)]
+          \item 出発してから$t$秒後の$P$の位置を$(x,y)$として，$x$と$t$の関係式を求めよ．
+          \item $\vec{v}$がベクトル$(8,15)$と平行になるのは出発してから何秒後か．
+          \end{enumerate}
+     \end{oframed}
+
+\setlength{\columnseprule}{0.4pt}
+\begin{multicols}{2}
+{\bf[解]}
+     \begin{enumerate}[(1)]
+     \item 題意から，時刻$t$までに$P$は，
+          \begin{align}
+          \int_0^t\frac{s}{2}ds=\frac{t^2}{4}\label{1}
+          \end{align} 
+     だけ進む．これが，曲線上で$(1,2/3)$から$(x,y)$までの長さ$L$に等しい．
+          \begin{align}
+          \frac{dy}{dx}&=\frac{x^2}{2}-\frac{1}{2x^2}=\frac{1}{2}\left(x^2-\frac{1}{x^2}\right) \label{1} \\
+          \therefore 1+\frac{dy}{dx}&=1+\frac{1}{4}\left(x^4-2+\frac{1}{x^4}\right) \nonumber\\
+          &=\frac{1}{4}\left(x^2+\frac{1}{x^2}\right)\label{2}
+          \end{align}
+     であるから，
+          \begin{align}
+          L&=\int_1^x\sqrt{1+(dy/ds)^2}ds \nonumber\\
+          &=\frac{1}{2}\int_1^s\left(s^2+\frac{1}{s^2}\right)ds\tag{$\because\eqref{2}$}\\
+          &=\frac{1}{2}\left[\frac{s^3}{3}-\frac{1}{s}\right]_1^x \nonumber\\
+          &=\frac{1}{2}\left(\frac{x^3}{3}-\frac{1}{x}+\frac{2}{3}\label{3}\right)
+          \end{align}
+     となる．　\eqref{1}と\eqref{3}が等しいので，
+          \[t^2=2\left(\frac{x^3}{3}-\frac{1}{x}+\frac{2}{3}\right)\]
+     である．$\cdots$(答)
+     
+     \item $\vec{v}$は$P$での曲線の接線方向のベクトルと平行である．
+          \begin{align}
+          \frac{dy}{dx}=\frac{1}{2}\left(x^2-\frac{1}{x^2}\right)\label{4}
+          \end{align}
+     故，$(1,dy/dx)\parallel(8,15)$の時，
+          \begin{align*}
+          &\frac{dy}{dx}=\frac{15}{8} \\
+          &\left(x^2-\frac{1}{x^2}\right)=\frac{15}{4}\tag{$\because\eqref{4}$} \\
+          &p^2-\frac{15}{4}p-1=0\tag{$\because p=x^2$} \\
+          &(4p+1)(p-4)=0 \\
+          &p=4,\frac{-1}{4}
+          \end{align*}
+     である．題意から$x<1$ゆえ$p=x^2\ge0$であるから，$p=4$つまり$x=2$が従う．
+     この時，前問の結果より，
+          \[t^2=2\left(\frac{2^3}{3}-\frac{1}{2}+\frac{2}{3}\right)=\frac{17}{3}\]
+     $t>0$より，求める　$t$は$t=\sqrt{17/3}$である．$\cdots$(答)
+     \end{enumerate}
+           
+\newpage
+\end{multicols}
+\end{document}

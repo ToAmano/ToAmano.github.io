@@ -1,0 +1,59 @@
+\documentclass[a4j]{jarticle}
+\usepackage{amsmath}
+\usepackage{ascmac}
+\usepackage{amssymb}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{framed}
+\usepackage{fancyhdr}
+\usepackage{latexsym}
+\usepackage{indent}
+\usepackage{cases}
+\usepackage[dvips]{graphicx}
+\usepackage{color}
+\allowdisplaybreaks
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{東工大後期$2009$年$1$番}
+\begin{document}
+\input{macros}
+     \begin{oframed}
+     $a$が与えられた実数のとき，$xyz$空間の点$C(a,0,3)$から出た光が球$x^2+y^2+(z-1)^2\le1$で遮
+     られてできる$xy$平面上の影を$S$とする．$S$の方程式を求めよ．
+     \end{oframed}
+
+\setlength{\columnseprule}{0.4pt}
+\begin{multicols}{2}
+{\bf[解]} P$(X,Y,0)$，O'$(0,0,1)$とする．直線CPとO'の距離が$1$以下ならばよい．
+直線CPのベクトル方程式は 
+     \[\vthree{x}{y}{z}=\vthree{a}{0}{3}+t\vthree{X-a}{Y}{-3}\]
+であるから，CP上の点Qに対して，
+     \begin{align*}
+     &|O'Q|^2 \\
+     =&(a+t(X-a))^2+(tY)^2+((3-3t)-1)^2 \\
+     =&\{(X-a)^2+Y^2+9\}t^2+2(aX-a^2-6)t \\
+     &+a^2+4 
+     \end{align*}
+ここで，
+     \begin{align*}
+     A&=(X-a)^2+Y^2+9(>0) \\
+     B&=aX-a^2-6
+     \end{align*}
+とおいて，式変形を続けて，
+     \begin{align*}
+     |O'Q|^2=&A\left(t+\frac{B}{A}\right)+a^2+4-\frac{B^2}{A}
+     \end{align*}
+であるから，
+     \[\min|O'Q|\le1\Longleftrightarrow\min|O'Q|^2\le1\]
+に代入して，     
+     \begin{align*}
+     a^2+4-\frac{B^2}{A}\le1 \\
+     a^2+4-\frac{(aX-a^2-6)^2}{\{(X-a)^2+Y^2+9\}}\le1 \\
+     \frac{(X+a)^2}{a^2+3}+\frac{Y^2}{3}\le1
+     \end{align*}
+が求める式である．$\cdots$(答)
+
+\newpage
+\end{multicols}
+\end{document}

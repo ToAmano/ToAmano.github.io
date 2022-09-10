@@ -1,0 +1,49 @@
+\documentclass[a4j]{jarticle}
+\usepackage{amsmath}
+\usepackage{ascmac}
+\usepackage{amssymb}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{framed}
+\usepackage{fancyhdr}
+\usepackage{latexsym}
+\usepackage{indent}
+\usepackage{cases}
+\allowdisplaybreaks
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{東京大学前期$1962$年$4$番}
+\begin{document}
+\input{macros}
+     \begin{oframed}
+     無限級数$\dfrac{r}{1-r^2}+\dfrac{r^2}{1-r^4}+\dfrac{r^4}{1-r^8}%
+     +\dots+\dfrac{r^{2^{n-1}}}{1-r^{2^n}}+\dots$の和を求めよ．ただし
+     $|r|\not=0$とする．
+     \end{oframed}
+
+\setlength{\columnseprule}{0.4pt}
+\begin{multicols}{2}
+{\bf[解]}題意の無限級数$S$の第$n$部分和を$S_n$とおく．
+     \begin{align*}
+     \dfrac{r^{2^{n-1}}}{1-r^{2^n}}=\frac{1}{1-r^{2^{n-1}}}-%
+     \frac{1}{1-r^{2^n}}
+     \end{align*}
+だから
+     \begin{align*}
+     S_n&=\sum_{k=1}^n\frac{1}{1-r^{2^{k-1}}}-\frac{1}{1-r^{2^k}} \\
+     &=\frac{1}{1-r}-\frac{1}{1-r^{2^n}}
+     \end{align*}
+である．故に$|r|$で場合分けして
+     \begin{align*}
+     S=\left\{
+          \begin{array}{ll}
+          \dfrac{1}{1-r} & (|r|>1) \\
+          \dfrac{r}{1-r}  & (|r|<1)
+          \end{array}
+     \right.\tag{答}
+     \end{align*}   
+となる．                
+\newpage
+\end{multicols}
+\end{document}

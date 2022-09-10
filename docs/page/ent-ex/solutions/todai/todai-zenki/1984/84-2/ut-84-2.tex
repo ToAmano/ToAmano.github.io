@@ -1,0 +1,117 @@
+\documentclass[a4j]{jarticle}
+\usepackage{amsmath}
+\usepackage{ascmac}
+\usepackage{amssymb}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{framed}
+\usepackage{fancyhdr}
+\usepackage{latexsym}
+\usepackage{indent}
+\usepackage[dvips]{graphicx}
+\usepackage{color}
+\usepackage{emath}
+\usepackage{emathPp}
+\usepackage{cases}
+\allowdisplaybreaks
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{東京大学前期$1984$年$2$番}
+\begin{document}
+\input{macros}
+\preEqlabel{$\cdots$}
+     \begin{oframed}
+     $xy$平面において，直線$x=0$を$L$とし，曲線$y=\log x$を$C$とする．さらに，$L$上，または
+     $C$上，または$L$と$C$に挟まれた部分にある点全体の集合を$A$とする．$A$に含まれ，直線
+     $L$に接し，かつ曲線$C$と点$(t,\log t)\quad (0<t)$において共通の接線を持つ　円の中心を
+     $\mathrm{P_t}$とする．
+     
+     $\mathrm{P_t}$の$x$座標，$y$座標を$t$の関数として$x=f(t)$，$y=g(t)$と表した時，次の極限値は
+     どのような数となるか．
+          \begin{enumerate}[i)]
+          \item $\dlim{t}{0}\dfrac{f(t)}{g(t)}$ \\
+          \item $\dlim{t}{+\infty}\dfrac{f(t)}{g(t)}$
+          \end{enumerate}
+     \end{oframed}
+
+\setlength{\columnseprule}{0.4pt}
+\begin{multicols}{2}
+{\bf[解]} $f(t)=f$などと略記する．グラフの概形は下のようになる．
+
+     \begin{zahyou}[ul=10mm,Migiyohaku=45pt](-0.5,4)(-2,2)
+     \calcval{sqrt(2)/(1+sqrt(2))}\f
+     \calcval{1/(1+sqrt(2))}\g
+     \def\Fx{log (X)}
+     \def\Gx{X-1}
+     \def\Ft{\f+\f*cos(T)}
+     \def\Gt{\g+\f*sin(T)}
+     \YGurafu*[hidarix=0]\Fx
+     \YGurafu*\Gx
+     \BGurafu\Ft\Gt{0}{2*$pi}
+     \Put{(1,0)}[se]{$t$}
+     \tenretu*<perl>{P(\f,\g);Q(2,log(2))}
+     \Put\P[s]{$\mathrm{P_t}$}
+     \Put\migiT[se]{$l$}
+     \Put\Q[s]{$C$}
+     \kuromaru\P
+     \end{zahyou}
+
+$C$のQ$(t,\log t)$での接線$l$は，
+     \begin{align*}
+     l:y=\frac{1}{t}x+\log t-1
+     \end{align*}
+である．円が$L$と接することから，半径$r$として
+     \begin{align}
+     r=f
+     \end{align}
+である．故に円の方程式は
+     \begin{align*}
+     (x-f)^2+(y-g)^2=f^2
+     \end{align*}
+さらに，円がQを通る条件から
+     \begin{align}
+     (t-f)^2+(\log t-g)^2=f^2\label{1}
+     \end{align}
+Qでの接線が$l$に一致することから
+     \begin{align*}
+     &l \perp\mathrm{P_tQ} \\
+     &\vtwo{t}{1}\cdot\vtwo{t-f}{\log t-g}=0 \\
+     &t(t-f)+(\log t-g)=0\atag\label{2}
+     \end{align*}
+である．\eqref{2}を\eqref{1}に代入して$g$を消去して
+     \begin{align*}
+     &(t-f)^2+t^2(t-f)^2=f^2 \\
+     &(1+t^2)(t-f)^2=f^2
+     \end{align*}
+ここで，円が$A$に含まれることから
+     \begin{align*}
+     &t-f>0&f>0
+     \end{align*}
+だから
+     \begin{align*}
+     \sqrt{1+t^2}(t-f)=f \\
+     \therefore \,\, f=\frac{t\sqrt{1+t^2}}{1+\sqrt{1+t^2}}\atag\label{3}
+     \end{align*}
+である．\eqref{2}に代入して
+     \begin{align}
+     g(t)=\frac{tf}{\sqrt{1+t^2}}+\log t\label{4}
+     \end{align}
+
+さて，$h(t)=f(t)/g(t)$とおく．\eqref{4}の両辺$f(>0)$でわると
+     \begin{align*}
+     \frac{1}{h}&=\frac{t}{\sqrt{1+t^2}}+\frac{\log t}{f} \\
+     &=\frac{t}{\sqrt{1+t^2}}+\frac{1+\sqrt{1+t^2}}{t\sqrt{1+t^2}}\log t &(\because \eqref{3}) \\
+     &=\frac{t^2+(1+t^2)\log t}{t\sqrt{1+t^2}} \\
+     \therefore\,\, h&=\frac{t\sqrt{1+t^2}}{t^2+(1+t^2)\log t}
+     \end{align*}
+だから，
+     \[h\limit{t}{+0}0\]
+および
+     \begin{align*}
+     h=\frac{1}{\frac{t}{1\sqrt{1+t^2}}+\frac{\log t}{t}\frac{1+\sqrt{1+t^2}}{\sqrt{1+t^2}}}\limit{t}{\infty}1
+     \end{align*}
+である．$\cdots$(答)
+\newpage
+\end{multicols}
+\end{document}

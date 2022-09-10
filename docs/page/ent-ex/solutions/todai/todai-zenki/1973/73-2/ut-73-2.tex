@@ -1,0 +1,39 @@
+\documentclass[a4j]{jarticle}
+\usepackage{amsmath}
+\usepackage{ascmac}
+\usepackage{amssymb}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{framed}
+\usepackage{latexsym}
+\usepackage{indent}
+\usepackage{cases}
+\allowdisplaybreaks
+\title{}
+\begin{document}
+\input{macros}
+\begin{oframed}
+$x_1,x_2\dots,x_n$はおのおの$0$，$1$，$2$のどれかの値を取る．$f_1=\dsum{i=1}{n}x_i$，
+$f_2=\dsum{i=1}{n}x_i^2$のとき$f_k=\dsum{i=1}{n}x_i^k(k=1,2,3,\cdots)$を$f_1$と$f_2$とを用いて
+表せ．
+\end{oframed}
+
+\setlength{\columnseprule}{0.4pt}
+\begin{multicols}{2}
+{\bf[解]}$x_i(i=1,2,\dots,n)$の中に$0$が$a$個，$1$が$b$個，$2$が$c$個あるとすると，
+題意から
+     \begin{align}
+     a+b+c=n \\
+     f_1=b+2c \label{2}\\
+     f_2=b+4c  \label{3}\\
+     f_k=b+2^kc \label{4}
+     \end{align}
+である．\eqref{2}，\eqref{3}から$b=2f_1-f_2$，$c=\dfrac{f_2-f_1}{2}$だから，これを\eqref{4}に代入して
+     \begin{align*}
+     f_k&=2f_1-f_2+2^k\frac{f_2-f_1}{2} \\
+     &=(2-2^{k-1})f_1+(-1+2^{k-1})f_2\cdots\text{(答)}
+     \end{align*}
+である．         
+\newpage
+\end{multicols}
+\end{document}

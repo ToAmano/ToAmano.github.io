@@ -1,0 +1,52 @@
+\documentclass[a4j]{jarticle}
+\usepackage{amsmath}
+\usepackage{ascmac}
+\usepackage{amssymb}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{framed}
+\usepackage{fancyhdr}
+\usepackage{latexsym}
+\usepackage{indent}
+\usepackage{cases}
+\usepackage[dvips]{graphicx}
+\usepackage{color}
+\allowdisplaybreaks
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{東京大学前期$1968$年$4$番}
+
+\begin{document}
+\input{macros}
+\begin{oframed}
+$(x,y,z)$を空間の直交座標とし，点$(1,0,0)$を通り$z$軸に平行な直線を$l$とする．$yz$平面内にあって$y=1-z^2$で表される曲線の$-1\le z\le 1$なる部分を，直線$l$のまわりに回転してできる曲面と，
+平面$z=1$および$z=-1$とによって囲まれた部分の体積を求めよ．
+\end{oframed}
+
+\setlength{\columnseprule}{0.4pt}
+\begin{multicols}{2}
+{\bf[解]}題意の立体の体積$V$とする．このうち$0\le z$の部分の体積$V'$とすると，対称性から
+     \begin{align}
+     V=2V' \label{a}
+     \end{align}
+である．$z=t(0\le t\le 1)$での断面を考えよう．曲線と$z=t$との交点は$P(0,1-t^2,t)$だから,
+$Q(1,0,t)$との距離は
+     \begin{align*}
+     |PQ|^2&=1^2+(1-t^2)^2 \\
+     &=t^4-2t^2+2
+     \end{align*}
+である．これを$f(t)$とおく．
+断面は$Q$を中心とした半径$|PQ|$の円である．故に求める体積は
+     \begin{align*}
+     V'&=\pi\int_0^1f(t)dt \\
+     &=\pi\left[\frac{1}{5}t^5-\frac{2}{3}t^3+2t\right]_0^1 \\
+     &=\pi\left(\frac{1}{5}-\frac{2}{3}+2\right) \\
+     &=\frac{23}{15}\pi \\
+     \end{align*}
+したがって\eqref{a}から
+\[V=\frac{46}{15}\pi\cdots\text{(答)}　\]
+である．
+\newpage
+\end{multicols}
+\end{document}

@@ -1,0 +1,61 @@
+\documentclass[a4j]{jarticle}
+\usepackage{amsmath}
+\usepackage{ascmac}
+\usepackage{amssymb}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{framed}
+\usepackage{fancyhdr}
+\usepackage{latexsym}
+\usepackage{indent}
+\usepackage{cases}
+\allowdisplaybreaks
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{東京大学前期$1974$年$4$番}
+\begin{document}
+\input{macros}
+     \begin{oframed}
+     $2$の関数$f(x)$，$g(x)$が次の性質1)，2)，3)，4)を持つものとする．
+          \begin{enumerate}[1)]
+          \item $f(x)$，$g(x)$は$x=0$において微分可能．
+          \item $f(0)=g(o)=0$．
+          \item 原点において，$y=f(x)$および$y=g(x)$のグラフに引いた接線はたがいに直交する．
+          \item 実数$a$，$b$，$c$を適当に取ると，$f'(0)=\dlim{x}{0}\dfrac{ax+bf(x)}{cx+f(x)}$，
+          $g'(0)=\dlim{x}{0}\dfrac{ax+bg(x)}{cx+g(x)}$が成り立つ．
+          \end{enumerate}
+     このとき，$a$の値を求めよ．     
+     \end{oframed}
+
+\setlength{\columnseprule}{0.4pt}
+\begin{multicols}{2}
+{\bf[解]}$p=f'(0)$，$q=g'(0)$とおく．条件3)，4)から
+     \begin{align*}
+     &\left\{
+          \begin{array}{l}
+          pq=-1 \\
+          p=\lim_{x\to0}\dfrac{a+bf(x)/x}{c+f(x)/x} \\
+          q=\lim_{x\to0}\dfrac{a+bg(x)/x}{c+f(x)/x}
+          \end{array}
+     \right. \\
+     \Longleftrightarrow&\left\{
+          \begin{array}{l}
+          pq=-1 \\
+          p=\dfrac{a+bp}{c+p} \\
+          q=\dfrac{a+bq}{c+q}
+          \end{array}
+     \right.     \\
+     \Longleftrightarrow&\left\{
+          \begin{array}{ll}
+          pq=-1& \\
+          x(c+x)=a+bx& (x=p,q)
+         \end{array}
+     \right.     
+     \end{align*}
+故に$p$，$q$は$x$の$2$次方程式$x^2+(c-b)x-a=0$の実解である．$p=q$とすると，第$1$式から
+$p=i$となって，$p\in\mathbb{R}$に矛盾．故に$p\not=q$だから，これらは$2$異実解を構成する．     
+よって解と係数の関係から$-a=pq=-1\Longleftrightarrow a=1\cdots$(答)である．
+\newpage
+\end{multicols}
+\end{document}

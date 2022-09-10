@@ -1,0 +1,79 @@
+\documentclass[a4j]{jarticle}
+\usepackage{amsmath}
+\usepackage{ascmac}
+\usepackage{amssymb}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{framed}
+\usepackage{fancyhdr}
+\usepackage{latexsym}
+\usepackage{indent}
+\usepackage{cases}
+\allowdisplaybreaks
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{東京大学前期$1964$年$5$番}
+\begin{document}
+\input{macros}
+     \begin{oframed}
+     曲線$xy=1$の第$1$象限の部分に定点$P(a,b)$があり，同じ曲線の第$3$象限の部分に動点
+     $Q$がある．
+          \begin{enumerate}[(1)]
+          \item 線分$QP$の長さの最小値を$a$で表せ．
+          \item 線分$QP$の長さが最小になるとき，$QP$が$x$軸の正の方向と$30^\circ$の角をなすよ
+          うな$a$の値を求めよ．
+          \end{enumerate}
+     \end{oframed}
+
+\setlength{\columnseprule}{0.4pt}
+\begin{multicols}{2}
+{\bf[解]}まず，題意から
+     \begin{align}
+     a>0
+     b=\frac{1}{a}
+     \end{align}
+である．また$c>0$として$\left(-c,\dfrac{-1}{c}\right)$とおける．
+     \begin{enumerate}[(1)]
+     \item $|QP|^2=(c+a)^2+\left(\dfrac{1}{c}+\dfrac{1}{a}\right)^2$であるからこれを$f(c)$として
+          \begin{align*}
+          \frac{1}{2}f'(c)&=(c+a)+\left(\dfrac{1}{c}+\dfrac{1}{a}\right)\left(\frac{-1}{c^2}\right)  \\
+          &=(a+c)\left(1-\frac{1}{ac^3}\right)  \\
+          &=\frac{a+c}{ac^3}{(pc-1)\left(1+pc+(pc)^2\right)}
+          \end{align*}
+     となる．ただし$p=\sqrt[3]{a}$である．故に下表を得る．
+          \begin{align*}
+               \begin{array}{|c|c|c|c|} \hline
+               c  &   &  1/p   &      \\ \hline
+               f'  & - &   0     & +     \\ \hline
+               f  &\se&         &\ne  \\ \hline
+               \end{array}
+          \end{align*}
+     従って
+          \begin{align*}
+          \min f(c)&=f\left(\dfrac{1}{p}\right) \\
+          &=\left(\frac{1}{p}+p^3\right)^2+\left(p+\dfrac{1}{p^3}\right)^2  \\
+          &=\left(p^2+\frac{1}{p^2}\right)^3
+          \end{align*}
+     だから，もとめる最小値は($|QP|\ge0$より)
+          \begin{align*}
+          \min|QP|=(a^{2/3}+a^{-2/3})^{3/2} \tag{答}
+          \end{align*}
+     となる．      
+     
+     \item このとき，前問の結果から，
+          \begin{align*}
+          \vector{QP}&=\vtwo{p^3+1/p}{1/p^3+p}  \\
+          &\parallel\vtwo{p^2}{1}
+          \end{align*}
+     となる．従ってこれが$x$軸の正の方向と$30^\circ$の角を成す，つまり$(\sqrt{3},1)$と平行なとき
+          \begin{align*}
+          p^2&=\sqrt{3}　\\
+          p&=\sqrt[4]{3} \\
+          a&=3^{3/4}\tag{答}
+          \end{align*}  
+     となる．     
+     \end{enumerate}
+\newpage
+\end{multicols}
+\end{document}
