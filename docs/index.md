@@ -93,13 +93,15 @@ gitやgithubの使い方について．
 ---
 ## others
 
-その他のメモについて．
+その他，上の分類に入らない事柄のメモ．
 
 ### [その他のソフトウェアなど](page/others/others_top.md)
 
 ---
 ### [MacのOSXの設定・ソフトなど](page/mac/mac_top.md)
 
-### [大学入試過去問集]
+---
+### [大学入試過去問集](page/ent-ex/entex_top.md)
 
 ---
+
