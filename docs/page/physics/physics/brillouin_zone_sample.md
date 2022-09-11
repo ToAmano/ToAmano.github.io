@@ -41,6 +41,27 @@ $$
 ソフトウェアによってk点の指定方法がデカルト座標だったり分極座標だったりするので注意が必要．例えばQEはデカルト座標だがalamodeは分極座標である．
 
 
+## 実際の計算におけるサンプリングの選び方
+
+- 一般的にはmetalの場合にはBZのどこにフェルミ面が存在しているかが物性に重要なのでk点を多く取る必要がある．insulator/semiconductorでは100 K-points/atom程度が目安．metalだとその10倍以上となることもある．d原子がある場合はもっと多くとった方がよいこともある．
+- Monkhorst-Packを利用する場合，奇数K点だとΓ点をとり，偶数K点だととらないのでちょっと挙動が違う．K点が小さい場合は偶数がおすすめ．
+
+
+## スアリング
+
+VASPでのすメアリングの選び方
+- 最適化にはいずれの場合もgaussian smearingが安全．
+- より正確な計算にはtetrahedron法を考える．
+- AIMDではfermi smearingがよい．
+
+
+http://ryokbys.web.nitech.ac.jp/vasp.html
+
+QEで軌道を描く
+pp.x
+
+
+
 ## 参考文献
 
 [VASPの解説ページ](https://www.vasp.at/wiki/index.php/KPOINTS)

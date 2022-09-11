@@ -1,7 +1,3 @@
-
-
-
-
 ここの記述はほとんど以下のoverleafのページの写経．テーブル関連でやりたいことがある場合はまずは以下のページを参照するとよい．
 
 [overleafの解説ページ](https://ja.overleaf.com/learn/latex/Tables)
@@ -32,3 +28,4 @@
 	```
 
 
+##  図表を作成するtable，tabular環境

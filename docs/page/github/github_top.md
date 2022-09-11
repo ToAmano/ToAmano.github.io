@@ -196,4 +196,18 @@ https://www.mk-mode.com/blog/2019/01/27/jekyll-with-minimal-mistakes/
 https://simondosda.github.io/posts/2021-09-15-blog-github-pages-3-content.html
 
 https://www.smashingmagazine.com/2014/08/build-blog-jekyll-github-pages/
+
+https://masamichi.me/development/2020/05/28/github-pages-blog-part3-cutomize-setting.html
+-->
+
+
+
+## latex文書の運用について
+
+<!--
+https://zenn.dev/ganariya/articles/platex-github-action
+https://zenn.dev/serima/articles/4dac7baf0b9377b0b58b
+https://zenn.dev/t4t5u0/articles/latexoperation
+
+
 -->

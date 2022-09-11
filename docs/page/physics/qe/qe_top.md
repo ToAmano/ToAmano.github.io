@@ -10,7 +10,27 @@
 
 <!-- https://cometscome.github.io/DFT/build/samples/samples/ -->
 
+
+## 擬ポテンシャル
+
+<!-- 
+https://www.researchgate.net/post/How_can_I_get_these_Norm-Conserving_pseudopotentials_for_Quantum_Espresso
+
+https://ja.wikipedia.org/wiki/PAW%E6%B3%95
+-->
+
+
 ## バンドギャップ
 
 <!-- https://www.youtube.com/watch?v=DHu8nyBSLxY -->
-nbndを増やす．
+nbndを増やす．smearing=fixを利用．
+
+
+
+## その他
+
+- 出力のモニタリング
+  
+  ```bash
+  Tail -f scf.out
+  ```

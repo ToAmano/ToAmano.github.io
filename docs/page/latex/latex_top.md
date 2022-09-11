@@ -185,6 +185,42 @@ https://cns-guide.sfc.keio.ac.jp/2001/11/5/1.html
 [^1]: LaTeX文書はそのままではpdfに変換することができず，LaTeXエンジンと呼ばれるプログラムを実行する必要がある．このエンジンには色々種類があって難しいのだが，自分は近年登場したlualatexを利用している．以前はupLaTeXを利用していたのだが，これはtex文書を一旦DVI形式に変更し，さらにDVIからpdfへ変換するpdflatexを利用する必要があった．lualatexはtex文書から直接pdf文書を生成してくれるために煩わしさがないので気にいっている．一方でデフォルトでは日本語が使えなかったり，従来のエンジンに比べてコンパイルに時間がかかるといった欠点もある．
 
 
+## プロジェクトでのファイル管理（ファイルの分割など） 
+
+ディレクトリ構成：
+ファイル分割: \inputコマンド，subfileクラス，standaloneクラス
+
+[overleafのマニュアル](https://ja.overleaf.com/learn/latex/Multi-file_LaTeX_projects)も参考になる．
+
+```bash
+|
+|- main.tex
+|
+|- images
+```
+
+standaloneクラスは図表を外部化する時に役立つ．外部化のメリットは図表だけを他の用途に使うことができたり，特にtikzの場合にコンパイルの時間を減らせることだろう．利用手順としてはまずstandaloneクラスで書かれた図表のファイルだけを先にコンパイルし，これを`\includestandalone`コマンドでメインのファイルから読み込む．図表読み込みの優先順位をpdf，texから再コンパイルと切り替えることができるので，通常の`includegraphics`や`input`に比べて柔軟に運用できるメリットがある．
+
+単にstandaloneクラスを利用して図表を作ることも可能である．例えば次の例では表だけのpdfを作成できる．こうやって作った図表をpowerpointできるので便利だ．
+
+```latex:table.tex
+\documentclass{standalone}
+```
+
+このファイルを単に以下のようにコンパイルするとtable.pdfという表ができる．このとき通常のlatex文書と違って，余白が全くなくなっていることがわかるだろう．
+
+```bash
+lualatex table.tex
+```
+
+プロジェクトの中でstandaloneクラスを使いたい場合，メインファイルでstandaloneパッケージを読み込む必要がある．ここでは上で作ったtable.texを読み込むことを考えている．
+
+```latex:main.tex
+\documentclass{article}
+\usepackage{standalone}
+
+```
+
 
 ## 参考文献
 
