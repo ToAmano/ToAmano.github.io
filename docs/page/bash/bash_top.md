@@ -1,4 +1,11 @@
-# bash/zsh
+---
+layout: default
+title:  "bashトップページ"
+date:   2022-09-04 10:03:40 +0900
+categories: bash zsh
+---
+
+## bash/zsh
 
 
 ## zshの設定ファイル

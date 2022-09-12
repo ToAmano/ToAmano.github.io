@@ -1,8 +1,11 @@
 ---
-exclude: true
+layout: default
+title:  "wannier90 installation"
+date:   2022-09-04 10:03:40 +0900
+categories: wannier90 intel
 ---
 
-# wannier90 installation
+
 
 ## 日付：2022/5/18
 ## 

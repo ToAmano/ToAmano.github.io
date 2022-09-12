@@ -1,4 +1,10 @@
-# Emacs
+---
+layout: default
+title:  "emacsトップページ"
+date:   2022-09-04 10:03:40 +0900
+categories: emacs
+---
+
 
 
 自分のEmacsの用途は主にシェル上でのサーバーの作業とLaTeX文書の作成である．コードを書く時はVScodeを利用しているが，Emacsで使えるTeX文書用メジャーモードyatexが非常に便利であるためなかなかVScodeに移行できずにいる．
