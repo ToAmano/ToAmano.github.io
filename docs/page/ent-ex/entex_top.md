@@ -188,4 +188,4 @@
 
 
 
-[ut61-1]: solutions/todai/todai-zenki/1961
+[ut61-1]: solutions/todai/todai-zenki/1961/61-1/ut-61-1.pdf
