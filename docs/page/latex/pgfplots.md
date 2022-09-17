@@ -150,6 +150,12 @@ https://tikz.dev/library-external
 
 ## 解決方法がわかっていないこと
 
+- subcaptionやminipageなどの分割を行う環境との相性がよくない．
+
+  % % 注意 !! ここの二つのグラフはそのままlualatex --jobnameコマンドを使ってもうまく図が生成されない．．．
+  % % 全体的にonecolumngrid+minipageとpgfplotsの組み合わせがよくない気がする．
+  % % 一旦minipageをコメントアウトしてからlualatexを実行するとまあ悪くない図が得られる．
+
 - semilogyaxisとaxis環境で作られる左側の余白が異なる．
   
   これは別に気にしなければそのままで良いと思う．
@@ -165,6 +171,14 @@ https://tikz.dev/library-external
   \input{main.bbl}
   ```
   対処療法だけどとりあえずはこれで．．．
+
+  追記::biblatexではなくてnatbibを利用する場合，standaloneの方でnatbibのstyleを指定しないとまずい？ (revtexはnatbibなので．．．）
+
+  ```latex
+  \usepackage[numbers]{natbib}
+  本文
+  \input{main.bbl}
+  ```
 
 
 - 図表のサイズ指定

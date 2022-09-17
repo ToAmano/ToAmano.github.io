@@ -1,4 +1,4 @@
-PWD /Users/amano/works/research/TiO2_paper/figures/test
+PWD /Users/amano/works/research/homepage/test_latex_fig
 INPUT /usr/local/texlive/2022/texmf-var/web2c/luahbtex/lualatex.fmt
 INPUT ./test.tex
 OUTPUT test.log
@@ -182,6 +182,8 @@ INPUT /usr/local/texlive/2022/texmf-dist/tex/luatex/luatexja/patches/lltjp-stflo
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/asymptote/asymptote.sty
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/asymptote/asymptote.sty
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/asymptote/asymptote.sty
+INPUT ./test.pre
+INPUT ./test.pre
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/base/ifthen.sty
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/base/ifthen.sty
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/base/ifthen.sty
@@ -239,6 +241,4 @@ INPUT /usr/local/texlive/2022/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 OUTPUT test-1.asy
-OUTPUT test.pdf
-INPUT /usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT ./test.aux
