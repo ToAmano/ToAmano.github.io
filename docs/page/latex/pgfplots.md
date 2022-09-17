@@ -1,4 +1,9 @@
-# tikz/pgfplots
+---
+layout: default
+title:  "tikz/pgf"
+date:   2022-09-04 10:03:40 +0900
+categories: latex
+---
 
 とりあえず参考になるurlの列挙だけ．
 
@@ -6,11 +11,58 @@
 
 ## 基本的な使い方
 ### 
+
+```latex
+\documentclass{standalone}
+
+\usepackage{tikz}
+\usepackage{pgfplots}
+
+\pgfplotsset{compat = newest}
+
+\begin{document}
+    \begin{tikzpicture}
+        \begin{axis}[
+            xmin = 0, xmax = 30,
+            ymin = -1.5, ymax = 2.0,
+            xtick distance = 2.5,
+            ytick distance = 0.5,
+            grid = both,
+            minor tick num = 1,
+            major grid style = {lightgray},
+            minor grid style = {lightgray!25},
+            width = \textwidth,
+            height = 0.5\textwidth,
+            xlabel = {$x$},
+            ylabel = {$y$},
+            legend cell align = {left},
+        ]
+            \addplot[
+                domain = 0:30,
+                samples = 200,
+                smooth,
+                thick,
+                blue,
+            ] {exp(-x/10)*( cos(deg(x)) + sin(deg(x))/10 )};
+
+            \addplot[
+                smooth,
+                thin,
+                red,
+                dashed
+            ] file[skip first] {cosine.dat};
+           \legend{Plot from expression, Plot from file}
+        \end{axis}
+    \end{tikzpicture}
+\end{document}
+```
+
 https://bombrary.github.io/blog/posts/tikz-note01/
 
 https://mathlandscape.com/latex-color/
 https://konoyonohana.blog.fc2.com/blog-entry-97.html
 
+https://latexdraw.com/plot-a-function-and-data-in-latex/
 
 ### フォントの大きさを変える．
 https://tex.stackexchange.com/questions/107057/adjusting-font-size-with-tikz-picture
@@ -27,6 +79,17 @@ https://tex.stackexchange.com/questions/14506/pgfplots-prevent-single-plot-from-
 https://tex.stackexchange.com/questions/6114/hide-tick-numbers-in-a-tikz-pgf-axis-environment
 yticklabels
 
+
+### pathを追加する
+
+プロジェクトで複数のディレクトリを利用している場合，standaloneクラスの文書とメインの文書でpathが異なる場合がある．
+
+https://tex.stackexchange.com/questions/35863/pgfplots-from-file-search-path-looking-for-graphicspath-equivalent
+```latex
+    \pgfplotsset{
+        table/search path={plots/data},
+    }
+```
 
 ### 複数の図を入れる
 https://tex.stackexchange.com/questions/457844/align-two-tikz-pictures-vertically-in-standalone-environment

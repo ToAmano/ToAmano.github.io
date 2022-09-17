@@ -102,6 +102,16 @@ https://sites.google.com/site/lifeslash7830/home/tex/latexmkdeshittashedingnitsu
 https://sites.google.com/site/lifeslash7830/home/tex/lualatexwoshittemiru -->
 
 ---
+## LaTeXでできることの概要
+
+大体以下のようなことができる．主にレポートやノート，論文の作成といった観点から述べていく．
+
+- 数式を書く
+- 図表を作成する
+- 図表のキャプションやレイアウトの調整
+- 相互参照や参考文献
+
+
 ## 表や図の挿入
 
 latexでは図と表を配置するための専用のfigure環境とtable環境が用意されている．基本的にこれらの環境は図表用の場所を用意するだけで，中身についてはまた他の環境を利用する．表の作成はtablular環境でかなり容易に行うことができる一方，図の作成のための代表的な環境であるtikz環境はなかなか思い通りの図を作るのには時間がかかる印象がある．
