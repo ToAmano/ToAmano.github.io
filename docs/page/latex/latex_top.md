@@ -53,7 +53,7 @@ TeXを利用するための環境設定としては，TeX自体のインスト�
     以上でインストールは終了して，latex文書をpdfに変換できるようになった．ちゃんとlatexが動くかのテストとして以下のようなファイル`test.tex`を作成してみる．(注意::lualatexはデフォルトで日本語を受け付けない!)
 
     ```latex:test.tex
-     \documentclass[a4j]{article}
+     \documentclass[a4]{article}
     \usepackage{blindtext}
     \title{Lualatex test}
     \begin{document}
@@ -102,6 +102,34 @@ https://sites.google.com/site/lifeslash7830/home/tex/latexmkdeshittashedingnitsu
 https://sites.google.com/site/lifeslash7830/home/tex/lualatexwoshittemiru -->
 
 ---
+
+## 数式の挿入，数学記号など
+
+数式の挿入は文中，または独立した環境内どちらでも可能．文中に挿入する場合は$$で囲み，独立した環境としてはデフォルトで`equation`環境が用意されている．これらの環境の中ではギリシャ文字や数学記号などのコマンドを利用できる．
+
+```latex
+\documentclass[a4]{article}
+\usepackage{blindtext}
+\begin{document}
+これがequation環境です．ギリシャ文字や分数などの数学記号もお手のもの．
+\begin{equation}
+  f(x)=\alpha x^2+\beta x +\gamma \\
+  \frac{1}{x}=\sqrt{x} \\
+  \sum_{n=0}^{\infty}\frac{1}{n^2}=
+\end{equation}
+
+文中に数式を入れることもできます．例えば$f(x)=\alpha x^2+\beta x +\gamma$のように．
+
+文中と独立環境では，分数や総和記号などの表記が若干異なっている場合があります．
+\blinddocument
+\end{document}
+```
+
+デフォルトの状態でも数多くの数学記号が定義されているが，さらに追加で使うと便利なパッケージに`amsmath`や`physics`環境がある．
+
+数式の[こちら](latex_equation.md)も参照．
+
+
 ## 表や図の挿入
 
 latexでは図と表を配置するための専用のfigure環境とtable環境が用意されている．基本的にこれらの環境は図表用の場所を用意するだけで，中身についてはまた他の環境を利用する．表の作成はtablular環境でかなり容易に行うことができる一方，図の作成のための代表的な環境であるtikz環境はなかなか思い通りの図を作るのには時間がかかる印象がある．

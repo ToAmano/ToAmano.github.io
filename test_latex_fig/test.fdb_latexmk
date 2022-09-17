@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1662609988 "test.tex" "test.pdf" "test" 1662609989
+["pdflatex"] 1662986704 "test.tex" "test.pdf" "test" 1662986705
   "/Users/amano/Library/texlive/2022/texmf-var/luatex-cache/generic/fonts/otl/haranoajimincho-regular.luc" 1660194362 1961805 a4e8ee39345c1319a0076bad6921f9ae ""
   "/Users/amano/Library/texlive/2022/texmf-var/luatex-cache/generic/fonts/otl/lmmono9-regular.luc" 1660194363 81875 9e8265965c5b4584efdeff727dbbed59 ""
   "/Users/amano/Library/texlive/2022/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-regular.luc" 1660194360 127327 a10453e432aae9a08361721794e3f42f ""
@@ -12,8 +12,6 @@
   "/Users/amano/Library/texlive/2022/texmf-var/luatexja/ltj-cid-auto-adobe-japan1.luc" 1660194352 1643631 91cfe6be2985e96c1aa98a60c52fbe03 ""
   "/Users/amano/Library/texlive/2022/texmf-var/luatexja/ltj-jisx0208.luc" 1660194363 93919 1f6dc76354e6e3b148c06f9f9254f22e ""
   "/Users/amano/Library/texlive/2022/texmf-var/luatexja/ltj-kinsoku_default.luc" 1660194352 17710 2bc89a84ede82dabd46ec677aef5f865 ""
-  "/usr/local/texlive/2022/texmf-dist/fonts/opentype/public/haranoaji/HaranoAjiMincho-Regular.otf" 1645391598 6355800 6b1b8c908756db366b95140471b25bc0 ""
-  "/usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf" 1255129361 111536 ae9d1b331000d544f47e5223081b7b54 ""
   "/usr/local/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1461363279 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/local/texlive/2022/texmf-dist/tex/generic/catchfile/catchfile.sty" 1576016007 8622 63834878edeb14dd71d58d8f22bc3e06 ""
   "/usr/local/texlive/2022/texmf-dist/tex/generic/etexcmds/etexcmds.sty" 1576625273 7734 b98cbb34c81f667027c1e3ebdbfce34b ""
@@ -136,11 +134,11 @@
   "/usr/local/texlive/2022/texmf-dist/tex/luatex/luatexja/patches/lltjp-geometry.sty" 1635109274 19234 a1b77f145e2d634350e4e002242d5016 ""
   "/usr/local/texlive/2022/texmf-dist/tex/luatex/luatexja/patches/lltjp-stfloats.sty" 1621284380 885 02e88ea62bc0600a7152c9b108b868e3 ""
   "/usr/local/texlive/2022/texmf-dist/tex/platex/jsclasses/jslogo.sty" 1601931076 5585 8e4615c54073c390d14154b29cee89cb ""
-  "/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1647878959 4410336 7d30a02e9fa9a16d7d1f8d037ba69641 ""
   "/usr/local/texlive/2022/texmf-var/web2c/luahbtex/lualatex.fmt" 1660100903 4558588 26d75f14d558760d16a3c3d096e78d23 ""
   "test-1.tex" 0 -1 0 ""
-  "test.aux" 1662609989 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
-  "test.tex" 1662609985 458 d75319515b0e115f9eae51b982663f81 ""
+  "test.aux" 1662986705 8 a94a2480d3289e625eea47cd1b285758 "pdflatex"
+  "test.pre" 1662986705 41 aadfc92db9d246f05f82bb3355ee7f37 "pdflatex"
+  "test.tex" 1662986702 457 3d4cb6e4ca2493f0f123be734e27157c ""
   (generated)
   "test-1.asy"
   "test.aux"
