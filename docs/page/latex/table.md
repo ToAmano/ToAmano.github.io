@@ -17,6 +17,7 @@ tabularがtable本体を作る環境，table環境[^1]がその場所を確保�
 ```latex
 \begin{table}[!htb]
 \centering
+\caption{test table} % tableの場合，captionは上に来ないといけない！
 \begin{tabular}{ccc}
  cell1 & cell2 & cell3 \\ 
  cell4 & cell5 & cell6 \\
@@ -34,16 +35,22 @@ tabular環境内で表を作成する．一列の形式をどうするかを`{cc
 
 - 表の行間を調整する
 
-	デフォルトだと
+	デフォルトだと表の行間が狭すぎる．
 
 	```latex
-	\renewcommand{\arraystretch}{1.8}
+	\renewcommand{\arraystretch}{1.5}
 	% 表をかく
 	\renewcommand{\arraystretch}{1}
 	```
 
+- デフォルトだとtableとcaptionの間が狭すぎる．
 
-##  図表を作成するtable，tabular環境
+	captionパッケージを使う．
+	```latex
+	\usepackage{caption} 
+	\captionsetup[table]{skip=10pt}	
+	```
+
 
 
 

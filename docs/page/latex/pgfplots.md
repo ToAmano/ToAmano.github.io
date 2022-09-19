@@ -3,20 +3,23 @@ layout: default
 title:  "tikz/pgf"
 date:   2022-09-04 10:03:40 +0900
 categories: latex
+tags:
+- tikz
+- pgfplot
 ---
 
 とりあえず参考になるurlの列挙だけ．
 
 [公式のマニュアル](https://tikz.dev/)
 
+
 ## 基本的な使い方
-### 
+
 
 ```latex
-\documentclass{standalone}
+\documentclass{article}
 
-\usepackage{tikz}
-\usepackage{pgfplots}
+\usepackage{tikz,pgfplots,pgfplotstable} % 基本となる3つのパッケージ
 
 \pgfplotsset{compat = newest}
 
@@ -80,11 +83,10 @@ https://tex.stackexchange.com/questions/6114/hide-tick-numbers-in-a-tikz-pgf-axi
 yticklabels
 
 
-### pathを追加する
+### ファイルのパスを追加する
 
-プロジェクトで複数のディレクトリを利用している場合，standaloneクラスの文書とメインの文書でpathが異なる場合がある．
+プロジェクトで複数のディレクトリを利用している場合，standaloneクラスの文書とメインの文書でpathが異なる場合がある．この場合，`\pgfplotsset`コマンドでファイルのパスを追加できる．
 
-https://tex.stackexchange.com/questions/35863/pgfplots-from-file-search-path-looking-for-graphicspath-equivalent
 ```latex
     \pgfplotsset{
         table/search path={plots/data},
@@ -145,6 +147,28 @@ Whenever you'd use a tikzpicture environment or a \tikz macro, give your picture
 You'll also notice that there is a rule for files matching *_input.tex. This is for splitting the project into multiple files which is of course always a good idea when doing large projects. The rule detects whether such a file has been modified, and if it has triggers a recompilation of the document. LaTeX's \includeonly feature might be a good companion to this.
 -->
 
+<!-- https://blog.miz-ar.info/2016/12/latex-and-output-directory/ -->
+<!-- 
+https://github.com/pgf-tikz/pgf/issues/932
+https://tex.stackexchange.com/questions/360794/using-externalize-with-standalones-for-tikz-figures-output-directory-and-tik
+https://tex.stackexchange.com/questions/183023/combining-beamer-tikz-externalize-and-standalone
+https://aprikose.sumomo.ne.jp/madchemiker/latex/tikzexternalize/
+-->
+
+```latex
+\documentclass{article}
+\usepackage{tikz}
+\usetikzlibrary{external}
+\tikzexternalize[prefix=_tikz/]
+\tikzexternalize
+\begin{document}
+\begin{tikzpicture}
+  \draw (0,0) -- (1,0) -- (1,1) -- (0,1) -- cycle;
+\end{tikzpicture}
+\end{document}
+```
+
+
 ## compileをスピードアップする・グラフの作成の外部化2::standaloneクラス
 
 
@@ -187,3 +211,17 @@ https://tikz.dev/library-external
 - 図表のサイズ指定
   
   [APSのマニュアル](https://journals.aps.org/prl/authors)によると横幅は8.6cmにするべき？ これがおそらく2カラム組の場合の1カラム幅に対応しているのだろう．これもstandalone環境だとうまくいっているように見える．
+
+
+
+
+https://tex.stackexchange.com/questions/480910/pgfplots-how-to-align-plot-width-to-same-width-as-legend
+
+
+https://tex.stackexchange.com/questions/301594/scale-only-axis-only-for-one-axis
+
+https://tex.stackexchange.com/questions/528695/pgfplots-how-to-get-values-of-width-and-height-of-axis-rectangle
+
+https://tex.stackexchange.com/questions/192424/pgfplots-single-legend-in-a-group-plot
+
+https://tex.stackexchange.com/questions/131446/common-label-for-a-groupplot

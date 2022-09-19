@@ -7,99 +7,15 @@ categories: latex
 
 数式などを美しく組版してくれるLaTeXの使い方に関するメモ書き．自分の環境としては，エディタとして`emacs`か`VsCode`，エンジンとして`lualatex`[^1]を利用し，コンパイルには`latexmk`を利用している．
 
-ネット上の日本語文献としては[TeXwiki](https://texwiki.texjp.org/)が非常に参考になると思う．書籍としては自分は祖父からLaTeX2e美文書作成入門をもらって勉強したがまずはこれを読んでみると良いと思う．最近はなんと第8版になっているらしい．
+ネット上の日本語文献としては[TeXwiki](https://texwiki.texjp.org/)が非常に参考になると思う．書籍としては自分は祖父からLaTeX2e美文書作成入門をもらって勉強したがまずはこれを読んでみると良いと思う．最近はなんと第8版になっているらしい．英語の文献としてはウェブ上でTeX文書を作成できる[overleafのHP](https://ja.overleaf.com/learn)に解説ドキュメントがおいてあってわかりやすい．一通り勉強してさらに細かいhowtoが知りたい場合はstackexchangeなどを漁ってみるとかなり勉強になるほか，パッケージの細かい利用方法がしりたければマニュアルを見るのが手っ取り早い．
 
-英語の文献としてはウェブ上でTeX文書を作成できる[overleafのHP](https://ja.overleaf.com/learn)に解説ドキュメントがおいてあってわかりやすい．
+
 
 ---
 ## 環境設定
 
-TeXを利用するための環境設定としては，TeX自体のインストール・パスの設定が必須．加えて快適に文書を作成するにはエディターの設定やビューワーも必要である場合が多い．以下ではmacにmactexをhomebrewでインストールする例を述べる．
+まずはTeXをインストールする必要がある．[こちら](latex_install.md)を参照．本文書の環境設定は断りがない限りこのページでおこなったものを利用している．
 
-1. MacTeXのinstall(nessesary)
-   
-    これはhomebrewを利用するか，DMGファイルをダウンロードしてくるかのどちらでも良い．homebrewを利用する場合は以下のコマンドで良いが，かなり時間がかかるので注意．
-
-    ```bash
-    brew install --cask mactex
-    ```
-
-    mactexは同時にLaTeXITやTeXShopなどのGUIアプリケーションもインストールする．これらのGUIツールを利用しないという場合は
-
-    ```bash
-    brew install --cask mactex-no-gui
-    ```
-    でも良い．個人的には数式の画像を作成してくれるLaTeXITがスライドの作成などで便利なので全てインストールしている．初心者はとりあえず全てインストールすることをおすすめする．
-
-    MacTeXの特徴として，
-    ```bash
-    /usr/local/texlive/2022
-    ```
-    のようにバージョンの出た年ごとにディレクトリを掘ってインストールされるので，過去のバージョンとconflictを起こさないようになっているという利点がある．したがって現在の環境を壊さずに新しいバージョンのインストールを気軽に行える．
-
-    以上で長いインストールが終わったら，コマンドが入っているかを確認する．`/usr/local/texlive/`以下のコマンドが反応すればインストールは完了だ．
-    ```
-    $ lulatex --help
-    $ which lulatex
-    ```
-
-    latexのパッケージ管理ソフト`tlmgr`のアップデートもおこなっておく．
-    ```bash
-    sudo tlmgr update --self --all
-    ```
-
-1. latex文書が作成されるかのテスト
-    
-    以上でインストールは終了して，latex文書をpdfに変換できるようになった．ちゃんとlatexが動くかのテストとして以下のようなファイル`test.tex`を作成してみる．(注意::lualatexはデフォルトで日本語を受け付けない!)
-
-    ```latex:test.tex
-     \documentclass[a4]{article}
-    \usepackage{blindtext}
-    \title{Lualatex test}
-    \begin{document}
-    \maketitle
-    Here you can add texts.
-
-    \blinddocument
-    \end{document}
-    ```
-
-    このファイルをpdf化するためにターミナルで
-    ```bash
-    lualatex test.tex
-    ```
-    と打つ．いくつかファイルが生成されるが，その中の`test.pdf`にLualatex testというタイトルで文書ができていれば成功だ．
-
-    lulatexは遅いし使いたくない場合，uplatex+ptex2pdfの組み合わせを試す．以下のようなtext2.texを用意する．uplatexの場合は日本語でも大丈夫．
-
-    ```latex:test2.tex
-    \documentclass[a4j]{jsarticle}
-    \usepackage{blindtext}
-    \title{uplatex test}
-    \begin{document}
-    \maketitle
-    みなさんこんにちは．uplatexのコンパイルテスト用のファイルです．
-    \blinddocument
-    \end{document}
-    ```
-    コンパイルするには二つのコマンドが必要．これでtest2.pdfというファイルが生成されていれば成功だ．
-    ```bash
-    # test2.dviファイルを作成
-    $ uplatex test2.tex 
-    # test2.pdfファイルを作成
-    ptex2pdf -u -l test2
-    ```
-    ターミナルからやるとコマンドがいくつか必要で面倒くさいが，ちゃんとエディタの設定を行えばlualatexもuplatexもコマンド一つで簡単にコンパイルできるようになるので心配ない．
-
-1. latexmk (option)
-   
-    latexmkとはTeXからPDFファイルを作成するまでの流れを自動で行ってくれるもの．例えばTeX文書が参考文献を含む場合にはPDFファイルを作成するには複数回コンパイルが必要であるが，latexmkはこの複数回のコンパイルをコマンド一つで自動でやってくれる．コマンドはMacTeXのインストールで自動で入っているが，`.latexmkrc`という設定ファイルをホームディレクトリに設置する必要がある．TeXコンパイラとして何を利用するかで設定が異なる．
-
-<!-- http://www2.yukawa.kyoto-u.ac.jp/~koudai.sugimoto/dokuwiki/doku.php?id=latex:latexmk%E3%81%AE%E8%A8%AD%E5%AE%9A
-    
-https://sites.google.com/site/lifeslash7830/home/tex/latexmkdeshittashedingnitsuite 
-
-https://sites.google.com/site/lifeslash7830/home/tex/lualatexwoshittemiru -->
 
 ---
 ## LaTeXでできることの概要
@@ -167,6 +83,7 @@ tabular+table環境を利用した表の作り方については[ここ](table.m
 <!--
 https://qiita.com/satl/items/0c11c8808b43f806ee21
 https://geniusium.hatenablog.com/entry/2018/09/16/114600
+https://unity-yuji.xyz/latex-subcaption-subfigure-ref-parenthesis/
 -->
 
 
@@ -212,16 +129,15 @@ https://tex.stackexchange.com/questions/12175/biblatex-submitting-to-a-journal
 
 ## スライド資料を作成する．
 
-LaTeXではスライドショーを作成することもできる．スライド資料を作るdocumentclassとして，beamerがある．
-<!-- https://qiita.com/sh05_sh05/items/3d7ea00c97971de15851
-https://risa.is.tokushima-u.ac.jp/~tetsushi/howtomakeslides.pdf
-https://joker.hatenablog.com/entry/2014/10/18/222303
-https://qiita.com/termoshtt/items/756aec542fb4c812a405
-https://joker.hatenablog.com/entry/2014/10/18/222303
-https://qiita.com/zr_tex8r/items/69e8cc32038ff29f5ac3
-https://paper.hatenadiary.jp/entry/2017/01/10/031523
-chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/http://m.sc.niigata-u.ac.jp/~prtana/digital/HowToBeamer.pdf
--->
+LaTeXではスライドショーを作成することもできる．スライド資料を作る専用のドキュメントクラスとして`beamer`がある．試しに以下のようなサンプルを用意した．
+
+```latex
+
+```
+
+
+
+
 
 
 
@@ -267,21 +183,50 @@ https://cns-guide.sfc.keio.ac.jp/2001/11/5/1.html
 ディレクトリ構成：
 ファイル分割: \inputコマンド，subfileクラス，standaloneクラス
 
-[overleafのマニュアル](https://ja.overleaf.com/learn/latex/Multi-file_LaTeX_projects)も参考になる．
+プログラミングと同様，文章が大きくなってくるとそれを分割したくなってくる．たとえば論文ならintro.texとtheory.texは別々のファイルになっていれば管理が楽だ．latexにはそれをサポートする機能やパッケージがいくつか用意されていてこの目的を達成することができる． [overleafのマニュアル](https://ja.overleaf.com/learn/latex/Multi-file_LaTeX_projects)も参考になる．
+
+簡単な例として以下のようなディレクトリ構成の文書を考える．`main.tex`がコンパイルするべきファイルで，sectionsディレクトリに分割した文章がはいっている．
 
 ```bash
 |
 |- main.tex
 |
-|- images
+|- sections/
+      |- 01.tex
+      |- 02.tex
 ```
+
+ファイルを分割する最も簡単な方法は`\input`コマンドを利用すること．メインファイルから以下のようにサブファイルを読み込める．この時パスの設定に要注意．
+
+```latex:main.tex
+\documentclass[a4]{article}
+
+\begin{document}
+  %% 目次
+  \tableofcontents
+
+  %% 本文
+  \input{sections/section01.tex}
+  \input{sections/section02.tex}
+
+  %% 文献
+  \bibliographystyle{junsrt}
+  \bibliography{mybib}
+\end{document}
+```
+
+
+
+
+
+<!-- https://geniusium.hatenablog.com/entry/2022/03/16/200355 -->
 
 standaloneクラスは図表を外部化する時に役立つ．外部化のメリットは図表だけを他の用途に使うことができたり，特にtikzの場合にコンパイルの時間を減らせることだろう．利用手順としてはまずstandaloneクラスで書かれた図表のファイルだけを先にコンパイルし，これを`\includestandalone`コマンドでメインのファイルから読み込む．図表読み込みの優先順位をpdf，texから再コンパイルと切り替えることができるので，通常の`includegraphics`や`input`に比べて柔軟に運用できるメリットがある．
 
-単にstandaloneクラスを利用して図表を作ることも可能である．例えば次の例では表だけのpdfを作成できる．こうやって作った図表をpowerpointできるので便利だ．
+単にstandaloneクラスを利用して図表を作ることも可能である．例えば次の例では表だけのpdfを作成できる．こうやって作った図表をパワポなどで利用できるので便利だ． 
 
 ```latex:table.tex
-\documentclass{standalone}
+\documentclass{standalone} % これが必須
 ```
 
 このファイルを単に以下のようにコンパイルするとtable.pdfという表ができる．このとき通常のlatex文書と違って，余白が全くなくなっていることがわかるだろう．
@@ -298,6 +243,7 @@ lualatex table.tex
 
 ```
 
+<!-- https://konoyonohana.blog.fc2.com/blog-entry-389.html -->
 
 ## 参考文献
 

@@ -3,6 +3,8 @@ layout: default
 title:  "LaTeXトップページ"
 date:   2022-09-04 10:03:40 +0900
 categories: git 
+tags:
+- github 
 ---
 
 # git/githubの使い方
@@ -198,6 +200,10 @@ https://simondosda.github.io/posts/2021-09-15-blog-github-pages-3-content.html
 https://www.smashingmagazine.com/2014/08/build-blog-jekyll-github-pages/
 
 https://masamichi.me/development/2020/05/28/github-pages-blog-part3-cutomize-setting.html
+
+https://masamichi.me/development/2019/12/14/github-pages-blog.html
+
+https://chadbaldwin.net/2021/03/14/how-to-build-a-sql-blog.html
 -->
 
 
@@ -209,5 +215,5 @@ https://zenn.dev/ganariya/articles/platex-github-action
 https://zenn.dev/serima/articles/4dac7baf0b9377b0b58b
 https://zenn.dev/t4t5u0/articles/latexoperation
 
-
+https://peterroelants.github.io/posts/adding-tags-to-github-pages/
 -->
