@@ -104,12 +104,13 @@ https://sites.google.com/site/lifeslash7830/home/tex/lualatexwoshittemiru -->
 ---
 ## LaTeXでできることの概要
 
-大体以下のようなことができる．主にレポートやノート，論文の作成といった観点から述べていく．
+大体以下のようなことができる．主にレポートやノート，論文の作成の観点から述べていく．
 
 - 数式を書く
 - 図表を作成する
 - 図表のキャプションやレイアウトの調整
 - 相互参照や参考文献
+
 
 
 ## 数式の挿入，数学記号など
@@ -134,15 +135,25 @@ https://sites.google.com/site/lifeslash7830/home/tex/lualatexwoshittemiru -->
 \end{document}
 ```
 
-デフォルトの状態でも数多くの数学記号が定義されているが，さらに追加で使うと便利なパッケージに`amsmath`や`physics`環境がある．
+デフォルトの状態でも数多くの数学記号が定義されているが，さらに追加で使うと便利なパッケージに`amsmath`や`physics`環境がある．くわしくは[数式に関する記述](latex_equation.md)を参照．
 
-数式の[こちら](latex_equation.md)も参照．
->>>>>>> bb1221ddb962af429a7422c36e6d69d71d38005d
+
+## 箇条書き
+
+LaTeXでは箇条書き用の環境も標準で用意されている．ぶっちゃけ自分の場合は通常の文書で使うことは少ないのだが，後述のスライドショーでは頻繁に用いる．詳細は[こちら](latex_item.md)を参照．
+<!-- http://www.yamamo10.jp/yamamoto/comp/latex/make_doc/item/item.php -->
+
 
 
 ## 表や図の挿入
 
 latexでは図と表を配置するための専用のfigure環境とtable環境が用意されている．基本的にこれらの環境は図表用の場所を用意するだけで，中身についてはまた他の環境を利用する．表の作成はtablular環境でかなり容易に行うことができる一方，図の作成のための代表的な環境であるtikz環境はなかなか思い通りの図を作るのには時間がかかる印象がある．
+
+図の挿入に関して個人的に苦戦するポイントはおよそ以下の3点に集約される．
+
+-  図の場所はLaTeXが自動で決めるのだが，これがあまり賢くない．
+-  captionのスタイル調整
+-  図表を複数並べる時の余白などの調整
 
 tabular+table環境を利用した表の作り方については[ここ](table.md)を参照．figure環境を利用した基本的な図表の挿入方法については[ここ](insert_figure.md)を参照．図の作成については記述することも多いので後述．
 
@@ -151,7 +162,7 @@ tabular+table環境を利用した表の作り方については[ここ](table.m
 
 もちろんpythonやgnuplotなどで作成した図をincludegraphicsで取り込んでも良いが，文字のサイズなどをLaTeX文書と一緒に扱いたい場合はグラフ自体をLaTeX内で作成した方がよい．本節ではその概要についてまとめる．LaTeXで図を作成する方法はいくつかあって，LaTeXのパッケージであるTikz/PGFを利用する方法や，外部コマンドの力を借りるasymptote環境，gnuplot環境を利用する方法がある．自分の場合は基本的にはTikz/PGFの利用から考えて，やりたいことが実現できないなら他を当たるというようにしている．tikz/pdfplotに関する詳細は[別ページ](pgfplots.md)を参照．
 
-外部コマンドを利用する場合，一番手っ取り早いのはgnuplotと思う．一旦gnuplotでtikzファイルを作成し，そのtikzファイルをlatexに読み込む方法か，latex内でgnuplot環境を利用する方法が使える．
+外部コマンドを利用する場合，一番手っ取り早いのはgnuplotと思う．一旦gnuplotでtikzファイルを作成し，そのtikzファイルをlatexに読み込む方法か，latex内でgnuplot環境を利用する方法が使える．他にpythonを利用する人にはmatplotlib+tikzという組み合わせも利用できる．asymptoteはこれらに比べるとドキュメントが充実していないが，環境光を利用した作図ができるので立体図形などの綺麗なグラフィックを作る時（例えば結晶構造とか）には非常に有効．
 
 <!--
 https://qiita.com/satl/items/0c11c8808b43f806ee21
@@ -178,10 +189,38 @@ https://tex.stackexchange.com/questions/141363/draw-realistic-3d-crystal-structu
 [asymptote公式マニュアル](https://asymptote.sourceforge.io/asymptote.pdf)
 
 
+## 参考文献の処理：bibtex/biblatex
+
+<!-- 
+https://gist.github.com/Yarakashi-Kikohshi/986bb23547866e32c8916b81099a470a 
+https://tex.stackexchange.com/questions/25701/bibtex-vs-biber-and-biblatex-vs-natbib
+https://tex.stackexchange.com/questions/12175/biblatex-submitting-to-a-journal
+-->
+
+参考文献を処理するツールとしてbibtexというツールが用意されている． 参考文献の番号などの処理を自動でやってくれるのである程度以上大きい文書ではほぼ必須と思う．以下の3つのバリエーションがよく利用されている．
+
+| プログラム | | 利用できるパッケージなど |
+|---|---|---|
+| BibTeX | 古くからある| natbib |
+| upBibTeX | 和文用 | |
+| biber    | 完全なunicodeを提供 | biblatex | 
+
+基本的には`biber`が最も新しいのでこれを使っていれば問題ないのだが，論文投稿の際にジャーナルによってbibtexだったりするので使い分ける必要も生じる．
+
+細かい使い方については[こちらのページ](bibtex.md)を参照．
+
+
 ## スライド資料を作成する．
-スライド資料を作るdocumentclassとして，beamerがある．
+
+LaTeXではスライドショーを作成することもできる．スライド資料を作るdocumentclassとして，beamerがある．
 <!-- https://qiita.com/sh05_sh05/items/3d7ea00c97971de15851
 https://risa.is.tokushima-u.ac.jp/~tetsushi/howtomakeslides.pdf
+https://joker.hatenablog.com/entry/2014/10/18/222303
+https://qiita.com/termoshtt/items/756aec542fb4c812a405
+https://joker.hatenablog.com/entry/2014/10/18/222303
+https://qiita.com/zr_tex8r/items/69e8cc32038ff29f5ac3
+https://paper.hatenadiary.jp/entry/2017/01/10/031523
+chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/http://m.sc.niigata-u.ac.jp/~prtana/digital/HowToBeamer.pdf
 -->
 
 
@@ -264,3 +303,10 @@ lualatex table.tex
 
 [投稿論文のためのテンプレート](https://sharelatex.psi.ch/templates/journals.1)
 もちろん本当に投稿するときはちゃんとその雑誌の公式のテンプレートを用いるべし．TeXの勉強をする際の勉強になる．
+
+
+
+<!-- 
+https://blog.miz-ar.info/2016/12/running-tex/
+https://text.baldanders.info/remark/2015/luatex-ja/
+-->

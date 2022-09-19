@@ -1,10 +1,16 @@
+---
+layout: default
+title:  "図の挿入"
+date:   2022-09-04 10:03:40 +0900
+categories: latex
+---
 
 ## figure環境
 
 図の挿入にはfigure環境を使う．オプション!htbは図表を挿入する場所を表していて，latexは最初のオプションから順番に試していく．
 
 
-| 位置 | 概要 | 
+| 位置 | 概要 |     
 |--|--|
 |! | 多少無理してでもfigure環境を宣言した場所に場所を確保 |
 |h | figure環境宣言した場所（here）に場所を確保 |
@@ -25,6 +31,25 @@ pdfやpngなどの図を挿入する場合は`\includegraphics`命令を利用�
 ```
 
 `\includegraphics`のオプションはなくてもよく，その場合はlatexが自動で図の大きさを決めてくれる．オプションとしてはwidthに加えていくつかの設定が可能．
+
+
+## captionのカスタマイズ（caption環境）
+
+<!-- 
+https://karat5i.blogspot.com/2014/10/latex.html
+https://clutte.red/blog/2018/11/latex-table-caption/
+ -->
+
+`caption`パッケージは文字サイズや位置などのキャプションのカスタマイズを可能にするパッケージで，デフォルトで入っている．基本となるコマンドは`\captionsetup`コマンドで，これをfigureやtableなどのフロート環境内で利用することでその環境内でのキャプションをカスタマイズできる．
+
+```latex
+\begin{figure}
+\captionsetup[table]{format=plain, labelformat=simple, labelsep=period, font={sc, footnotesize}}
+
+\end{figure}
+```
+
+文書全体で変更したいという場合は
 
 
 ## [subcaption環境](https://gitlab.com/axelsommerfeldt/caption)
