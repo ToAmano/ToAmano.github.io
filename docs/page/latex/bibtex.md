@@ -72,7 +72,7 @@ citation example with natbib package. Einstein journal paper \cite{einstein}. we
 
 ```
 
-詳しい各スタイルの詳細については[ここ](https://www.reed.edu/cis/help/LaTeX/bibtexstyles.html)が参考になるかも．
+詳しい各スタイルの詳細については[ここ](https://www.reed.edu/cis/help/LaTeX/bibtexstyles.html)が参考になるかも．APSスタイルの引用をやりたい場合は`apsrev4-2`スタイルを利用すれば良い．基本的にはデフォルトで入っていると思う．
 
 また，`citet`コマンドを使うと引用スタイルに関わらず引用部分に名前を追加できるので便利．
 
