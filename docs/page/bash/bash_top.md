@@ -201,3 +201,9 @@ grcでサポートされておらず，source-highlightを利用する．
 ```bash
 brew install source-highlight
 ```
+
+<!--
+https://wiki.archlinux.jp/index.php/Zsh
+https://qiita.com/minnsou/items/3e9f200f9f2cc9a92920
+zsh: https://qiita.com/agotoh/items/e6b22bcfe63162f70e0d
+-->

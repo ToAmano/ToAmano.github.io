@@ -27,4 +27,17 @@ init.elで読み込むパッケージが増えてくるとemacsの起動時間�
 
 ## 文法チェック
 
-https://qiita.com/niitsuma/items/d3f06755e956e6fa32c9
+- [文法チェック](https://qiita.com/niitsuma/items/d3f06755e956e6fa32c9)
+
+
+- [yamlモード](https://mugijiru.github.io/.emacs.d/programming/yaml-mode/)
+
+
+<!--
+emacsの設定: https://uwabami.github.io/cc-env/Emacs.html
+emacsの設定: https://takaxp.github.io/init.html
+neotree: https://myemacs.readthedocs.io/ja/latest/neotree.html
+neotree: https://pxaka.tokyo/blog/2021/0417-emacs-icons-in-terminal/
+neotree: https://qiita.com/minoruGH/items/2034cad4efe8c5dee4d4
+emacsの一括置換: https://qiita.com/masa16/items/e9ddaecfd514552153b1
+-->

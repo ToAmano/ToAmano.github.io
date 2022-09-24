@@ -105,5 +105,9 @@ EMACSとCHROMEの連携
 ## その他便利アプリケーション
 
 - Alfread4
-　spotlightの代わりとして活用できる．
+  spotlightの代わりとして活用できる．
 
+## zotero
+<!-- 
+https://ohdachi.github.io/ohdachi_lab/researches/2018/02/02/zotero_zotfile.html
+-->

@@ -210,6 +210,9 @@ https://masamichi.me/development/2020/05/28/github-pages-blog-part3-cutomize-set
 https://masamichi.me/development/2019/12/14/github-pages-blog.html
 
 https://chadbaldwin.net/2021/03/14/how-to-build-a-sql-blog.html
+
+mathjax: https://qiita.com/memakura/items/e4d2de379f98ad7be498
+mathjax: https://pandanote.info/?p=3715 （現状この設定に従っている）
 -->
 
 

@@ -168,3 +168,13 @@ https://github.com/Ji4n1ng/OpenInTerminal/blob/master/Resources/README-Lite.md
 https://schlining.medium.com/integrate-iterm2-v-3-with-your-macs-finder-f3825acd3e0b
 https://gist.github.com/pdanford/158d74e2026f393e953ed43ff8168ec1
 https://www.gekal.cn/blogs/2020/04/08/open-terminal-from-finder-at-mac.html
+
+
+
+## tmux
+
+
+
+<!--
+https://blog.spacemarket.com/code/terminal-development-env/
+-->

@@ -59,3 +59,12 @@ code --install-extension ms-toolsai.jupyter
 ```
 
 などとする．インストール時の拡張機能の名前はGUIで拡張機能のページを見るときに右側に表示されている．
+
+
+<!--
+https://omoshiteca.hatenablog.com/entry/2019/10/14/203531
+https://atmarkit.itmedia.co.jp/ait/articles/2105/21/news026.html
+設定ファイルの場所: https://maku.blog/p/tfq2cnw/
+https://ics.media/entry/18756/
+https://ics.media/entry/18756/
+-->
