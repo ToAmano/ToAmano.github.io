@@ -14,7 +14,6 @@ categories: bash zsh
 ```bash
 # install via homebrew
 brew install ls
-
 # set alias to zshrc. .zshrcに以下を追記
 gls -F --color=auto
 ```
