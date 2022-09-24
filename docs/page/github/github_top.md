@@ -1,15 +1,14 @@
 ---
 layout: default
-title:  "LaTeXトップページ"
+title:  "git/githubの使い方"
 date:   2022-09-04 10:03:40 +0900
 categories: git 
 tags:
 - github 
 ---
 
-# git/githubの使い方
 
-## install(option)
+## installation (option)
 
 gitコマンドはMacの初期状態でも入っている．
 
@@ -18,10 +17,12 @@ $ which git
 /usr/bin/git
 ```
 
-他のコマンドでもやっているのでgit自体をhomebrew経由でインストールし直す．
+一応git自体をhomebrew経由でインストールし直す．
 
 ```bash
 $ brew install git
+$ which git # m1macの場合以下のようになれば成功．
+/opt/homebrew/bin/git
 ```
 <!-- https://dev.classmethod.jp/articles/vscode-git-graph-extension/ -->
 
@@ -71,8 +72,13 @@ gtでは，ワークツリー（仕事しているディレクトリ）から直
 
 
 
-## github(リモート)との連携
+## github (リモート)との連携
 
+
+```bash
+# 接続の確認
+$ ssh -T git@github.com
+```
 
 ## mergeの中止
 mergeに成功した場合
