@@ -1,6 +1,6 @@
 ---
 layout: default
-title:  "bashトップページ"
+title:  "bash/zsh トップページ"
 date:   2022-09-04 10:03:40 +0900
 categories: bash zsh
 ---
@@ -10,9 +10,13 @@ categories: bash zsh
 
 ## zshの設定ファイル
 
-[zshの外部プラグインまとめ - Qiita](https://qiita.com/mollifier/items/1220c0eeaa93e82f8afc)
+[zshの設定ファイルの種類](zsh_setting.md)
 
-[シェル出力に色をつける](https://fhiyo.github.io/2017/11/14/colorize-terminal-output.html)
+[zsh特有の補完などの設定]
+
+[コマンドの出力に色をつける](zsh_color.md)
+
+[zshの外部プラグインまとめ - Qiita](https://qiita.com/mollifier/items/1220c0eeaa93e82f8afc)
 
 ## dotfiles
 
@@ -37,6 +41,7 @@ source file_name
 `chmod`で権限を変更するやり方は数字によるものと英字によるものがある．
 
 英語でRWXを使用する方法場合
+
 ```bash
 # UserにX権限を追加
 chmod u+x test.sh

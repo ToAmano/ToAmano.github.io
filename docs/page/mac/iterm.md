@@ -1,4 +1,11 @@
-# [iterm](https://iterm2.com)
+---
+layout: default
+title:  "iterm2 トップページ"
+date:   2022-09-04 10:03:40 +0900
+categories: iterm2
+---
+
+## [iterm2](https://iterm2.com)
 
 [公式のドキュメント](https://iterm2.com/documentation.html)が充実しているのでそちらも参照．
 
@@ -96,6 +103,7 @@ https://www.karakaram.com/iterm2-password-manager/
 - Keys：キー関連の設定
 - Advanced：その他の機能の設定
   
+
 ### カラープロファイル
 
 iterm2用のカラープロファイルを提供しているサードパーティが色々あるので，調べて自分好みのプロファイルを探してくるのが良い．
@@ -113,6 +121,8 @@ iterm2用のカラープロファイルを提供しているサードパーテ�
   ```
 
 - solarized
+
+- [iceberg](https://github.com/Arc0re/Iceberg-iTerm2)
 
 
 - TriggerとAutomatc Profile Switchingの組み合わせ

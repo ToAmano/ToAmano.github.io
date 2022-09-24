@@ -33,7 +33,7 @@ pdfやpngなどの図を挿入する場合は`\includegraphics`命令を利用�
 `\includegraphics`のオプションはなくてもよく，その場合はlatexが自動で図の大きさを決めてくれる．オプションとしてはwidthに加えていくつかの設定が可能．
 
 
-## captionのカスタマイズ（caption環境）
+## captionのカスタマイズ（captionパッケージ）
 
 <!-- 
 https://karat5i.blogspot.com/2014/10/latex.html
@@ -52,12 +52,29 @@ https://clutte.red/blog/2018/11/latex-table-caption/
 文書全体で変更したいという場合は
 
 
-## [subcaption環境](https://gitlab.com/axelsommerfeldt/caption)
+## [subcaptionパッケージ](https://gitlab.com/axelsommerfeldt/caption)
 
 複数の図表を挿入したい場合はよく紹介されている`minipage`を用いてページを分割する方法に加えて，より図表の挿入に特化した高機能な`subcaption`，`subfig`などの方法がある．`subfigure`というのもあるのだが，これは古いパッケージとのこと．以下では基本的に`subcaption`を使う方法について述べる．このパッケージは`caption`パッケージにバンドルされていて，mactexを利用していればデフォルトで入っている．
 <!-- 
 https://texblog.org/2007/08/01/placing-figurestables-side-by-side-minipage/
 -->
+
+
+- subcaptionblock環境
+
+ 　これは通常よく使われる`minipage環境`にさらにキャプション周りの機能を加えたもの．
+   ```latex
+    \begin{subcaptionblock}{.4\textwidth} 
+    \centering 
+    \includegraphics{cat} 
+    \caption{A cat}\label{cat} 
+    \end{subcaptionblock}% 
+    \begin{subcaptionblock}{.4\textwidth} 
+    \centering 
+    \includegraphics{elephant} 
+    \caption{An elephant}\label{elephant} 
+    \end{subcaptionblock}%
+   ```
 
 - (a)，(b)を消す
 <!-- https://tex.stackexchange.com/questions/165508/remove-a-b-from-subfigure-numbering-but-keep-the-subfigure-caption -->
