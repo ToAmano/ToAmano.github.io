@@ -28,6 +28,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://dirac6582.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
 github_username:  dirac6582
+repository: dirac6582/dirac6582.github.io.git
 
 # Build settings
 # if you are using minima, then check https://github.com/jekyll/minima for more information
@@ -56,11 +57,13 @@ github_username:  dirac6582
 #   - vendor/ruby/
 
 # https://github.com/jekyll/minima/blob/master/_layouts/default.html
-remote_theme: jekyll/minima
+#remote_theme: jekyll/minimal # original
+remote_theme: pages-themes/minimal
 plugins:
+   - jekyll-remote-theme # add this line to the plugins list if you already have one
    - jekyll-feed
-minima:
-  skin: solarized-light
+#minimal:
+#  skin: solarized-light
   
 header_pages:
   - about.md
