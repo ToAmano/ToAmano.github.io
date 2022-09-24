@@ -57,6 +57,13 @@ baseurl: "" # the subpath of your site, e.g. /blog
 
 titleなどを変更してリモートにプッシュすると，サイト名が変わっているのが確認できる．
 
+## その他の_config.yamlの変更
+
+githubのレポジトリを追加できる．
+```yml
+repository: dirac6582/dirac6582.github.io.git
+```
+
 
 ## 新しいブログ記事を書く
 
