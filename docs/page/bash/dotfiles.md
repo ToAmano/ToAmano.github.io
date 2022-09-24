@@ -10,4 +10,7 @@
 4. gnuplotの設定ファイル(.gnuplot)
 5. homebrewで必要なソフトウェアをインストール
 
-## 
+
+<!--
+https://dev-yakuza.posstree.com/environment/configure-development-environment-on-mac-with-homebrew-and-shell-script/#homebrew%E3%81%A8brewfile%\E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB
+-->
