@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: single
 title:  "emacs フォントやアイコンについて"
 date:   2022-09-04 10:03:40 +0900
 categories: emacs font gryph
