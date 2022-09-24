@@ -55,6 +55,7 @@ github_username:  dirac6582
 #   - vendor/gems/
 #   - vendor/ruby/
 
+# https://github.com/jekyll/minima/blob/master/_layouts/default.html
 remote_theme: jekyll/minima
 plugins:
    - jekyll-feed
