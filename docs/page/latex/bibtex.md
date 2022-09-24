@@ -170,7 +170,11 @@ hyperrefのオプションはお好みで追加する．色に関しては個人
 
 ## 参考文献
 
+https://library.rose-hulman.edu/c.php?g=351878&p=2384440
+https://apps3.aps.org/communications/styleguide/index.html
 
 
 
 [^1]: 今回はサンプルとしてbibファイルを自作したが，ほとんどの場合はgoogle scholarや他のソフトから自動で生成する場合がほとんどなので，自分でbibファイルを作ることはほとんどないと思う．
+
+
