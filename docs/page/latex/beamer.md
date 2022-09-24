@@ -11,4 +11,7 @@ https://paper.hatenadiary.jp/entry/2017/01/10/031523
 chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/http://m.sc.niigata-u.ac.jp/~prtana/digital/HowToBeamer.pdf
 http://ryokbys.web.nitech.ac.jp/posts/2022/06/beamer-sample-with-japanese/
 
+https://zenn.dev/hellorusk/articles/c61c1b01cd5705ad4e1a
+
+https://ttt24224222.hatenadiary.jp/entry/2019/02/16/111958
 -->
