@@ -225,3 +225,7 @@ https://tex.stackexchange.com/questions/528695/pgfplots-how-to-get-values-of-wid
 https://tex.stackexchange.com/questions/192424/pgfplots-single-legend-in-a-group-plot
 
 https://tex.stackexchange.com/questions/131446/common-label-for-a-groupplot
+
+https://tex.stackexchange.com/questions/169433/pgfplots-relative-node-positioning-in-axis-cs
+
+https://tex.stackexchange.com/questions/136836/dashed-axis-lines

@@ -9,6 +9,12 @@ categories: latex
 
 ネット上の日本語文献としては[TeXwiki](https://texwiki.texjp.org/)が非常に参考になると思う．書籍としては自分は祖父からLaTeX2e美文書作成入門をもらって勉強したがまずはこれを読んでみると良いと思う．最近はなんと第8版になっているらしい．英語の文献としてはウェブ上でTeX文書を作成できる[overleafのHP](https://ja.overleaf.com/learn)に解説ドキュメントがおいてあってわかりやすい．一通り勉強してさらに細かいhowtoが知りたい場合はstackexchangeなどを漁ってみるとかなり勉強になるほか，パッケージの細かい利用方法がしりたければマニュアルを見るのが手っ取り早い．
 
+LaTeXを利用すると大体以下のようなことができる．主にレポートやノート，論文の作成の観点から述べていく．
+
+- 数式を書く
+- 図表を作成する
+- 図表のキャプションやレイアウトの調整
+- 相互参照や参考文献
 
 
 ---
@@ -17,41 +23,10 @@ categories: latex
 まずはTeXをインストールする必要がある．[こちら](latex_install.md)を参照．本文書の環境設定は断りがない限りこのページでおこなったものを利用している．
 
 
----
-## LaTeXでできることの概要
-
-大体以下のようなことができる．主にレポートやノート，論文の作成の観点から述べていく．
-
-- 数式を書く
-- 図表を作成する
-- 図表のキャプションやレイアウトの調整
-- 相互参照や参考文献
-
-
-
+--- 
 ## 数式の挿入，数学記号など
 
-数式の挿入は文中，または独立した環境内どちらでも可能．文中に挿入する場合は$$で囲み，独立した環境としてはデフォルトで`equation`環境が用意されている．これらの環境の中ではギリシャ文字や数学記号などのコマンドを利用できる．
-
-```latex
-\documentclass[a4]{article}
-\usepackage{blindtext}
-\begin{document}
-これがequation環境です．ギリシャ文字や分数などの数学記号もお手のもの．
-\begin{equation}
-  f(x)=\alpha x^2+\beta x +\gamma \\
-  \frac{1}{x}=\sqrt{x} \\
-  \sum_{n=0}^{\infty}\frac{1}{n^2}=
-\end{equation}
-
-文中に数式を入れることもできます．例えば$f(x)=\alpha x^2+\beta x +\gamma$のように．
-
-文中と独立環境では，分数や総和記号などの表記が若干異なっている場合があります．
-\blinddocument
-\end{document}
-```
-
-デフォルトの状態でも数多くの数学記号が定義されているが，さらに追加で使うと便利なパッケージに`amsmath`や`physics`環境がある．くわしくは[数式に関する記述](latex_equation.md)を参照．
+数式の挿入は文中，または独立した環境内どちらでも可能．文中に挿入する場合は$$で囲み，独立した環境としてはデフォルトで`equation`環境が用意されている．これらの環境の中ではギリシャ文字や数学記号などのコマンドを利用できる．デフォルトの状態でも数多くの数学記号が定義されているが，さらに追加で使うと便利なパッケージに`amsmath`や`physics`環境がある．くわしくは[数式に関する記述](latex_equation.md)を参照．
 
 
 ## 箇条書き
@@ -102,7 +77,8 @@ defaultだと基本的な色しか使えないが，中にはyellowなど蛍光�
 
 VESTAソフトウェアなどの既存ソフトを利用することもできるが，公開文書用に自分で色々手を加えたい場合，asymptoteを利用することで綺麗な図が作成できる．
 https://tex.stackexchange.com/questions/141363/draw-realistic-3d-crystal-structures-diamond
-
+https://tex.stackexchange.com/questions/306846/draw-a-3d-srtio3-structure
+https://tex.stackexchange.com/questions/554769/how-to-draw-an-arrow-over-a-rod-in-crystal-structure
 [asymptote公式マニュアル](https://asymptote.sourceforge.io/asymptote.pdf)
 
 
@@ -122,9 +98,7 @@ https://tex.stackexchange.com/questions/12175/biblatex-submitting-to-a-journal
 | upBibTeX | 和文用 | |
 | biber    | 完全なunicodeを提供 | biblatex | 
 
-基本的には`biber`が最も新しいのでこれを使っていれば問題ないのだが，論文投稿の際にジャーナルによってbibtexだったりするので使い分ける必要も生じる．
-
-細かい使い方については[こちらのページ](bibtex.md)を参照．
+基本的には`biber`が最も新しいのでこれを使っていれば問題ないのだが，論文投稿の際にジャーナルによってbibtexだったりするので使い分ける必要も生じる．細かい使い方については[こちらのページ](bibtex.md)を参照．
 
 
 ## スライド資料を作成する．
