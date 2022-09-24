@@ -3,6 +3,7 @@ layout: default
 title:  "ブリルアンゾーン"
 date:   2022-09-04 10:03:40 +0900
 categories: physics solid-state
+mathjax: true
 ---
 
 ## ブリルアンゾーンサンプリング

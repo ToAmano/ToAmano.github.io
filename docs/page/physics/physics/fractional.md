@@ -1,5 +1,10 @@
-# 座標系
-
+---
+layout: default
+title:  "fractional coordinate"
+date:   2022-09-04 10:03:40 +0900
+categories: physics solid-state
+mathjax: true
+---
 
 
 ## 分極座標とデカルト座標の変換
