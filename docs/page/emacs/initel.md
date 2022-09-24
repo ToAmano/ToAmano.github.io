@@ -1,4 +1,11 @@
-# init.elの設定について
+---
+layout: single
+title:  "init.elの設定について"
+date:   2022-09-04 10:03:40 +0900
+categories: emacs
+---
+
+## init.elの設定について
 
 init.elの設定についてはこのページに別途まとめる．
 
