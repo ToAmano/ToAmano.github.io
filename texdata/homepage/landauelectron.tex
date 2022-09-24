@@ -1,0 +1,213 @@
+\documentclass[a4j]{jarticle}
+\title{ランダウ量子化}
+\usepackage{amsmath}	% required for `\align*' (yatex added)
+\usepackage{braket}	% required for `\ket' (yatex added)
+\begin{document}
+
+
+\section{ランダウ量子化}
+自由電子系に磁場$B$をかけたときの応答を研究することにしよう．この時に電子系のハミルトニアンは，
+\begin{align*}
+ H&=\frac{1}{2m}\left(p+eA\right)^2 \\
+\end{align*}
+と表せる．ただし，$e>0$と取った．
+
+磁場が十分弱い場合，エネルギー変化は摂動論で記述できてその結果ゼーマン効果が現れる．しかしここで議論するのは磁場が十分強い場合にも成立する方法で，直接ハミルトニアンを対角化するものである．その結果自由粒子の時と異なりエネルギーは離散的になる．これをランダウ量子化という．
+
+
+\section{ゼーマン効果の復習}
+話が少しそれるが，ゼーマン効果について軽く復習しておこう．
+
+
+\section{ランダウ量子化の定式1}
+ハミルトニアン
+\begin{align*}
+ H&=\frac{1}{2m}\left(p+eA\right)^2 \\
+\end{align*}
+を考える．以下では，磁場を$z$軸方向に一様な磁場
+\begin{align*}
+ B=\begin{pmatrix}
+    0 \\
+    0 \\ 
+    B
+   \end{pmatrix}
+\end{align*}
+とする．ベクトルポテンシャルはランダウゲージで
+\begin{align*}
+ A=\begin{pmatrix}
+    0 \\
+    Bx\\
+    0
+   \end{pmatrix}
+\end{align*}
+とする．ハミルトニアンは
+\begin{align*}
+ H=\frac{1}{2m}\left(p_x^2+(p_y+eBx)^2+p_z^2\right)
+\end{align*}
+となるから，波動関数を
+\begin{align*}
+ \psi(x,y,z)=e^{i(k_y+k_z)}f(x)
+\end{align*}
+と置いてみよう．シュレーディンガー方程式
+\begin{align*}
+ H\psi = E\psi 
+\end{align*}
+は$x$のみの方程式
+\begin{align*}
+ \frac{1}{2m}\left(p_x^2+(+\hbar k_y+eBx)^2+\hbar^2k_z^2\right)f(x)=Ef(x)
+\end{align*}
+となるが，これは
+\begin{align*}
+ X&=x+\frac{\hbar k_y}{eB} \\
+ \omega_c=
+\end{align*}
+と置くと，
+\begin{align*}
+ \left(\frac{1}{2m}p_X^2+\frac{m\omega_c^2}{2}X^2\right)f(x)=\left(E-\frac{\hbar^2k_z^2}{2m}\right)f(x)
+\end{align*}
+という調和振動子の方程式になるから，解は規格化を考慮しなければ
+\begin{align*}
+ f_n(x)= \\
+ E=\hbar\omega_c\left(n+\frac{1}{2}\right)+\frac{\hbar^2k_z^2}{2m}
+\end{align*}
+となる．このように磁場をかけることで$x$，$y$方向の運動は変化し，結果としてエネルギー順位が離散的になる．これをランダウ量子化という．この時調和振動子の中心は$\hbar k_y/eB$であるから，取り得る$k_z$の数だけエネルギー準位は縮退している．
+
+簡単のために$x$，$y$平面で一辺$L$の正方形を境界とする周期境界条件をとれば，$n_y$を$-L/2<n_y<L/2$を満たす整数として
+\begin{align*}
+ k_y=\frac{2\pi n_y}{L}
+\end{align*}
+であり，また，簡単のため振動中心がこの正方形の中になければならないとすると
+\begin{align*}
+ 0<\frac{\hbar k_y}{eB} < L
+\end{align*}
+以上二つの式より，
+
+
+\section{ランダウ量子化の定式化2}
+ハミルトニアン
+\begin{align*}
+ H&=\frac{1}{2m}\left(p+eA\right)^2 \\
+\end{align*}
+を考える．前節で見たように，これは$x$，$y$方向に関して調和振動子になる．従って生成消滅演算子で記述できることが期待できるので，それを一から導く導出方法について見ていこう．
+
+さて，
+\begin{align*}
+ \Pi=p+eA
+\end{align*}
+と置くと，運動量$p$と違って$\Pi$は交換せず，その交換関係は
+\begin{align*}
+ \left[\Pi_x,\Pi_y\right]=
+\end{align*}
+
+
+以下では，磁場を$z$軸方向に一様な磁場
+\begin{align*}
+ B=\begin{pmatrix}
+    0 \\
+    0 \\ 
+    B
+   \end{pmatrix}
+\end{align*}
+とする．ベクトルポテンシャルはランダウゲージで
+\begin{align*}
+ A=\begin{pmatrix}
+    0 \\
+    Bx\\
+    0
+   \end{pmatrix}
+\end{align*}
+とする．すると先ほどの交換関係は
+\begin{align*}
+ \left[\Pi_x,\Pi_y\right]&=\left[p_x,p_y+eBx\right]=\left[p_x,eBx\right]=-i\hbar eB       \\
+ \left[\Pi_y,\Pi_z\right]&=0  \\
+ \left[\Pi_z,\Pi_x\right]&=0  \\
+\end{align*}
+となる．
+
+従って，$\Pi_z=p_z$はハミルトニアンとも交換し，保存量である．物理的には，磁場は$z$方向にかかっているので，$z$方向の運動には全く関係なく，$z$方向の運動量は磁場のないときの自由電子の運動量と全く同じであることを表している．
+
+問題は$\Pi_x$と$\Pi_y$であるが，新しく
+\begin{align*}
+ a&=\frac{1}{\sqrt{2}}\frac{l_B}{\hbar}\left(\Pi_x-i\Pi_y\right) \\
+ a^{\dagger}&=\frac{1}{\sqrt{2}}\frac{l_B}{\hbar}\left(\Pi_x+i\Pi_y\right) \\
+\end{align*}
+と置く．ただし
+\begin{align*}
+ l_B=\sqrt{\frac{\hbar}{eB}}
+\end{align*}
+は長さの次元を持つ量で磁気長と呼ばれる．
+
+と，この交換関係は
+\begin{align*}
+ \left[a,a^{\dagger}\right]=\frac{l_B^2}{2\hbar^2}2i\left[\Pi_x,\Pi_y\right]=1
+\end{align*}
+であって，さらにハミルトニアンは
+\begin{align*}
+ H&=\frac{1}{2m}\left(\Pi_x^2+\Pi_y^2+\Pi_z^2\right) \\
+&=\frac{1}{2m}\left((\Pi_x+i\Pi_y)(\Pi_x-i\Pi_y)+i\left[\Pi_x,\Pi_y\right]\right)+\frac{\Pi_z^2}{2m} \\
+&=\frac{1}{2m}\frac{2\hbar^2}{l_B^2}\left(a^{\dagger}a+\frac{1}{2}\right)+\frac{\Pi_z^2}{2m} 
+\end{align*}
+と書ける．サイクロトロン周波数
+\begin{align*}
+ \omega_c=\frac{eB}{m}
+\end{align*}
+を用いるとこれは
+\begin{align*}
+ H=\hbar\omega_c\left(a^{\dagger}a+\frac{1}{2}\right)+\frac{\Pi_z^2}{2m}
+\end{align*}
+となる．これは運動が$x$，$y$方向に関しては調和振動子，$z$方向に関しては自由粒子のようになっていることを意味する．エネルギーは対応して，非負の整数$n$および$z$方向の波数$k_z$を用いて
+ \begin{align*}
+  E_n=\hbar\omega_c\left(n+\frac{1}{2}\right)+\frac{k_z^2}{2m}
+ \end{align*}
+と書ける．特にこの$x$，$y$方向のエネルギー準位が量子化されることをランダウ量子化という．
+
+また，
+\begin{align*}
+ R_x&=x-\frac{l_B^2}{\hbar}\Pi_y \\
+ R_y&=y+\frac{l_B^2}{\hbar}\Pi_x 
+\end{align*}
+と置くと，これらは$\Pi$と可換であり，従って$H$とも可換な保存量である．これは各エネルギー準位が縮退していることを示しており，これをランダウ縮退という．
+
+一方で，
+\begin{align*}
+ \left[R_x,R_y\right]=il_B^2
+\end{align*}
+だから，$R_x$と$R_y$の間には不確定性が残ることになり，これらを同時に定めることはできない．
+
+$\Pi$の時と同じように
+\begin{align*}
+ b=\frac{1}{\sqrt{2}l_B}\left(R_x+iR_y\right) \\
+ b^{\dagger}=\frac{1}{\sqrt{2}l_B}\left(R_x-iR_y\right) \\
+\end{align*}
+を定めると
+\begin{align*}
+ \left[b,b^{\dagger}\right]=1
+\end{align*}
+であり，
+\begin{align*}
+ R^2=R_x^2+R_y^2
+\end{align*}
+とすると
+\begin{align*}
+ R^2=2l_B^2\left(b^{\dagger}b+1\right)
+\end{align*}
+と書ける．$R^2>0$だから$n_b=b^{\dagger}b$は非負の整数値となる．
+
+さて，基底状態に対しては$a\ket{\psi_0}=0$が成立しているので
+\begin{align*}
+ \psi_0(x,y)=\exp\left(-ik_yy-\frac{(x-l_B^2k_y)^2}{2l_B^2}\right)
+\end{align*}
+となり，保存料に関して
+\begin{align*}
+ R_y\psi_0(x,y)=l_B^2k_y\psi_0(x,y)
+\end{align*}
+となって，この$k_y$の数が縮退度に等しいという前節の結果を再現する．
+
+
+\section{まとめ}
+
+
+
+このランダウ量子化を用いると，ランダウの反磁性やSdV振動と言った現象を説明できる．それについてはまた今度説明することにしよう．
+
+\end{document}

@@ -1,0 +1,528 @@
+\documentclass[a4j]{jarticle}
+
+
+\title{Effective Hamiltonian of Bipolaron}
+\usepackage{amsmath}	% required for `\align*' (yatex added)
+\usepackage{braket}	% required for `\ket' (yatex added)
+\begin{document}
+
+\section{APPENDIX}
+\subsection{Appendix1::Campbell Baker Hausdorff formula1}
+演算子$A$，$B$に対して
+\begin{align}
+ e^ABe^{-A}=B+\left[A,B\right]+\frac{1}{2}\left[A,\left[A,B\right]\right]+\cdots
+\end{align}
+が成立する．
+
+\subsection{Appendix2::Campbell Baker Hausdorff formula2}
+$[A,B]=c$がc数である場合に
+\begin{align}
+ e^Ae^B=e^{A+B}e^{c/2}
+\end{align}
+が成立する．
+
+\subsection{Appendix3::波数表示とサイト表示の変換}
+波数表示とサイト表示のオペレーター$c_{k\sigma}$および$c_{i\sigma}$の変換は，
+\begin{align}
+ c_{i\sigma}=\frac{1}{\sqrt{N}}\sum_{k}e^{ikr_i}c_{k\sigma}
+\end{align}
+と与えられる．ただし$r_i$はサイトのベクトル，$N$はサイトの数である．この変換はcanonicalである．
+
+同様に，クーロン相互作用のフーリエ変換は
+\begin{align}
+ V_c(r)=\frac{1}{N}\sum_{q}V_c(q)e^{iqr}
+\end{align}
+
+
+% Electron-Phonon-Couplingのフーリエ変換は
+% \begin{align}
+%  a
+% \end{align}
+% で与えられる．
+
+
+
+%\subsection{Appendix4::phonon operatorの自由フォノンに関する熱平均}
+
+
+
+\section{Hamiltonian}
+\subsection{問題の設定}
+単一バンドの電子，および多バンドのフォノンを含む波数表示のハミルトニアン
+\begin{align}
+ H&=H_e+H_{ph}+H_{e-ph}+H_c \\
+ H_e&=\sum_{k\sigma}\epsilon_{k\sigma}a^{\dagger}_{k\sigma}a_{k\sigma}+\sum_{k\sigma,k'\sigma',q}V(q)a^{\dagger}_{k+q,\sigma}a_{k'-q,\sigma'}a_{k'\sigma'}a_{k\sigma} \\
+ H_{ph}&=\sum_{q}\omega_{q\nu}\left(d^{\dagger}_{q\nu}d_{q\nu}+\frac{1}{2}\right) \\ 
+　H_{e-ph}&=\sum_{kq\nu\sigma}g_{\nu}(k,q)a^{\dagger}_{k+q,\sigma}a_{k\sigma}\left[d_{\nu q}+d^{\dagger}_{\nu -q}\right] \\
+H_c&=\sum_{\sigma\sigma'}\sum_{kk'q}V(q)a^{\dagger}_{k+q,\sigma}a^{\dagger}_{k'-q,\sigma'}a_{k'\sigma'}a_{k\sigma}
+\end{align}
+から始めよう．ここで$a_{k\sigma}$は波数$k$およびスピン$\sigma$を持つ電子のoperator，$d_{q\nu}$はフォノンバンド$\nu$および波数$q$をもつフォノンのoperatorである．また$g$はelectron-phonon-couplingで，電子スピンに依存しないとしてある．bipolaronを議論するには，その定義上電子をサイト表示で議論を進める方が便利である．そこでappendixに示したフーリエ変換をすることで，
+\begin{align}
+ H=H_{hop}+H_{c}+H_{e-ph}-H_{ph} \label{Hstart}
+\end{align}
+LFの原論文に従って$H_{ph}$のみ符号を逆にとってあることに注意．ただし，各項は
+\begin{align}
+ H_{hop}&=\sum_{i,j,\sigma}t_{ij}c^{\dagger}_{i\sigma}c_{j\sigma} \\
+ H_{c}&=\frac{1}{2}\sum_{i\neq j}V_{ij}n_in_j \\
+ H_{ph}&=\sum_{q}\omega_{q\nu}\left(d^{\dagger}_{q\nu}d_{q\nu}+\frac{1}{2}\right) \\
+ H_{e-ph}&=\sum_{iq\nu}\omega_qn_i\left(u_{i\nu}^*(q)d_{q\nu}+u_{i\nu}(q)d^{\dagger}_{q\nu}\right)
+\end{align}
+と定義される．$t_{ij}$はhopping integralでバンドエネルギーのフーリエ変換であり，電子数の演算子$n_{i\sigma}=a^{\dagger}_{i\sigma}a_{i\sigma}$および$n_i=\sum_{\sigma}n_{i\sigma}$を用いた．また，$u$はelectron-phonon-coupling $g$のフーリエ変換と関連する量で
+\begin{align}
+ u_{i\nu}(q)=-\frac{1}{\omega_{q\nu}}g_{\nu}^*(q)e^{-iqr_i}
+\end{align}
+と定義されている．$g$がスピン依存性を持たないので，$u$もスピン依存性を持たない．本来は$g$が$k$依存性を持つので，$H_{e-ph}$には$a^{\dagger}_ia_j$のような項も含まれるのだが，以下で$t_{ij}$が十分小さいような領域を考えるので，このような領域では無視しても良い．（実際に考えても良いが，それはあまり大きな影響をもたらさないらしい．)
+
+このハミルトニアン\eqref{Hstart}からLF変換およびSecond Canonical Transformation（摂動論）によってbipolaron operatorで書かれた有効ハミルトニアンを導出することが目的である．
+
+
+
+
+\section{Lang-Firsov-Transformation}
+\subsection{LF変換の定義}
+第一段階では，LF変換を用いてphonon operatorに関する一次の項を消し去る．これはLFの原論文に従って，以下のように定義されている．
+\begin{align}
+ H'&=e^{-S}He^{S} \\
+ S&=\sum_{i\sigma}a^{\dagger}_{i\sigma}a_{i\sigma}P_{i}\\
+ P_i&=\sum_{q\nu}\left(b^{\dagger}_{q\nu}u_{i\nu}(q)-b_{q\nu}u_{i\nu}^*(q)\right)
+\end{align}
+ただし$S$がanti Hermitianで$S^{\dagger}=-S$を満たすことに注意しよう．この変換の元で，electronおよびphononのoperatorも以下のように変換する．
+\begin{align}
+ \tilde{a}_{i\sigma}&=a_{i\sigma}e^{P_i} \\
+ \tilde{a}^{\dagger}_{i\sigma}&=a^{\dagger}_{i\sigma}e^{-P_i} \\
+ \tilde{b}_{q\nu}&=b_{q\nu}+\sum_{i\sigma}u_{i\nu}(q)n_{i\sigma} 
+\end{align}
+この変換がカノニカルであることに注意しよう．$\tilde{a}$は引き続きフェルミオン，$\tilde{b}$は引き続きボソンである．この時$\tilde{a}$は格子を纏った電子（polaron）として，$\tilde{b}$は電子密度$n$周りの振動と解釈できる．
+
+
+
+\subsection{$H_{hop}$の変換}
+さて，実際にハミルトニアンの各項を変換してみよう．どの項の変換にもbaker hausdorff公式および各種演算子の交換関係のみを用いる．
+
+まず$H_{hop}$の変換から考える．このsubsectionでは，$(i\sigma)$および$(j\sigma)$というまとまりしか出てこないため，簡略化のため
+\begin{align}
+ &l=(i\sigma) & m=(j\sigma)
+\end{align}
+と置くことにして，さらに$A=c^{\dagger}_lc_m$と置く．関係式
+\begin{align}
+ \left[n_l,A\right]&=A \\
+ \left[n_m,A\right]&=-A \\
+\end{align}
+を用いる．すると
+\begin{align}
+ \left[S,A\right]=\left[n_lP_i+n_mP_j,A\right]=\left(P_i-P_j\right)A
+\end{align}
+さらに，もう一回$S$を作用させると
+\begin{align}
+ \left[S,\left[S,A\right]\right]&=\left[n_lP_i+n_mP_j,(P_i-P_j)A\right] \\
+&=\left(P_i-P_j\right)^2A
+\end{align}
+を得る．以下同様に一回$S$を作用させるごとに因子$P_i-P_j$がかかるので，baker hausdorffの公式によって（Sの符号に注意して）
+\begin{align}
+ \tilde{H}_{hop}&=e^{-S}H_{hop}e^{S}\\
+ &=\sum_{ij\sigma}t_{ij}\left(A-(P_i-P_j)A+(P_i-P_j)^2A-\cdots\right) \\
+ &=\sum_{ij\sigma}t_{ij}c^{\dagger}_{i\sigma}c_{j\sigma}e^{P_j-P_i} \label{Hhop}
+\end{align}
+と求まる．こうして$\tilde{H}_{hop}$には電子とフォノンの項が残ることになり，これを次節のSecond Canonical Transformation でさらに変形していくことになる．また，以下では簡単のために
+\begin{align}
+ \sigma_{ij}=t_{ij}e^{P_j-P_i}
+\end{align}
+と置くことにする．こうすると\eqref{Hhop}は
+\begin{align}
+ \tilde{H}_{hop}=\sum_{ij\sigma}\sigma_{ij}c^{\dagger}_{i\sigma}c_{j\sigma}
+\end{align}
+である．
+
+特に，ホッピングのうちオンサイトのもの$t_{ii}$に関する項は指数因子が打ち消しあうので，これだけ分けて書けば
+\begin{align}
+  \tilde{H}_{hop}=\sum_{i\neq j\sigma}\sigma_{ij}c^{\dagger}_{i\sigma}c_{j\sigma}+\sum_{i\sigma}t_{ii}c^{\dagger}_{i\sigma}c_{i\sigma}\label{hoponsite}
+\end{align}
+である．
+
+% 注意：：$P_i$と$P_j$は交換しないから，これを$X^{\dagger}_iX_j$と分解できるかどうかはかなり怪しい気がするのだが，，，（まあ，その場合には$t_{ij}$に変換因子がかかるだけである．
+
+%違うサイト（またはスピン）の電子operatorは反交換することおよびフォノン，電子のoperatorは交換することから
+%\begin{align}
+%  \tilde{H}_{hop}&=e^{-S}H_{hop}e^S \\
+%  &=\sum_{i,j,\sigma}e^{-n_{i\sigma}P_{i\sigma}-n_{j\sigma}P_{j\sigma}}t_{ij}c^{\dagger}_{i\sigma}c_{j\sigma}e^{n_{i\sigma}P_{i\sigma}+n_{j\sigma}%P_{j\sigma}} \\
+% \end{align}
+%ここで，サイト$\ket{i\sigma,j\sigma}$に関しては，$4$つの状態$\ket{00}$，$\ket{10}$，$\ket{01}$，$\ket{11}$を基底として取れて，これら全ての場合を確%認すると，例えば
+%$\ket{01}$の場合は
+%\begin{align}
+%  e^{-n_{i\sigma}P_{i\sigma}-n_{j\sigma}P_{j\sigma}}t_{ij}c^{\dagger}_{i\sigma}c_{j\sigma}e^{+n_{i\sigma}P_{i\sigma}+n_{j\sigma}P_{j\sigma}}\ket{0%1} 
+%  &=  e^{-n_{i\sigma}P_{i\sigma}-n_{j\sigma}P_{j\sigma}}t_{ij}e^{+P_{j\sigma}}\ket{10} \\
+%  &=  e^{-P_{i\sigma}}t_{ij}e^{+P_{j\sigma}}\ket{10} \\
+%\end{align}
+%となる．他の場合も同様に確認すれば，ハミルトニアンは
+%\begin{align} 
+%\tilde{H_{hop}}&=\sum_{i,j,\sigma}t_{ij}e^{-P_{i\sigma}}a^{\dagger}_{i\sigma}a_{j\sigma}e^{P_{j\sigma}} \\
+%&=\sum_{i,j,\sigma}t_{ij}\tilde{a}^{\dagger}_{i\sigma}\tilde{a}_{j\sigma} \\
+%\end{align}
+%と等価であることが確認できる．
+
+\subsection{$H_{c}$の変換}
+$H_{c}$の変換にもbaker hausdorffが使えるが，こちらの方がより簡単である．というのも
+\begin{align}
+ \left[S,n_{i\sigma}n_{j\sigma'}\right]=0
+\end{align}
+だから，$\tilde{H}_c=H_c$となるためである．これは，LF変換では$a$に関する密度の演算子が不変で$\tilde{n}=n$であることの直接の帰結である．従って
+\begin{align}
+ \tilde{H}_c=\sum_{i\sigma j\sigma'}V_{ij}n_{i\sigma}n_{j\sigma'}
+\end{align}
+である．
+
+% \begin{align}
+%  \tilde{H}_c&=e^{-S}H_ce^S \\
+%   &=\sum_{i\neq j,\sigma,\sigma'}e^{-n_{i\sigma}P_{i\sigma}-n_{j\sigma'}P_{j\sigma'}}V_{ij}n_{i\sigma}n_{j\sigma'}e^{+n_{i\sigma}P_{i\sigma}+n_{j\sigma'}P_{j\sigma'}} \\
+% \end{align}
+% ここで，サイト$\ket{i\sigma,j\sigma'}$に関しては，$4$つの状態$\ket{00}$，$\ket{10}$，$\ket{01}$，$\ket{11}$を基底として取れて，これら全ての場合を確認すれば，この式は
+% \begin{align}
+%  \tilde{H}_c&=\sum_{i\neq j,\sigma,\sigma'}e^{-P_{i\sigma}-P_{j\sigma'}}V_{ij}n_{i\sigma}n_{j\sigma'}e^{+P_{i\sigma}+P_{j\sigma'}} \\
+% &=\sum_{i\neq j,\sigma,\sigma'}V_{ij}\tilde{n}_{i\sigma}\tilde{n}_{j\sigma'} \\
+% \end{align}
+% と等価であることが確認できる．ただしここでpolaron密度
+% \begin{align}
+%  \tilde{n}_{i\sigma}=\tilde{a}^{\dagger}_{i\sigma}\tilde{a}_{i\sigma}
+% \end{align}
+% を定義して，今$i\neq j$より$P_{i\sigma}$と$P_{j\sigma'}$が交換するので，Appendixより
+% \begin{align}
+%  e^{P_i+P_j}=e^{P_i}e^{P_j}
+% \end{align}
+% を用いた．
+
+\subsection{$H_{ph}$の変換}
+フォノンエネルギーの項を考える．
+\begin{align}
+ \tilde{H}_{ph}&=e^{-S}H_{ph}e^S \\
+\end{align}
+において，
+\begin{align}
+ \left[S,d^{\dagger}_qd_q\right]&=\sum_{i\sigma} a^{\dagger}_{i\sigma}a_{i\sigma}\left[\sum_{q\nu}\left(d^{\dagger}_{q\nu}u_{i\nu}(q)-d_{q\nu}u_{i\nu}^*(q)\right),d^{\dagger}_{q\nu}d_{q\nu}\right] \\
+&=\sum_{i\sigma} n_{i\sigma} \left(-d^{\dagger}_{q\nu}u_{i\nu}(q)-d_{q\nu}u_{i\nu}^*(q)\right) 
+\end{align}
+従って
+\begin{align}
+ \left[S,\left[S,d^{\dagger}_{q\nu}d_{q\nu}\right]\right]&=\left[\sum_{i\sigma} n_{i\sigma}\sum_{q\nu}\left(d^{\dagger}_{q\nu}u_{i\nu}(q)-d_{q\nu}u_{i\nu}^*(q)\right),\sum_{i\sigma} n_{i\sigma} \left(-d^{\dagger}_{q\nu}u_{i\nu}(q)-d_{q\nu}u_{i\nu}^*(q)\right) \right] \\ 
+&=\sum_{i\sigma,j\sigma'}n_{i\sigma} n_{j\sigma'}\left[d^{\dagger}_{q\nu}u_{i\nu}(q)-d_{q\nu}u_{i\nu}^*(q),-d^{\dagger}_{q\nu}u_{j\nu}(q)-d_{q\nu}u_{j\nu}^*(q) \right] \\ 
+&= \sum_{i\sigma,j\sigma'}n_{i\sigma} n_{j\sigma'}\left(u_{i\nu}^*(q)u_{j\nu}(q)+u_{i\nu}(q)u_{j\nu}^*(q)\right)
+\end{align}
+これ以上$S$との交換関係をとっても，最早フォノンoperator $d$が残っていないので$0$になる．従って，baker hausdorff公式は（Sの符号に注意して）
+\begin{align}
+ \tilde{H}_{ph}&=H_{ph}-[S,H_{ph}]+\frac{1}{2}\left[S,[S,H_{ph}]\right] \\
+&=\sum_{q}\omega_{q\nu}\left(d^{\dagger}_qd_q+\frac{1}{2}-\sum_{i\sigma} n_{i\sigma} \left(-d^{\dagger}_{q}u_{m}(q)-d_{q}u_m^*(q)\right)+\frac{1}{2}\sum_{i\sigma}n_{i\sigma} n_{i\sigma} \left(u_{i\nu}^*(q)u_{j\nu}(q)+u_{i\nu}(q)u_{j\nu}^*(q)\right) \right) \\
+&=H_{ph}+H_{e-ph}+\frac{1}{2}\sum_{q,i\sigma,j\sigma'}\omega_{q\nu} n_{i\sigma} n_{j\sigma'}\left(u_{i\sigma}^*(q)u_{j\sigma'}(q)+u_{i\sigma}(q)u_{j\sigma'}^*(q)\right)\label{Hph}
+\end{align}
+となる．
+
+\subsection{$H_{e-ph}$の変換}
+最後に$H_{e-ph}$の変換を調べよう．baker hausdorffを用いるため交換関係を計算してみると
+\begin{align}
+ \left[S,n_{i\sigma}\left(u_{i\nu}^*d_{q\nu}+u_{i\nu}d_{q\nu}^{\dagger}\right)\right] 
+ &=\sum_{l\sigma'}n_{l\sigma'}n_{i\sigma}\left[u_{l\nu}(q)d_{q\nu}^{\dagger}-u_{l\nu}^*(q)d_{q\nu},u_{i\nu}^*(q)d_{q\nu}+u_{i\nu}(q)d_{q\nu}^{\dagger}\right] \\
+&=-\sum_{l\sigma'}n_{l\sigma'}n_{i\sigma}\left(u_{i\nu}^*(q)u_{l\nu}(q)+u_{l\nu}^*(q)u_{i\nu}(q)\right)
+\end{align}
+この式にはフォノンのoperatorは残っておらず，さらに$[n_{i\sigma},n_{l\sigma'}]=0$に注意すると，さらにこれと$S$の交換関係をとると$0$になってしまう．従ってbaker hausdorffの公式により
+\begin{align}
+ \tilde{H}_{e-ph}&=e^{-S}H_{e-ph}e^{S} \\
+&=H_{e-ph}+\sum_{q\nu i\sigma l\sigma'}\omega_{q\nu}n_{l\sigma'}n_{i\sigma}\left(u_{i\nu}^*(q)u_{l\nu}(q)+u_{l\nu}^*(q)u_{i\nu}(q)\right)
+\end{align}
+となる．ここで$\tilde{H}_{ph}$の式\eqref{Hph}中の二項目$H_{ph}$および三項目と纏められて
+\begin{align}
+ \tilde{H}_{ph}-\tilde{H}_{e-ph}=H_{ph}-\frac{1}{2}\sum_{q\nu ,i\sigma,j\sigma'}\omega_{q\nu} n_{i\sigma} n_{j\sigma'}\left(u_{i\nu}^*(q)u_{j\nu}(q)+u_{i\nu}(q)u_{j\nu}^*(q)\right)
+\end{align}
+となる．後のために$(i\sigma)=(j\sigma')$の項とそれ以外の項に分けると
+\begin{align}
+ \tilde{H}_{ph}-\tilde{H}_{e-ph}&=H_{ph}-\frac{1}{2}\sum_{q,i\sigma,j\sigma'}\omega_{q\nu} n_{i\sigma} n_{j\sigma'}\left(u_{i\sigma}^*(q)u_{j\sigma'}(q)+u_{i\sigma}(q)u_{j\sigma'}^*(q)\right) \\
+&=H_{ph}-\sum_{qi\sigma}\omega_{q\nu}n_{i\sigma}\left|u_{i\sigma}(q)\right|^2-\frac{1}{2}\sum_{q,i\neq j,\sigma\neq\sigma'}\omega_{q\nu} n_{i\sigma} n_{j\sigma'}\left(u_{i\sigma}^*(q)u_{j\sigma'}(q)+u_{i\sigma}(q)u_{j\sigma'}^*(q)\right) 
+\end{align}
+となる．ただし最後の変形ではフェルミオンに対して$n^2=n$となることを利用してある．こうして得られた$n$に比例する項は，ホッピング$\tilde{H}_{hop}$の式\eqref{hoponsite}から来る$t_{ii}$と合わせて
+\begin{align} 
+ &\sum_{i\sigma}(t_{ii}-E_p)n_{i\sigma} \\
+ &E_p=-\sum_{qi\sigma}\omega_{q\nu}\left|u_{i\sigma}(q)\right|^2
+\end{align}
+と書ける．$E_p$はポーラロンレベルシフトと呼ばれる量である．
+
+
+\subsection{ LF変換まとめ}
+LF変換自体は厳密な関係式であり，我々は結局変換されたハミルトニアン
+\begin{align}
+ \tilde{H}=\sum_{ij\sigma}t_{ij}c^{\dagger}_{i\sigma}c_{j\sigma}e^{P_j-P_i}+\sum_{q}\omega_{q\nu}\left(d^{\dagger}_{q\nu}d_{q\nu}+\frac{1}{2}\right)+\frac{1}{2}\sum_{ij}v_{ij}n_{i}n_{j}\label{Htilde}
+\end{align}
+を得る．ただし相互作用係数は
+\begin{align}
+ v_{ij}=V_{ij}-\sum_{q}\omega_{q\nu} n_{i\sigma} n_{j\sigma'}\left(u_{i\sigma}^*(q)u_{j\sigma'}(q)+u_{i\sigma}(q)u_{j\sigma'}^*(q)\right)\label{v}
+\end{align}
+と定義した．
+
+ハミルトニアン\eqref{Htilde}において，$c$および$d$は裸の電子およびフォノンではなく，ポーラロンおよび変形されたフォノンと解釈するのが正しい．というのももとのハミルトニアン$H$における$\tilde{c}$および$\tilde{d}$の関係と，変形されたハミルトニアン$\tilde{H}$における$c$および$d$の関係は全く同じだからである．そうすると，$v_{ij}$はポーラロンポーラロン相互作用の係数と考えることができる．この係数はクーロン反発力とフォノンを媒介した引力との比較で決まる．
+
+また，式\eqref{Htilde}においてオンサイトの項を露わに取り出した
+\begin{align}
+  \tilde{H}=\sum_{i\sigma}\left(t_{ii}+V_{ii}-E_p\right)n_{i\sigma}+\sum_{i\neq j\sigma}t_{ij}c^{\dagger}_{i\sigma}c_{j\sigma}e^{P_j-P_i}+\sum_{q}\omega_{q\nu}\left(d^{\dagger}_{q\nu}d_{q\nu}+\frac{1}{2}\right)+\frac{1}{2}\sum_{i\neq j}v_{ij}n_{i}n_{j}
+\end{align}
+も有用な関係式である．
+
+
+
+
+ % \subsection{その他}
+ % そのほかに，LFの原論文ではオンサイトエネルギー項
+ % \begin{align}
+ %  H_{onsite}=\sum_{i\sigma}\epsilon_{i\sigma}n_{i\sigma}
+ % \end{align}
+ % や
+ % \begin{align}
+ %  H
+ % \end{align}
+ % も考えている．これらも多バンドフォノンに対して容易に拡張できる．
+
+
+\section{Second Canonical Transformation}
+\subsection{変換の定義}
+簡略化のため
+\begin{align}
+\tilde{H}&=\tilde{H}_0+\tilde{V} \\
+ \tilde{H}_0&=\sum_{q}\omega_{q\nu}\left(d^{\dagger}_{q\nu}d_{q\nu}+\frac{1}{2}\right)+\frac{1}{2}\sum_{ij}v_{ij}n_{i}n_{j} \\
+ \tilde{V}&=\sum_{ij\sigma}t_{ij}c^{\dagger}_{i\sigma}c_{j\sigma}e^{P_j-P_i} \label{Vtilde}
+\end{align}
+と置く．LF変換されたハミルトニアンにはまだ$c$と$d$がカップリングされた項が含まれており，これを除去する必要がある．以下strong coupling の状態$|t|<<|v|$に話を限ることにすると，$\tilde{V}$を$\tilde{H}_0$に対する摂動として扱うことができる．
+
+ここで多少物理的な考察が必要となる．バイポーラロン状態が生成されるかどうかは，バイポーラロンの束縛エネルギー
+\begin{align}
+ \Delta\simeq 2E_p-V_0
+\end{align}
+に依存する．ただし$V_0$はオンサイトのクーロン反発力である．これとポーラロンーポーラロン相互作用$v$が，引力的ではあるが弱い場合
+つまり
+\begin{align}
+ \Delta \le W
+\end{align}
+の場合，ポーラロンはクーパーペアを作ってBCS型の超電導を起こす．一方で$v$が強い場合
+\begin{align}
+ \Delta \ge W
+\end{align}
+にはバイポーラロン（同じサイトにポーラロンが二つ存在する状態）が生成されて，バイポーラロン超電導を起こす．今考えるのは後者の場合である．
+
+このような領域を想定してバイポーラロン超電導を論じるために，$\tilde{H}_0$の固有状態をバイポーラロン状態に絞って議論する．これは十分低温の領域$T\le \Delta$において有効である．すると$\tilde{V}$の一次はbipolaronを壊してしまうが$\tilde{V}$の二次にはその恐れはない．そこで$\tilde{V}$の一次の項を消してしまうようなCanonical Transformationによってbipolaronの運動は記述できると期待される．このような変換
+\begin{align}
+ H_b=e^{S_2}\tilde{H}e^{-S_2}
+\end{align}
+は，baker hausdorff公式
+\begin{align}
+ H_b=\tilde{H}_0+\tilde{V}+\left[S,\tilde{H}_0\right]+\left[S,\tilde{V}\right]+\frac{1}{2}\left[S,\left[S,\tilde{H}_0\right]\right]+\cdots
+\end{align}
+において
+\begin{align}
+ \tilde{V}+\left[S,\tilde{H}_0\right]=0
+\end{align}
+となるような$S$を取ることによって達成され，この時ハミルトニアンは$3$次以上の項を無視することによって
+\begin{align}
+ H_b\simeq\tilde{H}_0+\frac{1}{2}\left[S,\tilde{V}\right]\equiv \tilde{H}_0+H_{int}\label{Hb}
+\end{align}
+と近似することができる．また，このような$S$の行列要素は
+\begin{align}
+ \braket{n|S|m}=\frac{\braket{n|\tilde{V}|m}}{E_n-E_m}
+\end{align}
+で与えられることが知られている．ここに$\tilde{V}$の具体的な表式\eqref{Vtilde}を代入して
+\begin{align}
+ \braket{f|S_2|p}=\sum_{ij}\frac{\braket{f|\sigma_{ij}c^{\dagger}_ic_j|p}}{E_f-E_p}
+\end{align}
+ただし$\ket{f}$および$\ket{p}$は$H_0$の固有状態であり，$E_f$などはその固有エネルギーである．
+
+\subsection{非摂動ハミルトニアンの固有状態}
+非摂動ハミルトニアン$\tilde{H}_0$の固有状態は，ポーラロン状態$\ket{polaron}$とフォノン状態$\ket{phonon}$の直積で
+\begin{align*}
+ \ket{f}=\ket{polaron}\ket{phonon}
+\end{align*}
+と書ける．すなわちpolaronの状態とフォノンの状態を指定してやれば良い．
+
+ここで，polaron状態について考えよう．ハミルトニアン$H_0$において$2$サイト$2$polaronsの場合を考えよう．するとこのハミルトニアンは対角化できて，そのエネルギー準位は以下のようになる．
+
+
+ここでパラメータの値が上述の通りであれば確かにbipolaron状態が基底状態となり，polaronが二つの状態とのエネルギーの差は
+\begin{align*}
+ \Delta_{ij}=
+\end{align*}
+と書ける．以下ではこの$\Delta$を束縛エネルギーとして扱うことにしよう．
+
+
+\subsection{$\tilde{V}$の変換}
+ハミルトニアン\eqref{Hb}に従って，$H_{int}$の行列要素を計算しよう．
+\begin{align}
+ \braket{f|H_{int}|i}&=\frac{1}{2}\sum_{p}\left(\braket{f|S|p}\braket{p|\tilde{V}|i}-\braket{f|\tilde{V}|p}\braket{p|S|i}\right) \\
+&=\frac{1}{2}\sum_{p}\left(\frac{\braket{f|\tilde{V}|p}\braket{p|\tilde{V}|i}}{E_f-E_p}-\frac{\braket{f|\tilde{V}|p}\braket{p|\tilde{V}|i}}{E_p-E_i}\right) \\
+&=\frac{1}{2}\sum_{p}\left(\frac{1}{E_f-E_p}+\frac{1}{E_i-E_p}\right)\braket{f|\tilde{V}|p}\braket{p|\tilde{V}|i}\label{Hint2}\\
+\end{align}
+
+ただしここで，始状態$\ket{i}$および終状態$\ket{f}$はbipolaronを，中間状態$\ket{p}$はpolaronを含む．これを満たすためには，$H_{int}$に含まれる$\tilde{V}\tilde{V}$において１つ目の$\tilde{V}$で$1$つのポーラロンがサイトiからサイトjに移動し，2回目の$\tilde{V}$においてサイト$i$に残っているスピン逆向きのポーラロンがサイトjに移動しなければならない．
+
+式\eqref{Hint2}にもまだフォノンの項は残っているが，これを除去するため，自由フォノンに関して平均を取ってしまうことにする．$\ket{i}$と$\ket{f}$でフォノンの数は同じdiagonalな項を考えることにしよう．そこで
+\begin{align}
+ E_{f'}-E_p=E_f-E_p\simeq -\Delta +\sum_{q}\omega_{q\nu}\left(n^f_q-n^p_q\right)
+\end{align}
+とおけることになる．ただし，$\Delta$は先に述べたようにバイポーラロン一つをポーラロン二つに分解するために必要なエネルギーであり，本来は（おそらく）サイトに依存する量であるが，ここでは同じ定数として扱うことにする．
+
+
+フォノン部分の平均化をすると，フォノン部分に関する式は
+\begin{align*}
+ &\braket{\frac{1}{2}\sum_{p}\left(\frac{1}{E_f-E_p}+\frac{1}{E_i-E_p}\right)\sigma_{ij} |p}\braket{p |\sigma_{kl}} \\
+=&\sum_{n}e^{-\beta E_n}\sum_{p}\left(\frac{1}{-\Delta +\sum_{q\nu}\omega_{q\nu}\left(n^f_{q\nu}-n^p_{q\nu}\right)}\right)\braket{f|\sigma_{ij}|p}\braket{p|\sigma_{kl}|f}
+\end{align*}
+$\braket{}$は自由フォノンによる平均化
+\begin{align}
+ \braket{A}=\frac{1}{a}\mathrm{Tr}\left(e^{-\beta H_{ph}}A\right)
+\end{align}
+を意味する．分母を出すために$e^{iHt}$の積分を考えよう．つまり
+\begin{align*}
+ \int_{0}^{\infty}\mathrm{d}te^{iH_{ph}t+\delta t}\ket{f}=\frac{1}{iE_f}\ket{f}
+\end{align*}
+を用いると，
+\begin{align*}
+ &i\sum_{f}e^{-\beta E_f}\int_{0}^{\infty}\mathrm{d}te^{-i\Delta t}\sum_{p}\braket{f|e^{iH_{ph}t}\sigma_{ij}e^{-iH_{ph}t}|p}\braket{p|\sigma_{kl}|f} \\
+=&i\sum_{f}e^{-\beta E_f}\int_{0}^{\infty}\mathrm{d}te^{-i\Delta t}\braket{f|e^{iH_{ph}t}\sigma_{ij}e^{-iH_{ph}t}\sigma_{kl}|f} \\ 
+=&i\int_{0}^{\infty}\mathrm{d}te^{-i\Delta t}\braket{e^{iH_{ph}t}\sigma_{ij}e^{-iH_{ph}t}\sigma_{kl}} 
+\end{align*}
+ただし状態$\ket{p}$に関する完全性関係を使った．さらにハイゼンベルグ表示の演算子
+\begin{align}
+ \sigma(t)=e^{iH_{ph}t}\sigma e^{-iH_{ph}t}
+\end{align}
+を導入して以下これを
+\begin{align}
+ T_{ij,kl}=i\int_{0}^{\infty}dte^{-(i\Delta +\delta)t}\braket{\sigma_{ij}(t)\sigma_{kl}(0)}
+\end{align}
+と書くことにすると，フォノンについての平均化をとったpolaronのみについてのハミルトニアンは
+\begin{align}
+ H_{int}=-\sum_{ijkl}T_{ij,kl}c^{\dagger}_ic_jc^{\dagger}_kc_l
+\end{align}
+とかけることになる．ただし，和$(ijkl)$は許される中間状態$\ket{p_{polaron}}$についてのみ取らなければならない．この点を次節で議論することにする．
+
+%で置き換えることになる．ただし$\delta\to 0+$であり，
+
+
+\subsection{bipolaron operatorとEffective Hamiltonian}
+次にハミルトニアン全体を(singlet)bipolaronのoperatorで書き換えるのが良い．これは
+\begin{align}
+ b^{\dagger}_i&=a^{\dagger}_{i\uparrow}a^{\dagger}_{i\downarrow} \\
+ b_i&=a_{i\downarrow}a_{i\uparrow} 
+\end{align}
+で定義され，これもフェルミオンである．実際交換関係は
+\begin{align}
+ &\left\{b_m,b^{\dagger}_m\right\}=1 \label{commute}\\
+ &\left[b_m,b^{\dagger}_{m'}\right]=1 \\
+\end{align}
+で与えられる．$\tilde{H}_0$の基底状態としてbipolaron状態のみを考えているので，あるサイト$i$にポーラロンが１つあれば，必ず同じサイト$i$にもう一つスピンが反対向きのポーラロンが存在する．つまり
+\begin{align}
+ n_{i\sigma}=n_{i\sigma}n_{i,-\sigma}\label{bipolaron}
+\end{align}
+が成立している．ただし$-\sigma$は$\sigma$と逆向きのスピンを表す．従ってポーラロンの二体相互作用は
+\begin{align}
+ n_in_j&=\sum_{\sigma\sigma'}n_{i\sigma}n_{j\sigma'} \\
+ &=\sum_{\sigma\sigma'}n_{i,\sigma}n_{i,-\sigma}n_{j,\sigma'}n_{j,-\sigma'} \\
+ &=4b^{\dagger}_ib_ib^{\dagger}_jb_j
+\end{align}
+とかけることになる．
+
+次に$H_{int}$はbipolaronのホッピングを表す項と，bipolaron相互作用（およびオンサイトエネルギー）を表す項に分けることができる．まずはホッピング項から考えよう．サイト$i$からサイト$j$へのホッピングには，中間状態$\ket{p}$としてふた通り取りうる，つまり$\tilde{V}\tilde{V}$に含まれる$c^{\dagger}_{j\sigma}c_{i\sigma}$において一つめの$\tilde{V}$で$\sigma$としてスピンupを取るかdownを取るかのふた通りある．従ってoperator部分は
+\begin{align}
+ a^{\dagger}_{j\downarrow}a_{i\downarrow} a^{\dagger}_{j\uparrow}a_{i\uparrow}+ a^{\dagger}_{j\uparrow}a_{i\uparrow} a^{\dagger}_{j\downarrow}a_{i\downarrow}=2b^{\dagger}_ib_i
+\end{align}
+となり，係数は$T_{ij,ij}$である．
+
+次に相互作用項は1回目の$\tilde{V}$でpolaronがサイト$i$から$j$に移った後，2回目の$\tilde{V}$でサイト$j$から$i$に戻ってくれば良い．従ってoperator部分は
+\begin{align}
+  a^{\dagger}_{i\uparrow}a_{j\uparrow} a^{\dagger}_{j\uparrow}a_{i\uparrow}+ a^{\dagger}_{i\downarrow}a_{j\downarrow} a^{\dagger}_{j\downarrow}a_{i\downarrow} 
+&=n_{i\uparrow}\left(1-n_{j\uparrow} \right)+ n_{i\downarrow}\left(1-n_{j\downarrow} \right) \\
+&=2n_{i\uparrow}n_{i\downarrow}-2n_{i\uparrow}n_{i\downarrow}n_{j\uparrow}n_{j\downarrow} \\
+&=2b_i^{\dagger}b_i-2b_i^{\dagger}b_ib_j^{\dagger}b_j
+\end{align}
+となる．ただし式\eqref{bipolaron}を用いた．この変形からバイポーラロン相互作用の項は，サイト$i\to j\to i$のホッピングにおいてサイト$j$にバイポーラロンがあってはならないことにより生じたものであることがわかる．係数は$T_{ij,ji}$であるが，$(ij)$の和をとるときにダブルカウンティングが発生することに注意しよう．
+
+以上から，ハミルトニアン$H_b$はbipolaronのoperatorで
+\begin{align}
+ H_b=\frac{1}{2}\sum_{ij}4v_{ij}\hat{N}_{i}\hat{N}_{j}+\frac{1}{2}\sum_{i\neq j}2T_{ij,ji}\hat{N}_{i}\hat{N}_{j}+\sum_{i}\left(-\sum_{j}T_{ij,ji}\right)\hat{N}_{i}-2\sum_{ij}T_{ij,ij}b^{\dagger}_ib_j \label{bipolaron}
+\end{align}
+とかけることになる．ただし，バイポーラロンの密度演算
+\begin{align}
+ \hat{N}_i=b^{\dagger}_ib_i
+\end{align}
+を定義した．また，オンサイトの項を露わに分離してある．
+
+
+%オンサイト項の係数は注意が必要で，ここでは露わに書かなかったが，もしもオンサイトを露わに書くことにすると，クーロン反発はハバード反発のように反対スピンのみに働く一方，Epはスピンに関係ないのでV-2Epのようになる．（オンサイトホッピングtを無視した場合．）そしておそらくこれはが束縛エネルギーΔの定義である．
+%この式が，先行の論文と微妙に係数が違う結果になってしまっている．（tの有無）
+%ダブルカウントで係数を合わせるように調整したが，これも本当か確認が必要では？
+
+
+\section{ハイゼンベルグモデル}
+bipolaronハミルトニアンはハイゼンベルグモデルと等価であることが知られており，それを考えることにする．ハミルトニアン
+\begin{align}
+ H_b=\frac{1}{2}\sum_{ij}4v_{ij}\hat{N}_{i}\hat{N}_{j}+\frac{1}{2}\sum_{i\neq j}2T_{ij,ji}\hat{N}_{i}\hat{N}_{j}+\sum_{i}\left(-\sum_{j}T_{ij,ji}\right)\hat{N}_{i}-2\sum_{ij}T_{ij,ij}b^{\dagger}_ib_j 
+\end{align}
+から出発する．ここで
+\begin{align*}
+ S^z_m&=\frac{1}{2}-N_m \\
+ S^x_m&=\frac{1}{2}\left(b_m+b^{\dagger}_m\right)\\
+ S^y_m&=\frac{i}{2}\left(b_m-b^{\dagger}_m\right)
+\end{align*}
+と置くと，bipolaron演算子の交換関係式\eqref{commute}によって，これらはスピン$1/2$の演算子である．$S^z_m$はサイト$m$のBipolaron密度と関連しており，$1/2$なら存在せず，$-1/2$なら存在する．
+
+これをハミルトニアン\eqref{bipolaron}に代入すると
+\begin{align*}
+ H_b&=\frac{1}{2}\sum_{i\neq j}\left(4v_{ij}+2T_{ij,ji}\right)\left(\frac{1}{2}-S^z_i\right)\left(\frac{1}{2}-S^z_j\right)
+ -\sum_{i\neq j}T_{ij,ji}\hat{N}_{i} - 2\sum_{i\neq j}T_{ij,ij}\left(S^x_i+iS^y_i\right)\left(S^x_j-iS^y_j\right)  \\
+ &=\frac{1}{2}\sum_{i\neq j}\left(4v_{ij}+2T_{ij,ji}\right)\left(\frac{1}{4}-\frac{1}{2}S^z_i-\frac{1}{2}S^z_i-S^z_iS^z_j\right)
+ -\sum_{i\neq j}T_{ij,ji}\left(\frac{1}{2}-S^z_i\right) - 2\sum_{i\neq j}T_{ij,ij}\left(S^x_iS^x_j+iS^y_iS^y_j\right)
+\end{align*}
+定数部分を無視すれば，
+\begin{align*}
+ H_{spin} &=\frac{1}{2}\sum_{i\neq j}\left(4v_{ij}+2T_{ij,ji}\right)\left(-\frac{1}{2}S^z_i-\frac{1}{2}S^z_i-S^z_iS^z_j\right)
+ -\sum_{i\neq j}T_{ij,ji}\left(\frac{1}{2}-S^z_i\right) - 2\sum_{i\neq j}T_{ij,ij}\left(S^x_iS^x_j+S^y_iS^y_j\right)\label{heisen} \\
+ &=\frac{1}{2}\sum_{i\neq j}\left(4v_{ij}+2T_{ij,ji}\right)\left(-\frac{1}{2}S^z_i-\frac{1}{2}S^z_i-S^z_iS^z_j\right)
+ +\sum_{i\neq j}T_{ij,ji}S^z_i - 2\sum_{i\neq j}T_{ij,ij}\left(S^x_iS^x_j+S^y_iS^y_j\right)\\
+\end{align*}
+と描けることになる．すなわちこれはanisotropic Heisenberg modelである．そこで以降簡単のため
+\begin{align*}
+ H_{spin}=\sum_{i,j}A_{ij}S^z_iS^z_j-\sum_{i,j}C_{ij}\left(S^x_iS^x_j+S^y_iS^y_j\right)-\sum_iB_iS^z_i
+\end{align*}
+と置くことにする．
+
+\section{平均場近似}
+スピンの形で書かれたハミルトニアン式\eqref{heisen}に平均場近似を適用するに当たって，簡単のためにいくつか仮定をする．仮定を外してより一般化しても計算はできるが，結果はより複雑になる．まず，格子の形としては単純な二次元正方格子上に二種類の副格子A，Bを考えることにする．そして相互作用として最近接のA，B間のもののみを考えることにする．また，Bipolaron密度が保存する場合
+\begin{align*}
+ \braket{S^z_i}=\frac{1}{2}-n_i
+\end{align*}
+を考えよう．
+
+平均場としては$\braket{{\bf S}^z_m}$を導入する．この時の平均場の求め方には変分原理を用いる．不等式
+\begin{align}
+ Z \ge Z_0e^{-\beta (E-E_{MF})} 
+\end{align}
+に対して試行ハミルトニアンを
+\begin{align*}
+ H_0=-\sum_{i}\Gamma_i\cdot S_i
+\end{align*}
+と置いて$\Gamma$を変分パラメータとして分配関数を最大化する．実際に計算すると平均場は
+\begin{align*}
+ \Gamma^x_i=\Gamma^y_i=2\sum_{j}C_{ij}\braket{S^x_j} \\
+ \Gamma^z_i=\left( B_i-2\sum_{j}A_{ij}\braket{S^z_j} \right)
+\end{align*}
+
+
+
+
+
+
+
+
+\begin{thebibliography}{9}
+ \bibitem{LFtransformation}Lang, I. G., and Yu A. Firsov. "Kinetic theory of semiconductors with low mobility." Sov. Phys. JETP 16.5 (1963): 1301.
+ \bibitem{Alexandrov1986}Alexandrov, A. S., J. Ranninger, and S. Robaszkiewicz. "Bipolaronic superconductivity: thermodynamics, magnetic properties, and possibility of existence in real substances." Physical Review B 33.7 (1986): 4526.
+ \bibitem{Alexandrov2009}Devreese, Jozef T., and Alexandre S. Alexandrov. "Fröhlich polaron and bipolaron: recent developments." Reports on Progress in Physics 72.6 (2009): 066501.
+ \bibitem{Alexandrov1981}Alexandrov, A., and J. Ranninger. "Bipolaronic superconductivity." Physical Review B 24.3 (1981): 1164.
+ \bibitem{Alexandrov1981b}Alexandrov, A., and J. Ranninger. "Theory of bipolarons and bipolaronic bands." Physical Review B 23.4 (1981): 1796.
+
+
+
+\end{thebibliography}
+
+
+\end{document}

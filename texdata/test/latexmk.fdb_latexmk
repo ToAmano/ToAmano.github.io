@@ -1,0 +1,11 @@
+# Fdb version 3
+["pdflatex"] 1573625244 "latexmk.tex" "latexmk.pdf" "latexmk" 1573625376
+  "/usr/local/texlive/2019/texmf-dist/tex/platex/base/jarticle.cls" 1554592814 25768 7795b6eb199d132d0146c0d315b25fef ""
+  "/usr/local/texlive/2019/texmf-dist/web2c/texmf.cnf" 1557092114 35484 cb1661360667bf4db662a8895053b554 ""
+  "/usr/local/texlive/2019/texmf-var/web2c/pdftex/pdflatex.fmt" 1562825073 4259636 6a15451cc9c0888530cb0664b8932462 ""
+  "/usr/local/texlive/2019/texmf.cnf" 1557341546 577 d150fef99ac436ad1156e86b0892f6ef ""
+  "latexmk.aux" 1573624363 98 76fdf9ed56f6cb8956e676926faa485e ""
+  "latexmk.tex" 1573624407 1073 50d6ed27520359fd15c95dce8c0d5e75 ""
+  (generated)
+  "latexmk.log"
+  "latexmk.pdf"

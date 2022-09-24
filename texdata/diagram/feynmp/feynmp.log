@@ -1,0 +1,103 @@
+This is e-pTeX, Version 3.14159265-p3.8.2-190131-2.6 (utf8.euc) (TeX Live 2019) (preloaded format=platex 2019.7.11)  6 AUG 2019 16:32
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**feynmp.tex
+(./feynmp.tex
+pLaTeX2e <2019-04-06> (based on LaTeX2e <2018-12-01>)
+(/usr/local/texlive/2019/texmf-dist/tex/platex/base/jarticle.cls
+Document Class: jarticle 2019/04/02 v1.8b Standard pLaTeX class
+\c@@paper=\count83
+(/usr/local/texlive/2019/texmf-dist/tex/platex/base/jsize10.clo
+File: jsize10.clo 2019/04/02 v1.8b Standard pLaTeX file (size option)
+)
+\c@part=\count84
+\c@section=\count85
+\c@subsection=\count86
+\c@subsubsection=\count87
+\c@paragraph=\count88
+\c@subparagraph=\count89
+\c@figure=\count90
+\c@table=\count91
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\symmincho=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `mincho' in version `bold'
+(Font)                  JY1/mc/m/n --> JY1/gt/m/n on input line 614.
+\toclineskip=\dimen118
+\@lnumwidth=\dimen119
+\bibindent=\dimen120
+\heisei=\count92
+)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/listings/listings.sty
+(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks15
+)
+\lst@mode=\count93
+\lst@gtempboxa=\box43
+\lst@token=\toks16
+\lst@length=\count94
+\lst@currlwidth=\dimen121
+\lst@column=\count95
+\lst@pos=\count96
+\lst@lostspace=\dimen122
+\lst@width=\dimen123
+\lst@newlines=\count97
+\lst@lineno=\count98
+\lst@maxwidth=\dimen124
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2019/02/27 1.8b (Carsten Heinz)
+\c@lstnumber=\count99
+\lst@skipnumbers=\count100
+\lst@framebox=\box44
+)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2019/02/27 1.8b listings configuration
+))
+Package: listings 2019/02/27 1.8b (Carsten Heinz)
+
+No file feynmp.aux.
+\openout1 = `feynmp.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+\c@lstlisting=\count101
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <14.4> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 9.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <14.4> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 9.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 12.
+(/usr/local/texlive/2019/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 12.
+ [1
+
+] (./feynmp.aux) ) 
+Here is how much of TeX's memory you used:
+ 1905 strings out of 493223
+ 24453 string characters out of 6144415
+ 95503 words of memory out of 5000000
+ 5964 multiletter control sequences out of 15000+600000
+ 9042 words of font info for 37 fonts, out of 8000000 for 9000
+ 929 hyphenation exceptions out of 8191
+ 26i,4n,32p,420b,1224s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+Output written on feynmp.dvi (1 page, 3300 bytes).

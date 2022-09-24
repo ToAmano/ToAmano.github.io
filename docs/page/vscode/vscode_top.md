@@ -34,7 +34,9 @@ categories: vscode
 ### LaTeX
 
 1. latex workshop
-2. [CaTeX](https://konn-san.com/articles/2018-11-26-happy-latex-with-catex.html)
+1. [CaTeX](https://konn-san.com/articles/2018-11-26-happy-latex-with-catex.html)
+1. [LTeX](https://valentjn.github.io/ltex/)
+    latexで英語の文法をチェックしてくれるかなり強力な拡張機能．英単語のスペルミスのみならず英文法もチェックしてくれる．
 
 ## 設定ファイルをdotfileで管理する
 

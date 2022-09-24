@@ -1,0 +1,24 @@
+\documentclass[a4j]{jarticle}
+\title{Wannier90の使い方}
+
+\begin{document}
+
+
+\section{バンドとDOS}
+\subsection{MLFWの求め方}
+まずはMLFWを計算するのが基本的である．まずはscf+nscf計算でKS状態を計算する．
+
+
+続いて，wannier90.xでrequired overlapのリストを生成する．これはnnkpファイルに記述される．ここからが厄介で，というのも，wannier90では.wanファイルに次々と書き込んではプログラムを走らせるということをやるので，それを一回一回わかっていないといけないからだ．流れとしては以下のようになる．
+
+
+1，wannier90.x -pp  で
+
+2，pw2wan.x でnscf計算の結果を元に，
+
+3，wannier.xでMLWFの計算をする．
+
+4，
+
+
+\end{document}

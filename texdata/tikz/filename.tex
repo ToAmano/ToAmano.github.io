@@ -1,0 +1,40 @@
+%直接pdf化するためのコード
+%これで，コマンドとしては
+%uplatex --jobname=fig filename.tex
+
+
+
+% TikZのパッケージ
+\usepackage{tikz}
+\usepackage{circuitikz}
+\pgfrealjobname{filename}%このソースコードのファイル名（.texはいらない） また，これはusepackage{tilz}の後へ！
+\usetikzlibrary{calc,intersections,positioning,shapes,arrows}
+
+% 適切な位置に図を入れる
+\begin{figure}\centering
+      \beginpgfgraphicnamed{fig}% ここから\endpgfgraphicnamedまでの図を別で描き出す
+      \begin{circuitikz}[american voltages]
+         %-----------------------------
+         %各点の位置を定義
+         %-----------------------------
+         \coordinate (O) at (0,0);%原点
+         \coordinate (X) at (5,0);%幅
+         \coordinate (X2) at ($(O)!0.5!(X)$);%幅の二等分線
+         \coordinate (Y) at (0,5);%高さ
+         \coordinate (Y2) at ($(O)!0.5!(Y)$);%高さの二等分線
+         \coordinate (XY) at (X|-Y);%図の右上端
+         %-----------------------------
+         %ここから描いていく
+         %-----------------------------
+         \draw (O) node[ground] {} -- (X) ;% アース
+         \draw (Y) node[left] {High$[V]$} -- (XY) ;% High
+         \draw (Y-|X2)[short,*-] to [european resistor] (Y2-|X2); % Highと抵抗を接続
+         \draw (Y2-|X2) ++ (0, -1) node[nmos] (mos) {}
+         (mos.gate) node[anchor=south] {G} to[short, -o] (mos.gate -| O) node[below right]{入力電圧}% 抵抗と接続
+         (mos.drain) node[anchor=east] {D} to (Y2-|X2) to [short,*-o] (Y2-|X) node[above left]{出力電圧}
+         (mos.source) node[anchor=east] {S}[short,-*] to (X2); % アースと接続
+      \end{circuitikz}
+      \endpgfgraphicnamed% \beginpgfgraphicnamedから，ここまでの図を別で描き出す
+   \caption{電界効果トランジスタを用いるNOTゲートの例}
+\end{figure}
+% 図ここまで

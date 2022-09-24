@@ -1,0 +1,159 @@
+This is e-pTeX, Version 3.14159265-p3.8.2-190131-2.6 (utf8.euc) (TeX Live 2019) (preloaded format=platex 2019.7.11)  9 AUG 2019 01:56
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**diagram.tex
+(./diagram.tex
+pLaTeX2e <2019-04-06> (based on LaTeX2e <2018-12-01>)
+(/usr/local/texlive/2019/texmf-dist/tex/platex/base/jarticle.cls
+Document Class: jarticle 2019/04/02 v1.8b Standard pLaTeX class
+\c@@paper=\count83
+(/usr/local/texlive/2019/texmf-dist/tex/platex/base/jsize10.clo
+File: jsize10.clo 2019/04/02 v1.8b Standard pLaTeX file (size option)
+)
+\c@part=\count84
+\c@section=\count85
+\c@subsection=\count86
+\c@subsubsection=\count87
+\c@paragraph=\count88
+\c@subparagraph=\count89
+\c@figure=\count90
+\c@table=\count91
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\symmincho=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `mincho' in version `bold'
+(Font)                  JY1/mc/m/n --> JY1/gt/m/n on input line 614.
+\toclineskip=\dimen118
+\@lnumwidth=\dimen119
+\bibindent=\dimen120
+\heisei=\count92
+)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/feynmf/feynmp.sty
+Package: feynmp 1996/12/02 v1.08 LaTeX/MetaPost Feynman Diagram Package (ohl)
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: dvips.def on input line 99.
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics-def/dvips.def
+File: dvips.def 2017/06/20 v3.1d Graphics/color driver for dvips
+))
+\@outfmf=\write3
+\fmfbuf@=\toks15
+\c@fmfgraph=\count93
+)
+(./diagram.aux)
+\openout1 = `diagram.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <14.4> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 13.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <14.4> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 13.
+\openout3 = `ee.mp'.
+
+File: ee.1 Graphic file (type eps)
+ <ee.1>
+\openout3 = `eph.mp'.
+
+File: eph.1 Graphic file (type eps)
+ <eph.1>
+\openout3 = `fock.mp'.
+
+File: fock.1 Graphic file (type eps)
+ <fock.1>
+\openout3 = `hartree.mp'.
+
+File: hartree.1 Graphic file (type eps)
+ <hartree.1>
+\openout3 = `born1.mp'.
+
+File: born1.1 Graphic file (type eps)
+ <born1.1>
+\openout3 = `born2.mp'.
+
+File: born2.1 Graphic file (type eps)
+ <born2.1>
+\openout3 = `fock-vertex.mp'.
+
+File: fock-vertex.1 Graphic file (type eps)
+
+<fock-vertex.1>
+\openout3 = `twoparticlefalse.mp'.
+
+
+feynmp: File twoparticlefalse.1 not found:
+feynmp: Process twoparticlefalse.mp with MetaPost and then reprocess this file.
+
+\openout3 = `twophartree.mp'.
+
+[1
+
+]
+feynmp: File twophartree.1 not found:
+feynmp: Process twophartree.mp with MetaPost and then reprocess this file.
+\openout3 = `twopfock.mp'.
+
+File: twopfock.1 Graphic file (type eps)
+<twopfock.1>
+\openout3 = `tpborn1.mp'.
+
+
+feynmp: File tpborn1.1 not found:
+feynmp: Process tpborn1.mp with MetaPost and then reprocess this file.
+\openout3 = `tpborn2.mp'.
+
+feynmp: File tpborn2.1 not found:
+feynmp: Process tpborn2.mp with MetaPost and then reprocess this file.
+feynmf: Label file tpborn2.t1 not found:
+feynmf: Process tpborn2.mp with MetaPost and then reprocess this file.
+\openout3 = `ladder.mp'.
+
+File: ladder.1 Graphic file (type eps)
+<ladder.1>
+\openout3 = `vertex.mp'.
+
+
+feynmp: File vertex.1 not found:
+feynmp: Process vertex.mp with MetaPost and then reprocess this file.
+\openout3 = `nanbu-fock.mp'.
+
+File: nanbu-fock.1 Graphic file (type eps)
+<nanbu-fock.1>
+\openout3 = `4vertex.mp'.
+
+File: 4vertex.1 Graphic file (type eps)
+ <4vertex.1> [2] (./diagram.aux) ) 
+Here is how much of TeX's memory you used:
+ 700 strings out of 493223
+ 7923 string characters out of 6144415
+ 74365 words of memory out of 5000000
+ 4739 multiletter control sequences out of 15000+600000
+ 9042 words of font info for 37 fonts, out of 8000000 for 9000
+ 929 hyphenation exceptions out of 8191
+ 24i,5n,21p,217b,190s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+Output written on diagram.dvi (2 pages, 1332 bytes).

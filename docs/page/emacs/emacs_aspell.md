@@ -59,6 +59,11 @@ flyspellはエンジンとしてaspellを利用してemacsで誤った単語を�
 
 flyspellはispellと違って文書を書いている時にリアルタイムでハイライトしてくれるので私のような適当な人間にはありがたい．
 
+## aspellに辞書を追加
+
+<!--
+https://stakizawa.hatenablog.com/entry/20080122/t1
+-->
 
 
 [^1]: https://texwiki.texjp.org/?Aspell

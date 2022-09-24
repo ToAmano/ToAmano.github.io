@@ -1,0 +1,322 @@
+\documentclass[a4j]{jarticle}
+\title{微分方程式}
+\usepackage{amsmath}	% required for `\align*' (yatex added)
+\begin{document}
+\maketitle
+
+\section{フーリエ変換}
+複素数型，実数型のフーリエ変換を使いこなせるようにならなければいけない！
+
+1次の関数をフーリエ級数展開せよ
+(1)
+\begin{align*}\\
+    f(x)=1(0<x<\pi)\\
+    f(x)=-1(-\pi <x<0)
+\end{align*}
+
+(2)$f(x)=|x|$ただし$-\pi<x<\pi$\\
+
+(3)$f(x)=x$ただし$-\pi<x<\pi$\\
+
+(4)$f(x)=x$ただし$0<x<2\pi$\\
+
+(5)$f(x)=|\sin x|$ただし$-\pi<x<\pi$\\
+
+(6)$f(x)=\sin x(0<x<\pi)$，$f(x)=0 (\pi <x<2\pi)$\\
+
+(7)$f(x)=\cos x(0<x<\pi)$，$f(x)=-\cos x(-\pi <x<0)$\\
+
+(8)$f(x)=x^2 -\pi<x<\pi$\\
+
+(9)$f(x)=x(\pi -x) 0<x<\pi$\\
+
+(10)$f(x)=x(\pi -x)(\pi +x)$\\
+
+
+2，フーリエ積分（実数）\\
+フーリエ積分の実数型
+\begin{align*}
+ f(x)=\frac{1}{\pi}\int_{0}^{\infty}d\lambda\int_{-\infty}^{\infty}d\xi f(\xi)\cos\lambda (x-\xi)
+\end{align*}
+を用いて，以下の問いに答えよ．
+
+3，フーリエ積分（複素数）\\
+
+
+
+ \section{微分方程式の行列解法}
+1次の線形微分方程式を解け
+
+
+\section{重ね合わせの原理}
+\subsection{フーリエ展開で溶ける基本的な問題}
+1，$3$種の基本方程式の基本解\\
+基本的にこの章では，ラプラス方程式，波動方程式，熱伝導方程式
+\begin{align*}
+ &\Delta u=0 &u_{tt}=c^2\Delta u \\
+ &u_{t}=\kappa^2\Delta u&
+\end{align*}
+を扱う．特に二次元ラプラス方程式，一次元波動熱伝導方程式の基本解を変数分離で求めよ．\\
+
+
+2，一次元波動方程式の初期値問題\\
+次の初期条件を満たす一次元波動方程式を解け．
+\begin{align*}
+ \frac{\partial^2u}{\partial t^2}=c^2 \frac{\partial^2u}{\partial x^2}\\
+ u(x,0)=\phi(x)\\
+ \frac{\partial u}{\partial t}(x,0)=\psi(x)
+\end{align*}
+方針：初期条件の関数のフーリエ変換
+\begin{align*}
+f(x)=\frac{1}{\pi}\int_{0}^{\infty}d\mu \int_{-\infty}^{\infty}d\xi f(\xi)\cos\mu (x-\xi) 
+\end{align*}
+にうまく合うように
+\begin{align*}
+ u(x,t)=\int_{0}^{\infty}d\mu \int_{-\infty}^{\infty}d\xi \left(A\cos \mu ct+B\sin \mu ct\right)\cos\mu (x-\xi) 
+\end{align*}
+とおく．もし，フーリエ変換を$\cos$と$\sin$の和の形に書いて
+\begin{align*}
+ f(x)=\int_{0}^{\infty}d\mu\left(P(\mu)\cos \mu x+Q(\mu)\sin \mu x\right)\\
+ P(\mu)=\int_{-\infty}^{\infty}d\xi f(\xi)\cos \mu\xi \\
+ Q(\mu)=\int_{-\infty}^{\infty}d\xi f(\xi)\sin \mu\xi
+\end{align*}
+としたならば，これに合わせて
+\begin{align*}
+ u(x,t)=\int_{0}^{\infty}d\mu \left(A\cos \mu ct+B\sin \mu ct\right)\left(C\cos \mu x+D\sin \mu x\right) 
+\end{align*}
+と置けばよろしい．係数が決定したならば，それからダランベールの解を導かなければならない
+．
+
+
+
+3，$n$次元熱伝導方程式の初期値問題\\
+次の初期条件を満たす$n$次元熱伝導方程式を解け
+\begin{align*}
+ \frac{\partial u}{\partial t}=\kappa^2\Delta u\\
+ u(x,0)=\phi (x)
+\end{align*}
+直角座標を使う限り，これ以上式は簡単にならない．そこで極座標を使って得られた答えを簡単に書き直せ．\\
+
+
+
+
+4，$n$次元波動方程式の初期値問題\\
+次の条件を満たす$n$次元波動方程式$u_{tt}=c^2\Delta u$を解け．
+\begin{align*}
+ u(x,0)=0\\
+ \frac{\partial u}{\partial t}(x,0)=\psi (x)
+\end{align*}
+
+
+4，$2$次元ラプラス方程式の境界値問題\\
+次の条件を満たす二次元ラプラス方程式$\Delta u_2=0$を解け．（$0<x<\infty$，$0<y<\infty$）
+\begin{align*}
+ u(0,y)=0\\
+ u(x,0)=\psi (x)
+\end{align*}
+補足しておけば，二次元ラプラス方程式の特解$e^{-\mu y}\cos \left\{\mu (x-\xi)\}\right\}$から，$y>0$に対して重ね合わせによる新たな解
+\begin{align*}
+ u=\int_{0}^{\infty}e^{-\mu y}\cos\left\{\mu (x-\xi)\right\}f(\mu)d\mu
+\end{align*}
+が得られる．$f=1$に対しては積分が実行できて
+\begin{align*}
+u=\frac{y}{y^2+(x-\xi)^2}
+\end{align*}
+となる．
+
+より一般の初期条件
+\begin{align*}
+ &u(0,y)=\phi (y)&u(x,0)=\psi (x)
+\end{align*}
+に対する解は以下の二つの初期条件を満たす解$u_1$と$u_2$の重ね合わせによって表される．
+\begin{align*}
+ &u_1(0,y)=\phi (y)&u_1(x,0)=0 \\
+  &u_2(0,y)=0&u_2(x,0)=\psi (x)
+\end{align*}
+
+
+5，$2$次元ラプラス方程式のディリクレ問題\\
+前問との違いは，境界条件が無限か有限かという違いである．二次元ラプラス方程式$\Delta u=0$（$0<x<a$，$0<y<b$）の以下の境界条件解を求めよ．
+\begin{align*}
+ &u(0,y)=u(a,y)=u(x,b)=0&u(x,0)=\phi (x)
+\end{align*}
+方針：有界領域内についての話だから，解が級数和の形で書けるはず．このパターンの解法は明確である．境界条件を満たすような基本解$u$（一般には離散化されたパラメータによって表される．）の重ね合わせとして解を構成すれば良い．
+
+
+
+
+6，$2$次元極座標ラプラス方程式\\
+\begin{align*}
+ \frac{\partial^2 u}{\partial r^2}+\frac{1}{r}\frac{\partial u}{\partial r}+\frac{1}{r^2}\frac{\partial^2 u}{\partial \phi^2}=0 
+\end{align*}
+の以下の境界条件解を求めよ．
+\begin{align*}
+ u(a,\phi)=f(\phi)
+\end{align*}
+
+3積分法，次元降下法
+
+
+\subsection{stokesの方法}
+境界地を指定する任意関数を微分方程式の非斉次の項に現れる形にしてこれを積分し，展開定理を用いずに任意関数を回のうちに導入する方法である．
+
+1，偏微分方程式
+ \begin{align*}
+  p_0(x)u_{xx}+p_1(x)u_x+r(x)u=q_0(x)u_{yy}
+ \end{align*}
+ を考える．ただし$0<x<a$，$0<y<b$とする．境界条件を
+ \begin{align*}
+  u(x,0)=\phi (x)\\
+  u(x,b)=\psi (x)
+ \end{align*}
+ とする．これらをフーリエ級数で書く．偏微分方程式の$y$についての変数分離解は三角関数だから，$\sin$級数にかけたとしよう．（$u$に掛かる係数を消さないため．）
+ \begin{align*}
+  &u(x,y)=\sum_{1}^{\infty}A_n(x)\sin\frac{n\pi y}{b}&A_n(x)=\frac{1}{b}\int_{-b}^{b}u(x,\xi)\sin\frac{n\pi\xi}{b}d\xi
+ \end{align*}
+ 同様に，方程式に現れる全ての微分係数を$\sin$級数に点kぁ位して次のように書く．
+\begin{align*}
+ &u_{xx}=\sum_{n=1}^{\infty}E_n(x)\sin\frac{n\pi y}{b}&E_n(x)=\frac{1}{b}\int_{-b}^{b}u_{xx}(x,\xi)\sin\frac{n\pi\xi}{b}d\xi\\
+ &u_{yy}=\sum_{n=1}^{\infty}F_n(x)\sin\frac{n\pi y}{b}&F_n(x)=\frac{1}{b}\int_{-b}^{b}u_{\xi \xi} (x,\xi)\sin\frac{n\pi\xi}{b}d\xi\\
+  &u_{x}=\sum_{n=1}^{\infty}G_n(x)\sin\frac{n\pi y}{b}&G_n(x)=\frac{1}{b}\int_{-b}^{b}u_{x}(x,\xi)\sin\frac{n\pi\xi}{b}d\xi
+\end{align*}
+これから，各関数の間には
+\begin{align*}
+ E_n(x)=A_n''(x)\\
+ G_n(x)=A_n'(x)
+\end{align*}
+が成立する．$sin$の係数について
+\begin{align*}
+ p_0(x)A_n''(x)+p_1(x)A_n'(x)+r(x)A_n(x)=q_0(x)F_n(x)
+\end{align*}
+の関係が成り立つ．ところで，$F$を変形すると
+\begin{align*}
+ F_n(x)&=\frac{2}{b}\int_{0}^{b}u_{\xi \xi} (x,\xi)\sin\frac{n\pi\xi}{b}d\xi\\
+ &=\frac{2}{b}\left\{\left[u_{\xi}(x,\xi)\sin\frac{n\pi\xi}{b}\right]_{0}^{b}-\frac{n\pi}{b}\int_{0}^{b}u_{\xi}(x,\xi)\cos\frac{n\pi\xi}{b}d\xi\right\} \\
+ &=-\frac{2n\pi}{b^2}\left[u(x,\xi)\cos\frac{n\pi\xi}{b}\right]_{0}^b-\left(\frac{n\pi}{b}
+ \right)^2\frac{2}{b}\int_{0}^{b}u(x,\xi)\sin\frac{n\pi\xi}{b}d\xi
+\end{align*}
+ここで，境界条件から
+\begin{align*}
+ F_n(x)=\frac{2n\pi}{b^2}\left\{\phi(x)-(-1)^n\psi(x)\right\}-\left(\frac{n\pi}{b}\right)^2A_n(x)
+\end{align*}
+となる．これを代入して
+\begin{align*}
+ p_0A_n''+p_1A_n'+\left\{r+\left(\frac{n\pi}{b}\right)^2q_0\right\}A_n=\frac{2n\pi}{b^2}q_0\left\{\phi -(-1)^n\psi\right\}
+\end{align*}
+よってこれを$A$について積分して解が求まる．\\
+
+1，二次元ポテンシャルのディリクレ問題\\
+二次元ラプラス方程式$\Delta u=0$の境界条件
+\begin{align*}
+ u(x,b)=u(0,y)=u(a,y)=0\\
+ u(x,0)=\phi (x)
+\end{align*}
+
+2一次元波動方程式$u_{tt}=c^2u_{xx}$の境界条件
+\begin{align*}
+ u(a,t)=0，u(0,t)=f(t)，u(x,0)=u_t(x,0)=0
+\end{align*}
+
+3一次元熱伝導方程式$u_t=\kappa^2u_{xx}$の境界条件
+\begin{align*}
+ u(a,t)=0，u(0,t)=f(t)，u(x,0)=0
+\end{align*}
+
+4
+
+
+
+
+\subsection{duhamelの方法}
+これは境界条件が時間に依存しない同種の偏微分方程式の境界地問題に帰着させる方法．
+
+1，一次元に無限に長く伸びている弾性を持つ物質（例えば長い網）を考え，$t=\tau$まで生死を続けていたものを，その上の一定$x=\xi$を持って，$t>\tau$以降勝手に動かしたらどうなるだろうか．
+
+ここでは簡単のため$\tau=0$，$\xi=0$とし，$t=0$でいきなり単位の力を与えてそのままに保ったらどうなるかを考える．数学的には
+\begin{align*}
+ u_{tt}=c^2u_{xx}
+\end{align*}
+の境界地問題
+\begin{align*}
+ u(x,0)=u_t(x,0)=0\\
+ u(0,t)=1(t>0)
+\end{align*}
+をとけばよい．この解から，一般に時刻$\tau$での$x=0$の変位が$f(\tau)$で与えられる場合の解を求めよ．
+\\
+
+
+
+2前門と同じことを熱伝導方程式で考察する．すなわち
+\begin{align*}
+ u_t=\kappa^2u_{xx}
+\end{align*}
+の境界条件
+\begin{align*}
+ u(x,0)=0\\
+ u(0,t)=1(t>0)
+\end{align*}
+での解を求めよ．さらにこの解から，一般に$x=0$における境界地が時間とともに$f(t)$なる関係で変化する場合の解を求めよ．\\
+
+
+3一次波動方程式$u_{tt}=c^2u_{xx}$の境界条件
+\begin{align*}
+ u(x,0)=u_t(x,0)=0\\
+ u(0,t)=f(t),u(a,t)=0 t>0
+\end{align*}
+
+4一次元熱伝導方程式$u_t=\kappa^2u_{xx}$の境界条件
+\begin{align*}
+ u(x,0)=0\\
+ u(0,t)=f(t)\\
+ u(a,t)=0
+\end{align*}
+
+
+
+\subsection{sturm-liouville型固有値問題}
+微分方程式
+\begin{align*}
+ L[v]+\lambda\rho v =\frac{d}{dx}\left(p\frac{dv}{dx}\right)-qv+\lambda\rho v=0
+\end{align*}
+を考える．ただし$p(x)$，$\rho(x)$はともに正とする．
+
+
+\subsection{斉次非斉次問題}
+一般に非斉次方程式の斉次境界条件問題は，斉次方程式の非斉次境界条件問題と関係している．
+
+
+強制振動の問題\\
+強制振動の運動方程式
+\begin{align*}
+ \rho\frac{\partial^2 u}{\partial t^2}-\frac{\partial}{\partial x}\left(p\frac{\partial u}{\partial x}\right)=F(x,t)
+\end{align*}
+について考察する．\\
+(1)$F$が周期的に$F(x,t)=\phi (x)e^{i\omega t}$の場合，$u=v(x)e^{i\omega t}$とおくとstrum型に帰着する．\\
+(i)一様な棒または弦の強制振動で，初期，境界条件が
+\begin{align*}
+& u(0,t)=u(a,t)=0&u(x,0)=\frac{\partial u}{\partial t}(x,0)=0
+\end{align*}
+で与えられ，さらに$\phi$が$\rho$に比例して$\phi (x,t)=\rho (x)f(x,t)$とかけるときの解を求めよ．\\
+(ii)棒が無限に延長されている時．\\
+
+
+
+\section{特有帯論}
+
+
+
+\section{Green関数}
+
+1，水平に貼られた一様な弦の重荷による平衡（微小変形）
+\begin{align*}
+ \frac{d^2v}{dx^2}=-f(x)
+\end{align*}
+について，境界条件
+\begin{align*}
+ v(0)=v(1)=0
+\end{align*}
+を満たすものを求めよ．\\
+
+
+
+\end{document}

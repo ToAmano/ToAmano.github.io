@@ -1,0 +1,32 @@
+\documentclass[a4j]{jarticle}
+\title{latexmkのテスト}
+
+
+\begin{document}
+
+
+テストテスト
+
+latexmkでは，自分の.latexmkrcの設定に従ってtexファイルの依存関係を処理してくれるありがたいコマンドである．
+
+https://qiita.com/ymfj/items/088fa556c94fc9ab460f
+
+懸案だったbibtexは\cite{Devreese_2009}みたいな感じでやればオッケー
+
+ちなみに，
+\begin{table}[htb]
+ \begin{tabular}{|c|c|c|}
+  欧文用 &和文用	&特徴　\\
+plain&	jplain&	参考文献をアルファベット順で出力する\\
+unsrt&	junsrt&	参考文献を引用された順で出力する 
+ \end{tabular}
+\end{table}
+らしいので，junsrtを用いるのが正しそうだ．
+
+
+%bibliographyは本文中に書かないとダメ
+%そして，書いた場所に書かれるので，要は文末ですね．．．
+\bibliography{reference}                                                                                 
+\bibliographystyle{junsrt}                                                                               
+
+\end{document}

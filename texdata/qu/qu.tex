@@ -1,0 +1,542 @@
+\documentclass[a4j]{jarticle}
+\title{量子力学問題}
+\author{天野智仁}
+\usepackage{amsmath}	% required for `\align*' (yatex added)
+\usepackage{bm}	% required for `\bm' (yatex added)
+\usepackage{braket}
+\begin{document}
+
+
+\section{数学}
+1ベクトル解析の種々の公式
+(1)反対称テンソル$\epsilon$，クロネッカーデルタ$\delta$に対し
+\begin{align*}
+ \epsilon_{kij}\epsilon_{klm}=\delta_{il}\delta_{jm}-\delta_{im}\delta_{jl}
+\end{align*}
+が成立する．\\
+
+(2)定ベクトル$\bm{A}$にたいし
+\begin{align*}
+ \frac{\partial}{\partial\bm{r}}(\bm{A}\cdot\bm{r})=\bm{A}
+\end{align*}
+さらに，$\bm{E}(\bm{r},t)$にたいし
+\begin{align*}
+ \frac{d\bm{E}}{dt}=\frac{\partial\bm{E}}{\partial t}+(\bm{\dot{r}}\cdot\nabla)\bm{E}
+\end{align*}
+である．
+意識して使えるようになること．
+
+(2)$\bm{A}\times\bm{B}=\epsilon_{ijk}A_iB_j\bm{e}_k$\\
+(3)$\bm{A}\times\bm{B}\times\bm{C}=(\bm{A}\cdot\bm{C})\bm{B}-(\bm{A}\cdot\bm{B})\bm{C}$であり，特に
+\begin{align*}
+ \nabla\times\nabla\times\bm{A}=\nabla(\nabla\cdot\bm{A})-\Delta\bm{A}
+\end{align*}
+(4)ナブラ演算子を二回使うと$0$になる例として
+\begin{align*}
+ &\nabla\times(\nabla\Phi) =0& \nabla\cdot(\nabla\times\bm{A})=0
+\end{align*}
+(5)二つのベクトル$\bm{A}$，$\bm{B}$の外積$\bm{A}\times\bm{B}$に$\nabla$を作用させると
+\begin{align*}
+ \nabla\cdot(\bm{A}\times\bm{B})=\bm{B}\cdot(\nabla\times\bm{A})-\bm{A}\cdot(\nabla\times\bm{B}) \\
+ \nabla\times(\bm{A}\times\bm{B}) 
+\end{align*}
+(6)二つのベクトル$\bm{A}$，$\bm{B}$の内積$\bm{A}\cdot\bm{B}$に$\nabla$を作用させると
+\begin{align*}
+ \nabla(\bm{A}\cdot\bm{B})=(\bm{A}\cdot\nabla)\bm{B}+(\bm{B}\cdot\nabla)\bm{A}
+ +\bm{B}\times(\nabla\times\bm{A})+\bm{A}\times(\nabla\times\bm{B})
+\end{align*}
+(7)スカラー$\Phi$，ベクトル$\bm{E}$の積$\Phi\bm{E}$に$\nabla$を作用させると
+\begin{align*}
+&\nabla\cdot(\Phi\bm{E})=\Phi\nabla\cdot\bm{E}+\bm{E}\cdot\nabla\Phi 
+&\nabla\times(\Phi\bm{E})=-\bm{E}\times(\nabla\phi)+\phi(\nabla\times\bm{E}) 
+\end{align*}
+
+(7)
+
+ \section{解析力学}
+
+1ベルトランの定理\\
+平面内における中心力のもとでの，有界な質点運動を考える．質点のあらゆる初期条件に対する軌道が閉じるためには，中心力ポテンシャルが
+\begin{align*}
+ U(r)=ar^2\\
+ U(r)=\frac{-k}{r}
+\end{align*}
+のいずれかの形でなければならない．
+
+
+
+
+2様々な運動のラグランジアン\\
+ラグランジアンが与えられていないものについてはラグランジアンを求め，運動方程式を導け．（ハミルトン形式についても同様に調べよ．）\\
+(1)ベクトルポテンシャル$\bm{A}$，静電ポテンシャル$\phi$の中での荷電粒子のラグランジアンは
+\begin{align*}
+ L=\frac{m}{2}\bm{\dot{r}}^2+e\bm{A}\cdot\bm{\dot{r}}-e\Phi
+\end{align*}
+である．従って，ハミルトニアンは
+\begin{align*}
+ H=\frac{1}{2}\sum(p_i-eA_i)^2
+\end{align*}
+\\
+(2)特に，$B$が時間にも場所にも寄らず一定であるならば
+\begin{align*}
+ A=\frac{1}{2}\bm{B}\times\bm{r}
+\end{align*}
+と求まるので，$\bm{B}=(0,0,B))$ならラグランジアンは
+\begin{align*}
+ L=\frac{1}{2}m\bm{\dot{r}}^2+e
+\end{align*}
+となる．
+\\
+
+(2)極座標ラグランジアン\\
+(3)円筒座標ラグランジアン\\
+(4)回転座標ラグランジアン\\
+(5)減衰振動のラグランジアンは
+\begin{align*}
+ L=e^{at}\left\{\frac{1}{2}m\bm{\dot{x}}^2-\frac{1}{2}kx^2\right\}
+\end{align*}
+で与えられる．
+
+
+
+
+3　バネで繋がれた質点系
+質量$m_a$の質点$1$，$3$と，質量$m_b$の質点$2$が$1$から$3$の順にバネ定数$k$，自然長$l$のバネでつなぐ．質点$i$の基準位置からのズレを$x_i$で表す．重心運動と相対運動に分離してラグランジアンを表し，重心が静止している時の運動を解析せよ．\\
+
+4
+二次元中心力ポテンシャル$U(r)=m\omega^2r^2/2$の元での質量$m$，電荷$e$の荷電粒子に，$z$方向の一定の磁束密度$\bm{B}$を加えた．
+(1)ラグランジアンから運動方程式を求めよ．
+(2)運動方程式を解け．\\
+
+(1)ラグランジアンは
+\begin{align*}
+ L=\frac{1}{2}m\bm{v}^2+\frac{eB}{2}(xy'-x'y)-\frac{m\omega^2}{2}r^2
+\end{align*}
+で運動方程式は
+\begin{align*}
+ mx''+m\omega^2x-eBy'=0\\
+ my''+m\omega^2y+eBx'=0\\
+ mz''+m\omega^2z=0
+\end{align*}
+となる．$z$は簡単に解けるから良いが$x$，$y$は混ざりあっているので$p=x+iy$とおくと解ける．
+ \begin{align*}
+  mp''+ieBp'+m\omega^2p=0
+ \end{align*}
+ であるから，$p=Me^{ilt}$と置いて代入すれば
+ \begin{align*}
+  ml^2+eBl-m\omega^2=0
+ \end{align*}
+から$l$が二つ求まり，その線形結合で解が書ける．\\
+
+ 
+
+
+6
+平面内に置いて$3$個の質点$m_i$（$i=1,2,3$）が万有引力により引き合っている．\\．
+
+7モノポール\\
+モノポール（磁気単極子）を原点に固定しておくと，その周りの磁束密度は
+\begin{align*}
+ \bm{B}=g\frac{\bm{r}}{r^3}
+\end{align*}
+で与えられる．この影響下で電荷$q$を持つ質量$m$の粒子の運動について調べる．\\
+
+8角運動量ベクトル\\
+(1)極座標での角運動量ベクトルと，その時間微分を計算せよ．\\
+
+
+
+9ネーターの定理\\
+(1)ラグランジアンが$x$軸周りの回転及び$y$軸周りの回転に対して普遍である時，角運動量の$x$，$y$成分が保存料であることを示せ．\\
+
+10束縛運動のラグラジアン\\
+以下のラグランジアンを求め，運動方程式を導け\\
+(1)球面振り子\\
+(2)二重振り子\\
+
+(2)富豪の取り方にもよるが
+\begin{align*}
+ Ml_1^2\theta_1''+2l_1l_2m_2\theta_2''\cos (\theta_1-\theta_2)+2m_2l_1l_2\theta_2^2\sin (\theta_1-\theta_2)=-Mgl_1\sin\theta_1 \\
+  m_2l_1^2\theta_2''+2l_1l_2m_2\theta_1''\cos (\theta_1-\theta_2)-2m_2l_1l_2\theta_1^2\sin (\theta_1-\theta_2)=-m_2gl_2\sin\theta_2 \\
+\end{align*}
+
+
+11 回転座標系の運動
+(1)地表面から高さ$h$の位置から質点を落下させる時のコリオリの力の効果を調べよ．
+(2)地球表面場での球面振り子のラグランジアンを求め，その微小振動を調べよ．\\
+
+12基準振動
+二重振り子の微小振動を考える．簡単のため，$m_1=m_2=m$，$l_1=l_2=l$として考える．10で導いた運動方程式を使って考えよ．
+(1)固有振動数を求めよ．
+(2)各固有振動数に対し，固有方程式の解を求め，その企画課条件及び直交性について調べよ．
+(3)解を基準振動で表せ．\\
+
+
+13
+質量$m$，長さ$l$の振り子を二個吊るして，その間を質量の無視できるバネでつなぐ．平衡の位置では振り子は水平に静止している．右側の質点を静止位置に置き，左側の質点を振り子を含む円直面内で初速度を与える．バネの力が弱いとして，この系の微小振動を調べよ．\\
+
+14
+一定の角速度$\omega$で鉛直な直系の周りに回転す円周上（半径$a$）に束縛された質点の運動を考える．\\
+(1)ラグランジアンを求めよ．\\
+(2)質点の平衡位置を求めよ．ただし$g\not=a\omega^2$とする．\\
+(3)(2)における安定な平衡位置の周りの微小振動を調べよ．\\
+
+15
+細い一様な棒（質量$M$，長さ$L$）の一端に長さ$l$の紐をつけて一点から吊るす．この微小振動の固有振動数を求めよ．
+
+
+ハミルトン形式
+1，長さ$l$の単振り子において鉛直線と紐のなす角$\theta$とする．微小振動の場合の正準方程式を解き，全エネルギーを$E$として，運動エネルギー$K$とポテンシャルエネルギー$U$の一周期$T$における平均値
+\begin{align*}
+ K=\frac{1}{T}\int_{0}^{t}Kdt\\
+ U=\frac{1}{T}\int_{0}^{T}Udt
+\end{align*}
+を求めよ．
+
+2ハミルトニアンが
+\begin{align*}
+ H=\frac{1}{2m}p^2+\frac{1}{2}m\omega^2q^2
+\end{align*}
+で与えられる調和振動子に対し，以下の母関数によって与えられる清純変換を求めよ．
+(1)$W=m\omega qQ$ (2)$m^2\omega^2q^2/(2\tan (Q/m))$
+
+
+2一次元ポテンシャる$U(x)$下の質点運動についてのハミルトンヤコビ方程式を解け．
+
+
+
+\section{場の解析力学}
+1　変分原理$\delta I=0$から，オイラーラグランジュ方程式を導け．（ラグランジアン$L$，ラグランジアン密度$\mathcal{L}$を用いた式をそれぞれ出すこと．）
+
+
+
+
+
+
+
+
+
+\section{初等量子論}
+
+
+\section{一次元粒子}
+1，一次元粒子の波動方程式
+\begin{align*}
+ \left(-\frac{e\hbar^2}{2m}\frac{d^2}{dx^2}+V(x)\right)\phi (x)=E\phi (x)
+\end{align*}
+の解について以下を示せ．\\
+（1）エネルギー準位は縮退していない．\\
+（2）ポテンシャルが偶関数なら，波動関数は偶関数あるいは奇関数である．それぞれ，正のパリティ，負のパリティという．\\
+
+2，誘拐なポテンシャル$V(x)$に$x=x_0$で有限のトビがあるとき，波動関数$\phi$とその一階微分$\phi'$はともに$x=x_0$で連続である．一方ポテンシャルに無限の飛びがあるとき，$\phi'$は不連続である．これを示せ．\\
+
+
+
+\subsection{一次元粒子の}
+1，非対称なポテンシャル\\
+非対称ポテンシャル
+\begin{align*}
+ V(x)=
+\end{align*}
+を考える．$V_0>0$の値によっては一つも束縛状態が存在しない場合がある．その条件を求めよ．\\
+
+2，電場磁場中の荷電粒子\\
+$y$軸正方向へ一様な電場$E$と，$z$軸正方向へ一様な磁場$B$が加えられた空間内を質量$m$，電荷$q$を持つ荷電粒子が運動する場合を考える．${\bm A}$，$\phi$を
+\begin{align*}
+ &A_x=-By&A_y=A_z=0\\
+ &\phi =-Ey&
+\end{align*}
+として．エネルギー準位を求めよ．\\
+方針：
+
+3，
+
+\subsection{一次元粒子の反射}
+
+
+\section{調和振動子}
+
+1，消滅生成演算子\\
+一次元調和振動子のハミルトニアンに対し，\\
+（1）消滅生成演算子及び個数演算子を定義せよ\\
+（2）交換関係$[a,a^\dagger]=1$，$[N,a]=-a$，$[N,a^\dagger]=a\dagger$を示せ．\\
+（3）$N$の固有状態$N\ket{n}=n\ket{n}$にたいし，$N(a\ket{n})$，$N(a^\dagger\ket{n})$を計算せよ．\\
+（4）$N$の固有値は$n=0,1,\dots $と非負整数を取ることを示せ．\\
+（5）$a\ket{n}=\sqrt{n}\ket{n-1}$及び$a^\dagger\ket{n-1}=\sqrt{n+1}\ket{n+1}$を示せ．ここから，任意の状態が$\ket{n}=(a^\dagger)^n\ket{0}/\sqrt{n!}$とかけることがわかる．これを用いて正規直交性$\braket{n|m}=\delta_{nm}$を示せ．\\
+（6）ハミルトニアン$H$，$x$，$p$を$a$，$a^\dagger$，$N$で表せ．\\
+（7）変数変換
+\begin{align*}
+ \xi =\sqrt{\frac{m\omega}{\hbar}}x
+\end{align*}
+を用いて基底状態の波動関数$\phi_0(x)$を求めよ．\\
+（8）（7）から，任意の状態の波動関数を求めよ．\\
+（9）
+
+2，Hermite多項式\\
+
+（4）Hermite多項式の規格直交条件
+\begin{align*}
+ \int_{-\infty}^{\infty}d\xi H_n(\xi)H_m(\xi)e^{-\xi^2}=\delta_{nm}2^nn1\sqrt{\pi}
+\end{align*}
+を，母関数$S=e^{-s^2+2\xi s}$の積分
+\begin{align*}
+ f(s,t)=\int_{-\infty}^{\infty}d\xi S(\xi,t)S(\xi,s)e^{-\xi^2}
+\end{align*}
+を用いて示せ．\\
+
+方針：（4）fを実際に計算し，$f_{s^n}(0,t)$などを作ってみればわかりやすい．
+
+
+以下の問題には，Hermite多項式及び演算子法の両方からのアプローチを実際にやってみると教育的であろう．
+
+3，\\
+一次元調和振動子について\\
+（1）運動エネルギーの基底状態での期待値を求めよ．\\
+（2）ポテンシャルエネルギーの基底状態での期待値を求め，調和振動子の全エネルギーが
+\begin{align*}
+ E_n=\left(n+\frac{1}{2}\right)\hbar\omega
+\end{align*}
+になることを示せ．\\
+（3）質量$m$の調和振動子に，$x$方向へ一様な重力$mg$が作用するとき，エネルギー固有値と波動関数はどのように変化するか求めよ．\\
+
+方針：(1)$\hbar\omega /4$，（2）$\hbar\omega /4$となり，（1）との和は確かに$E_0$になっている．（3）平方完成すれば宜しく，エネルギー固有値は$E'_n=E_n+mg^2/(2\omega^2)$，波動関数は$\phi'_n(x)=\phi_n(x-g/\omega^2)$と変化する．\\
+
+4，不確定性原理\\
+一次元調和振動子の$\ket{n}$で，位置の不確かさ$\Delta x$，運動量の不確かさ$\Delta p$として，$\Delta x\Delta p$を計算せよ．
+
+
+
+\section{球対称ポテンシャル内の粒子}
+\subsection{ラゲールのばい多項式}
+
+1，
+
+
+\subsection{水素様原子}
+1，基底状態のエネルギー\\
+（1）ヘリウムイオンHe$^+$，リチウムイオンLi$^{2+}$の基底状態のエネルギーを求めよ．ただし．水素原子の基底状態のエネルギーは$E=-13.6$eVである．\\
+（2）ミューオニウム（陽子と$\mu^-$粒子の束縛状態）の基底状態のエネルギーを求めよ．ただし．電子の質量を$m_e$として，陽子の質量は$m_p=1840m_e$，$\mu^-$の質量は$m_\mu=207m_e$である．\\
+方針：（1）電荷$Ze$の水素様原子のエネルギーは
+\begin{align*}
+ E_n=-\frac{Z^2e^2}{8\pi \epsilon_0r_0}\frac{1}{n^2}
+\end{align*}
+であるから，これに$Z=2$，$Z=3$を代入すれば，それぞれ$-54.4$，$-122.4$eVとなる．\\
+（2）今度は電子質量の部分を変更すれば良い．換算質量は
+\begin{align*}
+ m'=\frac{m_pm_\mu}{m_p+m_\mu}=186m_e
+\end{align*}
+だから，これで置き換えて
+\begin{align*}
+ r=\frac{4\pi\epsilon_0\hbar^2}{m'e^2}=\frac{m_e}{m'}r_0\\
+ E=-\frac{e^2}{8\pi\epsilon_0r}=\frac{m'}{m_e}E_0=-2.53keV
+\end{align*}
+を得る．\\
+
+2，水素原子の2p状態\\
+水素原子の2p状態の波動関数は
+\begin{align*}
+ \psi_{21m}(r,\theta,\phi)=R_{21}(r)Y_l^m(\theta,\phi)
+\end{align*}
+とかける．ただし$m=-1,0,1$である．\\
+（1）$R_{21}(r)$及び$Y_1^m(\theta,\phi)$を求めよ．\\
+（2）複素関数である$\psi_{21m}(r,\theta,\phi)$の適当な線形結合で，$i=x,y,z$に対して実関数
+\begin{align*}
+ \phi_{2p_i}=if(r)
+\end{align*}
+を求め，これらが互いに直交することを示せ．\\
+（3）波動関数$\psi_{2p_i}$の空間的な広がりを定性的に説明せよ．\\
+（4）2p状態の波動関数による$3$つの期待値$\braket{r^2}$，$\braket{r}$，$\braket{r^{-1}}$を，ボーア半径$r_0$を用いて表せ．\\
+（5）2p状態の水素原子は三重に縮退しているが，$A>0$に対し電場ポテンシャル
+\begin{align*}
+ V=A(3z^2-r^2)
+\end{align*}
+中に置かれると縮退が解ける．摂動論によりその一次のエネルギー準位を求めよ．\\
+
+方針：（1）求める関数はそれぞれ，定義式に戻って計算すれば
+\begin{align*}
+ R_{21}&=\frac{1}{2\sqrt{6}}\left(\frac{1}{r_0}\right)^{3/2}\left(\frac{r}{r_0}\right)
+ \exp\left[\frac{-r}{2r_0}\right]\\
+ Y_1^0&=\sqrt{\frac{3}{4\pi}}\cos\theta \\
+ Y_1^{\pm 1}&=\mp \sqrt{\frac{3}{8\pi}}\sin\theta e^{\pm i\phi}
+\end{align*}
+（2）$x$などを極座標表示して，うまく係数が合うように調整すれば，
+\begin{align*}
+ f(r)\parallel R_{21}/r=\exp\left[\frac{-r}{2r_0}\right]
+\end{align*}
+とかける．この時，直交性は実際に計算すると$\phi$の積分が$0$になることから確認できる．\\
+（3）実数値関数は等値線を描くことができるので，イメージがしやすい．\\
+（4）期待値は$\int dr|R|^2r^2g(r)$を計算すれば良い．順に$30r_0^2$，$5r_0$，$1/4r_0$となる．\\
+（5）縮退している場合の摂動の一次エネルギー補正は永年方程式
+\begin{align*}
+ \det [\braket{21m|V|21n}-EI ]=0
+\end{align*}
+の解として求丸のであった．行列要素を計算すると，対角成分は$0$になり
+\begin{align*}
+ \braket{2,1,\pm 1|V|2,1,\pm 1}=-12Ar_0^2\\
+ \braket{2,1,0 |V|2,1,0}=24Ar_0-^2
+\end{align*}
+だから．これらが永年方程式の解になる．\\
+
+
+\section{角運動量}
+1，角運動量の交換関係
+\begin{align*}
+\left[\hat{L_i},\hat{L_j}\right]=i\hbar\epsilon_{ijk}\hat{L_k}
+\end{align*}
+を用いて，以下の問いに答えよ．
+
+
+\section{摂動論}
+\subsection{時間によらない摂動（縮退なし）}
+
+1，調和振動子の摂動\\
+一次元調和振動子のハミルトニアン$\hat{H}_0=p^2/2m+m\omega^2x^2/2$に次の摂動がかかった場合のエネルギー固有値への補正を調べよ．\\
+（1）$\hat{v}=\alpha x^3$\\
+（2）$\hat{v}=\beta x^4$\\
+
+方針：生成消滅演算子を使う．\\
+（1）一次補正はなし，二次補正は
+\begin{align*}
+ -\frac{\alpha^2\hbar^2}{m^3\omega^4}\frac{15}{4}\left(n^2+n+\frac{11}{30}\right)
+\end{align*}
+（2）一次補正が
+\begin{align*}
+ \frac{\beta\hbar^2}{m^2\omega^2}\frac{3}{4}(2n^2+2n+1)
+\end{align*}
+
+2，一次元調和振動子の摂動\\
+前問と同じ調和振動子ハミルトニアンに摂動$m\epsilon \omega^2 x^2/2$がかかった場合の近似を一次まで求め，厳密解と比較せよ．\\
+
+3，二次のシュタルク効果\\
+
+
+
+\subsection{時間に依存しない摂動（縮退あり）}
+
+2，一時摂動により縮退が部分的に解ける例\\
+一次摂動により縮退が部分的に解ける簡単な例として，$4$つの状態の間に作用する無摂動ハミルトニアン$\hat{H}_0$が次のように行列で表されているとする．
+\begin{align*}
+ \hat{H}_0=
+ \begin{pmatrix}
+  0&b&0&0\\
+  b&0 &0 &0 \\
+  0&0 &b &0 \\
+  0&0 &0 &b 
+ \end{pmatrix}
+\end{align*}
+ただし$b>0$とする．この系に摂動
+\begin{align*}
+ \begin{pmatrix}
+  0&-ic&0&0\\
+  ic&0 &0 &0 \\
+  0&0 &0 &0 \\
+  0&0 &0 &a 
+ \end{pmatrix}
+\end{align*}
+ただし$c$，$a$は実数，がかかったとする．
+
+（1）$\hat{H}_0$の固有値と対応する固有ベクトルを求めよ．\\
+（2）$\hat{H}_0$の励起状態は三重に縮退している．縮退の一次の効果で縮退が一部解けるが，20縮退が残ることを確認せよ．\\
+（3）摂動の虹の効果を求めると，縮退が完全に解けることを確認せよ．\\
+（4）この場合，$\hat{H}=\hat{H}_0+\lambda \hat{v}$の固有値を厳密に求められる．厳密な固有値と摂動で得られた固有値を比較せよ．\\
+
+3，縮退している摂動\\
+二重に縮退している($d_n=2$)エネルギー準位$\epsilon_n$のみ考える．状態ベクトル
+$\ket{n,1}$，$\ket{n,2}$をそれぞれ二次元単位ベクトルで
+\begin{align*}
+ &\ket{n,1}=
+ \begin{pmatrix}
+  1\\
+  0
+ \end{pmatrix}
+ &\ket{n,2}=
+ \begin{pmatrix}
+  0\\
+  1
+ \end{pmatrix}
+\end{align*}
+と書くと，基底に取るベクトルは
+\begin{align*}
+ &\ket{\phi_{n,1}^0}=C_{n,1}=
+ \begin{pmatrix}
+  c_{n,1}^1\\
+  c_{n,1}^2
+ \end{pmatrix}
+ &\ket{\phi_{n,2}^0}=C_{n,2}=
+ \begin{pmatrix}
+  c_{n,2}^1\\
+  c_{n,2}^2
+ \end{pmatrix}
+\end{align*}
+とかける．摂動の行列要素$\braket{n,\beta |\hat{v}|n,\gamma}$が$\beta$，$\gamma$を行列とする二行えるミート行列
+\begin{align*}
+ \begin{pmatrix}
+  a&c\\
+  c^*&d 
+ \end{pmatrix}
+\end{align*}
+で与えられる時，エネルギー固有値の一次補正$E_{n,\alpha}^1$及び状態ベクトル
+$\ket{\phi _{n,\alpha}^0}=C_{n,\alpha}$を求めよ．ただし$a$，$b\in\mathrm{R}$とする．
+
+方針：永年方程式を解くだけ．答えは
+
+
+
+
+\subsection{変分法}
+1，
+
+\subsection{時間に依存する摂動}
+
+1，二準位系\\
+まず，厳密に解ける問題として，$\ket{1}$，$\ket{2}$を$H_0$の固有ケットとする二準位系を考える．ハミルトニアンと摂動が
+\begin{align*}
+ H_0=E_1\bra{1}\ket{1}+E_2\bra{2}\ket{2}\\
+ V(1)=\gamma e^{i\omega t}\bra{1}\ket{2}+\gamma e^{-i\omega t}\bra{2}\ket{1}
+\end{align*}
+で書けるとする．ただし$E_2>E_1$とする．初期条件$c_1(0)=1$，$c_2(0)=0$に対して遷移確率
+$|c_i(t)|^2$を求めよ．\\
+
+方針：
+
+
+
+
+
+\section{散乱問題}
+\subsection{ボルン近似}
+1，ボルン近似の基礎\\
+（1）$1$次のボルン近似をもとめよ．
+
+
+2，ポテンシャル$V$が旧対象の場合，散乱振幅
+\begin{align*}
+ f(\Omega)=-\frac{m}{2\pi \hbar^2}\int dV e^{-i{\bf k }\cdot {\bf r'}}V(r')e^{ikz'}
+\end{align*}
+の角度積分を実行せよ．\\
+
+3，球対称ポテンシャルによる散乱\\
+次の球対称ポテンシャルによる散乱断面積を，ボルン近似で求めよ．\\
+（1）井戸型ポテンシャル
+\begin{align*}
+ V(r)=
+\end{align*}
+
+（2）湯川型ポテンシャル
+\begin{align*}
+ V(r)=V_0\frac{a}{r}e^{-\frac{r}{a}}
+\end{align*}
+特に，$a\to\infty$の極限で
+
+\subsection{低速粒子の散乱}
+1，
+
+2，$V_0>0$とする．次のポテンシャルによる低速粒子の散乱断面積を求めよ．
+(1)井戸型ポテンシャル
+(2)ポテンシャル障壁
+
+
+
+
+
+\end{document}

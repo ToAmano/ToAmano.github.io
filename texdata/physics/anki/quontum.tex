@@ -1,0 +1,196 @@
+\documentclass[a4j]{jarticle}
+
+\title{量子力学暗記事項}
+\usepackage{amsmath}	% required for `\align*' (yatex added)
+\usepackage{braket}
+\begin{document}
+\maketitle
+
+\section{いくつかの行列の定理}
+
+\subsection{ベーカーハウスドルフの公式}
+ベーカーハウスドルフの公式は，以下の二つの式のことを表す．まず一つ目は
+\begin{align*}
+B'=e^{A}Be^{-A}=
+\end{align*}
+これは量子力学的に言えば行列$A$を変換した時に（最もよくありうるのはハミルトニアンによってシュレーディンガーからハイゼンベルグ描像に移る時）$B$がどのように変換されるかを表す公式であると捉えられる．
+
+もう一つが，行列の指数の積を表す公式
+\begin{align*}
+ e^{A}e^{B}=\exp\left(A+B+\frac{1}{2}[A,B]+\right)
+\end{align*}
+である．このように行列の指数の場合は普通の数の場合に成り立つような簡単な式
+は$A$と$B$が交換するときのみ正しく，一般にはこのように複雑な式で表されるということを覚えておかなければならない．ただしよく応用で出てくるのは$[A,B]$が$c$数になる場合であってこの場合は比較的簡単な式になる．
+
+
+\section{量子力学の原理}
+\subsection{量子系の時間発展}
+量子力学の時間発展はシュレーディンガー描像またはハイゼンベルグ描像で記述される．これらは期待値が両方の描像で等しいという要請によって，
+\begin{align*}
+ A(t)=e^{iHt/\hbar}Ae^{-iHt/\hbar}
+\end{align*}
+によって関係している．この式からわかるように両方の描像でハミルトニアンは不変である．
+ハイゼンベルグ方程式はハミルトニアンが時間に依存しない場合
+\begin{align*}
+ i\hbar\frac{dA(t)}{dt}=[A(t),H]
+\end{align*}
+で与えられる．これを密度行列に対するフォンノイマン方程式
+\begin{align*}
+  i\hbar\frac{d\rho(t)}{dt}=[H,\rho(t)]
+\end{align*}
+と間違えてはいけない．
+
+\section{一次元シュレーディンガー方程式の解}
+\subsection{井戸型ポテンシャル}
+もっとも基本的なのは幅$L$の無限井戸である．この場合は波動関数は井戸の端で$0$になる境界条件から三角関数で表され，そのエネルギー準位は
+\begin{align*}
+ E_n=\frac{\hbar^2}{2m}\left(\frac{n\pi}{2L}\right)^2
+\end{align*}
+と$n^2$に比例する．
+
+難しいのは有限深さ$V_0$を持った幅$L$の井戸である．この場合エネルギーを初等関数で表すことは不可能である．
+
+
+
+また，簡単な応用として二つの井戸が合体した井戸を考えることができる．
+
+
+\section{デルタ関数型ポテンシャル}
+デルタ関数ポテンシャル$V(x)=-V_0\delta (x)$を考えると，その境界条件の扱いはデルタ関数があることで若干違うものの，唯一の束縛状態
+\begin{align*}
+ E=\frac{-mV_0^2}{2\hbar^2}
+\end{align*}
+を持つ．
+
+
+\section{一次元の散乱理論}
+一次元の散乱問題は，境界条件を考えて波動関数を接続することによって解くことができる．複数の場合について結果を抑えておく必要がある．
+
+\subsection{散乱の一般論}
+まず，透過係数$t$および反射係数$r$を用いれば，転送行列が
+\begin{align*}
+ T=\left(
+  \begin{array}{cc}
+   1/t^*&-r^*/t^* \\
+   -r/t& 1/t\\
+  \end{array}
+ \right)
+\end{align*}
+と簡単に表せることは覚えておこう．（これは$|t|^2+|r|^2=1$)から導くことができる．
+
+\subsection{箱型ポテンシャル}
+箱型ポテンシャルではポテンシャル高さ$V_0$と入射エネルギー$E$の大小に応じて，$0<E<V_0$でトンネル効果，$V_0<E$で共鳴透過という現象が発生する．また$0<E<<V_0$および箱の長さ$L$が十分長ければ透過率は定数因子程度を無視するかなり荒い近似で
+\begin{align*}
+ T=e^{-2bL}
+\end{align*}
+と表せる．従って，任意のポテンシャル$V(x)$での透過率はこの$L$についての積分で
+\begin{align*}
+ T=T_1T_2\cdots =\exp\left(\int_{0}^{a}-2b(x)dx\right)
+\end{align*}
+と書ける．この近似をガモフ近似という．
+
+
+\subsection{デルタ関数型ポテンシャル}
+デルタ関数は，箱型ポテンシャルの幅$0$の極限として得られるから，計算が簡単な割に箱型ポテンシャルの性質をよく反映していることがあってよく用いられる．
+
+
+\section{角運動量}
+
+\subsection{軌道角運動量}
+まず軌道角運動量は$L=r\times p$で定義されその成分は簡単に座標表示できる．特に角運動量の二乗$L^2$と$L^z$をとって$\ket{l,m}$と表示する．極座標ラプラシアンが
+\begin{align*}
+ r^2\Delta =\frac{\partial}{\partial r}\left(r^2\frac{\partial}{\partial r}\right)-L^2
+\end{align*}
+となることは記憶しておくべきである．
+
+クーロンポテンシャル$V(r)=-1/r$に対してはさらにもう一つの保存量としてルンゲレンツベクトル
+\begin{align*}
+ =
+\end{align*}
+が取れて，エネルギー準位は$l$，$m$に対して縮退することになる．ちなみにそのエネルギーはボーアの原子模型と全く同じ結果を与え，
+\begin{align*}
+ E_n=
+\end{align*}
+である．
+
+\subsection{角運動量の一般論}
+角運動量の理論はリー群を勉強してその言葉で理解するのがやりやすい方法のように思う．
+
+
+\begin{align*}
+ J_+\ket{l,m}=\hbar\sqrt{l(l+1)-m(m+1)}\ket{l,m+1} \\
+ J_-\ket{l,m}=\hbar\sqrt{l(l+1)-m(m-1)}\ket{l,m-1} \\
+\end{align*}
+
+
+\subsection{パウリのスピン行列}
+
+\subsection{スピン1の行列}
+スピン$1$の行列は
+\begin{align*}
+ S_x=\frac{\hbar}{\sqrt{2}}\left(
+  \begin{array}{ccc}
+   0&1 &0 \\
+   1&0 &1 \\
+   0&1 &0 \\
+ \end{array}\right)
+ S_y=\frac{\hbar}{\sqrt{2}}\left(
+ \begin{array}{ccc}
+  0&-i &0 \\
+  i&0 &-i \\
+  0&i &0 \\
+ \end{array}\right)
+ S_z=\hbar\left(
+ \begin{array}{ccc}
+  1&0 &0 \\
+  0&0 &0 \\
+  0&0 &-1 \\
+ \end{array}\right)
+\end{align*}
+である．形がパウリ行列と良く似ており覚えやすいだろう．（上三角の部分さえ覚えておけばあとはエルミート性があることに注意しよう．）
+
+
+\section{摂動論}
+\subsection{時間に依存する摂動}
+時間に依存する摂動では，まずもって第一近似が
+\begin{align*}
+ \ket{\phi(t)}=\left(1-\frac{1}{i\hbar}\int_{0}^{t}V_i(t)\right) \ket{\phi(0)}
+\end{align*}
+で与えられることを覚えておく必要がある．ただし$V_i$は相互作用表示の演算子で$H_0$にしたがって時間発展し
+\begin{align*}
+ V_i(t)=e^{iH_0t/\hbar}V_ie^{-iH_0t/\hbar}
+\end{align*}
+で与えられる．上の公式では特にケットとして$H_0$の固有状態$n$を取ることが多い．
+
+次に有名なフェルミの黄金律について．ここでは重要な二つの公式を覚えておく必要がある．
+\begin{align*}
+ \lim_{T\to\infty}\frac{\sin^2(Tx)}{Tx^2}=\pi\delta (x)\\
+ |\int_{0}^{t}e^{iEt/\hbar}dt|^2\neq 2\pi \hbar t\delta (E)
+\end{align*}
+これを用いると周期的な摂動に対しては
+\begin{align*}
+ d\omega_{n\to m}=\frac{2\pi}{\hbar}|\braket{m|F|n}|^2
+\end{align*}
+
+
+\section{散乱の問題}
+
+\subsection{部分波展開の方法}
+部分波展開とは，散乱波を球ベッセル関数の展開で表す方法である．まず次の展開公式が基本的である．
+\begin{align*}
+ e^{ikz}=\sum_{l=0}^{\infty}i^l(2l+1)j_l(kr)P_l(\cos\theta)
+\end{align*}
+これは
+
+考える波を入射波と散乱波の重ね合わせで
+\begin{align*}
+ \phi({\bf r})=e^{ikz}+\frac{f(\theta)}{r}e^{ikr}
+\end{align*}
+と書く．$f(\theta)$をルジャンドル多項式で展開して
+\begin{align*}
+ f(\theta)=\sum_{l=0}^{\infty}i^l(2l+1)f_lP_l(\cos\theta)
+\end{align*}
+と書く．
+
+
+\end{document}

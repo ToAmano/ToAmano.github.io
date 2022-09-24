@@ -1,0 +1,49 @@
+\documentclass[a4j]{jarticle}
+\title{電子フォノンカップリングの計算}
+\author{}
+
+
+\usepackage{amsmath}	% required for `\align*' (yatex added)
+\begin{document}
+\maketitle
+電子フォノンカップリングの具体的な計算手順について述べていこう．具体的にquantum-espressoでの計算方法にfocusしていく．
+
+\section{電子フォノンカップリングの原理}
+結論から言うと，電子フォノンのカップリング定数は，エリアシュベルグ理論で出てくる，所謂$\lambda$を計算する公式，
+\begin{align}
+ \lambda =\frac{2}{N(0)}\sigma_{k,q,n,m,\nu}\frac{|g_{k,n,k+q,m}^{\nu}|^2}{\omega_\nu }\delta(\epsilon_{k,n})\delta(\epsilon_{k+q,m})\label{1}
+\end{align}
+で与えられる．ここで出てくる$g$が曲者で，これをいかに計算するかが大事なわけだが，とりあえずはあまり深いことは考えないことにしよう．
+
+この式は，かなり大胆な近似の元に導出された式である．その点については後で述べることにして，まずはこの式の理解に努めよう．
+定数$N(0)$はフェルミエネルギーでの電子の状態密度である．和はコーンシャム固有状態$(k,n)$およびphonon frequency $\omega_{\nu}$について行われる．$g$は電子格子の相互作用の強さを表している係数だと理解しておけば良い．残りのデルタ関数は電子の（フェルミエネルギーを基準にした）KSエネルギー$\epsilon_{k,n}$に関するものである．
+
+従って，直感的にはこの式は次のように理解できる．カップリング$\lambda$は，フェルミ面にある電子状態$(k,n)$と$(k+q,m)$によるelectron-phonon相互作用の強さを，$N(0)$で割って平均化したものである．
+
+カップリングにフェルミ面の電子状態しか寄与しないと言うのは，
+
+
+\section{QEでの$\lambda$の計算}
+\subsection{計算の概要}
+それではQEでの計算方法についていよいよ述べていこう．\eqref{1}からわかることは，我々は相互作用定数$g$，電子の固有エネルギー$\epsilon$，フォノンのfrequency$\omega$を知る必要があると言うことである．
+
+そして，困ったことに，フェルミエネルギー での和は収束が遅い．
+
+そこで以下のような手順をふむ．
+\begin{itemize}
+ \item 細かいkメッシュで電子状態$\epsilon$を計算（scf_fit.in)
+ \item 粗いkメッシュで
+ \item 粗いkメッシュでフォノンfrequencyの計算
+ \item qからr，rからqへのフーリエ変換
+\end{itemize}
+
+
+\subsection{細かいkメッシュでの電子エネルギー計算}
+まずは，細かいkメッシュで電子状態を計算する．この時，あとあとフォノン用に計算する粗いメッシュqとの関係で，k+qがkに含まれるようにする必要がある．つまり，k:$8\times8\times 8$とq:$5\times5\times5 $はまずい．
+
+設定ファイルを
+
+\subsection{粗いqメッシュでの電子エネルギー 計算}
+次に，phonon計算で使うために粗いqメッシュでも電子エネルギー を計算しておく．
+
+\end{document}

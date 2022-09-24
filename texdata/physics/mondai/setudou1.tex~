@@ -1,0 +1,16 @@
+\documentclass[a4j]{jarticle}
+\usepackage{amsmath}	% required for `\align*' (yatex added)
+\begin{document}
+ハミルトニアン
+\begin{align*}
+ H_0=\left(
+ \begin{array}{cccc}
+  0&b &0 &0 \\
+  b&0 &0 &0 \\
+  0&0 &b &0 \\
+  0&0 &0 &b \\
+ \end{array}\right)
+\end{align*}
+に摂動
+
+\end{document}
