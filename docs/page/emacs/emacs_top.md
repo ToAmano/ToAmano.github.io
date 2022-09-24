@@ -11,7 +11,7 @@ categories: emacs
 
 - [init.elの設定はこちら](initel.md)
 - [フォントやアイコンの設定について](emacs_font.md)
-
+- [flyspellによる英語チェック](emacs_aspell.md)
 
 <!--https://mamewo.ddo.jp/emacs.html -->
 
