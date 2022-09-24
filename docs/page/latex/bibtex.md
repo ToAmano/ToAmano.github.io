@@ -111,9 +111,6 @@ bibtexでAPSスタイルの引用をする場合の指定方法も簡単に紹�
 ```latex
 \usepackage[style=phys,articletitle=false,biblabel=brackets,chaptertitle=false,pageranges=false]{biblatex}
 ```
-<!-- 
-https://qiita.com/convolm/items/8a1f2a3028df5bbdea16
--->
 
 ## 脚注への引用方法
 
