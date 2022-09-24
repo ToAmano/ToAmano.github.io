@@ -18,15 +18,15 @@ $$
 \begin{pmatrix}
 1 \\
 0 \\
-0 
+0
 \end{pmatrix} ,
-&\vec{r}_2=
+\vec{r}_2=
 \begin{pmatrix}
 0 \\
 1 \\
-0 
+0
 \end{pmatrix} ,
-&\vec{r}_3=
+\vec{r}_3=
 \begin{pmatrix}
 0 \\
 0 \\
