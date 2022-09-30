@@ -1,7 +1,13 @@
+---
+layout: default
+title:  "LaTeXトップページ"
+date:   2022-09-04 10:03:40 +0900
+categories: latex
+---
 
 
-
-<!-- https://qiita.com/sh05_sh05/items/3d7ea00c97971de15851
+<!-- 
+https://qiita.com/sh05_sh05/items/3d7ea00c97971de15851
 https://risa.is.tokushima-u.ac.jp/~tetsushi/howtomakeslides.pdf
 https://joker.hatenablog.com/entry/2014/10/18/222303
 https://qiita.com/termoshtt/items/756aec542fb4c812a405

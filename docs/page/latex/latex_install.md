@@ -7,7 +7,6 @@ categories: latex
 
 ## LaTeXのインストール（mac）
 
-
 TeXを利用するための環境設定としては，TeX自体のインストール・パスの設定が必須．加えて快適に文書を作成するにはエディターの設定やビューワーも必要である場合が多い．以下ではmacにmactexをhomebrewでインストールする例を述べる．
 
 1. MacTeXのinstall(nessesary)

@@ -35,6 +35,11 @@ https://ja.wikipedia.org/wiki/PAW%E6%B3%95
 <!-- https://www.youtube.com/watch?v=DHu8nyBSLxY -->
 nbndを増やす．smearing=fixを利用．
 
+```
+Occupations = “fixed”
+Smearing      = “gaussian”
+Nbnd             = これを増やす．
+```
 
 
 ## その他
