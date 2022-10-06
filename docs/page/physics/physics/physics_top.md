@@ -13,6 +13,7 @@ mathjax: true
 ## フォノン
 
 [Born Effective Charge](Born_effective_charge.md)
+[LO_TO_spliting](phonon/loto_1.md)
 
 ## MD
 

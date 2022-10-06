@@ -1,4 +1,10 @@
-
+---
+layout: single
+title:  "2原子モデルにおけるLOTO分裂のマクロな理論2"
+date:   2022-09-04 10:03:40 +0900
+categories: physics
+mathjax: true
+---
 
 ## IRスペクトル
 
