@@ -1,0 +1,70 @@
+ % LuaLaTeX文書; 文字コーAドはUTF-8
+ \documentclass[unicode,12pt, A4j]{ltjsarticle}% 'unicode'が必要
+ %\usepackage{luatexja}% 日本語したい
+ \usepackage{luatexja-fontspec}
+ %\usepackage[hiragino-pron]{luatexja-preset}% IPAexフォントしたい(ipaex)
+ \usepackage[hiragino-pron,deluxe,expert,bold]{luatexja-preset}
+
+ \usepackage[english]{babel}%多言語文書を作成する
+ \usepackage{amsmath,amssymb}%標準数式表現を拡大する
+ \usepackage{physics}
+ \usepackage[subpreambles=true,sort=true]{standalone}
+% \renewcommand{\kanjifamilydefault}{\gtdefault}% 既定をゴシック体に
+ \usepackage[backend=bibtex,style=phys,articletitle=false,biblabel=brackets,chaptertitle=false,pageranges=false]{biblatex}
+ %\usepackage[style=authoryear,backend=bibtex]{biblatex}
+
+
+ %\addbibresource{../references/tio2_ref.bib}
+ \usepackage{mhchem}
+ % あとは欧文の場合と同じ
+
+  \usepackage{caption}
+  \usepackage[subrefformat=parens]{subcaption}
+
+\begin{document}
+\section{問題1}
+二つの奇数$a$，$b$にたいして，$m=11a+b$，$n=3a+b$とおく．つぎの(1)，(2)を証明せよ．
+\begin{enumerate}
+ \item $m$，$n$の最大公約数は，$a$，$b$の最大公約数を$d$として，$2d$，$4d$，$8d$のいずれかである．
+ \item $m$，$n$がともに平衡数であることはない．（整数の$2$乗である数を平方数という．）
+\end{enumerate}
+
+\section{問題2}
+放物線$y=x^2$を$y$軸のまわりに回転してできる曲面があり，$y$軸が水平面に垂直で$y$軸の正の部分が上方にあるように置いてある．その局面の中に半径$r \left(r>\dfrac{1}{2}\right)$の球を落とし込む．このとき，この回転面と九面とで囲まれた部分の体積を求めよ．
+
+\section{問題3}
+座標平面において，つぎの条件を満たす$\triangle \mathrm{ABC}$と半平面$\mathrm{H}=\{(x,y)|x\ge 0\}$との共通部分の面積の最大値を求めよ．
+
+$\triangle \mathrm{ABC}$は$\mathrm{AB}=\mathrm{AC}$であるような二等辺三角形であって，$\mathrm{AC}$は$y$軸に平行で，$\mathrm{A}$の座標は$(-1,0)$である．また，$\mathrm{AB}$と$y$軸との交点を$\mathrm{D}$とすると，$\mathrm{DB}=2\sqrt{3}$である．
+
+\section{問題4}
+$a$，$b$はともに$0$でない実数で，$A=\begin{pmatrix} a&b\\c&d \end{pmatrix}$とおく．$\mathrm{O}$を原点とする座標平面において，点$\mathrm{P}(x,y)$が単位円$x^2+y^2=1$の周上を動く．また，点$\mathrm{Q}(x',y')$を$A=\begin{pmatrix} x'\\y'\end{pmatrix}=A\begin{pmatrix} x\\y\end{pmatrix}$によって定める．このとき，$\triangle \mathrm{OPQ}$の面積の最大値を求めよ．
+
+\section{問題5}
+$n$は自然数で，$n\ge 3$である．数$1, 2,\cdots n$のいずれについても，それが記入されたカードが$1$枚ずつ，計$n$枚のカードがある．
+
+A君は，それらのカードのうち$2$枚を無作為に取り出し，それらに記入されている数のうち大きい方を$A$君の得点とする．
+
+B君は，それらのカードから$1$枚を無作為に取り出し，書かれている数を確認してから，そのカードを返すことを$2$回繰り返して，書かれている数の大きい（または小さくない）方をB君の得点とする．
+
+A，B両君のうち特典の大きい方を勝ちとする．
+
+A君の勝つ確率$p$とB君の勝つ確率$q$との大小を比較せよ．
+
+\section{問題6}
+$F(x)=\dfrac{ax}{x+1}$とおく．ただし，$a$は定数で$0 < a\le 1$である．関数の列$\{f_n(x)\}$を次によって定める．
+
+\begin{itemize}
+ \item[(i)] $f_1(x)=F(x)$
+ \item[(ii)] $f_{n+1}(x)=F(f_n(x)) (n=1,2,3,\cdots)$
+\end{itemize}
+\begin{enumerate}
+ \item $f_n(x)$を$a$，$x$，$n$の式で表せ．
+ \item 次の条件をみたす数列$\{b_n\}$を一つ作れ．（$a$の値によって，異なる数列であってもよい．）
+\begin{itemize}
+ \item[条件] $c>0$ならば，数列$\{b_n\cdot f_n(c)\}$は正の数に収束する．
+\end{itemize}
+\end{enumerate}
+
+
+\end{document}

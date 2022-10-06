@@ -1,0 +1,82 @@
+ % LuaLaTeX文書; 文字コーAドはUTF-8
+ \documentclass[unicode,12pt, A4j]{ltjsarticle}% 'unicode'が必要
+ %\usepackage{luatexja}% 日本語したい
+ \usepackage{luatexja-fontspec}
+ %\usepackage[hiragino-pron]{luatexja-preset}% IPAexフォントしたい(ipaex)
+ \usepackage[hiragino-pron,deluxe,expert,bold]{luatexja-preset}
+
+ \usepackage[english]{babel}%多言語文書を作成する
+ \usepackage{amsmath,amssymb}%標準数式表現を拡大する
+ \usepackage{physics}
+ \usepackage[subpreambles=true,sort=true]{standalone}
+% \renewcommand{\kanjifamilydefault}{\gtdefault}% 既定をゴシック体に
+ \usepackage[backend=bibtex,style=phys,articletitle=false,biblabel=brackets,chaptertitle=false,pageranges=false]{biblatex}
+ %\usepackage[style=authoryear,backend=bibtex]{biblatex}
+
+
+ %\addbibresource{../references/tio2_ref.bib}
+ \usepackage{mhchem}
+ % あとは欧文の場合と同じ
+
+  \usepackage{caption}
+  \usepackage[subrefformat=parens]{subcaption}
+\title{京大数学理科後期1990年度}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{問題1}
+曲線$y=x^4-6x^2$に，点$(a,b)$を通る$4$つの接線が引けるのは，$(a,b)$がどのような範囲にあるときか，図示せよ．
+
+
+\section{問題2}
+$f(x)=\dfrac{a-\cos x}{x^2}$が$0 < x \le \dfrac{\pi}{2}$の範囲で増加関数となるような定数$a$のうち最大のものを求めよ．
+
+
+\section{問題3}
+関数$y=\log x$のグラフ上の$1$点$\mathrm{P}(xlog s) (s\ge 1)$における雪線と$y$軸の交点を$\mathrm{Q}$とする．グラフの上に$\mathrm{A}(1,0)$をとる．$\mathrm{AP}$間のグラフの長さを$\hat{\mathrm{AP}}$，線分$\mathrm{PQ}$の長さを$\overline{\mathrm{PQ}}$とし，$t=\overline{\mathrm{PQ}}-\hat{\mathrm{AP}}$とする．$t$は$s$の関数である．
+
+\begin{enumerate}
+ \item $\dfrac{\dd t}{\dd s}$を$s$であらわせ．
+ \item $u=\dfrac{1}{s}$，$v=\sqrt{1+u^2}$とおくとき，$\dfrac{\dd u}{\dd t}$および$\dfrac{\dd v}{\dd t}$を$u$の関数としてあらわせ．
+ \item $u$を$t$の関数としてあらわせ．
+\end{enumerate}
+
+
+\section{問題4}
+座標空間に$3$点$\mathrm{P}$，$\mathrm{Q}$，$\mathrm{R}$があって毎秒$1$秒の速さで，それぞれ
+\begin{itemize}
+ \item 点$\mathrm{P}$は原点$(0,0,0)$を出発して$x$軸上を正の方向へ，
+ \item 点$\mathrm{Q}$は点$(2,0,0)$を出発して$y$軸と平行に正の方向へ，
+ \item 点$\mathrm{R}$は点$(2,2,0)$を出発して$z$軸と平行に正の方向へ，
+\end{itemize}
+進む．このとき三角形$\mathrm{PQR}$の面積$S$が最小となるのは何秒後か．
+
+
+\section{問題5}
+平面上に$2$つの円$\mathrm{C}$，$\mathrm{C'}$がある．一次変換$f$は逆変換をもち，かつ$\mathrm{C}$を$\mathrm{C'}$にうつしている．
+\begin{enumerate}
+ \item $l$を$C$上の1点$\mathrm{P}$における雪線とする．このとき$l$の$f$による像$l'$は点$f(\mathrm{P})$における$\mathrm{C'}$の接線である．この理由を述べよ．
+ \item $\mathrm{A}$を$\mathrm{C}$の中心とすれば，$f(\mathrm{A})$は$\mathrm{C'}$の中心となる．この理由を述べよ．
+\end{enumerate}
+
+
+\section{問題6}
+$n$本のくじの中に$1$本だけ当たりくじがある．このくじを無作為に$1$本ひき，引いたくじをもとに戻すという試行を$l$回繰り返す．$l$回のうち当たった回数を$X$とする．確率変数$X_i (1\le i\le l)$を次により定める．
+\begin{align*}
+ X_i=
+ \begin{cases}
+  1 & \text{$i$回目に当たりくじがでたとき，}\\
+  0 &  \text{$i$回目に当たりくじがでないとき．}
+ \end{cases}
+\end{align*}
+\begin{enumerate}
+ \item 確率変数$X$を$X_i (1\le i\le l)$であらわせ．
+ \item $X^2$の期待値$E(X^2)$を求めよ．
+ \item $E(X^2)>2$となる最小の$l$は何か．
+\end{enumerate}
+
+
+\end{document}
