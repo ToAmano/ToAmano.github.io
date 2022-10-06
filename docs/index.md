@@ -69,6 +69,10 @@ emacsエディタの操作，カスタマイズについて．
 
 gitやgithubの使い方について．
 
+### [home server](page/server/server_top.md)
+
+自宅サーバーを立ち上げる記録．
+
 ---
 ---
 ## Mathematics/Physics/related Softwares
