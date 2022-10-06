@@ -28,4 +28,9 @@ https://chadbaldwin.net/2021/03/14/how-to-build-a-sql-blog.html
 mathjax: https://qiita.com/memakura/items/e4d2de379f98ad7be498
 mathjax: https://pandanote.info/?p=3715 （現状この設定に従っている）
 
+
+https://peterroelants.github.io/posts/adding-tags-to-github-pages/
+タグについて
+
+https://qiita.com/eijiSaito/items/b4a1675ec196546aa4f2
 -->
