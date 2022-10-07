@@ -1,0 +1,86 @@
+ % LuaLaTeX文書; 文字コーAドはUTF-8
+ \documentclass[unicode,12pt, A4j]{ltjsarticle}% 'unicode'が必要
+ %\usepackage{luatexja}% 日本語したい
+ \usepackage{luatexja-fontspec}
+ %\usepackage[hiragino-pron]{luatexja-preset}% IPAexフォントしたい(ipaex)
+ \usepackage[hiragino-pron,deluxe,expert,bold]{luatexja-preset}
+
+ \usepackage[english]{babel}%多言語文書を作成する
+ \usepackage{amsmath,amssymb}%標準数式表現を拡大する
+ \usepackage{physics}
+ \usepackage[subpreambles=true,sort=true]{standalone}
+% \renewcommand{\kanjifamilydefault}{\gtdefault}% 既定をゴシック体に
+ \usepackage[backend=bibtex,style=phys,articletitle=false,biblabel=brackets,chaptertitle=false,pageranges=false]{biblatex}
+ %\usepackage[style=authoryear,backend=bibtex]{biblatex}
+
+
+ %\addbibresource{../references/tio2_ref.bib}
+ \usepackage{mhchem}
+ % あとは欧文の場合と同じ
+
+  \usepackage{caption}
+  \usepackage[subrefformat=parens]{subcaption}
+\title{京大数学理科後期1992年度}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{問題1}
+$0$でない$x$の整式$f(x)$に対し，${\displaystyle F(x)=\int_0^x f(t)\dd t }$，${\displaystyle G(x)=\int_x^1 f(t)\dd t }$とおく．ある定数$p$，$q$が存在して，$F(G(x))=-\{F(x)\}^2+pG(x)+q$が成立しているとする．
+\begin{enumerate}
+ \item ${\displaystyle a=\int_0^1 f(t)\dd t }$とおくとき，$F(x)$を$a$を用いてあらわせ．
+ \item さらに$0\le x\le 1$での$F(x)$の最大値が$\dfrac{1}{2}$であるとき，$f(x)$を求めよ．
+\end{enumerate}
+
+\section{問題2}
+一辺の長さが$n$の立方体$\mathrm{ABCD-PQRS}$がある．ただし，$2$つの正方形$\mathrm{ABCD}$，$\mathrm{PQRS}$は立方体の向かい合った面で$\mathrm{AP}$，$\mathrm{BQ}$，$\mathrm{CR}$，$\mathrm{DS}$は，それぞれ，立方体の辺である．
+
+立方体の各面は一辺の長さ$1$の正方形に碁盤目状に区切られているとする．そこで，頂点$\mathrm{A}$から頂点$\mathrm{R}$へ碁盤目上の辺を辿っていくときの最短経路を考える．
+
+\begin{enumerate}
+ \item 辺$\mathrm{BC}$上の点を通過する最短経路は全部で何通りあるか．
+ \item 頂点$\mathrm{A}$から頂点$\mathrm{R}$への最短経路は全部で何通りあるか．
+\end{enumerate}
+
+\section{問題3}
+放物線$y=x^2$の上の点$\mathrm{P}(t,t^2)$（ただし，$t>0$）でこの曲線に接し，かつ$y$軸にも接する円を$C_1$，$C_2$とし，それぞれの半径を$r$，$R(r<R)$とする．
+\begin{enumerate}
+ \item $t$が正の実数全体を動くとき，$\dfrac{R}{r}$のとり得る値の範囲を求めよ．
+ \item $\dfrac{R}{r}=2$となる点$\mathrm{P}(t,t^2)$をもとめよ．
+\end{enumerate}
+
+\section{問題4}
+平面ベクトル$\va*{p}$，$\va*{q}$の内積を$\va*{p}\cdot\va*{q}$と表す．$f$は平面上の一次変換とする．
+
+\begin{enumerate}
+ \item $\va*{p}$，$\va*{q}$がたがいに直交する単にベクトルとすると，$T=f(\va*{p})\cdot\va*{p}+f(\va*{q})\cdot\va*{q}$は，ベクトルの組$\va*{p}$，$\va*{q}$の取り方によらないで，$f$によって決まる値であることを示せ．
+ \item 原点$\mathrm{O}$を通る$2$つの定直線$l$と$m$があって，$f$によって$l$上の任意の点$\mathrm{R}$は$\mathrm{R}$自身に移され，$m$上の任意の点$\mathrm{S}$は$\mathrm{OS}$の中点$\mathrm{S}'$に移されるとする．このとき$f$に対する$T$の値を求めよ．
+\end{enumerate}
+
+\section{問題5}
+$1$から$N+2 (N\ge 2)$までの番号のついた玉$(N+2)$個を用意し，手元に$1$と$2$の番号のついた玉をおき，残り$N$個の玉を箱に入れる．さらに，
+\begin{quote}
+ 「玉を一つ箱からとりだし，手元の玉$2$個と取り出した玉$1$個計$3$個の玉のうち最も小さい番号の玉を箱に返す．」
+\end{quote}
+という操作を$n$回繰り返す（$n\ge 1$）．最後に手元に残った$2$個の玉の番号のうち小さい方を$X$とし，大きい方を$Y$とする．
+\begin{enumerate}
+ \item $Y\le m$である確率$P (Y\le m)$をもとめよ（$m=3,4,\cdots, N+2$）．
+ \item $X\le m$である確率$P (X\le m)$をもとめよ（$m=2,3,\cdots, N+1$）．
+\end{enumerate}
+
+
+\section{問題6}
+$ a=\dfrac{1+\sqrt{5}}{2}$とし，空間内の原点$\mathrm{O}$と$4$つの点
+\begin{align*}
+ \mathrm{A}(1,1,1), \mathrm{B}(-1/a,a,0),\mathrm{C}(-a,0,1/a),\mathrm{D}(0,-1/a,a),
+\end{align*}
+について，次の問に答えよ．
+\begin{enumerate}
+ \item 四点$\mathrm{A}$，$\mathrm{B}$，$\mathrm{C}$，$\mathrm{D}$は正方形の頂点であることを示せ．
+ \item 四角錐$\mathrm{O-ABCD}$を平面$x=0$によって二つの部分$W_1$，$W_2$に分けたとき，$W_1$，$W_2$の体積の比を求めよ．
+\end{enumerate}
+
+
+\end{document}

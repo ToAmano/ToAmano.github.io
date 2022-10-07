@@ -1,0 +1,80 @@
+ % LuaLaTeX文書; 文字コーAドはUTF-8
+ \documentclass[unicode,12pt, A4j]{ltjsarticle}% 'unicode'が必要
+ %\usepackage{luatexja}% 日本語したい
+ \usepackage{luatexja-fontspec}
+ %\usepackage[hiragino-pron]{luatexja-preset}% IPAexフォントしたい(ipaex)
+ \usepackage[hiragino-pron,deluxe,expert,bold]{luatexja-preset}
+
+ \usepackage[english]{babel}%多言語文書を作成する
+ \usepackage{amsmath,amssymb}%標準数式表現を拡大する
+ \usepackage{physics}
+ \usepackage[subpreambles=true,sort=true]{standalone}
+% \renewcommand{\kanjifamilydefault}{\gtdefault}% 既定をゴシック体に
+ \usepackage[backend=bibtex,style=phys,articletitle=false,biblabel=brackets,chaptertitle=false,pageranges=false]{biblatex}
+ %\usepackage[style=authoryear,backend=bibtex]{biblatex}
+
+
+ %\addbibresource{../references/tio2_ref.bib}
+ \usepackage{mhchem}
+ % あとは欧文の場合と同じ
+
+  \usepackage{caption}
+  \usepackage[subrefformat=parens]{subcaption}
+\title{京大数学理科後期1991年度}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{問題1}
+$-1\le x\le 1$で定義された関数$y=f(x)$は次の1,2を満たしている．
+\begin{itemize}
+ \item[1] $\sin f(x) = 1-x^2$
+ \item[2] $0\le f(x)\le \dfrac{\pi}{2}$
+\end{itemize}
+\begin{enumerate}
+ \item $x$を$y$の関数として表し，$y=f(x)$のグラフの概形をかけ．
+ \item $y=f(x)$のグラフと$x$軸で囲まれた部分の面積を求めよ．
+\end{enumerate}
+
+\section{問題2}
+一辺の長さ$2\mathrm{cm}$の正四面体を，一つの面を下にして水平面上に置く．この正四面体の各辺の中点を頂点とする正八面体$H$を中空の容器と考える．
+\begin{enumerate}
+ \item 容器$H$の高さ$h_0(\mathrm{cm})$を求めよ．
+ \item 水を毎秒$1\mathrm{cm}^3$の割合で$H$に注入するとき，水面の高さが$h \mathrm{cm} (0\le h\le h_0)$になるまでに要する時間$t$（秒）を求めよ．
+\end{enumerate}
+
+\section{問題3}
+空間に原点を始点とする長さ$1$のベクトル$\va*{a}$，$\va*{b}$，$\va*{c}$がある．$\va*{a}$，$\va*{b}$のなす角を$\gamma$，$\va*{b}$，$\va*{c}$のなす角を$\alpha$，$\va*{c}$，$\va*{a}$のなす角を$\beta$とするとき，次の関係の成立することを示せ．またここで等号の成立するのはどのような場合か．
+\begin{align*}
+ 0\le \cos^2\alpha+\cos^2\beta+\cos^2\gamma-2\cos\alpha \cos\beta \cos\gamma \le 1
+\end{align*}
+
+\section{問題4}
+平面上で次の方程式1を満たす点全体の集合を$C_1$，2を満たす点全体の集合を$C_2$とする．
+\begin{itemize}
+ \item[1] $x^2+y^2-1=0$
+ \item[2] $10x^2+14xy+5y^2=1$
+\end{itemize}
+\begin{enumerate}
+ \item $a$，$b$，$c$，$d$は負でない整数で$ad-bc>0$を満たしている．さらに$A=\begin{pmatrix} a&b\\ c&d\end{pmatrix}$の定める一時変換$f$が$C_2$を$C_1$に写している．すなわち$f(C_2)=C_1$である．このとき$a$，$b$，$c$，$d$を求めよ．
+ \item $C_2$上の点で$x$座標，$y$座標とも整数であるものは何個あるか．
+\end{enumerate}
+
+\section{問題5}
+$1$から$n$までの相異なる$n$個の自然数$(n\ge 4)$の中から無作為に$2$個を取り出し，大きい方を$X_1$，小さい方を$Y_1$とする．つぎに残りの$(n-2)$個の自然数の中から無作為に$2$個を取り出し，大きい方を$X_2$，小さい方を$Y_2$とする．
+\begin{enumerate}
+ \item $X_1+Y_1$の期待値を求めよ
+ \item $X_1$の期待値を求めよ．
+ \item $Y_2$の期待値を求めよ．
+\end{enumerate}
+
+\section{問題6}
+\begin{enumerate}
+ \item 任意の定数$a$に対して$e^x\ge e^a+(x-a)e^a$が成り立つことを示せ．
+ \item ${\displaystyle \int_0^1 e^{\sin \pi x} \dd x \ge e^{2/\pi} }$を示せ．
+\end{enumerate}
+
+
+\end{document}
