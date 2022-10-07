@@ -1,0 +1,67 @@
+ % LuaLaTeX文書; 文字コーAドはUTF-8
+ \documentclass[unicode,12pt, A4j]{ltjsarticle}% 'unicode'が必要
+ %\usepackage{luatexja}% 日本語したい
+ \usepackage{luatexja-fontspec}
+ %\usepackage[hiragino-pron]{luatexja-preset}% IPAexフォントしたい(ipaex)
+ \usepackage[hiragino-pron,deluxe,expert,bold]{luatexja-preset}
+
+ \usepackage[english]{babel}%多言語文書を作成する
+ \usepackage{amsmath,amssymb}%標準数式表現を拡大する
+ \usepackage{physics}
+ \usepackage[subpreambles=true,sort=true]{standalone}
+% \renewcommand{\kanjifamilydefault}{\gtdefault}% 既定をゴシック体に
+ \usepackage[backend=bibtex,style=phys,articletitle=false,biblabel=brackets,chaptertitle=false,pageranges=false]{biblatex}
+ %\usepackage[style=authoryear,backend=bibtex]{biblatex}
+
+
+ %\addbibresource{../references/tio2_ref.bib}
+ \usepackage{mhchem}
+ % あとは欧文の場合と同じ
+
+  \usepackage{caption}
+  \usepackage[subrefformat=parens]{subcaption}
+\title{京大数学理科後期2002年度}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{問題1}
+$1$から$n\, (n\ge 2)$までの番号が，順番に$1$つずつ書かれた$n$枚の札が袋に入っている．この袋の中から札を$1$枚ずつ取り出し，次の(i)，(ii)のルールに従って$A$または$B$の箱に入れる．
+\begin{itemize}
+ \item[(i)] 最初に取り出した札は$A$の箱に入れる．
+ \item[(ii)] $2$番目以降に取り出した札は，その番号がそれまでに取り出された札の番号のどれよりも大きければ$A$の箱に入れ，そうでない時は$B$の箱に入れる．
+\end{itemize}
+
+$n$枚の札全てを取り出し，箱に入れ終わった時，$B$の箱にちょうど$1$枚の札が入っている確率を求めよ．
+
+\section{問題2}
+楕円$x^2+\dfrac{y^2}{4}=1$と円$(x-a)^2+y^2=b\, (b>0)$が相異なる$4$点で交わるという．この時$(a,b)$のとりうる範囲を図示せよ．
+
+
+\section{問題3}
+各面が鋭角三角形からなる四面体$\mathrm{ABCD}$において，辺$\mathrm{AB}$と辺$\mathrm{CD}$は垂直ではないとする．この時辺$\mathrm{AB}$を含む平面$\alpha$に点$\mathrm{C}$，点$\mathrm{D}$から下ろした垂線の足をそれぞれ$\mathrm{C}'$，$\mathrm{D}'$とするとき，$4$点$\mathrm{A}$，$\mathrm{B}$，$\mathrm{C}'$，$\mathrm{D}'$がすべて相異なり，しかも同一円周上にあるように$\alpha$が取れることを示せ．
+
+\section{問題4}
+$f(x)$は$x^n$の係数が$1$である$x$の$n$次式である．相異なる$n$個の有理数$q_1,q_2,\cdots ,q_n$に対して$f(q_1),f(q_2),\cdots,f(q_n)$が全て有理数であれば，$f(x)$の係数は全て有理数であることを，数学的帰納法を用いて示せ．
+
+\section{問題5}
+数列$\{a_n\}$，$\{b_n\}$を$a_1=3$，$b_1=2$
+\begin{align*}
+ a_{n+1}&=a_n^2+2b_n^2 \\
+ b_{n+1}&=2a_nb_n\, (n\ge 1)
+\end{align*}
+で定める．
+
+\begin{enumerate}
+ \item $a_n^2-2b_n^2$を求めよ．
+ \item ${\displaystyle \lim_{n\to\infty}}\dfrac{a_n}{b_n}$を求めよ．
+\end{enumerate}
+
+\section{問題6}
+閉区間$\left[-\dfrac{\pi}{2},\dfrac{\pi}{2}\right]$で定義された関数$f(x)$が${\displaystyle f(x)=\int_{-\pi/2}^{\pi/2}\sin (x-y)f(y)\dd y=x+1\, \left(-\dfrac{\pi}{2}\le x \le \frac{\pi}{2}\right)}$を満たしている．$f(x)$を求めよ．
+
+補足．$\sin (x-y)f(y)$は$\sin (x-y)$と$f(y)$の積の意味である．
+
+\end{document}

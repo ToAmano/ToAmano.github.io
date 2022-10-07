@@ -1,0 +1,77 @@
+ % LuaLaTeX文書; 文字コーAドはUTF-8
+ \documentclass[unicode,12pt, A4j]{ltjsarticle}% 'unicode'が必要
+ %\usepackage{luatexja}% 日本語したい
+ \usepackage{luatexja-fontspec}
+ %\usepackage[hiragino-pron]{luatexja-preset}% IPAexフォントしたい(ipaex)
+ \usepackage[hiragino-pron,deluxe,expert,bold]{luatexja-preset}
+
+ \usepackage[english]{babel}%多言語文書を作成する
+ \usepackage{amsmath,amssymb}%標準数式表現を拡大する
+ \usepackage{physics}
+ \usepackage[subpreambles=true,sort=true]{standalone}
+% \renewcommand{\kanjifamilydefault}{\gtdefault}% 既定をゴシック体に
+ \usepackage[backend=bibtex,style=phys,articletitle=false,biblabel=brackets,chaptertitle=false,pageranges=false]{biblatex}
+ %\usepackage[style=authoryear,backend=bibtex]{biblatex}
+
+
+ %\addbibresource{../references/tio2_ref.bib}
+ \usepackage{mhchem}
+ % あとは欧文の場合と同じ
+
+  \usepackage{caption}
+  \usepackage[subrefformat=parens]{subcaption}
+\title{京大数学理科後期2004年度}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{問題1}
+$x\ge 0$に対して，関数$f(x)$を次のように定義する．
+\begin{align*}
+ f(x)=
+ \begin{cases}
+  x & \text{$0\le x\le 1$のとき} \\
+  0 & \text{$x>1$のとき} 
+ \end{cases}
+\end{align*}
+
+このとき，${\displaystyle \lim_{n\to +\infty}n\int_0^1 f(4nx(1-x))\dd x }$をもとめよ．
+	  
+\section{問題2}
+複素数$z$の絶対値を$|z|$で表す．$|(1+i)t+1+\alpha|\le 1$を満たす実数$t$が存在するような複素数$\alpha$の範囲を，複素平面上で図示せよ．（ただし，$i$は虚数単位を表す．）（注意：複素平面のことを複素数平面ともいう．）
+
+\section{問題3}
+平面ベクトル$\va*{x}$に対して実数$f(\va*{x})$を対応させる写像$f(\va*{x})$が次の性質(*)を持っている．
+\begin{itemize}
+ \item[(*)] 任意の平面ベクトル$\va*{a}$，$\va*{b}$に対して，$f(\va*{a}+\va*{b})=f(\va*{a})+f(\va*{b})$が成り立つ．
+\end{itemize}
+この時，任意の平面ベクトル$\va*{x}$に対して，$f\left(\dfrac{1}{3}\va*{x}\right)=\dfrac{1}{3}f(\va*{x})$が成り立つことを証明せよ．
+
+
+\section{問題4}
+水平面$V$上の$3$点を$\mathrm{O}$，$\mathrm{A}$，$\mathrm{B}$とする．$\mathrm{A}$は線分$\mathrm{OB}$上にあり，線分$\mathrm{AB}$の長さは1メートルであるとする．$\mathrm{O}$から，$V$と垂直に棒が立っている．棒の先端$\mathrm{X}$を$\mathrm{A}$，$\mathrm{B}$から見た時の仰角がそれぞれ$45^{\circ}$，$44^{\circ}$であったという．棒の長さは何メートルか．小数点以下を四捨五入して答えよ．
+
+ただし，$0.01745<\tan 1^{\circ} < 0.01746$である．
+
+
+\section{問題5}
+$n$を自然数とする．次の3つの不等式(1)，(2)，(3)を全て満たす自然数の組$(a,b,c,d)$はいくつあるか．$n$を用いてあらわせ．
+\begin{itemize}
+ \item[(1)] $1\le a < d \le n$
+ \item[(2)] $a\le b < d$
+ \item[(3)] $a<c\le d$
+\end{itemize}
+
+\section{問題6}
+$n$を自然数とする．$xy$平面内の，原点を中心とする半径$n$の円の，内部と周を合わせたものを$C_n$で表す．次の条件(*)を満たす1辺の長さが$1$の正方形の数を$N(n)$とする．
+
+\begin{itemize}
+ \item[(*)] 正方形の4頂点は全て$C_n$に含まれ，4頂点の$x$及び$y$座標は全て整数である．
+\end{itemize}
+
+この時，${\displaystyle \lim_{n\to\infty}\frac{N(n)}{n^2}=\pi}$を証明せよ．
+
+
+\end{document}

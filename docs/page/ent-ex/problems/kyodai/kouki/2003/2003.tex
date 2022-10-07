@@ -1,0 +1,59 @@
+ % LuaLaTeX文書; 文字コーAドはUTF-8
+ \documentclass[unicode,12pt, A4j]{ltjsarticle}% 'unicode'が必要
+ %\usepackage{luatexja}% 日本語したい
+ \usepackage{luatexja-fontspec}
+ %\usepackage[hiragino-pron]{luatexja-preset}% IPAexフォントしたい(ipaex)
+ \usepackage[hiragino-pron,deluxe,expert,bold]{luatexja-preset}
+
+ \usepackage[english]{babel}%多言語文書を作成する
+ \usepackage{amsmath,amssymb}%標準数式表現を拡大する
+ \usepackage{physics}
+ \usepackage[subpreambles=true,sort=true]{standalone}
+% \renewcommand{\kanjifamilydefault}{\gtdefault}% 既定をゴシック体に
+ \usepackage[backend=bibtex,style=phys,articletitle=false,biblabel=brackets,chaptertitle=false,pageranges=false]{biblatex}
+ %\usepackage[style=authoryear,backend=bibtex]{biblatex}
+
+
+ %\addbibresource{../references/tio2_ref.bib}
+ \usepackage{mhchem}
+ % あとは欧文の場合と同じ
+
+  \usepackage{caption}
+  \usepackage[subrefformat=parens]{subcaption}
+\title{京大数学理科後期2003年度}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{問題1}
+正三角形$\mathrm{ABC}$の辺$\mathrm{AB}$上に点$\mathrm{P}_1$，$\mathrm{P}_2$が，辺$\mathrm{BC}$上に点$\mathrm{Q}_1$，$\mathrm{Q}_2$が，辺$\mathrm{CA}$上に点$\mathrm{R}_1$，$\mathrm{R}_2$があり，どの点も頂点には一致していないとする．この時三角形$\mathrm{P_1Q_1R_1}$の重心と三角形$\mathrm{P_2Q_2R_2}$の重心が一致すれば，$\mathrm{P_1P_2}=\mathrm{Q_1Q_2}=\mathrm{R_1R_2}$が成り立つことを示せ．
+
+\section{問題2}
+一辺の長さが1の正三角形$\mathrm{ABC}$の辺$\mathrm{AC}$上に点$\mathrm{D}$をとり，線分$\mathrm{BD}$に沿ってこの三角形を折り曲げ，4点$\mathrm{A}$，$\mathrm{B}$，$\mathrm{C}$，$\mathrm{D}$を頂点とする四面体を作り，その体積を最大にすることを考える．体積が最大になる時の$\mathrm{D}$の位置と，その時の四面体の体積を求めよ．
+
+\section{問題3}
+$a$，$b$を実数とする．3次方程式$x^3+ax^2+bx+1=0$は3つの複素数からなる解$\alpha_1$，$\alpha_2$，$\alpha_3$をもち，相異なる$i$，$j$に対し$|\alpha_i-\alpha_j|=\sqrt{3}$を満たしている．このような$a$，$b$の組を全て求めよ．
+
+\section{問題4}
+$\{a_n\}$を正の数からなる数列とし，$p$を正の実数とする．このとき$a_{n+1}>\dfrac{1}{2}a_n-p$を満たす番号$n$が存在することを証明せよ．
+
+\section{問題5}
+極限${\displaystyle \lim_{n\to\infty}\sum_{k=1}^{2n}(-1)^k\left(\frac{k}{2n}\right)^{100}}$を求めよ．
+
+\section{問題6}
+7つの文字を並べた列$a_1,a_2,\cdots,a_7$で，次の3つの条件を満たすものの総数を求めよ．
+
+\begin{itemize}
+ \item[i] $a_1,a_2,\cdots a_7$は$\mathrm{A}$，$\mathrm{B}$，$\mathrm{C}$，$\mathrm{D}$，$\mathrm{E}$，$\mathrm{F}$のいずれかである．
+ \item[ii] $i=1,2,\cdots,6$に対し，$a_i$と$a_{i+1}$は相異なる．
+ \item[iii] $i=1,2,\cdots,6$に対し，$a_i$と$a_{i+1}$は右図において線分で結ばれている．
+\end{itemize}
+
+\begin{figure}[htb]
+ \centering
+ \includestandalone[mode=image]{2003_06_fig}
+\end{figure}
+
+\end{document}
