@@ -1,0 +1,67 @@
+ % LuaLaTeX文書; 文字コーAドはUTF-8
+ \documentclass[unicode,12pt, A4j]{ltjsarticle}% 'unicode'が必要
+ %\usepackage{luatexja}% 日本語したい
+ \usepackage{luatexja-fontspec}
+ %\usepackage[hiragino-pron]{luatexja-preset}% IPAexフォントしたい(ipaex)
+ \usepackage[hiragino-pron,deluxe,expert,bold]{luatexja-preset}
+
+ \usepackage[english]{babel}%多言語文書を作成する
+ \usepackage{amsmath,amssymb}%標準数式表現を拡大する
+ \usepackage{physics}
+ \usepackage[subpreambles=true,sort=true]{standalone}
+% \renewcommand{\kanjifamilydefault}{\gtdefault}% 既定をゴシック体に
+ \usepackage[backend=bibtex,style=phys,articletitle=false,biblabel=brackets,chaptertitle=false,pageranges=false]{biblatex}
+ %\usepackage[style=authoryear,backend=bibtex]{biblatex}
+
+
+ %\addbibresource{../references/tio2_ref.bib}
+ \usepackage{mhchem}
+ % あとは欧文の場合と同じ
+
+  \usepackage{caption}
+  \usepackage[subrefformat=parens]{subcaption}
+\title{京大数学理科後期2006年度}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{問題1}
+$1$次式$A(x)$，$B(x)$，$C(x)$に対して$\{A(x)\}^2+\{B(x)\}^2=\{C(x)\}^2$が成り立つとする．このとき$A(x)$と$B(x)$はともに$C(x)$の定数倍であることを示せ．
+
+
+
+\section{問題2}
+$a$を実数として，行列$A$を$A=\begin{pmatrix}a&1-a \\ 1-a&a \end{pmatrix}$と定める．$\begin{pmatrix}x_0 \\ y_0  \end{pmatrix}=\begin{pmatrix} 1 \\ 0  \end{pmatrix}$とし，数列$\{x_n\}$，$\{y_n\}$を次の式で定める．
+\begin{align*}
+ \begin{pmatrix}
+    x_0 \\ y_0  
+ \end{pmatrix}
+=A
+ \begin{pmatrix} 
+    x_{n-1} \\ 
+    y_{n-1}  
+ \end{pmatrix},
+n=1,2,\cdots
+\end{align*}
+このとき数列$\{x_n\}$が収束するための$a$の必要十分条件を求めよ．
+
+
+\section{問題3}
+さいころを$n$個同時に投げるとき，出た目の和が$n+3$になる確率を求めよ．
+
+
+\section{問題4}
+平面上の点$\mathrm{O}$を中心とし，半径$1$の円周上に相異なる$3$点$\mathrm{A}$，$\mathrm{B}$，$\mathrm{C}$がある．$\triangle{\mathrm{ABC}}$の内接円の半径$r$は$\dfrac{1}{2}$以下であることをしめせ．
+
+
+\section{問題5}
+$H>0$，$R>0$とする．空間内において，原点$\mathrm{O}$と点$\mathrm{P}(R,0,H)$を結ぶ線分を，$z$軸のまわりに回転させてできる容器がある．この容器に水を満たし，原点から水面までの高さが$h$のとき単位時間あたりの排水量が，$\sqrt{h}$になるように，水を排出する．すなわち，時刻$t$までに排出された水の総量を$V(t)$とおくとき，$\dfrac{\dd V}{\dd t}=\sqrt{h}$がなりたつ．このときすべての水を排出するのに要する時間をもとめよ．
+
+\section{問題6}
+$\tan 1^\circ$は有理数か．
+
+
+
+\end{document}
