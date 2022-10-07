@@ -1,0 +1,69 @@
+ % LuaLaTeX文書; 文字コーAドはUTF-8
+ \documentclass[unicode,12pt, A4j]{ltjsarticle}% 'unicode'が必要
+ %\usepackage{luatexja}% 日本語したい
+ \usepackage{luatexja-fontspec}
+ %\usepackage[hiragino-pron]{luatexja-preset}% IPAexフォントしたい(ipaex)
+ \usepackage[hiragino-pron,deluxe,expert,bold]{luatexja-preset}
+
+ \usepackage[english]{babel}%多言語文書を作成する
+ \usepackage{amsmath,amssymb}%標準数式表現を拡大する
+ \usepackage{physics}
+ \usepackage[subpreambles=true,sort=true]{standalone}
+% \renewcommand{\kanjifamilydefault}{\gtdefault}% 既定をゴシック体に
+ \usepackage[backend=bibtex,style=phys,articletitle=false,biblabel=brackets,chaptertitle=false,pageranges=false]{biblatex}
+ %\usepackage[style=authoryear,backend=bibtex]{biblatex}
+
+
+ %\addbibresource{../references/tio2_ref.bib}
+ \usepackage{mhchem}
+ % あとは欧文の場合と同じ
+
+  \usepackage{caption}
+  \usepackage[subrefformat=parens]{subcaption}
+\title{京大数学理科後期1993年度}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{問題1}
+$f(x)=x^3+ax^2+bx+c$が次の3条件を満たしているとする．
+\begin{enumerate}
+ \item ${\displaystyle \lim_{x\to 1}=\frac{f(x)}{x^3-x}= 1}$
+ \item 曲線$y=f(x)$の$x=0$における接線の傾きは負である．
+ \item 2点$(0,f(0))$と$(1,f(1))$を通る直線を$l$とする．曲線$y=f(x)$と直線$l$で囲まれる図形のうち，$0\le x\le 1$の部分の面積は$\dfrac{3}{4}$である．
+\end{enumerate}
+このとき，$a$，$b$，$c$の値を求めよ．
+
+
+\section{問題2}
+実数$a$に対して，$f(x)=x^3-3ax$とおく．
+\begin{enumerate}
+ \item $t$を実数とする．方程式$f(x)=t$が相異なる$3$個の実数解を保つために$a$と$t$が満たすべき条件をもとめよ．
+ \item $g(x)=f(f(x))$とおく．方程式$g(x)=0$が相異なる$9$個の実数解を持つような$a$の範囲を求めよ．
+\end{enumerate}
+
+\section{問題3}
+原点$\mathrm{O}$を中心とする$1$つの円周上に相異なる$4$点$\mathrm{A}_0$，$\mathrm{B}_0$，$\mathrm{C}_0$，$\mathrm{D}_0$をとる．$\mathrm{A}_0$，$\mathrm{B}_0$，$\mathrm{C}_0$，$\mathrm{D}_0$の位置ベクトルをそれぞれ$\va*{a}$，$\va*{b}$，$\va*{c}$，$\va*{d}$と書く．
+
+\begin{enumerate}
+ \item $\triangle \mathrm{B_0C_0D_0}$，$\triangle \mathrm{C_0D_0A_0}$，$\triangle \mathrm{D_0A_0B_0}$，$\triangle \mathrm{A_0B_0C_0}$の重心をそれぞれ$\mathrm{A}_1$，$\mathrm{B}_1$，$\mathrm{C}_1$，$\mathrm{D}_1$とする．このとき，この4点は同一円周上にあることを示し，その円の中心$\mathrm{P}_1$の一ベクトル$\overrightarrow{\mathrm{OP_1}}$を$\va*{a}$，$\va*{b}$，$\va*{c}$，$\va*{d}$であらわせ．
+ \item 4点$\mathrm{A}_1$，$\mathrm{B}_1$，$\mathrm{C}_1$，$\mathrm{D}_1$に対し上と同様に$\mathrm{A}_2$，$\mathrm{B}_2$，$\mathrm{C}_2$，$\mathrm{D}_2$を定め，$\mathrm{A}_2$，$\mathrm{B}_2$，$\mathrm{C}_2$，$\mathrm{D}_2$を通る円の中心を$\mathrm{P}_2$とする．以下，同様に$\mathrm{P}_3$，$\mathrm{P}_4$，$\cdots$を定める．$\overrightarrow{\mathrm{P}_n\mathrm{P}_{n+1}}$を$\va*{a}$，$\va*{b}$，$\va*{c}$，$\va*{d}$であらわせ．
+ \item ${\displaystyle \lim_{n\to\infty} |\mathrm{P}_n\mathrm{Q}|=0}$を満たす点$\mathrm{Q}$の一ベクトルを$\va*{a}$，$\va*{b}$，$\va*{c}$，$\va*{d}$であらわせ．ただし，$|\mathrm{P}_n\mathrm{Q}|$は線分$\mathrm{P}_n\mathrm{Q}$の長さである．
+\end{enumerate}
+
+
+\section{問題4}
+$a$は正の定数とする．不等式$a^x\ge ax$が全ての正の数$x$に対して成り立つという．このとき$a$はどのようなものか．
+
+\section{問題5}
+$n\ge 3$とする．$1,2 \cdots,n$のうちから重複を許して$6$個の数字をえらびそれを並べた順列を考える．このような順列のうちで，どの数字もそれ以外の$5$つの数字のどれかに等しくなっているようなものの個数を求めよ．
+
+
+\section{問題6}
+$a_1$，$a_2$，$b_1$，$b_2$，$c_1$，$c_2$を実数とする．不等式$\dfrac{a_1x+b_1}{x+c_1} > \dfrac{a_2x+b_2}{x+c_2}$が$x\neq -c_1$かつ$x\neq -c_2$となるすべての実数$x$に対して成立するための必要十分条件を求めよ．
+
+
+
+\end{document}

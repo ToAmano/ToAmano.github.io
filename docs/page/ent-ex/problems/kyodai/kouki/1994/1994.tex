@@ -1,0 +1,72 @@
+ % LuaLaTeX文書; 文字コーAドはUTF-8
+ \documentclass[unicode,12pt, A4j]{ltjsarticle}% 'unicode'が必要
+ %\usepackage{luatexja}% 日本語したい
+ \usepackage{luatexja-fontspec}
+ %\usepackage[hiragino-pron]{luatexja-preset}% IPAexフォントしたい(ipaex)
+ \usepackage[hiragino-pron,deluxe,expert,bold]{luatexja-preset}
+
+ \usepackage[english]{babel}%多言語文書を作成する
+ \usepackage{amsmath,amssymb}%標準数式表現を拡大する
+ \usepackage{physics}
+ \usepackage[subpreambles=true,sort=true]{standalone}
+% \renewcommand{\kanjifamilydefault}{\gtdefault}% 既定をゴシック体に
+ \usepackage[backend=bibtex,style=phys,articletitle=false,biblabel=brackets,chaptertitle=false,pageranges=false]{biblatex}
+ %\usepackage[style=authoryear,backend=bibtex]{biblatex}
+
+
+ %\addbibresource{../references/tio2_ref.bib}
+ \usepackage{mhchem}
+ % あとは欧文の場合と同じ
+
+  \usepackage{caption}
+  \usepackage[subrefformat=parens]{subcaption}
+\title{京大数学理科後期1994年度}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{問題1}
+$a+b+c=0$を満たす実数$a$，$b$，$c$について，$(|a|+|b|+|c|)^2\ge 2(a^2+b^2+c^2)$が成り立つことをしめせ．また，ここで統合が成り立つのはどんな場合か．
+
+
+\section{問題2}
+$a$，$b$，$c$，$d$を整数とし，行列$A=\begin{pmatrix} a&b \\ c&d\end{pmatrix}$を考える．$\begin{pmatrix} a_0&b_0 \\ c_0&d_0\end{pmatrix}=\begin{pmatrix} 1&0 \\ 0&1\end{pmatrix}$とし，自然数$n$に対して$A^n=\begin{pmatrix} a_n&b_n \\ c_n&d_n\end{pmatrix}$とする．このとき，
+
+\begin{enumerate}
+ \item $n\ge 0$について，$c_{n+2}-(a+d)c_{n+1}+(ad-bc)c_n=0$を示せ．
+ \item $p$を素数とし，$a+d$は$p$で割り切れないものとする．ある自然数$k$について，$c_k$と$c_{k+1}$が$p$で割り切れるならば，すべての$n$について$c_n$は$p$で割り切れることを示せ．
+\end{enumerate}
+
+\section{問題3}
+$xy$平面上で，$(1,1)$を中心とする半径$1$の円を$C$とする．$\mathrm{P}$,$\mathrm{Q}$はそれぞれ$x$軸，$y$軸の正の部分にある点で，線分$\mathrm{PQ}$が円$C$に接しているとする．正三角形$\mathrm{PQR}$を第一象限内に描くとき，頂点$\mathrm{R}$の座標$(a,b)$について，$a$，$b$の間に成り立つ関係式を求めよ．
+
+
+\section{問題4}
+$3$人の選手$A$，$B$，$C$が次の方式で優勝を争う．
+
+まず$A$と$B$が対戦する．そのあとは，一つの対戦が終わると，その勝者と休んでいた選手が勝負をする．このようにして対戦を繰り返し，先に$2$勝した選手を優勝者とする．（2連勝でなくてもよい．）
+
+各回の勝負で引き分けはなく，$A$と$B$は互角の力量であるが，$C$が$A$,$B$に勝つ確率はともに$p$である．
+
+\begin{enumerate}
+ \item 2回の対戦で優勝者が決まる確率を求めよ．
+ \item ちょうど4回目の対戦で優勝者が決まる確率を求めよ．
+ \item $A$，$B$，$C$の優勝する確率が等しくなるような$p$の値を求めよ．
+\end{enumerate}
+
+\section{問題5}
+実数$r$は$2\pi r >1$を満たすとする．半径$r$の円の周上に2点$\mathrm{P}$，$\mathrm{Q}$を，孤$\mathrm{PQ}$の長さが$1$になるようにとる．点$\mathrm{R}$が孤$\mathrm{PQ}$上を$\mathrm{P}$から$\mathrm{Q}$まで動くとき，弦$\mathrm{PR}$が動いて通過する部分の面積を$S(r)$とする．
+
+$r$が変化するとき，面積$S(r)$の最大値を求めよ．
+
+\section{問題6}
+$n$を自然数とし，${\displaystyle I_n=\int_{1}^{e}\left(\log x\right)^n \dd x}$とおく．
+\begin{enumerate}
+ \item $I_{n+1}$を$I_n$を用いてあらわせ．
+ \item すべての$n$に対して，$\dfrac{e-1}{n+1}\le I_n \le \dfrac{(n+1)e+1}{(n+1)(n+2)}$が成り立つことを示せ．
+\end{enumerate}
+
+
+\end{document}
