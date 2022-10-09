@@ -1,0 +1,73 @@
+ % LuaLaTeX文書; 文字コーAドはUTF-8
+ \documentclass[unicode,12pt, A4j]{ltjsarticle}% 'unicode'が必要
+ %\usepackage{luatexja}% 日本語したい
+ \usepackage{luatexja-fontspec}
+ %\usepackage[hiragino-pron]{luatexja-preset}% IPAexフォントしたい(ipaex)
+ \usepackage[hiragino-pron,deluxe,expert,bold]{luatexja-preset}
+
+ \usepackage[english]{babel}%多言語文書を作成する
+ \usepackage{amsmath,amssymb}%標準数式表現を拡大する
+ \usepackage{physics}
+ \usepackage[subpreambles=true,sort=true]{standalone}
+% \renewcommand{\kanjifamilydefault}{\gtdefault}% 既定をゴシック体に
+ \usepackage[backend=bibtex,style=phys,articletitle=false,biblabel=brackets,chaptertitle=false,pageranges=false]{biblatex}
+ %\usepackage[style=authoryear,backend=bibtex]{biblatex}
+
+
+ %\addbibresource{../references/tio2_ref.bib}
+ \usepackage{mhchem}
+ % あとは欧文の場合と同じ
+
+  \usepackage{caption}
+  \usepackage[subrefformat=parens]{subcaption}
+\title{京大数学理科後期2001年度}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{問題1}
+方程式$x^2+2y^2+2z^2-2xy-2xz+2yz-5=0$を満たす正の整数の組$(x,y,z)$を全て求めよ．
+
+
+\section{問題2}
+正の整数$n$に対し，多項式$f_n(x)$を，$n=1$に対しては$f_1(x)=1$とし，$n\ge 2$の時は$f_n(x)=(1+x)f_{n-1}(x^2)$で帰納的に定める．$g_n(x)=(1-x)f_n(x)$とおくとき，$g_n(x)$を求めよ．また，$n\to\infty$のとき$f_n(x)$が収束する実数$x$の範囲を求めよ．
+
+
+\section{問題3}
+複素数平面上の単位円に内接する正五角形で，$1$がその頂点の$1$つとなっているものを考える．この正五角形の辺を延長してできる直線の交点のうち，元の正五角形の頂点以外のもので，実部，虚部がともに正であるものを$z$とする．
+\begin{enumerate}
+ \item $\alpha=\cos\dfrac{2\pi}{5}+i\sin\dfrac{2\pi}{5}$とするとき，$\alpha$を用いて$z$をあらわせ．ただし，$i$は虚数単位を表す．
+ \item $3$点$1$，$\alpha^2$，$z$を通る円は，原点を通ることを示せ．
+\end{enumerate}
+
+
+\section{問題4}
+負でない実数$a$に対し，$0\le r<1$で，$a-r$が整数となる実数$r$を$\{a\}$で表す．すなわち，$\{a\}$は，$a$の小数部分を表す．
+\begin{enumerate}
+ \item $\{n\log_{10} 2\}<0.02$となる正の整数$n$を一つ求めよ．
+ \item $10$進法による表示で$2^n$の最高位の数字が$7$となる正の整数$n$を$1$つ求めよ．ただし，$0.3010<\log_{10}2<0.3011$，$0.8450<\log_{10}7<0.8451$である．
+\end{enumerate}
+
+
+\section{問題5}
+行列$A=\begin{pmatrix}a&b\\ c&d\end{pmatrix}$及び実数$a$に対し，行列を用いて著された$x$，$y$に関する$2$つの連立一次方程式
+\begin{itemize}
+ \item[(i)] $A\begin{pmatrix} x\\ y\end{pmatrix}=\begin{pmatrix} s\\ 1-s\end{pmatrix}$
+ \item[(ii)] $A\begin{pmatrix} x\\ y\end{pmatrix}=\begin{pmatrix} 4\\ 5-s\end{pmatrix}$
+\end{itemize}
+について，次の条件（*）を考える．
+\begin{itemize}
+ \item[（*）] 方程式(i)には解が存在して，方程式(ii)には解が存在しない．
+\end{itemize}
+このとき，次の問に答えよ．
+\begin{enumerate}
+ \item 条件（*）が成り立つとき，$\begin{pmatrix} a\\ c\end{pmatrix}$，$\begin{pmatrix} b\\ d\end{pmatrix}$は，いずれも$\begin{pmatrix} s\\ 1-s\end{pmatrix}$の実数倍であることを示せ．
+ \item 条件（*）を満たす$2$つの連立方程式を作ることができるための$s$の条件を求めよ．
+\end{enumerate}
+
+\section{問題6}
+$xy$平面上の単位円$C_1$と，条件$-1<a<-\dfrac{1}{2}$を満たす実数$a$に対し，点$\mathrm{R}(a,0)$を考える．$C_1$上の点$\mathrm{P}$における$C_1$の接線と，$\mathrm{R}$を通りこの接線と直交する直線との交点を$\mathrm{Q}$とする．点$\mathrm{P}$が$C_1$上を一周するときに，$\mathrm{Q}$が描く曲線を$C_2$とする．$C_2$上の点の$x$座標の最小値が$-1$より小さいことを示し，$C_2$で囲まれる図形の面積を求めよ．
+
+\end{document}

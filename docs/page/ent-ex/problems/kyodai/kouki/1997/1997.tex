@@ -1,0 +1,87 @@
+ % LuaLaTeX文書; 文字コーAドはUTF-8
+ \documentclass[unicode,12pt, A4j]{ltjsarticle}% 'unicode'が必要
+ %\usepackage{luatexja}% 日本語したい
+ \usepackage{luatexja-fontspec}
+ %\usepackage[hiragino-pron]{luatexja-preset}% IPAexフォントしたい(ipaex)
+ \usepackage[hiragino-pron,deluxe,expert,bold]{luatexja-preset}
+
+ \usepackage[english]{babel}%多言語文書を作成する
+ \usepackage{amsmath,amssymb}%標準数式表現を拡大する
+ \usepackage{physics}
+ \usepackage[subpreambles=true,sort=true]{standalone}
+% \renewcommand{\kanjifamilydefault}{\gtdefault}% 既定をゴシック体に
+ \usepackage[backend=bibtex,style=phys,articletitle=false,biblabel=brackets,chaptertitle=false,pageranges=false]{biblatex}
+ %\usepackage[style=authoryear,backend=bibtex]{biblatex}
+
+
+ %\addbibresource{../references/tio2_ref.bib}
+ \usepackage{mhchem}
+ % あとは欧文の場合と同じ
+
+  \usepackage{caption}
+  \usepackage[subrefformat=parens]{subcaption}
+\title{京大数学理科後期1997年度}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{問題1}
+$2$つの放物線$C_1:y=x^2$，$C:y=ax^2(a\neq 1)$を考える．$C$を$x$軸方向に$p$，ついで$y$軸方向に$q$だけ平行移動した放物線を$C_{p,q}$と表す．次の条件（*）を満たすような$p$，$q$が存在するための$a$の範囲を求めよ．
+\begin{itemize}
+ \item[（*）] $C_{p,q}$は$C_1$と$2$点で交わる．$1$つの交点は$C_{p,q}$の頂点であり，他の交点においては両者の接線は直交する．
+\end{itemize}
+
+\section{問題2}
+自然数$n$と$n$項数列$a_k (1\le k\le n)$が与えられていて，次の条件（イ），（ロ）を満たしている．
+\begin{itemize}
+ \item[（イ）] $a_k(1\le k\le n)$は全て正整数で，全て$1$と$2n$の間にある．$1\le a_n\le 2n$
+ \item[（ロ）] $s_j=\sum_{k=1}^{j}a_k$とおくとき，$s_j(1\le j\le n)$は全て平方数である．（整数の$2$乗である数を平方数という．）
+\end{itemize}
+このとき
+\begin{enumerate}
+ \item $s_n=n^2$であることを示せ．
+ \item $a_k(1\le k\le n)$を求めよ．
+\end{enumerate}
+
+\section{問題3}
+点$\mathrm{O}$を中心とする半径$1$の球面上に$4$点$\mathrm{A}$，$\mathrm{B}$，$\mathrm{C}$，$\mathrm{D}$があって
+\begin{align*}
+ \overrightarrow{\mathrm{OA}}+ \overrightarrow{\mathrm{OB}}+ \overrightarrow{\mathrm{OC}}+ \overrightarrow{\mathrm{OD}}=\overrightarrow{0}
+\end{align*}
+が成立しているとする．
+\begin{enumerate}
+ \item $|\overrightarrow{\mathrm{AB}}|=|\overrightarrow{\mathrm{CD}}|$であることを示せ．
+ \item 点$\mathrm{B'}$，$\mathrm{D'}$を$\overrightarrow{\mathrm{OB'}}=-\overrightarrow{\mathrm{OB}}$，$\overrightarrow{\mathrm{OD'}}=-\overrightarrow{\mathrm{OD}}$となるようにとる．このとき$\mathrm{A}$，$\mathrm{B}'$，$\mathrm{C}$，$\mathrm{D}'$が互いに異なるならば，これら$4$点は，この順で，ある長方形の頂点となっていることを示せ．
+\end{enumerate}
+
+\section{問題4}
+次の連立方程式（*）を考える．
+\begin{align*}
+ (*) 
+\begin{cases}
+ y=2x^2-1 \\
+ z=2y^2-1 \\
+ x=2z^2-1 
+\end{cases}
+\end{align*}
+\begin{enumerate}
+ \item $(x,y,z)=(a,b,c)$が（*）の実数解であるとき，$|a|\le 1$，$|b|\le 1$，$|c|\le 1$であることを示せ．
+ \item （*）は全部で$8$組の相異なる実数解をもつことを示せ．
+\end{enumerate}
+
+\section{問題5}
+箱の中に青，赤，黄のカードがそれぞれ$3$枚，$2$枚，$1$枚，合計$6$枚入っている．$1$回の試行で，箱の中からカードを$1$枚取り出し，取り出したカードと同じ色のカードを$1$枚加えて，再び箱の中に戻す．従って，$n$回の試行を完了した時に，$(n+6)$枚のカードが箱の中にある．$n$回目の試行が完了した時箱の中にある青のカードの枚数の期待値$E(n)$を求めよ．
+
+\section{問題6}
+媒介変数表示された曲線
+\begin{align*}
+ C: x=e^{-t}\cos t, y=e^{-t}\sin t & \left(0\le t\le \frac{\pi}{2}\right)
+\end{align*}
+を考える．
+\begin{enumerate}
+ \item $C$の長さ$L$を求めよ．
+ \item $C$と$x$軸，$y$軸で囲まれた領域の面積$S$を求めよ．
+\end{enumerate}
+\end{document}

@@ -1,0 +1,78 @@
+ % LuaLaTeX文書; 文字コーAドはUTF-8
+ \documentclass[unicode,12pt, A4j]{ltjsarticle}% 'unicode'が必要
+ %\usepackage{luatexja}% 日本語したい
+ \usepackage{luatexja-fontspec}
+ %\usepackage[hiragino-pron]{luatexja-preset}% IPAexフォントしたい(ipaex)
+ \usepackage[hiragino-pron,deluxe,expert,bold]{luatexja-preset}
+
+ \usepackage[english]{babel}%多言語文書を作成する
+ \usepackage{amsmath,amssymb}%標準数式表現を拡大する
+ \usepackage{physics}
+ \usepackage[subpreambles=true,sort=true]{standalone}
+% \renewcommand{\kanjifamilydefault}{\gtdefault}% 既定をゴシック体に
+ \usepackage[backend=bibtex,style=phys,articletitle=false,biblabel=brackets,chaptertitle=false,pageranges=false]{biblatex}
+ %\usepackage[style=authoryear,backend=bibtex]{biblatex}
+
+
+ %\addbibresource{../references/tio2_ref.bib}
+ \usepackage{mhchem}
+ % あとは欧文の場合と同じ
+
+  \usepackage{caption}
+  \usepackage[subrefformat=parens]{subcaption}
+\title{京大数学理科後期1998年度}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{問題1}
+$2$次の正方行列$X$と$Y$は$XY=YX$のとき交換可能であるという．$2$次の正方行列$A$と$B$は交換可能ではないが，$A$と$AB$は交換可能であり$A$と$BA$も交換可能であるとする．このとき
+\begin{enumerate}
+ \item $A=\begin{pmatrix} a&b\\ c&d \end{pmatrix}$とするとき，$ad-bc=0$を示せ．
+ \item $O$を零行列とするとき，$A^2=0$であることを示せ．
+\end{enumerate}
+
+
+\section{問題2}
+関数$f_n(x)$，$(n=1,2,3,\cdots)$は$f_1(x)=4x^2+1$，
+\begin{align*}
+ f_n(x)=\int_{0}^{1}\left(3x^2tf_{n-1}'(t)+3f_{n-1}(t)\right)\dd t, (n=2,3,4,\cdots)
+\end{align*}
+で帰納的に定義されている．この$f_n(x)$を求めよ．
+
+\section{問題3}
+$\mathrm{A}_1$，$\mathrm{A}_2$，$\mathrm{A}_3$は$xy$平面上の点で同一直線上にはないとする．$3$つの一次式
+\begin{align*}
+ f_1(x,y)=a_1x+b_1y+c_1, f_2(x,y)=a_2x+b_2y+c_2, f_3(x,y)=a_3x+b_3y+c_3
+\end{align*}
+は方程式$f_1(x,y)=0$，$f_2(x,y)=0$，$f_3(x,y)=0$によりそれぞれ直線$\mathrm{A_2A_3}$，$\mathrm{A_3A_1}$，$\mathrm{A_1A_2}$を表すとする．このとき実数$u$，$v$をうまくとると方程式
+\begin{align*}
+ uf_1(x,y)f_2(x,y)+vf_2(x,y)f_3(x,y)+f_3(x,y)f_1(x,y)=0
+\end{align*}
+が$3$点$\mathrm{A}_1$，$\mathrm{A}_2$，$\mathrm{A}_3$を通る円を表すようにできることを示せ．
+
+\section{問題4}
+$a$は$0<a<\pi$を満たす定数とする．$n=0,1,2,\cdots$に対し，$n\pi < x, (n+1)\pi$の範囲に$\sin(x+a)=x\sin x$を満たす$x$がただ一つ存在するので，この値を$x_n$とする．
+\begin{enumerate}
+ \item 極限値${\displaystyle \lim_{n\to\infty}(x_n-n\pi)}$を求めよ．
+ \item 極限値${\displaystyle \lim_{n\to\infty}n(x_n-n\pi)}$を求めよ．
+\end{enumerate}
+
+
+\section{問題5}
+$xy$平面上に$2n$個の点$\mathrm{A}_i(i,1)$，$\mathrm{B}_i(i,1) (i=1,2,\cdots,n)$がある．上下に隣り合う$2$点$\mathrm{A}_i$，$\mathrm{B}_i$を結ぶ線分を「縦辺」$(i=1,2,\cdots,n)$，左右に隣り合う$2$点$\mathrm{A}_i$，$\mathrm{A}_{i+1}$および$\mathrm{B}_i$，$\mathrm{B}_{i+1}$を結ぶ線分を「横辺」$(i=1,2,\cdots,n-1)$と言う．全ての横辺には，各辺独立に，確率$p$で右向きの矢印が，確率$1-p$で$\times$印が描かれている．また全ての縦辺には常に上向きの矢印が描かれている．このとき点$\mathrm{A}_1(1,1)$から出発して，矢印の描かれている辺だけを通り，矢印の方向に進んで，点$\mathrm{B}_{n}(n,2)$に到達する経路が少なくとも$1$本存在する確率を$Q_n$とする．以下の問に答えよ．
+\begin{enumerate}
+ \item $Q_2$，$Q_3$を求めよ．
+ \item $Q_n$を求めよ．
+\end{enumerate}
+
+
+\section{問題6}
+自然数$n$にたいし，${\displaystyle I_n=\int_{0}^{\pi/4}\cos^n 2\theta \sin^3\theta \dd\theta}$とする．
+\begin{enumerate}
+ \item $I_2$の値を求めよ．
+ \item $xy$平面上で原点$\mathrm{O}$から点$\mathrm{P}(x,y)$への距離を$r$，$x$軸の正の方向と半直線$\mathrm{OP}$のなす（弧度法による）角を$\theta$とする．方程式$r=\sin 2\theta$，$\left(0\le\theta\le\dfrac{\pi}{2}\right)$で表される曲線を，直線$y=x$の周りに回転して得られる局面が囲む立体の体積を$V$とするとき，$V=3\pi I_3+2\pi I_2$と表されることを示せ．
+\end{enumerate}
+\end{document}

@@ -1,0 +1,73 @@
+ % LuaLaTeX文書; 文字コーAドはUTF-8
+ \documentclass[unicode,12pt, A4j]{ltjsarticle}% 'unicode'が必要
+ %\usepackage{luatexja}% 日本語したい
+ \usepackage{luatexja-fontspec}
+ %\usepackage[hiragino-pron]{luatexja-preset}% IPAexフォントしたい(ipaex)
+ \usepackage[hiragino-pron,deluxe,expert,bold]{luatexja-preset}
+
+ \usepackage[english]{babel}%多言語文書を作成する
+ \usepackage{amsmath,amssymb}%標準数式表現を拡大する
+ \usepackage{physics}
+ \usepackage[subpreambles=true,sort=true]{standalone}
+% \renewcommand{\kanjifamilydefault}{\gtdefault}% 既定をゴシック体に
+ \usepackage[backend=bibtex,style=phys,articletitle=false,biblabel=brackets,chaptertitle=false,pageranges=false]{biblatex}
+ %\usepackage[style=authoryear,backend=bibtex]{biblatex}
+
+
+ %\addbibresource{../references/tio2_ref.bib}
+ \usepackage{mhchem}
+ % あとは欧文の場合と同じ
+
+  \usepackage{caption}
+  \usepackage[subrefformat=parens]{subcaption}
+\title{京大数学理科後期2000年度}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{問題1}
+$\alpha$，$\beta$，$\gamma$は互いに相異なる複素数とする．
+\begin{enumerate}
+ \item 複素数平面上で$\dfrac{z-\beta}{z-\alpha}$の虚数部分が正となる$z$の存在する範囲を図示せよ．
+ \item 複素数$z$が，$(z-\alpha)(z-\beta)+(z-\beta)(z-\gamma)+(z-\gamma)(z-\alpha)=0$を満たしているとき，$z$は$\alpha$，$\beta$，$\gamma$を頂点とする三角形の内部に存在することを示せ．ただし，$\alpha$，$\beta$，$\gamma$は同一直線上にはないものとする．
+\end{enumerate}
+
+
+\section{問題2}
+\begin{enumerate}
+ \item $x\ge 0$のとき，不等式$e^x\ge 1+\dfrac{1}{2}x^2$が成立していることを示せ．
+ \item 自然数$n$に対して関数$f_n(x)=n^2(x-1)e^{-nx}$の$x\ge 0$における最大値を$M_n$とする．このとき$\sum_{n=1}^{\infty}M_n$を求めよ，
+\end{enumerate}
+
+\section{問題3}
+$xy$平面上の点で$x$座標，$y$座標がともに整数である点を格子点という．$a$，$k$は整数で$a\ge 2$とし，直線$L: ax+(a^2+1)y=k$を考える．
+\begin{enumerate}
+ \item 直線$L$上の格子点を一つ求めよ．
+ \item $k=a(a^2+1)$のとき，$x>0$，$y>0$の領域に直線$L$上の格子点は存在しないことを示せ．
+ \item $k>a(a^2+1)$ならば，$x>0$，$y>0$の領域に直線$L$上の格子点が存在することを示せ．
+\end{enumerate}
+
+
+\section{問題4}
+直方体$\mathrm{ABCD}-\mathrm{A'B'C'D'}$において，四角形$\mathrm{ABCD}$と四角形$\mathrm{A'B'C'D'}$は向かい合った$1$組の面であり，$\mathrm{AA'}$，$\mathrm{BB'}$，$\mathrm{CC'}$，$\mathrm{DD'}$はこの直方体の辺である．ここで$\mathrm{AA'}=1$，$\mathrm{AB}=1$，$\mathrm{AD}=\sqrt{2}$とする．この直方体の内部を通る線分$\mathrm{AC'}$上に点$\mathrm{P}$をとり，$\mathrm{P}$を通り$\mathrm{AC'}$に垂直な平面による直方体の切り口を考える．
+\begin{enumerate}
+ \item $\mathrm{P}$が線分$\mathrm{AC'}$の中点であるとき，切り口は点$\mathrm{B'}$，$\mathrm{D}$を通ることを示せ．
+ \item $\mathrm{AP}=x$であるとき，切り口の面積$S(x)$を求めよ．
+\end{enumerate}
+
+\section{問題5}
+$0$と相異なる複素数$\alpha$に対して数列$\{a_n\}$を$a_n=\alpha^n+\alpha^{-n}$で定める．全ての数$n$について$|a_n|<2$が成立しているとする．
+\begin{enumerate}
+ \item $|\alpha|=1$が成立することを示せ．
+ \item $|a_m|>1$となる自然数$m$が存在することを示せ．
+\end{enumerate}
+
+\section{問題6}
+関数$f(x)$を${\displaystyle f(x)=\int_0^x\frac{1}{1+t^2}\dd t}$で定める．
+\begin{enumerate}
+ \item $y=f(x)$の$x=1$における法線の方程式を求めよ．
+ \item （1）で求めた法線と$x$軸及び$y=f(x)$のグラフによって囲まれる図形の面積を求めよ．
+\end{enumerate}
+\end{document}

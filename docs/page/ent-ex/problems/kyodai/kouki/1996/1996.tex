@@ -1,0 +1,71 @@
+ % LuaLaTeX文書; 文字コーAドはUTF-8
+ \documentclass[unicode,12pt, A4j]{ltjsarticle}% 'unicode'が必要
+ %\usepackage{luatexja}% 日本語したい
+ \usepackage{luatexja-fontspec}
+ %\usepackage[hiragino-pron]{luatexja-preset}% IPAexフォントしたい(ipaex)
+ \usepackage[hiragino-pron,deluxe,expert,bold]{luatexja-preset}
+
+ \usepackage[english]{babel}%多言語文書を作成する
+ \usepackage{amsmath,amssymb}%標準数式表現を拡大する
+ \usepackage{physics}
+ \usepackage[subpreambles=true,sort=true]{standalone}
+% \renewcommand{\kanjifamilydefault}{\gtdefault}% 既定をゴシック体に
+ \usepackage[backend=bibtex,style=phys,articletitle=false,biblabel=brackets,chaptertitle=false,pageranges=false]{biblatex}
+ %\usepackage[style=authoryear,backend=bibtex]{biblatex}
+
+
+ %\addbibresource{../references/tio2_ref.bib}
+ \usepackage{mhchem}
+ % あとは欧文の場合と同じ
+
+  \usepackage{caption}
+  \usepackage[subrefformat=parens]{subcaption}
+\title{京大数学理科後期1996年度}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{問題1}
+$n$は自然数とする．
+\begin{enumerate}
+ \item 全ての実数$\theta$に対し
+       \begin{align*}
+	\cos n\theta=f_n(\cos\theta), \sin n\theta=g_n(\sin\theta)\sin\theta
+       \end{align*}
+       を満たし，係数がともに全て整数である$n$次式$f_n(x)$と$n-1$次式$g_n(x)$が存在することを示せ．
+ \item $f_n(x)=ng_n(x)$であることを示せ．
+ \item $p$を$3$以上の素数とするとき，$f_p(x)$の$p-1$次以下の係数は全て$p$で割り切れることを示せ．
+\end{enumerate}
+
+
+\section{問題2}
+$m$，$n$は自然数で，$m<n$を満たすものとする．$m^n+1$，$n^m+1$がともに$10$の倍数となる$m$，$n$を$1$組与えよ．
+
+\section{問題3}
+平面上に$60$度で交わる$2$直線$l$，$m$がある．この平面上に点$\mathrm{P}_1$をとり，$\mathrm{P}_1$と直線$l$について対称な点を$\mathrm{Q}_1$，$\mathrm{Q}_1$と直線$m$について対称な点を$\mathrm{P}_2$と定め，以下同様に点$mathrm{Q}_2$，$\mathrm{P}_3$，$\cdots$を定める．
+
+\begin{enumerate}
+ \item $\mathrm{P}_4=\mathrm{P}_1$となることを示せ．
+ \item 点$\mathrm{P}_1$が$2$直線$l$，$m$の交点を中心とし半径$1$の円周上を動くとき，点$\mathrm{P}_1$，$\mathrm{Q}_1$，$\mathrm{P}_2$,$\mathrm{Q}_2$，$\mathrm{P}_3$，$\mathrm{Q}_3$，$\mathrm{P}_4$をこの順に結ぶ折れ線の長さの最大値を求めよ．
+\end{enumerate}
+
+\section{問題4}
+$x$，$y$は$x+y>0$，$x-y>0$を満たす実数とする．ある四面体の隣り合う$2$辺の長さが$\sqrt{x+y}$，$\sqrt{x-y}$で，残り$4$辺の長さは全て$1$であるという．このような条件を満たす点$(x,y)$の存在範囲を図示せよ．
+
+\section{問題5}
+$a$は与えられた実数で，$0<a\le 1$を満たすものとする．$xyz$空間内に$1$辺の長さ$2a$の正三角形$\triangle \mathrm{PQR}$を考える．辺$\mathrm{PQ}$は$xy$平面上にあり，$\triangle\mathrm{PQR}$を含む平面は$xy$平面と垂直で，さらに点$\mathrm{R}$の$z$座標は正であるとする．
+\begin{enumerate}
+ \item 辺$\mathrm{PQ}$が$xy$平面の単位円の内部（周を含む）を自由に動くとき，$\triangle\mathrm{PQR}$（内部を含む）が動いてできる立体の体積$V$を求めよ．
+ \item $a$が$0<a\le 1$の範囲を動くとき，体積$V$の最大値を求めよ．
+\end{enumerate}
+
+\section{問題6}
+$n$を$3$以上の整数とする．円周上の$n$等分点のある点を出発点とし，$n$等分点を一定の方向に次のようにすすむ．各点でコインを投げ，表が出れば次の点に進み，裏が出れば次の点を飛び越しその次の点にすすむ．
+
+\begin{enumerate}
+ \item 最初に$1$周回ったとき，出発点を飛び越す確率$p_n$を求めよ．
+ \item $k$は$2$以上の整数とする．$k-1$周目までは出発点を飛び越し，$k$周目に初めて出発点を踏む確率を$q_{n,k}$とする．このとき$\lim_{n\to\infty}q_{n,k}$を求めよ．
+\end{enumerate}
+\end{document}
