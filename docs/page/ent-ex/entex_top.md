@@ -105,6 +105,19 @@ pdf化した答案の大半には図がないので，時間がある時に順�
 | 1992 | [問題][ukk92] |   |   |   |   |   |   |
 | 1993 | [問題][ukk93] |   |   |   |   |   |   |
 | 1994 | [問題][ukk94] |   |   |   |   |   |   |
+| 1995 | [問題][ukk95] |   |   |   |   |   |   |
+| 1996 | [問題][ukk96] |   |   |   |   |   |   |
+| 1997 | [問題][ukk97] |   |   |   |   |   |   |
+| 1998 | [問題][ukk98] |   |   |   |   |   |   |
+| 1999 | [問題][ukk99] |   |   |   |   |   |   |
+| 2000 | [問題][ukk00] |   |   |   |   |   |   |
+| 2001 | [問題][ukk01] |   |   |   |   |   |   |
+| 2002 | [問題][ukk02] |   |   |   |   |   |   |
+| 2003 | [問題][ukk03] |   |   |   |   |   |   |
+| 2004 | [問題][ukk04] |   |   |   |   |   |   |
+| 2005 | [問題][ukk05] |   |   |   |   |   |   |
+| 2006 | [問題][ukk06] |   |   |   |   |   |   |
+
 
 
 
@@ -449,3 +462,15 @@ pdf化した答案の大半には図がないので，時間がある時に順�
 [ukk92]: problems/kyodai/kouki/1992/1992.pdf
 [ukk93]: problems/kyodai/kouki/1993/1993.pdf
 [ukk94]: problems/kyodai/kouki/1994/1994.pdf
+[ukk95]: problems/kyodai/kouki/1995/1995.pdf
+[ukk96]: problems/kyodai/kouki/1996/1996.pdf
+[ukk97]: problems/kyodai/kouki/1997/1997.pdf
+[ukk98]: problems/kyodai/kouki/1998/1998.pdf
+[ukk99]: problems/kyodai/kouki/1999/1999.pdf
+[ukk00]: problems/kyodai/kouki/2000/2000.pdf
+[ukk01]: problems/kyodai/kouki/2001/2001.pdf
+[ukk02]: problems/kyodai/kouki/2002/2002.pdf
+[ukk03]: problems/kyodai/kouki/2003/2003.pdf
+[ukk04]: problems/kyodai/kouki/2004/2004.pdf
+[ukk05]: problems/kyodai/kouki/2005/2005.pdf
+[ukk06]: problems/kyodai/kouki/2006/2006.pdf
