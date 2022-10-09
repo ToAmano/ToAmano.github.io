@@ -105,8 +105,10 @@ gitやgithubの使い方について．
 ### [MacのOSXの設定・ソフトなど](page/mac/mac_top.md)
 
 ---
-### [大学入試過去問集](page/ent-ex/entex_top.md)
+### [大学入試過去問集](page/ent-ex/entex_top.org)
 
 ---
 
 ### [資格試験メモ](page/cert/cert_top.md)
+
+---
