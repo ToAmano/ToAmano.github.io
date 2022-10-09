@@ -33,9 +33,10 @@ repository: dirac6582/dirac6582.github.io.git
 # Build settings
 # if you are using minima, then check https://github.com/jekyll/minima for more information
 # theme: minima
-#plugins:
-#  - jekyll-feed
-
+plugins:
+  - jekyll-feed
+  - jekyll-org
+  
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
