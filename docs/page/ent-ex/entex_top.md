@@ -580,3 +580,33 @@ pdf化した答案の大半には図がないので，時間がある時に順�
 [tk87]: solutions/toukou/toukou-zenki/t1987/t1987.pdf
 [tk88]: solutions/toukou/toukou-zenki/t1988/t1988.pdf
 [tk89]: solutions/toukou/toukou-zenki/t1989/t1989.pdf
+[tk90]: solutions/toukou/toukou-zenki/t1990/t1990.pdf
+[tk91]: solutions/toukou/toukou-zenki/t1991/t1991.pdf
+[tk92]: solutions/toukou/toukou-zenki/t1992/t1992.pdf
+[tk93]: solutions/toukou/toukou-zenki/t1993/t1993.pdf
+[tk94]: solutions/toukou/toukou-zenki/t1994/t1994.pdf
+[tk95]: solutions/toukou/toukou-zenki/t1995/t1995.pdf
+[tk96]: solutions/toukou/toukou-zenki/t1996/t1996.pdf
+[tk97]: solutions/toukou/toukou-zenki/t1997/t1997.pdf
+[tk98]: solutions/toukou/toukou-zenki/t1998/t1998.pdf
+[tk99]: solutions/toukou/toukou-zenki/t1999/t1999.pdf
+[tk00]: solutions/toukou/toukou-zenki/t2000/t2000.pdf
+[tk01]: solutions/toukou/toukou-zenki/t2001/t2001.pdf
+[tk02]: solutions/toukou/toukou-zenki/t2002/t2002.pdf
+[tk03]: solutions/toukou/toukou-zenki/t2003/t2003.pdf
+[tk04]: solutions/toukou/toukou-zenki/t2004/t2004.pdf
+[tk05]: solutions/toukou/toukou-zenki/t2005/t2005.pdf
+[tk06]: solutions/toukou/toukou-zenki/t2006/t2006.pdf
+[tk07]: solutions/toukou/toukou-zenki/t2007/t2007.pdf
+[tk08]: solutions/toukou/toukou-zenki/t2008/t2008.pdf
+[tk09]: solutions/toukou/toukou-zenki/t2009/t2009.pdf
+[tk10]: solutions/toukou/toukou-zenki/t2010/t2010.pdf
+[tk11]: solutions/toukou/toukou-zenki/t2011/t2011.pdf
+[tk12]: solutions/toukou/toukou-zenki/t2012/t2012.pdf
+[tk13]: solutions/toukou/toukou-zenki/t2013/t2013.pdf
+[tk14]: solutions/toukou/toukou-zenki/t2014/t2014.pdf
+
+
+
+
+
