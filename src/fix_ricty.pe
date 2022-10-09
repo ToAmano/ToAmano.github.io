@@ -1,6 +1,0 @@
-#!/opt/homebrew/bin/fontforge -lang ff
-
-Open($1)
-Select(0u0060)
-SetGlyphClass("base")
-Generate($1)
