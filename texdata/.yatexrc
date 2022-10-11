@@ -1,6 +1,0 @@
-(setq tmp-env-table '(
-("lstlisting")
-))
-(setq YaTeX::usepackage-alist-local '(
-("istings,jlistings")
-))

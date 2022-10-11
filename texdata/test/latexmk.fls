@@ -1,8 +1,0 @@
-PWD /Users/AMANOTOMOHITO/programs/texdata/test
-INPUT /usr/local/texlive/2019/texmf.cnf
-INPUT /usr/local/texlive/2019/texmf-dist/web2c/texmf.cnf
-INPUT /usr/local/texlive/2019/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT latexmk.tex
-OUTPUT latexmk.log
-INPUT /usr/local/texlive/2019/texmf-dist/tex/platex/base/jarticle.cls
-INPUT /usr/local/texlive/2019/texmf-dist/tex/platex/base/jarticle.cls

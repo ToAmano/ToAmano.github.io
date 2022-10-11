@@ -24,8 +24,34 @@ LaTeXを利用すると大体以下のようなことができる．主にレポ
 
 
 --- 
+
+## 日本語対応
+
+LaTexはそのままでは日本語が使えず，対応させるための専用のdocumentclassなどを利用する必要がある．ここではlualatexでの設定方法について書いておく．lualatexでは[`luatexja`](https://texwiki.texjp.org/?LuaTeX-ja)というパッケージが日本語対応をやってくれるのでこれを利用する．ただし，タイプセットにかなり時間がかかるという弱点があり，日本語文書を多用する場合は従来よく利用されているupTeXなどの方がよいかも．．．
+
+```latex
+\documentclass[unicode,12pt, A4j]{ltjsarticle}% 'unicode'が必要
+\usepackage{luatexja}
+
+% フォント指定する場合はこっち
+% \usepackage[hiragino-pron,deluxe,expert,bold]{luatexja-preset}
+
+% あとは欧文の場合と同じ
+\begin{document}
+こんにちは．これは日本語対応の文書です．
+\end{document}
+```
+
+大切なのは以下の2点．
+
+- documentclassで`ltjsarticle`を指定する．他に標準で`ltjarticle`，`ltjbook`, `ltjreport`，`ltjtarticle`，`ltjtbook`，`ltjtreport`，`ltjsbook`，`ltjsreport`，`ltjskiyou`が対応している．日本語用のドキュメントクラスの先頭に`lt`がついている．
+- `\usepackage{luatexja}`でパッケージを読み込む．
+
+`luatexja`にはさらに先進的なパッケージがいくつか存在し，たとえば`luatexja-preset`パッケージはフォントの指定ができるパッケージで，上の例ではヒラギノフォントを使うように指定してある．詳しいことはluatexjaのドキュメントpdfを参照．
+
 ## 基本的な使い方
 ### 数式の挿入，数学記号など
+
 数式の挿入は文中，または独立した環境内どちらでも可能．文中に挿入する場合は$$で囲み，独立した環境としてはデフォルトで`equation`環境が用意されている．これらの環境の中ではギリシャ文字や数学記号などのコマンドを利用できる．デフォルトの状態でも数多くの数学記号が定義されているが，さらに追加で使うと便利なパッケージに`amsmath`や`physics`環境がある．くわしくは[数式に関する記述](latex_equation.md)を参照．
 
 
