@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title:  "プログラミング用フォントRictyを試す"
 date:   2022-09-06 10:00:00 +0900
 categories: vscode 
