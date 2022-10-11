@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title:  "管理者権限のないLinuxマシンにzshをインストールする"
 date:   2022-10-06 21:00:00 +0900
 categories: linux
