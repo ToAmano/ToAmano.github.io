@@ -127,6 +127,18 @@ https://tex.stackexchange.com/questions/124453/connecting-subplots
 
 https://latexdraw.com/exploring-tikz-arrows/
 
+
+
+### legendの場所を変更する．
+
+
+自分の手で設定したい場合．0.5や0.1は図表全体を0~1で表した時の場所を表している．マイナスをつけると図の外を指定していることになる．
+```latex
+legend style={at={(0.5,-0.1)},anchor=north}
+```
+
+<!-- https://tex.stackexchange.com/questions/188147/how-to-put-legend-below-the-chart -->
+
 ### 参考文献
 #### 全体的なことに関して
 [基本的なこと1](https://bombrary.github.io/blog/posts/tikz-note01/)
@@ -211,7 +223,6 @@ https://tikz.dev/library-external
 - 図表のサイズ指定
   
   [APSのマニュアル](https://journals.aps.org/prl/authors)によると横幅は8.6cmにするべき？ これがおそらく2カラム組の場合の1カラム幅に対応しているのだろう．これもstandalone環境だとうまくいっているように見える．
-
 
 
 
