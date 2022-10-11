@@ -85,6 +85,19 @@ pythonを使う場合，プロジェクトごとに仮想環境を作成し，�
 - __（アンダースコア2つ）をクラスの変数やメソッドの前につけた場合
     ネームマングリング(Name Mangling)が適用される．アンダースコア一つと違ってクラス外からのアクセスができなくなる．
 
-## 自作関数や自作クラスに関して
+## 自作モジュールに関して
 
 <!-- https://qiita.com/kzkadc/items/e4fc7bc9c003de1eb6d0 -->
+
+
+自作モジュールをjupyter環境でリロードするには
+
+```python
+%load_ext autoreload
+%autoreload 2 
+```
+
+の2行を書いてこの行を再評価する．
+
+
+<!-- https://sandmark.hateblo.jp/entry/2017/10/22/180000 -->

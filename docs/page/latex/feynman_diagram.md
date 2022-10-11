@@ -3,7 +3,9 @@
 
 <!-- https://qiita.com/hermite2053/items/2209741ce7709dcc1c21 -->
 
-LaTeXでファインマンダイヤグラムを作成するために，`TikZ-FeynHand`と`TikZ-Feynman`，`FeynMF`が知られている．
+LaTeXでファインマンダイヤグラムを作成するために，`TikZ-FeynHand`と`TikZ-Feynman`，`FeynMF`が知られている．個人的な意見としてはこのうち最もカスタマイズ性が高い代わりに記述が煩雑なのが`TikZ-FeynHand`で，残り二つは記述が容易という印象だ．いずれも素粒子物理をターゲットにして書かれていて，自分のように物性物理分野で使う場合にはなかなか難しいところもあるが他に選択肢がないのでしょうがない．
+
+ここでは自分がメインで使っている`TikZ-FeynHand`の使い方について．
 
 
 ## TikZ-FeynHandの使い方

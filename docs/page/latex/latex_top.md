@@ -24,21 +24,21 @@ LaTeXを利用すると大体以下のようなことができる．主にレポ
 
 
 --- 
-## 数式の挿入，数学記号など
-
+## 基本的な使い方
+### 数式の挿入，数学記号など
 数式の挿入は文中，または独立した環境内どちらでも可能．文中に挿入する場合は$$で囲み，独立した環境としてはデフォルトで`equation`環境が用意されている．これらの環境の中ではギリシャ文字や数学記号などのコマンドを利用できる．デフォルトの状態でも数多くの数学記号が定義されているが，さらに追加で使うと便利なパッケージに`amsmath`や`physics`環境がある．くわしくは[数式に関する記述](latex_equation.md)を参照．
 
 
-## 箇条書き
+### 箇条書き
 
 LaTeXでは箇条書き用の環境も標準で用意されている．ぶっちゃけ自分の場合は通常の文書で使うことは少ないのだが，後述のスライドショーでは頻繁に用いる．詳細は[こちら](latex_item.md)を参照．
 <!-- http://www.yamamo10.jp/yamamoto/comp/latex/make_doc/item/item.php -->
 
 
 
-## 表や図の挿入
+### 表や図の挿入
 
-latexでは図と表を配置するための専用のfigure環境とtable環境が用意されている．基本的にこれらの環境は図表用の場所を用意するだけで，中身についてはまた他の環境を利用する．表の作成はtablular環境でかなり容易に行うことができる一方，図の作成のための代表的な環境であるtikz環境はなかなか思い通りの図を作るのには時間がかかる印象がある．
+latexでは図と表を配置するための専用のfigure環境とtable環境が用意されている．基本的にこれらの環境は図表用の場所を用意するだけで，中身についてはまた他の環境を利用する．表の作成はtablular環境でかなり容易に行うことができる一方，図の作成のための代表的な環境であるtikz環境はなかなか思い通りの図を作るのには時間がかかる印象がある．もちろん，図はgnuplotなどの他のツールで作成したものを挿入することもできる．
 
 図の挿入に関して個人的に苦戦するポイントはおよそ以下の3点に集約される．
 
@@ -49,11 +49,11 @@ latexでは図と表を配置するための専用のfigure環境とtable環境�
 tabular+table環境を利用した表の作り方については[ここ](table.md)を参照．figure環境を利用した基本的な図表の挿入方法については[ここ](insert_figure.md)を参照．図の作成については記述することも多いので後述．
 
 
-## 図の作り方
+### 図の作り方
 
 もちろんpythonやgnuplotなどで作成した図をincludegraphicsで取り込んでも良いが，文字のサイズなどをLaTeX文書と一緒に扱いたい場合はグラフ自体をLaTeX内で作成した方がよい．本節ではその概要についてまとめる．LaTeXで図を作成する方法はいくつかあって，LaTeXのパッケージであるTikz/PGFを利用する方法や，外部コマンドの力を借りるasymptote環境，gnuplot環境を利用する方法がある．自分の場合は基本的にはTikz/PGFの利用から考えて，やりたいことが実現できないなら他を当たるというようにしている．tikz/pdfplotに関する詳細は[別ページ](pgfplots.md)を参照．
 
-外部コマンドを利用する場合，一番手っ取り早いのはgnuplotと思う．一旦gnuplotでtikzファイルを作成し，そのtikzファイルをlatexに読み込む方法か，latex内でgnuplot環境を利用する方法が使える．他にpythonを利用する人にはmatplotlib+tikzという組み合わせも利用できる．asymptoteはこれらに比べるとドキュメントが充実していないが，環境光を利用した作図ができるので立体図形などの綺麗なグラフィックを作る時（例えば結晶構造とか）には非常に有効．
+外部コマンドを利用する場合，一番手っ取り早いのはgnuplotと思う．一旦gnuplotでtikzファイルを作成し，そのtikzファイルをlatexに読み込む方法か，latex内でgnuplot環境を利用する方法が使える．他にpythonを利用する人はmatplotlib+tikzという組み合わせも利用できる．asymptoteはこれらに比べるとドキュメントが充実していないが，環境光を利用した作図ができるので立体図形などの綺麗なグラフィックを作る時（例えば結晶構造とか）には非常に有効．
 
 <!--
 https://qiita.com/satl/items/0c11c8808b43f806ee21
@@ -76,9 +76,11 @@ defaultだと基本的な色しか使えないが，中にはyellowなど蛍光�
 ### 結晶構造の図を作る
 
 VESTAソフトウェアなどの既存ソフトを利用することもできるが，公開文書用に自分で色々手を加えたい場合，asymptoteを利用することで綺麗な図が作成できる．
+<!--
 https://tex.stackexchange.com/questions/141363/draw-realistic-3d-crystal-structures-diamond
 https://tex.stackexchange.com/questions/306846/draw-a-3d-srtio3-structure
 https://tex.stackexchange.com/questions/554769/how-to-draw-an-arrow-over-a-rod-in-crystal-structure
+-->
 [asymptote公式マニュアル](https://asymptote.sourceforge.io/asymptote.pdf)
 
 
@@ -92,11 +94,11 @@ https://tex.stackexchange.com/questions/12175/biblatex-submitting-to-a-journal
 
 参考文献を処理するツールとしてbibtexというツールが用意されている． 参考文献の番号などの処理を自動でやってくれるのである程度以上大きい文書ではほぼ必須と思う．以下の3つのバリエーションがよく利用されている．
 
-| プログラム | | 利用できるパッケージなど |
-|---|---|---|
-| BibTeX | 古くからある| natbib |
-| upBibTeX | 和文用 | |
-| biber    | 完全なunicodeを提供 | biblatex | 
+| プログラム    |               | 利用できるパッケージなど |
+| -------- | ------------- | ------------ |
+| BibTeX   | 古くからある        | natbib       |
+| upBibTeX | 和文用              |              |
+| biber    | 完全なunicodeを提供 | biblatex     |
 
 基本的には`biber`が最も新しいのでこれを使っていれば問題ないのだが，論文投稿の際にジャーナルによってbibtexだったりするので使い分ける必要も生じる．細かい使い方については[こちらのページ](bibtex.md)を参照．
 
@@ -117,7 +119,7 @@ LaTeXではスライドショーを作成することもできる．スライド
 
 
 ## githubでの文書管理
-https://zenn.dev/junkato/articles/github-actions-to-generate-pdfs-for-pages
+<!-- https://zenn.dev/junkato/articles/github-actions-to-generate-pdfs-for-pages -->
 
 
 
@@ -142,14 +144,22 @@ TikZをベースとした`chemfig`パッケージがある．
 \usepackage{chemfig}
 \chemfig{*6(-=-=-=)} 
 ```
+## 単位を書くため
+
+単位を書くときには数字との間にスペースが必要，ローマン体（立体）でないといけないなどの細かい習慣があって意外と普通にlatex文書を書くのは面倒くさい．例えば以下のようにする必要がある．
+
+```latex
+\begin{document}
+単位と数字の間にはスペースが必要で，数式環境内だと通常のスペースは無視されてしまうために$1\,\mathrm{m}$のように明示的にスペースを入れる必要がある．また，単位はローマン体，変数はイタリックという決まりがあるので，いちいちmathrmかtextで修飾しないといけない．
+```
+
+このような面倒を回避するため，またタイポを避けるために`siunitx`パッケージを利用するのが良い．このパッケージは名前の通りSI単位の記述に重きをおいたパッケージだが，それ以外の単位系でも利用できるので自分は単位についてはこのパッケージを使うことで統一している．使い方については[別途ページ](siunitx.md)を用意したのでそちらを参照．
+
+
 
 
 ## predifinedな変数
 https://cns-guide.sfc.keio.ac.jp/2001/11/5/1.html
-
-
-
-[^1]: LaTeX文書はそのままではpdfに変換することができず，LaTeXエンジンと呼ばれるプログラムを実行する必要がある．このエンジンには色々種類があって難しいのだが，自分は近年登場したlualatexを利用している．以前はupLaTeXを利用していたのだが，これはtex文書を一旦DVI形式に変更し，さらにDVIからpdfへ変換するpdflatexを利用する必要があった．lualatexはtex文書から直接pdf文書を生成してくれるために煩わしさがないので気にいっている．一方でデフォルトでは日本語が使えなかったり，従来のエンジンに比べてコンパイルに時間がかかるといった欠点もある．
 
 
 ## プロジェクトでのファイル管理（ファイルの分割など） 
@@ -218,13 +228,40 @@ lualatex table.tex
 ```
 
 <!-- https://konoyonohana.blog.fc2.com/blog-entry-389.html -->
+standaloneクラスの図表の横幅の制御について．standaloneクラスではデフォルトの横幅として`linewidth: 4.7747in`，`textwidth: 4.7747in`という特殊な値を用いている．このためtikzpictureなどの横幅をこれらの値を使って指定するとメイン文書（例えば2段組のrevtexだと`textwidth: 7.05826in`，`linewidth: 3.40457in`）と整合性が取れなくなる．そこで，完全な対処法ではないものの，standalone文書の方で`varwidth`オプションにメイン文書の`textwidth`の値を指定し，図表の横幅を`textwidth`で指定する．
+
+```latex
+\documentclass[varwidth=7.05826in]{standalone}
+
+\begin{document}
+\begin{tikzpicture}
+\begin{axis}
+[width=0.45\textwidth] 
+\end{axis}
+\end{tikzpicture}
+\end{document}
+```
+
+こういう煩わしさを回避するために本来は横幅を絶対値で指定するのが良いのかもしれない．
+
+ちなみに，`textwidth`の値を知りたければ`layout`パッケージをロードして以下のようにすれば確認できる．（もっと良い方法があるかもしれない）
+
+```latex
+\documentclass{article}
+\usepackage{layout}
+\begin{document}
+textwidth: \printinunitsof{in}\prntlen{\textwidth} % 単位がインチの場合
+linewidth: \printinunitsof{in}\prntlen{\linewidth}
+\end{document}
+```
+
 
 ## 参考文献
 
 [投稿論文のためのテンプレート](https://sharelatex.psi.ch/templates/journals.1)
 もちろん本当に投稿するときはちゃんとその雑誌の公式のテンプレートを用いるべし．TeXの勉強をする際の勉強になる．
 
-
+[^1]: LaTeX文書はそのままではpdfに変換することができず，LaTeXエンジンと呼ばれるプログラムを実行する必要がある．このエンジンには色々種類があって難しいのだが，自分は近年登場したlualatexを利用している．以前はupLaTeXを利用していたのだが，これはtex文書を一旦DVI形式に変更し，さらにDVIからpdfへ変換するpdflatexを利用する必要があった．lualatexはtex文書から直接pdf文書を生成してくれるために煩わしさがないので気にいっている．一方でデフォルトでは日本語が使えなかったり，従来のエンジンに比べてコンパイルに時間がかかるといった欠点もある．
 
 <!-- 
 https://blog.miz-ar.info/2016/12/running-tex/
