@@ -1,0 +1,51 @@
+\documentclass[a4j]{jarticle}
+\usepackage{amsmath}
+\usepackage{ascmac}
+\usepackage{amssymb}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{framed}
+\usepackage{fancyhdr}
+\usepackage{latexsym}
+\usepackage{indent}
+\usepackage{cases}
+\allowdisplaybreaks
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{東京大学前期$1982$年$5$番}
+\begin{document}
+\input{macros}
+\begin{oframed}
+$xyz$空間において，不等式$0\le z\le 1+x+y-3(x-y)y$，$0\le y\le0$，$y\le x\le y+1$の全てを満足する
+$x$，$y$，$z$を座標に持つ点全体が作る立体の体積を求めよ．
+\end{oframed}
+
+\setlength{\columnseprule}{0.4pt}
+\begin{multicols}{2}
+{\bf[解]}$y$を固定して考える．するとこの平面内では，
+     \begin{align*}
+     \left\{
+          \begin{array}{l}
+          0\le z\le (1-3y)x+(1+y+3y^2)\equiv f(x) \\
+          y\le x\le y+1
+          \end{array}
+     \right.
+     \end{align*}
+となる．$f(y)=1+2y>0$，$f(y+1)=2-y>0$ゆえ，断面の概形は以下のようになる．
+
+したがって，この平面内での題意の立体の断面積$S(y)$は
+     \begin{align*}
+     S(y)=\frac{1}{2}\left\{(2y=1)+(2-y)\right\}=\frac{y+3}{2}
+     \end{align*}
+だから，求める体積$V$は
+     \begin{align*}
+     V=\int_0^1S(y)dy=\frac{1}{2}\left[\frac{1}{2}y^2+3y\right]_0^1=\frac{7}{4}\tag{答}
+     \end{align*}
+である．
+
+
+図が欲しい          
+\newpage
+\end{multicols}
+\end{document}

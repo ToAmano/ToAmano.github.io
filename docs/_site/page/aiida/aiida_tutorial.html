@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>AiiDA | personal website</title>
+<meta name="generator" content="Jekyll v3.9.2" />
+<meta property="og:title" content="AiiDA" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+<meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+<link rel="canonical" href="http://localhost:4000/page/aiida/aiida_tutorial.html" />
+<meta property="og:url" content="http://localhost:4000/page/aiida/aiida_tutorial.html" />
+<meta property="og:site_name" content="personal website" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="AiiDA" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","headline":"AiiDA","url":"http://localhost:4000/page/aiida/aiida_tutorial.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=c90158fd34f66e4f63b4da45038b5d6170d798eb">
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+    
+
+<!--  -->
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1><a href="http://localhost:4000/">personal website</a></h1>
+
+        
+
+        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</p>
+
+        
+        <p class="view"><a href="https://github.com/dirac6582/dirac6582.github.io.git">View the Project on GitHub <small>dirac6582/dirac6582.github.io.git</small></a></p>
+        
+
+        
+
+        
+      </header>
+      <section>
+
+      <h1 id="aiida">AiiDA</h1>
+
+<h2 id="aiida-とは">AiiDA とは？</h2>
+
+<h2 id="aiida-installation"><a href="https://aiida.readthedocs.io/projects/aiida-core/en/v2.0.3/intro/install_system.html">AiiDA installation</a></h2>
+
+<p>AiiDAは3つの核となる要素からなる．</p>
+
+<ol>
+  <li>aiida-core: pythonパッケージとverdiコマンド</li>
+  <li>PostgreSQL: AiiDAがデータを保存するために利用する</li>
+  <li>RabbitMQ: AiiDAとの通信で使うメッセージブローカー</li>
+</ol>
+
+<p>今回はこのうち2と3をシステムに，1をcondaの仮想環境にインストールする．これは公式ではsystem-wide installationと呼ばれている．</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># postgreSQLとRabbitMQのinstall</span>
+brew <span class="nb">install </span>postgresql rabbitmq git python
+brew services start postgresql
+brew services start rabbitmq
+</code></pre></div></div>
+
+<p>注意!! rabbitmqのversionがv3.8.15以上の場合，少し設定をいじる必要がある．
+https://www.rabbitmq.com/configure.html#config-location
+を参考にrabbitmqのconfigファイルの場所を探す．macでhomebrewで入れた場合は</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/opt/homebrew/etc/rabbitmq/
+</code></pre></div></div>
+
+<p>にある．デフォルトでは<code class="language-plaintext highlighter-rouge">rabbitmq-env.conf</code>ファイルしかなかったので同じディレクトリに<code class="language-plaintext highlighter-rouge">rabbitmq.conf</code>ファイルを作成し，</p>
+
+<pre><code class="language-bash:rabbitmq.conf">consumer_timeout = 36000000000 # 10,000 hours in milliseconds
+</code></pre>
+
+<p>と書き込む．この設定をやってからrabbimqを起動しよう．</p>
+
+<p>ついでaiida-coreをcondaの仮想環境内にインストールする．2022/08現在，M1macではcondaを使ったinstallが失敗（circusパッケージが見つからないというエラーが出る）のでpipを使ってインストールした．conda仮想環境内でpipを利用する際の常として，仮想環境内にインストールされたpythonに付属のpipを利用すること．この場合だと<code class="language-plaintext highlighter-rouge">/人による/anaconda3/envs/aiida/bin/pip</code>のpipをちゃんと使っているかを確かめよう．</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># intel macの場合</span>
+conda create <span class="nt">-yn</span> aiida 
+conda <span class="nb">install</span> <span class="nt">-c</span> conda-forge aiida-core
+conda activate aiida
+
+<span class="c"># M1 macの場合</span>
+conda create <span class="nt">-yn</span> aiida 
+curl https://bootstrap.pypa.io/get-pip.py <span class="nt">-o</span> get-pip.py
+python get-pip.py
+pip <span class="nb">install </span>aiida-core
+</code></pre></div></div>
+
+<p>無事インストールが終わったらAiiDAのプロファイルを設定する．</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>verdi quicksetup                                   
+/opt/homebrew/lib/python3.10/site-packages/aiida/manage/configuration/settings.py:59: UserWarning: Creating AiiDA configuration folder <span class="sb">`</span>/Users/amano/.aiida<span class="sb">`</span><span class="nb">.</span>
+  warnings.warn<span class="o">(</span>f<span class="s1">'Creating AiiDA configuration folder `{path}`.'</span><span class="o">)</span>
+Report: enter ? <span class="k">for </span>help.
+Report: enter <span class="o">!</span> to ignore the default and <span class="nb">set </span>no value.
+Profile name <span class="o">[</span>quicksetup]: ta
+Email Address <span class="o">(</span><span class="k">for </span>sharing data<span class="o">)</span> <span class="o">[()]</span>: tragic44cg@icloud.com
+First name <span class="o">[()]</span>: Tomohito
+Last name <span class="o">[()]</span>: Amano
+Institution <span class="o">[()]</span>: u-tokyo
+Success: created new profile <span class="sb">`</span>ta<span class="sb">`</span><span class="nb">.</span>
+Report: initialising the profile storage.
+Report: initialising empty storage schema
+Success: storage initialisation completed.
+</code></pre></div></div>
+
+<p>ついでverdi daemonを起動する．</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>verdi daemon start 2
+</code></pre></div></div>
+
+<p>最後にセットアップがうまく行っているかを確認する．</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> ✔ version:     AiiDA v2.0.3
+ ✔ config:      /Users/amano/.aiida
+ ✔ profile:     ta
+ ✔ storage:     Storage <span class="k">for</span> <span class="s1">'ta'</span> <span class="o">[</span>open] @ postgresql://aiida_qs_amano_a88f57638875427b9c74c9eb1a467894:<span class="k">***</span>@localhost:5432/ta_amano_a88f57638875427b9c74c9eb1a467894 / file:///Users/amano/.aiida/repository/ta
+Warning: RabbitMQ v3.10.7 is not supported and will cause unexpected problems!
+Warning: It can cause long-running workflows to crash and <span class="nb">jobs </span>to be submitted multiple times.
+Warning: See https://github.com/aiidateam/aiida-core/wiki/RabbitMQ-version-to-use <span class="k">for </span>details.
+ ⏺ rabbitmq:    Incompatible RabbitMQ version detected! Connected to RabbitMQ v3.10.7 as amqp://guest:guest@127.0.0.1:5672?heartbeat<span class="o">=</span>600
+ ✔ daemon:      Daemon is running as PID 99029 since 2022-08-13 16:08:36
+</code></pre></div></div>
+
+<p>rabbitmqに関するwarningが出ているが上でconfファイルをいじっていれば問題ない．</p>
+
+<h2 id="optional-installation">optional installation</h2>
+
+<p>次のtutorialで使うので追加でパッケージをインストールしておく．</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda <span class="nb">install </span>graphviz
+</code></pre></div></div>
+
+<h2 id="aiida-basic-tutorial"><a href="https://aiida.readthedocs.io/projects/aiida-core/en/v2.0.3/intro/tutorial.html#tutorial-basic">AiiDA Basic tutorial</a></h2>
+
+<p>AiiDAはpython上で動くが，python上の簡単な計算のみならず，他の言語で書かれた外部コードの実行や，計算機サーバー上での計算にも対応している．</p>
+
+<h3 id="python上での簡単な計算の場合">python上での簡単な計算の場合</h3>
+
+<p>pythonでの簡単な計算でAiiDAのワークフローを体験する．ここではjupyter notebookを利用する．
+最初におまじないを書く．</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">aiida</span> <span class="kn">import</span> <span class="n">load_profile</span><span class="p">,</span> <span class="n">engine</span><span class="p">,</span> <span class="n">orm</span><span class="p">,</span> <span class="n">plugins</span>
+<span class="kn">from</span> <span class="nn">aiida.storage.sqlite_temp</span> <span class="kn">import</span> <span class="n">SqliteTempBackend</span>
+
+<span class="o">%</span><span class="n">load_ext</span> <span class="n">aiida</span>
+
+<span class="n">profile</span> <span class="o">=</span> <span class="n">load_profile</span><span class="p">(</span>
+    <span class="n">SqliteTempBackend</span><span class="p">.</span><span class="n">create_profile</span><span class="p">(</span>
+        <span class="s">'myprofile'</span><span class="p">,</span>
+        <span class="n">sandbox_path</span><span class="o">=</span><span class="s">'_sandbox'</span><span class="p">,</span>
+        <span class="n">options</span><span class="o">=</span><span class="p">{</span>
+            <span class="s">'warnings.development_version'</span><span class="p">:</span> <span class="bp">False</span><span class="p">,</span>
+            <span class="s">'runner.poll.interval'</span><span class="p">:</span> <span class="mi">1</span>
+        <span class="p">},</span>
+        <span class="n">debug</span><span class="o">=</span><span class="bp">False</span>
+    <span class="p">),</span>
+    <span class="n">allow_switch</span><span class="o">=</span><span class="bp">True</span>
+<span class="p">)</span>
+<span class="n">profile</span>
+</code></pre></div></div>
+
+<p>AiiDAでは，計算のインプットや計算の手順，計算結果が全てnodeと呼ばれる量で扱われ，このnodeたちがdirected acyclic graph上に表され，保存される．</p>
+
+<p>今回は掛け算をする単純なプログラムを使ってみる．</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">aiida</span> <span class="kn">import</span> <span class="n">engine</span>
+
+<span class="o">@</span><span class="n">engine</span><span class="p">.</span><span class="n">calcfunction</span>
+<span class="k">def</span> <span class="nf">multiply</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="n">y</span>
+</code></pre></div></div>
+
+<h3 id="コンピュータの追加リモートマシンで実行する場合1">コンピュータの追加:リモートマシンで実行する場合1</h3>
+
+<p>ローカル以外のコンピューターでも利用したい場合には<code class="language-plaintext highlighter-rouge">verdi computer</code>コマンドでコンピュータを追加する必要がある．試しにローカルマシンをコンピュータとして追加してみよう．</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># コンピュータのセットアップ</span>
+<span class="nv">$ </span>verdi computer setup <span class="nt">-L</span> tutor <span class="nt">-H</span> localhost <span class="nt">-T</span> core.local <span class="nt">-S</span> core.direct <span class="nt">-w</span> <span class="sb">`</span><span class="nb">echo</span> <span class="nv">$PWD</span>/work<span class="sb">`</span> <span class="nt">-n</span>
+
+<span class="c"># セットアップにyamlファイルを利用することもできる．</span>
+<span class="nv">$ </span>verdi computer setup <span class="nt">--config</span> ohtaka.yaml <span class="nt">-n</span>
+<span class="nv">$ </span>verdi <span class="nt">-p</span> ta computer configure core.ssh ohtaka
+
+<span class="c"># セットアップしたコンピュータを利用可能なように設定</span>
+<span class="nv">$ </span>verdi computer configure core.local tutor <span class="nt">--safe-interval</span> 1 <span class="nt">-n</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># setup
+</span><span class="o">%</span><span class="n">verdi</span> <span class="n">computer</span> <span class="n">setup</span> <span class="o">-</span><span class="n">L</span> <span class="n">tutor</span> <span class="o">-</span><span class="n">H</span> <span class="n">localhost</span> <span class="o">-</span><span class="n">T</span> <span class="n">core</span><span class="p">.</span><span class="n">local</span> <span class="o">-</span><span class="n">S</span> <span class="n">core</span><span class="p">.</span><span class="n">direct</span> <span class="o">-</span><span class="n">w</span> <span class="p">{</span><span class="n">profile</span><span class="p">.</span><span class="n">repository_path</span> <span class="o">/</span> <span class="s">'work'</span><span class="p">}</span> <span class="o">-</span><span class="n">n</span>
+
+<span class="c1"># 登録してこのコンピュータに計算を投げられるようにする．
+</span><span class="o">%</span><span class="n">verdi</span> <span class="n">computer</span> <span class="n">configure</span> <span class="n">core</span><span class="p">.</span><span class="n">local</span> <span class="n">tutor</span> <span class="o">--</span><span class="n">safe</span><span class="o">-</span><span class="n">interval</span> <span class="mi">0</span> <span class="o">-</span><span class="n">n</span>
+</code></pre></div></div>
+
+<p>各種のオプションは以下</p>
+
+<ul>
+  <li>label (-L): tutor (わかりやすいようなラベル)</li>
+  <li>hostname (-H): localhost (ローカルマシンの場合はこれで良い．リモートの場合はssh接続先のhostname)</li>
+  <li>transport (-T): local</li>
+  <li>scheduler (-S): direct (job schedullerなしの場合)</li>
+  <li>work-dir (-w): The work subdirectory of the current directory</li>
+  <li>n: non-interactive （追加の設定なしで済ませるため）</li>
+</ul>
+
+<p>登録が完了したかどうかのチェックも<code class="language-plaintext highlighter-rouge">verdi computer</code>コマンドで可能だ．また，実際にこのコンピュータ用のワーキングディレクトリが作成されていることも確認しよう．</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># configureしたコンピュータの一覧表示</span>
+<span class="nv">$ </span>verdi computer list
+Report: List of configured computers
+<span class="k">*</span> tutor
+
+<span class="c"># 特定のコンピュータの細かい設定表示</span>
+<span class="nv">$ </span>verdi computer show tutor
+<span class="nt">---------------------------</span>  <span class="nt">-----------------------------------------------</span>
+Label                        tutor
+PK                           1
+UUID                         b13064e6-bc8b-4abf-aeed-2254f31adeb2
+Description
+Hostname                     localhost
+Transport <span class="nb">type               </span>core.local
+Scheduler <span class="nb">type               </span>core.direct
+Work directory               /Users/amano/works/research/aiida_tutorial/work
+Shebang                      <span class="c">#!/bin/bash</span>
+Mpirun <span class="nb">command               </span>mpirun <span class="nt">-np</span> <span class="o">{</span>tot_num_mpiprocs<span class="o">}</span>
+Default <span class="c">#procs/machine</span>
+Default memory <span class="o">(</span>kB<span class="o">)</span>/machine
+Prepend text
+Append text
+<span class="nt">---------------------------</span>  <span class="nt">-----------------------------------------------</span>
+</code></pre></div></div>
+
+<p>これでコードが設定できていることを<code class="language-plaintext highlighter-rouge">verdi compute list</code>コマンドで指定する．</p>
+
+<h3 id="リモートコンピュータの追加リモートマシンで実行する場合2">リモートコンピュータの追加:リモートマシンで実行する場合2</h3>
+
+<p>同じようにリモートコンピュータを追加してみる．今度は-Tオプションでsshを選択し，-Sでリモートマシンのジョブスケジューラを設定する．ここでは例としてslurmにしてある．-wではリモートマシン上のディレクトリを指定するので注意．</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># コンピュータのセットアップ</span>
+verdi computer setup <span class="nt">-L</span> sauron <span class="nt">-H</span> sauron <span class="nt">-T</span> core.ssh <span class="nt">-S</span> core.slurm <span class="nt">-w</span> <span class="sb">`</span><span class="nb">echo</span> <span class="nv">$PWD</span>/sauron<span class="sb">`</span> <span class="nt">-n</span>
+
+<span class="c"># コンピュータの登録</span>
+verdi <span class="nt">-p</span> ta computer configure core.ssh sauron
+Report: enter ? <span class="k">for </span>help.
+Report: enter <span class="o">!</span> to ignore the default and <span class="nb">set </span>no value.
+User name <span class="o">[</span>amano]: amano
+Port number <span class="o">[</span>22]: 22
+Look <span class="k">for </span>keys <span class="o">[</span>Y/n]: y
+SSH key file <span class="o">[</span>/Users/amano/.ssh/id_sauron_imacnew]: /Users/amano/.ssh/id_rsa_sauron
+Connection <span class="nb">timeout </span><span class="k">in </span>s <span class="o">[</span>60]: 180
+Allow ssh agent <span class="o">[</span>Y/n]: Y <span class="c">#重要</span>
+SSH proxy jump <span class="o">[]</span>:
+SSH proxy <span class="nb">command</span> <span class="o">[]</span>:
+Compress file transfers <span class="o">[</span>Y/n]: y
+GSS auth <span class="o">[</span>False]:
+GSS kex <span class="o">[</span>False]:
+GSS deleg_creds <span class="o">[</span>False]:
+GSS host <span class="o">[</span>sauron]:
+Load system host keys <span class="o">[</span>Y/n]:
+Key policy <span class="o">(</span>RejectPolicy, WarningPolicy, AutoAddPolicy<span class="o">)</span> <span class="o">[</span>RejectPolicy]:
+Use login shell when executing <span class="nb">command</span> <span class="o">[</span>Y/n]: y
+Connection cooldown <span class="nb">time</span> <span class="o">(</span>s<span class="o">)</span> <span class="o">[</span>30.0]:
+Report: Configuring computer sauron <span class="k">for </span>user tragic44cg@icloud.com.
+
+</code></pre></div></div>
+
+<p>configureが終わったら<code class="language-plaintext highlighter-rouge">verdi computer test</code>コマンドでリモートマシンへの接続が成功しているかをチェックする．</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>verdi computer <span class="nb">test </span>sauron           22:21:05 
+Report: Testing computer&lt;sauron&gt; <span class="k">for </span>user&lt;tragic44cg@icloud.com&gt;...
+<span class="k">*</span> Opening connection... <span class="o">[</span>OK]
+<span class="k">*</span> Checking <span class="k">for </span>spurious output... <span class="o">[</span>OK]
+<span class="k">*</span> Getting number of <span class="nb">jobs </span>from scheduler... <span class="o">[</span>OK]: 0 <span class="nb">jobs </span>found <span class="k">in </span>the queue
+<span class="k">*</span> Determining remote user name... <span class="o">[</span>OK]: amano
+<span class="k">*</span> Creating and deleting temporary file... <span class="o">[</span>OK]
+Success: all 5 tests succeeded
+</code></pre></div></div>
+
+<h3 id="外部コードを実行する場合"><a href="https://aiida.readthedocs.io/projects/aiida-core/en/v2.0.3/howto/run_codes.html#how-to-run-codes">外部コードを実行する場合</a></h3>
+
+<p>コンピュータの設定が完了したら，そのコンピュータ上で動かすコードを登録できる．これには<code class="language-plaintext highlighter-rouge">verdi code</code>コマンドを利用する．aiidaにプリインストールされているコードならば以下のようにすれば良い．</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># tutorにcore.arithmetic.add(元々ある和を取るプログラム)を追加する例</span>
+<span class="nv">$ </span>verdi code setup <span class="nt">-L</span> add <span class="nt">--on-computer</span> <span class="nt">--computer</span><span class="o">=</span>tutor <span class="nt">-P</span> core.arithmetic.add <span class="nt">--remote-abs-path</span><span class="o">=</span>/bin/bash <span class="nt">-n</span>
+
+<span class="c"># 追加されたことを確認</span>
+<span class="nv">$ </span>verdi code list
+</code></pre></div></div>
+
+<p><a href="https://aiida.readthedocs.io/projects/aiida-core/en/v2.0.3/howto/plugins_install.html#how-to-plugins-install">Quantum espressoなどの外部コードを実行する場合</a>，対応するAiiDAプラグインが必要なので，これをpipでインストールしておく．プラグインのリストは<a href="https://aiidateam.github.io/aiida-registry">ここ</a>から確認できる．</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># DFT計算で擬ポテンシャルを扱う場合(option)</span>
+pip <span class="nb">install </span>aiida-pseudo
+
+<span class="c"># quantum espressoを利用する場合</span>
+pip <span class="nb">install </span>aiida-quantumespresso
+
+<span class="c"># VASPを利用する場合 </span>
+pip <span class="nb">install </span>aiida-vasp
+
+<span class="c"># インストール後，daemonを再スタートする．</span>
+<span class="nv">$ </span>verdi daemon restart <span class="nt">--reset</span>
+
+<span class="c"># pluginが認識されていることを確認するには</span>
+<span class="c"># まずlistでカテゴリを表示</span>
+<span class="nv">$ </span>verdi plugin list
+
+<span class="c"># ついでそのカテゴリ内のプラグインを表示(一例)</span>
+<span class="nv">$ </span>verdi plugin list aiida.calculations
+</code></pre></div></div>
+
+<p>yamlファイルで登録する場合．</p>
+
+<pre><code class="language-yaml:qe_7.0.yaml">---
+label: "qe-7.0-pw"
+description: "quantum_espresso v7.0 pw.x"
+input_plugin: "quantumespresso.pw" #これが必要!!
+on_computer: true 
+remote_abs_path: "/home/amano/src/qe-7.0/bin/pw.x"
+computer: "sauron"
+prepend_text: " "
+append_text: " "
+</code></pre>
+
+<p>追加する際のコマンドは以下のようになる．</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 追加</span>
+<span class="nv">$ </span>verdi code setup <span class="nt">--config</span> qe_7.0.yaml <span class="nt">-n</span>
+Success: Code&lt;3&gt; qe-7.0-pw@sauron created
+
+<span class="c"># 追加されたことを確認</span>
+<span class="nv">$ </span>verdi code list 
+
+<span class="nv">$ </span>verdi code show qe-7.0-pw
+</code></pre></div></div>
+
+<h3 id="aiidaにjobを投入する"><a href="https://aiida.readthedocs.io/projects/aiida-core/en/v2.0.3/howto/run_codes.html#how-to-run-codes">AiiDAにjobを投入する</a></h3>
+
+<p>AiiDAにjobを投げるのにはいくつかのやり方がある．一つは<code class="language-plaintext highlighter-rouge">verdi shell</code>でインターラクティブにやる方法だが，ここでは入力ファイルを作成してjob投入するやり方をとる．この方法でも<code class="language-plaintext highlighter-rouge">verdi run</code>コマンドを利用する方法と，pythonコードとして実行する方法がある．いずれの場合も入力ファイルはpythonで書く必要があり，pythonコードとして実行する場合は追加でprofileやdaemonの情報が取得されるようにしてやる必要がある．</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># verdiコマンドの場合</span>
+verdi run submit.py
+
+<span class="c"># pythonコードの場合，submit.pyの先頭に</span>
+<span class="c"># #!/usr/bin/env python</span>
+<span class="c"># from aiida import load_profile</span>
+<span class="c"># load_profile()</span>
+<span class="c"># を書く必要がある．</span>
+python submit.py
+</code></pre></div></div>
+
+<h3 id="実際にaiidaにjobを投げる例"><a href="https://aiida.readthedocs.io/projects/aiida-core/en/v2.0.3/topics/processes/usage.html#topics-processes-usage-launching">実際にAiiDAにjobを投げる例</a></h3>
+
+<!-- https://eminamitani.github.io/website/2021/03/25/aiida_2/ -->
+
+<p>QEでjobを実行してみよう．QEの場合の公式tutorialは<a href="https://aiida-tutorials.readthedocs.io/en/tutorial-qe-short/">ここ</a>から確認できる．</p>
+
+<h4 id="step1-pseudoポテンシャルのdl">step1: pseudoポテンシャルのDL</h4>
+
+<p>QEで使えるssspライブラリをインストールする．</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># ライブラリのinstall</span>
+<span class="nv">$ </span>aiida-pseudo <span class="nb">install </span>sssp           
+Report: downloading patch versions information...  <span class="o">[</span>OK]
+Report: downloading selected pseudopotentials archive...  <span class="o">[</span>OK]
+Report: downloading selected pseudopotentials metadata...  <span class="o">[</span>OK]
+Report: unpacking archive and parsing pseudos...  <span class="o">[</span>OK]
+Success: installed <span class="sb">`</span>SSSP/1.1/PBE/efficiency<span class="sb">`</span> containing 85 pseudopotentials.
+
+<span class="c"># 正しくインストールしていることを確認</span>
+<span class="nv">$ </span>aiida-pseudo list
+Label                    Type string         Count
+<span class="nt">-----------------------</span>  <span class="nt">------------------</span>  <span class="nt">-------</span>
+SSSP/1.1/PBE/efficiency  pseudo.family.sssp  85
+</code></pre></div></div>
+
+<h4 id="step2-計算の設定ファイルpyの作成">step2: 計算の設定ファイル(.py)の作成</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># -*- coding: utf-8 -*-
+######################################################
+# Si bulk phonon calculation
+######################################################
+</span><span class="kn">from</span> <span class="nn">aiida.orm</span> <span class="kn">import</span> <span class="n">Code</span><span class="p">,</span> <span class="n">StructureData</span>
+<span class="kn">from</span> <span class="nn">aiida.plugins</span> <span class="kn">import</span> <span class="n">DataFactory</span>
+<span class="kn">from</span> <span class="nn">aiida</span> <span class="kn">import</span> <span class="n">orm</span>
+<span class="kn">from</span> <span class="nn">aiida.plugins</span> <span class="kn">import</span> <span class="n">CalculationFactory</span>
+<span class="kn">from</span> <span class="nn">aiida.engine</span> <span class="kn">import</span> <span class="n">launch</span>
+<span class="kn">from</span> <span class="nn">aiida.orm</span> <span class="kn">import</span> <span class="n">load_group</span>
+<span class="kn">from</span> <span class="nn">ase.io</span> <span class="kn">import</span> <span class="n">read</span> <span class="c1"># 構造を読み込む用
+</span>
+<span class="c1"># code
+# codename = 'qe-7.0-pw@sauron'
+</span><span class="n">codename</span> <span class="o">=</span> <span class="s">'qe-6.6-pw@ohtaka'</span>
+<span class="n">code</span> <span class="o">=</span> <span class="n">Code</span><span class="p">.</span><span class="n">get_from_string</span><span class="p">(</span><span class="n">codename</span><span class="p">)</span>
+
+<span class="c1"># codeから，対応するbuilderを取得
+</span><span class="n">builder</span> <span class="o">=</span> <span class="n">code</span><span class="p">.</span><span class="n">get_builder</span><span class="p">()</span>
+
+
+<span class="c1"># control &amp; system etc...
+</span><span class="n">parameters</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s">'CONTROL'</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s">'calculation'</span><span class="p">:</span> <span class="s">'scf'</span><span class="p">,</span>
+        <span class="s">'wf_collect'</span><span class="p">:</span> <span class="bp">True</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="s">'SYSTEM'</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s">'ecutwfc'</span><span class="p">:</span> <span class="mf">80.</span><span class="p">,</span>
+        <span class="s">'ecutrho'</span><span class="p">:</span> <span class="mf">320.</span><span class="p">,</span>
+        <span class="s">'nbnd'</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">#structureはとりあえず手元のqeファイルから読みこむ
+</span><span class="n">si</span><span class="o">=</span><span class="n">read</span><span class="p">(</span><span class="s">"Si.scf.in"</span><span class="p">,</span><span class="nb">format</span><span class="o">=</span><span class="s">"espresso-in"</span><span class="p">)</span>
+<span class="n">s</span> <span class="o">=</span> <span class="n">StructureData</span><span class="p">(</span><span class="n">ase</span><span class="o">=</span><span class="n">si</span><span class="p">)</span>
+
+<span class="c1">#kpoint
+# The DataFactory is a useful and robust tool for loading data types based on their entry point, e.g. 'array.kpoints' in this case.
+</span><span class="n">KpointsData</span> <span class="o">=</span> <span class="n">DataFactory</span><span class="p">(</span><span class="s">'array.kpoints'</span><span class="p">)</span>
+<span class="n">kpoints</span> <span class="o">=</span> <span class="n">KpointsData</span><span class="p">()</span>
+<span class="n">kpoints</span><span class="p">.</span><span class="n">set_kpoints_mesh</span><span class="p">([</span><span class="mi">12</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">12</span><span class="p">])</span>
+
+<span class="c1">#pseudo
+</span><span class="n">family</span> <span class="o">=</span> <span class="n">load_group</span><span class="p">(</span><span class="s">'SSSP/1.1/PBE/efficiency'</span><span class="p">)</span>
+
+
+<span class="n">inputs</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s">'code'</span><span class="p">:</span> <span class="n">code</span><span class="p">,</span>
+    <span class="s">'structure'</span><span class="p">:</span> <span class="n">s</span><span class="p">,</span>
+    <span class="s">'pseudos'</span><span class="p">:</span> <span class="n">family</span><span class="p">.</span><span class="n">get_pseudos</span><span class="p">(</span><span class="n">structure</span><span class="o">=</span><span class="n">s</span><span class="p">),</span>
+    <span class="s">'kpoints'</span><span class="p">:</span> <span class="n">kpoints</span><span class="p">,</span>
+    <span class="s">'parameters'</span><span class="p">:</span> <span class="n">orm</span><span class="p">.</span><span class="n">Dict</span><span class="p">(</span><span class="nb">dict</span><span class="o">=</span><span class="n">parameters</span><span class="p">),</span>
+    <span class="s">'metadata'</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s">"description"</span><span class="p">:</span> <span class="s">" test qe calculation"</span><span class="p">,</span>
+        <span class="s">'options'</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s">'resources'</span><span class="p">:</span>  <span class="p">{</span><span class="s">'num_machines'</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span><span class="s">'tot_num_mpiprocs'</span><span class="p">:</span><span class="mi">24</span><span class="p">},</span>
+        <span class="s">'max_wallclock_seconds'</span><span class="p">:</span> <span class="mi">1</span><span class="o">*</span><span class="mi">30</span><span class="o">*</span><span class="mi">60</span><span class="p">,</span> <span class="c1"># h/m/s
+</span>        <span class="s">'withmpi'</span><span class="p">:</span> <span class="bp">True</span><span class="p">,</span>
+        <span class="s">"queue_name"</span><span class="p">:</span> <span class="s">"i8cpu"</span><span class="p">,</span> <span class="c1"># que name
+#        "queue_name": "sky6126", # que name
+</span>        <span class="p">},</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1"># job submission
+</span><span class="n">job</span><span class="o">=</span><span class="n">launch</span><span class="p">.</span><span class="n">submit</span><span class="p">(</span><span class="n">CalculationFactory</span><span class="p">(</span><span class="s">'quantumespresso.pw'</span><span class="p">),</span> <span class="o">**</span><span class="n">inputs</span><span class="p">)</span>
+
+<span class="c1"># after submission
+</span><span class="k">print</span><span class="p">(</span><span class="s">'launched WorkChain&lt;{}&gt; for structure {}'</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">job</span><span class="p">.</span><span class="n">pk</span><span class="p">,</span> <span class="n">s</span><span class="p">.</span><span class="n">get_formula</span><span class="p">()))</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"Use `verdi process list` or `verdi process show {}` to check the progress"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">job</span><span class="p">.</span><span class="n">pk</span><span class="p">))</span>
+
+<span class="c1"># 計算完了後に自動でstdoutを取得できたらいいんだけどなぁ．
+# verdi calcjob outputcat 125
+</span></code></pre></div></div>
+
+<ul>
+  <li>k点の設定</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">The</span> <span class="n">DataFactory</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">useful</span> <span class="ow">and</span> <span class="n">robust</span> <span class="n">tool</span> <span class="k">for</span> <span class="n">loading</span> <span class="n">data</span> <span class="n">types</span> <span class="n">based</span> <span class="n">on</span> <span class="n">their</span> <span class="n">entry</span> <span class="n">point</span><span class="p">,</span> <span class="n">e</span><span class="p">.</span><span class="n">g</span><span class="p">.</span> <span class="s">'array.kpoints'</span> <span class="ow">in</span> <span class="n">this</span> <span class="n">case</span><span class="p">.</span> 
+</code></pre></div></div>
+
+<h3 id="計算プロセス-結果の確認">計算プロセス， 結果の確認</h3>
+
+<p><code class="language-plaintext highlighter-rouge">verdi process</code>コマンドによって結果を確認する方法がある．</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 走っているプロセスの一覧を表示</span>
+<span class="nv">$ </span>verdi process list 
+  PK  Created    Process label             Process State    Process status
+<span class="nt">----</span>  <span class="nt">---------</span>  <span class="nt">------------------------</span>  <span class="nt">---------------</span>  <span class="nt">----------------</span>
+ 125  12m ago    PwCalculation   running
+
+<span class="c"># 特定のprocessについてのより詳しい情報を表示</span>
+<span class="nv">$ </span>verdi process show 125
+Property     Value
+<span class="nt">-----------</span>  <span class="nt">------------------------------------</span>
+<span class="nb">type         </span>PwCalculation
+state        Finished <span class="o">[</span>0]
+pk           125
+uuid         e82e1df9-2b41-4132-85b7-806e42d90560
+label
+description
+ctime        2022-08-14 01:06:39.927911+09:00
+mtime        2022-08-14 01:13:43.289752+09:00
+computer     <span class="o">[</span>3] sauron
+
+Inputs      PK    Type
+<span class="nt">----------</span>  <span class="nt">----</span>  <span class="nt">-------------</span>
+pseudos
+    Si      36    UpfData
+code        121   Code
+kpoints     123   KpointsData
+parameters  124   Dict
+structure   122   StructureData
+
+Outputs              PK  Type
+<span class="nt">-----------------</span>  <span class="nt">----</span>  <span class="nt">--------------</span>
+output_band         128  BandsData
+output_parameters   130  Dict
+output_trajectory   129  TrajectoryData
+remote_folder       126  RemoteData
+retrieved           127  FolderData
+
+</code></pre></div></div>
+
+<p>計算終了後，stateが0になっていれば計算が成功していることを意味し，失敗していればそれ以外のstateになっているので原因を確認する．結果をより詳しく見る方法をいくつかリストアップする．</p>
+
+<ol>
+  <li><code class="language-plaintext highlighter-rouge">verdi calcjob</code>コマンド</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># コードのinputを取得</span>
+<span class="nv">$ </span>verdi calcjob inputcat 125
+<span class="c"># インプットファイルの一覧</span>
+<span class="nv">$ </span>verdi calcjob inputls 125 <span class="nt">-c</span>
+
+<span class="c"># コードのstdoutを取得</span>
+<span class="nv">$ </span>verdi calcjob outputcat 125
+
+<span class="c"># Shows the parser results of the calculation</span>
+<span class="nv">$ </span>verdi calcjob res 125
+</code></pre></div></div>
+
+<ol>
+  <li><code class="language-plaintext highlighter-rouge">verdi data</code>コマンド</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+</code></pre></div></div>
+
+<ol>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">verdi node graph generate</code> コマンド</p>
+
+    <p>ノードの関連を可視化してくれるコマンド．</p>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="c"># とりあえず実行</span>
+ verdi node graph generate 1026
+
+ <span class="c"># pkを表示する場合. </span>
+ verdi node graph generate 1026 <span class="nt">--identifier</span> pk
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<h2 id="擬ポテンシャルのインストール色々なライブラリ">擬ポテンシャルのインストール(色々なライブラリ)</h2>
+
+<p>QEで使う擬ポテンシャルを色々インストールする．</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># SSSPはefficiencyとprecision, PBEとPBEsol</span>
+<span class="nv">$ </span>aiida-pseudo <span class="nb">install </span>sssp <span class="nt">-p</span> efficiency <span class="nt">-x</span> PBE
+<span class="nv">$ </span>aiida-pseudo <span class="nb">install </span>sssp <span class="nt">-p</span> precision <span class="nt">-x</span> PBE
+<span class="nv">$ </span>aiida-pseudo <span class="nb">install </span>sssp <span class="nt">-p</span> efficiency <span class="nt">-x</span> PBEsol
+<span class="nv">$ </span>aiida-pseudo <span class="nb">install </span>sssp <span class="nt">-p</span> precision <span class="nt">-x</span> PBEsol
+<span class="c"># pseudo-dojo</span>
+<span class="nv">$ </span>aiida-pseudo <span class="nb">install </span>pseudo_dojo
+
+<span class="c"># インストールされたことの確認</span>
+<span class="nv">$ </span>aiida-pseudo list
+</code></pre></div></div>
+
+
+
+      </section>
+      <footer>
+        
+        <p>This project is maintained by <a href="https://github.com/dirac6582">dirac6582</a></p>
+        
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="/assets/js/scale.fix.js"></script>
+  </body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>CP.xによるcar-parinello MDのやり方 | personal website</title>
+<meta name="generator" content="Jekyll v3.9.2" />
+<meta property="og:title" content="CP.xによるcar-parinello MDのやり方" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+<meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+<link rel="canonical" href="http://localhost:4000/page/physics/qe/cp.html" />
+<meta property="og:url" content="http://localhost:4000/page/physics/qe/cp.html" />
+<meta property="og:site_name" content="personal website" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="CP.xによるcar-parinello MDのやり方" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","headline":"CP.xによるcar-parinello MDのやり方","url":"http://localhost:4000/page/physics/qe/cp.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=c90158fd34f66e4f63b4da45038b5d6170d798eb">
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+    
+
+<!--  -->
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1><a href="http://localhost:4000/">personal website</a></h1>
+
+        
+
+        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</p>
+
+        
+        <p class="view"><a href="https://github.com/dirac6582/dirac6582.github.io.git">View the Project on GitHub <small>dirac6582/dirac6582.github.io.git</small></a></p>
+        
+
+        
+
+        
+      </header>
+      <section>
+
+      <h1 id="cpxによるcar-parinello-mdのやり方">CP.xによるcar-parinello MDのやり方</h1>
+
+<p>##</p>
+
+<h2 id="visualize-trajectory">visualize trajectory</h2>
+<!-- https://www.researchgate.net/post/How_to_visualize_output_from_Car-Parrinello_MD_by_quantum_espresso -->
+
+<h2 id="主要なinputパラメーター">主要なinputパラメーター</h2>
+
+<p>&amp;ELECTRONS</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>electron_maxstep</td>
+      <td>electron_dynamics</td>
+      <td>conv_thr</td>
+      <td>niter_cg_restart</td>
+      <td>efield</td>
+      <td>epol</td>
+      <td>emass</td>
+      <td>emass_cutoff</td>
+      <td>orthogonalization</td>
+      <td>ortho_eps</td>
+      <td>ortho_max</td>
+      <td>ortho_para</td>
+      <td>electron_damping</td>
+      <td>electron_velocities</td>
+      <td>electron_temperature</td>
+      <td>ekincw</td>
+      <td>fnosee</td>
+      <td>startingwfc</td>
+      <td>tcg</td>
+      <td>maxiter</td>
+      <td>passop</td>
+      <td>pre_state</td>
+      <td>n_inner</td>
+      <td>ninter_cold_restart</td>
+      <td>lambda_cold</td>
+      <td>grease</td>
+      <td>ampre</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>&amp;IONS</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>ion_dynamics</td>
+      <td>ion_positions</td>
+      <td>ion_velocities</td>
+      <td>ion_damping</td>
+      <td>ion_radius</td>
+      <td>iesr</td>
+      <td>ion_nstepe</td>
+      <td>remove_rigid_rot</td>
+      <td>ion_temperature</td>
+      <td>tempw</td>
+      <td>fnosep</td>
+      <td>tolp</td>
+      <td>nhpcl</td>
+      <td>nhptyp</td>
+      <td>nhgrp</td>
+      <td>fnhscl</td>
+      <td>ndega</td>
+      <td>tranp</td>
+      <td>amprp</td>
+      <td>greasp</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>&amp;WANNIER</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>wf_efield</td>
+      <td>wf_switch</td>
+      <td>sw_len</td>
+      <td>efx0</td>
+      <td>efy0</td>
+      <td>efz0</td>
+      <td>efx1</td>
+      <td>efy1</td>
+      <td>efz1</td>
+      <td>wfsd</td>
+      <td>wfdt</td>
+      <td>maxwfdt</td>
+      <td>nit</td>
+      <td>nsd</td>
+      <td>wf_q</td>
+      <td>wf_friction</td>
+      <td>nsteps</td>
+      <td>tolw</td>
+      <td>adapt</td>
+      <td>calwf</td>
+      <td>nwf</td>
+      <td>wffort</td>
+      <td>writev</td>
+      <td>exx_neigh</td>
+      <td>exx_dis_cutoff</td>
+      <td>exx_poisson_eps</td>
+      <td>exx_use_cube_domain</td>
+      <td>exx_ps_rcut_self</td>
+      <td>exx_ps_rcut_pair</td>
+      <td>exx_me_rcut_self</td>
+      <td>exx_me_rcut_pair</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="error-log">error log</h2>
+
+<ul>
+  <li>ortho went bananas
+  https://lists.quantum-espresso.org/pipermail/users/2009-April/012245.html</li>
+</ul>
+
+
+
+      </section>
+      <footer>
+        
+        <p>This project is maintained by <a href="https://github.com/dirac6582">dirac6582</a></p>
+        
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="/assets/js/scale.fix.js"></script>
+  </body>
+</html>

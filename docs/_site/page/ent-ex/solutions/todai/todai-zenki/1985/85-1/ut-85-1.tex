@@ -1,0 +1,83 @@
+\documentclass[a4j]{jarticle}
+\usepackage{amsmath}
+\usepackage{ascmac}
+\usepackage{amssymb}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{framed}
+\usepackage{fancyhdr}
+\usepackage{latexsym}
+\usepackage{indent}
+\usepackage[dvips]{graphicx}
+\usepackage{color}
+\usepackage{emath}
+\usepackage{emathPp}
+\usepackage{cases}
+\allowdisplaybreaks
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{東京大学前期$1985$年$1$番}
+\begin{document}
+\input{macros}
+\preEqlabel{$\cdots$}
+     \begin{oframed}
+     $a\ge 1$とする．$xy$平面において，不等式$0\le x\le\pi/2$，$1\le y\le a\sin x$によって定められる領域
+     の面積を$S_1$，不等式$0\le x\le\pi/2$，$0\le y\le a\sin x$，$0\le y\le1$によって定められる領域の面積
+     を$S_2$とする．$S_2-S_1$を最大にするような$a$の値と，$S_2-S_1$の最大値を求めよ．
+     \end{oframed}
+
+\setlength{\columnseprule}{0.4pt}
+\begin{multicols}{2}
+{\bf[解]} グラフの概形は下図である．
+     
+     \begin{zahyou}[ul=10mm,gentenhaiti={[se]}](-0.5,4)(-0.5,2.5)
+     \def\Fx{2*sin(X/2)}
+     \def\Gx{1}
+     \calcval{$pi}\A
+     \calcval{$pi/3}\B
+     \calcval{3*$pi/4}\C
+     \YGurafu*\Fx
+     \YGurafu*\Gx
+     \Put{(\A,2)}[syaei=xy,xlabel=\frac{\pi}{2},ylabel=a]{}
+     \Put{(\B,1)}[syaei=x,xlabel=t,]{}
+     \Put{(\C,1.2)}[n]{$S_1$}
+     \Put{(\C,0.8)}[s]{$S_2$}
+     \end{zahyou}
+
+$y=a\sin x$と$y=1$の交点の$x$座標$t$として
+     \begin{align}
+     &a\sin t=1&0<t\le\frac{\pi}{2}\label{1}
+     \end{align}
+である．以下\2 
+
+まず，
+     \[S=\int_0^{\pi/2}a\sin x\,dx=a\]
+とおく．題意から
+     \[S_1=\int_t^{\pi/2}(a\sin x-1)\,dx\]
+ である．$f(a)=S_2-S_1$は
+     \begin{align*}
+     f(a)&=S-2S_1 \\
+     &=a-2ac+\pi-2t \\
+     &=\frac{1}{s}-\frac{2c}{s}-2t+\pi&(\because\eqref{1})
+     \end{align*}
+である．これを$g(t)$とおく．
+     \begin{align*}
+     g'(t)&=\frac{-c}{s^2}+\frac{2}{s^2}-2 \\
+     &=\frac{2-c}{s^2}-2 \\
+     &=\frac{c(2c-1)}{1-c^2}
+     \end{align*}
+ゆえ，下表を得る．
+     \begin{align*}
+          \begin{array}{|c|c|c|c|c|c|}\hline
+          t  &0 &     &\pi/3&     &\pi/2 \\ \hline
+          f' &   &+   &0     &-    & 0     \\ \hline
+          f &    &\ne&\pi/3&\se&       \\ \hline 
+          \end{array}
+     \end{align*}
+従って，求める最大値は$t=\pi/3$の時の$\pi/3$である．このとき\eqref{1}から
+     \[a=\frac{2\sqrt{3}}{3}\]
+である．$\cdots$(答)
+\newpage
+\end{multicols}
+\end{document}

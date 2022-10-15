@@ -1,0 +1,108 @@
+\documentclass[a4j]{jarticle}
+\usepackage{amsmath}
+\usepackage{ascmac}
+\usepackage{amssymb}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{framed}
+\usepackage{fancyhdr}
+\usepackage{latexsym}
+\usepackage{indent}
+\usepackage{cases}
+\usepackage[dvips]{graphicx}
+\usepackage{color}
+\usepackage{emath}
+\usepackage{emathPp}
+\allowdisplaybreaks
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{東京大学前期$1973$年$3$番}
+\begin{document}
+\input{macros}
+     \begin{oframed}
+     区間$1\le x\le 3$において次のように定義された関数$f(x)$がある．
+          \begin{align*}
+          f(x)=
+               \begin{cases}
+               1&(1\le x\le 2) \\
+               x-1&(2\le x\le3)
+               \end{cases}
+          \end{align*}
+     いま実数$a$に対して，区間$1\le x\le 3$における関数$f(x)-ax$の最大値から最小値を
+     引いた値を$V(a)$とおく．このとき次の問いに答えよ．
+         \begin{enumerate}[(1)]
+         \item $a$がすべての実数に渡って動くとき，$V(a)$の最小値を求めよ．
+         \item $V(a)$の最小値を与えるような$a$の値を求めよ．
+         \end{enumerate}
+     \end{oframed}
+
+\setlength{\columnseprule}{0.4pt}
+\begin{multicols}{2}
+{\bf[解]} $g(x)=f(x)-ax$とおく．
+          \begin{align*}
+          g(x)=
+               \begin{cases}
+               -ax+1&(1\le x\le 2) \\
+               (1-a)x-1&(2\le x\le3)
+               \end{cases}
+          \end{align*}     
+である($g(x)$は連続)．$a$の値によって以下のようになる．\\
+
+     \begin{indentation}{2zw}{0pt}
+     \noindent\underline{(i)$a\le0$の時}\\
+     $g(x)$は増加関数だから，
+          \begin{align*}
+          V(a)=g(3)-g(1)=1-2a
+          \end{align*}
+          
+     \noindent\underline{(ii)$0\le a\le 1$の時}\\
+     $g(x)$のグラフの概形は下図．
+     
+          \begin{zahyou}[ul=10mm](-0.5,3.5)(-0.5,2.5)
+          \def\Fx{1-X/4}
+          \def\Gx{3*X/4-1}
+          \def\aval{1}
+          \def\bval{2}
+          \def\cval{3}
+          \YGurafu\Fx{1}{2}
+          \YGurafu\Gx{2}{3}
+          \YTen\Fx\aval\A
+          \YTen\Fx\bval\B
+          \YTen\Gx\cval\C
+          \Put\A[syaei=xy,xlabel=1,ylabel=1-a]{}
+          \Put\B[syaei=xy,xlabel=2,ylabel=1-2a]{}
+          \Put\C[syaei=xy,xlabel=3,ylabel=2-3a]{}
+          \end{zahyou}
+          
+     また
+          \begin{align*}
+               \begin{cases}
+               g(3)\ge g(1)&(0\le a\le 1/2) \\
+               g(3)\le g(1) &(1/2\le a\le 1)
+               \end{cases}
+          \end{align*}
+     であるから，
+          \begin{align*}
+          V(a)=&
+               \begin{cases}
+               g(3)-g(2)&(0\le a\le 1/2)\\
+               g(1)-g(2)&(1/2\le a\le 1)
+               \end{cases} \\
+               =&
+               \begin{cases}
+               1-a&(0\le a\le 1/2)\\
+               a&(1/2\le a\le 1)
+               \end{cases}
+          \end{align*}
+     \noindent\underline{(iii)$1\le a$の時}\\
+     $g(x)$は減少関数だから，
+          \begin{align*}
+          V(a)=g(1)-g(3)=2a-1
+          \end{align*}
+     \end{indentation}
+     
+以上から，$\min V(a)=V(1/2)=1/2$である．$\cdots$(答)
+\newpage
+\end{multicols}
+\end{document}

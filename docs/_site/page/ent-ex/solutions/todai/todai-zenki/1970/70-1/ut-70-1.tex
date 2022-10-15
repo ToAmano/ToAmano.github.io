@@ -1,0 +1,62 @@
+\documentclass[a4j]{jarticle}
+\usepackage{amsmath}
+\usepackage{ascmac}
+\usepackage{amssymb}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{framed}
+\usepackage{fancyhdr}
+\usepackage{latexsym}
+\usepackage{indent}
+\usepackage{cases}
+\allowdisplaybreaks
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{東京大学前期$$年$$番}
+\begin{document}
+\input{macros}
+     \begin{oframed}
+     $i$を虚数単位とし$a=\cos\frac{\pi}{3}+i\sin\frac{\pi}{3}$とおく．また$n$はすべての自然数にわた
+     って動くとする．このとき，
+         \begin{enumerate}[(1)]
+         \item $a^n$は何個の異なる値をとり得るか．
+         \item $\frac{(1-a^n)(1-a^{2n})(1-a^{3n})(1-a^{4n})(1-a^{5n})}{(1-a)(1-a^2)(1-a^3)(1-a^4)(1-a^5)}$
+         の値を求めよ
+         \end{enumerate}
+     \end{oframed}
+
+\setlength{\columnseprule}{0.4pt}
+\begin{multicols}{2}
+{\bf[解]}ドモアブルの定理から$a^n=1$だから，$k=0,1,2,\dots,5$に対して
+     \begin{align}
+     a^{6n+k}=a^k\label{1}
+     \end{align}
+となる．
+     \begin{enumerate}[(1)]
+     \item \eqref{1}から$a^k$についてのみ考えればよいが，このとき$0\le i<j\le5$に対して
+     $a^i=a^j$と仮定すると$a^{j-i}=1$となって矛盾．故に$a^i\not=a^j$だから$a^k$はすべて
+     異なり，求めるのは$6$個である．
+     \item 合同式の法を$6$とする．
+          \begin{indentation}{2zw}{0pt}
+          \noindent\underline{(i)$n\equiv \pm1$の時} 
+          \[\{n,2n,3n,4n,5n\}\equiv\{1,2,3,4,5\}\]
+         であるから，\eqref{1}から(与式)$=1$である．
+         
+         \underline{(ii)otherwise}　\\
+         $\{n,2n,3n,4n,5n\}$の中に合同式で$0$に等しいものがあるので，(与式)$=0$となる．
+         \end{indentation}
+    以上から
+         \begin{align*}
+         \text{(与式)}=\left\{
+              \begin{array}{ll}
+              1 &  (n\equiv \pm1)     \\
+              0 &  (otherwise)
+              \end{array}
+         \right.\tag{答}
+         \end{align*}
+    となる．     
+    \end{enumerate}
+\newpage
+\end{multicols}
+\end{document}

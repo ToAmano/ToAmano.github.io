@@ -1,0 +1,73 @@
+\documentclass[a4j]{jarticle}
+\usepackage{amsmath}
+\usepackage{ascmac}
+\usepackage{amssymb}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{framed}
+\usepackage{fancyhdr}
+\usepackage{latexsym}
+\usepackage{indent}
+\usepackage{cases}
+\allowdisplaybreaks
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{東京大学前期$1967$年$3$番}
+\begin{document}
+\input{macros}
+     \begin{oframed}
+     辺の長さ$2$の正方形$A$が，その中心を円$x^2+y^2=1$の周上におきながら，かつその辺を座標   
+     軸に平行に保ち真柄動く．一方，同じ大きさの正方形$B$が固定されていて，辺が座標軸に平行
+     でありその中心が点$(1,2)$にある．このとき，二つの正方形$A$，$B$の共通部分の面積の最大値
+     を求めよ．
+     
+     注．正方形の中心とは，その二つの対角線の交点をいう．
+     \end{oframed}
+
+\setlength{\columnseprule}{0.4pt}
+\begin{multicols}{2}
+{\bf[解]}\1 ただし$0\le\theta<2\pi$とする．$A$の中心$(c,s)$とすると，$A$の周及び内部の点は不等式
+     \begin{align}
+     \left\{
+          \begin{array}{l}
+          c-1\le x\le c+1 \\
+          s-1\le y\le s+1
+          \end{array}
+     \right.\label{1}
+     \end{align}
+となる．一方$B$の周及び内部は，不等式
+     \begin{align}
+     \left\{
+          \begin{array}{l}
+          0\le x\le2 \\
+          1\le y\le3
+          \end{array}
+     \right.\label{2}
+     \end{align}
+で表される．\eqref{1}，\eqref{2}が共通部分を持つための条件は$s\ge0$つまり$0\le\theta\le\pi$で，このもとで共通部分は
+     \begin{align}
+     \left\{
+          \begin{array}{l}
+          0\le x\le c+1\\
+          1\le y\le s+1
+          \end{array}
+     \right.\label{3}
+     \end{align}    
+で表される長方形である．故にこの面積$S(\theta)$は 
+     \begin{align*}
+     S(\theta)=s(c+1)
+     \end{align*}
+である．このとき$S'(\theta)=(2c-1)(c+1)$より下表を得る．
+     \begin{align*}
+          \begin{array}{|c|c|c|c|c|c|} \hline
+          \theta & 0 &     &\pi/3 &      & \pi \\ \hline
+          c        & 1 &     &  1/2 &      & -1  \\ \hline      
+          S'       &    &+   &0     &  -   & 0   \\ \hline
+          S        &    &\ne&       & \se&      \\ \hline
+           \end{array}
+     \end{align*}
+従って$\max S(\theta)=S(\pi/3)=\dfrac{3\sqrt{3}}{4}$である．$\cdots$(答)     
+\newpage
+\end{multicols}
+\end{document}

@@ -1,0 +1,100 @@
+\documentclass[a4j]{jarticle}
+\usepackage{amsmath}
+\usepackage{ascmac}
+\usepackage{amssymb}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{framed}
+\usepackage{fancyhdr}
+\usepackage{latexsym}
+\usepackage{indent}
+\usepackage{cases}
+\usepackage[dvips]{graphicx}
+\usepackage{color}
+\usepackage{emath}
+\usepackage{emathPp}
+\allowdisplaybreaks
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{東京大学前期$1978$年$2$番}
+\begin{document}
+\input{macros}
+     \begin{oframed}
+     $x$の関数$f(x)=(x^2-4)(x^2-9)$の，$t\le x\le t+1$という範囲における最大値を$g(t)$とする．$t$が$-3\le t\le3$の範囲を
+     動く時，関数$s=g(t)$を求め，そのグラフを描け．
+     \end{oframed}
+
+\setlength{\columnseprule}{0.4pt}
+\begin{multicols}{2}
+{\bf[解]} まず，
+     \[f'(x)=2x(2x^2-13)\]
+である．故に$\a=\sqrt{13/2}$とおいて下表を得る．
+     \begin{align*}
+          \begin{array}{|c|c|c|c|c|c|c|c|} \hline
+          t&     &-\a              &    &  0&     &\b        &        \\ \hline
+           f'&-   &0               &+   & 0 & -  &  0       &+      \\ \hline
+          f&\se&                 &\ne&    &\se&            &\ne   \\ \hline
+          \end{array}
+    \end{align*}
+また，
+     \begin{align*}
+     &f(t)=f(t+1) \\
+     \Longleftrightarrow
+     &(t+3)(t-2)(4t+2)=0
+     \end{align*}     
+である．
+故に$y=f(x)$のグラフは下図．\\
+
+     \begin{zahyou}[ul=8mm,gentenhaiti={[ne]}](-4,4)(-2,6)
+     \def\Fx{X**4/10-13*X**2/10+36/10}
+     \def\Gx{X**4/10+4*X**3/10-7*X**2/10-22*X/10+24/10}
+     \def\aval{0.5}
+     \def\bval{-0.5}
+     \YGurafu*(*)\Fx
+     \Put{(-3,0)}[sw]{$-3$}
+     \Put{(3,0)}[se]{$3$}
+     \Put{(-2,0)}[se]{$-2$}
+     \Put{(2,0)}[sw]{$2$}
+     \Put{(0,3.6)}[n]{$36$}
+     \YTen\Fx\aval\A
+     \YTen\Fx\bval\B
+     \Put\A[syaei=xy,xlabel=\frac{1}{2},ylabel=]{}
+     \Put\B[syaei=xy,xlabel=\frac{-1}{2},ylabel=]{}
+     \end{zahyou}
+
+従って，求める関数$g(x)$は以下のようになる．
+     \begin{align*}
+     g(x)=\left\{
+          \begin{array}{ll}
+          f(t+1)&(-3\le t\le -1) \\
+          36    &(-1\le t\le 0) \\
+          f(t)    &(0\le t\le 2) \\
+          f(t+1)&(2\le t\le 3)
+          \end{array}
+     \right.
+     \end{align*}
+$f(x+1)=x^4+4x^3-7x^2-22x+24$に注意して，このグラフは右上図．$\cdots$(答)
+     
+     \begin{zahyou}[ul=8mm](-4,4)(-2,10)
+     \def\Fx{X**4/10-13*X**2/10+36/10}
+     \def\Gx{X**4/10+4*X**3/10-7*X**2/10-22*X/10+24/10}
+     \def\Hx{3.6}
+     \def\cval{-1}
+     \def\dval{3}
+     \YGurafu(*)\Fx{0}{2}
+     \YGurafu(*)\Gx{-3}{-1}
+     \YGurafu(*)\Gx{2}{3}
+     \YGurafu\Hx{-1}{0}
+     \Put{(-3,0)}[sw]{$-3$}
+     \Put{(2,0)}[sw]{$2$}
+     \Put{(0,3.6)}[n]{$36$}
+     \YTen\Gx\cval\C
+     \YTen\Gx\dval\D
+     \Put\C[syaei=x,xlabel=-1]{}
+     \Put\D[syaei=x,xlabel=3]{}
+     \end{zahyou}
+     
+\newpage
+\end{multicols}
+\end{document}

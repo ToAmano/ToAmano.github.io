@@ -1,0 +1,60 @@
+\documentclass[a4j]{jarticle}
+\usepackage{amsmath}
+\usepackage{ascmac}
+\usepackage{amssymb}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{framed}
+\usepackage{fancyhdr}
+\usepackage{latexsym}
+\usepackage{indent}
+\usepackage{cases}
+\usepackage[dvips]{graphicx}
+\usepackage{color}
+\allowdisplaybreaks
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{東京大学前期$1985$年$2$番}
+\begin{document}
+\input{macros}
+     \begin{oframed}
+     $xy$平面において，$O$を原点，$A$を定点$(1,0)$とする．また，$P$，$Q$は円周$x^2+y^2=1$の上を動く$2$点であって，
+     線分$OA$から正の向きにまわって線分$OP$に至る角と，線分$OP$から正の向きにまわって線分$OQ$に至る角が等しいという
+     関係が成り立っているものとする．
+     
+     点$P$を通り$x$軸に垂直な直線と$x$軸との交点を$R$，点$Q$を通り$x$軸に垂直な直線と$x$軸の交点を$S$とする．
+     実数$l$を与えた時，線分$RS$の長さが$l$と等しくなるような点$P$，$Q$の位置は何通りあるか．
+     \end{oframed}
+
+\setlength{\columnseprule}{0.4pt}
+\begin{multicols}{2}
+{\bf[解]}\2 ただし，$0\le t<2\pi$とする．すると$P(c,s)$，$Q(\cos 2t,\sin 2t )$となる．故に$R(c,0)$，$Q(\cos 2t,0)$であるから，
+     \begin{align*}
+     l&=|c-\cos 2t|=|2c^2-c-1| \\
+     &=|(2c+1)(c-1)|\equiv f(t)
+     \end{align*}
+である．グラフは下図．
+     \begin{center}
+     \scalebox{0.7}{\input{ut-85-2p}}
+     \end{center}
+
+故に，$t$と$c$の関係に注意し，
+$t$と$P$，$Q$の位置関係が一対一対応であることより，求める場合の数は以下の通り．$\cdots$(答)
+     \begin{align*}
+          \begin{array}{|c|c|c|c|} \hline
+          l              & c  & t & \text{位置}　\\ \hline
+          0             & 2 & 3 & 3 \\ \hline
+          0<l<9/8   & 3 & 6 & 6 \\ \hline
+          9/8          & 2 & 4 & 4 \\ \hline
+          9/8<l<2   & 1 & 2 & 2 \\ \hline
+          2             & 1 & 1 & 1 \\ \hline
+          2<l          & 0 & 0 & 0 \\ \hline
+          \end{array}
+     \end{align*}
+
+     
+             
+\newpage
+\end{multicols}
+\end{document}

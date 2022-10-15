@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>submitに関して | personal website</title>
+<meta name="generator" content="Jekyll v3.9.2" />
+<meta property="og:title" content="submitに関して" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+<meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+<link rel="canonical" href="http://localhost:4000/page/aiida/aiida_submit.html" />
+<meta property="og:url" content="http://localhost:4000/page/aiida/aiida_submit.html" />
+<meta property="og:site_name" content="personal website" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="submitに関して" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","headline":"submitに関して","url":"http://localhost:4000/page/aiida/aiida_submit.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=c90158fd34f66e4f63b4da45038b5d6170d798eb">
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+    
+
+<!--  -->
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1><a href="http://localhost:4000/">personal website</a></h1>
+
+        
+
+        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</p>
+
+        
+        <p class="view"><a href="https://github.com/dirac6582/dirac6582.github.io.git">View the Project on GitHub <small>dirac6582/dirac6582.github.io.git</small></a></p>
+        
+
+        
+
+        
+      </header>
+      <section>
+
+      <h1 id="submitに関して">submitに関して</h1>
+
+<h2 id="metadataoptions">metadata.options</h2>
+
+<p><code class="language-plaintext highlighter-rouge">metadata.options</code>で追加の種々の設定を行うことができる．特にスケジューラのオプションの設定は多くの環境で必須と思う．それ以外に便利なのはインプット，アウトプットファイルの名前を変更したり，コードの実行の前後に追加のコマンドを追加する設定だろう．</p>
+
+<ul>
+  <li>account
+str, optional, non_db – Set the account to use in for the queue on the remote computer</li>
+  <li>additional_retrieve_list, (list, tuple), optional, non_db – List of relative file paths that should be retrieved in addition to what the plugin specifies.</li>
+  <li>append_text, str, optional, non_db – Set the calculation-specific append text, which is going to be appended in the ^ - - - scheduler-job script, just after the code execution</li>
+  <li><strong>custom_scheduler_commands</strong>, str, optional, non_db – Set a (possibly multiline) string with the commands that the user wants to manually set for the scheduler. The difference of this option with respect to the prepend_text is the position in the scheduler submission file where such text is inserted: with this option, the string is inserted before any non-scheduler command</li>
+  <li>environment_variables, dict, optional, non_db – Set a dictionary of custom environment variables for this calculation
+environment_variables_double_quotes, bool, optional, non_db – If set to True, use double quotes instead of single quotes to escape the environment variables specified in environment_variables.</li>
+  <li>import_sys_environment, bool, optional, non_db – If set to true, the submission script will load the system environment variables</li>
+  <li>input_filename, str, optional, non_db – Filename to which the input for the code that is to be run is written.</li>
+  <li>max_memory_kb, int, optional, non_db – Set the maximum memory (in KiloBytes) to be asked to the scheduler</li>
+  <li>max_wallclock_seconds, int, optional, non_db – Set the wallclock in seconds asked to the scheduler</li>
+  <li>mpirun_extra_params, (list, tuple), optional, non_db – Set the extra params to pass to the mpirun (or equivalent) command after the one provided in computer.mpirun_command. Example: mpirun -np 8 extra_params[0] extra_params[1] … exec.x</li>
+  <li>output_filename, str, optional, non_db – Filename to which the content of stdout of the code that is to be run is written.</li>
+  <li>parser_name, str, optional, non_db – Set a string for the output parser. Can be None if no output plugin is available or needed</li>
+  <li>prepend_text, str, optional, non_db – Set the calculation-specific prepend text, which is going to be prepended in the - - scheduler-job script, just before the code execution</li>
+  <li>priority, str, optional, non_db – Set the priority of the job to be queued</li>
+  <li>qos, str, optional, non_db – Set the quality of service to use in for the queue on the remote computer</li>
+  <li>queue_name, str, optional, non_db – Set the name of the queue on the remote computer</li>
+  <li>rerunnable, bool, optional, non_db – Determines if the calculation can be requeued / rerun.</li>
+  <li>resources, dict, required, non_db – Set the dictionary of resources to be used by the scheduler plugin, like the number of nodes, cpus etc. This dictionary is scheduler-plugin dependent. Look at the documentation of the scheduler for more details.</li>
+  <li>scheduler_stderr, str, optional, non_db – Filename to which the content of stderr of the scheduler is written.</li>
+  <li>scheduler_stdout, str, optional, non_db – Filename to which the content of stdout of the scheduler is written.</li>
+  <li>stash, Namespace – Optional directives to stash files after the calculation job has completed.
+Namespace Ports</li>
+  <li>submit_script_filename, str, optional, non_db – Filename to which the job submission script is written.
+withmpi, bool, optional, non_db – Set the calculation to use mpi</li>
+  <li>store_provenance, bool, optional, non_db – If set to False provenance will not be stored in the database.</li>
+</ul>
+
+
+
+      </section>
+      <footer>
+        
+        <p>This project is maintained by <a href="https://github.com/dirac6582">dirac6582</a></p>
+        
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="/assets/js/scale.fix.js"></script>
+  </body>
+</html>

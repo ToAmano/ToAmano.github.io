@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-09-25T02:01:38+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">personal website</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">プログラミング用フォントRictyを試す</title><link href="http://localhost:4000/vscode/2022/09/06/font-ricty-install.html" rel="alternate" type="text/html" title="プログラミング用フォントRictyを試す" /><published>2022-09-06T10:00:00+09:00</published><updated>2022-09-06T10:00:00+09:00</updated><id>http://localhost:4000/vscode/2022/09/06/font-ricty-install</id><content type="html" xml:base="http://localhost:4000/vscode/2022/09/06/font-ricty-install.html">&lt;h2 id=&quot;rictyのインストール-via-homebrew&quot;&gt;Rictyのインストール via homebrew&lt;/h2&gt;
+
+&lt;p&gt;homebrewからインストールする場合，&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;brew tap sanemat/font
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;brew &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;ricty
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;を実行する．成功すれば以下のようなコメントが出力される．&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;***************************************************&lt;/span&gt;
+To &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;Ricty:
+  &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cp&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-f&lt;/span&gt; /opt/homebrew/opt/ricty/share/fonts/Ricty&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;.ttf ~/Library/Fonts/
+  &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;fc-cache &lt;span class=&quot;nt&quot;&gt;-vf&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;***************************************************&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;fc-cache&lt;/code&gt;はmacにフォントをインストールするためのコマンド．ライセンスの関係でフォントの生成は自分でやる必要があるということのようだ．&lt;/p&gt;
+
+&lt;h2 id=&quot;ricty-diminishのインストール-via-homebrew&quot;&gt;Ricty Diminishのインストール via homebrew&lt;/h2&gt;
+
+&lt;p&gt;Rictyの姉妹フォントであるRicty Diminishのインストールは&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;brew &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--cask&lt;/span&gt; font-ricty-diminished
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;で良い．&lt;/p&gt;
+
+&lt;h2 id=&quot;フォントがインストールされていることの確認&quot;&gt;フォントがインストールされていることの確認&lt;/h2&gt;
+
+&lt;p&gt;フォント一覧を表示する&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;fc-list&lt;/code&gt;コマンドを利用していくつか結果が出て来れば成功．&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;fc-list : family | &lt;span class=&quot;nb&quot;&gt;grep&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; ricty
+
+Ricty Discord
+Ricty Diminished Discord
+Ricty
+Ricty Diminished
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;vscodeにフォントを適用する&quot;&gt;VScodeにフォントを適用する&lt;/h2&gt;
+
+&lt;p&gt;Rictyを試しにVScodeに導入する．GUIで設定する場合はcode&amp;gt;基本設定&amp;gt;設定からEditor:Font Familyを探して，ここにRictyを追加する．順番は前のものをより優先して利用する，ということのようだ．&lt;/p&gt;
+
+&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gh&quot;&gt;# デフォルト&lt;/span&gt;
+Menlo, Monaco, 'Courier New', monospace
+
+&lt;span class=&quot;gh&quot;&gt;# 変更後&lt;/span&gt;
+Ricty, Menlo, Monaco, 'Courier New', monospace
+
+&lt;span class=&quot;gh&quot;&gt;# Ricty Diminishedを利用する場合には'が必要（スペースのあるフォント名には必須らしい）&lt;/span&gt;
+'Ricty Diminished', Menlo, Monaco, 'Courier New', monospace
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;バッククォートの表示がおかしい問題について&quot;&gt;バッククォートの表示がおかしい問題について&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://memo.koumei2.com/vscode%E3%81%AE%E3%83%90%E3%83%83%E3%82%AF%E3%82%AF%E3%82%A9%E3%83%BC%E3%83%88%E8%A1%A8%E7%A4%BA%E3%81%8C%E3%81%8A%E3%81%8B%E3%81%97%E3%81%84/&quot;&gt;こちら&lt;/a&gt;の記事を参考にして修正．&lt;/p&gt;
+
+&lt;p&gt;まず，入っていなければfontforgeをインストール．&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;brew &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;fontforge
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;次のようなスクリプトを書く．一行目はインストールされているfontforgeの場所に合わせて修正する．以下はm1mac+homebrewの場合のデフォルトの場所になっている．&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-bash:fix_ricty.pe&quot;&gt;#!/opt/homebrew/bin/fontforge -lang ff
+
+Open($1)
+Select(0u0060)
+SetGlyphClass(&quot;base&quot;)
+Generate($1)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;あとはこのスクリプトをRictyに対して適用する．フォントがインストールされている場所は&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/Library/Fonts/&lt;/code&gt;以下なので&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# スクリプトに実行権限を付与&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;chmod&lt;/span&gt; +x fix_ricty.pe
+
+&lt;span class=&quot;c&quot;&gt;# Rictyを一括変換&lt;/span&gt;
+./fix_ricty.pe ~/Library/Fonts/Ricty&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;で修正されたフォントが生成される．&lt;/p&gt;
+
+&lt;h2 id=&quot;肝心の見栄えについて&quot;&gt;肝心の見栄えについて&lt;/h2&gt;
+
+&lt;p&gt;英語を利用する場合は優れたフォントが数多くあるが，日本語フォントについては今まであまり気にしたことがなかった．自分は少なくともVScodeのデフォルトフォントよりはみやすいと思うのでしばらく使ってみようと思う．&lt;/p&gt;</content><author><name></name></author><category term="vscode" /><summary type="html">Rictyのインストール via homebrew</summary></entry><entry><title type="html">github-pagesを使ったブログの作り方 part2</title><link href="http://localhost:4000/jekyll/update/2022/09/05/change-this-blog.html" rel="alternate" type="text/html" title="github-pagesを使ったブログの作り方 part2" /><published>2022-09-05T10:00:00+09:00</published><updated>2022-09-05T10:00:00+09:00</updated><id>http://localhost:4000/jekyll/update/2022/09/05/change-this-blog</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2022/09/05/change-this-blog.html">&lt;h1 id=&quot;このブログの作り方工事中&quot;&gt;このブログの作り方(工事中)&lt;/h1&gt;
+
+&lt;p&gt;github pagesを使ってブログを作成する過程を記録として残しておくことにする．私の腕前としてはgithubは普段から使っているがhtmlなどの知識はほぼゼロという状態からのスタートで，この記事もgithubについてはある程度使える，macも基本的なコマンドについては使えるという前提で書いていく予定．似たような方の参考になればと思う．&lt;/p&gt;
+
+&lt;p&gt;そもそもgithub pagesとはgithubのレポジトリをウェブサイトの形で公開できるサービスで，サーバー代がかからないのが大きな利点だ．記事はmarkdown形式で書けば自動的にhtmlに変換して公開してくれるので普段からmarkdownに慣れている人間には記事を書く負担が減るのも良い．&lt;/p&gt;
+
+&lt;p&gt;github pagesではサイトの静的ジェネレーターを活用して見た目や構造を整えることができる．例えば新しくブログ記事を書いたらトップページに新着情報として載せてほしいといったブログとして基本的な機能を利用するにはなんらかのジェネレータを活用するのが手っ取り早い．デフォルトでは&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll&lt;/code&gt;というジェネレータを使うことができるのでとりあえずはこれを使う方法で進める．&lt;/p&gt;
+
+&lt;p&gt;github pagesとして外部に公開するページを作るだけなら簡単なのだが，jekyllを入れてサイトの体裁を整えるところに苦労した．基本的な手順は&lt;a href=&quot;https://docs.github.com/ja/pages/setting-up-a-github-pages-site-with-jekyll/about-github-pages-and-jekyll&quot;&gt;githubの公式doc&lt;/a&gt;に従っている．&lt;/p&gt;
+
+&lt;p&gt;記事が長くなりそうなのでいくつかのステップに分けておく．今日は2回目で，具体的に新しいページを作ったり表示をいじってみたりということをやる．&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;jekyllのセットアップ&lt;/li&gt;
+  &lt;li&gt;ブログの中身の変更(今ココ!)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;jekyllのディレクトリ構造&quot;&gt;&lt;a href=&quot;http://jekyllrb-ja.github.io/docs/structure/&quot;&gt;jekyllのディレクトリ構造&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;セットアップが完了したディレクトリ構造をみてると以下のようになっている．&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;dir&lt;/span&gt;
+ |
+ |- index.md
+ |
+ |- _config.yml
+ |
+ |- _posts/
+ |
+ |- _site/
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;このディレクトリ構成にはルールがあって，それを守らないとちゃんと表示されないのでまずはその規則を知る必要がある．&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt;は基本的な設定ファイルで，テーマやタイトルなどの情報がここに格納される．&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;index.md&lt;/code&gt;はトップページ．&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts/&lt;/code&gt;以下にはブログ用の記事を入れる．「ブログ用の記事」と言っているのには理由があって，jekyllでは日付で紐付けられた記事(このブログ用記事)とそれ以外の記事がある．ブログ用の記事は全てこのディレクトリ内になければならず，そのファイル名は&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;YYYY-MM-DD-title.md&lt;/code&gt;という形でなければいけない．&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_site/&lt;/code&gt;以下はJekyllが変換したページが配置される（デフォルトの）場所で，gitで管理する必要はないため.gitignore ファイルに追加する方が良い．&lt;/p&gt;
+
+&lt;h2 id=&quot;ブログタイトルを変更する&quot;&gt;ブログタイトルを変更する&lt;/h2&gt;
+
+&lt;p&gt;まずは手始めにブログタイトルを変更してみる．&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt;を開くと以下の様になっている部分がある．&lt;/p&gt;
+
+&lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Your awesome title&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;email&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;your-email@example.com&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;description&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;pi&quot;&gt;&amp;gt;-&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# this means to ignore newlines until &quot;baseurl:&quot;&lt;/span&gt;
+  &lt;span class=&quot;s&quot;&gt;Write an awesome description for your new site here. You can edit this&lt;/span&gt;
+  &lt;span class=&quot;s&quot;&gt;line in _config.yml. It will appear in your document head meta (for&lt;/span&gt;
+  &lt;span class=&quot;s&quot;&gt;Google search results) and in your feed.xml site description.&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;baseurl&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# the subpath of your site, e.g. /blog&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;titleなどを変更してリモートにプッシュすると，サイト名が変わっているのが確認できる．&lt;/p&gt;
+
+&lt;h2 id=&quot;新しいブログ記事を書く&quot;&gt;新しいブログ記事を書く&lt;/h2&gt;
+
+&lt;p&gt;デフォルトの状態で&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_post&lt;/code&gt;以下に例の記事が入っているのでそれを参考にすると良い．記事はマークダウンで書かれており，ファイルの先頭には次の様な記述がある．&lt;/p&gt;
+
+&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt; ---&lt;/span&gt;
+ layout: post
+ title:  &quot;github-pagesを使ったブログの作り方 part2&quot;
+ date:   2022-09-05 21:00:00 +0900
+ categories: jekyll update
+&lt;span class=&quot;p&quot;&gt; ---
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;この&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;---&lt;/code&gt;で囲まれた部分をYAML frontmatterとよび，ここで記事のタイトルなどを設定する．とりあえずはタイトルと日付を好きに変更して，あとは適当に記事の中身を書いてリモートにプッシュすると，トップページのPOSTと書いてある下に新しいポストが追加されている！！ クリックして今書いた内容が表示されていれば成功だ．&lt;/p&gt;
+
+&lt;p&gt;基本的にはこの要領でブログ記事を次々に追加していくことができる．新しい記事を書けばトップページに自動でリンクが貼られるので，これで最低限ブログの体裁はできた．&lt;/p&gt;</content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html">このブログの作り方(工事中)</summary></entry><entry><title type="html">github-pagesを使ったブログの作り方</title><link href="http://localhost:4000/jekyll/update/2022/09/04/make-this-blog.html" rel="alternate" type="text/html" title="github-pagesを使ったブログの作り方" /><published>2022-09-04T10:03:40+09:00</published><updated>2022-09-04T10:03:40+09:00</updated><id>http://localhost:4000/jekyll/update/2022/09/04/make-this-blog</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2022/09/04/make-this-blog.html">&lt;h1 id=&quot;このブログの作り方工事中&quot;&gt;このブログの作り方(工事中)&lt;/h1&gt;
+
+&lt;p&gt;github pagesを使ってブログを作成する過程を記録として残しておくことにする．私の腕前としてはgithubは普段から使っているがhtmlなどの知識はほぼゼロという状態からのスタートで，この記事もgithubについてはある程度使える，macも基本的なコマンドについては使えるという前提で書いていく予定．似たような方の参考になればと思う．&lt;/p&gt;
+
+&lt;p&gt;そもそもgithub pagesとはgithubのレポジトリをウェブサイトの形で公開できるサービスで，サーバー代がかからないのが大きな利点だ．記事はmarkdown形式で書けば自動的にhtmlに変換して公開してくれるので普段からmarkdownに慣れている人間には記事を書く負担が減るのも良い．&lt;/p&gt;
+
+&lt;p&gt;github pagesでは静的ジェネレーターを活用して見た目や構造を整えることができる．例えば新しくブログ記事を書いたらトップページに新着情報として載せてほしいといったブログとして基本的な機能を利用するにはなんらかのジェネレータを活用するのが手っ取り早い．デフォルトでは&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll&lt;/code&gt;というジェネレータを使うことができるのでとりあえずはこれを使う方法で進める．&lt;/p&gt;
+
+&lt;p&gt;github pagesとして外部に公開するページを作るだけなら簡単なのだが，jekyllを入れてサイトの体裁を整えるところに苦労した．基本的な手順は&lt;a href=&quot;https://docs.github.com/ja/pages/setting-up-a-github-pages-site-with-jekyll/about-github-pages-and-jekyll&quot;&gt;githubの公式doc&lt;/a&gt;に従っている．&lt;/p&gt;
+
+&lt;p&gt;記事が長くなりそうなのでいくつかのステップに分けておく．今日は1回目.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;jekyllのセットアップ(イマココ!)&lt;/li&gt;
+  &lt;li&gt;ブログの中身の変更&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;環境&quot;&gt;環境&lt;/h2&gt;
+&lt;p&gt;M1mac
+Homebrew
+zsh&lt;/p&gt;
+
+&lt;h2 id=&quot;1-m1macへのrbenvを利用したrubyのinstall&quot;&gt;1. M1macへのrbenvを利用したRubyのinstall&lt;/h2&gt;
+&lt;p&gt;jekyllはrubyで書かれているので，まずはrubyを入れるところから始める．macにはデフォルトで&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/usr/bin/ruby&lt;/code&gt;に入っているのだが，一応一からやってみることにする．rubyを入れるためにrubyのバージョン管理システムである&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rbenv&lt;/code&gt;をHomebrew経由で導入する．追加で環境設定用のコマンドを.zshrcに追記する．&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# homebrew経由でinstall&lt;/span&gt;
+brew &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;rbenv
+
+&lt;span class=&quot;c&quot;&gt;# rbenv用の環境設定を.zshrcに追記&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'export PATH=$HOME/.rbenv/bin:$PATH'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; ~/.zshrc
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'eval &quot;$(rbenv init - zsh)&quot;'&lt;/span&gt;         &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; ~/.zshrc
+
+&lt;span class=&quot;c&quot;&gt;# .zshrcをリロード&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt; ~/.zshrc
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;ここまでできたらちゃんと&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rbenv&lt;/code&gt;がインストールできているか以下のコマンドで確認しておく．&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rbenv &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-l&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;結果として3.0.0などいくつかの数字がズラズラ表示されればインストールは成功なのでRubyをインストールする．表示された数字の中から適当に一つ選んで以下のコマンドを実行する．私は2.7.2を選んだが特に理由はない．&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rbenv &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;2.7.3
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;ここで問題発生．インストールが途中で止まってしまう．．．調べてみると&lt;a href=&quot;https://kenzoblog.vercel.app/posts/m1-chip&quot;&gt;こういう&lt;/a&gt;記事を見つけたので同じように実行し直してみるとうまくインストールできた．ネットで調べてみるとぼちぼちインストールに失敗したという記事が出てくるので大変なステップかもしれない．インストールできたら&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rbenv versions&lt;/code&gt;コマンドで確認する．ここに自分の指定した番号がちゃんと表示されていれば成功．&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# install ruby &lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;RUBY_CFLAGS&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;-w&quot;&lt;/span&gt; rbenv &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;2.7.3
+
+&lt;span class=&quot;c&quot;&gt;# check if installed&lt;/span&gt;
+rbenv versions
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;最後にインストールされたバージョンを実際に&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rbenv global&lt;/code&gt;コマンドで適用する．適用できていれば実際にrubyを実行した時のバージョン表示が自分の指定したものに変わっているはずだ．&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;which&lt;/code&gt;でみると&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rbenv&lt;/code&gt;の仮想環境内に自分の入れたrubyが入っていることがわかる．&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# 
+rbenv global 2.7.3
+
+# installされたrubyが実際に適用されたか否か
+ruby -v
+which ruby
+
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;これでめでたくrubyの環境設定は終了で，続いて本題のjekyllのinstallに移る．&lt;/p&gt;
+
+&lt;h2 id=&quot;2-bundlerとjekyllのinstall&quot;&gt;2. bundlerとjekyllのinstall&lt;/h2&gt;
+
+&lt;p&gt;rubyではパッケージ管理システムとして&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gem&lt;/code&gt;というコマンドが使われている．まずはgemがちゃんと入っているかを確認する．&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;which gem 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;これでちゃんと仮想環境内のgemを指し示していたら先にすすむ．bundler(後で必要になる)とjekyllをgemからインストールする．&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;gem &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;bundler jekyll 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;3-サイトのセットアップ&quot;&gt;3. サイトのセットアップ&lt;/h2&gt;
+
+&lt;p&gt;まずはブログにしたいローカルブランチに行って，&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll new&lt;/code&gt;コマンドで新しくサイトを生成する．&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# Creates a Jekyll site in the current directory&lt;/span&gt;
+jekyll new &lt;span class=&quot;nt&quot;&gt;--skip-bundle&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;するといくつかの新しいページが作られるが，その中で&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Gemfile&lt;/code&gt;を開く．ファイルでも言及されているが，github pagesで使うように2つ修正する．&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#1. gem &quot;jekyll&quot;で始まる行をコメントアウト&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#2. gem &quot;github-pages&quot;で始まる行のコメントを外す&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;コマンドラインから以下を実行する．&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo&lt;/span&gt; /path/to/bundle &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;これで初期セットアップは完成．もしローカル環境でブログの出来栄えをみたければ&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bundle &lt;span class=&quot;nb&quot;&gt;exec &lt;/span&gt;jekyll serve
+jekyll serve
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;コマンドでローカルサーバーを立ち上げてどういう表示になっているかを確認できる．&lt;/p&gt;</content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html">このブログの作り方(工事中)</summary></entry></feed>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>emacsでの英単語チェッカー | personal website</title>
+<meta name="generator" content="Jekyll v3.9.2" />
+<meta property="og:title" content="emacsでの英単語チェッカー" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+<meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+<link rel="canonical" href="http://localhost:4000/page/emacs/emacs_aspell.html" />
+<meta property="og:url" content="http://localhost:4000/page/emacs/emacs_aspell.html" />
+<meta property="og:site_name" content="personal website" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-09-04T10:03:40+09:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="emacsでの英単語チェッカー" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-09-04T10:03:40+09:00","datePublished":"2022-09-04T10:03:40+09:00","description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","headline":"emacsでの英単語チェッカー","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/page/emacs/emacs_aspell.html"},"url":"http://localhost:4000/page/emacs/emacs_aspell.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=c90158fd34f66e4f63b4da45038b5d6170d798eb">
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+    
+
+<!--  -->
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1><a href="http://localhost:4000/">personal website</a></h1>
+
+        
+
+        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</p>
+
+        
+        <p class="view"><a href="https://github.com/dirac6582/dirac6582.github.io.git">View the Project on GitHub <small>dirac6582/dirac6582.github.io.git</small></a></p>
+        
+
+        
+
+        
+      </header>
+      <section>
+
+      <p>emacsでlatex文書を書くときの英単語のスペルミスを減らすために英単語チェッカーを入れる．英単語チェッカーとしてシステムに<code class="language-plaintext highlighter-rouge">aspell</code>をインストールし，emacsで<code class="language-plaintext highlighter-rouge">ispell</code>と<code class="language-plaintext highlighter-rouge">flycspell</code>モードを利用する．</p>
+
+<h2 id="aspellのインストール">aspellのインストール</h2>
+
+<p>まずはhomebrewからシステムにaspellをインストールする．</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew <span class="nb">install </span>aspell
+</code></pre></div></div>
+
+<h2 id="ispellをemacsで利用">ispellをemacsで利用</h2>
+
+<p>ややこしいが，aspellをemacsで利用するためのパッケージが<code class="language-plaintext highlighter-rouge">ispell</code>である<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>．aspellをemacsから利用するには以下のような設定を<code class="language-plaintext highlighter-rouge">init.el</code>に書き込む<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">2</a></sup><sup id="fnref:3" role="doc-noteref"><a href="#fn:3" class="footnote" rel="footnote">3</a></sup>．</p>
+
+<pre><code class="language-latex:init.el">;; aspellにパスを通す
+;; https://texwiki.texjp.org/?Aspell
+(add-to-list 'load-path "/opt/local/bin/")
+(add-to-list 'load-path "/opt/homebrew/bin/")
+
+;; スペルチェックにaspellを利用する
+(setq-default ispell-program-name "aspell")
+
+;; 日英混文の処理
+(use-package aspell
+  :ensure t
+  :config
+  (setq ispell-local-dictionary "en_US")
+  (add-to-list 'ispell-skip-region-alist '("[^\000-\377]+"))
+)
+</code></pre>
+
+<p>利用方法としては<code class="language-plaintext highlighter-rouge">M-x ispell</code>を覚えておけばよい．</p>
+
+<h2 id="flyspellの利用">flyspellの利用</h2>
+
+<p>flyspellはエンジンとしてaspellを利用してemacsで誤った単語をハイライトしてくれる．したがって前項でのaspellの設定を終わらせていないと動かない．基本的にはデフォルトで入っているので<code class="language-plaintext highlighter-rouge">init.el</code>ファイルで設定を書くだけでよい．<code class="language-plaintext highlighter-rouge">hook</code>でyatex-modeが起動した時に自動で有効にする設定にしてある．config以下は個人的な色の設定なのでなくても良い．</p>
+
+<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(use-package flyspell
+    :ensure t
+    :hook (yatex-mode . flyspell-mode)
+    :config
+    (set-face-attribute 'flyspell-duplicate nil
+                       :foreground "white"
+                       :background "orange" :box t :underline nil)
+    (set-face-attribute 'flyspell-incorrect nil
+                       :foreground "white"
+                       :background "red" :box t :underline nil)
+)
+</code></pre></div></div>
+
+<p>flyspellはispellと違って文書を書いている時にリアルタイムでハイライトしてくれるので私のような適当な人間にはありがたい．</p>
+
+<h2 id="aspellに辞書を追加">aspellに辞書を追加</h2>
+
+<!--
+https://stakizawa.hatenablog.com/entry/20080122/t1
+-->
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1" role="doc-endnote">
+      <p>https://texwiki.texjp.org/?Aspell <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:2" role="doc-endnote">
+      <p>https://futurismo.biz/archives/5995/ <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:3" role="doc-endnote">
+      <p>https://zenn.dev/maswag/books/latex-on-emacs/viewer/ispell <a href="#fnref:3" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+
+      </section>
+      <footer>
+        
+        <p>This project is maintained by <a href="https://github.com/dirac6582">dirac6582</a></p>
+        
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="/assets/js/scale.fix.js"></script>
+  </body>
+</html>

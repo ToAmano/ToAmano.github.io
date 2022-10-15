@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>zsh 設定ファイルの種類 | personal website</title>
+<meta name="generator" content="Jekyll v3.9.2" />
+<meta property="og:title" content="zsh 設定ファイルの種類" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+<meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+<link rel="canonical" href="http://localhost:4000/page/bash/zsh_setting.html" />
+<meta property="og:url" content="http://localhost:4000/page/bash/zsh_setting.html" />
+<meta property="og:site_name" content="personal website" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-09-04T10:03:40+09:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="zsh 設定ファイルの種類" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-09-04T10:03:40+09:00","datePublished":"2022-09-04T10:03:40+09:00","description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","headline":"zsh 設定ファイルの種類","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/page/bash/zsh_setting.html"},"url":"http://localhost:4000/page/bash/zsh_setting.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=c90158fd34f66e4f63b4da45038b5d6170d798eb">
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+    
+
+<!--  -->
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1><a href="http://localhost:4000/">personal website</a></h1>
+
+        
+
+        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</p>
+
+        
+        <p class="view"><a href="https://github.com/dirac6582/dirac6582.github.io.git">View the Project on GitHub <small>dirac6582/dirac6582.github.io.git</small></a></p>
+        
+
+        
+
+        
+      </header>
+      <section>
+
+      <h2 id="zshの設定ファイルの種類と読み込み順序">zshの設定ファイルの種類と読み込み順序</h2>
+
+<p><code class="language-plaintext highlighter-rouge">.zshenv</code>, <code class="language-plaintext highlighter-rouge">.zprofile</code>, <code class="language-plaintext highlighter-rouge">.zshrc</code>, <code class="language-plaintext highlighter-rouge">.zlogin</code>の4つのファイルがあり，それぞれglobal（/etc/以下）とlocal（~/以下）にある．基本的にglobalの設定が読み込まれてからlocalの設定が読み込まれる．自分のPCをいじっている限りはlocalの設定のみいじれば良い．サーバー管理者となったらglobalの設定をいじることになる．localの設定場所は<code class="language-plaintext highlighter-rouge">$ZDOTDIR</code>で指定することも可能．</p>
+
+<p>これらのファイルはzshの起動方法によって読み込まれるか否かが異なる．</p>
+
+<ul>
+  <li>ログインシェルの場合（iterm2起動時,SSH,TMUX,SCREENなど含む）
+  zshenv &gt; zprofile &gt; zshrc &gt; zloginの順でそれぞれglobalを読み込んだ後でlocalを上書き読み込みする．</li>
+  <li>インタラクティブシェルの場合（iterm2上でbashやzshと打った場合）
+  zshenv &gt; zshrc</li>
+  <li>シェルスクリプト実行の場合
+  zshenv</li>
+  <li>ログアウト時（これだけはlocal→globalの順）
+  zlogout</li>
+</ul>
+
+<p>したがって，<code class="language-plaintext highlighter-rouge">.zshenv</code>には環境変数などシェルスクリプト実行時にも読み込む設定に絞って記述する．<code class="language-plaintext highlighter-rouge">.zprofile</code>はログインシェルの場合のみ実行される．インタラクティブシェルを積極的に使う場合以外はあまり使い道がないと思うので自分は利用していない．<code class="language-plaintext highlighter-rouge">.zshrc</code>は加えてインタラクティブシェルでも実行されるが，自分は設定は全てこちらに記述している．</p>
+
+<p>結局のところ環境変数は<code class="language-plaintext highlighter-rouge">.zshenv</code>に，その他の設定は<code class="language-plaintext highlighter-rouge">.zshrc</code>に記述してその後のファイルは利用していない．</p>
+
+<!--
+## zlogin
+ログインシェルの場合だけ読み込まれる。
+zprofileと一緒なのだが、重要なのはzshrcの後に読み込まれるということ。
+ちなみにzprofileとzloginを一緒に使うことはあまり想定されていないらしい。
+どちらか一方を使うイメージかな
+
+## zlogout
+シェルからexitする前に読み込まれる。
+最後に定型的な処理をさせたい場合にはここに記述する。
+
+
+## Zsh 設定ファイルTips
+スクリプトが大きくなってきたらコンパイルしましょう
+カスタマイズしていくとだんだんファイルが大きくなってきます。
+ファイルが多く、とくにスクリプト系が増えると読み込みにも時間がかかってしまい快適さが失われてしまいます。
+
+そんな時は、コンパイルをしましょう。
+
+$ zcompile ~/.zshrc
+これを実行すると.zshrc.zwcができます。
+このファイルは、zshで自動的に読み取られるようになっています。
+
+ファイル変更を完治して自動的にコンパイルすれば楽ちんですね。
+-->
+
+<h2 id="参考文献">参考文献</h2>
+<p>https://qiita.com/muran001/items/7b104d33f5ea3f75353f</p>
+
+
+      </section>
+      <footer>
+        
+        <p>This project is maintained by <a href="https://github.com/dirac6582">dirac6582</a></p>
+        
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="/assets/js/scale.fix.js"></script>
+  </body>
+</html>

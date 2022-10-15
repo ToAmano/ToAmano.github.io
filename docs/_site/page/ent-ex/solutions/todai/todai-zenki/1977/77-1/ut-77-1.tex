@@ -1,0 +1,111 @@
+\documentclass[a4j]{jarticle}
+\usepackage{amsmath}
+\usepackage{ascmac}
+\usepackage{amssymb}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{framed}
+\usepackage{fancyhdr}
+\usepackage{latexsym}
+\usepackage{indent}
+\usepackage{cases}
+\usepackage[dvips]{graphicx}
+\usepackage{color}
+\usepackage{emath}
+\usepackage{emathPp}
+\allowdisplaybreaks
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{東京大学前期$1977$年$1$番}
+\begin{document}
+\input{macros}
+     \begin{oframed}
+     $k$を実数の定数とするとき，$x$の関数$f(x)$が$-1\le x\le1$の範囲でとる最大値を$M(k)$で表す．$k$が実数
+     全体を動くとき，$M(k)$が最小となる$k$の値および$M(k)$の最小値を求めよ．
+     \end{oframed}
+
+\setlength{\columnseprule}{0.4pt}
+\begin{multicols}{2}
+{\bf[解]} $g(x)=x^3-3kx$とおく．$g(x)$は奇関数だから，$f(x)$は偶関数．故に$0\le x$で考える．
+     \[g'(x)=3(x^2-k)\]
+であるから，$k$の値によって場合分けする．\\
+
+     \begin{indentation}{2zw}{0pt}
+     \noindent\underline{(i)$k\le0$の時} \\
+     $g'(x)\ge0$だから$g(x)$は単調増加で
+          \begin{align*}
+          &g(0)=0&g(1)=|1-3k|\ge0
+          \end{align*}
+     に注意して
+          \begin{align*}
+          M(k)=g(1)=|1-3k|
+          \end{align*}
+     である．\\
+     
+     \noindent\underline{(ii)$0<k\le 1$の時}\\
+     下表を得る．
+          \[
+          \begin{array}{|c|c|c|c|c|c|}\hline
+          x & 0 &    &\sqrt{k}&     & 1 \\   \hline
+          g'&    & -  & 0        & +  &    \\ \hline
+          g&    &\se&           &\ne&    \\ \hline
+          \end{array}
+          \]
+     故に(i)と同様にして($f(0)$は最大値の候補から除外できて)
+          \begin{align*}
+          M(k)&=\max\{f(0),f(\sqrt{k}),f(1)\} \\
+          &=\max\{|1-3k|,2k\sqrt{k}\}
+          \end{align*}
+     である．\\
+     
+     \noindent\underline{(iii)$1\le k$の時}\\
+     下表を得る．
+          \[
+          \begin{array}{|c|c|c|c|}\hline
+          x & 0 &     & 1 \\ \hline
+          g'&    & -   &    \\ \hline
+          g&    &\se &    \\ \hline
+          \end{array}
+          \]     
+      故に(i)と同様にして，
+           \begin{align*}
+           M(k)=f(1)=|1-3k|
+           \end{align*}
+      \end{indentation}
+      
+ 以上をまとめて
+      \begin{align}
+      M(k)=
+           \begin{cases}
+           |1-3k|&k\le0,1\le k \\
+           \max\{|1-3k|,2k\sqrt{k}\}&0<k\le1
+           \end{cases}
+      \end{align}
+ であるから，図示して下図．\\
+ 
+      \begin{zahyou}[ul=20mm,yokozikukigou=$k$](-1,2)(-0.5,3)
+      \def\Fx{1-3*X}
+      \def\Hx{-1+3*X}
+      \def\Gx{2*X*sqrt(X)}
+      \tenretu*{A(1,2);B(0.25,0.25);}
+      \YGurafu*[migix=0.25]\Fx
+      \YGurafu\Gx{0.25}{1}
+      \YGurafu\Hx{1}{\xmax}
+      \YGurafu(0.05)(0.02)\Fx{0.25}{1/3}
+      \YGurafu(0.05)(0.02)\Gx{0}{0.25}
+      \YGurafu(0.05)(0.02)\Hx{1/3}{1}
+      \Put\A[syaei=xy,xlabel=1,ylabel=2]{}
+      \Put\B[syaei=xy,xlabel=\frac{1}{4},ylabel=\frac{1}{4}]{}
+      \Put\A[e]{$y=3k-1$}
+      \Put{(0,1)}[w]{$y=1-3k$}
+      \Put{(0.2,1,5)}{$y=2k^{\frac{3}{2}}$}
+      \end{zahyou}
+      
+故に求める最小値は
+     \[M\left(\frac{1}{4}\right)=\frac{1}{4}\]      
+である．$\cdots$(答)
+      
+\newpage
+\end{multicols}
+\end{document}

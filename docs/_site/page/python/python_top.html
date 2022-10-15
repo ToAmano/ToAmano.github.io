@@ -1,0 +1,93 @@
+<h2 id="anacondaのinstall">anacondaのinstall</h2>
+
+<p><a href="https://www.anaconda.com/products/distribution">公式ページ</a>からgraphical installerまたはcommand line installerをダウンロードできる．
+<!-- https://repo.anaconda.com/archive/Anaconda3-2022.05-MacOSX-arm64.sh --></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># コマンドラインインストーラの場合はダウンロード後，以下を実行．</span>
+bash /path/to/Anaconda3-2022.05-MacOSX-arm64.sh
+</code></pre></div></div>
+
+<p>PATHの設定が自動的に.zshrcに書き込まれているので必要に応じて書き直すべし．</p>
+
+<!--export PATH=~/anaconda3/bin:$PATH -->
+
+<h2 id="仮想環境の構築">仮想環境の構築</h2>
+
+<p>pythonを使う場合，プロジェクトごとに仮想環境を作成し，そこにプロジェクトごとにpythonと必要なパッケージをインストールしていくのが主流．例えばプロジェクトごとに違うバージョンのpythonが使いたい時にも，仮想環境をコマンド一つで切り替えれられるのでとても便利．</p>
+
+<h2 id="計算科学で使えるパッケージ">計算科学で使えるパッケージ</h2>
+
+<ol>
+  <li>
+    <p><a href="https://seekpath.readthedocs.io/en/latest/maindoc.html">seekpath</a></p>
+
+    <p>Kpathを探したい場合．パッケージ自体を使うことも可能だが，以下に示す他のパッケージでもエンジンとして利用されておりそちらを使う方が便利だと思う．</p>
+  </li>
+  <li>
+    <p><a href="/page/python/pymatgen.html">pymatgen</a></p>
+  </li>
+  <li>
+    <p><a href="/page/python/ase.html">ase</a></p>
+  </li>
+</ol>
+
+<h2 id="matplotlibによる作図">matplotlibによる作図</h2>
+
+<!-- https://qiita.com/TomokIshii/items/3a26ee4453f535a69e9e -->
+
+<h2 id="その他">その他</h2>
+
+<p>自作モジュールのパッケージ化．CLIも含めることができる．
+<!-- https://gist.github.com/3panda/7508508a89bd1ea1990217142eaf3c9c  -->
+<!-- https://qtatsu.hatenablog.com/entry/2021/01/03/171032 --></p>
+
+<h2 id="クラス">クラス</h2>
+
+<ul>
+  <li>継承
+<!-- https://code-graffiti.com/class-inheritance-in-python/ --></li>
+</ul>
+
+<!-- https://atmarkit.itmedia.co.jp/ait/articles/2001/28/news013.html　-->
+<ul>
+  <li>
+    <p>メソッドのオーバーライド</p>
+  </li>
+  <li>
+    <p>superによる親クラスのメソッドの利用
+<!-- https://djangobrothers.com/blogs/python_class_inheritance/ --></p>
+  </li>
+</ul>
+
+<h2 id="コードの書き方">コードの書き方</h2>
+
+<p>可読性の良いコードを書くために．．．</p>
+
+<h3 id="docstring関数やクラスのドキュメント">docstring（関数やクラスのドキュメント）</h3>
+
+<!-- https://qiita.com/simonritchie/items/49e0813508cad4876b5a -->
+
+<h3 id="コーディングスタイル">コーディングスタイル</h3>
+
+<!-- https://peps.python.org/pep-0008/#imports -->
+
+<!-- https://mako-note.com/ja/python-underscore/#:~:text=1%E3%81%A4%E4%BB%98%E4%B8%8E-,%E3%82%AF%E3%83%A9%E3%82%B9%E5%86%85%E3%81%AE%E5%A4%89%E6%95%B0%E3%82%84%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89%E3%81%AE%E5%85%88%E9%A0%AD%E3%81%AB%E3%82%A2%E3%83%B3%E3%83%80%E3%83%BC,%E5%A4%89%E6%95%B0%E3%83%BB%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89%E3%81%A8%E3%81%84%E3%81%86%E3%81%93%E3%81%A8%E3%81%A7%E3%81%99%E3%80%82 -->
+
+<ul>
+  <li>
+    <p>_（アンダースコア）を関数の前につけた場合
+  この場合，システム的な制約を受ける．関数が含まれるモジュールからワイルドカードでインポートする場合にアンダースコアで始まる関数は読み込まれない．</p>
+  </li>
+  <li>
+    <p>_（アンダースコア）をクラス内のメソッドの前につけた場合
+  そのメソッドはクラスの中だけで利用するという慣例がある．わかりやすさのためにつけておくのが吉．</p>
+  </li>
+  <li>
+    <p>__（アンダースコア2つ）をクラスの変数やメソッドの前につけた場合
+  ネームマングリング(Name Mangling)が適用される．アンダースコア一つと違ってクラス外からのアクセスができなくなる．</p>
+  </li>
+</ul>
+
+<h2 id="自作関数や自作クラスに関して">自作関数や自作クラスに関して</h2>
+
+<!-- https://qiita.com/kzkadc/items/e4fc7bc9c003de1eb6d0 -->

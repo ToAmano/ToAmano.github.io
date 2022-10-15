@@ -1,0 +1,66 @@
+\documentclass[a4j]{jarticle}
+\usepackage{amsmath}
+\usepackage{ascmac}
+\usepackage{amssymb}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{framed}
+\usepackage{fancyhdr}
+\usepackage{latexsym}
+\usepackage{indent}
+\usepackage{cases}
+\allowdisplaybreaks
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{東京大学前期$1966$年$1$番}
+\begin{document}
+\input{macros}
+     \begin{oframed}
+     ある鉄道の旅客運賃計算規則は以下のとおりであり，それによると，距離が$319\,\mathrm{km}$
+     ，$349\,\mathrm{km}$のときの運賃は，それぞれ$970$円，$1010$円となる．下記の文中の
+     $a$，$b$はともに$0.1$の整数倍の数である．
+     
+     旅客運賃は，距離が$300\,\mathrm{km}$以下の分に対しては$1\,\mathrm{km}$につき$a$円，
+     $300\,\mathrm{km}$を超過した分に対しては$1\,\mathrm{km}$につき$b$円として計算し，
+     その結果において，$10$円未満の端数は$10$円に切り上げるものとする．
+     \end{oframed}
+
+\setlength{\columnseprule}{0.4pt}
+\begin{multicols}{2}
+{\bf[解]}$p,q\in\mathbb{N}$とする．$a=0.1p$，$b=0.1q$とおく．距離$x$の時の運賃を$f(x)$とする．
+     \begin{align*}
+     \left\{
+          \begin{array}{l}
+          f(319)=970 \\
+          f(349)=1010
+          \end{array}
+     \right.
+     \end{align*}
+となる．後半の文章から
+     \begin{align*}
+     &\left\{
+          \begin{array}{l}
+          960<300a+19b\le970 \\
+          1000<300a+49n\le1010
+          \end{array}
+     \right.\\
+     \Longleftrightarrow
+     &\left\{
+          \begin{array}{l}
+          960<30p+1.9q\le970 \\
+          1000<30p+4.9q\le1010
+          \end{array}
+     \right.     
+     \end{align*}
+辺々引いて
+     \[30<3q<50\]
+故に$q\in\mathbb{N}$と合わせて$q=11,12,\cdots,16$である．以下$A=f(349)-f(319)$とおく．$A=40$
+となることが必要である．
+     \begin{indentation}{2zw}{0pt}
+     \noindent\underline{(i)$q=11$}
+     \end{indentation}
+          
+\newpage
+\end{multicols}
+\end{document}

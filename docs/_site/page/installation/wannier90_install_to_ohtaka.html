@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>wannier90 installation | personal website</title>
+<meta name="generator" content="Jekyll v3.9.2" />
+<meta property="og:title" content="wannier90 installation" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+<meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+<link rel="canonical" href="http://localhost:4000/page/installation/wannier90_install_to_ohtaka.html" />
+<meta property="og:url" content="http://localhost:4000/page/installation/wannier90_install_to_ohtaka.html" />
+<meta property="og:site_name" content="personal website" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-09-04T10:03:40+09:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="wannier90 installation" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-09-04T10:03:40+09:00","datePublished":"2022-09-04T10:03:40+09:00","description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","headline":"wannier90 installation","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/page/installation/wannier90_install_to_ohtaka.html"},"url":"http://localhost:4000/page/installation/wannier90_install_to_ohtaka.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=c90158fd34f66e4f63b4da45038b5d6170d798eb">
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+    
+
+<!--  -->
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1><a href="http://localhost:4000/">personal website</a></h1>
+
+        
+
+        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</p>
+
+        
+        <p class="view"><a href="https://github.com/dirac6582/dirac6582.github.io.git">View the Project on GitHub <small>dirac6582/dirac6582.github.io.git</small></a></p>
+        
+
+        
+
+        
+      </header>
+      <section>
+
+      <h2 id="日付2022518">日付：2022/5/18</h2>
+<p>##</p>
+
+<h2 id="状況">状況</h2>
+<p>Quantum Espresso v7.0に付属してくるWannier90をIntel Compilerでinstallしたが，実行時にforttlから警告文が出るのでWannier90だけ別途インストールした．</p>
+
+<h2 id="環境">環境</h2>
+
+<h1 id="インストール手順">インストール手順</h1>
+
+<p>インストールはmakeを利用して行う．基本的はinstall.READMEに書いてある通り．</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cp</span> ./config/make.inc.ifort ./make.inc
+</code></pre></div></div>
+
+<p>make.incは以下．</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#=====================================================</span>
+<span class="c"># For Linux with intel version 11/12 on 64bit machines</span>
+<span class="c">#=====================================================</span>
+F90 <span class="o">=</span> ifort
+<span class="nv">COMMS</span><span class="o">=</span>mpi
+<span class="nv">MPIF90</span><span class="o">=</span>mpiifort
+<span class="nv">FCOPTS</span><span class="o">=</span><span class="nt">-O2</span>
+<span class="nv">LDOPTS</span><span class="o">=</span><span class="nt">-O2</span>
+
+<span class="c">#========================================================</span>
+<span class="c"># Intel mkl libraries. Set LIBPATH if not in default path</span>
+<span class="c">#========================================================</span>
+
+<span class="c"># original</span>
+<span class="c"># LIBDIR = /opt/intel/mkl/lib/intel64</span>
+<span class="c">#</span>
+<span class="c"># modify here for module intel/mkl</span>
+LIBDIR <span class="o">=</span> <span class="k">${</span><span class="nv">MKLROOT</span><span class="k">}</span>/lib/intel64
+LIBS   <span class="o">=</span>  <span class="nt">-L</span><span class="si">$(</span>LIBDIR<span class="si">)</span> <span class="nt">-lmkl_core</span> <span class="nt">-lmkl_intel_lp64</span> <span class="nt">-lmkl_sequential</span> <span class="nt">-lpthread</span>
+
+<span class="c">#=======================</span>
+<span class="c"># ATLAS Blas and LAPACK</span>
+<span class="c">#=======================</span>
+<span class="c">#LIBDIR = /usr/local/lib</span>
+<span class="c">#LIBS = -L$(LIBDIR)  -llapack -lf77blas -lcblas -latlas</span>
+</code></pre></div></div>
+
+<p>環境にあわせて<code class="language-plaintext highlighter-rouge">LIBDIR</code> を変更する．</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">echo</span> <span class="k">${</span><span class="nv">MKLROOT</span><span class="k">}</span>
+/home/local/intel/compilers_and_libraries_2020.4.304/linux/mkl
+</code></pre></div></div>
+
+<p>LIBSのところは多分intel link advisorを利用しても良いと思う．</p>
+
+<p>makeの実行</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>make all <span class="nt">-j</span> 4
+</code></pre></div></div>
+
+<h2 id="注意pw2wannier90xについて">注意：pw2wannier90.xについて</h2>
+<p>make allではpw2wannierはinstallできない．そこでpw2wannier90.xについてはQE付属のものを利用する．詳細はQEのinstallのページを参照．</p>
+
+
+      </section>
+      <footer>
+        
+        <p>This project is maintained by <a href="https://github.com/dirac6582">dirac6582</a></p>
+        
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="/assets/js/scale.fix.js"></script>
+  </body>
+</html>

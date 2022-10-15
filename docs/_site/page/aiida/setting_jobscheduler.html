@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>ジョブスケジューラの細かい設定 | personal website</title>
+<meta name="generator" content="Jekyll v3.9.2" />
+<meta property="og:title" content="ジョブスケジューラの細かい設定" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+<meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+<link rel="canonical" href="http://localhost:4000/page/aiida/setting_jobscheduler.html" />
+<meta property="og:url" content="http://localhost:4000/page/aiida/setting_jobscheduler.html" />
+<meta property="og:site_name" content="personal website" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="ジョブスケジューラの細かい設定" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","headline":"ジョブスケジューラの細かい設定","url":"http://localhost:4000/page/aiida/setting_jobscheduler.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=c90158fd34f66e4f63b4da45038b5d6170d798eb">
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+    
+
+<!--  -->
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1><a href="http://localhost:4000/">personal website</a></h1>
+
+        
+
+        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</p>
+
+        
+        <p class="view"><a href="https://github.com/dirac6582/dirac6582.github.io.git">View the Project on GitHub <small>dirac6582/dirac6582.github.io.git</small></a></p>
+        
+
+        
+
+        
+      </header>
+      <section>
+
+      <h1 id="ジョブスケジューラの細かい設定">ジョブスケジューラの細かい設定</h1>
+
+<p>ジョブスケジューラでは使うパーティションの設定や時間制限など細かい設定が可能だが，AiiDAでもそれらの情報を指定することができる．<a href="https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/schedulers.html?highlight=slurm#topics-schedulers-job-resources-node">公式の記事2</a>も参照．</p>
+
+<!--[公式の記事1](https://www.aiida.net/wp-content/uploads/aiidadocs/scheduler/index.html) -->
+
+<p>ジョブスケジューラーの設定方法としてはどうやら2種類ある？</p>
+
+<ol>
+  <li>codeにmetadata.optionとして追加する方法</li>
+  <li>もっと真面目にやる方法？</li>
+</ol>
+
+<h2 id="slurmの場合">slurmの場合</h2>
+
+<p>リンク先の<a href="https://aiida.readthedocs.io/projects/aiida-core/en/latest/_modules/aiida/schedulers/datastructures.html">ソースコード</a>を見ると</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="s">"""A template for submitting jobs to a scheduler.
+
+    This contains all required information to create the job header.
+
+    The required fields are: working_directory, job_name, num_machines, num_mpiprocs_per_machine, argv.
+
+    Fields:
+
+      * ``shebang line``: The first line of the submission script
+      * ``submit_as_hold``: if set, the job will be in a 'hold' status right
+        after the submission
+      * ``rerunnable``: if the job is rerunnable (boolean)
+      * ``job_environment``: a dictionary with environment variables to set
+        before the execution of the code.
+      * ``environment_variables_double_quotes``: if set to True, use double quotes
+        instead of single quotes to escape the environment variables specified
+        in ``environment_variables``.
+      * ``working_directory``: the working directory for this job. During
+        submission, the transport will first do a 'chdir' to this directory,
+        and then possibly set a scheduler parameter, if this is supported
+        by the scheduler.
+      * ``email``: an email address for sending emails on job events.
+      * ``email_on_started``: if True, ask the scheduler to send an email when the
+        job starts.
+      * ``email_on_terminated``: if True, ask the scheduler to send an email when
+        the job ends. This should also send emails on job failure, when
+        possible.
+      * ``job_name``: the name of this job. The actual name of the job can be
+        different from the one specified here, e.g. if there are unsupported
+        characters, or the name is too long.
+      * ``sched_output_path``: a (relative) file name for the stdout of this job
+      * ``sched_error_path``: a (relative) file name for the stdout of this job
+      * ``sched_join_files``: if True, write both stdout and stderr on the same
+        file (the one specified for stdout)
+      * ``queue_name``: the name of the scheduler queue (sometimes also called
+        partition), on which the job will be submitted.
+      * ``account``: the name of the scheduler account (sometimes also called
+        projectid), on which the job will be submitted.
+      * ``qos``: the quality of service of the scheduler account,
+        on which the job will be submitted.
+      * ``job_resource``: a suitable :py:class:`JobResource`
+        subclass with information on how many
+        nodes and cpus it should use. It must be an instance of the
+        ``aiida.schedulers.Scheduler.job_resource_class`` class.
+        Use the Scheduler.create_job_resource method to create it.
+      * ``num_machines``: how many machines (or nodes) should be used
+      * ``num_mpiprocs_per_machine``: how many MPI procs should be used on each
+        machine (or node).
+      * ``priority``: a priority for this job. Should be in the format accepted
+        by the specific scheduler.
+      * ``max_memory_kb``: The maximum amount of memory the job is allowed
+        to allocate ON EACH NODE, in kilobytes
+      * ``max_wallclock_seconds``: The maximum wall clock time that all processes
+        of a job are allowed to exist, in seconds
+      * ``custom_scheduler_commands``: a string that will be inserted right
+        after the last scheduler command, and before any other non-scheduler
+        command; useful if some specific flag needs to be added and is not
+        supported by the plugin
+      * ``prepend_text``: a (possibly multi-line) string to be inserted
+        in the scheduler script before the main execution line
+      * ``append_text``: a (possibly multi-line) string to be inserted
+        in the scheduler script after the main execution line
+      * ``import_sys_environment``: import the system environment variables
+      * ``codes_info``: a list of aiida.scheduler.datastructures.JobTemplateCodeInfo objects.
+        Each contains the information necessary to run a single code. At the
+        moment, it can contain:
+
+        * ``cmdline_parameters``: a list of strings with the command line arguments
+          of the program to run. This is the main program to be executed.
+          NOTE: The first one is the executable name.
+          For MPI runs, this will probably be "mpirun" or a similar program;
+          this has to be chosen at a upper level.
+        * ``stdin_name``: the (relative) file name to be used as stdin for the
+          program specified with argv.
+        * ``stdout_name``: the (relative) file name to be used as stdout for the
+          program specified with argv.
+        * ``stderr_name``: the (relative) file name to be used as stderr for the
+          program specified with argv.
+        * ``join_files``: if True, stderr is redirected on the same file
+          specified for stdout.
+
+      * ``codes_run_mode``: sets the run_mode with which the (multiple) codes
+        have to be executed. For example, parallel execution::
+
+          mpirun -np 8 a.x &amp;
+          mpirun -np 8 b.x &amp;
+          wait
+
+        The serial execution would be without the &amp;'s.
+        Values are given by aiida.common.datastructures.CodeRunMode.
+    """</span>
+</code></pre></div></div>
+
+<p>リンク先の<a href="https://aiida.readthedocs.io/projects/aiida-core/en/latest/_modules/aiida/schedulers/plugins/slurm.html">ソースコード</a>をみると</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        <span class="o">(</span><span class="s1">'%i'</span>, <span class="s1">'job_id'</span><span class="o">)</span>,  <span class="c"># job or job step id</span>
+        <span class="o">(</span><span class="s1">'%t'</span>, <span class="s1">'state_raw'</span><span class="o">)</span>,  <span class="c"># job state in compact form</span>
+        <span class="o">(</span><span class="s1">'%r'</span>, <span class="s1">'annotation'</span><span class="o">)</span>,  <span class="c"># reason for the job being in its current state</span>
+        <span class="o">(</span><span class="s1">'%B'</span>, <span class="s1">'executing_host'</span><span class="o">)</span>,  <span class="c"># Executing (batch) host</span>
+        <span class="o">(</span><span class="s1">'%u'</span>, <span class="s1">'username'</span><span class="o">)</span>,  <span class="c"># username</span>
+        <span class="o">(</span><span class="s1">'%D'</span>, <span class="s1">'number_nodes'</span><span class="o">)</span>,  <span class="c"># number of nodes allocated</span>
+        <span class="o">(</span><span class="s1">'%C'</span>, <span class="s1">'number_cpus'</span><span class="o">)</span>,  <span class="c"># number of allocated cores (if already running)</span>
+        <span class="o">(</span><span class="s1">'%R'</span>, <span class="s1">'allocated_machines'</span><span class="o">)</span>,  <span class="c"># list of allocated nodes when running, otherwise</span>
+        <span class="c"># reason within parenthesis</span>
+        <span class="o">(</span><span class="s1">'%P'</span>, <span class="s1">'partition'</span><span class="o">)</span>,  <span class="c"># partition (queue) of the job</span>
+        <span class="o">(</span><span class="s1">'%l'</span>, <span class="s1">'time_limit'</span><span class="o">)</span>,  <span class="c"># time limit in days-hours:minutes:seconds</span>
+        <span class="o">(</span><span class="s1">'%M'</span>, <span class="s1">'time_used'</span><span class="o">)</span>,  <span class="c"># Time used by the job in days-hours:minutes:seconds</span>
+        <span class="o">(</span><span class="s1">'%S'</span>, <span class="s1">'dispatch_time'</span><span class="o">)</span>,  <span class="c"># actual or expected dispatch time (start time)</span>
+        <span class="o">(</span><span class="s1">'%j'</span>, <span class="s1">'job_name'</span><span class="o">)</span>,  <span class="c"># job name (title)</span>
+        <span class="o">(</span><span class="s1">'%V'</span>, <span class="s1">'submission_time'</span><span class="o">)</span>  <span class="c"># This is probably new, it exists in version</span>
+        <span class="c"># 14.03.7 and later</span>
+</code></pre></div></div>
+
+<p>の指定が可能のようだ．</p>
+
+
+      </section>
+      <footer>
+        
+        <p>This project is maintained by <a href="https://github.com/dirac6582">dirac6582</a></p>
+        
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="/assets/js/scale.fix.js"></script>
+  </body>
+</html>

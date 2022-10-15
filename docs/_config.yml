@@ -18,6 +18,10 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
+# remote_theme
+remote_theme: "mmistakes/minimal-mistakes@4.24.0"
+
+
 title: personal website
 email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
@@ -30,12 +34,25 @@ url: "https://dirac6582.github.io" # the base hostname & protocol for your site,
 github_username:  dirac6582
 repository: dirac6582/dirac6582.github.io.git
 
+author:
+  name: "test"
+#  avatar: "/assets/images/bio-photo.jpg"
+  bio: "test" # Note: Markdown is allowed
+  location: "Tokyo,Japan"
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/dirac6582"
+
+# Site Footer
+footer:
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/dirac6582"
+
+      
 # Build settings
-# if you are using minima, then check https://github.com/jekyll/minima for more information
-# theme: minima
-plugins:
-  - jekyll-feed
-  - jekyll-org
   
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -64,19 +81,27 @@ plugins:
 # remote_theme: pages-themes/minimal # minimal
 # remote_theme: pages-themes/minimal@v0.2.0
   
-# remote_theme
-remote_theme: "mmistakes/minimal-mistakes@4.24.0"
 
 
 plugins:
    - jekyll-remote-theme # add this line to the plugins list if you already have one
    - jekyll-feed
    - jekyll-include-cache # for mm mistakes
+   - jekyll-org
 
+   
 header_pages:
   - about.md
   - index.md
+
+analytics:
+  provider: "google-gtag"
+  google:
+    tracking_id: "G-F5ZSWKZTY1"
+    anonymize_ip: false # default
   
+
+show_excerpts: true
 
   # Defaults
 defaults:

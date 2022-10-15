@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>bash/zsh トップページ | personal website</title>
+<meta name="generator" content="Jekyll v3.9.2" />
+<meta property="og:title" content="bash/zsh トップページ" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+<meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+<link rel="canonical" href="http://localhost:4000/page/bash/bash_top.html" />
+<meta property="og:url" content="http://localhost:4000/page/bash/bash_top.html" />
+<meta property="og:site_name" content="personal website" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-09-04T10:03:40+09:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="bash/zsh トップページ" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-09-04T10:03:40+09:00","datePublished":"2022-09-04T10:03:40+09:00","description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","headline":"bash/zsh トップページ","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/page/bash/bash_top.html"},"url":"http://localhost:4000/page/bash/bash_top.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=c90158fd34f66e4f63b4da45038b5d6170d798eb">
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+    
+
+<!--  -->
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1><a href="http://localhost:4000/">personal website</a></h1>
+
+        
+
+        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</p>
+
+        
+        <p class="view"><a href="https://github.com/dirac6582/dirac6582.github.io.git">View the Project on GitHub <small>dirac6582/dirac6582.github.io.git</small></a></p>
+        
+
+        
+
+        
+      </header>
+      <section>
+
+      <h2 id="bashzsh">bash/zsh</h2>
+
+<h2 id="zshの設定ファイル">zshの設定ファイル</h2>
+
+<p><a href="/page/bash/zsh_setting.html">zshの設定ファイルの種類</a></p>
+
+<p>[zsh特有の補完などの設定]</p>
+
+<p><a href="/page/bash/zsh_color.html">コマンドの出力に色をつける</a></p>
+
+<p><a href="https://qiita.com/mollifier/items/1220c0eeaa93e82f8afc">zshの外部プラグインまとめ - Qiita</a></p>
+
+<h2 id="dotfiles">dotfiles</h2>
+
+<p><a href="/page/bash/dotfiles.html">dotfileの設定</a></p>
+
+<h2 id="設定ファイルの読み込み">設定ファイルの読み込み</h2>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">source </span>file_name
+
+<span class="nb">.</span> file_name
+</code></pre></div></div>
+<p>環境変数とは，変数の中でもbashで<code class="language-plaintext highlighter-rouge">export</code>されたものを指す．</p>
+
+<h2 id="権限">権限</h2>
+<p>権限には3種類，Read, Write, eXecuteがある．権限はuser,group,othersに対して割り当てられる．</p>
+
+<p>権限の確認には<code class="language-plaintext highlighter-rouge">ls -l</code>が使える．1+3*3=10個の数字が出てくるが，ファイル種別(d:ディレクトリ，f:ファイル，など）+所有者権限3つ+所有グループ権限3つ+その他に対する権限3つになっている．</p>
+
+<p><code class="language-plaintext highlighter-rouge">chmod</code>で権限を変更するやり方は数字によるものと英字によるものがある．</p>
+
+<p>英語でRWXを使用する方法場合</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># UserにX権限を追加</span>
+<span class="nb">chmod </span>u+x test.sh
+
+<span class="c"># User, Group, Others, Allの4つが使える．</span>
+</code></pre></div></div>
+
+<p>一方数字でchmod 644などとするのは，所有者，所有グループ，その他に対する権限を6,4,4で割り当てることを表す．この数字は1:x,2:w,4:rとして足し算で計算する．例えば6=2+4より6=wr．7=1+2+4より7=wrx．</p>
+
+<h2 id="ディレクトリの容量表示">ディレクトリの容量表示</h2>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># -dで深さ指定</span>
+<span class="c"># -hでわかりやすく表示</span>
+<span class="nb">du</span> <span class="nt">-h</span> <span class="nt">-d</span> 1 
+</code></pre></div></div>
+
+<h2 id="termの種類">termの種類</h2>
+<p>termの種類は環境変数$termに入っている．</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">echo</span> <span class="nv">$TERM</span>
+<span class="c">#xtermやlinuxなどと帰ってくる．</span>
+</code></pre></div></div>
+
+<h2 id="ファイルディレクトリを見つけるfindコマンド">ファイル，ディレクトリを見つけるfindコマンド</h2>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># find 探すdir -name "file name"</span>
+find /test <span class="nt">-name</span> <span class="s2">"libpmi.so"</span>
+
+<span class="c"># 探すdirの深さは -maxdepthや-mindepthで指定可能．</span>
+</code></pre></div></div>
+
+<h2 id="zero-padding">zero-padding</h2>
+<p>ワイルドカード展開（ブレース展開）を使う方法が一番楽だが，bash4以上のversionにしか入っていない．</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for </span>i <span class="k">in</span> <span class="o">{</span>001..010<span class="o">}</span>
+<span class="k">do 
+   </span><span class="nb">echo</span> <span class="nv">$i</span>
+<span class="k">done</span>
+</code></pre></div></div>
+
+<h2 id="マシンスペックの確認">マシンスペックの確認</h2>
+<!-- https://qiita.com/DaisukeMiyamoto/items/98ef077ddf44b5727c29 -->
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#CPU</span>
+<span class="nb">cat</span> /proc/cpuinfo
+
+<span class="c">#Memory</span>
+<span class="nb">cat</span> /proc/meminfo
+<span class="nb">sudo </span>dmidecode <span class="nt">-t</span> memory
+
+<span class="c">#マザーボード</span>
+<span class="nb">sudo </span>dmidecode <span class="nt">-t</span> baseboard
+
+<span class="c">#グラフィック</span>
+lspci | <span class="nb">grep </span>VGA
+
+<span class="c">#ディスク</span>
+<span class="nb">df
+sudo </span>parted <span class="nt">-l</span>
+lsblk
+<span class="nb">ls</span> <span class="nt">-la</span> /dev/disk/by-uuid
+lspci | <span class="nb">grep </span>Ethernet
+
+<span class="c">#カーネルversion</span>
+<span class="nb">uname</span> <span class="nt">-a</span>
+
+<span class="c">#distribution version</span>
+lsb_release <span class="nt">-r</span>
+<span class="nb">cat</span> /etc/redhat-release
+<span class="nb">cat</span> /etc/lsb-release
+</code></pre></div></div>
+
+<h2 id="自分の環境で使えるシェルの一覧">自分の環境で使えるシェルの一覧</h2>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cat</span> /etc/shells
+</code></pre></div></div>
+
+<h2 id="ディレクトリ内のファイルの数">ディレクトリ内のファイルの数</h2>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">ls</span> <span class="nt">-1</span> | <span class="nb">wc</span> <span class="nt">-l</span>
+</code></pre></div></div>
+
+<h2 id="文字コードを調べる">文字コードを調べる</h2>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#https://qiita.com/pugiemonn/items/106749351991037fb606</span>
+file <span class="nt">--mime</span> hoge.php
+</code></pre></div></div>
+
+<h2 id="あるポート番号のプロセスの確認">あるポート番号のプロセスの確認</h2>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>lsof <span class="nt">-i</span> <span class="nt">-P</span> | <span class="nb">grep </span>8080
+</code></pre></div></div>
+
+<h2 id="ssh-agent">ssh-agent</h2>
+<!-- https://laboradian.com/how-to-use-ssh-agent/#_exec -->
+
+<h2 id="色付け">色付け</h2>
+<!-- https://fhiyo.github.io/2017/11/14/colorize-terminal-output.html -->
+<p>シェルの出力を色付けする方法について．基本的にはhomebrewから新しくコマンドをinstallしてくる必要がある．</p>
+
+<ol>
+  <li>ls</li>
+</ol>
+
+<p>まずは気に入ったカラーテーマの設定ファイルを設定ファイルをダウンロードしてくる必要がある．</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">dircolorsPATH</span><span class="o">=</span>/path/to/dircolors.ansi-modify-dark
+<span class="c">#以下で読み込み</span>
+<span class="k">if</span> <span class="o">[</span> <span class="nt">-f</span>  <span class="k">${</span><span class="nv">dircolorsPATH</span><span class="k">}</span> <span class="o">]</span><span class="p">;</span><span class="k">then
+    if </span><span class="nb">type dircolors</span> <span class="o">&gt;</span>/dev/null 2&gt;&amp;1<span class="p">;</span><span class="k">then
+        </span><span class="nb">eval</span> <span class="si">$(</span><span class="nb">dircolors</span> <span class="k">${</span><span class="nv">dircolorsPATH</span><span class="k">}</span> <span class="si">)</span>
+    <span class="k">elif </span><span class="nb">type </span>gdircolors <span class="o">&gt;</span>/dev/null 2&gt;&amp;1<span class="p">;</span><span class="k">then
+        </span><span class="nb">eval</span> <span class="si">$(</span>gdircolors <span class="k">${</span><span class="nv">dircolorsPATH</span><span class="k">}</span> <span class="si">)</span>
+    <span class="k">fi
+else
+    </span><span class="nb">echo </span>error DO NOT exist <span class="k">${</span><span class="nv">dircolorsPATH</span><span class="k">}</span>
+<span class="k">fi</span>
+</code></pre></div></div>
+
+<p>デフォルトのbsd系のlsではなく，gnu-lsをインストールしてくる．</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew install gls
+</code></pre></div></div>
+<p>この状態で<code class="language-plaintext highlighter-rouge">ls</code>と打つと<code class="language-plaintext highlighter-rouge">gls</code>の方を実行してくれる．</p>
+
+<ol>
+  <li>cat 
+ccat(colorlized cat)をインストールする．
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew <span class="nb">install </span>ccat
+</code></pre></div>    </div>
+  </li>
+  <li><a href="https://github.com/garabik/grc">grc(ping/makeなど)</a>
+grcというパッケージがあり，これで多くのコマンドの出力に色をつけることができる．
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew <span class="nb">install </span>grc
+</code></pre></div>    </div>
+    <p>grcコマンドとgrcatという二つのコマンドがインストールされ，
+自動で各種コマンドへのAliasを通すには</p>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">[[</span> <span class="nt">-s</span> <span class="s2">"</span><span class="k">${</span><span class="nv">HOMEBREW_HOME</span><span class="k">}</span><span class="s2">/etc/grc.zsh"</span> <span class="o">]]</span> <span class="o">&amp;&amp;</span> <span class="nb">source</span> <span class="k">${</span><span class="nv">HOMEBREW_HOME</span><span class="k">}</span>/etc/grc.zsh
+</code></pre></div>    </div>
+    <p>を.zshrcに追記する．より細かいカスタマイズがやりたい場合はgithubページを参照．</p>
+  </li>
+  <li>diff
+colordiffをインストールする．
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew <span class="nb">install </span>colordiff
+</code></pre></div>    </div>
+  </li>
+  <li>less
+<!-- https://atmarkit.itmedia.co.jp/flinux/rensai/linuxtips/357colorlsless.html
+ -->
+grcでサポートされておらず，source-highlightを利用する．
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew <span class="nb">install </span>source-highlight
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<!--
+https://wiki.archlinux.jp/index.php/Zsh
+https://qiita.com/minnsou/items/3e9f200f9f2cc9a92920
+zsh: https://qiita.com/agotoh/items/e6b22bcfe63162f70e0d
+-->
+
+
+      </section>
+      <footer>
+        
+        <p>This project is maintained by <a href="https://github.com/dirac6582">dirac6582</a></p>
+        
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="/assets/js/scale.fix.js"></script>
+  </body>
+</html>

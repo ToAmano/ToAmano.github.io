@@ -1,0 +1,70 @@
+\documentclass[a4j]{jarticle}
+\usepackage{amsmath}
+\usepackage{ascmac}
+\usepackage{amssymb}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{framed}
+\usepackage{fancyhdr}
+\usepackage{latexsym}
+\usepackage{indent}
+\usepackage{cases}
+\usepackage[dvips]{graphicx}
+\usepackage{color}
+\allowdisplaybreaks
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{東京大学前期$1994$年$3$番}
+\begin{document}
+\input{macros}
+     \begin{oframed}
+     $xyz$空間において，条件
+          \begin{align*}
+               \begin{array}{lll}
+               x^2+y^2\le z^2&z^2\le x&0\le z\le1
+               \end{array}
+          \end{align*}
+     を満たす点$P(x,y,z)$の全体からなる立体を考える．この立体の体積を$V$とし，$0\le k\le 1$に対し，$z$軸と直交する平面
+     $z=k$による切り口の面積を$S(k)$とする．
+          \begin{enumerate}[(1)]
+          \item $k=\cos\theta$とおくとき$S(k)$を$\theta$で表せ．ただし$0\le\theta\pi/2$とする．
+          \item $V$の値を求めよ．
+          \end{enumerate}
+     \end{oframed}
+
+\setlength{\columnseprule}{0.4pt}
+\begin{multicols}{2}
+{\bf[解]} \1 $z=c$での切断面は，
+     \begin{align*}
+          \begin{cases}
+          x^2+y^2\le c^2 \\
+          c^2\le x
+          \end{cases}
+     \end{align*}
+である．従って図示して下図．
+     \begin{center}
+     \scalebox{.7}{\input{ut-94-3p}}
+     \end{center}
+
+$S(k)$は斜線部の面積で
+     \begin{align*}
+     S(k)=\theta c^2-c^3s
+     \end{align*}
+である．$\cdots$((1)の答) \\
+従って，求める体積$V$は
+     \begin{align*}
+     V&=\int_0^1S(k)dk \\ 
+     &=\int_{\pi/2}^0(\theta c^2-c^3s)\frac{dk}{d\theta}d\theta\\
+     &=\int_0^{\pi/2}(c^2s\theta-c^3s^2)d\theta\\
+     &=-\left[\frac{1}{3}c^3\theta \right]_0^{\pi/2}+\frac{1}{3}\int_0^{\pi/2}c^3d\theta-\int_0^{\pi/2}c^3s^2d\theta \\
+     &=\int_0^{\pi/2}c(1-s^2)\left(\frac{1}{3}-s^2\right)d\theta \\
+     &=\int_0^1(1-x^2)\left(\frac{1}{3}-x^2\right)dx \\
+     &=\left[\frac{1}{5}x^5-\frac{4}{9}x^3+\frac{1}{3}x\right]_0^1 \\
+     &=\frac{4}{45}
+     \end{align*}
+である．$\cdots$((2)の答)
+  
+\newpage
+\end{multicols}
+\end{document}

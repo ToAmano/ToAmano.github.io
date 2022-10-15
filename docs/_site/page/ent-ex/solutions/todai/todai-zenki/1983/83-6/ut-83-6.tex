@@ -1,0 +1,121 @@
+\documentclass[a4j]{jarticle}
+\usepackage{amsmath}
+\usepackage{ascmac}
+\usepackage{amssymb}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{framed}
+\usepackage{fancyhdr}
+\usepackage{latexsym}
+\usepackage{indent}
+\usepackage{cases}
+\usepackage[dvips]{graphicx}
+\usepackage{color}
+\usepackage{emath}
+\usepackage{emathPp}
+\allowdisplaybreaks
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{東京大学前期$1983$年$6$番}
+
+\begin{document}
+\input{macros}
+\begin{oframed}
+放物線$y=3/4-x^2$を$y$軸のまわりに回転して得られる曲面$K$を，原点を通り回転軸と
+$45^\circ$の角をなす平面$H$で切る．曲面$K$と平面$H$で囲まれた立体の体積を求めよ．
+\end{oframed}
+
+\setlength{\columnseprule}{0.4pt}
+\begin{multicols}{2}
+{\bf[解]}題意の放物線が偶関数であることから，曲面$K$の方程式は，$x^2$を$x^2+z^2$で置き換えて
+     \[y=\frac{3}{4}-(x^2+z^2) \]
+である．また，対称性から$H$の方程式は
+     \[y=x \]
+としてよい．
+
+これらを平面$x=k$で切断すると
+     \begin{align*}
+          \begin{array}{l}
+          K:y=\left\{ \dfrac{3}{4}-k^2\right\}-z^2\equiv f(z)\\
+          H:y=k
+          \end{array}
+     \end{align*}
+となる．
+
+     \begin{zahyou}[ul=10mm](-1.5,1.5)(-0.5,1.5)
+     \def\Fx{1-X**2}
+     \def\Gx{0.5}
+     \YGurafu*\Fx
+     \YGurafu*\Gx
+     \YKouten\Fx\Gx{}{0}\tempi\A
+     \YKouten\Fx\Gx{0}{}\tempii\B
+     \YNurii*\Fx\Gx{\tempi}{\tempii}
+     \Put\A[syaei=x,xlabel=-\a]{}
+     \Put\B[syaei=x,xlabel=\a]{}
+     \Put{(0,0.5)}[se]{k}
+     \end{zahyou}
+
+故に曲面$K$と平面$H$で囲まれた立体$L$のこの平面での断面は
+     \[ k\le y\le \left\{ \dfrac{3}{4}-k^2\right\}-z^2 \]
+となる．このような$y$の存在条件は
+     \begin{align}
+     \alpha=\sqrt{\dfrac{3}{4}-k-k^2} \label{a}
+     \end{align}
+とおけば
+     \begin{align}
+     k&\le \left\{ \dfrac{3}{4}-k^2\right\}-z^2 \nonumber\\
+     \therefore -\alpha&\le z\le \alpha \label{b}
+     \end{align}
+となり，この平面内での$L$の断面積$S(k)$は
+     \begin{align*}
+     S(k)&=\int_{-\alpha}^\alpha \left\{ f(z)-k\right\}dz \\
+     &=\frac{1}{6}(\alpha+\alpha)^3 \\
+     &=\frac{4}{3}\left(\frac{3}{4}-k-k^2\right)^{3/2} \\
+     &=\frac{4}{3}\left\{1-\left(k+\frac{1}{2}\right)^2\right\}^{3/2}
+     \end{align*}
+である．\eqref{b}から$z$の存在条件は実数$\alpha$の存在条件に等しく，\eqref{a}から
+     \begin{align*}
+     &\frac{3}{4}-k-k^2\ge0 \\
+     \therefore&\frac{-3}{2}\le k \le\frac{1}{2}
+     \end{align*}
+となる．以上から，もとめる体積$V$は
+     \begin{align*}
+     V&=\int_{-3/2}^{1/2}S(k)dk \\
+     &=\frac{4}{3}\int_{-3/2}^{1/2}\left\{1-\left(k+\frac{1}{2}\right)^2\right\}^{3/2}dk \\
+     &=\frac{4}{3}\int_{-1}^{1}\left(1-t^2\right)^{3/2}dt \ \ \ \ \ \ \ \ \ \ \ \ \ (t=k+\frac{1}{2}) \\
+     &=\frac{8}{3}\int_0^{\pi/2}\left(1-s^2\right)^{3/2}\frac{ds}{d\theta}d\theta \ \ \ \ \ \ \ \ \ (t=s=\sin\theta%
+     ,c=\cos\theta) \\
+     &=\frac{8}{3}\int_0^{\pi/2}c^2(1-s^2)d\theta \\
+     &=\frac{\pi}{2}\cdots\text{(答)}
+     \end{align*}
+となる．
+\vspace{2zh}
+
+{\bf[解2]}[解]と同様に，
+     \[x\le y\le \frac{3}{4}-(x^2+z^2)\] 
+の体積を求める．     
+ $y=x+k$で立体を切断した断面の面積を$S(k)$とする．まず，$k$の範囲を求める．
+      \begin{align*}
+      \exists x\exists y\exists z\, ,\, &x\le y\le \frac{3}{4}-(x^2+z^2)，y=x+k \\
+      \exists x \exists z \, ,\, &x\le x+k\le \frac{3}{4}-(x^2+z^2) \\
+      \exists x \exists z \, ,\, &0\le k\land \left(x+\frac{1}{2}\right)^2+z^2\le 1-k \\
+      &0\le k\le 1 
+      \end{align*}
+である．また，切断面の$xz$平面への正射影は，$y$を消去して，
+     \[ \left(x+\frac{1}{2}\right)^2+z^2\le 1-k \]
+であり，これは半径$\sqrt{1-k}$の円である．故に正射影の面積は
+     \[(1-k)\pi\]
+$y=x+k$と$xz$平面の成す角は$\pi/4$であるから，
+     \begin{align*}
+     S(k)\cos \left(\frac{\pi}{4}\right)=(1-k)\pi \\
+     S(k)=\sqrt{2}(1-k)\pi
+     \end{align*}
+である．$k$が$\Delta k$だけ変化すると，$y=x+k$は自身と垂直な方向へ$\Delta k/\sqrt{2}$だけ移動するから，
+     \begin{align*}
+     \int_0^1S(k)\frac{\sqrt{2}}{2}\,dk=\frac{\pi}{2}
+     \end{align*}
+が求める体積である．$\cdots$(答)
+\newpage
+\end{multicols}
+\end{document}

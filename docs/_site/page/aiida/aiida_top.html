@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>aiidaトップページ | personal website</title>
+<meta name="generator" content="Jekyll v3.9.2" />
+<meta property="og:title" content="aiidaトップページ" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+<meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+<link rel="canonical" href="http://localhost:4000/page/aiida/aiida_top.html" />
+<meta property="og:url" content="http://localhost:4000/page/aiida/aiida_top.html" />
+<meta property="og:site_name" content="personal website" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-09-04T10:03:40+09:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="aiidaトップページ" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-09-04T10:03:40+09:00","datePublished":"2022-09-04T10:03:40+09:00","description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","headline":"aiidaトップページ","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/page/aiida/aiida_top.html"},"url":"http://localhost:4000/page/aiida/aiida_top.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=c90158fd34f66e4f63b4da45038b5d6170d798eb">
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+    
+
+<!--  -->
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1><a href="http://localhost:4000/">personal website</a></h1>
+
+        
+
+        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</p>
+
+        
+        <p class="view"><a href="https://github.com/dirac6582/dirac6582.github.io.git">View the Project on GitHub <small>dirac6582/dirac6582.github.io.git</small></a></p>
+        
+
+        
+
+        
+      </header>
+      <section>
+
+      <h2 id="aiida">AiiDA</h2>
+
+<p>注意!!</p>
+
+<ol>
+  <li>AiiDAはまだ勉強中なので記述が間違っている可能性あり</li>
+  <li>公式のチュートリアルやドキュメントがかなり充実しているのでそちらをよくチェックすること</li>
+</ol>
+
+<p><a href="https://aiida.readthedocs.io/projects/aiida-core/en/latest/">公式のdoc</a></p>
+
+<p><a href="https://aiida-tutorials.readthedocs.io/en/latest/">公式のtutorials</a></p>
+
+<h2 id="aiida-とは">AiiDA とは？</h2>
+
+<p><a href="https://www.aiida.net/">AiiDA</a>はオープンソースのpythonパッケージで，複雑な計算のワークフローを自動化したり，散らばりがちな計算の入出力結果をまとめて管理してくれる．例えば第一原理計算でバンド計算をやろうと思うと</p>
+
+<ol>
+  <li>結晶構造をどこかから持ってくる</li>
+  <li>計算条件を設定，擬ポテンシャルの用意</li>
+  <li>結晶構造の最適化計算</li>
+  <li>scf計算</li>
+  <li>バンドを計算するパスの設定</li>
+  <li>バンド計算(nscf計算)</li>
+</ol>
+
+<p>などなど，作業としてはそこそこ面倒くさい．計算条件が適切かどうか（K点メッシュ，エネルギーカットオフなど）の収束計算もやる必要がある． AiiDAを使うと<code class="language-plaintext highlighter-rouge">ワークフロー</code>という自動化の仕組みがあり，これらの一連の流れを自動で行なってくれるだけでなく，結果もデータベースに格納してくれて後からあの時の計算の条件どうだったっけ？ などとあちこちディレクトリを探し回る必要もない．</p>
+
+<p>またssh接続可能なリモートマシン上でも計算を実行できるので，AiiDAを自分のデスクトップやラップトップに入れておいて複数の計算機サーバーなどと連携しながらデータの解析はローカルで行うということが可能である．</p>
+
+<h2 id="aiida-installation"><a href="https://aiida.readthedocs.io/projects/aiida-core/en/v2.0.3/intro/install_system.html">AiiDA installation</a></h2>
+
+<p>AiiDAは3つの核となる要素からなる．</p>
+
+<ol>
+  <li>aiida-core: pythonパッケージとverdiコマンド</li>
+  <li>PostgreSQL: AiiDAがデータを保存するために利用する</li>
+  <li>RabbitMQ: AiiDAとの通信で使うメッセージブローカー</li>
+</ol>
+
+<p>今回はこのうち2と3をシステムに，1をcondaの仮想環境にインストールする．これは公式ではsystem-wide installationと呼ばれている．</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># postgreSQLとRabbitMQのinstall</span>
+brew <span class="nb">install </span>postgresql rabbitmq git python
+
+<span class="c"># データベースの起動</span>
+brew services start postgresql
+brew services start rabbitmq
+</code></pre></div></div>
+
+<p>注意!! rabbitmqのversionがv3.8.15以上の場合，少し設定をいじる必要がある．
+https://www.rabbitmq.com/configure.html#config-location
+を参考にrabbitmqのconfigファイルの場所を探す．macでhomebrewで入れた場合は</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/opt/homebrew/etc/rabbitmq/
+</code></pre></div></div>
+
+<p>にある．デフォルトでは<code class="language-plaintext highlighter-rouge">rabbitmq-env.conf</code>ファイルしかなかったので同じディレクトリに<code class="language-plaintext highlighter-rouge">rabbitmq.conf</code>ファイルを作成し，</p>
+
+<pre><code class="language-bash:rabbitmq.conf">consumer_timeout = 36000000000 # 10,000 hours in milliseconds
+</code></pre>
+
+<p>と書き込む．この設定をやってからrabbimqを起動しよう．</p>
+
+<p>ついでaiida-coreをcondaの仮想環境内にインストールする．2022/08現在，M1macではcondaを使ったinstallが失敗（circusパッケージが見つからないというエラーが出る）したのでpipを使ってインストールした．conda仮想環境内でpipを利用する際の常として，仮想環境内にインストールされたpythonに付属のpipを利用すること．この場合だと<code class="language-plaintext highlighter-rouge">/人による/anaconda3/envs/aiida/bin/pip</code>のpipをちゃんと使っているかを確かめよう．</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># intel macの場合</span>
+conda create <span class="nt">-yn</span> aiida 
+conda <span class="nb">install</span> <span class="nt">-c</span> conda-forge aiida-core
+conda activate aiida
+
+<span class="c"># M1 macの場合</span>
+conda create <span class="nt">-yn</span> aiida 
+curl https://bootstrap.pypa.io/get-pip.py <span class="nt">-o</span> get-pip.py
+python get-pip.py
+pip <span class="nb">install </span>aiida-core
+</code></pre></div></div>
+
+<p>最後に<code class="language-plaintext highlighter-rouge">which verdi</code>として仮想環境下にverdiがインストールされているか確認し，<code class="language-plaintext highlighter-rouge">verdi --version</code>でインストールされているversionを確認しておこう．これでインストールは成功である．</p>
+
+<h2 id="aiidaのプロファイル設定">AiiDAのプロファイル設定</h2>
+
+<p>無事インストールが終わったらAiiDAのプロファイルを設定する．</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>verdi quicksetup                                   
+/opt/homebrew/lib/python3.10/site-packages/aiida/manage/configuration/settings.py:59: UserWarning: Creating AiiDA configuration folder <span class="sb">`</span>/Users/amano/.aiida<span class="sb">`</span><span class="nb">.</span>
+  warnings.warn<span class="o">(</span>f<span class="s1">'Creating AiiDA configuration folder `{path}`.'</span><span class="o">)</span>
+Report: enter ? <span class="k">for </span>help.
+Report: enter <span class="o">!</span> to ignore the default and <span class="nb">set </span>no value.
+Profile name <span class="o">[</span>quicksetup]: hoge
+Email Address <span class="o">(</span><span class="k">for </span>sharing data<span class="o">)</span> <span class="o">[()]</span>: example@com
+First name <span class="o">[()]</span>: hoge
+Last name <span class="o">[()]</span>: hoge
+Institution <span class="o">[()]</span>: hoge
+Success: created new profile <span class="sb">`</span>hoge<span class="sb">`</span><span class="nb">.</span>
+Report: initialising the profile storage.
+Report: initialising empty storage schema
+Success: storage initialisation completed.
+</code></pre></div></div>
+
+<p>ついでverdi daemonを起動する．</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>verdi daemon start 2
+</code></pre></div></div>
+
+<p>最後にセットアップがうまく行っているかを確認する．</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>verdi status
+ ✔ version:     AiiDA v2.0.3
+ ✔ config:      /Users/amano/.aiida
+ ✔ profile:     ta
+ ✔ storage:     Storage <span class="k">for</span> <span class="s1">'home'</span> <span class="o">[</span>open] <span class="k">****</span>
+ file://<span class="k">**</span>
+Warning: RabbitMQ v3.10.7 is not supported and will cause unexpected problems!
+Warning: It can cause long-running workflows to crash and <span class="nb">jobs </span>to be submitted multiple times.
+Warning: See https://github.com/aiidateam/aiida-core/wiki/RabbitMQ-version-to-use <span class="k">for </span>details.
+ rabbitmq:    Incompatible RabbitMQ version detected! Connected to RabbitMQ v3.10.7 as amqp://guest:guest@127.0.0.1:5672?heartbeat<span class="o">=</span>600
+ ✔ daemon:      Daemon is running as PID 99029 since 2022-08-13 16:08:36
+</code></pre></div></div>
+
+<p>rabbitmqに関するwarningが出ているが上でconfファイルをいじっていれば問題ない．</p>
+
+<h2 id="optional-installation">optional installation</h2>
+
+<p>必須ではないがあると便利なパッケージを同じ仮想環境内にインストールしておく．</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 計算結果のワークフローを可視化してくれる</span>
+conda <span class="nb">install </span>graphviz
+
+<span class="c"># 言わずと知れた物質計算御用達のpythonパッケージ．AiiDAと相互に結晶構造のやり取りができる．</span>
+conda <span class="nb">install </span>ase
+conda <span class="nb">install </span>pymatgen
+
+<span class="c"># aseの構造を可視化してくれるパッケージ.</span>
+conda <span class="nb">install </span>nglview
+
+<span class="c"># aiida rest apiを起動するのに必要だった</span>
+pip <span class="nb">install </span>flask_cors
+pip <span class="nb">install </span>flask_restful
+
+</code></pre></div></div>
+
+<p>その他あると便利なソフトウェア．</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># バンド図を可視化する際に使う場合がある</span>
+brew <span class="nb">install </span>grace
+</code></pre></div></div>
+
+<h2 id="tutorials-usage">tutorials, usage</h2>
+
+<p>自分の勉強で利用したチュートリアルやusageをいくつかリストアップ．</p>
+
+<ul>
+  <li><a href="/page/aiida/basic_tutorial.html">まずは基本的な使い方をチェック</a></li>
+  <li><a href="/page/aiida/add_computer.html">QEなどpython以外のコードの実行とリモートPCへの接続(QEの例)</a></li>
+  <li><a href="/page/aiida/workflow_tutorial.html">バンド計算を例にworkflowを試す</a></li>
+  <li><a href="/page/aiida/aiida_kpoints.html">AiiDAにおけるK点の取り扱い</a></li>
+  <li><a href="/page/aiida/aiida_structure.html">AiiDAにおける結晶構造データの取り扱い</a></li>
+  <li><a href="/page/aiida/aiida_ph.html">AiiDA+quantum espresso フォノン計算</a></li>
+  <li><a href="/page/aiida/aiida_cp.html">AiiDA cp.x カーパリネロ分子動力学計算</a></li>
+  <li><a href="/page/aiida/aiida_data.html">AiiDAデータの取り扱い</a></li>
+</ul>
+
+<h2 id="細かい設定あれこれ">細かい設定あれこれ</h2>
+
+<ul>
+  <li>
+    <p><a href="https://aiida.readthedocs.io/projects/aiida-core/en/v2.0.3/howto/installation.html">コマンドの自動補完</a></p>
+
+    <p>verdiコマンドの補完の設定が可能．<strong>非常に便利なので設定推奨</strong>．AiiDAをconda環境内にインストールした場合，.zshrcに設定を書くわけにいかないのでcondaのenvironmentファイルに書くことになる．設定ファイルに書いたら仮想環境を再起動することで自動補完が有効になる．</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 仮想環境起動</span>
+conda activate aiida
+
+<span class="c"># 仮想環境内に設定ファイルを作成</span>
+<span class="nb">cd</span> <span class="nv">$CONDA_PREFIX</span>
+<span class="nb">mkdir</span> <span class="nt">-p</span> ./etc/conda/activate.d
+<span class="nb">mkdir</span> <span class="nt">-p</span> ./etc/conda/deactivate.d
+<span class="nb">touch</span> ./etc/conda/activate.d/env_vars.sh
+<span class="nb">touch</span> ./etc/conda/deactivate.d/env_vars.sh
+
+<span class="c"># 設定ファイル./etc/conda/activate.d/env_vars.shに以下の自動保管のためのコマンドを書き込み</span>
+<span class="nb">eval</span> <span class="s2">"</span><span class="si">$(</span><span class="nv">_VERDI_COMPLETE</span><span class="o">=</span>zsh_source verdi<span class="si">)</span><span class="s2">"</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>[複数プロファイルの設定]</p>
+
+    <p>全く別のプロジェクトAとプロジェクトBがあってどちらもAiiDAで計算を実行したい場合，AとBのデータが入り乱れてデータベースがぐちゃぐちゃになることが予想できる．これを避ける一つの方法としてAとB用に別々のプロファイルを作成してデータベースを分けるという方法がある．</p>
+  </li>
+</ul>
+
+<!--  [job schedulerの設定(これはちょっとおかしいかも)](/page/aiida/setting_jobscheduler.html)
+https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/calculations/usage.html
+-->
+<ul>
+  <li><a href="https://aiida.readthedocs.io/projects/aiida-core/en/v2.0.3/howto/plugin_codes.html#how-to-plugin-codes">既存の計算結果をAiiDAに追加</a></li>
+</ul>
+
+<h2 id="rest-api">REST API</h2>
+
+<p>https://aiida-tutorials.readthedocs.io/en/tutorial-qe-short/source/sections/qe.html#from-calculations-to-workflows
+https://www.materialscloud.org/explore/connect</p>
+
+<h2 id="エラー類">エラー類</h2>
+
+<p><a href="/page/aiida/aiida_errors.html">エラー類</a></p>
+
+
+      </section>
+      <footer>
+        
+        <p>This project is maintained by <a href="https://github.com/dirac6582">dirac6582</a></p>
+        
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="/assets/js/scale.fix.js"></script>
+  </body>
+</html>

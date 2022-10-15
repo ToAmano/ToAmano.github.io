@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>fractional coordinate | personal website</title>
+<meta name="generator" content="Jekyll v3.9.2" />
+<meta property="og:title" content="fractional coordinate" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+<meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+<link rel="canonical" href="http://localhost:4000/page/physics/physics/fractional.html" />
+<meta property="og:url" content="http://localhost:4000/page/physics/physics/fractional.html" />
+<meta property="og:site_name" content="personal website" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-09-04T10:03:40+09:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="fractional coordinate" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-09-04T10:03:40+09:00","datePublished":"2022-09-04T10:03:40+09:00","description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","headline":"fractional coordinate","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/page/physics/physics/fractional.html"},"url":"http://localhost:4000/page/physics/physics/fractional.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=c90158fd34f66e4f63b4da45038b5d6170d798eb">
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+    
+<script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true,
+        tags: "ams",
+        autoload: {
+          color: [],
+          colorV2: ['color']
+        },
+        packages: {'[+]': ['noerrors']}
+      },
+      chtml: {
+        matchFontHeight: false,
+        displayAlign: "left",
+        displayIndent: "2em"
+      },
+      options: {
+        renderActions: {
+          /* add a new named action to render <script type="math/tex"> */
+          find_script_mathtex: [10, function (doc) {
+            for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            }
+          }, '']
+        }
+      },
+      loader: {
+        load: ['[tex]/noerrors']
+      }
+    };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" id="MathJax-script"></script>
+
+
+<!--  -->
+<!-- <script type="text/x-mathjax-config"> -->
+<!-- MathJax.Hub.Config({ -->
+<!--   displayAlign: "left", -->
+<!--   displayIndent: "2em", -->
+<!--   TeX: { -->
+<!--     equationNumbers: { autoNumber: "AMS" }, -->
+<!--   }, -->
+<!--   tex2jax: { -->
+<!--     inlineMath: [['$','$'], ['\(','\)']], -->
+<!--     processEscapes: true -->
+<!--   } -->
+<!-- }); -->
+<!-- </script> -->
+<!-- <script -->
+<!--   type="text/javascript" -->
+<!--   charset="utf-8" -->
+<!--   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"> -->
+<!-- </script> -->
+<!--  -->
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1><a href="http://localhost:4000/">personal website</a></h1>
+
+        
+
+        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</p>
+
+        
+        <p class="view"><a href="https://github.com/dirac6582/dirac6582.github.io.git">View the Project on GitHub <small>dirac6582/dirac6582.github.io.git</small></a></p>
+        
+
+        
+
+        
+      </header>
+      <section>
+
+      <h2 id="分極座標とデカルト座標の変換">分極座標とデカルト座標の変換</h2>
+
+<p>結晶の基本ベクトルが与えられた時に，デカルト座標の点$(x,y,z)$から分極座標$(b_1,b_2,b_3)$への変換をどうするべきかを考える．</p>
+
+<p>ここでは一応デカルト座標と分極座標の変換ということにしているが，より一般に任意の座標間の変換について使える手法である．一般論への拡大を可能にするために，デカルト座標の基底を</p>
+
+\[\vec{r}_1=
+\begin{pmatrix}
+1 \\
+0 \\
+0
+\end{pmatrix} ,
+\vec{r}_2=
+\begin{pmatrix}
+0 \\
+1 \\
+0
+\end{pmatrix} ,
+\vec{r}_3=
+\begin{pmatrix}
+0 \\
+0 \\
+1 
+\end{pmatrix}\]
+
+<p>と置く．結晶ベクトルを$\vec{a}_1$, $\vec{a}_2$, $\vec{a}_3$とおき，分極座標$(b_1,b_2,b_3)$とする．すると任意のベクトル$\vec{p}$は
+\(\vec{p}&amp;=x\vec{r}_1+y\vec{r}_2+z\vec{r}_3 \\
+&amp;=b_1\vec{a}_1+b_2\vec{a}_2+b_3\vec{a}_3\)</p>
+
+<p>と書ける．これを行列形式で書き直すと</p>
+
+\[\begin{pmatrix}
+\vec{r}_1 &amp; \vec{r}_2 &amp; \vec{r}_3 
+\end{pmatrix}
+\begin{pmatrix}
+x \\
+y \\
+z
+\end{pmatrix}
+=
+\begin{pmatrix}
+\vec{a}_1 &amp; \vec{a}_2 &amp; \vec{a}_3 
+\end{pmatrix}
+\begin{pmatrix}
+b_1 \\
+b_2 \\
+b_3
+\end{pmatrix}\]
+
+<p>となる．簡単のためにこの式を</p>
+
+\[R\vec{x}=A\vec{b}\]
+
+<p>と書いておく．今はデカルト座標を考えているから左辺の行列$R$は単位行列になっているが，一般の場合にはもっと複雑な行列になっている．ここから分極座標$b$を求めるには左から行列$A^{-1}$を作用させれば良く，これが変換を与える公式である．</p>
+
+\[\vec{b}=A^{-1}R \vec{x}\]
+
+<p>例えば結晶中の全部の原子の座標$\vec{x}_1$から$\vec{x}_n$を変換したいというように複数の点を変換させたい場合は，</p>
+
+\[\begin{pmatrix}
+\vec{b}_1 &amp; \vec{b}_2 &amp;\cdots &amp; \vec{b}_n
+\end{pmatrix}
+=A^{-1}R 
+\begin{pmatrix}
+\vec{x}_1 &amp; \vec{x}_2 &amp;\cdots &amp; \vec{x}_n
+\end{pmatrix}\]
+
+<p>とすれば一括して扱える．</p>
+
+<p>典型的なpythonコードは以下のようになる．ここではまず，numpy配列x[i][j]はi番目の原子のデカルト成分jを表すとする．この順番にしてあるのはaseがこの形式で座標を扱っているからである．そうすると上の式はトレースをとって扱うことになる．</p>
+
+\[\begin{pmatrix}
+\vec{b}^{T}_1 \\
+\vec{b}^{T}_2 \\
+\cdots \\
+\vec{b}^{T}_n
+\end{pmatrix}^{T}
+=
+\begin{pmatrix}
+\vec{x}^{T}_1 \\
+\vec{x}^{T}_2 \\
+\cdots \\
+\vec{x}^{T}_n
+\end{pmatrix}^{T}
+(A^{-1}R )^{T}\]
+
+<p>これをpythonで書いたのが以下．ただし$R=1$としてある．</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+
+<span class="c1"># lattice vectors (here we have fcc)
+</span><span class="n">a</span>  <span class="o">=</span> <span class="mf">5.0</span>
+<span class="n">a1</span> <span class="o">=</span> <span class="n">a</span><span class="o">*</span><span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">])</span>
+<span class="n">a2</span> <span class="o">=</span> <span class="n">a</span><span class="o">*</span><span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">])</span>
+<span class="n">a3</span> <span class="o">=</span> <span class="n">a</span><span class="o">*</span><span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>
+
+<span class="c1"># Build the matrix of lattice vectors stored column-wise
+# and get its inverse
+</span><span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">vstack</span><span class="p">([</span><span class="n">a1</span><span class="p">,</span> <span class="n">a2</span><span class="p">,</span> <span class="n">a3</span><span class="p">]).</span><span class="n">T</span>
+<span class="n">A_inv</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">linalg</span><span class="p">.</span><span class="n">inv</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+
+<span class="c1"># A random set of cartesian coordinates stored row-wise
+</span><span class="n">X_T</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([[</span><span class="mf">0.25</span><span class="p">,</span> <span class="mf">0.75</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">],</span> 
+                <span class="p">[</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">]])</span>
+
+<span class="c1"># Perform the inverse operation to get fractional coordinates. Resultant B is ?
+</span><span class="n">B</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">A_inv</span><span class="p">,</span> <span class="n">X_T</span><span class="p">.</span><span class="n">T</span><span class="p">).</span><span class="n">T</span>
+
+<span class="c1"># Compute the cartesian coordinates to check if X_T_check=X_T
+</span><span class="n">X_T_check</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">.</span><span class="n">T</span><span class="p">).</span><span class="n">T</span>
+</code></pre></div></div>
+
+<p>これを実行すると以下のような結果を得て計算がうまくいっていることがわかる．</p>
+
+
+      </section>
+      <footer>
+        
+        <p>This project is maintained by <a href="https://github.com/dirac6582">dirac6582</a></p>
+        
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="/assets/js/scale.fix.js"></script>
+  </body>
+</html>

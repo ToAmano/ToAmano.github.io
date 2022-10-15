@@ -1,0 +1,46 @@
+\documentclass[a4j]{jarticle}
+\usepackage{amsmath}
+\usepackage{ascmac}
+\usepackage{amssymb}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{framed}
+\usepackage{latexsym}
+\usepackage{indent}
+\title{}
+\begin{document}
+\input{macros}
+\begin{oframed}
+$xyz$空間において，点$P$は$yz$平面上の放物線$z=1-y^2$上にあるとする．点$A(1,0,1)$と
+$P$を結ぶ直線を$x$軸のまわりに回転して得られる曲線と二平面$x=0$，$x=1$とによって囲まれる
+部分の体積を$V$とする．$V$を$P$の$y$座標で表せ．また$V$の最小値を求めよ．
+\end{oframed}
+
+\setlength{\columnseprule}{0.4pt}
+\begin{multicols}{2}
+{\bf[解]}$P(0,t,1-t^2)$とおく．また，$\vec{a}=(1,0,1)$とする．このとき，題意の直線$l$の方向ベクトル$\vec{l}$は$\vec{l}=(-1,t,-t^2)$であるから，
+     \begin{align*}
+     l:\vector{OX}=\vec{a}+p\vec{l}
+     \end{align*}
+である．$x=k(0\le k\le 1)$で切断する．この平面と$l$の交点は$p=1-k$に対応し，
+$\left(k，(1-k)t,1-(1-k)t^2\right)$である．したがって，この平面での断面積$S(k)$は
+     \begin{align*}
+     S(k)&=\pi\left\{\left((1-k)t\right)^2+\left(1-(1-k)t^2\right)^2\right\} \\
+     &=\pi\left\{1-2t^2(1-k)+(t^4+t^2)(1-k)^2\right\} \\
+     \end{align*}     
+となる．よって
+     \begin{align*}
+     V&=\int_0^1S(k)dk \\
+     &=\pi\left[k+t^2(1-k)^2-\frac{1}{3}(t^4+t^2)(1-k)^3\right]_0^1 \\
+     &=\pi(1-t^2+\frac{1}{3}(t^4+t^2)) \\
+     &=\pi\left(\frac{1}{3}t^4-\frac{2}{3}t^2+1\right)\cdots\text{(答)} \\
+     &=\frac{\pi}{3}\left(t^2-1\right)^2+\frac{2\pi}{3}
+     \end{align*}     
+よって求める最小値は$t=\pm1$のときの
+     \begin{align*}
+     \min V=\dfrac{2}{3}\pi\cdots\text{(答)}
+     \end{align*}
+である．      
+          \newpage
+\end{multicols}
+\end{document}

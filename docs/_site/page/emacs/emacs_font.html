@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>emacs フォントやアイコンについて | personal website</title>
+<meta name="generator" content="Jekyll v3.9.2" />
+<meta property="og:title" content="emacs フォントやアイコンについて" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+<meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+<link rel="canonical" href="http://localhost:4000/page/emacs/emacs_font.html" />
+<meta property="og:url" content="http://localhost:4000/page/emacs/emacs_font.html" />
+<meta property="og:site_name" content="personal website" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-09-04T10:03:40+09:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="emacs フォントやアイコンについて" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-09-04T10:03:40+09:00","datePublished":"2022-09-04T10:03:40+09:00","description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","headline":"emacs フォントやアイコンについて","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/page/emacs/emacs_font.html"},"url":"http://localhost:4000/page/emacs/emacs_font.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=c90158fd34f66e4f63b4da45038b5d6170d798eb">
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+    
+
+<!--  -->
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1><a href="http://localhost:4000/">personal website</a></h1>
+
+        
+
+        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</p>
+
+        
+        <p class="view"><a href="https://github.com/dirac6582/dirac6582.github.io.git">View the Project on GitHub <small>dirac6582/dirac6582.github.io.git</small></a></p>
+        
+
+        
+
+        
+      </header>
+      <section>
+
+      <p>emacsをiterm2で利用する場合（注意！ GUIではない！）のフォントやアイコンの設定について．</p>
+
+<h2 id="emacsのフォント">emacsのフォント</h2>
+
+<p>ターミナルアプリでemacsを利用する場合，基本的にemacsはターミナルと同じフォントを利用する．（変更できない？） 例えば</p>
+
+<div class="language-lisp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">M:</span> <span class="p">(</span><span class="nv">font-family-list</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>はGUIで実行すると利用可能なフォントを返すが，ターミナル上で実行すると<code class="language-plaintext highlighter-rouge">nil</code>が返ってきて設定できない．初心者の頃GUI emacsの記述を参考にターミナルでも同様の設定ができるのかと悪戦苦闘したので似たような被害者が出ないように（？）記述を残しておく．</p>
+
+<p>もしかするとまた別な方法でターミナルとemacsで別々のフォントを設定する方法があるのかもしれないが自分は諦めている．まあターミナルをみやすいフォントにしておけばそこまで困ることはないだろうし．．．</p>
+
+<!-- 
+GUIでのフォント設定について．
+
+https://qiita.com/j8takagi/items/01aecdd28f87cdd3cd2c
+https://www.emacswiki.org/emacs/iTerm2#h5o-8
+https://qiita.com/TanukiTam/items/2df29e9b10e84a7d67a6
+https://www.emacswiki.org/emacs/SetFonts
+https://www.reddit.com/r/emacs/comments/pc189c/fonts_in_emacs_daemon_mode/
+-->
+
+<h2 id="アイコンの利用icons-in-terminal">アイコンの利用（icons-in-terminal）</h2>
+
+<p>こちらが本題．GUI emacsではall-the-iconsというパッケージを使ってアイコンを利用することができるが，ターミナルでは上記のようにフォントがターミナルのものになるのでこのパッケージを使えない．これを代替する手法として，<a href="https://github.com/sebastiencs/icons-in-terminal#integrations">icons-in-terminal</a>があるのでここで導入方法を紹介する．</p>
+
+<pre><code class="language-bash:install_icons_in_terminal.sh"># download from github
+$ git clone https://github.com/sebastiencs/icons-in-terminal.git
+$ cd icons-in-terminal
+
+# install 
+$ ./install.sh  
+</code></pre>
+
+<p>install後に出力されるように，<code class="language-plaintext highlighter-rouge">~/.config/fontconfig/conf.d/30-icons.conf</code>ファイルを編集して自分がターミナルで使うフォントだけを残しておく．</p>
+
+<p>ここまでやったら，ちゃんとインストールできたかを確認する．</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># check if correctly installed</span>
+<span class="nv">$ </span>./print_icons.sh
+</code></pre></div></div>
+
+<p>綺麗に全てのフォントが出力されて入れば大成功．</p>
+
+<p>Macにフォントが認識されているかを知りたければ<code class="language-plaintext highlighter-rouge">fc-list</code>コマンドを利用して</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>fc-list | <span class="nb">grep</span> <span class="nt">-i</span> icons-in-terminal
+/Users/hoge/Library/Fonts/icons-in-terminal.ttf: icons<span class="se">\-</span><span class="k">in</span><span class="se">\-</span>terminal:style<span class="o">=</span><span class="k">in</span><span class="nt">-terminal</span>
+/Users/hoge/.fonts/icons-in-terminal.ttf: icons<span class="se">\-</span><span class="k">in</span><span class="se">\-</span>terminal:style<span class="o">=</span><span class="k">in</span><span class="nt">-terminal</span>
+</code></pre></div></div>
+
+<p>のようになれば成功．</p>
+
+<p><code class="language-plaintext highlighter-rouge">install.sh</code>が<code class="language-plaintext highlighter-rouge">~/.local/share/icons-in-terminal</code>ディレクトリに内容をコピーするので，外部から参照するときはこれを使うと（どこでgit cloneしたかによらずに設定できるので）良い．ただファイルをコピーしているだけなので自分で好きなところに置いても良い．自分は設定用のファイルがあちこちに散らばると嫌なのでdotfileを置いてある場所にコピーしている．</p>
+
+<h2 id="うまくいかない場合非asciiを含むフォントを利用している">うまくいかない場合（非ASCIIを含むフォントを利用している？）</h2>
+
+<p>自分の場合は非ASCII文字を含む<a href="https://github.com/lxbrtsch/Menlo-for-Powerline">menlo for powerline</a>を利用していた<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>．このような場合，icons-in-terminalと競合してしまって<code class="language-plaintext highlighter-rouge">./print_icons.sh</code>で一部フォントがうまく表示されない場合がある（原因は間違っているかも）<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">2</a></sup>．さらに自分の環境だと，itermを再起動すると表示されなくなるなどどうも挙動が不安定なことがある．そこでとりあえずの対策としてnon-ASCII文字に別のフォントを利用する作戦を使う．icons-in-terminalはそれ自体が特殊文字を大量に含んだフォントなので，これをnon-ASCII文字用のフォントとして設定すればうまく動いてくれるという仕組み．（この場合はおそらく<code class="language-plaintext highlighter-rouge">install.sh</code>すら実行する必要がなく<code class="language-plaintext highlighter-rouge">icons-in-terminal.ttf</code>だけあれば良いと思う．）</p>
+
+<ul>
+  <li>まずicons-in-terminalが悪さをしないように<code class="language-plaintext highlighter-rouge">~/.config/fontconfig/conf.d/30-icons.conf</code>で全てのフォントの行をコメントアウト．</li>
+  <li>itermのpreferences&gt;profiles&gt;textのfontのところで<code class="language-plaintext highlighter-rouge">use a different font for non-ASCII text</code>にチェックを入れる．</li>
+  <li>そうするとnon-ASCII用のフォントを設定する項目が現れるので<code class="language-plaintext highlighter-rouge">icons-in-terminal</code>を選択．表れない場合はFinderで<code class="language-plaintext highlighter-rouge">icons-in-terminal.ttf</code>をダブルクリックしてMacにフォントをインストールしよう．</li>
+</ul>
+
+<p>以上で<code class="language-plaintext highlighter-rouge">./print_icons.sh</code>を実行すると自分の場合は全てのアイコンが綺麗に出力された．iterm2ではこのようにnon-ASCIIに別のフォントを割り当てられるので，仮に上のステップでインストールがうまくいく場合でも，こちらの方が元のフォントをいじらずに安全だと思う．</p>
+
+<h2 id="シェルでアイコンを表示させるbashzsh">シェルでアイコンを表示させる（bash,zsh）</h2>
+
+<p>各アイコンには<code class="language-plaintext highlighter-rouge">\ue0b3</code>のような命令が指定されていて，これを使って表示のカスタマイズをおこなっている．シェル上でグリフを見たければ</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 対応するグリフがあればグリフが表示される</span>
+<span class="nb">echo</span> <span class="nt">-e</span> <span class="s2">"</span><span class="se">\u</span><span class="s2">e0a0"</span>
+<span class="c"># 対応するグリフがないと四角の中にはてなマークが表示される</span>
+<span class="nb">echo</span> <span class="nt">-e</span> <span class="s2">"</span><span class="se">\u</span><span class="s2">f059"</span>
+</code></pre></div></div>
+
+<p>とすればグリフを確認できる．しかしこれだとどのアイコンがどのコマンドなのか非常に分かりにくい．そこで各アイコンにわかりやすい名前を対応させるスクリプト<code class="language-plaintext highlighter-rouge">build/icons_bash.sh</code>がデフォルトで用意されている．これを使うためには単にsourceでファイルを読めばよい．恒常的に使う場合は<code class="language-plaintext highlighter-rouge">.zshrc</code>に書き込むとよい．</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># ファイルを読み込み</span>
+<span class="nv">$ </span><span class="nb">source </span>build/icons_bash.sh
+<span class="c"># うまくいっているかテスト（この例だとファイルアイコンを表示）</span>
+<span class="nv">$ </span><span class="nb">echo</span> <span class="nv">$oct_file_media</span>
+</code></pre></div></div>
+
+<h2 id="emacsでicons-in-terminalを使う">emacsでicons-in-terminalを使う．</h2>
+
+<p>icons-in-terminalにはemacs用のパッケージファイル<code class="language-plaintext highlighter-rouge">build/icons-in-terminal.el</code>が付属してくる．中身を見ればわかるようにフォント名と対応するグリフがずらりと並ぶ設定ファイルになっている．</p>
+
+<div class="language-lisp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">%</span> <span class="err">一例</span>
+<span class="p">(</span> <span class="nv">powerline_branch</span> <span class="o">.</span> <span class="s">"\xe0a0"</span> <span class="p">)</span>
+</code></pre></div></div>
+
+<p>実際にグリフを出力するにはLispで</p>
+
+<div class="language-lisp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(</span><span class="nv">insert</span> <span class="p">(</span><span class="nv">icons-in-terminal</span> <span class="ss">'oct_flame</span><span class="p">))</span>
+</code></pre></div></div>
+
+<p>とすればよい．従って，既存のパッケージでグリフを使いたい奴があったら，ちょっと面倒だが上のコマンドで書き換えることで利用可能．その際</p>
+
+<div class="language-lisp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(</span><span class="nb">require</span> <span class="ss">'icons-in-termial</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>を忘れずに！ 自分は今の所，all-the-iconsの書き換えしか行ったことがないが，これなら面倒なだけであまり技術はなくてもできる．やはりアイコン表示だと分かりやすいのでやる価値はある．そのうち書き直したelファイルをgitに上げられると良いのだが．．．</p>
+
+<!--
+## 現状の環境の作り方
+
+```markdown
+# iterm2(ascii)     :: menlo for powerline
+# iterm2(non-ascii) :: icons-in-terminal
+```
+
+```bash:install_menlo_for_powerline.sh
+# menlo for powerlineのdownload
+$ git clone https://github.com/lxbrtsch/Menlo-for-Powerline
+
+# Finderでディレクトリの中の*.ttfファイルをダブルクリックしてフォントをインストールする．
+```
+-->
+
+<h2 id="余談icons-in-terminalの仕組みについて">余談：icons-in-terminalの仕組みについて</h2>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1" role="doc-endnote">
+      <p>powerlineライクなプロンプトを自作するために導入した記憶がある．powerlineでは特殊文字を利用するため，それが入っているフォントが必要だった． <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:2" role="doc-endnote">
+      <p>そのほかに公式のgithubに元のフォントを編集してあるとうまくいかない場合があるとあるので，フォント自体をクリーンインストールしてみるのも手かも． <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+
+      </section>
+      <footer>
+        
+        <p>This project is maintained by <a href="https://github.com/dirac6582">dirac6582</a></p>
+        
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="/assets/js/scale.fix.js"></script>
+  </body>
+</html>

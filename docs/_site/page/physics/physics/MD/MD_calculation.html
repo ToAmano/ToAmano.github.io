@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>MD計算(NVEアンサンブルとNVTアンサンブル) | personal website</title>
+<meta name="generator" content="Jekyll v3.9.2" />
+<meta property="og:title" content="MD計算(NVEアンサンブルとNVTアンサンブル)" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+<meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+<link rel="canonical" href="http://localhost:4000/page/physics/physics/MD/MD_calculation.html" />
+<meta property="og:url" content="http://localhost:4000/page/physics/physics/MD/MD_calculation.html" />
+<meta property="og:site_name" content="personal website" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="MD計算(NVEアンサンブルとNVTアンサンブル)" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","headline":"MD計算(NVEアンサンブルとNVTアンサンブル)","url":"http://localhost:4000/page/physics/physics/MD/MD_calculation.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=c90158fd34f66e4f63b4da45038b5d6170d798eb">
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+    
+
+<!--  -->
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1><a href="http://localhost:4000/">personal website</a></h1>
+
+        
+
+        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</p>
+
+        
+        <p class="view"><a href="https://github.com/dirac6582/dirac6582.github.io.git">View the Project on GitHub <small>dirac6582/dirac6582.github.io.git</small></a></p>
+        
+
+        
+
+        
+      </header>
+      <section>
+
+      <h1 id="md計算nveアンサンブルとnvtアンサンブル">MD計算(NVEアンサンブルとNVTアンサンブル)</h1>
+
+<!--
+MD計算の触りの部分を「密度汎関数理論入門-理論とその応用」で読んでみた．
+-->
+
+<!--
+https://kaityo256.github.io/md2019/nosehoover/index.html
+-->
+
+<p>古典MDは結局の所ニュートン方程式を解くということをやっている．これは単純なミクロカノニカルアンサンブルの場合で，この場合，自由度一つについて平均エネルギーが</p>
+
+\[\frac{1}{2}m\bar{v^2}=\frac{k_BT}{2}\]
+
+<p>で与えられることを用いて逆に温度を定義する． 運動エネルギーは保存量ではないので，シュミレーション中温度は揺らぐことになる．</p>
+
+<h2 id="verletの方法">verletの方法</h2>
+
+<p>ベレの方法(Verlet algorithm）は分子動力学法などにおいて、原子間（粒子間）に働く力をもとに原子（粒子）を逐次的に動かす単純な差分法の一つ．</p>
+
+<p>原子（粒子）の質量を M、座標を R、力を F とすると、運動方程式は
+\(\frac {d^{2}{\boldsymbol {R}}}{dt^{2}}}={\boldsymbol {F}} M{\frac {d^{2}{\boldsymbol {R}}}{dt^{2}}}={\boldsymbol {F}}\)
+である．加速度 d2R/dt2 を中心差分で近似すると、時間刻み幅を Δt として
+\({\displaystyle {\frac {d^{2}{\boldsymbol {R}}(t)}{dt^{2}}}\approx {\frac (t+\Delta t)-2{\boldsymbol {R}}(t)+{\boldsymbol {R}}(t-\Delta t)}{(\Delta t)^{2}}}}{\displaystyle {\frac {d^{2}{\boldsymbol {R}}(t)}{dt^{2}}}\approx {\frac (t+\Delta t)-2{\boldsymbol {R}}(t)+{\boldsymbol {R}}(t-\Delta t)}{(\Delta t)^{2}}}}\)
+となる．以上から得られた
+\({\displaystyle {\boldsymbol {R}}_{I}(t+\Delta t)=2{\boldsymbol {R}}_{I}(t)-{\boldsymbol {R}}_{I}(t-\Delta t)+{\frac _{I}}{M_{I}}}(\Delta t)^{2}}{\displaystyle {\boldsymbol {R}}_{I}(t+\Delta t)=2{\boldsymbol {R}}_{I}(t)-{\boldsymbol {R}}_{I}(t-\Delta t)+{\frac _{I}}{M_{I}}}(\Delta t)^{2}}\)
+によって原子の位置を更新する．ただし I は原子のインデックスである．QEに実装されているカー・パリネロ法はこのアルゴリズムを利用している．</p>
+
+<h2 id="カノニカルアンサンブルnvt">カノニカルアンサンブル（NVT）</h2>
+
+<p>一方で，系が周囲と熱のやりとりをしている場合はカノニカルアンサンブルでの取り扱いが必要になる．この時は温度Tを固定することになる．カノニカルアンサンブルを綺麗に扱う手法を能勢が開発した．能勢はミクロカノニカルな系のLagrangianを拡張した<strong>拡張Lagrangian</strong></p>
+
+\[L=\frac{1}{2}\sum_{i=1}^{3N}m_is(t)^2v_i^2-U+\frac{Q}{2}\left(\frac{ds}{dt}\right)^2-gk_BT\log(s)\]
+
+<p>を定義した．ここでs(t)は新しく導入された関数．Qは新しく導入されたパラメータ，おそらくgもそう．ここでs(t)=1とすれば3,4項目が落ちてミクロカノニカルのLagrangianと一致する．</p>
+
+<p>　Hooverは少しだけ異なる変数を導入して運動方程式を以下のように書き直した．</p>
+
+\[\frac{dr_i}{dt}=v_i\]
+
+\[\frac{dv_i}{dt}=-\frac{1}{m_i}\frac{\partial U}{\partial r_i}-\frac{d\xi}{dt}v_i\]
+
+\[\frac{d\xi}{dt}=\frac{1}{Q}\left[\sum_{i=1}^{3N}m_iv_i^2-3Nk_BT\right]\]
+
+\[\frac{d\log s}{dt}=\xi\]
+
+<p>ここでgの代わりに新しくξが導入されている．2式が運動方程式だが，ξによって摩擦項が追加されている．その摩擦ξは3番目の式によって制御される．1項目がミクロカノニカルでの温度に対応しているから</p>
+
+\[\frac{d\xi}{dt}=\frac{3Nk_B}{Q}\left[T_{MC}-T\right]\]
+
+<p>ともかけて，これは粒子の各瞬間の（運動エネルギーによって計算された）温度と系の温度の差によってフィードバックされる形になっている．Qはフィードバックの大きさを定めている．</p>
+
+<p>以上のような計算をNose-Hoover thermostat methodという．</p>
+
+<h2 id="aimdcar-parrinello法">AIMD〜Car-Parrinello法</h2>
+
+<p>最初のAIMDは，原子のMD→電子のDFT→原子のMD→ と繰り返す方法だったが，car-parrinelloは電子と分子を同時に扱う方法を開発した． それは原子系のLに仮想的な電子の自由度が加わった拡張Lagrangianとして</p>
+
+\[L=\frac{1}{2}\sum_{i=1}^{3N}m_iv_i^2-E[\psi(r)]+\frac{1}{2}\sum_j 2\mu\int dr |\psi(r)|^2+L_{ortho}\]
+
+<p>ψは電子のKS波動関数，E[ψ]はその時のポテンシャル． 右辺の最初の2項は通常の原子のLだが，それに加えて3項目は電子の運動エネルギーの形．μは仮想的な質量．4項目はKS波動関数の直交性を維持するために加えられたもの．</p>
+
+<h2 id="参考文献">参考文献</h2>
+<p>密度汎関数理論入門-理論とその応用</p>
+
+
+      </section>
+      <footer>
+        
+        <p>This project is maintained by <a href="https://github.com/dirac6582">dirac6582</a></p>
+        
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="/assets/js/scale.fix.js"></script>
+  </body>
+</html>

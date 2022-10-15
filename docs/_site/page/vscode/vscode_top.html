@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>vscodeトップページ | personal website</title>
+<meta name="generator" content="Jekyll v3.9.2" />
+<meta property="og:title" content="vscodeトップページ" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+<meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+<link rel="canonical" href="http://localhost:4000/page/vscode/vscode_top.html" />
+<meta property="og:url" content="http://localhost:4000/page/vscode/vscode_top.html" />
+<meta property="og:site_name" content="personal website" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-09-04T10:03:40+09:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="vscodeトップページ" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-09-04T10:03:40+09:00","datePublished":"2022-09-04T10:03:40+09:00","description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","headline":"vscodeトップページ","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/page/vscode/vscode_top.html"},"url":"http://localhost:4000/page/vscode/vscode_top.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=c90158fd34f66e4f63b4da45038b5d6170d798eb">
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+    
+
+<!--  -->
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1><a href="http://localhost:4000/">personal website</a></h1>
+
+        
+
+        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</p>
+
+        
+        <p class="view"><a href="https://github.com/dirac6582/dirac6582.github.io.git">View the Project on GitHub <small>dirac6582/dirac6582.github.io.git</small></a></p>
+        
+
+        
+
+        
+      </header>
+      <section>
+
+      <h2 id="拡張機能">拡張機能</h2>
+<h3 id="一般的な拡張">一般的な拡張</h3>
+
+<p>1.PlantUML
+    UML図を作成する．
+1.Todo Tree
+    ソースコード内にコメントで「TODO」と記載することでTODOをリスト管理できる．</p>
+<ol>
+  <li>Material Icon Theme
+explorerに表示されるフォルダのアイコンを視認性よくしてくれる．emacsのall-the-iconを思い出す．</li>
+  <li>Better Comments
+ コメントの先頭に! * ? //を書くとその行の色を変えてくれる．</li>
+  <li>indent rainbow
+ indentに色付け．特にpythonだと有用．
+    <h3 id="markdown用拡張">markdown用拡張</h3>
+    <!-- https://ics.media/entry/18756/ -->
+  </li>
+  <li>Markdown All in One</li>
+  <li>MarkdownLint</li>
+  <li>Markmap
+ markdownの構造マップを見れる</li>
+  <li>Marp
+ markdownからスライドを作成．<!--https://qiita.com/tomo_makes/items/aafae4021986553ae1d8 --></li>
+</ol>
+
+<h3 id="python">python</h3>
+
+<ul>
+  <li>仮想環境の切り替えはステータスバーからできる．</li>
+</ul>
+
+<h3 id="latex">LaTeX</h3>
+
+<ol>
+  <li>latex workshop</li>
+  <li><a href="https://konn-san.com/articles/2018-11-26-happy-latex-with-catex.html">CaTeX</a></li>
+  <li><a href="https://valentjn.github.io/ltex/">LTeX</a>
+ latexで英語の文法をチェックしてくれるかなり強力な拡張機能．英単語のスペルミスのみならず英文法もチェックしてくれる．</li>
+</ol>
+
+<h2 id="設定ファイルをdotfileで管理する">設定ファイルをdotfileで管理する</h2>
+
+<p>vscodeの設定ファイルは<code class="language-plaintext highlighter-rouge">~/Library/Application\ Support/Code/User/settings.json</code>にあるので，これをdotfileで管理してシンボリックリンクをはるようにするとよい．</p>
+
+<p>既にインストールされている拡張機能はターミナルで<code class="language-plaintext highlighter-rouge">code</code>コマンドを利用して</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># install vscode via homebrew</span>
+brew <span class="nb">install</span> <span class="nt">--cask</span> visual-studio-code
+
+<span class="c"># see all extensions</span>
+code <span class="nt">--list-extensions</span>
+</code></pre></div></div>
+
+<p>とすることで確認できる．<code class="language-plaintext highlighter-rouge">code</code>コマンドが入っていない場合はhomebrewでvscodeをインストールし直すとよい．拡張機能をシェルスクリプトでインストールするには同じく<code class="language-plaintext highlighter-rouge">code</code>コマンドを利用して</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>code <span class="nt">--install-extension</span> ms-toolsai.jupyter
+</code></pre></div></div>
+
+<p>などとする．インストール時の拡張機能の名前はGUIで拡張機能のページを見るときに右側に表示されている．</p>
+
+<!--
+https://omoshiteca.hatenablog.com/entry/2019/10/14/203531
+https://atmarkit.itmedia.co.jp/ait/articles/2105/21/news026.html
+設定ファイルの場所: https://maku.blog/p/tfq2cnw/
+https://ics.media/entry/18756/
+https://ics.media/entry/18756/
+-->
+
+
+      </section>
+      <footer>
+        
+        <p>This project is maintained by <a href="https://github.com/dirac6582">dirac6582</a></p>
+        
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="/assets/js/scale.fix.js"></script>
+  </body>
+</html>

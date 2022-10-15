@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>その他諸々のアプリなど | personal website</title>
+<meta name="generator" content="Jekyll v3.9.2" />
+<meta property="og:title" content="その他諸々のアプリなど" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+<meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+<link rel="canonical" href="http://localhost:4000/page/others/others_top.html" />
+<meta property="og:url" content="http://localhost:4000/page/others/others_top.html" />
+<meta property="og:site_name" content="personal website" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-09-04T10:03:40+09:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="その他諸々のアプリなど" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-09-04T10:03:40+09:00","datePublished":"2022-09-04T10:03:40+09:00","description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","headline":"その他諸々のアプリなど","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/page/others/others_top.html"},"url":"http://localhost:4000/page/others/others_top.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=c90158fd34f66e4f63b4da45038b5d6170d798eb">
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+    
+
+<!--  -->
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1><a href="http://localhost:4000/">personal website</a></h1>
+
+        
+
+        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</p>
+
+        
+        <p class="view"><a href="https://github.com/dirac6582/dirac6582.github.io.git">View the Project on GitHub <small>dirac6582/dirac6582.github.io.git</small></a></p>
+        
+
+        
+
+        
+      </header>
+      <section>
+
+      <h2 id="その他諸々のアプリなど">その他諸々のアプリなど</h2>
+
+<h2 id="zotero文献管理">Zotero(文献管理)</h2>
+<p>文献管理アプリの一つZoteroについてのメモ．Zoteroはgoogle driveなどのクラウドとの連携で（ほとんどの場合）無料で利用することができる．プラグインも色々揃っているので自分のやりたいことを実現しやすい．</p>
+
+<h3 id="install">install</h3>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew <span class="nb">install</span> <span class="nt">--cask</span> zotero
+</code></pre></div></div>
+
+<h3 id="ブラウザからpdfを取ってきてくれる公式拡張機能の導入">ブラウザからpdfを取ってきてくれる公式拡張機能の導入</h3>
+
+<h3 id="zoterozotfileクラウドの連携">zotero+zotfile+クラウドの連携</h3>
+
+<p>ここにzotfileを入れるんだけど，これは</p>
+
+<p><a href="http://zotfile.com/">ZotFile</a></p>
+
+<p>にアクセスするしかないっぽい．</p>
+
+<p>→ zipを入れたら，zoteroのツールバーから，ツール → addonと行けば良い．</p>
+
+<p>インストールしたら，以下の設定を行う．zoteroとzotfile両方に設定が必要．</p>
+
+<p><a href="https://qiita.com/Yarakashi_Kikohshi/items/39dfbf3059aaf0690761">Zotero で論文管理してみた話 - Qiita</a></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Zotero
+zotero→環境設定→
+1. 同期→ファイルの同期の2つのチェックを外す．
+2. 詳細→ファイルとフォルダ→基本ディレクトリをgoogledriveへ
+3. 詳細→ファイルとフォルダ→データディレクトリを/Users/amano/Documents/Zoteroへ
+
+zotfile
+tools→zotfile preference
+General setting → Location of Files
+→ CustomLocationでGoogleDriveのフォルダを選ぶ．
+同じくUse subfolder defined byで，/%c/%w/%yとする．
+これでcollection/journal/yearで分類される．
+
+</code></pre></div></div>
+
+<p>最後の/%c/の分類によって，論文をある程度わかりやすく管理できるかなと思う．ただすこしわからないのは，zoteroだとサブコレクションがあって，メインコレクションにいれた文書はサブコレクションに入れられる．逆にサブコレクションに入れたものはメインコレクションに入れられない．対応して，保存するときは基本的にメインコレクションに入れておくのが良い？</p>
+
+<ul>
+  <li>この点に関しては，以下のような記事があった．</li>
+</ul>
+
+<p><a href="https://forums.zotero.org/discussion/62575/collection-and-subcollection">Collection and Subcollection</a></p>
+
+<p><a href="https://www.zotero.org/support/collections_and_tags">collections and tags [Zotero Documentation]</a></p>
+
+<p>というわけで，collection間でitemを追加でなく移動する場合は，cmdを押しながらdragすること．</p>
+
+<h2 id="betterbibtex"><a href="https://retorque.re/zotero-better-bibtex/">betterbibtex</a></h2>
+<p>Zoteroから出力できるbibtexファイルをカスタマイズするための拡張機能．</p>
+
+<ul>
+  <li>citation keyの変更
+citation keyとはTeX文書中で<code class="language-plaintext highlighter-rouge">¥cite{...}</code>のところで利用する文字列のこと．</li>
+</ul>
+
+<p>環境設定を開くとBetter BibTeXの項目が追加されているのでそれを開く．defaultで</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>auth.lower + shorttitle(3,3) + year
+</code></pre></div></div>
+<p>になっているところを</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[auth:lower][year][shorttitle1_1]
+</code></pre></div></div>
+<p>に変更する．その後 Zotero のコンソール画面で、マイライブラリ全体を全選択（Cmd+A）し、右クリック &gt; Better Bib Tex &gt; Reflesh Bib Tex key を選択する．</p>
+
+<h2 id="その他">その他</h2>
+
+<ul>
+  <li>
+    <p>左欄の下の方に重複アイテム</p>
+  </li>
+  <li>
+    <p><strong>Zotero Citation Counts Manager</strong></p>
+  </li>
+</ul>
+
+<p><a href="https://github.com/eschnett/zotero-citationcounts">GitHub - eschnett/zotero-citationcounts: Zotero plugin for auto-fetching citation counts from various sources</a></p>
+
+<p>一応入れてみたが，google scholarからはデータをとってこないようで，あまりあてにならなそう．．．</p>
+
+<ul>
+  <li>zotero storage scanner</li>
+</ul>
+
+<p><a href="https://github.com/retorquere/zotero-storage-scanner">GitHub - retorquere/zotero-storage-scanner: A Zotero plugin to remove the broken &amp; duplicate attachment link of the bibliography</a></p>
+
+<p>重複ファイルを調べてくれる．</p>
+
+<ul>
+  <li>zoteroQuickLook</li>
+</ul>
+
+<p><a href="https://github.com/mronkko/ZoteroQuickLook">GitHub - mronkko/ZoteroQuickLook: Implements QuickLook in Zotero</a></p>
+
+<p>→ beta版でzotero PDF readerなるものが導入されて，これが結構使いやすいらしい．</p>
+
+<ul>
+  <li>zotero beta and zotero PDF viewer</li>
+</ul>
+
+<p><a href="https://www.zotero.org/support/dev_builds">dev builds [Zotero Documentation]</a></p>
+
+<p>→ これはかなり使いやすいわ！ zotero connecterとzot fileは今まで通り使えそうなので，問題が発生するまではこのbetaを使用する．（2021/10/28）</p>
+
+<p><a href="https://www.zotero.org/support/pdf_reader_preview">pdf reader preview [Zotero Documentation]</a></p>
+
+<p>annotationではcitationが使用できないっぽいが，note（右側に表示されるやつ）の方ではcitationを使用することができる．これは便利だね．</p>
+
+
+      </section>
+      <footer>
+        
+        <p>This project is maintained by <a href="https://github.com/dirac6582">dirac6582</a></p>
+        
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="/assets/js/scale.fix.js"></script>
+  </body>
+</html>

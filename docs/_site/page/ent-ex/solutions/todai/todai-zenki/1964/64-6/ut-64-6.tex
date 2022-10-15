@@ -1,0 +1,80 @@
+\documentclass[a4j]{jarticle}
+\usepackage{amsmath}
+\usepackage{ascmac}
+\usepackage{amssymb}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{framed}
+\usepackage{fancyhdr}
+\usepackage{latexsym}
+\usepackage{indent}
+\usepackage{cases}
+\allowdisplaybreaks
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{東京大学前期$1964$年$6$番}
+\begin{document}
+\input{macros}
+     \begin{oframed}
+     関数$f(x)=x^3+ax^2+bx$は次の条件を満たすものとする．
+          \begin{enumerate}[(1)]
+          \item $f(1)=4$．
+          \item $x\ge0$のとき$f(x)\ge0$．
+          \end{enumerate}
+     このとき$\int_0^1f(x)dx$の値を最大にする$a$，$b$の値，最小にする$a$，$b$の値をそれぞれ
+     求めよ．     
+     \end{oframed}
+
+\setlength{\columnseprule}{0.4pt}
+\begin{multicols}{2}
+{\bf[解]}条件(1)から，
+     \begin{align}
+     a+b=3 \label{1}
+     \end{align}
+である．次に条件(2)を考える．$x=0$のときはこれは満たされるから，以下$x>0$で考える．このとき，
+     \begin{align}
+     \forall x>0,f(x)\ge0 \nonumber\\
+     \Longleftrightarrow \forall x>0,x^2+ax+b\ge0 \label{2}
+     \end{align}     
+だから\eqref{2}について考えればよろしい．そこでこの不等式の左辺を$g(x)$，
+方程式$g(x)=0$の判別式を$D$とおけば，\eqref{2}は
+     \begin{align}
+     &D\le0 \lor
+     \left\{
+          \begin{array}{l}
+          D>0  \\
+          f(0)\ge0 \\
+          \dfrac{-a}{2}< 0
+          \end{array}
+     \right.     \nonumber\\
+     \Longleftrightarrow
+     &a^2-4b\ge0 \lor
+     \left\{
+          \begin{array}{l}
+          a^2-4b>0  \\
+          b\ge0 \\
+          a>0
+          \end{array}
+     \right.     \nonumber\\
+     \Longleftrightarrow
+     &-6\le a\le2 \lor
+     \left\{
+          \begin{array}{l}
+          a<-6,2<a  \\
+          0<a\le3
+          \end{array}
+     \right.  \tag{$\because\eqref{1}$} \\
+          \Longleftrightarrow
+     &-6\le a\le 3 \label{3}
+     \end{align}
+となる．このもとで$h(a)=\int_0^1f(x)dx$の最大小を考える．
+     \begin{align*}
+     h(a)&=\left[ \frac{1}{4}x^4+\frac{a}{3}x^3+\frac{b}{2}x^2\right]_0^1 \\
+     &=\frac{-1}{6}a+\frac{7}{4}\tag{$\because\eqref{1}$}
+     \end{align*}
+となり，$h(a)$は$a$の単調減少関数である．故に\eqref{1}，\eqref{3}より，$(a,b)=(3,0)$で最小，
+$(a,b)=(-6,9)$で最大となる．$\cdots$(答)          
+\newpage
+\end{multicols}
+\end{document}

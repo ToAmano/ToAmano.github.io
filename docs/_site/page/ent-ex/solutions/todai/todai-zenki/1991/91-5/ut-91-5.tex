@@ -1,0 +1,58 @@
+\documentclass[a4j]{jarticle}
+\usepackage{amsmath}
+\usepackage{ascmac}
+\usepackage{amssymb}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{framed}
+\usepackage{fancyhdr}
+\usepackage{latexsym}
+\usepackage{indent}
+\usepackage[dvips]{graphicx}
+\usepackage{color}
+\usepackage{emath}
+\usepackage{emathPp}
+\usepackage{cases}
+\allowdisplaybreaks
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{東京大学前期$1991$年$5$番}
+\begin{document}
+\input{macros}
+\preEqlabel{$\cdots$}
+     \begin{oframed}
+     $xy$平面上，$x$座標，$y$座標がともに整数であるような点$(m,n)$を格子点とよぶ．
+     各格子点を中心として半径$r$の円がえがかれており，傾き$2/5$の任意の直線はこれらの
+     円のいずれかと共有点を持つという．このような性質を持つ実数$r$の最小値を求めよ．
+     \end{oframed}
+
+\setlength{\columnseprule}{0.4pt}
+\begin{multicols}{2}
+{\bf[解]} $a$を実数として，題意の直線は
+     \[2x-5y+a=0\]
+と書ける．これと中心$(m,n)$，半径$r$の円が共有点をもつので
+     \begin{align}
+     \frac{|2m-5n+a|}{\sqrt{4+25}}\le r\label{1}
+     \end{align}
+である．従って，$r$の条件式は
+      \[\forall a\exists m \exists n ，\eqref{1}\]
+ である．ここで，$2\perp 5$だから，$2m-5n$は全ての整数値のみをとる．従って$a$の
+ 小数部分$\a$とすれば，$a$を固定した時，
+      \begin{align*}
+           \begin{cases}
+           0\le \a \le 1/2 &\min |2m-5n+a|=\a\\
+           1/2 \le\a<1 &\min |2m-5n+a|=|1-\a|
+           \end{cases}
+      \end{align*}
+である．故に$\a$を動かした時，これらの値が常に$r$より小さければよいので，条件は
+     \begin{align*}
+     \frac{1/2}{\sqrt{29}}\le r\\
+     \frac{\sqrt{29}}{58}\le r
+     \end{align*}
+である．求める最小値は
+     \[\min r=\frac{\sqrt{29}}{58}\]
+である．
+\newpage
+\end{multicols}
+a\end{document}

@@ -1,0 +1,69 @@
+\documentclass[a4j]{jarticle}
+\usepackage{amsmath}
+\usepackage{ascmac}
+\usepackage{amssymb}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{framed}
+\usepackage{fancyhdr}
+\usepackage{latexsym}
+\usepackage{indent}
+\usepackage{cases}
+\usepackage[dvips]{graphicx}
+\usepackage{color}
+\usepackage{emath}
+\usepackage{emathPp}
+\allowdisplaybreaks
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{東京大学前期$1976$年$2$番}
+\begin{document}
+\input{macros}
+     \begin{oframed}
+     時刻$t=0$に原点を出発し，$xy$平面上で次の条件(i)，(ii)に従っていろいろに運動する動点Pがある．
+          \begin{enumerate}[(i)]
+          \item $t=0$におけるPの速度を表すベクトルの成分は$(1,\sqrt{3})$である．
+          \item $0<t<1$において，Pは何回か($1$回以上有限回)直角に左折するが，そのときを除けばPは
+          一定の速さ$2$で直進する．(ただし，左折するのに要する時間は$0$とする)
+          \end{enumerate}
+     このとき，時刻$t=1$においてPが到達する点をQとして，Qの存在しうる範囲を図示せよ．
+     \end{oframed}
+
+\setlength{\columnseprule}{0.4pt}
+\begin{multicols}{2}
+{\bf[解]} $\beku{a}=(1,\sqrt{3})$とおく．まず，$t=0$におけるPの速度を表すベクトルが$\beku{b}=(1,0)$だとして考える．$x$軸正方向の移動量を$x$，$y$軸正方向の移動量を$y$とすると，題意の条件から
+     \[|x|+|y|\le 2\]
+である．これを図示して下図斜線部(境界含む)．
+
+     \begin{zahyou}[ul=10mm](-2.5,2.5)(-2.5,2.5)
+     \def\Fx{-1*X+2}
+     \def\Gx{X+2}
+     \def\Hx{-1*X-2}
+     \def\Mx{X-2}
+     \YGurafu\Fx{0}{2}
+     \YGurafu\Gx{-2}{0}
+     \YGurafu\Hx{-2}{0}
+     \YGurafu\Mx{0}{2}
+     \YNurii*\Fx\Mx{0}{2}
+     \YNurii*\Gx\Hx{-2}{0}
+     \Put{(2,0)}[ne]{$2$}
+     \Put{(0,2)}[ne]{$2$}
+     \Put{(-2,0)}[nw]{$-2$}
+     \Put{(0,-2)}[se]{$-2$}
+     \end{zahyou}
+     
+これを$\beku{b}$が$\beku{a}$の方向にくるまで回転した領域が求める領域で，図示して下図斜線部(境界含む)．
+$\cdots$(答)
+
+     \begin{zahyou}[ul=10mm](-2.5,2.5)(-2.5,2.5)
+     \tenretu*<perl>{%
+     A(1,sqrt(3));B(-sqrt(3),1);C(-1,-sqrt(3));D(sqrt(3),-1)}
+     \Drawline{\A\B\C\D\A}
+     \Put\A[syaei=xy,xlabel=1,ylabel=\sqrt{3}]{}
+     \Nuritubusi*{\A\B\C\D}
+     \end{zahyou}
+
+\newpage
+\end{multicols}
+\end{document}

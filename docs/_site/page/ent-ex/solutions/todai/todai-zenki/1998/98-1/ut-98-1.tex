@@ -1,0 +1,64 @@
+\documentclass[a4j]{jarticle}
+\usepackage{amsmath}
+\usepackage{ascmac}
+\usepackage{amssymb}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{framed}
+\usepackage{fancyhdr}
+\usepackage{latexsym}
+\usepackage{indent}
+\usepackage{cases}
+\usepackage[dvips]{graphicx}
+\usepackage{color}
+\usepackage{emath}
+\usepackage{emathPp}
+\allowdisplaybreaks
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{東京大学前期$1998$年$1$番}
+\begin{document}
+\input{macros}
+     \begin{oframed}
+     $a$は$0$でない実数とする．関数
+          \[f(x)=(3x^2-4)\left(x-a+\frac{1}{a}\right)\]
+     の極大値と極小値の差が最小となる$a$の値を求めよ．
+     \end{oframed}
+
+\setlength{\columnseprule}{0.4pt}
+\begin{multicols}{2}
+{\bf[解]} まず，
+     \begin{align*}
+     t=a-\frac{1}{a}\label{1}
+     \end{align*}
+とおく．すると，
+     \begin{align*}
+     f'(x)=9x^2-6tx-4
+     \end{align*}
+である．$f'(0)<0$および$2$次係数正から，$f'(x)=0$は$2$異実解$\a$，$\b$($\a<\b$)を持ち，下表を
+得る．
+     \[
+     \begin{array}{|c|c|c|c|c|c|}\hline
+     x &      & \a &   &\b &      \\\hline
+     f' &+    &0  & -  & 0 &+      \\\hline
+     f &  \ne&    &\se&    &\ne \\\hline
+     \end{array}
+     \]
+従って，極大値と極小値の差$L$として，
+     \begin{align*}
+     L=&f(\a)-f(\b) \\
+     =&\int_{\b}^{\a}f'(x)\,dx \\
+     =&\int_{\a}^{\b}9(x-\a)(\b-x)\,dx \\
+     =&\frac{3}{2}(\b-\a)^3
+     \end{align*}     
+である．故に$\b-\a(>0)$の最小値を求めればよい．
+
+ここで，$\a$，$\b$は$f'(x)=0$の$2$解であるから，
+     \[\b-\a=\frac{2\sqrt{9t^2+36}}{9}=\frac{2\sqrt{t^2+4}}{3}\]
+ である．従って$t^2$が最小の時$L$は最小である．
+       \[t=0\Longleftrightarrow a=\pm1\]
+ であるから，$t^2$の最小値は$0$で，この時の値$a=\pm1$が求める答えである．$\cdots$(答)   
+\newpage
+\end{multicols}
+\end{document}

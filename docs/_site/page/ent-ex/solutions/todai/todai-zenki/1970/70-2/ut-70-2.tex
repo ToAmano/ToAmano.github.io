@@ -1,0 +1,67 @@
+\documentclass[a4j]{jarticle}
+\usepackage{amsmath}
+\usepackage{ascmac}
+\usepackage{amssymb}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{framed}
+\usepackage{fancyhdr}
+\usepackage{latexsym}
+\usepackage{indent}
+\usepackage{cases}
+\allowdisplaybreaks
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{東京大学前期$1970$年$2$番}
+\begin{document}
+\input{macros}
+     \begin{oframed}
+     $x$軸上原点から出発し，効果を投げて表がでたら右へ$1$だけ進み，裏がでたら左へ$1$だけすす
+     むことにする．
+          \begin{enumerate}[(1)]
+          \item これを$4$回くりかえしたとき$x=0$，$x=\pm1$，$x=\pm2$，$x=\pm3$，$x=\pm4$
+          の各点にいる確率をもとめよ．
+          \item 一般にこれを$n$回くりかえしたとき$x=n-2$にいる確率と$x=n-4$にいる確率とを求め
+          よ．
+          \end{enumerate}
+     \end{oframed}
+
+\setlength{\columnseprule}{0.4pt}
+\begin{multicols}{2}
+{\bf[解]}
+     \begin{enumerate}[(1)]
+     \item $4$回操作した時，$x=\pm1,\pm3$にある確率は明らかに$0$であることに注意する．
+     又，$x=\pm2$にいる確率は対称性から等しく，例えば表が$3$回出る時で
+          \begin{align}
+          \frac{{}_4C_1}{2^4}=\frac{1}{4}\label{1}
+          \end{align}
+     $x=\pm4$にいる確率は対称性から等しく，例えば表が$4$回出る時で
+          \begin{align}
+          \frac{{}_4C_0}{2^4}=\frac{1}{16}\label{2}
+          \end{align}
+     \eqref{1}，\eqref{2}から，余事象より$x=0$にいる確率は
+          \begin{align*}
+          1-2\left(\frac{1}{4}+\frac{1}{16}\right)=\frac{3}{8}
+          \end{align*}
+     である．以上をまとめて
+          \begin{align*}
+          \left\{
+               \begin{array}{ll}
+               x=\pm1,\pm3 & 0     \\
+               x=0                & 3/8   \\
+               x=\pm2          & 1/4   \\
+               x=\pm4          & 1/16
+               \end{array}
+          \right.
+          \end{align*}
+     である．$\cdots$(答)
+     
+     \item $x=n-2$にいるのは表が$n-1$回出た時で$\dfrac{{}_nC_{n-1}}{2^n}=\dfrac{n}{2^n}$．
+     $\cdots$(答)
+     また$x=n-4$にいるのは表が$n-2$回出た時で$\dfrac{{}_nC_{n-2}}{2^n}=\dfrac{n(n-1)}{2^{n+1}}$．
+     $\cdots$(答)
+     \end{enumerate}
+\newpage
+\end{multicols}
+\end{document}

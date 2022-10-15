@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>QEのバンド計算(workflow) | personal website</title>
+<meta name="generator" content="Jekyll v3.9.2" />
+<meta property="og:title" content="QEのバンド計算(workflow)" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+<meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+<link rel="canonical" href="http://localhost:4000/page/aiida/workflow_tutorial.html" />
+<meta property="og:url" content="http://localhost:4000/page/aiida/workflow_tutorial.html" />
+<meta property="og:site_name" content="personal website" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="QEのバンド計算(workflow)" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","headline":"QEのバンド計算(workflow)","url":"http://localhost:4000/page/aiida/workflow_tutorial.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=c90158fd34f66e4f63b4da45038b5d6170d798eb">
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+    
+
+<!--  -->
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1><a href="http://localhost:4000/">personal website</a></h1>
+
+        
+
+        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</p>
+
+        
+        <p class="view"><a href="https://github.com/dirac6582/dirac6582.github.io.git">View the Project on GitHub <small>dirac6582/dirac6582.github.io.git</small></a></p>
+        
+
+        
+
+        
+      </header>
+      <section>
+
+      <h1 id="qeのバンド計算workflow">QEのバンド計算(workflow)</h1>
+
+<p>どのようなworkflowがインストールされているかは<code class="language-plaintext highlighter-rouge">verdi plugin</code>コマンドで確認できる．</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>verdi plugin list aiida.workflows
+<span class="k">*</span> quantumespresso.matdyn.base
+<span class="k">*</span> quantumespresso.pdos
+<span class="k">*</span> quantumespresso.ph.base
+<span class="k">*</span> quantumespresso.pw.bands
+<span class="k">*</span> quantumespresso.pw.base
+<span class="k">*</span> quantumespresso.pw.relax
+<span class="k">*</span> quantumespresso.q2r.base
+</code></pre></div></div>
+
+<p>今回はこの中から<code class="language-plaintext highlighter-rouge">quantumespresso.pw.bands</code>を試す．これは以下の4つの計算を自動で行なってくれるワークフローである．</p>
+
+<ol>
+  <li>vc-relaxによる結晶構造緩和</li>
+  <li>Refine the symmetry of the relaxed structure, and find a standardized cell using SeeK-path.</li>
+  <li>scf計算</li>
+  <li>nscf計算でSeeK-pathの定めたパスに沿ってバンド計算</li>
+</ol>
+
+<h2 id="qe以外の計算条件metadataoptionsの設定">QE以外の計算条件(metadata.options)の設定</h2>
+
+<p>metadata.optionsはそれぞれの計算に対して指定する必要がある．しかし全ての計算にいちいち設定を書いているのは面倒くさいので，それを解決するために<code class="language-plaintext highlighter-rouge">override</code>というオプションがある．
+<!-- https://groups.google.com/g/aiidausers/c/QywalYIOK-M?pli=1 --></p>
+
+<p>https://aiida-tutorials.readthedocs.io/en/tutorial-2021-intro/sections/running_processes/workflows.html</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>verdi process list
+verdi process list                                    5:38:38 
+  PK  Created    Process label     Process State    Process status
+<span class="nt">----</span>  <span class="nt">---------</span>  <span class="nt">----------------</span>  <span class="nt">---------------</span>  <span class="nt">----------------------------------</span>
+ 169  21s ago    PwBandsWorkChain  ⏵ Waiting        Waiting <span class="k">for </span>child processes: 171
+ 171  20s ago    PwRelaxWorkChain  ⏵ Waiting        Waiting <span class="k">for </span>child processes: 174
+ 174  19s ago    PwBaseWorkChain   ⏵ Waiting        Waiting <span class="k">for </span>child processes: 179
+ 179  18s ago    PwCalculation     ⏵ Waiting        Waiting <span class="k">for </span>transport task: upload
+
+Total results: 4
+</code></pre></div></div>
+
+<p>https://aiida.readthedocs.io/projects/aiida-core/en/v2.0.3/howto/run_workflows.html</p>
+
+
+      </section>
+      <footer>
+        
+        <p>This project is maintained by <a href="https://github.com/dirac6582">dirac6582</a></p>
+        
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="/assets/js/scale.fix.js"></script>
+  </body>
+</html>

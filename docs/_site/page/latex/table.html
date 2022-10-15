@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>latex table | personal website</title>
+<meta name="generator" content="Jekyll v3.9.2" />
+<meta property="og:title" content="latex table" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+<meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+<link rel="canonical" href="http://localhost:4000/page/latex/table.html" />
+<meta property="og:url" content="http://localhost:4000/page/latex/table.html" />
+<meta property="og:site_name" content="personal website" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-09-04T10:03:40+09:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="latex table" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-09-04T10:03:40+09:00","datePublished":"2022-09-04T10:03:40+09:00","description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","headline":"latex table","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/page/latex/table.html"},"url":"http://localhost:4000/page/latex/table.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=c90158fd34f66e4f63b4da45038b5d6170d798eb">
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+    
+
+<!--  -->
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1><a href="http://localhost:4000/">personal website</a></h1>
+
+        
+
+        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</p>
+
+        
+        <p class="view"><a href="https://github.com/dirac6582/dirac6582.github.io.git">View the Project on GitHub <small>dirac6582/dirac6582.github.io.git</small></a></p>
+        
+
+        
+
+        
+      </header>
+      <section>
+
+      <p>ここの記述はほとんど以下のoverleafのページの写経．テーブル関連でやりたいことがある場合はまずは以下のページを参照するとよい．</p>
+
+<p><a href="https://ja.overleaf.com/learn/latex/Tables">overleafの解説ページ</a></p>
+
+<h2 id="基本的なtabletabluar環境の使い方">基本的なtable/tabluar環境の使い方</h2>
+
+<p>tabularがtable本体を作る環境，table環境<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>がその場所を確保するfloat環境である．table環境のオプションはfigure環境のオプションと同じで表の配置場所を決める．最小の例は以下のようなものである．</p>
+
+<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">\begin{table}</span>[!htb]
+<span class="k">\centering</span>
+<span class="k">\caption</span><span class="p">{</span>test table<span class="p">}</span> <span class="c">% tableの場合，captionは上に来ないといけない！</span>
+<span class="nt">\begin{tabular}</span><span class="p">{</span>ccc<span class="p">}</span>
+ cell1 <span class="p">&amp;</span> cell2 <span class="p">&amp;</span> cell3 <span class="k">\\</span> 
+ cell4 <span class="p">&amp;</span> cell5 <span class="p">&amp;</span> cell6 <span class="k">\\</span>
+ cell7 <span class="p">&amp;</span> cell8 <span class="p">&amp;</span> cell9
+<span class="nt">\end{tabular}</span>
+<span class="nt">\end{table}</span>
+</code></pre></div></div>
+
+<p>tabular環境内で表を作成する．一列の形式をどうするかを<code class="language-plaintext highlighter-rouge">{ccc}</code>で指定してある．これは横に3つの要素を並べるという意味で，<code class="language-plaintext highlighter-rouge">c</code>は要素を中央揃えにする．c (center)のほかにl (left)とr (right)が選択できる．例えば<code class="language-plaintext highlighter-rouge">{lcc}</code>とすれば左端の要素は左揃え，残りのふたつの要素は中央揃えになる．横方向の要素を増やしたければ<code class="language-plaintext highlighter-rouge">c</code>や<code class="language-plaintext highlighter-rouge">r</code>などの数を増やせばよい．次の行からは要素ごとに<code class="language-plaintext highlighter-rouge">&amp;</code>で区切り，行末は<code class="language-plaintext highlighter-rouge">\\</code>で改行する．縦方向にはいくらでも続けることができる．</p>
+
+<p>オプション部分についてはさらに以下のような各種の書式が利用可能で，これだけでかなり柔軟に表をいじることができる．</p>
+
+<h2 id="見た目の調整">見た目の調整</h2>
+
+<ul>
+  <li>
+    <p>表の行間を調整する</p>
+
+    <p>デフォルトだと表の行間が狭すぎる．</p>
+
+    <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">\renewcommand</span><span class="p">{</span><span class="k">\arraystretch</span><span class="p">}{</span>1.5<span class="p">}</span>
+  <span class="c">% 表をかく</span>
+  <span class="k">\renewcommand</span><span class="p">{</span><span class="k">\arraystretch</span><span class="p">}{</span>1<span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>デフォルトだとtableとcaptionの間が狭すぎる．</p>
+
+    <p>captionパッケージを使う．</p>
+    <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">\usepackage</span><span class="p">{</span>caption<span class="p">}</span> 
+  <span class="k">\captionsetup</span><span class="na">[table]</span><span class="p">{</span>skip=10pt<span class="p">}</span>	
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1" role="doc-endnote">
+      <p>figure環境とのおおきな違いは，captionを打った時にFigureと表示されるかTableと表示されるかということ． <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+
+      </section>
+      <footer>
+        
+        <p>This project is maintained by <a href="https://github.com/dirac6582">dirac6582</a></p>
+        
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="/assets/js/scale.fix.js"></script>
+  </body>
+</html>

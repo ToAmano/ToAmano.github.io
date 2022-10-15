@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>図の挿入 | personal website</title>
+<meta name="generator" content="Jekyll v3.9.2" />
+<meta property="og:title" content="図の挿入" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+<meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+<link rel="canonical" href="http://localhost:4000/page/latex/insert_figure.html" />
+<meta property="og:url" content="http://localhost:4000/page/latex/insert_figure.html" />
+<meta property="og:site_name" content="personal website" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-09-04T10:03:40+09:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="図の挿入" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-09-04T10:03:40+09:00","datePublished":"2022-09-04T10:03:40+09:00","description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","headline":"図の挿入","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/page/latex/insert_figure.html"},"url":"http://localhost:4000/page/latex/insert_figure.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=c90158fd34f66e4f63b4da45038b5d6170d798eb">
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+    
+
+<!--  -->
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1><a href="http://localhost:4000/">personal website</a></h1>
+
+        
+
+        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</p>
+
+        
+        <p class="view"><a href="https://github.com/dirac6582/dirac6582.github.io.git">View the Project on GitHub <small>dirac6582/dirac6582.github.io.git</small></a></p>
+        
+
+        
+
+        
+      </header>
+      <section>
+
+      <h2 id="figure環境">figure環境</h2>
+
+<p>図の挿入にはfigure環境を使う．オプション!htbは図表を挿入する場所を表していて，latexは最初のオプションから順番に試していく．</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>位置</th>
+      <th>概要</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>!</td>
+      <td>多少無理してでもfigure環境を宣言した場所に場所を確保</td>
+    </tr>
+    <tr>
+      <td>h</td>
+      <td>figure環境宣言した場所（here）に場所を確保</td>
+    </tr>
+    <tr>
+      <td>t</td>
+      <td>figure環境宣言したページの上部（top）に場所を確保</td>
+    </tr>
+    <tr>
+      <td>b</td>
+      <td>figure環境宣言したページの下部（bottom）に場所を確保</td>
+    </tr>
+    <tr>
+      <td>p</td>
+      <td>最後のページ（p）に図の場所を確保</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>pdfやpngなどの図を挿入する場合は<code class="language-plaintext highlighter-rouge">\includegraphics</code>命令を利用してファイルを読み込む．texファイルを読み込むなどより高度な操作も可能だがここでは触れない．figure環境には<code class="language-plaintext highlighter-rouge">\label</code>を指定することができ，また<code class="language-plaintext highlighter-rouge">caption</code>で説明書きを入れることもできる．また，通常は図表を中心に揃えたいので<code class="language-plaintext highlighter-rouge">\centering</code>命令を利用する．</p>
+
+<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">\begin{figure}</span>[!htb]
+<span class="k">\centering</span>
+<span class="k">\includegraphics</span><span class="na">[width=3cm]</span><span class="p">{</span>path/to/finename<span class="p">}</span>
+<span class="k">\label</span><span class="p">{</span>fig:hoge<span class="p">}</span>
+<span class="k">\caption</span><span class="p">{</span>test figure environment<span class="p">}</span>
+<span class="nt">\end{figure}</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">\includegraphics</code>のオプションはなくてもよく，その場合はlatexが自動で図の大きさを決めてくれる．オプションとしてはwidthに加えていくつかの設定が可能．</p>
+
+<h2 id="captionのカスタマイズcaptionパッケージ">captionのカスタマイズ（captionパッケージ）</h2>
+
+<!-- 
+https://karat5i.blogspot.com/2014/10/latex.html
+https://clutte.red/blog/2018/11/latex-table-caption/
+ -->
+
+<p><code class="language-plaintext highlighter-rouge">caption</code>パッケージは文字サイズや位置などのキャプションのカスタマイズを可能にするパッケージで，デフォルトで入っている．基本となるコマンドは<code class="language-plaintext highlighter-rouge">\captionsetup</code>コマンドで，これをfigureやtableなどのフロート環境内で利用することでその環境内でのキャプションをカスタマイズできる．</p>
+
+<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">\begin{figure}</span>
+<span class="k">\captionsetup</span><span class="na">[table]</span><span class="p">{</span>format=plain, labelformat=simple, labelsep=period, font=<span class="p">{</span>sc, footnotesize<span class="p">}}</span>
+
+<span class="nt">\end{figure}</span>
+</code></pre></div></div>
+
+<p>文書全体で変更したいという場合は</p>
+
+<h2 id="subcaptionパッケージ"><a href="https://gitlab.com/axelsommerfeldt/caption">subcaptionパッケージ</a></h2>
+
+<p>複数の図表を挿入したい場合はよく紹介されている<code class="language-plaintext highlighter-rouge">minipage</code>を用いてページを分割する方法に加えて，より図表の挿入に特化した高機能な<code class="language-plaintext highlighter-rouge">subcaption</code>，<code class="language-plaintext highlighter-rouge">subfig</code>などの方法がある．<code class="language-plaintext highlighter-rouge">subfigure</code>というのもあるのだが，これは古いパッケージとのこと．以下では基本的に<code class="language-plaintext highlighter-rouge">subcaption</code>を使う方法について述べる．このパッケージは<code class="language-plaintext highlighter-rouge">caption</code>パッケージにバンドルされていて，mactexを利用していればデフォルトで入っている．
+<!-- 
+https://texblog.org/2007/08/01/placing-figurestables-side-by-side-minipage/
+--></p>
+
+<ul>
+  <li>subcaptionblock環境</li>
+</ul>
+
+<p>　これは通常よく使われる<code class="language-plaintext highlighter-rouge">minipage環境</code>にさらにキャプション周りの機能を加えたもの．</p>
+<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="nt">\begin{subcaptionblock}</span><span class="p">{</span>.4<span class="k">\textwidth</span><span class="p">}</span> 
+    <span class="k">\centering</span> 
+    <span class="k">\includegraphics</span><span class="p">{</span>cat<span class="p">}</span> 
+    <span class="k">\caption</span><span class="p">{</span>A cat<span class="p">}</span><span class="k">\label</span><span class="p">{</span>cat<span class="p">}</span> 
+    <span class="nt">\end{subcaptionblock}</span><span class="c">% </span>
+    <span class="nt">\begin{subcaptionblock}</span><span class="p">{</span>.4<span class="k">\textwidth</span><span class="p">}</span> 
+    <span class="k">\centering</span> 
+    <span class="k">\includegraphics</span><span class="p">{</span>elephant<span class="p">}</span> 
+    <span class="k">\caption</span><span class="p">{</span>An elephant<span class="p">}</span><span class="k">\label</span><span class="p">{</span>elephant<span class="p">}</span> 
+    <span class="nt">\end{subcaptionblock}</span><span class="c">%</span>
+</code></pre></div></div>
+
+<ul>
+  <li>(a)，(b)を消す
+<!-- https://tex.stackexchange.com/questions/165508/remove-a-b-from-subfigure-numbering-but-keep-the-subfigure-caption -->
+<code class="language-plaintext highlighter-rouge">captionsetup</code>コマンドで(a)や(b)を消せる．</li>
+</ul>
+
+<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">\documentclass</span><span class="p">{</span>article<span class="p">}</span>
+<span class="k">\usepackage</span><span class="p">{</span>graphicx<span class="p">}</span>
+<span class="k">\usepackage</span><span class="p">{</span>subcaption<span class="p">}</span>
+
+<span class="nt">\begin{document}</span>
+
+<span class="nt">\begin{figure}</span>
+<span class="k">\captionsetup</span><span class="na">[subfigure]</span><span class="p">{</span>labelformat=empty<span class="p">}</span>
+<span class="nt">\begin{subfigure}</span><span class="p">{</span>.5<span class="k">\textwidth</span><span class="p">}</span>
+<span class="k">\centering</span>
+<span class="k">\includegraphics</span><span class="na">[height=3cm]</span><span class="p">{</span>example-image-a<span class="p">}</span>
+<span class="k">\caption</span><span class="p">{</span>Test subfigure 1<span class="p">}</span>
+<span class="nt">\end{subfigure}</span><span class="c">%</span>
+<span class="nt">\begin{subfigure}</span><span class="p">{</span>.5<span class="k">\textwidth</span><span class="p">}</span>
+<span class="k">\centering</span>
+<span class="k">\includegraphics</span><span class="na">[height=3cm]</span><span class="p">{</span>example-image-b<span class="p">}</span>
+<span class="k">\caption</span><span class="p">{</span>Test subfigure 2<span class="p">}</span>
+<span class="nt">\end{subfigure}</span><span class="c">%</span>
+<span class="k">\caption</span><span class="p">{</span>Two subfigures<span class="p">}</span>
+<span class="nt">\end{figure}</span>
+
+<span class="nt">\end{document}</span>
+</code></pre></div></div>
+
+
+      </section>
+      <footer>
+        
+        <p>This project is maintained by <a href="https://github.com/dirac6582">dirac6582</a></p>
+        
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="/assets/js/scale.fix.js"></script>
+  </body>
+</html>

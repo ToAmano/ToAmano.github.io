@@ -1,0 +1,59 @@
+\documentclass[a4j]{jarticle}
+\usepackage{amsmath}
+\usepackage{ascmac}
+\usepackage{amssymb}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{framed}
+\usepackage{fancyhdr}
+\usepackage{latexsym}
+\usepackage{indent}
+\usepackage{cases}
+\allowdisplaybreaks
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{東京大学前期$1988$年$4$番}
+\begin{document}
+\input{macros}
+     \begin{oframed}
+     $xy$平面上で原点から傾き$a \ (a>0)$で出発し折れ線状に動く点$P$を考える．ただし，
+     点$P$の$y$座標はつねに増加し，その値が整数になるごとに動く方向の傾きが$s$倍
+     $(s>0)$に変化するものとする．
+     
+     $P$の描く折れ線が直線$x=b \ (b>0)$を横切るための$a$，$b$，$s$に関する条件を求めよ．
+     \end{oframed}
+
+\setlength{\columnseprule}{0.4pt}
+\begin{multicols}{2}
+{\bf[解]} 点$P$の軌跡上で，$y$座標が$k\in\mathbb{Z}$の時の$x$座標の値$x_k$とする．
+すると，$x_0=0$で，題意の設定から$k\ge 1$の時
+     \begin{align*}
+     &x_{k+1}=x_k+\frac{1}{s^ka} \\ 
+     &x_k-x_0=\sum_{i=0}^{k-1}\frac{1}{s^ka} \\
+     \therefore \ 
+     &x_k=\left\{
+          \begin{array}{ll}
+          \dfrac{1}{s}\dfrac{1-(1/s)^n}{1-1/s} & (s\not=1) \\
+          \dfrac{n}{a} & (s=1)
+          \end{array}
+     \right.
+     \end{align*}
+である．従って，この極限値は$s$の値によって以下のようになる．
+     \begin{align*}
+     \left\{
+          \begin{array}{ll}
+          0<s\le 1 & x_k\limit{k}{\infty}\infty \\
+          1<s        & x_k\limit{k}{\infty}\dfrac{1}{a}\dfrac{1}{1-1/s}
+          \end{array}
+     \right.
+     \end{align*}
+点$P$は連続的に変化するので，この極限値よりも$b$が小さければよい．故に，
+     \begin{align*}
+     &0<s\le1  &or \ \ \ \ \ b<\frac{1}{a}\frac{1}{1-1/s} 
+     \end{align*}
+が求める条件である．$\cdots$(答)
+     
+\newpage
+\end{multicols}
+\end{document}

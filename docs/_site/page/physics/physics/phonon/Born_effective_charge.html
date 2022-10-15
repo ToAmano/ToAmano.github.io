@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Born有効電荷 | personal website</title>
+<meta name="generator" content="Jekyll v3.9.2" />
+<meta property="og:title" content="Born有効電荷" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+<meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+<link rel="canonical" href="http://localhost:4000/page/physics/physics/phonon/Born_effective_charge.html" />
+<meta property="og:url" content="http://localhost:4000/page/physics/physics/phonon/Born_effective_charge.html" />
+<meta property="og:site_name" content="personal website" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Born有効電荷" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","headline":"Born有効電荷","url":"http://localhost:4000/page/physics/physics/phonon/Born_effective_charge.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=c90158fd34f66e4f63b4da45038b5d6170d798eb">
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+    
+
+<!--  -->
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1><a href="http://localhost:4000/">personal website</a></h1>
+
+        
+
+        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</p>
+
+        
+        <p class="view"><a href="https://github.com/dirac6582/dirac6582.github.io.git">View the Project on GitHub <small>dirac6582/dirac6582.github.io.git</small></a></p>
+        
+
+        
+
+        
+      </header>
+      <section>
+
+      <h1 id="born有効電荷">Born有効電荷</h1>
+
+<h2 id="born有効電荷の定義">Born有効電荷の定義</h2>
+<p>Born有効電荷(BEC)の定義はeV単位で</p>
+
+\[Z_{\kappa,\alpha\beta}=\Omega_0\left.\frac{\partial P_{\beta}}{\partial \tau_{\kappa,\alpha}}  \right|_{E=0}\]
+
+<p>である．κは原子種，αとβはcartesian座標．つまり，0電場において，ある原子がα方向にズレた時の分極βのズレを計算している．Ωは系のunit cellの体積．結晶がイオンだけで構成されていると考えると，原子$i$がずれた時の分極のずれはこの原子の電荷×原子が動いた距離だから
+\(Z_{\kappa,\alpha\beta}=\Omega_0*Q_{\kappa,\alpha\beta}\)
+となり，BECはイオン電荷と一致する．しかしながら現実の物質では原子が移動するとそれに伴って電子分布が変化し，BECは必ずしもイオン電荷と一致しない．実際$Z$は3×3の行列であり，原子がα方向にずれるとそれ以外の方向$¥beta¥neq¥alpha$にも分極が発生する場合がある．これは上述のようなイオンだけの単純なモデルでは起こり得ないことである．</p>
+
+<h2 id="becのいくつかの表現">BECのいくつかの表現</h2>
+
+<p>電場eの元での系の全エネルギー（エンタルピー？[2]）を考えると，
+\(E[e]=E_{KS}-\Omega_0\sum_{\beta}P_{\beta}e_{\alpha}\)</p>
+
+<p>とかけるので，分極は</p>
+
+\[P_{\alpha}=-\frac{1}{\Omega_0}\frac{\partial E}{\partial \mathcal{E}_{\alpha}}\]
+
+<p>とエネルギーの電場微分で表されることになる．したがってこれを式(1)に代入すると，Zの表式としては以下のようになる．</p>
+
+\[Z_{\kappa,\alpha\beta}=-\left.\frac{\partial E}{\partial \tau_{\kappa,\alpha}\partial \mathcal{E}_{\beta}}  \right|_{E=0}=\frac{\partial F_{\kappa\alpha}}{\partial \mathcal{E}_{\beta}}=\Omega_0\left.\frac{\partial P_{\beta}}{\partial \tau_{\kappa,\alpha}}  \right|_{E=0}\]
+
+<p>二つ目の等号でエネルギーの座標微分が力であることを用いた．これは電場をかけた時の力の変化ということができる．</p>
+
+<h2 id="quantum-espressoでの計算">Quantum Espressoでの計算</h2>
+<p>quantum espressoでは，以上二つの式に基づいたDFPT計算が可能になっており，それぞれ</p>
+
+<pre><code class="language-bash:ph.x">zeu=.true.　! dF/dEから計算,default　
+zue=.true. ! dP/dtauから計算
+</code></pre>
+
+<p>のふたつのオプションによって使い分けることができる．これら2つの方法での具体的な計算については，[1]のp114あたりに簡潔にまとめられている．</p>
+
+<h2 id="参考文献">参考文献</h2>
+
+<p>[1] <a href="http://www.phythema.ulg.ac.be/webroot/misc/books/PhD-Ph.Ghosez.pdf">http://www.phythema.ulg.ac.be/webroot/misc/books/PhD-Ph.Ghosez.pdf</a></p>
+
+<p>[2] <a href="http://cmt.dur.ac.uk/sjc/thesis_prt/node56.html">http://cmt.dur.ac.uk/sjc/thesis_prt/node56.html</a></p>
+
+
+      </section>
+      <footer>
+        
+        <p>This project is maintained by <a href="https://github.com/dirac6582">dirac6582</a></p>
+        
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="/assets/js/scale.fix.js"></script>
+  </body>
+</html>

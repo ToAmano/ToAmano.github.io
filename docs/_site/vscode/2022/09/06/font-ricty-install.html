@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>プログラミング用フォントRictyを試す | personal website</title>
+<meta name="generator" content="Jekyll v3.9.2" />
+<meta property="og:title" content="プログラミング用フォントRictyを試す" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Rictyのインストール via homebrew" />
+<meta property="og:description" content="Rictyのインストール via homebrew" />
+<link rel="canonical" href="http://localhost:4000/vscode/2022/09/06/font-ricty-install.html" />
+<meta property="og:url" content="http://localhost:4000/vscode/2022/09/06/font-ricty-install.html" />
+<meta property="og:site_name" content="personal website" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-09-06T10:00:00+09:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="プログラミング用フォントRictyを試す" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-09-06T10:00:00+09:00","datePublished":"2022-09-06T10:00:00+09:00","description":"Rictyのインストール via homebrew","headline":"プログラミング用フォントRictyを試す","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/vscode/2022/09/06/font-ricty-install.html"},"url":"http://localhost:4000/vscode/2022/09/06/font-ricty-install.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=c90158fd34f66e4f63b4da45038b5d6170d798eb">
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+    
+
+<!--  -->
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1><a href="http://localhost:4000/">personal website</a></h1>
+
+        
+
+        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</p>
+
+        
+        <p class="view"><a href="https://github.com/dirac6582/dirac6582.github.io.git">View the Project on GitHub <small>dirac6582/dirac6582.github.io.git</small></a></p>
+        
+
+        
+
+        
+      </header>
+      <section>
+
+      <small>6 September 2022</small>
+<h1>プログラミング用フォントRictyを試す</h1>
+
+<p class="view">by </p>
+
+<h2 id="rictyのインストール-via-homebrew">Rictyのインストール via homebrew</h2>
+
+<p>homebrewからインストールする場合，</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>brew tap sanemat/font
+<span class="nv">$ </span>brew <span class="nb">install </span>ricty
+</code></pre></div></div>
+
+<p>を実行する．成功すれば以下のようなコメントが出力される．</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">***************************************************</span>
+To <span class="nb">install </span>Ricty:
+  <span class="nv">$ </span><span class="nb">cp</span> <span class="nt">-f</span> /opt/homebrew/opt/ricty/share/fonts/Ricty<span class="k">*</span>.ttf ~/Library/Fonts/
+  <span class="nv">$ </span>fc-cache <span class="nt">-vf</span>
+<span class="k">***************************************************</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">fc-cache</code>はmacにフォントをインストールするためのコマンド．ライセンスの関係でフォントの生成は自分でやる必要があるということのようだ．</p>
+
+<h2 id="ricty-diminishのインストール-via-homebrew">Ricty Diminishのインストール via homebrew</h2>
+
+<p>Rictyの姉妹フォントであるRicty Diminishのインストールは</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>brew <span class="nb">install</span> <span class="nt">--cask</span> font-ricty-diminished
+</code></pre></div></div>
+
+<p>で良い．</p>
+
+<h2 id="フォントがインストールされていることの確認">フォントがインストールされていることの確認</h2>
+
+<p>フォント一覧を表示する<code class="language-plaintext highlighter-rouge">fc-list</code>コマンドを利用していくつか結果が出て来れば成功．</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>fc-list : family | <span class="nb">grep</span> <span class="nt">-i</span> ricty
+
+Ricty Discord
+Ricty Diminished Discord
+Ricty
+Ricty Diminished
+</code></pre></div></div>
+
+<h2 id="vscodeにフォントを適用する">VScodeにフォントを適用する</h2>
+
+<p>Rictyを試しにVScodeに導入する．GUIで設定する場合はcode&gt;基本設定&gt;設定からEditor:Font Familyを探して，ここにRictyを追加する．順番は前のものをより優先して利用する，ということのようだ．</p>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh"># デフォルト</span>
+Menlo, Monaco, 'Courier New', monospace
+
+<span class="gh"># 変更後</span>
+Ricty, Menlo, Monaco, 'Courier New', monospace
+
+<span class="gh"># Ricty Diminishedを利用する場合には'が必要（スペースのあるフォント名には必須らしい）</span>
+'Ricty Diminished', Menlo, Monaco, 'Courier New', monospace
+</code></pre></div></div>
+
+<h2 id="バッククォートの表示がおかしい問題について">バッククォートの表示がおかしい問題について</h2>
+
+<p><a href="https://memo.koumei2.com/vscode%E3%81%AE%E3%83%90%E3%83%83%E3%82%AF%E3%82%AF%E3%82%A9%E3%83%BC%E3%83%88%E8%A1%A8%E7%A4%BA%E3%81%8C%E3%81%8A%E3%81%8B%E3%81%97%E3%81%84/">こちら</a>の記事を参考にして修正．</p>
+
+<p>まず，入っていなければfontforgeをインストール．</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew <span class="nb">install </span>fontforge
+</code></pre></div></div>
+
+<p>次のようなスクリプトを書く．一行目はインストールされているfontforgeの場所に合わせて修正する．以下はm1mac+homebrewの場合のデフォルトの場所になっている．</p>
+
+<pre><code class="language-bash:fix_ricty.pe">#!/opt/homebrew/bin/fontforge -lang ff
+
+Open($1)
+Select(0u0060)
+SetGlyphClass("base")
+Generate($1)
+</code></pre>
+
+<p>あとはこのスクリプトをRictyに対して適用する．フォントがインストールされている場所は<code class="language-plaintext highlighter-rouge">/Library/Fonts/</code>以下なので</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># スクリプトに実行権限を付与</span>
+<span class="nb">chmod</span> +x fix_ricty.pe
+
+<span class="c"># Rictyを一括変換</span>
+./fix_ricty.pe ~/Library/Fonts/Ricty<span class="k">*</span>
+</code></pre></div></div>
+
+<p>で修正されたフォントが生成される．</p>
+
+<h2 id="肝心の見栄えについて">肝心の見栄えについて</h2>
+
+<p>英語を利用する場合は優れたフォントが数多くあるが，日本語フォントについては今まであまり気にしたことがなかった．自分は少なくともVScodeのデフォルトフォントよりはみやすいと思うのでしばらく使ってみようと思う．</p>
+
+
+
+
+  <small>tags: <em></em></small>
+
+
+
+      </section>
+      <footer>
+        
+        <p>This project is maintained by <a href="https://github.com/dirac6582">dirac6582</a></p>
+        
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="/assets/js/scale.fix.js"></script>
+  </body>
+</html>

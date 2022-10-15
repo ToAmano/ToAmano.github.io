@@ -1,0 +1,56 @@
+\documentclass[a4j]{jarticle}
+\usepackage{amsmath}
+\usepackage{ascmac}
+\usepackage{amssymb}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{framed}
+\usepackage{fancyhdr}
+\usepackage{latexsym}
+\usepackage{indent}
+\usepackage{cases}
+\usepackage[dvips]{graphicx}
+\usepackage{color}
+\allowdisplaybreaks
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{東京大学前期$1988$年$5$番}
+\begin{document}
+\input{macros}
+     \begin{oframed}
+     $xyz$空間において，$xz$平面上の$0\le z\le 2-x^2$で表される図形を$z$軸の周りに回転して得られる不透明な立体を$V$とする．
+     $V$の表面上$z$座標$1$のところにひとつの点光源$P$がある．
+     
+     $xy$平面上の原点を中心とする円$C$の，$P$からの光が当たっている部分の長さが$2\pi$であるとき，$C$の影の部分の長さを求め
+     よ．
+     \end{oframed}
+
+\setlength{\columnseprule}{0.4pt}
+\begin{multicols}{2}
+{\bf[解]}題意の図形は$z$軸に関して対称だから，$V:0\le z\le 2-(x^2+y^2)$である．対称性から$P(1,0,1)$としてよい．$P$での$V$の
+接平面は$(2-x^2)'=-2x$ゆえ，
+     \[z=-2x+3\]
+である．これと$xy$平面の交線は，
+     \[x=\frac{3}{2}\]
+である．然るに光が当たる部分は$3/2\le x$である．$C$の半径$r_{>0}$とし，下図のように$t$($0<t<\pi/2$)をおく．
+     \begin{center}
+     \scalebox{0.7}{\input{ut-88-5p}}
+     \end{center}
+題意の条件から，
+     \begin{align}
+          \begin{cases}
+          2rt=2\pi \\ 
+          r\cos t=\dfrac{3}{2}
+          \end{cases}
+     \end{align}
+$r$を消去して
+     \[\frac{2\pi}{3}=\frac{t}{\cos t}\]
+である．この右辺は$0<t<\pi/2$で単調増加な関数の積ゆえ，単調増加．加えて$t=\pi/3$が解であることから，これが唯一の解である．この時$r=3$となり，求める影の長さは
+     \[(2\pi-2t)r=4\pi\]
+である．$\cdots$(答)     
+  
+     
+\newpage
+\end{multicols}
+\end{document}

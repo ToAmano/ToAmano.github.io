@@ -1,0 +1,90 @@
+\documentclass[a4j]{jarticle}
+\usepackage{amsmath}
+\usepackage{ascmac}
+\usepackage{amssymb}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{framed}
+\usepackage{fancyhdr}
+\usepackage{latexsym}
+\usepackage{indent}
+\usepackage{cases}
+\allowdisplaybreaks
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{東京大学前期$1966$年$6old$番}
+\begin{document}
+\input{macros}
+     \begin{oframed}
+     平面上で，曲線$x+y^2-5=0$を，$x$軸に平行なある直線$l_1$に関して折り返し，さらに別の直線
+     $l_2$に関して折り返せば，曲線$x^2-y+1=0$に重なるという．直線$l_1$，$l_2$の方程式を求め
+     よ．
+     \end{oframed}
+
+\setlength{\columnseprule}{0.4pt}
+\begin{multicols}{2}
+{\bf[解]}題意より$l_1:y=k$とおける．$C_2:x^2-y+1=0$とする．$C:x+y^2-5=0$を$l_1$に関して折り返したグラフを$C_1$とすれば$C$上の点$(x,y)$は$C_1$上の点$(x,2k-y)$に移るので
+     \begin{align*}
+     C_1:x+(y-2k)^2-5=0
+     \end{align*}
+である．次に$l_2$について，$C_1$の軸は$y=2k$，$C_2$の軸は$x=0$だから，$l_2$はこれらの
+垂直$2$等分線で，傾き$\pm1$で，$(x,y)=(0,2k)$を通るので$l_2:y=\pm x+2k$である．又，
+頂点は頂点に移るので$A(0,1)$が$B(5,2k)$に移る．故に以下複合同順として
+     \begin{align*}
+     &\left\{
+          \begin{array}{l}
+          \text{線分$AB$の中点$M$が$l_2$上}　\\
+          \vector{PQ}\perp l_2
+          \end{array}
+     \right. \\
+     \Longleftrightarrow
+     &\left\{
+          \begin{array}{l}
+          \dfrac{2k+1}{2}=\pm\dfrac{5}{2}+2k　\\
+          \vtwo{5}{2k-1}\perp \vtwo{1}{\pm1}
+          \end{array}
+     \right. \\    
+     \Longleftrightarrow &\text{(複合負)} ,k=3
+     \end{align*}  
+
+
+以下十分条件を求める．
+
+$C_1$上の点$P(x,y)$が$C_2$上の点$Q(x+2X,y+2Y)$に移るとすると，$(X,Y)$は
+     \begin{align*}
+     &\left\{
+          \begin{array}{l}
+          \text{線分$PQ$の中点$M$が$l_2$上}　\\
+          \vector{PQ}\perp l_2
+          \end{array}
+     \right. \\
+     \Longleftrightarrow
+     &\left\{
+          \begin{array}{l}
+          (y+Y)=-(x+X)+6　\\
+          \vtwo{X}{Y}\perp \vtwo{1}{-1}
+          \end{array}
+     \right.     \\
+     \Longleftrightarrow
+     &2X=2Y=-x-y+6
+     \end{align*}
+である．この時$Q$が$C_2$上にある条件から     
+     \begin{align*}
+     (x+2X)^2-(y+2Y)+1=0  \\
+     (6-y)^2-(6-x)+1=0  \\
+     x+(y-6)^2-5=0
+     \end{align*}
+ これは$Q$が$l_2$の折り返しにより$P$に移動することを示し，十分である．以上から
+      \begin{align*}
+     \left\{
+          \begin{array}{l}
+      　l_1:y=6\\
+          l_2:y=-x+6
+          \end{array}
+     \right.
+     \end{align*}
+である．$\cdots$(答)           
+\newpage
+\end{multicols}
+\end{document}

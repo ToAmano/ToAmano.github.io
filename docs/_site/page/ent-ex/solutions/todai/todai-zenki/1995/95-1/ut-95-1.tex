@@ -1,0 +1,27 @@
+\documentclass[a4j]{jarticle}
+\usepackage{amsmath}
+\usepackage{ascmac}
+\usepackage{amssymb}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{framed}
+\title{}
+\begin{document}
+\input{macros}
+\begin{oframed}
+全ての正の実数$x$，$y$に対し
+\[ \sqrt{x}+\sqrt{y}\le k\sqrt{2x+y} \]
+が成立するような実数$k$の最小値を求めよ．
+\end{oframed}
+
+\setlength{\columnseprule}{0.4pt}
+\begin{multicols}{2}
+{\bf[解]}コーシーシュワルツの不等式から
+\begin{align*}
+\sqrt{x}+\sqrt{y}\le\frac{\sqrt{6}}{2}\sqrt{2x+y}
+\end{align*}
+である．等号成立は$\vtwo{\sqrt{2x}}{y}\parallel\vtwo{\dfrac{\sqrt{2}}{2}}{1}$の時である．これは例えば
+$(x,y)=(1,2)$とでもすれば成立する．故に求める$\min k=\dfrac{\sqrt{6}}{2}\cdots$(答) である．
+\newpage
+\end{multicols}
+\end{document}
