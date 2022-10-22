@@ -1,0 +1,128 @@
+#+TITLE: テスト
+#+STARTUP:inlineimages
+#+STARTUP:indent
+#+AUTHOR: 天野智仁
+#+EMAIL: mail.com
+#+TEXT: ファイルの説明（複数業も可能）
+#+CATEGORY: ファイル毎に付けられる分類
+
+* org-modeの参考になる資料はここに貼っておこう．
+- チートシート :: [[ https://qiita.com/deco/items/997b25a3bd09baaa8d8a ]]
+- org-modeの一通りの解説 :: [[ https://tamura70.hatenadiary.org/entry/20100203/org]]
+
+
+* 見出し
+
+
+
+
+
+-項目1
+
+- [[http://orgmode.org/manual/Hyperlinks.html][ハイパーリンク]]
+korehatestdesu
+
+testtaiueotesutoaaaaaaaaa
+CUIでやるとちゃんと日本語入力になってますね．．．．
+* 見出し2
+[[file:IMG0254.jpg][テスト画像]]
+[[/Users/AMANOTOMOHITO/IMG0254.jpg]]
+
+#+CAPTION: これは次の表(またはリンク)のキャプションです
+#+LABEL:   tbl:basic-data
+file:IMG0254.jpg
+
+[[IMG0254.jpg]]
+
+#+BEGIN_SRC emacs-lisp
+(org-toggle-inline-images)
+#+END_SRC
+
+#+RESULTS:
+
+
+
+* test
+アイウエオ
+
+
+
+
+* DONE [#B] やることリスト
+CLOSED: [2020-05-08 金 14:27] DEADLINE: <2020-05-08 金>
+:PROPERTIES:
+:ID:       48B003CE-F9FA-4BF5-A594-54718CC0D3C5
+:END:
+このようにTODOやDONEを設定できる．TODOの上でShift+矢印で状態を変化させることができる．
+また，Shift+上矢印でタスクの状態をA（最優先）からC（一番どうでもいい）まで3段階で変化させることができる．
+
+* やることリスト改 [3/3]
+** DONE [#B] タスク1
+CLOSED: [2020-05-08 金 14:19] DEADLINE: <2020-05-09 土>
+:PROPERTIES:
+:ID:       E57B9AFA-5F30-4CE3-BFFA-2C3158B6F263
+:END:
+** DONE [#B] タスク2
+CLOSED: [2020-05-08 金 14:19] DEADLINE: <2020-05-09 土>
+:PROPERTIES:
+:ID:       19F8E370-96A5-414F-A6F9-74E145D45597
+:END:
+** DONE [#B] タスク3
+CLOSED: [2020-05-08 金 14:19]
+
+
+* タイムスタンプ
+:LOGBOOK:
+CLOCK: [2020-05-08 金 06:39]--[2020-05-08 金 06:40] =>  0:01
+CLOCK: [2020-05-08 金 06:37]--[2020-05-08 金 06:39] =>  0:02
+:END:
+どのタスクにどれだけ時間を費やしたかを監視することができる．計測を開始するには
+「\C-c \C-x \C-i」とうつ．タスク終了時には「\C-c \C-x \C-o」とうつ．これは何回でも繰り返すことができる．
+その度にうえのCLOCKのところが増えていくと思っていれば良い．ちなみに，合計の時間を知りたければ，*のところで
+「\C-c \C-x \C-d」とすれば合計の時間が表示される．
+
+
+* 見出しの操作について
+見出しの操作は，TABで見出し以下を隠す/一段展開/全て展開 というのは覚えていたが，他にもある．
+まず，M-UPで見出しを前に移動する．（前の見出しに移動するわけではない，見出し自体の順番を入れ替える）
+同様に，M-RIGHTで見出しのレベルを増やす．（*から**にする，的な）
+
+
+* org-modeでの引用の扱い
+一つ目，行頭に:を書くとマークアップを無視してそのまま表示される．
+: アイウエオ
+: カキクケコ
+
+次に，Orgにはブロックという概念があって，#+BEGIN_ブロックの種類 とENDで囲うとそこがひとまとまりとして扱われる．
+
+#+begin_quote
+鳴かぬなら殺してしまえホトトギス -- 織田信長
+#+end_quote
+
+これは，<q と打ってからTABを押すと補完してくれる．（easy templateという機能らしい）
+
+もっと重要なのは，多分コードを貼り付けたい時．これは同じく#+begin_srcで良い．（<sで補完）
+さらに，後ろに言語名を書くとその文法にしたがって適切にハイライトしてくれる．
+このハイライトは，_srcの後ろで\C-\M-iを押すと簡単に指定できる．
+#+BEGIN_SRC emacs-lisp
+(defun xor (a b)
+     "Exclusive or."
+     (if a (not b) b))
+#+END_SRC
+
+
+
+* org-modeでの数式の扱い
+$\sum_{i=1}^n a_i x_i \le b$
+
+* org-modeとhowmの連携
+add-hockによって，orgを開いた時もhowmが使えるようになってるっぽい．例えばcome-fromリンクは
+<<< test
+同様にgo-toリンクは
+>>> test
+wikiリンクは
+[[test]]
+となって，いずれも使用することができる．ただし，wikiリンクの二重カッコがorg-modeのハイパーリンクと競合してしまっている．
+これが問題になるか試してみよう．
+[[http://takashihattori.hatenablog.com/entry/20120627/1340768058]]
+少なくともurlに関しては問題なさそうなので，しばらくはこれでつかってみよう．

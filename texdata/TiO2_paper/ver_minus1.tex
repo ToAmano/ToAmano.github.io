@@ -1,0 +1,128 @@
+\documentclass[twocolumn,showpacs,prb,amsfonts,amsmath,amssymb,floatfix,groupedaddress]{revtex4-1}
+\usepackage{color}
+\usepackage{hhline}
+\usepackage{mathrsfs}
+\usepackage{graphicx}
+\usepackage{dcolumn}
+\usepackage{bm}% bold math
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{afterpage}
+\usepackage{amsmath}
+\usepackage{ulem}
+\usepackage{physics}
+
+
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+\newcommand{\blue}[1]{\textcolor{blue}{#1}}
+\arraycolsep=0.0em
+\setlength{\abovecaptionskip}{0mm}
+\setlength{\belowcaptionskip}{0mm}
+%\setlength{\MidlineHeight}{2pt}
+
+
+\newcommand{\ph}{\phantom{0}}
+
+\renewcommand{\topfraction}{1.0}
+\renewcommand{\bottomfraction}{1.0}
+\renewcommand{\dbltopfraction}{1.0}
+\renewcommand{\textfraction}{0.1}
+\renewcommand{\floatpagefraction}{0.9}
+\renewcommand{\dblfloatpagefraction}{0.9}
+\begin{document}
+
+
+\title{Lattice dielectric properties of rutile TiO2 from first principles}
+\author{Tomohito Amano$^{1}$ }
+\author{Tamio Yamazaki$^{2}$ }
+\author{Ryosuke Akashi$^{13}$ }
+\author{Terumasa Tadano$^{4}$ }
+\author{Shinji Tsuneyuki$^{1}$ }
+\thanks{akashi@cms.phys.s.u-tokyo.ac.jp}
+\affiliation{$^1$Department of Physics, The University of Tokyo, Hongo, Bunkyo-ku, Tokyo 113-0033, Japan}
+\affiliation{$^2$JSR coopration}
+\affiliation{$^3$QST}
+
+
+
+
+
+\date{\today}
+\begin{abstract}
+ルチルTiO2の格子関数を非調和フォノンの理論を用いて計算した．
+\end{abstract}
+
+\maketitle
+
+\section{Introduction}
+\begin{itemize}
+ \item TiO2の重要性
+ \item TiO2の研究の歴史
+ \item フォノン非調和理論
+\end{itemize}
+
+\section{Theory}
+
+
+
+Frequency shift
+
+lifetime
+\begin{align}
+ \Im \Sigma(\omega) &=\Im \Sigma^{\mathrm{B}}[G_{\rm{NL}},\Phi_3](\omega)  \\
+ \gamma^{4ph}_{0j}  &= \Im \Sigma^{4ph}[G_{\rm{NL}},\Phi_4](\omega=\Omega_{\rm{NL}})
+\end{align}
+
+
+dielectric function
+\begin{align}
+ \epsilon_{\alpha\beta}(\omega)=\epsilon^{\infty}_{\alpha\beta}+\frac{1}{\Omega_0}\sum_{(0,j)}\frac{S^{j}_{\alpha\beta}}{\left(\Omega^{\mathrm{NL}}_{0j}\right)^2-\omega^2+i\Omega^{\mathrm{NL}}_{0j} \Sigma^{\mathrm{B}}_{0j}(\omega)+i \omega \gamma^{4ph}_{0j} }
+\end{align}
+
+\section{Results and Discussion}
+
+\subsection{Computational Details}
+
+\subsection{band structure}
+\input{lattice_constant.tex}
+\input{bec.tex}
+
+
+
+\begin{itemize}
+ \item バンド図r2SCAN, harmonic vs scph+bubble3
+ \item バンド図LDA vs r2SCAN
+\end{itemize}
+
+
+\subsection{lifetime and thermal conductivity}
+
+\begin{itemize}
+ \item thermal conductivity
+\end{itemize}
+
+
+\subsection{dielectric function}
+\begin{itemize}
+ \item lifetime
+ \item dielectric function
+ \item Reflectivity
+\end{itemize}
+
+
+\section{Conclusions}
+
+
+\section{Appendix}
+
+
+% \begin{acknowledgments}
+
+% \end{acknowledgments}
+
+% \bibliography{reference}
+
+\end{document}
+
+
+

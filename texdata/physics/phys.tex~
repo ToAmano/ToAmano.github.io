@@ -1,0 +1,54 @@
+\documentclass[a4j]{jarticle}
+\usepackage{amsmath}	% required for `\align*' (yatex added)
+\usepackage{bm}	% required for `\bm' (yatex added)
+\begin{document}
+\section{解析力学}
+
+
+
+
+\section{電磁気}
+\subsection{マクスウェル方程式}
+真空中のマクスウェル方程式は
+\begin{align*}
+ \nabla\cdot\bm{E}=\rho /\epsilon_0
+\end{align*}
+\subsection{荷電粒子の運動}
+荷電粒子のラグランジアンは
+\begin{align*}
+ L=\frac{1}{2}mv^2-q\phi +\bm{v}\cdot \bm{A}
+\end{align*}
+対応してハミルトニアンは
+\begin{align*}
+ H=\frac{1}{2m}\left(\bm{p}-q\bm{A}\right)^2+q\phi
+\end{align*}
+である．
+
+
+
+
+\section{量子力学}
+\subsection{基礎}
+確率流密度は
+\begin{align*}
+ J=\frac{\hbar}{m}Re\phi^{\ast}\nabla\phi
+\end{align*}
+で与えられ，確率密度$P=|\phi^2|$と共に連続の式
+\begin{align*}
+ \frac{\partial P}{\partial t}+\nabla\cdot J=0
+\end{align*}
+を満たす．確率流密度の覚え方であるが，単位を考えるとわかりやすい．確率流密度の単位は$J=Pv$であり，これが$\hbar/m=Lv$からナブラの分の$L$を割ったものに等しいからだ．
+
+
+\subsection{ポテンシャル障壁}
+ポテンシャル障壁（E<V)では，透過率$T$，反射率$R$に対して$T+R=1$なるトンネル効果が現れる．これはシュレーディンガー方程式による直接の効果である．
+また，$V<E$では，障壁中で定常派が出来る時すなわち障壁の長さが波長の半整数倍の時に$T=1$となる共鳴効果が見られる．
+
+より一般の障壁においては，（障壁が十分に大きい時）透過確率は以下のがモフ因子で与えられる．これはWKB近似で得られる結果と一致する．
+\begin{align*}
+ T=\exp\left[\frac{-2}{\hbar}\int_{x_1}^{x_2}\sqrt{2m(V(x)-E)}dx\right]
+\end{align*}
+
+
+
+\end{document}
