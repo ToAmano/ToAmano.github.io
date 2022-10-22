@@ -31,6 +31,29 @@ tabular環境内で表を作成する．一列の形式をどうするかを`{cc
 オプション部分についてはさらに以下のような各種の書式が利用可能で，これだけでかなり柔軟に表をいじることができる．
 
 
+実際に論文や書籍でみる表のスタイルは，
+ - 極力罫線を使わない
+ - 表の上下に二重線
+ - 最初の行だけ線で区切る
+というもので，これは最も単純には以下のようにすれば実現できる．
+
+```latex
+\begin{table}[!htb]
+\centering
+\caption{test table} % tableの場合，captionは上に来ないといけない！
+\begin{tabular}{ccc} \hline\hline　%表の上に二重線
+      & Height & Weight \\ \hline  %要素名の下に線
+Taro  & 175    & 60     \\
+Jiro  & 180    & 70     \\ 
+\hline\hline %表直下に二重線
+\end{tabular}
+\end{table}
+```
+
+あとは単位を付けたり，行間の調整を行なったりすれば実用に耐える表になる．
+
+
+
 ## 見た目の調整
 
 - 表の行間を調整する
@@ -51,6 +74,28 @@ tabular環境内で表を作成する．一列の形式をどうするかを`{cc
 	\captionsetup[table]{skip=10pt}	
 	```
 
+- 表の一部分のみに横線を入れる場合，`\cline`コマンドを使う．
+
+- 表の直下に脚注を入れたい場合，`threeparttable`パッケージを使う．
+<!-- https://qiita.com/kumamupooh/items/38795811fc6b934a950d -->
+	```latex
+	\usepackage{threeparttable} %プリアンブル
+
+	\begin{table}[h]
+	\begin{threeparttable} % table環境内にthreeparttable環境を設置
+	¥caption{threeparttableのテスト}
+	\begin{tabular}{ccc}
+	cell1 & cell2 & cell3\tnote{1} \\  %tnodeで脚注を追加
+	cell4 & cell5 & cell6 \\
+    cell7 & cell8\tnote{2} & cell9
+	\end{tabular}
+	¥begin{tablenotes} % tabular環境直下にtablenotes環境を追加
+	¥item[1] 脚注1
+	¥item[2] 脚注2
+	¥end{tablenotes}
+	¥end{threeparttable}
+	\end{table}
+	```
 
 
 

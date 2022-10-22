@@ -234,8 +234,6 @@ https://cns-guide.sfc.keio.ac.jp/2001/11/5/1.html
 
 
 
-
-
 <!-- https://geniusium.hatenablog.com/entry/2022/03/16/200355 -->
 
 standaloneクラスは図表を外部化する時に役立つ．外部化のメリットは図表だけを他の用途に使うことができたり，特にtikzの場合にコンパイルの時間を減らせることだろう．利用手順としてはまずstandaloneクラスで書かれた図表のファイルだけを先にコンパイルし，これを`\includestandalone`コマンドでメインのファイルから読み込む．図表読み込みの優先順位をpdf，texから再コンパイルと切り替えることができるので，通常の`includegraphics`や`input`に比べて柔軟に運用できるメリットがある．

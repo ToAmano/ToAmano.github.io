@@ -40,3 +40,5 @@ When ``SPS = 2``, the three-phonon scattering phase space with the occupation fa
 
 Here, :math:`n_{1}=n(\omega_{\boldsymbol{q}_{1}j_{1}})` and :math:`n_{2}=n(\omega_{\boldsymbol{q}_{2}j_{2}})` where :math:`n(\omega) = \frac{1}{e^{\hbar\omega/k_B T}-1}` is the Bose-Einstein distribution function. Since :math:`n(\omega)` is temperature dependent, :math:`W_{3}^{(\pm)}` is also temperature dependent. The file ``PREFIX``.sps_Bose contains :math:`W_{3}^{(\pm)}` for all phonon modes at various temperatures specified with ``TMIN``, ``TMAX``, and ``DT`` tags.
 
+=======
+https://sites.google.com/site/tianlifengthermal/research/examples
