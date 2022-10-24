@@ -1,0 +1,341 @@
+\documentclass[a4j]{jarticle}
+\title{QuantumEspressoの使いかた1~DOS，BANDの計算}
+
+\author{}
+\date{}
+
+\usepackage{listings} %ソースコードの表示
+\usepackage{amsmath}	% required for `\align*' (yatex added)
+
+
+
+\begin{document}
+\section{はじめに}
+
+ここではQuantumEspresso（以下QE）による第一原理計算のやり方について色々メモしていこうと思う．
+
+まず，大まかな用語や計算の流れについてあげておこう．
+
+
+第一原理の計算では，電子密度およびトータルエネルギーを知ることができる．副産物としてコーンシャム軌道についての情報を得ることもでき，これらを用いることで広範な一般の物理量についての計算も行うことができる．
+
+従ってまず我々は，電子密度やトータルエネルギーの計算方法，そしてコーンシャム軌道によるバンドやDOSの計算方法を正しく理解していなくてはいけない．
+
+電子密度やトータルエネルギーの計算に用いられるのがscf計算（self consistent field）である．これは，繰り返し計算によってトータルエネルギーなどを知ることができる．
+
+
+
+\section{入力ファイルの作成}
+当たり前だが，数値計算には計算方法を指定する入力ファイルが必要である．
+
+  \subsection{結晶構造の決定}
+  先ずは最も大事な，考える結晶構造をどのように指定するかというフォーマットについて考えよう．
+
+  QEでは，結晶の指定を，結晶のブラベー格子で以って行う．
+  \begin{lstlisting}
+   &SYSTEM
+   ibrav = *
+   /
+  \end{lstlisting}
+
+  *のところには0，1，2，といった整数値（一部例外もあるが）を指定できて，それぞれに意味がある．とりあえずはいくつかのよく使う場合を覚えることが大事であろう．
+
+  ibrav=0は格子ベクトルを直接指定する．
+  \begin{lstlisting}
+   \&SYSTEM
+   ibrav = 0
+
+   CELL_PARAMETERS {angstrom}
+   3.000000 0.000000 0.000000
+   -1.50000 2.600000 0.000000
+   0.000000 0.000000 5.000000
+  \end{lstlisting}
+
+
+  次にibrav=1は単純立方格子（simple cubic）を表す．simple cubicは立方体の単位セルの各頂点に原子があるような場合であり，従って逆格子空間もsimple cubicになる．第一BZもsimple cubicであり，手計算の良い例題である．
+
+  \begin{lstlisting}
+   &SYSTEM
+   ibrav=1
+   a = 3.0
+   /
+  \end{lstlisting}
+  aは格子定数（オングストローム）である．他に
+  \begin{lstlisting}
+   celldm(1) = *
+  \end{lstlisting}
+  という指定もできるが，こちらの場合は単位がボーア単位なので注意を要する．ボーア単位とはBohr半径を基準の長さとする単位である．普通の文献ではÅ単位の場合が多いだろうから，そっちで指定してやるのが自然であろう．ボーアとオングストロームの変換は，Bohr半径が
+\begin{align*}
+a_o=0.529\times 10^{-10}\mathrm{m}
+\end{align*}
+であるから，
+\begin{align*}
+ \mathrm{\AA}=1.89\mathrm{bohr}
+\end{align*}
+の関係にあることを覚えておこう．
+  
+
+  
+  次のibrav=2は面心立方格子（FCC）である．一つ注意として，セルは単位セルに選ばれている（よく教科書でみる立方体ではない）ことに注意が必要である．すなわち，格子ベクトルは
+  \begin{align*}
+   v1=(-a/2,0,a/2) \\
+   v2=(0,a/2,a/2) \\
+   v3=(-a/2,a/2,0)
+  \end{align*}
+  と選ばれている．これをprimitive cell という．（primitive :原初の）aは立方体の辺の長さであり，指定方法はibrav=1の時と同様である．このようにセルが違うことは，あとでセルの中に何個原子があるかを指定するとき，そしてその原子の座標を設定するときにしばしば問題になるので頭の片隅においておきたい．
+
+  次のibrav=3は体心立方格子（BCC）である．これも事情はFCCの場合と同じであり，primitive cellは
+  \begin{align*}
+   v=(a/2,a/2,a/2) \\
+   v=(-a/2,a/2,a/2) \\
+   v=(-a/2,-a/2,a/2)
+  \end{align*}
+  である．BCCはいくつかのprimitive cellの選び方があるので，他のソフトと併用するときには注意が必要．実際，よく教科書で見る標準的な選び方は，成分が一つだけ$-a/2$であるような対称性の高い選び方だろう
+  ．aは変わらず立方体の一辺の長さである．
+
+
+  我々がよく見るのは，次のibrav=4の六方最密格子（HCP）で最後である．primitive cellの格子ベクトルは
+  \begin{align*}
+   v=(a,0,0) \\
+   v=(-a/2,a*sqrt(3)/2,0) \\
+   v=(0,0,c)
+  \end{align*}
+  である．いままでと違って二種類の格子定数$a$，$c$が必要なことに注意しよう．$c$はHCPの高さを表す．本来の理想的なHCPでは幾何学的な関係式から
+  \begin{align*}
+   \frac{c}{a}=
+  \end{align*}
+  と一定であるが，現実物質はの値から少しゆがんでいることが知られている．その一例を以下に示しておくとしよう．
+   \begin{table}[htb]
+    \centering
+   \begin{tabular}{|c|c|c|c|}
+    元素名&$a$ &$c$ &$c/a$ \\ \hline
+    Be& & &1.568 \\\hline
+    Hf& & &1.5811 \\\hline
+    Zr& & &1.593 \\\hline
+    Ti& & &1.598 \\\hline
+    Co& & &1.623 \\\hline
+    Mg& & &1.623 \\\hline
+    理想& & &1.633 \\\hline
+    Zn&2.6649 &4.9468 &1.856 \\\hline
+    Cd& & &1.8856 \\\hline
+   \end{tabular}
+   \end{table}
+
+
+  ブラベー格子を指定したら，格子の中にどの原子を当てはめるかを指定しなければならない．一つ注意するべきこととして，当てはめる原子は必ずしもブラベー格子上の格子点にある必要はない．原理的にはprimitive cellに任意の種類の任意の原子を適当な位置においても良い．後はそのprimitive cellの繰り返しが実際の構造になるというだけである．
+
+  QEでは，まず用いる原子数と原子の種類数を指定してから，あとで具体的な設定をする．原子数はnatで，原子の種類はntypで指定する．
+  \begin{lstlisting}
+   &SYSTEM
+   ibrav = 4
+   a= 3.092
+   c=5.073
+   nat=4
+   ntyp=2
+  \end{lstlisting}
+  とすれば，HCPに2種類の原子を，合計4つ配置することを意味している．そして，その原子の具体的な設定は以下のようにかく.
+
+
+  \begin{lstlisting}
+   ATOMIC_SPECIES
+   Si 28.08550 Si.pbe-rrkj.UPF
+   C  12.01070 C.pbe-rrkjus.UPF
+  \end{lstlisting}
+
+  1列目は原子記号，次が原子の質量(g/mol)である．これは，同位体を考えるときには変更しなければならない！しかしながら，標準の原子量を考えるときには，代わりに''-1.0''と指定しても良いことになっている．3列目は各原子の擬ポテンシャルを表している．これについては後述する．
+
+  ついで原子の位置は以下のように指定する．
+
+  \begin{lstlisting}
+   ATOMIC_POSITIONS{angstrom}
+   Si -0.000002 1.7785172 2.534588
+   Si 1.546005 0.892585 5.071262
+   C
+  \end{lstlisting}
+  
+一列目が原子の種類を示し，そのあとの3つの数値がその原子の配置されるべき座標（デカルト座標）である．オプションは原子位置の指定方法で，オングストローム単位のangstrom，原子単位のbohr，使いやすいのはcrystalで，これは格子ベクトルを基底とした内部座標$(a,b,c)$で指定する．ただし当然，$0\le a,b,c\le 1$を満たさなければならない．もう一つalatというもので，FCCやBCCの時に使えるもので，aでスケーリングしたデカルト座標 ($0\le a\le 1$)で指定できる．これは直感的にわかりやすい．
+
+  以上で結晶の構造を指定したら，それをxcrysdenで実際に可視化してみるのが面白い．（これについては他にもソフトがないか調べてみるべきだろう）
+  xcrysdenはかなり古いソフトながら，そのメリットはQEの入力ファイルをそのまま読み込んでくれることである．ここで間違えてないかチェックをかけることができるので非常に便利である．
+  \begin{lstlisting}
+   xcrysden --pwi 入力ファイル
+  \end{lstlisting}
+のコマンドを使おう．参考までにいくつかのinputファイルと，対応するxcrysdenの出力を示しておこう．
+
+
+
+  \subsection{scf計算の設定}
+  次に，scf計算の場合に必要な設定について述べていこう．
+  \begin{lstlisting}
+   &CONTROL
+   calculation =''scf''
+   outdir = ''./tmp''
+   pseudo_dir=擬ポテンシャルの格納場所
+/
+   &SYSTEM
+   ibrav=4
+   a=3.000000
+   c=5.000000
+   nat=4
+   ntyp=2
+
+   ecutwfc=25.0
+   ecutrho=225.0
+
+   occupations=''smearing''
+   smearing=''gausian''
+   degauss=''0.01''
+   /
+   &ELECTRONS
+   conv_thr=1.0e-0.8
+   mixing_beta=0.4
+   /
+   &K_POINTS{automatic}
+   4 4 2 0 0 0
+   /
+  \end{lstlisting}
+  まず，CONTROLが基本的な設定を表す．calculationは計算の種類で，scf以外にもbandやDOSなど，様々な種類がある．これについてはおって色々出てくるのでその都度確認するよろし．続くpsudoDirは擬ポテンシャルのパスを書く．これは環境に依存するので，自分の擬ポテンシャルがどこのディレクトリにあるか把握しておこう．（いちいち書くのが面倒くさいなら，環境変数を事前に設定しておくのが便利．）
+ outdirは，計算結果のKS波動関数のデータを格納するディレクトリの指定．
+
+  \subsection{SYSTEM}
+  SYSTEMの初めに書いてあるecutwfcなどは基底関数平面波の性質を表す．QEでは，波動関数及び電荷密度を平面波の重ね合わせで表す．無限個の平面波を扱うわけには（計算コスト的に）行かない．そこでこの平面波のエネルギーの上限（カットオフエネルギー）を指定する必要があるのだ（単位はRy)．ecutはEnergyCUToffのabbribiation．その後のwfcは波動関数のカットオフ，rhoは電荷密度のカットオフである．これらのあたいは勝手な値でいいわけではなく，用いてる擬ポテンシャルに依存する．
+
+
+  occupationは各バンドに対する電子の占有数を指定する．厳密に$T=0$の場合は，階段関数になるわけだが，これは数値計算上問題である．（特に金属の場合）そこで普通はこれを若干smear（不鮮明にする）させて，連続な関数で置き換える．smearingの値は，この連続化をどの関数で行うかを示している．普通はgaussian（エラー関数）を用いる．degaussはその時の分散$\sigma$の値を表し，大きすぎても小さすぎても困る厄介な値である．実際の計算の時はこのdegaussを色々な値にとってみて，最もそれらしい値で計算することになる．
+  
+\subsection{ELECTRONS}
+  
+  ELECTRONSは計算の収束判定を行う．（全エネルギーについて）conthr（converge threshold）はこの時の閾値(Ryq)を表す．低くても$10^-6$程度は欲しい．簡単な構造ならば$10^{-10}$くらいの制度でもしっかり収束するが，複雑な構造ではそうは行かないことがある．
+
+  \subsection{KPOINTS}
+  最後にk点サンプリングについて．これは計算するk点のメッシュの指定．初めの3つがx,y,z方向のメッシュの数．4-6はk点のシフトを意味するが，とりあえずは$0$でよい．k点メッシュの数は，多いほど当然精度も上がるが，計算量も増えてしまい，特にsupercellの計算などではk点メッシュは$3\times 3\times 3$程度にしか取れない．しかしながら一方で単純な物質では$16\times 16\times 16$程度にとってもそこそこ早く計算は終わる．一つの基準として，格子定数とメッシュの数の積が$10$から$12$オームストロングになれば良い．すなわち，格子定数が大きい場合はその分meshを減らす必要がある．これはそもそもの逆格子空間の定義に立ち返ってみれば至極当然なことで，実空間での格子ベクトル$a_i$に対して，逆格子空間の基本ベクトルは
+  \begin{align*}
+   b_i=\frac{2\pi}{V_a}a_j\times a_k
+  \end{align*}
+  で与えられ，これは格子定数の逆数$1/a$程度のオーダーである．より正確に言えば，$a$と$b$の間には直交関係
+  \begin{align*}
+   a_i\times b_j=2\pi \delta_{ij}
+  \end{align*}
+があるし，実空間の単位格子面積$V_a$と，逆格子空間での単位格子体積$V_b$の間には
+  \begin{align*}
+   V_b=|b_1\cdot (b_2\times b_3)|=\frac{(2\pi)^3}{V_a}
+  \end{align*}
+の関係がある．つまり格子定数$a$が大きくなればなるほど，逆格子空間は小さくなるのである．
+
+
+\subsection{pseudopotentialの選択}
+計算にあたっては，pseudopotentialを選択する必要がある．QEではデフォルトで直下にpseudopotentialを格納するディレクトリがあり，
+/qe-6.4.1/pseudo
+install後から一部のpseudopotentialが入っている．また，欲しいと思えばQEのホームページ
+https://www.quantum-espresso.org/pseudopotentials
+に原子ごとにpseudopotentialが置いてあるのでこれを用いる．
+
+本章ではこのpseudopotentialについて実用上押さえておかなければいけないことについて述べておこう．pseudopotentialはいくつかの種類に大別できる．
+\begin{itemize}
+ \item UltraSoftか，NormConservingか？
+ \item 相対論の考慮はどうか，Full relativisticかScaler relativisticか，それともnon relativisticか？
+\end{itemize}
+実用上はこの点について考慮しておけば当分の間は大丈夫である．前者から説明するが，通常のpseudopotentialは波動関数のNormを保存する．これがNormConservingである．しかし，中には波動関数のNormを保存しないものもあり，これをUltrasoftと呼ぶ．Ultrasoftを使う場合，system中に追加のオプションが必要である．
+\begin{lstlisting}
+ &system
+     lspinorb=.true.,
+    noncolin=.true.,
+\end{lstlisting}
+
+
+実用上の注意として，一つのscf計算に置いて用いるpseudo potentialは全て同じfunctionalを用いていなければならない．
+all the pseudopotential you use must be built with the same density functional
+(pw91, pz, pbe, blyp, etc). The functional is written at the beginning of the
+pseudopotential file, and usually it is also part of the file name
+
+\section{scf計算}
+\subsection{scf計算}
+QEに限らず，DFTでは先ずは結晶構造を与えてコーンシャム方程式を解くscf計算を行わなければならない．scf計算については入力ファイルの作り方を1章でほぼ終わってしまっているので，具体的な実行の方法などについて見ていこう．
+　計算のプログラムは
+\begin{lstlisting}
+ src/qe-6.4.1/bin/
+\end{lstlisting}
+に格納されている．scf計算に用いるのはもっとも基本となるpw.xというファイルである．計算の実行は
+\begin{lstlisting}
+ mpi -np1 pw.1 < 入力.in >出力.out
+\end{lstlisting}
+のように，入力と出力ファイルを指定して行うことができる．outは指定しなくても良いが，この場合はコマンドライン上に直接出力が出てしまうので，これを避ける意味でも指定することをオススメする．
+
+説明の便宜のために簡単な例としてAlを取り上げよう．これはfcc構造を持つ金属である．inputファイルは次のようにした．
+
+
+次にoutファイルの見方について見ていこう．outファイルでまず確認するべきは，この中にあるTotal Energyと金属ならばFermiLevelの確認である．ありがたいことに，収束したTotalEnergyの行の先頭にだけエクスクラメーションマーク'!'がついているので，grepでこれを取り出してやると良いだろう．
+grep ! hoge.out
+フェルミエネルギーについては，金属のみこの値は存在する．それは
+grep Fermi hoge.out
+で抽出できる．まずはこのフェルミエネルギーがそれらしい値になっているかどうかを調べるべきである．
+
+
+
+\section{DOS計算}
+\subsection{nscf計算for DOS}
+scf計算によるiteration計算は，非常に重い．そこで，必要な精度を確保しつつ極力k点メッシュを減らしてcharge densityの計算を行う．
+ 然し乍らDOS計算には，多くのk点メッシュがあればあるほど良いので，妥協点として，scf計算で求めたcharge densityを元に追加のk点メッシュに対して軌道を計算する方法を用いる．これがnscf計算である．この方法ならself iterationの重い計算をすることなくより多くのk点についての値を得られるので効率的である．
+
+ DOSのためのnscf計算の入力ファイルはscf計算の入力ファイルとほぼ同じであり，下図のようになっている．計算は同じくpw.xで実行されるが，calculationの指定がnscfであることと，kメッシュの値が違う所以外は全く同じである．むしろ，同じでないと不味い！！例えばecutfuncなどのパラメータをscf計算とみだりに変えてはいけない．
+ \begin{lstlisting}
+  &system
+   calculation='nscf'
+ \end{lstlisting}
+
+ 
+ \subsection{DOSの図示}
+ nscf計算が終わったら，DOSの図示をしたくなるだろう．QEでは，このDOSを図示するためのコードdos.xが存在しており，これによってdos用のdatファイルが入手できる．入力のフォーマットは下図．
+\begin{lstlisting}
+  &DOS
+    prefix  = 'NaCl_DOS'
+    Emin = -5.00, Emax = 30.00
+    DeltaE = 0.01,
+    fildos = 'NaCl.dos'
+    outdir = './tmp/'
+/
+\end{lstlisting}
+prefixおよびoutdirはSCF，NSCF計算と同じものに指定すること．fildosが出力ファイルの名前（DAT形式）を意味する．DeltaEはエネルギーの刻み幅，Emin,Emaxはエネルギーの最大最小を表す．従ってこの値は結果として得られたnscf計算から最適なものを選ばなければならない．（実用上はいくつかのEmin，Emaxで実行してみて綺麗になるものを採用すれば良いだろう．）
+実行は
+\begin{lstlisting}
+ dos.x < 入力ファイル >出力ファイル
+\end{lstlisting}
+で大丈夫．こうして得られたNaCl.dosは，そのままgnuplotで
+\begin{lstlisting}
+ plot ''NaCl.dos''
+\end{lstlisting}
+とすれば簡単にグラフになるのが魅力である．しかしながら，エネルギー原点の取り方が曖昧で，しっかりとしたグラフにしたければフェルミエネルギーなどを用いて校正する必要がある．これが一つの検算方法である．もう一つの検算方法は，Totalの電子の数がしっかり元の物質と一致しているかを確かめることである．これはDOSを積分すれば良い．こうすると各バンドがどこの電子からできているかについてもなんとなく推測ができるでろう．この点についてはあとでさらに詳しくDOSを解析する方法について述べることにする．
+
+
+ \section{BAND計算}
+ BAND計算も，基本的な流れはDOS計算と同じである．DOSの場合はk点meshを等方的にして，その結果得られるエネルギー分散からDOSを計算していたが，BAND図を得るためには，見たいK-pathを指定してやって，その上でのエネルギー分散を図示してやる必要がある．（従って，厳密には得られたDOSとBAND図の結果が一致しないということもあり得る．）
+ 厄介なのはこのK-pathの指定である．一般的には対称性の高いルートを選べば良く，よく知られた物質については一定の慣例でK-pathの取り方が決まっていると言って良いが，複雑な物質になればなるほど，あるいは計算をsuper cellで行う場合などにはこのK-pathの指定を自分で考える必要があり，これはかなり大変な作業である．K-pathの指定は基本的に第一BZ内で行うが，そもそも第一BZの形の認識ですら複雑な結晶の場合には難しいからである．また，文献では各K点に名前がついていることが多いが，これが実際にどの点に対応しているかも知らないといけない．
+ 
+ また，基本的な注意として，DOSの計算とは違うディレクトリで計算を行わなければならない！！もしもう一度scf計算を行うのがコスト的に大変ならば，出力ファイルをまるまる別のディレクトリにコピーしてやれば良いだろう．
+ 
+ \subsection{bandのためのnscf計算}
+ DOSと同じく，scf計算の後にnscf計算によって求めたいK-path上でのバンドを計算する．
+ 計算するのはpw.xだが，今回の場合，calculationの指定をbandにしなければならない．そして，K-POINTでは欲しいpathを直接指定できる．これにはいくつかのやり方があるので，順番に見ていこう．
+ まず一つは
+
+ \section{電子密度の計算}
+
+ 電子密度は当然QE内で計算されている．しかしこれをわかりやすいように図示するには，専用のプログラムpp.xがある．
+ 
+ \section{波動関数の計算}
+ 
+ 
+ \section{例1:単純なFCC金属}
+ \section{例2:単純なFCC絶縁体}
+ \section{例3:BCC金属：}
+ \section{例4:HCP金属：Zn}
+ \section{例5:複数種類からなる物体1:NaCl}
+ \section{例5:ペロフスカイト}
+ \section{例6:supercell計算}
+ 
+ 
+
+
+ 
+  
+  \end{document}

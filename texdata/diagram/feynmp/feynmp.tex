@@ -1,0 +1,26 @@
+\documentclass[a4j]{jarticle}
+\title{ダイヤグラムの書き方〜feynmp編〜}
+
+
+\usepackage{listings}	% required for `\lstlisting' (yatex added)
+\begin{document}
+こちらではfeynmpの使い方について解説していこう．feynmpはtikz-feynhandと違って，一つのtexファイルから一つのダイヤグラムをeps形式で作ることのできるプログラムであり，残念ながら本文のtexコードに一緒にfeynmp向けのコードを書くことはできない．これが残念な点ではあるものの，tikz-feynhandにはできないようなダイヤグラム表現が可能であり，本格的なダイヤグラムを作ろうと思ったらこちらを使わなければならないだろうと思う．
+
+\section{基本的な使い方}
+簡単なダイヤグラムを書くときには，こちらで座標を指定する必要はない．始点をfmfleft，終点をfmfrightというコマンドで指定する．また，伝染はfmfコマンドで指定する．中間点はfmfの中で適当に宣言すれば良い．例えば二体相互作用では
+\begin{lstlisting}
+ \begin{fmffile}{simple}
+    \begin{fmfgraph}(40,25)
+       % Note that the size is given in normal parentheses
+       % instead of curly brackets.
+       % Define external vertices from bottom to top
+        \fmfleft{i1,i2}
+        \fmfright{o1,o2}
+        \fmf{fermion}{i1,v1,o1}
+        \fmf{fermion}{i2,v2,o2}
+        \fmf{photon}{v1,v2}
+   \end{fmfgraph}
+ \end{fmffile}
+\end{lstlisting}
+
+\end{document}

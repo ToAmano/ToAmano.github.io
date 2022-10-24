@@ -1,0 +1,20 @@
+\documentclass[a4j]{jarticle}
+\title{フォノンのバンドとDOSの計算}
+\begin{document}
+\maketitle
+
+
+
+\section{フォノンのバンド計算}
+フォノンバンドの計算は非常に単純なアルゴリズムに基づいている．まず，格子を固定して電子状態を計算する．この結果を元にdynamical matrixを求め，これを対角化するだけである．
+
+実際上のテクニックとしては，k空間でのdynamical matrixを求めたあと，それをkからr，rからkへとフーリエ変換することで，k空間での任意の位置でのフォノン分散を求めることができる．
+
+\subsection{電子の状態計算}
+これは普通の電子状態計算と全く同じ．
+
+\subsection{限られたk点でのdynamical matrixの計算}
+ここからが新しいところ．フォノン関連の計算を行うためのプログラムはph.xというものである．
+
+
+\end{document}

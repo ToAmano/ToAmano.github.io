@@ -1,0 +1,48 @@
+\documentclass[a4j]{jarticle}
+\title{数学暗記事項}
+\usepackage{amsmath}	% required for `\align*' (yatex added)
+\begin{document}
+\maketitle
+
+\section{微積分}
+オイラーマクローリンの総和公式
+
+\subsection{ガンマ関数}
+ガンマ関数は
+\begin{align*}
+ \Gamma (n+1)=\int_{0}^{\infty}e^{-t}t^ndt
+\end{align*}
+で定義される．いくつかの著しい値$\Gamma (1)=1$および$\Gamma (1/2)=\sqrt{\pi}$および
+\begin{align*}
+ \Gamma (n+1)=n\Gamma (n)
+\end{align*}
+から整数および半整数に対するガンマ関数の値は得られる．またガンマ関数の相反公式
+\begin{align*}
+ \Gamma (x)\Gamma (1-x)=\frac{\pi}{\sin \pi x}
+\end{align*}
+は$x=1/2$で成立することを覚えて係数を調整すれば思い出せる．
+
+ガンマ関数
+
+\section{線形代数}
+ブロック行列
+\begin{align*}
+ H=\left(
+ \begin{array}{cc}
+  A&B \\
+  C&D \\
+ \end{array}\right)
+\end{align*}
+の行列式は$A$が正則な時
+\begin{align*}
+ |H|=|A||D-CA^{-1}B|
+\end{align*}
+で与えられる．これは二次元行列の行列式$ad-bc$および右回りと覚えておけば良い．またこの結果から特にブロック三角行列$C=0$に対して$|H|=|A||D|$という著しい結果を与える．
+
+行列$A$，$B$，$C$，$D$に対して
+\begin{align*}
+ \left(A+BCD\right)^{-1}=A^{-1}-A^{-1}B\left(D^{-1}+CA^{-1}B\right)^{-1}CA^{-1}
+\end{align*}
+が成立する．これを逆行列の補助定理（Woodburyの恒等式）という．
+
+\end{document}

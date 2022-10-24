@@ -1,0 +1,32 @@
+\documentclass{ujarticle}
+
+
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{tikz}
+\usepackage{tikz-feynhand}
+%\usetikzlibrary{external}
+\pgfrealjobname{repository} 
+
+
+
+\begin{document}
+\begin{figure}[htb]
+ \centering
+
+\beginpgfgraphicnamed{fig}
+\begin{tikzpicture}
+\begin{feynhand}
+ \vertex [dot] (A) at (0,0) {$g$};
+ \vertex [particle] (out) at (-1.5,2) {};
+ \vertex [particle] (in)  at (-1.5,-2) {};
+ \vertex [particle] (phonon) at (3,0) {};
+\propag [fermion] (A) to (out);
+\propag [fermion] (in) to (A);
+\propag [boson]   (A) to (phonon);
+\end{feynhand}
+\end{tikzpicture}
+\endpgfgraphicnamed{fig}
+
+\caption{電子格子相互作用}
+\end{figure}
+\end{document}

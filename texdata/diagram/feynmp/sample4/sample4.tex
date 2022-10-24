@@ -1,0 +1,17 @@
+\documentclass[a4j]{jarticle}
+\usepackage{feynmp}
+
+\begin{document}
+\unitlength = 1mm
+%曲がった線もお手の物
+\begin{fmffile}{penguin_both}
+    \begin{fmfgraph}(40,25)
+        \fmfleft{i1,i2}
+        \fmfright{o1,o2}
+        \fmf{fermion}{i1,v1,o1}
+        \fmf{fermion}{i2,v2,v3,v4,o2}
+        \fmf{photon}{v1,v3}
+        \fmf{photon,left=0.5,tension=0.2}{v2,v4} % W line
+    \end{fmfgraph}
+\end{fmffile}
+\end{document}
