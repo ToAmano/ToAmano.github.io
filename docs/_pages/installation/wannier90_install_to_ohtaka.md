@@ -1,8 +1,11 @@
 ---
-layout: default
+layout: single
 title:  "wannier90 installation"
 date:   2022-09-04 10:03:40 +0900
 categories: wannier90 intel
+tags:
+  - intel
+  - wannier90
 ---
 
 
