@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: single
 permalink: /github/
 title:  "git/githubの使い方"
 date:   2022-09-04 10:03:40 +0900
