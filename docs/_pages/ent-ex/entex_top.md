@@ -1,5 +1,6 @@
 ---
 layout: single 
+permalink: /entex/
 title:  "大学入試過去問トップページ" 
 date:   2022-09-04 10:03:40 +0900
 categories: math 

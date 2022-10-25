@@ -1,5 +1,6 @@
 ---
 layout: single
+permalink: /bash/
 title:  "bash/zsh トップページ"
 date:   2022-09-04 10:03:40 +0900
 categories: bash zsh

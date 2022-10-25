@@ -3,6 +3,7 @@ layout: default
 title:  "aiidaトップページ"
 date:   2022-09-04 10:03:40 +0900
 categories: aiida 
+permalink: /aiida/
 ---
 
 ## AiiDA

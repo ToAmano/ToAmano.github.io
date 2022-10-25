@@ -1,5 +1,6 @@
 ---
 layout: default
+permalink: /qe/
 title:  "quantum espressoトップページ"
 date:   2022-09-04 10:03:40 +0900
 categories: git
