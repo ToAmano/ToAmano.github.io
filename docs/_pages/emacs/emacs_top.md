@@ -10,9 +10,9 @@ categories: emacs
 
 ## init.elの設定
 
-- [init.elの設定はこちら]({% initel.md %})
-- [フォントやアイコンの設定について]({% emacs_font.md %})
-- [flyspellによる英語チェック]({% emacs_aspell.md %})
+- [init.elの設定はこちら]({% link _pages/emacs/initel.md %})
+- [フォントやアイコンの設定について]({% link _pages/emacs/emacs_font.md %})
+- [flyspellによる英語チェック]({% link _pages/emacs/emacs_aspell.md %})
 
 <!--https://mamewo.ddo.jp/emacs.html -->
 
@@ -23,15 +23,15 @@ init.elで読み込むパッケージが増えてくるとemacsの起動時間�
 
 ## emacsコマンドについて
 
-[emacsコマンドはこちら]({% emacs_command.md %})
+[emacsコマンドはこちら]({% link _pages/emacs/emacs_command.md %})
 
 
 ## 文法チェック
 
-- [文法チェック]({% https://qiita.com/niitsuma/items/d3f06755e956e6fa32c9 %})
+- [文法チェック](https://qiita.com/niitsuma/items/d3f06755e956e6fa32c9)
 
 
-- [yamlモード]({% https://mugijiru.github.io/.emacs.d/programming/yaml-mode/ %})
+- [yamlモード](https://mugijiru.github.io/.emacs.d/programming/yaml-mode/)
 
 
 <!--
