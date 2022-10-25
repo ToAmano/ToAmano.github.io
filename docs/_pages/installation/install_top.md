@@ -8,4 +8,4 @@ categories: intel
 
 
 ## wannier90
-  [wannier90]({% wannier90_install_to_ohtaka.md %})
+  [wannier90]({% link wannier90_install_to_ohtaka.md %})
