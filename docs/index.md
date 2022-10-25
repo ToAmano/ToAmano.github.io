@@ -14,7 +14,7 @@ For more details see [Basic writing and formatting syntax](https://docs.github.c
 
 ---
 ---
-## [Software installation]({% link _pages/install/install_top.md %})
+## [Software installation]({% link _pages/installation/install_top.md %})
 
 マニュアルインストールが必要なソフトウェアのインストールについてのまとめ．
 
