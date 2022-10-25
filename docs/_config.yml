@@ -63,8 +63,9 @@ footer:
 # their entries' file path in the `include:` list.
 #
 include:
-  - _pages/
-  
+  - _pages
+  - about.md
+    
 # exclude:
 #   - .sass-cache/
 #   - .jekyll-cache/
