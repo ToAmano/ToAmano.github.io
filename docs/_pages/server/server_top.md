@@ -10,7 +10,7 @@ description: The top-page of my personal website.
 
 ## 
 
-- [パソコンなどの機材を用意する](hardware.md)
+- [パソコンなどの機材を用意する]({% link _pages/server/hardware.md %})
 - [サーバーにするパソコンにLinuxを入れる]
-- [パソコンへのローカル環境からのssh接続を可能にする](allow_ssh.md)
-- [sambaを使ってサーバーを簡易的なNASとして運用する](samba.md)
+- [パソコンへのローカル環境からのssh接続を可能にする]({% link _pages/server/allow_ssh.md %})
+- [sambaを使ってサーバーを簡易的なNASとして運用する]({% link _pages/server/samba.md %})

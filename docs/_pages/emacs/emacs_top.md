@@ -10,9 +10,9 @@ categories: emacs
 
 ## init.elの設定
 
-- [init.elの設定はこちら](initel.md)
-- [フォントやアイコンの設定について](emacs_font.md)
-- [flyspellによる英語チェック](emacs_aspell.md)
+- [init.elの設定はこちら]({% initel.md %})
+- [フォントやアイコンの設定について]({% emacs_font.md %})
+- [flyspellによる英語チェック]({% emacs_aspell.md %})
 
 <!--https://mamewo.ddo.jp/emacs.html -->
 
@@ -23,15 +23,15 @@ init.elで読み込むパッケージが増えてくるとemacsの起動時間�
 
 ## emacsコマンドについて
 
-[emacsコマンドはこちら](emacs_command.md)
+[emacsコマンドはこちら]({% emacs_command.md %})
 
 
 ## 文法チェック
 
-- [文法チェック](https://qiita.com/niitsuma/items/d3f06755e956e6fa32c9)
+- [文法チェック]({% https://qiita.com/niitsuma/items/d3f06755e956e6fa32c9 %})
 
 
-- [yamlモード](https://mugijiru.github.io/.emacs.d/programming/yaml-mode/)
+- [yamlモード]({% https://mugijiru.github.io/.emacs.d/programming/yaml-mode/ %})
 
 
 <!--
@@ -42,3 +42,4 @@ neotree: https://pxaka.tokyo/blog/2021/0417-emacs-icons-in-terminal/
 neotree: https://qiita.com/minoruGH/items/2034cad4efe8c5dee4d4
 emacsの一括置換: https://qiita.com/masa16/items/e9ddaecfd514552153b1
 -->
+

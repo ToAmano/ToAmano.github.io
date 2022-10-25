@@ -1,4 +1,8 @@
-
+---
+ title: サーバーに必要なアイテム
+ layout: single
+ description: The top-page of my personal website.
+---
 
 
 
