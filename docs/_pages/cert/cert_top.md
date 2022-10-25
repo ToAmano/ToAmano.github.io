@@ -3,6 +3,7 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 title: CertTop
 layout: single
+permalink: /cert/
 description: The top-page of Certifications.
 ---
 
