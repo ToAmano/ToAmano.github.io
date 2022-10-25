@@ -14,21 +14,9 @@ For more details see [Basic writing and formatting syntax](https://docs.github.c
 
 ---
 ---
-## Software installation
+## [Software installation]({% link _pages/install/install_top.md %})
 
 マニュアルインストールが必要なソフトウェアのインストールについてのまとめ．
-
-### [QuantumEspresso with Intel Compiler]
-  
----
-
-### [Wannier90 with Intel Compiler]({% link  _pages/installation/wannier90_install_to_ohtaka.md %})
-
-wannier90のみをインストールする場合はこちらを参照．
-
----
-### [VASP 5.4 with Intel Compiler]
-
 
 ---
 ---
