@@ -211,6 +211,8 @@ pdf化した答案の大半には図がないので，時間がある時に順�
 [ut61-5]: {% link _pages/ent-ex/solutions/todai/todai-zenki/1961/61-5/ut-61-5.pdf %}
 [ut61-6]: {% link _pages/ent-ex/solutions/todai/todai-zenki/1961/61-6/ut-61-6.pdf %}
 
+
+{% comment %}
 <!-- [ut62-1]: {% link _pages/ent-ex/solutions/todai/todai-zenki/1962/62-1/ut-62-1.pdf %} -->
 <!-- [ut62-2]: {% link _pages/ent-ex/solutions/todai/todai-zenki/1962/62-2/ut-62-2.pdf %} -->
 <!-- [ut62-3]: {% link _pages/ent-ex/solutions/todai/todai-zenki/1962/62-3/ut-62-3.pdf %} -->
@@ -529,7 +531,7 @@ pdf化した答案の大半には図がないので，時間がある時に順�
 <!-- [ut14-4]: {% link _pages/ent-ex/solutions/todai/todai-zenki/2014/14-4/ut-14-4.pdf %} -->
 <!-- [ut14-5]: {% link _pages/ent-ex/solutions/todai/todai-zenki/2014/14-5/ut-14-5.pdf %} -->
 <!-- [ut14-6]: {% link _pages/ent-ex/solutions/todai/todai-zenki/2014/14-6/ut-14-6.pdf %} -->
-
+{% endcomment %}
 
 
 [ukk89]: {% link _pages/ent-ex/problems/kyodai/kouki/1989/1989.pdf %}
