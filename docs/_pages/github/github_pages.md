@@ -7,6 +7,15 @@ tags:
 - github 
 ---
 
+
+## minimal mistakes
+
+```markdown
+画像の貼り付けにはminimal mistakes helperが使える
+https://mmistakes.github.io/minimal-mistakes/docs/helpers/
+{% include figure image_path=“/assets/images/unsplash-image-10.jpg” alt=“this is a placeholder image” caption=“This is a figure caption.” %}
+```
+
 ## 参考文献
 
 <!-- 
