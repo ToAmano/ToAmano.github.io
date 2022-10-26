@@ -552,7 +552,7 @@ pdf化した答案の大半には図がないので，時間がある時に順�
 
 
 
-[tk61]: _pages/ent-ex/solutions/toukou/toukou-zenki/t1961/t1961.pdf
+[tk61]: {% link _pages/ent-ex/solutions/toukou/toukou-zenki/t1961/t1961.pdf %}
 [tk62]: solutions/toukou/toukou-zenki/t1962/t1962.pdf
 [tk63]: solutions/toukou/toukou-zenki/t1963/t1963.pdf
 [tk64]: solutions/toukou/toukou-zenki/t1964/t1964.pdf
