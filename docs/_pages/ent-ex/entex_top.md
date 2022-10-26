@@ -203,409 +203,409 @@ pdf化した答案の大半には図がないので，時間がある時に順�
 
 <!-- 解答ファイルへのpath-->
 
-[ut61-1]: solutions/todai/todai-zenki/1961/61-1/ut-61-1.pdf
-[ut61-1]: solutions/todai/todai-zenki/1961/61-1/ut-61-1.pdf
-[ut61-2]: solutions/todai/todai-zenki/1961/61-2/ut-61-2.pdf
-[ut61-3]: solutions/todai/todai-zenki/1961/61-3/ut-61-3.pdf
-[ut61-4]: solutions/todai/todai-zenki/1961/61-4/ut-61-4.pdf
-[ut61-5]: solutions/todai/todai-zenki/1961/61-5/ut-61-5.pdf
-[ut61-6]: solutions/todai/todai-zenki/1961/61-6/ut-61-6.pdf
-[ut62-1]: solutions/todai/todai-zenki/1962/62-1/ut-62-1.pdf
-[ut62-2]: solutions/todai/todai-zenki/1962/62-2/ut-62-2.pdf
-[ut62-3]: solutions/todai/todai-zenki/1962/62-3/ut-62-3.pdf
-[ut62-4]: solutions/todai/todai-zenki/1962/62-4/ut-62-4.pdf
-[ut62-5]: solutions/todai/todai-zenki/1962/62-5/ut-62-5.pdf
-[ut62-6]: solutions/todai/todai-zenki/1962/62-6/ut-62-6.pdf
-[ut63-1]: solutions/todai/todai-zenki/1963/63-1/ut-63-1.pdf
-[ut63-2]: solutions/todai/todai-zenki/1963/63-2/ut-63-2.pdf
-[ut63-3]: solutions/todai/todai-zenki/1963/63-3/ut-63-3.pdf
-[ut63-4]: solutions/todai/todai-zenki/1963/63-4/ut-63-4.pdf
-[ut63-5]: solutions/todai/todai-zenki/1963/63-5/ut-63-5.pdf
-[ut63-6]: solutions/todai/todai-zenki/1963/63-6/ut-63-6.pdf
-[ut64-1]: solutions/todai/todai-zenki/1964/64-1/ut-64-1.pdf
-[ut64-2]: solutions/todai/todai-zenki/1964/64-2/ut-64-2.pdf
-[ut64-3]: solutions/todai/todai-zenki/1964/64-3/ut-64-3.pdf
-[ut64-4]: solutions/todai/todai-zenki/1964/64-4/ut-64-4.pdf
-[ut64-5]: solutions/todai/todai-zenki/1964/64-5/ut-64-5.pdf
-[ut64-6]: solutions/todai/todai-zenki/1964/64-6/ut-64-6.pdf
-[ut65-1]: solutions/todai/todai-zenki/1965/65-1/ut-65-1.pdf
-[ut65-2]: solutions/todai/todai-zenki/1965/65-2/ut-65-2.pdf
-[ut65-3]: solutions/todai/todai-zenki/1965/65-3/ut-65-3.pdf
-[ut65-4]: solutions/todai/todai-zenki/1965/65-4/ut-65-4.pdf
-[ut65-5]: solutions/todai/todai-zenki/1965/65-5/ut-65-5.pdf
-[ut65-6]: solutions/todai/todai-zenki/1965/65-6/ut-65-6.pdf
-[ut66-1]: solutions/todai/todai-zenki/1966/66-1/ut-66-1.pdf
-[ut66-2]: solutions/todai/todai-zenki/1966/66-2/ut-66-2.pdf
-[ut66-3]: solutions/todai/todai-zenki/1966/66-3/ut-66-3.pdf
-[ut66-4]: solutions/todai/todai-zenki/1966/66-4/ut-66-4.pdf
-[ut66-5]: solutions/todai/todai-zenki/1966/66-5/ut-66-5.pdf
-[ut66-6]: solutions/todai/todai-zenki/1966/66-6/ut-66-6.pdf
-[ut67-1]: solutions/todai/todai-zenki/1967/67-1/ut-67-1.pdf
-[ut67-2]: solutions/todai/todai-zenki/1967/67-2/ut-67-2.pdf
-[ut67-3]: solutions/todai/todai-zenki/1967/67-3/ut-67-3.pdf
-[ut67-4]: solutions/todai/todai-zenki/1967/67-4/ut-67-4.pdf
-[ut67-5]: solutions/todai/todai-zenki/1967/67-5/ut-67-5.pdf
-[ut67-6]: solutions/todai/todai-zenki/1967/67-6/ut-67-6.pdf
-[ut68-1]: solutions/todai/todai-zenki/1968/68-1/ut-68-1.pdf
-[ut68-2]: solutions/todai/todai-zenki/1968/68-2/ut-68-2.pdf
-[ut68-3]: solutions/todai/todai-zenki/1968/68-3/ut-68-3.pdf
-[ut68-4]: solutions/todai/todai-zenki/1968/68-4/ut-68-4.pdf
-[ut68-5]: solutions/todai/todai-zenki/1968/68-5/ut-68-5.pdf
-[ut68-6]: solutions/todai/todai-zenki/1968/68-6/ut-68-6.pdf
-[ut69-1]: solutions/todai/todai-zenki/1969/69-1/ut-69-1.pdf
-[ut69-2]: solutions/todai/todai-zenki/1969/69-2/ut-69-2.pdf
-[ut69-3]: solutions/todai/todai-zenki/1969/69-3/ut-69-3.pdf
-[ut69-4]: solutions/todai/todai-zenki/1969/69-4/ut-69-4.pdf
-[ut69-5]: solutions/todai/todai-zenki/1969/69-5/ut-69-5.pdf
-[ut69-6]: solutions/todai/todai-zenki/1969/69-6/ut-69-6.pdf
-[ut70-1]: solutions/todai/todai-zenki/1970/70-1/ut-70-1.pdf
-[ut70-2]: solutions/todai/todai-zenki/1970/70-2/ut-70-2.pdf
-[ut70-3]: solutions/todai/todai-zenki/1970/70-3/ut-70-3.pdf
-[ut70-4]: solutions/todai/todai-zenki/1970/70-4/ut-70-4.pdf
-[ut70-5]: solutions/todai/todai-zenki/1970/70-5/ut-70-5.pdf
-[ut70-6]: solutions/todai/todai-zenki/1970/70-6/ut-70-6.pdf
-[ut71-1]: solutions/todai/todai-zenki/1971/71-1/ut-71-1.pdf
-[ut71-2]: solutions/todai/todai-zenki/1971/71-2/ut-71-2.pdf
-[ut71-3]: solutions/todai/todai-zenki/1971/71-3/ut-71-3.pdf
-[ut71-4]: solutions/todai/todai-zenki/1971/71-4/ut-71-4.pdf
-[ut71-5]: solutions/todai/todai-zenki/1971/71-5/ut-71-5.pdf
-[ut71-6]: solutions/todai/todai-zenki/1971/71-6/ut-71-6.pdf
-[ut72-1]: solutions/todai/todai-zenki/1972/72-1/ut-72-1.pdf
-[ut72-2]: solutions/todai/todai-zenki/1972/72-2/ut-72-2.pdf
-[ut72-3]: solutions/todai/todai-zenki/1972/72-3/ut-72-3.pdf
-[ut72-4]: solutions/todai/todai-zenki/1972/72-4/ut-72-4.pdf
-[ut72-5]: solutions/todai/todai-zenki/1972/72-5/ut-72-5.pdf
-[ut72-6]: solutions/todai/todai-zenki/1972/72-6/ut-72-6.pdf
-[ut73-1]: solutions/todai/todai-zenki/1973/73-1/ut-73-1.pdf
-[ut73-2]: solutions/todai/todai-zenki/1973/73-2/ut-73-2.pdf
-[ut73-3]: solutions/todai/todai-zenki/1973/73-3/ut-73-3.pdf
-[ut73-4]: solutions/todai/todai-zenki/1973/73-4/ut-73-4.pdf
-[ut73-5]: solutions/todai/todai-zenki/1973/73-5/ut-73-5.pdf
-[ut73-6]: solutions/todai/todai-zenki/1973/73-6/ut-73-6.pdf
-[ut74-1]: solutions/todai/todai-zenki/1974/74-1/ut-74-1.pdf
-[ut74-2]: solutions/todai/todai-zenki/1974/74-2/ut-74-2.pdf
-[ut74-3]: solutions/todai/todai-zenki/1974/74-3/ut-74-3.pdf
-[ut74-4]: solutions/todai/todai-zenki/1974/74-4/ut-74-4.pdf
-[ut74-5]: solutions/todai/todai-zenki/1974/74-5/ut-74-5.pdf
-[ut74-6]: solutions/todai/todai-zenki/1974/74-6/ut-74-6.pdf
-[ut75-1]: solutions/todai/todai-zenki/1975/75-1/ut-75-1.pdf
-[ut75-2]: solutions/todai/todai-zenki/1975/75-2/ut-75-2.pdf
-[ut75-3]: solutions/todai/todai-zenki/1975/75-3/ut-75-3.pdf
-[ut75-4]: solutions/todai/todai-zenki/1975/75-4/ut-75-4.pdf
-[ut75-5]: solutions/todai/todai-zenki/1975/75-5/ut-75-5.pdf
-[ut75-6]: solutions/todai/todai-zenki/1975/75-6/ut-75-6.pdf
-[ut76-1]: solutions/todai/todai-zenki/1976/76-1/ut-76-1.pdf
-[ut76-2]: solutions/todai/todai-zenki/1976/76-2/ut-76-2.pdf
-[ut76-3]: solutions/todai/todai-zenki/1976/76-3/ut-76-3.pdf
-[ut76-4]: solutions/todai/todai-zenki/1976/76-4/ut-76-4.pdf
-[ut76-5]: solutions/todai/todai-zenki/1976/76-5/ut-76-5.pdf
-[ut76-6]: solutions/todai/todai-zenki/1976/76-6/ut-76-6.pdf
-[ut77-1]: solutions/todai/todai-zenki/1977/77-1/ut-77-1.pdf
-[ut77-2]: solutions/todai/todai-zenki/1977/77-2/ut-77-2.pdf
-[ut77-3]: solutions/todai/todai-zenki/1977/77-3/ut-77-3.pdf
-[ut77-4]: solutions/todai/todai-zenki/1977/77-4/ut-77-4.pdf
-[ut77-5]: solutions/todai/todai-zenki/1977/77-5/ut-77-5.pdf
-[ut77-6]: solutions/todai/todai-zenki/1977/77-6/ut-77-6.pdf
-[ut78-1]: solutions/todai/todai-zenki/1978/78-1/ut-78-1.pdf
-[ut78-2]: solutions/todai/todai-zenki/1978/78-2/ut-78-2.pdf
-[ut78-3]: solutions/todai/todai-zenki/1978/78-3/ut-78-3.pdf
-[ut78-4]: solutions/todai/todai-zenki/1978/78-4/ut-78-4.pdf
-[ut78-5]: solutions/todai/todai-zenki/1978/78-5/ut-78-5.pdf
-[ut78-6]: solutions/todai/todai-zenki/1978/78-6/ut-78-6.pdf
-[ut79-1]: solutions/todai/todai-zenki/1979/79-1/ut-79-1.pdf
-[ut79-2]: solutions/todai/todai-zenki/1979/79-2/ut-79-2.pdf
-[ut79-3]: solutions/todai/todai-zenki/1979/79-3/ut-79-3.pdf
-[ut79-4]: solutions/todai/todai-zenki/1979/79-4/ut-79-4.pdf
-[ut79-5]: solutions/todai/todai-zenki/1979/79-5/ut-79-5.pdf
-[ut79-6]: solutions/todai/todai-zenki/1979/79-6/ut-79-6.pdf
-[ut80-1]: solutions/todai/todai-zenki/1980/80-1/ut-80-1.pdf
-[ut80-2]: solutions/todai/todai-zenki/1980/80-2/ut-80-2.pdf
-[ut80-3]: solutions/todai/todai-zenki/1980/80-3/ut-80-3.pdf
-[ut80-4]: solutions/todai/todai-zenki/1980/80-4/ut-80-4.pdf
-[ut80-5]: solutions/todai/todai-zenki/1980/80-5/ut-80-5.pdf
-[ut80-6]: solutions/todai/todai-zenki/1980/80-6/ut-80-6.pdf
-[ut81-1]: solutions/todai/todai-zenki/1981/81-1/ut-81-1.pdf
-[ut81-2]: solutions/todai/todai-zenki/1981/81-2/ut-81-2.pdf
-[ut81-3]: solutions/todai/todai-zenki/1981/81-3/ut-81-3.pdf
-[ut81-4]: solutions/todai/todai-zenki/1981/81-4/ut-81-4.pdf
-[ut81-5]: solutions/todai/todai-zenki/1981/81-5/ut-81-5.pdf
-[ut81-6]: solutions/todai/todai-zenki/1981/81-6/ut-81-6.pdf
-[ut82-1]: solutions/todai/todai-zenki/1982/82-1/ut-82-1.pdf
-[ut82-2]: solutions/todai/todai-zenki/1982/82-2/ut-82-2.pdf
-[ut82-3]: solutions/todai/todai-zenki/1982/82-3/ut-82-3.pdf
-[ut82-4]: solutions/todai/todai-zenki/1982/82-4/ut-82-4.pdf
-[ut82-5]: solutions/todai/todai-zenki/1982/82-5/ut-82-5.pdf
-[ut82-6]: solutions/todai/todai-zenki/1982/82-6/ut-82-6.pdf
-[ut83-1]: solutions/todai/todai-zenki/1983/83-1/ut-83-1.pdf
-[ut83-2]: solutions/todai/todai-zenki/1983/83-2/ut-83-2.pdf
-[ut83-3]: solutions/todai/todai-zenki/1983/83-3/ut-83-3.pdf
-[ut83-4]: solutions/todai/todai-zenki/1983/83-4/ut-83-4.pdf
-[ut83-5]: solutions/todai/todai-zenki/1983/83-5/ut-83-5.pdf
-[ut83-6]: solutions/todai/todai-zenki/1983/83-6/ut-83-6.pdf
-[ut84-1]: solutions/todai/todai-zenki/1984/84-1/ut-84-1.pdf
-[ut84-2]: solutions/todai/todai-zenki/1984/84-2/ut-84-2.pdf
-[ut84-3]: solutions/todai/todai-zenki/1984/84-3/ut-84-3.pdf
-[ut84-4]: solutions/todai/todai-zenki/1984/84-4/ut-84-4.pdf
-[ut84-5]: solutions/todai/todai-zenki/1984/84-5/ut-84-5.pdf
-[ut84-6]: solutions/todai/todai-zenki/1984/84-6/ut-84-6.pdf
-[ut85-1]: solutions/todai/todai-zenki/1985/85-1/ut-85-1.pdf
-[ut85-2]: solutions/todai/todai-zenki/1985/85-2/ut-85-2.pdf
-[ut85-3]: solutions/todai/todai-zenki/1985/85-3/ut-85-3.pdf
-[ut85-4]: solutions/todai/todai-zenki/1985/85-4/ut-85-4.pdf
-[ut85-5]: solutions/todai/todai-zenki/1985/85-5/ut-85-5.pdf
-[ut85-6]: solutions/todai/todai-zenki/1985/85-6/ut-85-6.pdf
-[ut86-1]: solutions/todai/todai-zenki/1986/86-1/ut-86-1.pdf
-[ut86-2]: solutions/todai/todai-zenki/1986/86-2/ut-86-2.pdf
-[ut86-3]: solutions/todai/todai-zenki/1986/86-3/ut-86-3.pdf
-[ut86-4]: solutions/todai/todai-zenki/1986/86-4/ut-86-4.pdf
-[ut86-5]: solutions/todai/todai-zenki/1986/86-5/ut-86-5.pdf
-[ut86-6]: solutions/todai/todai-zenki/1986/86-6/ut-86-6.pdf
-[ut87-1]: solutions/todai/todai-zenki/1987/87-1/ut-87-1.pdf
-[ut87-2]: solutions/todai/todai-zenki/1987/87-2/ut-87-2.pdf
-[ut87-3]: solutions/todai/todai-zenki/1987/87-3/ut-87-3.pdf
-[ut87-4]: solutions/todai/todai-zenki/1987/87-4/ut-87-4.pdf
-[ut87-5]: solutions/todai/todai-zenki/1987/87-5/ut-87-5.pdf
-[ut87-6]: solutions/todai/todai-zenki/1987/87-6/ut-87-6.pdf
-[ut88-1]: solutions/todai/todai-zenki/1988/88-1/ut-88-1.pdf
-[ut88-2]: solutions/todai/todai-zenki/1988/88-2/ut-88-2.pdf
-[ut88-3]: solutions/todai/todai-zenki/1988/88-3/ut-88-3.pdf
-[ut88-4]: solutions/todai/todai-zenki/1988/88-4/ut-88-4.pdf
-[ut88-5]: solutions/todai/todai-zenki/1988/88-5/ut-88-5.pdf
-[ut88-6]: solutions/todai/todai-zenki/1988/88-6/ut-88-6.pdf
-[ut89-1]: solutions/todai/todai-zenki/1989/89-1/ut-89-1.pdf
-[ut89-2]: solutions/todai/todai-zenki/1989/89-2/ut-89-2.pdf
-[ut89-3]: solutions/todai/todai-zenki/1989/89-3/ut-89-3.pdf
-[ut89-4]: solutions/todai/todai-zenki/1989/89-4/ut-89-4.pdf
-[ut89-5]: solutions/todai/todai-zenki/1989/89-5/ut-89-5.pdf
-[ut89-6]: solutions/todai/todai-zenki/1989/89-6/ut-89-6.pdf
-[ut90-1]: solutions/todai/todai-zenki/1990/90-1/ut-90-1.pdf
-[ut90-2]: solutions/todai/todai-zenki/1990/90-2/ut-90-2.pdf
-[ut90-3]: solutions/todai/todai-zenki/1990/90-3/ut-90-3.pdf
-[ut90-4]: solutions/todai/todai-zenki/1990/90-4/ut-90-4.pdf
-[ut90-5]: solutions/todai/todai-zenki/1990/90-5/ut-90-5.pdf
-[ut90-6]: solutions/todai/todai-zenki/1990/90-6/ut-90-6.pdf
-[ut91-1]: solutions/todai/todai-zenki/1991/91-1/ut-91-1.pdf
-[ut91-2]: solutions/todai/todai-zenki/1991/91-2/ut-91-2.pdf
-[ut91-3]: solutions/todai/todai-zenki/1991/91-3/ut-91-3.pdf
-[ut91-4]: solutions/todai/todai-zenki/1991/91-4/ut-91-4.pdf
-[ut91-5]: solutions/todai/todai-zenki/1991/91-5/ut-91-5.pdf
-[ut91-6]: solutions/todai/todai-zenki/1991/91-6/ut-91-6.pdf
-[ut92-1]: solutions/todai/todai-zenki/1992/92-1/ut-92-1.pdf
-[ut92-2]: solutions/todai/todai-zenki/1992/92-2/ut-92-2.pdf
-[ut92-3]: solutions/todai/todai-zenki/1992/92-3/ut-92-3.pdf
-[ut92-4]: solutions/todai/todai-zenki/1992/92-4/ut-92-4.pdf
-[ut92-5]: solutions/todai/todai-zenki/1992/92-5/ut-92-5.pdf
-[ut92-6]: solutions/todai/todai-zenki/1992/92-6/ut-92-6.pdf
-[ut93-1]: solutions/todai/todai-zenki/1993/93-1/ut-93-1.pdf
-[ut93-2]: solutions/todai/todai-zenki/1993/93-2/ut-93-2.pdf
-[ut93-3]: solutions/todai/todai-zenki/1993/93-3/ut-93-3.pdf
-[ut93-4]: solutions/todai/todai-zenki/1993/93-4/ut-93-4.pdf
-[ut93-5]: solutions/todai/todai-zenki/1993/93-5/ut-93-5.pdf
-[ut93-6]: solutions/todai/todai-zenki/1993/93-6/ut-93-6.pdf
-[ut94-1]: solutions/todai/todai-zenki/1994/94-1/ut-94-1.pdf
-[ut94-2]: solutions/todai/todai-zenki/1994/94-2/ut-94-2.pdf
-[ut94-3]: solutions/todai/todai-zenki/1994/94-3/ut-94-3.pdf
-[ut94-4]: solutions/todai/todai-zenki/1994/94-4/ut-94-4.pdf
-[ut94-5]: solutions/todai/todai-zenki/1994/94-5/ut-94-5.pdf
-[ut94-6]: solutions/todai/todai-zenki/1994/94-6/ut-94-6.pdf
-[ut95-1]: solutions/todai/todai-zenki/1995/95-1/ut-95-1.pdf
-[ut95-2]: solutions/todai/todai-zenki/1995/95-2/ut-95-2.pdf
-[ut95-3]: solutions/todai/todai-zenki/1995/95-3/ut-95-3.pdf
-[ut95-4]: solutions/todai/todai-zenki/1995/95-4/ut-95-4.pdf
-[ut95-5]: solutions/todai/todai-zenki/1995/95-5/ut-95-5.pdf
-[ut95-6]: solutions/todai/todai-zenki/1995/95-6/ut-95-6.pdf
-[ut96-1]: solutions/todai/todai-zenki/1996/96-1/ut-96-1.pdf
-[ut96-2]: solutions/todai/todai-zenki/1996/96-2/ut-96-2.pdf
-[ut96-3]: solutions/todai/todai-zenki/1996/96-3/ut-96-3.pdf
-[ut96-4]: solutions/todai/todai-zenki/1996/96-4/ut-96-4.pdf
-[ut96-5]: solutions/todai/todai-zenki/1996/96-5/ut-96-5.pdf
-[ut96-6]: solutions/todai/todai-zenki/1996/96-6/ut-96-6.pdf
-[ut97-1]: solutions/todai/todai-zenki/1997/97-1/ut-97-1.pdf
-[ut97-2]: solutions/todai/todai-zenki/1997/97-2/ut-97-2.pdf
-[ut97-3]: solutions/todai/todai-zenki/1997/97-3/ut-97-3.pdf
-[ut97-4]: solutions/todai/todai-zenki/1997/97-4/ut-97-4.pdf
-[ut97-5]: solutions/todai/todai-zenki/1997/97-5/ut-97-5.pdf
-[ut97-6]: solutions/todai/todai-zenki/1997/97-6/ut-97-6.pdf
-[ut98-1]: solutions/todai/todai-zenki/1998/98-1/ut-98-1.pdf
-[ut98-2]: solutions/todai/todai-zenki/1998/98-2/ut-98-2.pdf
-[ut98-3]: solutions/todai/todai-zenki/1998/98-3/ut-98-3.pdf
-[ut98-4]: solutions/todai/todai-zenki/1998/98-4/ut-98-4.pdf
-[ut98-5]: solutions/todai/todai-zenki/1998/98-5/ut-98-5.pdf
-[ut98-6]: solutions/todai/todai-zenki/1998/98-6/ut-98-6.pdf
-[ut99-1]: solutions/todai/todai-zenki/1999/99-1/ut-99-1.pdf
-[ut99-2]: solutions/todai/todai-zenki/1999/99-2/ut-99-2.pdf
-[ut99-3]: solutions/todai/todai-zenki/1999/99-3/ut-99-3.pdf
-[ut99-4]: solutions/todai/todai-zenki/1999/99-4/ut-99-4.pdf
-[ut99-5]: solutions/todai/todai-zenki/1999/99-5/ut-99-5.pdf
-[ut99-6]: solutions/todai/todai-zenki/1999/99-6/ut-99-6.pdf
-[ut00-1]: solutions/todai/todai-zenki/2000/00-1/ut-00-1.pdf
-[ut00-2]: solutions/todai/todai-zenki/2000/00-2/ut-00-2.pdf
-[ut00-3]: solutions/todai/todai-zenki/2000/00-3/ut-00-3.pdf
-[ut00-4]: solutions/todai/todai-zenki/2000/00-4/ut-00-4.pdf
-[ut00-5]: solutions/todai/todai-zenki/2000/00-5/ut-00-5.pdf
-[ut00-6]: solutions/todai/todai-zenki/2000/00-6/ut-00-6.pdf
-[ut01-1]: solutions/todai/todai-zenki/2001/01-1/ut-01-1.pdf
-[ut01-2]: solutions/todai/todai-zenki/2001/01-2/ut-01-2.pdf
-[ut01-3]: solutions/todai/todai-zenki/2001/01-3/ut-01-3.pdf
-[ut01-4]: solutions/todai/todai-zenki/2001/01-4/ut-01-4.pdf
-[ut01-5]: solutions/todai/todai-zenki/2001/01-5/ut-01-5.pdf
-[ut01-6]: solutions/todai/todai-zenki/2001/01-6/ut-01-6.pdf
-[ut02-1]: solutions/todai/todai-zenki/2002/02-1/ut-02-1.pdf
-[ut02-2]: solutions/todai/todai-zenki/2002/02-2/ut-02-2.pdf
-[ut02-3]: solutions/todai/todai-zenki/2002/02-3/ut-02-3.pdf
-[ut02-4]: solutions/todai/todai-zenki/2002/02-4/ut-02-4.pdf
-[ut02-5]: solutions/todai/todai-zenki/2002/02-5/ut-02-5.pdf
-[ut02-6]: solutions/todai/todai-zenki/2002/02-6/ut-02-6.pdf
-[ut03-1]: solutions/todai/todai-zenki/2003/03-1/ut-03-1.pdf
-[ut03-2]: solutions/todai/todai-zenki/2003/03-2/ut-03-2.pdf
-[ut03-3]: solutions/todai/todai-zenki/2003/03-3/ut-03-3.pdf
-[ut03-4]: solutions/todai/todai-zenki/2003/03-4/ut-03-4.pdf
-[ut03-5]: solutions/todai/todai-zenki/2003/03-5/ut-03-5.pdf
-[ut03-6]: solutions/todai/todai-zenki/2003/03-6/ut-03-6.pdf
-[ut04-1]: solutions/todai/todai-zenki/2004/04-1/ut-04-1.pdf
-[ut04-2]: solutions/todai/todai-zenki/2004/04-2/ut-04-2.pdf
-[ut04-3]: solutions/todai/todai-zenki/2004/04-3/ut-04-3.pdf
-[ut04-4]: solutions/todai/todai-zenki/2004/04-4/ut-04-4.pdf
-[ut04-5]: solutions/todai/todai-zenki/2004/04-5/ut-04-5.pdf
-[ut04-6]: solutions/todai/todai-zenki/2004/04-6/ut-04-6.pdf
-[ut05-1]: solutions/todai/todai-zenki/2005/05-1/ut-05-1.pdf
-[ut05-2]: solutions/todai/todai-zenki/2005/05-2/ut-05-2.pdf
-[ut05-3]: solutions/todai/todai-zenki/2005/05-3/ut-05-3.pdf
-[ut05-4]: solutions/todai/todai-zenki/2005/05-4/ut-05-4.pdf
-[ut05-5]: solutions/todai/todai-zenki/2005/05-5/ut-05-5.pdf
-[ut05-6]: solutions/todai/todai-zenki/2005/05-6/ut-05-6.pdf
-[ut06-1]: solutions/todai/todai-zenki/2006/06-1/ut-06-1.pdf
-[ut06-2]: solutions/todai/todai-zenki/2006/06-2/ut-06-2.pdf
-[ut06-3]: solutions/todai/todai-zenki/2006/06-3/ut-06-3.pdf
-[ut06-4]: solutions/todai/todai-zenki/2006/06-4/ut-06-4.pdf
-[ut06-5]: solutions/todai/todai-zenki/2006/06-5/ut-06-5.pdf
-[ut06-6]: solutions/todai/todai-zenki/2006/06-6/ut-06-6.pdf
-[ut07-1]: solutions/todai/todai-zenki/2007/07-1/ut-07-1.pdf
-[ut07-2]: solutions/todai/todai-zenki/2007/07-2/ut-07-2.pdf
-[ut07-3]: solutions/todai/todai-zenki/2007/07-3/ut-07-3.pdf
-[ut07-4]: solutions/todai/todai-zenki/2007/07-4/ut-07-4.pdf
-[ut07-5]: solutions/todai/todai-zenki/2007/07-5/ut-07-5.pdf
-[ut07-6]: solutions/todai/todai-zenki/2007/07-6/ut-07-6.pdf
-[ut08-1]: solutions/todai/todai-zenki/2008/08-1/ut-08-1.pdf
-[ut08-2]: solutions/todai/todai-zenki/2008/08-2/ut-08-2.pdf
-[ut08-3]: solutions/todai/todai-zenki/2008/08-3/ut-08-3.pdf
-[ut08-4]: solutions/todai/todai-zenki/2008/08-4/ut-08-4.pdf
-[ut08-5]: solutions/todai/todai-zenki/2008/08-5/ut-08-5.pdf
-[ut08-6]: solutions/todai/todai-zenki/2008/08-6/ut-08-6.pdf
-[ut09-1]: solutions/todai/todai-zenki/2009/09-1/ut-09-1.pdf
-[ut09-2]: solutions/todai/todai-zenki/2009/09-2/ut-09-2.pdf
-[ut09-3]: solutions/todai/todai-zenki/2009/09-3/ut-09-3.pdf
-[ut09-4]: solutions/todai/todai-zenki/2009/09-4/ut-09-4.pdf
-[ut09-5]: solutions/todai/todai-zenki/2009/09-5/ut-09-5.pdf
-[ut09-6]: solutions/todai/todai-zenki/2009/09-6/ut-09-6.pdf
-[ut10-1]: solutions/todai/todai-zenki/2010/10-1/ut-10-1.pdf
-[ut10-2]: solutions/todai/todai-zenki/2010/10-2/ut-10-2.pdf
-[ut10-3]: solutions/todai/todai-zenki/2010/10-3/ut-10-3.pdf
-[ut10-4]: solutions/todai/todai-zenki/2010/10-4/ut-10-4.pdf
-[ut10-5]: solutions/todai/todai-zenki/2010/10-5/ut-10-5.pdf
-[ut10-6]: solutions/todai/todai-zenki/2010/10-6/ut-10-6.pdf
-[ut11-1]: solutions/todai/todai-zenki/2011/11-1/ut-11-1.pdf
-[ut11-2]: solutions/todai/todai-zenki/2011/11-2/ut-11-2.pdf
-[ut11-3]: solutions/todai/todai-zenki/2011/11-3/ut-11-3.pdf
-[ut11-4]: solutions/todai/todai-zenki/2011/11-4/ut-11-4.pdf
-[ut11-5]: solutions/todai/todai-zenki/2011/11-5/ut-11-5.pdf
-[ut11-6]: solutions/todai/todai-zenki/2011/11-6/ut-11-6.pdf
-[ut12-1]: solutions/todai/todai-zenki/2012/12-1/ut-12-1.pdf
-[ut12-2]: solutions/todai/todai-zenki/2012/12-2/ut-12-2.pdf
-[ut12-3]: solutions/todai/todai-zenki/2012/12-3/ut-12-3.pdf
-[ut12-4]: solutions/todai/todai-zenki/2012/12-4/ut-12-4.pdf
-[ut12-5]: solutions/todai/todai-zenki/2012/12-5/ut-12-5.pdf
-[ut12-6]: solutions/todai/todai-zenki/2012/12-6/ut-12-6.pdf
-[ut13-1]: solutions/todai/todai-zenki/2013/13-1/ut-13-1.pdf
-[ut13-2]: solutions/todai/todai-zenki/2013/13-2/ut-13-2.pdf
-[ut13-3]: solutions/todai/todai-zenki/2013/13-3/ut-13-3.pdf
-[ut13-4]: solutions/todai/todai-zenki/2013/13-4/ut-13-4.pdf
-[ut13-5]: solutions/todai/todai-zenki/2013/13-5/ut-13-5.pdf
-[ut13-6]: solutions/todai/todai-zenki/2013/13-6/ut-13-6.pdf
-[ut14-1]: solutions/todai/todai-zenki/2014/14-1/ut-14-1.pdf
-[ut14-2]: solutions/todai/todai-zenki/2014/14-2/ut-14-2.pdf
-[ut14-3]: solutions/todai/todai-zenki/2014/14-3/ut-14-3.pdf
-[ut14-4]: solutions/todai/todai-zenki/2014/14-4/ut-14-4.pdf
-[ut14-5]: solutions/todai/todai-zenki/2014/14-5/ut-14-5.pdf
-[ut14-6]: solutions/todai/todai-zenki/2014/14-6/ut-14-6.pdf
+[ut61-1]: {% link solutions/todai/todai-zenki/1961/61-1/ut-61-1.pdf %}
+[ut61-1]: {% link solutions/todai/todai-zenki/1961/61-1/ut-61-1.pdf %}
+[ut61-2]: {% link solutions/todai/todai-zenki/1961/61-2/ut-61-2.pdf %}
+[ut61-3]: {% link solutions/todai/todai-zenki/1961/61-3/ut-61-3.pdf %}
+[ut61-4]: {% link solutions/todai/todai-zenki/1961/61-4/ut-61-4.pdf %}
+[ut61-5]: {% link solutions/todai/todai-zenki/1961/61-5/ut-61-5.pdf %}
+[ut61-6]: {% link solutions/todai/todai-zenki/1961/61-6/ut-61-6.pdf %}
+[ut62-1]: {% link solutions/todai/todai-zenki/1962/62-1/ut-62-1.pdf %}
+[ut62-2]: {% link solutions/todai/todai-zenki/1962/62-2/ut-62-2.pdf %}
+[ut62-3]: {% link solutions/todai/todai-zenki/1962/62-3/ut-62-3.pdf %}
+[ut62-4]: {% link solutions/todai/todai-zenki/1962/62-4/ut-62-4.pdf %}
+[ut62-5]: {% link solutions/todai/todai-zenki/1962/62-5/ut-62-5.pdf %}
+[ut62-6]: {% link solutions/todai/todai-zenki/1962/62-6/ut-62-6.pdf %}
+[ut63-1]: {% link solutions/todai/todai-zenki/1963/63-1/ut-63-1.pdf %}
+[ut63-2]: {% link solutions/todai/todai-zenki/1963/63-2/ut-63-2.pdf %}
+[ut63-3]: {% link solutions/todai/todai-zenki/1963/63-3/ut-63-3.pdf %}
+[ut63-4]: {% link solutions/todai/todai-zenki/1963/63-4/ut-63-4.pdf %}
+[ut63-5]: {% link solutions/todai/todai-zenki/1963/63-5/ut-63-5.pdf %}
+[ut63-6]: {% link solutions/todai/todai-zenki/1963/63-6/ut-63-6.pdf %}
+[ut64-1]: {% link solutions/todai/todai-zenki/1964/64-1/ut-64-1.pdf %}
+[ut64-2]: {% link solutions/todai/todai-zenki/1964/64-2/ut-64-2.pdf %}
+[ut64-3]: {% link solutions/todai/todai-zenki/1964/64-3/ut-64-3.pdf %}
+[ut64-4]: {% link solutions/todai/todai-zenki/1964/64-4/ut-64-4.pdf %}
+[ut64-5]: {% link solutions/todai/todai-zenki/1964/64-5/ut-64-5.pdf %}
+[ut64-6]: {% link solutions/todai/todai-zenki/1964/64-6/ut-64-6.pdf %}
+[ut65-1]: {% link solutions/todai/todai-zenki/1965/65-1/ut-65-1.pdf %}
+[ut65-2]: {% link solutions/todai/todai-zenki/1965/65-2/ut-65-2.pdf %}
+[ut65-3]: {% link solutions/todai/todai-zenki/1965/65-3/ut-65-3.pdf %}
+[ut65-4]: {% link solutions/todai/todai-zenki/1965/65-4/ut-65-4.pdf %}
+[ut65-5]: {% link solutions/todai/todai-zenki/1965/65-5/ut-65-5.pdf %}
+[ut65-6]: {% link solutions/todai/todai-zenki/1965/65-6/ut-65-6.pdf %}
+[ut66-1]: {% link solutions/todai/todai-zenki/1966/66-1/ut-66-1.pdf %}
+[ut66-2]: {% link solutions/todai/todai-zenki/1966/66-2/ut-66-2.pdf %}
+[ut66-3]: {% link solutions/todai/todai-zenki/1966/66-3/ut-66-3.pdf %}
+[ut66-4]: {% link solutions/todai/todai-zenki/1966/66-4/ut-66-4.pdf %}
+[ut66-5]: {% link solutions/todai/todai-zenki/1966/66-5/ut-66-5.pdf %}
+[ut66-6]: {% link solutions/todai/todai-zenki/1966/66-6/ut-66-6.pdf %}
+[ut67-1]: {% link solutions/todai/todai-zenki/1967/67-1/ut-67-1.pdf %}
+[ut67-2]: {% link solutions/todai/todai-zenki/1967/67-2/ut-67-2.pdf %}
+[ut67-3]: {% link solutions/todai/todai-zenki/1967/67-3/ut-67-3.pdf %}
+[ut67-4]: {% link solutions/todai/todai-zenki/1967/67-4/ut-67-4.pdf %}
+[ut67-5]: {% link solutions/todai/todai-zenki/1967/67-5/ut-67-5.pdf %}
+[ut67-6]: {% link solutions/todai/todai-zenki/1967/67-6/ut-67-6.pdf %}
+[ut68-1]: {% link solutions/todai/todai-zenki/1968/68-1/ut-68-1.pdf %}
+[ut68-2]: {% link solutions/todai/todai-zenki/1968/68-2/ut-68-2.pdf %}
+[ut68-3]: {% link solutions/todai/todai-zenki/1968/68-3/ut-68-3.pdf %}
+[ut68-4]: {% link solutions/todai/todai-zenki/1968/68-4/ut-68-4.pdf %}
+[ut68-5]: {% link solutions/todai/todai-zenki/1968/68-5/ut-68-5.pdf %}
+[ut68-6]: {% link solutions/todai/todai-zenki/1968/68-6/ut-68-6.pdf %}
+[ut69-1]: {% link solutions/todai/todai-zenki/1969/69-1/ut-69-1.pdf %}
+[ut69-2]: {% link solutions/todai/todai-zenki/1969/69-2/ut-69-2.pdf %}
+[ut69-3]: {% link solutions/todai/todai-zenki/1969/69-3/ut-69-3.pdf %}
+[ut69-4]: {% link solutions/todai/todai-zenki/1969/69-4/ut-69-4.pdf %}
+[ut69-5]: {% link solutions/todai/todai-zenki/1969/69-5/ut-69-5.pdf %}
+[ut69-6]: {% link solutions/todai/todai-zenki/1969/69-6/ut-69-6.pdf %}
+[ut70-1]: {% link solutions/todai/todai-zenki/1970/70-1/ut-70-1.pdf %}
+[ut70-2]: {% link solutions/todai/todai-zenki/1970/70-2/ut-70-2.pdf %}
+[ut70-3]: {% link solutions/todai/todai-zenki/1970/70-3/ut-70-3.pdf %}
+[ut70-4]: {% link solutions/todai/todai-zenki/1970/70-4/ut-70-4.pdf %}
+[ut70-5]: {% link solutions/todai/todai-zenki/1970/70-5/ut-70-5.pdf %}
+[ut70-6]: {% link solutions/todai/todai-zenki/1970/70-6/ut-70-6.pdf %}
+[ut71-1]: {% link solutions/todai/todai-zenki/1971/71-1/ut-71-1.pdf %}
+[ut71-2]: {% link solutions/todai/todai-zenki/1971/71-2/ut-71-2.pdf %}
+[ut71-3]: {% link solutions/todai/todai-zenki/1971/71-3/ut-71-3.pdf %}
+[ut71-4]: {% link solutions/todai/todai-zenki/1971/71-4/ut-71-4.pdf %}
+[ut71-5]: {% link solutions/todai/todai-zenki/1971/71-5/ut-71-5.pdf %}
+[ut71-6]: {% link solutions/todai/todai-zenki/1971/71-6/ut-71-6.pdf %}
+[ut72-1]: {% link solutions/todai/todai-zenki/1972/72-1/ut-72-1.pdf %}
+[ut72-2]: {% link solutions/todai/todai-zenki/1972/72-2/ut-72-2.pdf %}
+[ut72-3]: {% link solutions/todai/todai-zenki/1972/72-3/ut-72-3.pdf %}
+[ut72-4]: {% link solutions/todai/todai-zenki/1972/72-4/ut-72-4.pdf %}
+[ut72-5]: {% link solutions/todai/todai-zenki/1972/72-5/ut-72-5.pdf %}
+[ut72-6]: {% link solutions/todai/todai-zenki/1972/72-6/ut-72-6.pdf %}
+[ut73-1]: {% link solutions/todai/todai-zenki/1973/73-1/ut-73-1.pdf %}
+[ut73-2]: {% link solutions/todai/todai-zenki/1973/73-2/ut-73-2.pdf %}
+[ut73-3]: {% link solutions/todai/todai-zenki/1973/73-3/ut-73-3.pdf %}
+[ut73-4]: {% link solutions/todai/todai-zenki/1973/73-4/ut-73-4.pdf %}
+[ut73-5]: {% link solutions/todai/todai-zenki/1973/73-5/ut-73-5.pdf %}
+[ut73-6]: {% link solutions/todai/todai-zenki/1973/73-6/ut-73-6.pdf %}
+[ut74-1]: {% link solutions/todai/todai-zenki/1974/74-1/ut-74-1.pdf %}
+[ut74-2]: {% link solutions/todai/todai-zenki/1974/74-2/ut-74-2.pdf %}
+[ut74-3]: {% link solutions/todai/todai-zenki/1974/74-3/ut-74-3.pdf %}
+[ut74-4]: {% link solutions/todai/todai-zenki/1974/74-4/ut-74-4.pdf %}
+[ut74-5]: {% link solutions/todai/todai-zenki/1974/74-5/ut-74-5.pdf %}
+[ut74-6]: {% link solutions/todai/todai-zenki/1974/74-6/ut-74-6.pdf %}
+[ut75-1]: {% link solutions/todai/todai-zenki/1975/75-1/ut-75-1.pdf %}
+[ut75-2]: {% link solutions/todai/todai-zenki/1975/75-2/ut-75-2.pdf %}
+[ut75-3]: {% link solutions/todai/todai-zenki/1975/75-3/ut-75-3.pdf %}
+[ut75-4]: {% link solutions/todai/todai-zenki/1975/75-4/ut-75-4.pdf %}
+[ut75-5]: {% link solutions/todai/todai-zenki/1975/75-5/ut-75-5.pdf %}
+[ut75-6]: {% link solutions/todai/todai-zenki/1975/75-6/ut-75-6.pdf %}
+[ut76-1]: {% link solutions/todai/todai-zenki/1976/76-1/ut-76-1.pdf %}
+[ut76-2]: {% link solutions/todai/todai-zenki/1976/76-2/ut-76-2.pdf %}
+[ut76-3]: {% link solutions/todai/todai-zenki/1976/76-3/ut-76-3.pdf %}
+[ut76-4]: {% link solutions/todai/todai-zenki/1976/76-4/ut-76-4.pdf %}
+[ut76-5]: {% link solutions/todai/todai-zenki/1976/76-5/ut-76-5.pdf %}
+[ut76-6]: {% link solutions/todai/todai-zenki/1976/76-6/ut-76-6.pdf %}
+[ut77-1]: {% link solutions/todai/todai-zenki/1977/77-1/ut-77-1.pdf %}
+[ut77-2]: {% link solutions/todai/todai-zenki/1977/77-2/ut-77-2.pdf %}
+[ut77-3]: {% link solutions/todai/todai-zenki/1977/77-3/ut-77-3.pdf %}
+[ut77-4]: {% link solutions/todai/todai-zenki/1977/77-4/ut-77-4.pdf %}
+[ut77-5]: {% link solutions/todai/todai-zenki/1977/77-5/ut-77-5.pdf %}
+[ut77-6]: {% link solutions/todai/todai-zenki/1977/77-6/ut-77-6.pdf %}
+[ut78-1]: {% link solutions/todai/todai-zenki/1978/78-1/ut-78-1.pdf %}
+[ut78-2]: {% link solutions/todai/todai-zenki/1978/78-2/ut-78-2.pdf %}
+[ut78-3]: {% link solutions/todai/todai-zenki/1978/78-3/ut-78-3.pdf %}
+[ut78-4]: {% link solutions/todai/todai-zenki/1978/78-4/ut-78-4.pdf %}
+[ut78-5]: {% link solutions/todai/todai-zenki/1978/78-5/ut-78-5.pdf %}
+[ut78-6]: {% link solutions/todai/todai-zenki/1978/78-6/ut-78-6.pdf %}
+[ut79-1]: {% link solutions/todai/todai-zenki/1979/79-1/ut-79-1.pdf %}
+[ut79-2]: {% link solutions/todai/todai-zenki/1979/79-2/ut-79-2.pdf %}
+[ut79-3]: {% link solutions/todai/todai-zenki/1979/79-3/ut-79-3.pdf %}
+[ut79-4]: {% link solutions/todai/todai-zenki/1979/79-4/ut-79-4.pdf %}
+[ut79-5]: {% link solutions/todai/todai-zenki/1979/79-5/ut-79-5.pdf %}
+[ut79-6]: {% link solutions/todai/todai-zenki/1979/79-6/ut-79-6.pdf %}
+[ut80-1]: {% link solutions/todai/todai-zenki/1980/80-1/ut-80-1.pdf %}
+[ut80-2]: {% link solutions/todai/todai-zenki/1980/80-2/ut-80-2.pdf %}
+[ut80-3]: {% link solutions/todai/todai-zenki/1980/80-3/ut-80-3.pdf %}
+[ut80-4]: {% link solutions/todai/todai-zenki/1980/80-4/ut-80-4.pdf %}
+[ut80-5]: {% link solutions/todai/todai-zenki/1980/80-5/ut-80-5.pdf %}
+[ut80-6]: {% link solutions/todai/todai-zenki/1980/80-6/ut-80-6.pdf %}
+[ut81-1]: {% link solutions/todai/todai-zenki/1981/81-1/ut-81-1.pdf %}
+[ut81-2]: {% link solutions/todai/todai-zenki/1981/81-2/ut-81-2.pdf %}
+[ut81-3]: {% link solutions/todai/todai-zenki/1981/81-3/ut-81-3.pdf %}
+[ut81-4]: {% link solutions/todai/todai-zenki/1981/81-4/ut-81-4.pdf %}
+[ut81-5]: {% link solutions/todai/todai-zenki/1981/81-5/ut-81-5.pdf %}
+[ut81-6]: {% link solutions/todai/todai-zenki/1981/81-6/ut-81-6.pdf %}
+[ut82-1]: {% link solutions/todai/todai-zenki/1982/82-1/ut-82-1.pdf %}
+[ut82-2]: {% link solutions/todai/todai-zenki/1982/82-2/ut-82-2.pdf %}
+[ut82-3]: {% link solutions/todai/todai-zenki/1982/82-3/ut-82-3.pdf %}
+[ut82-4]: {% link solutions/todai/todai-zenki/1982/82-4/ut-82-4.pdf %}
+[ut82-5]: {% link solutions/todai/todai-zenki/1982/82-5/ut-82-5.pdf %}
+[ut82-6]: {% link solutions/todai/todai-zenki/1982/82-6/ut-82-6.pdf %}
+[ut83-1]: {% link solutions/todai/todai-zenki/1983/83-1/ut-83-1.pdf %}
+[ut83-2]: {% link solutions/todai/todai-zenki/1983/83-2/ut-83-2.pdf %}
+[ut83-3]: {% link solutions/todai/todai-zenki/1983/83-3/ut-83-3.pdf %}
+[ut83-4]: {% link solutions/todai/todai-zenki/1983/83-4/ut-83-4.pdf %}
+[ut83-5]: {% link solutions/todai/todai-zenki/1983/83-5/ut-83-5.pdf %}
+[ut83-6]: {% link solutions/todai/todai-zenki/1983/83-6/ut-83-6.pdf %}
+[ut84-1]: {% link solutions/todai/todai-zenki/1984/84-1/ut-84-1.pdf %}
+[ut84-2]: {% link solutions/todai/todai-zenki/1984/84-2/ut-84-2.pdf %}
+[ut84-3]: {% link solutions/todai/todai-zenki/1984/84-3/ut-84-3.pdf %}
+[ut84-4]: {% link solutions/todai/todai-zenki/1984/84-4/ut-84-4.pdf %}
+[ut84-5]: {% link solutions/todai/todai-zenki/1984/84-5/ut-84-5.pdf %}
+[ut84-6]: {% link solutions/todai/todai-zenki/1984/84-6/ut-84-6.pdf %}
+[ut85-1]: {% link solutions/todai/todai-zenki/1985/85-1/ut-85-1.pdf %}
+[ut85-2]: {% link solutions/todai/todai-zenki/1985/85-2/ut-85-2.pdf %}
+[ut85-3]: {% link solutions/todai/todai-zenki/1985/85-3/ut-85-3.pdf %}
+[ut85-4]: {% link solutions/todai/todai-zenki/1985/85-4/ut-85-4.pdf %}
+[ut85-5]: {% link solutions/todai/todai-zenki/1985/85-5/ut-85-5.pdf %}
+[ut85-6]: {% link solutions/todai/todai-zenki/1985/85-6/ut-85-6.pdf %}
+[ut86-1]: {% link solutions/todai/todai-zenki/1986/86-1/ut-86-1.pdf %}
+[ut86-2]: {% link solutions/todai/todai-zenki/1986/86-2/ut-86-2.pdf %}
+[ut86-3]: {% link solutions/todai/todai-zenki/1986/86-3/ut-86-3.pdf %}
+[ut86-4]: {% link solutions/todai/todai-zenki/1986/86-4/ut-86-4.pdf %}
+[ut86-5]: {% link solutions/todai/todai-zenki/1986/86-5/ut-86-5.pdf %}
+[ut86-6]: {% link solutions/todai/todai-zenki/1986/86-6/ut-86-6.pdf %}
+[ut87-1]: {% link solutions/todai/todai-zenki/1987/87-1/ut-87-1.pdf %}
+[ut87-2]: {% link solutions/todai/todai-zenki/1987/87-2/ut-87-2.pdf %}
+[ut87-3]: {% link solutions/todai/todai-zenki/1987/87-3/ut-87-3.pdf %}
+[ut87-4]: {% link solutions/todai/todai-zenki/1987/87-4/ut-87-4.pdf %}
+[ut87-5]: {% link solutions/todai/todai-zenki/1987/87-5/ut-87-5.pdf %}
+[ut87-6]: {% link solutions/todai/todai-zenki/1987/87-6/ut-87-6.pdf %}
+[ut88-1]: {% link solutions/todai/todai-zenki/1988/88-1/ut-88-1.pdf %}
+[ut88-2]: {% link solutions/todai/todai-zenki/1988/88-2/ut-88-2.pdf %}
+[ut88-3]: {% link solutions/todai/todai-zenki/1988/88-3/ut-88-3.pdf %}
+[ut88-4]: {% link solutions/todai/todai-zenki/1988/88-4/ut-88-4.pdf %}
+[ut88-5]: {% link solutions/todai/todai-zenki/1988/88-5/ut-88-5.pdf %}
+[ut88-6]: {% link solutions/todai/todai-zenki/1988/88-6/ut-88-6.pdf %}
+[ut89-1]: {% link solutions/todai/todai-zenki/1989/89-1/ut-89-1.pdf %}
+[ut89-2]: {% link solutions/todai/todai-zenki/1989/89-2/ut-89-2.pdf %}
+[ut89-3]: {% link solutions/todai/todai-zenki/1989/89-3/ut-89-3.pdf %}
+[ut89-4]: {% link solutions/todai/todai-zenki/1989/89-4/ut-89-4.pdf %}
+[ut89-5]: {% link solutions/todai/todai-zenki/1989/89-5/ut-89-5.pdf %}
+[ut89-6]: {% link solutions/todai/todai-zenki/1989/89-6/ut-89-6.pdf %}
+[ut90-1]: {% link solutions/todai/todai-zenki/1990/90-1/ut-90-1.pdf %}
+[ut90-2]: {% link solutions/todai/todai-zenki/1990/90-2/ut-90-2.pdf %}
+[ut90-3]: {% link solutions/todai/todai-zenki/1990/90-3/ut-90-3.pdf %}
+[ut90-4]: {% link solutions/todai/todai-zenki/1990/90-4/ut-90-4.pdf %}
+[ut90-5]: {% link solutions/todai/todai-zenki/1990/90-5/ut-90-5.pdf %}
+[ut90-6]: {% link solutions/todai/todai-zenki/1990/90-6/ut-90-6.pdf %}
+[ut91-1]: {% link solutions/todai/todai-zenki/1991/91-1/ut-91-1.pdf %}
+[ut91-2]: {% link solutions/todai/todai-zenki/1991/91-2/ut-91-2.pdf %}
+[ut91-3]: {% link solutions/todai/todai-zenki/1991/91-3/ut-91-3.pdf %}
+[ut91-4]: {% link solutions/todai/todai-zenki/1991/91-4/ut-91-4.pdf %}
+[ut91-5]: {% link solutions/todai/todai-zenki/1991/91-5/ut-91-5.pdf %}
+[ut91-6]: {% link solutions/todai/todai-zenki/1991/91-6/ut-91-6.pdf %}
+[ut92-1]: {% link solutions/todai/todai-zenki/1992/92-1/ut-92-1.pdf %}
+[ut92-2]: {% link solutions/todai/todai-zenki/1992/92-2/ut-92-2.pdf %}
+[ut92-3]: {% link solutions/todai/todai-zenki/1992/92-3/ut-92-3.pdf %}
+[ut92-4]: {% link solutions/todai/todai-zenki/1992/92-4/ut-92-4.pdf %}
+[ut92-5]: {% link solutions/todai/todai-zenki/1992/92-5/ut-92-5.pdf %}
+[ut92-6]: {% link solutions/todai/todai-zenki/1992/92-6/ut-92-6.pdf %}
+[ut93-1]: {% link solutions/todai/todai-zenki/1993/93-1/ut-93-1.pdf %}
+[ut93-2]: {% link solutions/todai/todai-zenki/1993/93-2/ut-93-2.pdf %}
+[ut93-3]: {% link solutions/todai/todai-zenki/1993/93-3/ut-93-3.pdf %}
+[ut93-4]: {% link solutions/todai/todai-zenki/1993/93-4/ut-93-4.pdf %}
+[ut93-5]: {% link solutions/todai/todai-zenki/1993/93-5/ut-93-5.pdf %}
+[ut93-6]: {% link solutions/todai/todai-zenki/1993/93-6/ut-93-6.pdf %}
+[ut94-1]: {% link solutions/todai/todai-zenki/1994/94-1/ut-94-1.pdf %}
+[ut94-2]: {% link solutions/todai/todai-zenki/1994/94-2/ut-94-2.pdf %}
+[ut94-3]: {% link solutions/todai/todai-zenki/1994/94-3/ut-94-3.pdf %}
+[ut94-4]: {% link solutions/todai/todai-zenki/1994/94-4/ut-94-4.pdf %}
+[ut94-5]: {% link solutions/todai/todai-zenki/1994/94-5/ut-94-5.pdf %}
+[ut94-6]: {% link solutions/todai/todai-zenki/1994/94-6/ut-94-6.pdf %}
+[ut95-1]: {% link solutions/todai/todai-zenki/1995/95-1/ut-95-1.pdf %}
+[ut95-2]: {% link solutions/todai/todai-zenki/1995/95-2/ut-95-2.pdf %}
+[ut95-3]: {% link solutions/todai/todai-zenki/1995/95-3/ut-95-3.pdf %}
+[ut95-4]: {% link solutions/todai/todai-zenki/1995/95-4/ut-95-4.pdf %}
+[ut95-5]: {% link solutions/todai/todai-zenki/1995/95-5/ut-95-5.pdf %}
+[ut95-6]: {% link solutions/todai/todai-zenki/1995/95-6/ut-95-6.pdf %}
+[ut96-1]: {% link solutions/todai/todai-zenki/1996/96-1/ut-96-1.pdf %}
+[ut96-2]: {% link solutions/todai/todai-zenki/1996/96-2/ut-96-2.pdf %}
+[ut96-3]: {% link solutions/todai/todai-zenki/1996/96-3/ut-96-3.pdf %}
+[ut96-4]: {% link solutions/todai/todai-zenki/1996/96-4/ut-96-4.pdf %}
+[ut96-5]: {% link solutions/todai/todai-zenki/1996/96-5/ut-96-5.pdf %}
+[ut96-6]: {% link solutions/todai/todai-zenki/1996/96-6/ut-96-6.pdf %}
+[ut97-1]: {% link solutions/todai/todai-zenki/1997/97-1/ut-97-1.pdf %}
+[ut97-2]: {% link solutions/todai/todai-zenki/1997/97-2/ut-97-2.pdf %}
+[ut97-3]: {% link solutions/todai/todai-zenki/1997/97-3/ut-97-3.pdf %}
+[ut97-4]: {% link solutions/todai/todai-zenki/1997/97-4/ut-97-4.pdf %}
+[ut97-5]: {% link solutions/todai/todai-zenki/1997/97-5/ut-97-5.pdf %}
+[ut97-6]: {% link solutions/todai/todai-zenki/1997/97-6/ut-97-6.pdf %}
+[ut98-1]: {% link solutions/todai/todai-zenki/1998/98-1/ut-98-1.pdf %}
+[ut98-2]: {% link solutions/todai/todai-zenki/1998/98-2/ut-98-2.pdf %}
+[ut98-3]: {% link solutions/todai/todai-zenki/1998/98-3/ut-98-3.pdf %}
+[ut98-4]: {% link solutions/todai/todai-zenki/1998/98-4/ut-98-4.pdf %}
+[ut98-5]: {% link solutions/todai/todai-zenki/1998/98-5/ut-98-5.pdf %}
+[ut98-6]: {% link solutions/todai/todai-zenki/1998/98-6/ut-98-6.pdf %}
+[ut99-1]: {% link solutions/todai/todai-zenki/1999/99-1/ut-99-1.pdf %}
+[ut99-2]: {% link solutions/todai/todai-zenki/1999/99-2/ut-99-2.pdf %}
+[ut99-3]: {% link solutions/todai/todai-zenki/1999/99-3/ut-99-3.pdf %}
+[ut99-4]: {% link solutions/todai/todai-zenki/1999/99-4/ut-99-4.pdf %}
+[ut99-5]: {% link solutions/todai/todai-zenki/1999/99-5/ut-99-5.pdf %}
+[ut99-6]: {% link solutions/todai/todai-zenki/1999/99-6/ut-99-6.pdf %}
+[ut00-1]: {% link solutions/todai/todai-zenki/2000/00-1/ut-00-1.pdf %}
+[ut00-2]: {% link solutions/todai/todai-zenki/2000/00-2/ut-00-2.pdf %}
+[ut00-3]: {% link solutions/todai/todai-zenki/2000/00-3/ut-00-3.pdf %}
+[ut00-4]: {% link solutions/todai/todai-zenki/2000/00-4/ut-00-4.pdf %}
+[ut00-5]: {% link solutions/todai/todai-zenki/2000/00-5/ut-00-5.pdf %}
+[ut00-6]: {% link solutions/todai/todai-zenki/2000/00-6/ut-00-6.pdf %}
+[ut01-1]: {% link solutions/todai/todai-zenki/2001/01-1/ut-01-1.pdf %}
+[ut01-2]: {% link solutions/todai/todai-zenki/2001/01-2/ut-01-2.pdf %}
+[ut01-3]: {% link solutions/todai/todai-zenki/2001/01-3/ut-01-3.pdf %}
+[ut01-4]: {% link solutions/todai/todai-zenki/2001/01-4/ut-01-4.pdf %}
+[ut01-5]: {% link solutions/todai/todai-zenki/2001/01-5/ut-01-5.pdf %}
+[ut01-6]: {% link solutions/todai/todai-zenki/2001/01-6/ut-01-6.pdf %}
+[ut02-1]: {% link solutions/todai/todai-zenki/2002/02-1/ut-02-1.pdf %}
+[ut02-2]: {% link solutions/todai/todai-zenki/2002/02-2/ut-02-2.pdf %}
+[ut02-3]: {% link solutions/todai/todai-zenki/2002/02-3/ut-02-3.pdf %}
+[ut02-4]: {% link solutions/todai/todai-zenki/2002/02-4/ut-02-4.pdf %}
+[ut02-5]: {% link solutions/todai/todai-zenki/2002/02-5/ut-02-5.pdf %}
+[ut02-6]: {% link solutions/todai/todai-zenki/2002/02-6/ut-02-6.pdf %}
+[ut03-1]: {% link solutions/todai/todai-zenki/2003/03-1/ut-03-1.pdf %}
+[ut03-2]: {% link solutions/todai/todai-zenki/2003/03-2/ut-03-2.pdf %}
+[ut03-3]: {% link solutions/todai/todai-zenki/2003/03-3/ut-03-3.pdf %}
+[ut03-4]: {% link solutions/todai/todai-zenki/2003/03-4/ut-03-4.pdf %}
+[ut03-5]: {% link solutions/todai/todai-zenki/2003/03-5/ut-03-5.pdf %}
+[ut03-6]: {% link solutions/todai/todai-zenki/2003/03-6/ut-03-6.pdf %}
+[ut04-1]: {% link solutions/todai/todai-zenki/2004/04-1/ut-04-1.pdf %}
+[ut04-2]: {% link solutions/todai/todai-zenki/2004/04-2/ut-04-2.pdf %}
+[ut04-3]: {% link solutions/todai/todai-zenki/2004/04-3/ut-04-3.pdf %}
+[ut04-4]: {% link solutions/todai/todai-zenki/2004/04-4/ut-04-4.pdf %}
+[ut04-5]: {% link solutions/todai/todai-zenki/2004/04-5/ut-04-5.pdf %}
+[ut04-6]: {% link solutions/todai/todai-zenki/2004/04-6/ut-04-6.pdf %}
+[ut05-1]: {% link solutions/todai/todai-zenki/2005/05-1/ut-05-1.pdf %}
+[ut05-2]: {% link solutions/todai/todai-zenki/2005/05-2/ut-05-2.pdf %}
+[ut05-3]: {% link solutions/todai/todai-zenki/2005/05-3/ut-05-3.pdf %}
+[ut05-4]: {% link solutions/todai/todai-zenki/2005/05-4/ut-05-4.pdf %}
+[ut05-5]: {% link solutions/todai/todai-zenki/2005/05-5/ut-05-5.pdf %}
+[ut05-6]: {% link solutions/todai/todai-zenki/2005/05-6/ut-05-6.pdf %}
+[ut06-1]: {% link solutions/todai/todai-zenki/2006/06-1/ut-06-1.pdf %}
+[ut06-2]: {% link solutions/todai/todai-zenki/2006/06-2/ut-06-2.pdf %}
+[ut06-3]: {% link solutions/todai/todai-zenki/2006/06-3/ut-06-3.pdf %}
+[ut06-4]: {% link solutions/todai/todai-zenki/2006/06-4/ut-06-4.pdf %}
+[ut06-5]: {% link solutions/todai/todai-zenki/2006/06-5/ut-06-5.pdf %}
+[ut06-6]: {% link solutions/todai/todai-zenki/2006/06-6/ut-06-6.pdf %}
+[ut07-1]: {% link solutions/todai/todai-zenki/2007/07-1/ut-07-1.pdf %}
+[ut07-2]: {% link solutions/todai/todai-zenki/2007/07-2/ut-07-2.pdf %}
+[ut07-3]: {% link solutions/todai/todai-zenki/2007/07-3/ut-07-3.pdf %}
+[ut07-4]: {% link solutions/todai/todai-zenki/2007/07-4/ut-07-4.pdf %}
+[ut07-5]: {% link solutions/todai/todai-zenki/2007/07-5/ut-07-5.pdf %}
+[ut07-6]: {% link solutions/todai/todai-zenki/2007/07-6/ut-07-6.pdf %}
+[ut08-1]: {% link solutions/todai/todai-zenki/2008/08-1/ut-08-1.pdf %}
+[ut08-2]: {% link solutions/todai/todai-zenki/2008/08-2/ut-08-2.pdf %}
+[ut08-3]: {% link solutions/todai/todai-zenki/2008/08-3/ut-08-3.pdf %}
+[ut08-4]: {% link solutions/todai/todai-zenki/2008/08-4/ut-08-4.pdf %}
+[ut08-5]: {% link solutions/todai/todai-zenki/2008/08-5/ut-08-5.pdf %}
+[ut08-6]: {% link solutions/todai/todai-zenki/2008/08-6/ut-08-6.pdf %}
+[ut09-1]: {% link solutions/todai/todai-zenki/2009/09-1/ut-09-1.pdf %}
+[ut09-2]: {% link solutions/todai/todai-zenki/2009/09-2/ut-09-2.pdf %}
+[ut09-3]: {% link solutions/todai/todai-zenki/2009/09-3/ut-09-3.pdf %}
+[ut09-4]: {% link solutions/todai/todai-zenki/2009/09-4/ut-09-4.pdf %}
+[ut09-5]: {% link solutions/todai/todai-zenki/2009/09-5/ut-09-5.pdf %}
+[ut09-6]: {% link solutions/todai/todai-zenki/2009/09-6/ut-09-6.pdf %}
+[ut10-1]: {% link solutions/todai/todai-zenki/2010/10-1/ut-10-1.pdf %}
+[ut10-2]: {% link solutions/todai/todai-zenki/2010/10-2/ut-10-2.pdf %}
+[ut10-3]: {% link solutions/todai/todai-zenki/2010/10-3/ut-10-3.pdf %}
+[ut10-4]: {% link solutions/todai/todai-zenki/2010/10-4/ut-10-4.pdf %}
+[ut10-5]: {% link solutions/todai/todai-zenki/2010/10-5/ut-10-5.pdf %}
+[ut10-6]: {% link solutions/todai/todai-zenki/2010/10-6/ut-10-6.pdf %}
+[ut11-1]: {% link solutions/todai/todai-zenki/2011/11-1/ut-11-1.pdf %}
+[ut11-2]: {% link solutions/todai/todai-zenki/2011/11-2/ut-11-2.pdf %}
+[ut11-3]: {% link solutions/todai/todai-zenki/2011/11-3/ut-11-3.pdf %}
+[ut11-4]: {% link solutions/todai/todai-zenki/2011/11-4/ut-11-4.pdf %}
+[ut11-5]: {% link solutions/todai/todai-zenki/2011/11-5/ut-11-5.pdf %}
+[ut11-6]: {% link solutions/todai/todai-zenki/2011/11-6/ut-11-6.pdf %}
+[ut12-1]: {% link solutions/todai/todai-zenki/2012/12-1/ut-12-1.pdf %}
+[ut12-2]: {% link solutions/todai/todai-zenki/2012/12-2/ut-12-2.pdf %}
+[ut12-3]: {% link solutions/todai/todai-zenki/2012/12-3/ut-12-3.pdf %}
+[ut12-4]: {% link solutions/todai/todai-zenki/2012/12-4/ut-12-4.pdf %}
+[ut12-5]: {% link solutions/todai/todai-zenki/2012/12-5/ut-12-5.pdf %}
+[ut12-6]: {% link solutions/todai/todai-zenki/2012/12-6/ut-12-6.pdf %}
+[ut13-1]: {% link solutions/todai/todai-zenki/2013/13-1/ut-13-1.pdf %}
+[ut13-2]: {% link solutions/todai/todai-zenki/2013/13-2/ut-13-2.pdf %}
+[ut13-3]: {% link solutions/todai/todai-zenki/2013/13-3/ut-13-3.pdf %}
+[ut13-4]: {% link solutions/todai/todai-zenki/2013/13-4/ut-13-4.pdf %}
+[ut13-5]: {% link solutions/todai/todai-zenki/2013/13-5/ut-13-5.pdf %}
+[ut13-6]: {% link solutions/todai/todai-zenki/2013/13-6/ut-13-6.pdf %}
+[ut14-1]: {% link solutions/todai/todai-zenki/2014/14-1/ut-14-1.pdf %}
+[ut14-2]: {% link solutions/todai/todai-zenki/2014/14-2/ut-14-2.pdf %}
+[ut14-3]: {% link solutions/todai/todai-zenki/2014/14-3/ut-14-3.pdf %}
+[ut14-4]: {% link solutions/todai/todai-zenki/2014/14-4/ut-14-4.pdf %}
+[ut14-5]: {% link solutions/todai/todai-zenki/2014/14-5/ut-14-5.pdf %}
+[ut14-6]: {% link solutions/todai/todai-zenki/2014/14-6/ut-14-6.pdf %}
 
 
 
-[ukk89]: problems/kyodai/kouki/1989/1989.pdf
-[ukk90]: problems/kyodai/kouki/1990/1990.pdf
-[ukk91]: problems/kyodai/kouki/1991/1991.pdf
-[ukk92]: problems/kyodai/kouki/1992/1992.pdf
-[ukk93]: problems/kyodai/kouki/1993/1993.pdf
-[ukk94]: problems/kyodai/kouki/1994/1994.pdf
-[ukk95]: problems/kyodai/kouki/1995/1995.pdf
-[ukk96]: problems/kyodai/kouki/1996/1996.pdf
-[ukk97]: problems/kyodai/kouki/1997/1997.pdf
-[ukk98]: problems/kyodai/kouki/1998/1998.pdf
-[ukk99]: problems/kyodai/kouki/1999/1999.pdf
-[ukk00]: problems/kyodai/kouki/2000/2000.pdf
-[ukk01]: problems/kyodai/kouki/2001/2001.pdf
-[ukk02]: problems/kyodai/kouki/2002/2002.pdf
-[ukk03]: problems/kyodai/kouki/2003/2003.pdf
-[ukk04]: problems/kyodai/kouki/2004/2004.pdf
-[ukk05]: problems/kyodai/kouki/2005/2005.pdf
-[ukk06]: problems/kyodai/kouki/2006/2006.pdf
+[ukk89]: {% link problems/kyodai/kouki/1989/1989.pdf %}
+[ukk90]: {% link problems/kyodai/kouki/1990/1990.pdf %}
+[ukk91]: {% link problems/kyodai/kouki/1991/1991.pdf %}
+[ukk92]: {% link problems/kyodai/kouki/1992/1992.pdf %}
+[ukk93]: {% link problems/kyodai/kouki/1993/1993.pdf %}
+[ukk94]: {% link problems/kyodai/kouki/1994/1994.pdf %}
+[ukk95]: {% link problems/kyodai/kouki/1995/1995.pdf %}
+[ukk96]: {% link problems/kyodai/kouki/1996/1996.pdf %}
+[ukk97]: {% link problems/kyodai/kouki/1997/1997.pdf %}
+[ukk98]: {% link problems/kyodai/kouki/1998/1998.pdf %}
+[ukk99]: {% link problems/kyodai/kouki/1999/1999.pdf %}
+[ukk00]: {% link problems/kyodai/kouki/2000/2000.pdf %}
+[ukk01]: {% link problems/kyodai/kouki/2001/2001.pdf %}
+[ukk02]: {% link problems/kyodai/kouki/2002/2002.pdf %}
+[ukk03]: {% link problems/kyodai/kouki/2003/2003.pdf %}
+[ukk04]: {% link problems/kyodai/kouki/2004/2004.pdf %}
+[ukk05]: {% link problems/kyodai/kouki/2005/2005.pdf %}
+[ukk06]: {% link problems/kyodai/kouki/2006/2006.pdf %}
 
 
 
-[tk61]: {% link _pages/ent-ex/solutions/toukou/toukou-zenki/t1961/t1961.pdf %}
-[tk62]: solutions/toukou/toukou-zenki/t1962/t1962.pdf
-[tk63]: solutions/toukou/toukou-zenki/t1963/t1963.pdf
-[tk64]: solutions/toukou/toukou-zenki/t1964/t1964.pdf
-[tk65]: solutions/toukou/toukou-zenki/t1965/t1965.pdf
-[tk66]: solutions/toukou/toukou-zenki/t1966/t1966.pdf
-[tk67]: solutions/toukou/toukou-zenki/t1967/t1967.pdf
-[tk68]: solutions/toukou/toukou-zenki/t1968/t1968.pdf
-[tk69]: solutions/toukou/toukou-zenki/t1969/t1969.pdf
-[tk70]: solutions/toukou/toukou-zenki/t1970/t1970.pdf
-[tk71]: solutions/toukou/toukou-zenki/t1971/t1971.pdf
-[tk72]: solutions/toukou/toukou-zenki/t1972/t1972.pdf
-[tk73]: solutions/toukou/toukou-zenki/t1973/t1973.pdf
-[tk74]: solutions/toukou/toukou-zenki/t1974/t1974.pdf
-[tk75]: solutions/toukou/toukou-zenki/t1975/t1975.pdf
-[tk76]: solutions/toukou/toukou-zenki/t1976/t1976.pdf
-[tk77]: solutions/toukou/toukou-zenki/t1977/t1977.pdf
-[tk78]: solutions/toukou/toukou-zenki/t1978/t1978.pdf
-[tk79]: solutions/toukou/toukou-zenki/t1979/t1979.pdf
-[tk80]: solutions/toukou/toukou-zenki/t1980/t1980.pdf
-[tk81]: solutions/toukou/toukou-zenki/t1981/t1981.pdf
-[tk82]: solutions/toukou/toukou-zenki/t1982/t1982.pdf
-[tk83]: solutions/toukou/toukou-zenki/t1983/t1983.pdf
-[tk84]: solutions/toukou/toukou-zenki/t1984/t1984.pdf
-[tk85]: solutions/toukou/toukou-zenki/t1985/t1985.pdf
-[tk86]: solutions/toukou/toukou-zenki/t1986/t1986.pdf
-[tk87]: solutions/toukou/toukou-zenki/t1987/t1987.pdf
-[tk88]: solutions/toukou/toukou-zenki/t1988/t1988.pdf
-[tk89]: solutions/toukou/toukou-zenki/t1989/t1989.pdf
-[tk90]: solutions/toukou/toukou-zenki/t1990/t1990.pdf
-[tk91]: solutions/toukou/toukou-zenki/t1991/t1991.pdf
-[tk92]: solutions/toukou/toukou-zenki/t1992/t1992.pdf
-[tk93]: solutions/toukou/toukou-zenki/t1993/t1993.pdf
-[tk94]: solutions/toukou/toukou-zenki/t1994/t1994.pdf
-[tk95]: solutions/toukou/toukou-zenki/t1995/t1995.pdf
-[tk96]: solutions/toukou/toukou-zenki/t1996/t1996.pdf
-[tk97]: solutions/toukou/toukou-zenki/t1997/t1997.pdf
-[tk98]: solutions/toukou/toukou-zenki/t1998/t1998.pdf
-[tk99]: solutions/toukou/toukou-zenki/t1999/t1999.pdf
-[tk00]: solutions/toukou/toukou-zenki/t2000/t2000.pdf
-[tk01]: solutions/toukou/toukou-zenki/t2001/t2001.pdf
-[tk02]: solutions/toukou/toukou-zenki/t2002/t2002.pdf
-[tk03]: solutions/toukou/toukou-zenki/t2003/t2003.pdf
-[tk04]: solutions/toukou/toukou-zenki/t2004/t2004.pdf
-[tk05]: solutions/toukou/toukou-zenki/t2005/t2005.pdf
-[tk06]: solutions/toukou/toukou-zenki/t2006/t2006.pdf
-[tk07]: solutions/toukou/toukou-zenki/t2007/t2007.pdf
-[tk08]: solutions/toukou/toukou-zenki/t2008/t2008.pdf
-[tk09]: solutions/toukou/toukou-zenki/t2009/t2009.pdf
-[tk10]: solutions/toukou/toukou-zenki/t2010/t2010.pdf
-[tk11]: solutions/toukou/toukou-zenki/t2011/t2011.pdf
-[tk12]: solutions/toukou/toukou-zenki/t2012/t2012.pdf
-[tk13]: solutions/toukou/toukou-zenki/t2013/t2013.pdf
-[tk14]: solutions/toukou/toukou-zenki/t2014/t2014.pdf
+[tk61]: {% link solutions/toukou/toukou-zenki/t1961/t1961.pdf %}
+[tk62]: {% link solutions/toukou/toukou-zenki/t1962/t1962.pdf %}
+[tk63]: {% link solutions/toukou/toukou-zenki/t1963/t1963.pdf %}
+[tk64]: {% link solutions/toukou/toukou-zenki/t1964/t1964.pdf %}
+[tk65]: {% link solutions/toukou/toukou-zenki/t1965/t1965.pdf %}
+[tk66]: {% link solutions/toukou/toukou-zenki/t1966/t1966.pdf %}
+[tk67]: {% link solutions/toukou/toukou-zenki/t1967/t1967.pdf %}
+[tk68]: {% link solutions/toukou/toukou-zenki/t1968/t1968.pdf %}
+[tk69]: {% link solutions/toukou/toukou-zenki/t1969/t1969.pdf %}
+[tk70]: {% link solutions/toukou/toukou-zenki/t1970/t1970.pdf %}
+[tk71]: {% link solutions/toukou/toukou-zenki/t1971/t1971.pdf %}
+[tk72]: {% link solutions/toukou/toukou-zenki/t1972/t1972.pdf %}
+[tk73]: {% link solutions/toukou/toukou-zenki/t1973/t1973.pdf %}
+[tk74]: {% link solutions/toukou/toukou-zenki/t1974/t1974.pdf %}
+[tk75]: {% link solutions/toukou/toukou-zenki/t1975/t1975.pdf %}
+[tk76]: {% link solutions/toukou/toukou-zenki/t1976/t1976.pdf %}
+[tk77]: {% link solutions/toukou/toukou-zenki/t1977/t1977.pdf %}
+[tk78]: {% link solutions/toukou/toukou-zenki/t1978/t1978.pdf %}
+[tk79]: {% link solutions/toukou/toukou-zenki/t1979/t1979.pdf %}
+[tk80]: {% link solutions/toukou/toukou-zenki/t1980/t1980.pdf %}
+[tk81]: {% link solutions/toukou/toukou-zenki/t1981/t1981.pdf %}
+[tk82]: {% link solutions/toukou/toukou-zenki/t1982/t1982.pdf %}
+[tk83]: {% link solutions/toukou/toukou-zenki/t1983/t1983.pdf %}
+[tk84]: {% link solutions/toukou/toukou-zenki/t1984/t1984.pdf %}
+[tk85]: {% link solutions/toukou/toukou-zenki/t1985/t1985.pdf %}
+[tk86]: {% link solutions/toukou/toukou-zenki/t1986/t1986.pdf %}
+[tk87]: {% link solutions/toukou/toukou-zenki/t1987/t1987.pdf %}
+[tk88]: {% link solutions/toukou/toukou-zenki/t1988/t1988.pdf %}
+[tk89]: {% link solutions/toukou/toukou-zenki/t1989/t1989.pdf %}
+[tk90]: {% link solutions/toukou/toukou-zenki/t1990/t1990.pdf %}
+[tk91]: {% link solutions/toukou/toukou-zenki/t1991/t1991.pdf %}
+[tk92]: {% link solutions/toukou/toukou-zenki/t1992/t1992.pdf %}
+[tk93]: {% link solutions/toukou/toukou-zenki/t1993/t1993.pdf %}
+[tk94]: {% link solutions/toukou/toukou-zenki/t1994/t1994.pdf %}
+[tk95]: {% link solutions/toukou/toukou-zenki/t1995/t1995.pdf %}
+[tk96]: {% link solutions/toukou/toukou-zenki/t1996/t1996.pdf %}
+[tk97]: {% link solutions/toukou/toukou-zenki/t1997/t1997.pdf %}
+[tk98]: {% link solutions/toukou/toukou-zenki/t1998/t1998.pdf %}
+[tk99]: {% link solutions/toukou/toukou-zenki/t1999/t1999.pdf %}
+[tk00]: {% link solutions/toukou/toukou-zenki/t2000/t2000.pdf %}
+[tk01]: {% link solutions/toukou/toukou-zenki/t2001/t2001.pdf %}
+[tk02]: {% link solutions/toukou/toukou-zenki/t2002/t2002.pdf %}
+[tk03]: {% link solutions/toukou/toukou-zenki/t2003/t2003.pdf %}
+[tk04]: {% link solutions/toukou/toukou-zenki/t2004/t2004.pdf %}
+[tk05]: {% link solutions/toukou/toukou-zenki/t2005/t2005.pdf %}
+[tk06]: {% link solutions/toukou/toukou-zenki/t2006/t2006.pdf %}
+[tk07]: {% link solutions/toukou/toukou-zenki/t2007/t2007.pdf %}
+[tk08]: {% link solutions/toukou/toukou-zenki/t2008/t2008.pdf %}
+[tk09]: {% link solutions/toukou/toukou-zenki/t2009/t2009.pdf %}
+[tk10]: {% link solutions/toukou/toukou-zenki/t2010/t2010.pdf %}
+[tk11]: {% link solutions/toukou/toukou-zenki/t2011/t2011.pdf %}
+[tk12]: {% link solutions/toukou/toukou-zenki/t2012/t2012.pdf %}
+[tk13]: {% link solutions/toukou/toukou-zenki/t2013/t2013.pdf %}
+[tk14]: {% link solutions/toukou/toukou-zenki/t2014/t2014.pdf %}
 
 
 

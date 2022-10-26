@@ -57,7 +57,7 @@ LaTexはそのままでは日本語が使えず，対応させるための専用
 
 ### 箇条書き
 
-LaTeXでは箇条書き用の環境も標準で用意されている．ぶっちゃけ自分の場合は通常の文書で使うことは少ないのだが，後述のスライドショーでは頻繁に用いる．詳細は[こちら]({% link _pages/latex/latex_item.md %})を参照．
+LaTeXでは箇条書き用の環境も標準で用意されている．自分の場合は通常の文書で使うことは少ないのだが，後述のスライドショーでは頻繁に用いる．詳細は[こちら]({% link _pages/latex/latex_item.md %})を参照．
 <!-- http://www.yamamo10.jp/yamamoto/comp/latex/make_doc/item/item.php -->
 
 
