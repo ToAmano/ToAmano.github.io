@@ -16,6 +16,7 @@ categories: vscode
    explorerに表示されるフォルダのアイコンを視認性よくしてくれる．emacsのall-the-iconを思い出す．
 1. Better Comments
     コメントの先頭に! * ? //を書くとその行の色を変えてくれる．
+	ちなみに，TODOtreeという拡張もあるが，Better Commentsと共存させるのが難しい？
 1. indent rainbow
     indentに色付け．特にpythonだと有用．
 ### markdown用拡張

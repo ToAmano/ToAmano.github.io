@@ -1,0 +1,66 @@
+ % LuaLaTeX文書; 文字コーAドはUTF-8
+ \documentclass[unicode,12pt, A4j]{ltjsarticle}% 'unicode'が必要
+ %\usepackage{luatexja}% 日本語したい
+ \usepackage{luatexja-fontspec}
+ %\usepackage[hiragino-pron]{luatexja-preset}% IPAexフォントしたい(ipaex)
+ \usepackage[hiragino-pron,deluxe,expert,bold]{luatexja-preset}
+
+ \usepackage[english]{babel}%多言語文書を作成する
+ \usepackage{amsmath,amssymb}%標準数式表現を拡大する
+ \usepackage{physics}
+ \usepackage[subpreambles=true,sort=true]{standalone}
+% \renewcommand{\kanjifamilydefault}{\gtdefault}% 既定をゴシック体に
+ \usepackage[backend=bibtex,style=phys,articletitle=false,biblabel=brackets,chaptertitle=false,pageranges=false]{biblatex}
+ %\usepackage[style=authoryear,backend=bibtex]{biblatex}
+
+
+ %\addbibresource{../references/tio2_ref.bib}
+ \usepackage{mhchem}
+ % あとは欧文の場合と同じ
+
+  \usepackage{caption}
+  \usepackage[subrefformat=parens]{subcaption}
+\title{京大数学理科後期2005年度}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{問題1}
+曲線$y=x^3$の$x>0$の部分を$C$とする．$C$上の点$\mathrm{P}$に対し，$\mathrm{P}$における$C$の接線と$x$軸との交点を$Q$とし，$\mathrm{P}$における$C$の法線と$y$軸との交点を$\mathrm{R}$とする．$\mathrm{P}$が$C$上を動く時，$\dfrac{\mathrm{OR}}{\mathrm{OQ}}$の最小値をもとめよ．ただし，$\mathrm{O}$は原点である．
+	  
+\section{問題2}
+$\dfrac{2z+2i}{z+2i}=\bar{z}$をみたす複素数$z$をすべてもとめよ．（ただし，$i$は虚数単位，$\bar{z}$は$z$ の共役な複素数である．）
+
+
+\section{問題3}
+二次元列ベクトル$A_n\, (n=1,2,3,\cdots)$が
+\begin{equation}
+ A_1=\begin{pmatrix}\\
+      2 \\1 
+     \end{pmatrix},
+ A_2=\begin{pmatrix}\\
+      3 \\1 
+     \end{pmatrix},
+ A_{n+2}=\begin{pmatrix}\\
+      1 & 1 \\ 1 & -1 \\ 
+     \end{pmatrix}A_{n+1}+
+     \begin{pmatrix}\\
+      0 & -1 \\ 1 & 0 \\ 
+     \end{pmatrix}A_{n},
+ (n=1,2,3,\cdots)
+\end{equation}
+を満たす時，$A_n$を求めよ．
+
+\section{問題4}
+四面体$\mathrm{OABC}$において，三角形$\mathrm{ABC}$の重心を$\mathrm{G}$とし，線分$\mathrm{OG}$を$t:1-t\, (0<t<1)$に内分する点を$\mathrm{P}$とする．また，直線$\mathrm{AP}$と面$\mathrm{OBC}$との交点を$A'$，直線$\mathrm{BP}$と面$\mathrm{OCA}$との交点を$B'$，直線$\mathrm{CP}$と面$\mathrm{OAB}$との交点を$C'$とする．このとき，三角形$\mathrm{A'B'C'}$は三角形$\mathrm{ABC}$と相似であることをしめし，相似比を$t$であらわせ．
+
+
+\section{問題5}
+$n<\int_{10}^{100}\log_{10} x \dd x$を満たす最大の自然数$n$を求めよ．ただし，$0.434<\log_{10} e< 0.435$（$e$は自然対数の底）である．
+
+\section{問題6}
+$n$枚の$100$円玉と$n+1$枚の$500$円玉を同時に投げたとき，表の出た$100$円玉の枚数より表の出た$500$円玉の枚数の方が多い確率を求めよ．
+
+\end{document}
