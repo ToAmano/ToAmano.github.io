@@ -1,0 +1,85 @@
+ % LuaLaTeX文書; 文字コーAドはUTF-8
+ \documentclass[unicode,12pt, A4j]{ltjsarticle}% 'unicode'が必要
+ %\usepackage{luatexja}% 日本語したい
+ \usepackage{luatexja-fontspec}
+ %\usepackage[hiragino-pron]{luatexja-preset}% IPAexフォントしたい(ipaex)
+ \usepackage[hiragino-pron,deluxe,expert,bold]{luatexja-preset}
+
+ \usepackage[english]{babel}%多言語文書を作成する
+ \usepackage{amsmath,amssymb}%標準数式表現を拡大する
+ \usepackage{physics}
+ \usepackage[subpreambles=true,sort=true]{standalone}
+% \renewcommand{\kanjifamilydefault}{\gtdefault}% 既定をゴシック体に
+ \usepackage[backend=bibtex,style=phys,articletitle=false,biblabel=brackets,chaptertitle=false,pageranges=false]{biblatex}
+ %\usepackage[style=authoryear,backend=bibtex]{biblatex}
+
+
+ %\addbibresource{../references/tio2_ref.bib}
+ \usepackage{mhchem}
+ % あとは欧文の場合と同じ
+
+  \usepackage{caption}
+  \usepackage[subrefformat=parens]{subcaption}
+\title{東大数学理科後期2006年度}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{問題1}
+$xy$平面上で$t$を変数とする媒介変数表示
+\begin{align}
+ x&=2t+t^2 \\
+ y&=t+t^2  
+\end{align}
+で表される曲線を$C$とする．次の問に答えよ．
+\begin{enumerate}
+ \item $t\neq -1$のとき，$\dv{y}{x}$を$t$の式であらわせ．
+ \item 曲線$C$上で$\dv{y}{x}=-\dfrac{1}{2}$を満たす点$\mathrm{A}$の座標を求めよ．
+ \item 曲線$C$上の点$(x,y)$を点$(X,Y)$に移す移動が
+       \begin{align}
+	  X&=\frac{1}{\sqrt{5}}(2x-y) \\
+	  Y&=\frac{1}{\sqrt{5}}(x+2y) 
+       \end{align}
+       で表されているとする．このとき$Y$を$X$を用いてあらわせ．
+ \item 曲線$C$の概形を$xy$平面上に描け．
+\end{enumerate}
+
+
+\section{問題2}
+$a$を正の実数，$\theta$を$0\le\theta\le\dfrac{\pi}{2}$を満たす実数とする．$xyz$空間において，点$(a,0,0)$と点$(a+\cos\theta,0,\sin\theta)$を結ぶ線分を，$x$軸のまわりに$1$回転させてできる曲面を$S$とする．さらに，$S$を$y$軸のまわりに$1$回転させてできる立体の体積を$V$とする．次の問に答えよ．
+\begin{enumerate}
+ \item $V$を$a$と$\theta$を用いてあらわせ．
+ \item $a=4$とする．$V$を$\theta$の関数と考えて，$V$の最大値を求めよ．
+\end{enumerate}
+
+
+\section{問題3}
+数列の和の公式
+\begin{equation}
+ \sum_{k=1}^{n}k=\frac{1}{2}n(n+1),  \sum_{k=1}^{n}k^2=\frac{1}{6}n(n+1)(2n+1), \sum_{k=1}^{n}k^3=\left\{\frac{1}{2}n(n+1)\right\}^2
+\end{equation}
+などについて，次のような一般的な考察をしてみよう．$p$，$n$を自然数とする．
+
+\begin{enumerate}
+ \item $p+1$次多項式$S_p(x)$があって，数列の和$\sum_{k=1}^{n}k^p$が$S_p(n)$と表されることを示せ．
+ \item $q$を自然数とする．(1)の多項式$S_1(x), S_3(x),\cdots,S_{2q-1}(x)$に対して，
+       \begin{equation}
+	\sum_{j=1}^{q}a_{j}S_{2j-1}(x)=x^q(x+1)^q
+       \end{equation}
+       が恒等式となるような定数$a_1,\cdots,a_q$を$q$を用いてあらわせ．
+ \item $q$を$2$以上の自然数とする．(1)の多項式$S_2(x),S_4(x),\cdots,S_{2q-2}(x)$に対して
+       \begin{equation}
+	\sum_{j=1}^{q-1}b_{j}S_{2j}(x)=x^{q-1}(x+1)^{q-1}(cx+q)
+       \end{equation}
+       が恒等式となるような定数$c$と$b_1,\cdots,b_{q-1}$を$q$を用いてあらわせ．
+ \item $p$を$3$以上の奇数とする．このとき
+       \begin{equation}
+	\dv{x}S_{p}(x)=pS_{p-1}(x)
+       \end{equation}
+       を示せ．
+\end{enumerate}
+
+
+\end{document}

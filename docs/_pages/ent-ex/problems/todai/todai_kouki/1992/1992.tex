@@ -1,0 +1,59 @@
+ % LuaLaTeX文書; 文字コーAドはUTF-8
+ \documentclass[unicode,12pt, A4j]{ltjsarticle}% 'unicode'が必要
+ %\usepackage{luatexja}% 日本語したい
+ \usepackage{luatexja-fontspec}
+ %\usepackage[hiragino-pron]{luatexja-preset}% IPAexフォントしたい(ipaex)
+ \usepackage[hiragino-pron,deluxe,expert,bold]{luatexja-preset}
+
+ \usepackage[english]{babel}%多言語文書を作成する
+ \usepackage{amsmath,amssymb}%標準数式表現を拡大する
+ \usepackage{physics}
+ \usepackage[subpreambles=true,sort=true]{standalone}
+% \renewcommand{\kanjifamilydefault}{\gtdefault}% 既定をゴシック体に
+ \usepackage[backend=bibtex,style=phys,articletitle=false,biblabel=brackets,chaptertitle=false,pageranges=false]{biblatex}
+ %\usepackage[style=authoryear,backend=bibtex]{biblatex}
+
+
+ %\addbibresource{../references/tio2_ref.bib}
+ \usepackage{mhchem}
+ % あとは欧文の場合と同じ
+
+  \usepackage{caption}
+  \usepackage[subrefformat=parens]{subcaption}
+\title{東大数学理科後期1992年度}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{問題1}
+定数$a$にたいして，曲線$y=\sqrt{x^2-1}+\frac{a}{x}$の$x\ge 1$の部分を$C(a)$とおく．
+
+\begin{enumerate}
+ \item $C(a)$が直線$y=x$の下部$y<x$に含まれるような実数$a$の最大値$a_0$を求めよ．
+ \item $0<\theta<\frac{\pi}{2}$のとき，$C(a_0)$と$3$直線$y=x$，$x=1$，$x=\frac{1}{\cos\theta}$によって囲まれる図形を$x$軸のまわりに回転させてできる立体$V$の体積$V(\theta)$をもとめよ．
+ \item $\lim_{\theta\to\frac{\pi}{2}-0}V(\theta)$をもとめよ．
+\end{enumerate}
+
+\section{問題2}
+\begin{enumerate}
+ \item 空間内の直線$L$を共通の境界線とし，角$\theta$で交わる$2$つの半平面$H_1$，$H_2$がある．$H_1$上に点$A$，$L$上に点$B$，$H_2$上に点$\mathrm{C}$がそれぞれ固定されている．ただし，$\mathrm{A}$，$\mathrm{C}$は$L$上にはないものとする．半平面$H_1$を，$L$を軸として，$0\le\theta\le\pi$の範囲で回転させる．このとき，$\theta$が増加すると$\angle \mathrm{ABC}$も増加することを証明せよ．
+ \item 空間内の相異なる$4$点$\mathrm{A}$，$\mathrm{B}$，$\mathrm{C}$，$\mathrm{D}$について，不等式
+       \begin{equation}
+	  \angle \mathrm{ABC}+\angle \mathrm{BCD}+\angle \mathrm{CDA}+\angle \mathrm{DAB} \le 2\pi
+       \end{equation}
+       が成り立つことを証明せよ．
+       ただし，角の単位はラジアンを用いる．
+\end{enumerate}
+
+
+\section{問題3}
+多項式の列$P_0(x)=0$，$P_1(x)=1$，$P_2(x)=1+x$，$\cdots$，$P_n(x)=\sum_{k=0}^{n-1}x^k$，$\cdots$をかんがえる．
+\begin{enumerate}
+ \item 正の整数$n$，$m$に対して，$P_n(x)$を$P_m(x)$で割ったあまりは$P_0(x)$，$P_1(x)$，$\cdots$，$P_{m-1}(x)$のいずれかであることを証明せよ．
+ \item 等式$P_1(x)P_m(x^2)P_n(x^4)=P_{100}(x)$が成立するような正の整数の組$(l,m,n)$をすべて求めよ．
+\end{enumerate}
+
+
+\end{document}

@@ -1,0 +1,118 @@
+ % LuaLaTeX文書; 文字コーAドはUTF-8
+ \documentclass[unicode,12pt, A4j]{ltjsarticle}% 'unicode'が必要
+ %\usepackage{luatexja}% 日本語したい
+ \usepackage{luatexja-fontspec}
+ %\usepackage[hiragino-pron]{luatexja-preset}% IPAexフォントしたい(ipaex)
+ \usepackage[hiragino-pron,deluxe,expert,bold]{luatexja-preset}
+
+ \usepackage[english]{babel}%多言語文書を作成する
+ \usepackage{amsmath,amssymb}%標準数式表現を拡大する
+ \usepackage{physics}
+ \usepackage[subpreambles=true,sort=true]{standalone}
+% \renewcommand{\kanjifamilydefault}{\gtdefault}% 既定をゴシック体に
+ \usepackage[backend=bibtex,style=phys,articletitle=false,biblabel=brackets,chaptertitle=false,pageranges=false]{biblatex}
+ %\usepackage[style=authoryear,backend=bibtex]{biblatex}
+
+
+ %\addbibresource{../references/tio2_ref.bib}
+ \usepackage{mhchem}
+ % あとは欧文の場合と同じ
+
+  \usepackage{caption}
+  \usepackage[subrefformat=parens]{subcaption}
+
+% https://mathlandscape.com/latex-style/
+\everymath{\displaystyle}
+\title{東大数学理科後期2007年度}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{問題1}
+$xy$平面の曲線$C:xy^2=4$上に$1$点$\mathrm{P}_0(x_0,y_0)\, (y_0>0)$をとる．$\mathrm{P}_0$における$C$の接線と$C$との共有点のうち，$\mathrm{P}_0$と異なるものを$\mathrm{P}_1(x_1,y_1)$とする．また，$\mathrm{P}_1$における$C$の接線と$C$との共有点のうち，$P_1$と異なるものを$\mathrm{P}_2(x_2,y_2)$とする．次の問に答えよ．
+\begin{enumerate}
+ \item $\mathrm{P}_1$，$\mathrm{P}_2$の座標を$y_0$を用いてあらわせ．
+ \item $\triangle \mathrm{P_0P_1P_2}$の面積を$T$とし，線分$\mathrm{P_0P_1}$，$\mathrm{P_1P_2}$および曲線$C$で囲まれた領域の面積を$S$とする．$\dfrac{T}{S}$の値を求めよ．
+ \item $\angle \mathrm{P_0P_1P_2}$が直角となるような$y_0$の値を求めよ．
+ \item 全問(3)で求めた$y_0$に対し，$\triangle \mathrm{P_0P_1P_2}$の外接円の面積を求めよ．
+\end{enumerate}
+
+
+\section{問題2}
+次の問に答えよ．
+\begin{enumerate}
+ \item 実数を成分とする行列$A=\begin{pmatrix}
+			       a & b \\ c & d 
+			      \end{pmatrix}\, (a^2+b^2\neq 0)$に対し
+       \begin{equation}
+	B=\begin{pmatrix}
+	   a & b \\
+	   -b & a 
+	  \end{pmatrix}
+	\begin{pmatrix}
+	   a & b \\
+	   b & d 
+	  \end{pmatrix}
+	\begin{pmatrix}
+	   a & b \\
+	   -b & a 
+	  \end{pmatrix}^{-1}
+       \end{equation}
+       とおく．行列$B$は$B=\begin{pmatrix}
+                                r & s \\ s & t
+                               \end{pmatrix}$の形であることを示し，$r+t$，$rt-s^2$を$a$，$b$，$c$を用いてあらわせ．
+ \item 前問(1)において$r^2+s^2\ge a^2+b^2$が成り立つことを示せ．
+ \item 実数$a_n$，$b_n$，$c_n\, (n=0,1,2\cdots)$を次のように定める．
+       \begin{align}
+	\text{$n=0$のとき} & 
+	\begin{pmatrix}
+            a_0 & b_0 \\
+            b_0 & c_0
+	\end{pmatrix} =
+	\begin{pmatrix}
+             1 & 1 \\
+             1 & 2
+	\end{pmatrix}, \\
+	\text{$n\ge 1$のとき} & 
+	\begin{pmatrix}
+            a_n & b_n \\
+            b_n & c_n
+	\end{pmatrix} =
+	\begin{pmatrix}
+             a_{n-1} & b_{n-1} \\
+             -b_{n-1} & a_{n-1}
+	\end{pmatrix}
+	\begin{pmatrix}
+             a_{n-1} & b_{n-1} \\
+             b_{n-1} & c_{n-1}
+	\end{pmatrix}
+	\begin{pmatrix}
+             a_{n-1} & b_{n-1} \\
+             -b_{n-1} & a_{n-1}
+	\end{pmatrix}^{-1}
+       \end{align}
+       \begin{itemize}
+	\item[ア] $\lim_{n\to\infty}b_n=0$を示せ．
+	\item[イ] $\lim_{n\to\infty}a_n$，$\lim_{n\to\infty}c_n=0$を求めよ．
+       \end{itemize}
+\end{enumerate}
+
+
+\section{問題3}
+$N$を$2$以上の自然数とする．$x_1\le \cdots \le x_N$をみたす実数$x_1,\cdots,x_N$に対し実数$k_n$，$p_n$，$q_n\, (n=0,1,2,\cdots)$を次の手続きで定める．
+\begin{itemize}
+ \item[A] $k_0=1$，$p_0=x_1$，$q_0=x_N$
+ \item[B] $n$が奇数のとき$k_n$は$x_i\le \frac{p_{n-1}+q_{n-1}}{2}$をみたす$x_i$の個数，$p_n=p_{n-1}$，$q_n=q_{n-1}$
+ \item[C] $n$が偶数$(n\ge 2)$のとき$k_n=k_{n-1}$，$p_n=\frac{1}{k_n}\sum_{i=1}^{k_n}x_i$，$q_n=\frac{1}{N-k_n}\sum_{i=k_n+1}^{N}x_i$．
+\end{itemize}
+ただし$k_n=0$または$k_n=N$となったら，その時点で手続きを終了する．$x_1<x_N$であるとき，次の問に答えよ．
+\begin{enumerate}
+ \item すべての自然数$n$について$1\le k_n\le N-1$かつ$x_1\le p_n<q_n\le x_N$が成り立つことを示せ．
+ \item 実数$J_n\,(n=0,1,2,\cdots)$を$J_n=\sum_{i=1}^{k_n}(x_i-p_n)^2+\sum_{i=k_n+1}^{N}(x_i-q_n)^2$と定めると，全ての自然数$n$に対して$J_n\le J_{n-1}$が成り立つことを示せ．
+ \item $n$が十分大きいとき，$J_n=J_{n-1}$，$p_n=p_{n-1}$，$q_n=q_{n-1}$，$k_n=k_{n-1}$が成り立つことを示せ．
+\end{enumerate}
+
+
+\end{document}
