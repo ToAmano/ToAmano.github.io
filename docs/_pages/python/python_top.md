@@ -4,6 +4,7 @@
 title: PythonTop
 layout: single
 description: The top-page of Python.
+permalink: /python/
 ---
 
 

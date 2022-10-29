@@ -1,11 +1,20 @@
 ---
-layout: default
+layout: single
 title:  "github_pagesについて"
 date:   2022-09-04 10:03:40 +0900
 categories: git guthub 
 tags:
 - github 
 ---
+
+
+## minimal mistakes
+
+```markdown
+画像の貼り付けにはminimal mistakes helperが使える
+https://mmistakes.github.io/minimal-mistakes/docs/helpers/
+{% include figure image_path=“/assets/images/unsplash-image-10.jpg” alt=“this is a placeholder image” caption=“This is a figure caption.” %}
+```
 
 ## 参考文献
 

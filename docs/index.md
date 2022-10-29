@@ -14,21 +14,9 @@ For more details see [Basic writing and formatting syntax](https://docs.github.c
 
 ---
 ---
-## Software installation
+## [Software installation]({% link _pages/installation/install_top.md %})
 
 マニュアルインストールが必要なソフトウェアのインストールについてのまとめ．
-
-### [QuantumEspresso with Intel Compiler]
-  
----
-
-### [Wannier90 with Intel Compiler](page/installation/wannier90_install_to_ohtaka.md)
-
-wannier90のみをインストールする場合はこちらを参照．
-
----
-### [VASP 5.4 with Intel Compiler]
-
 
 ---
 ---
@@ -36,7 +24,7 @@ wannier90のみをインストールする場合はこちらを参照．
 
 よく使うツールについてのメモ．
 
-### [Python](page/python/python_top.md)
+### [Python]({% link  _pages/python/python_top.md %})
 
 ---
 ### [C/C++]
@@ -45,31 +33,31 @@ wannier90のみをインストールする場合はこちらを参照．
 ### [fortran]
 
 ---
-### [bash](page/bash/bash_top.md)
+### [bash]({% link  _pages/bash/bash_top.md %})
 
 bashのさまざまな操作について．
 
 ---
-### [LaTeX](page/latex/latex_top.md)
+### [LaTeX]({% link  _pages/latex/latex_top.md %})
 
 LaTeX文書の作成について．
 
 ---
-### [Emacs](page/emacs/emacs_top.md)
+### [Emacs]({% link  _pages/emacs/emacs_top.md %})
 
 emacsエディタの操作，カスタマイズについて．
 
 ---
-### [gnuplot](page/gnuplot/gnuplot_top.md)
+### [gnuplot]({% link  _pages/gnuplot/gnuplot_top.md %})
 
 画像描画ソフトgnuplotの使い方について．
 
 ---
-### [github](page/github/github_top.md)
+### [github]({% link  _pages/github/github_top.md %})
 
 gitやgithubの使い方について．
 
-### [home server](page/server/server_top.md)
+### [home server]({% link  _pages/server/server_top.md %})
 
 自宅サーバーを立ち上げる記録．
 
@@ -79,36 +67,35 @@ gitやgithubの使い方について．
 
 数学，物理，化学と，さらに関連するソフトウェアについて．
 
-### [physics](page/physics/physics/physics_top.md)
+### [physics]({% link  _pages/physics/physics/physics_top.md %})
 
 ---
-### [VASP](page/physics/vasp/vasp_top.md)
+### [VASP]({% link  _pages/physics/vasp/vasp_top.md %})
 
 第一原理計算ソフトウェアVASPの使い方について
 
 ---
-### [Quantum Espresso](page/physics/qe/qe_top.md)
+### [Quantum Espresso]({% link  _pages/physics/qe/qe_top.md %})
 
 フリーの第一原理計算ソフトウェアQuantum Espressoの使い方について
 
 ---
-### [AiiDA](page/aiida/aiida_top.md)
+### [AiiDA]({% link  _pages/aiida/aiida_top.md %})
 
 ---
 ## others
 
 その他，上の分類に入らない事柄のメモ．
 
-### [その他のソフトウェアなど](page/others/others_top.md)
+### [その他のソフトウェアなど]({% link  _pages/others/others_top.md %})
 
 ---
-### [MacのOSXの設定・ソフトなど](page/mac/mac_top.md)
+### [MacのOSXの設定・ソフトなど]({% link  _pages/mac/mac_top.md %})
 
 ---
-### [大学入試過去問集](page/ent-ex/entex_top.md)
+### [大学入試過去問集]({% link _pages/ent-ex/entex_top.md %})
 
 ---
 
-### [資格試験メモ](page/cert/cert_top.md)
-
+### [資格試験メモ]({% link _pages/cert/cert_top.md %})
 ---

@@ -1,5 +1,6 @@
 ---
 layout: single
+permalink: /vscode/
 title:  "vscodeトップページ"
 date:   2022-09-04 10:03:40 +0900
 categories: vscode

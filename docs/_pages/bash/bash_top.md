@@ -1,5 +1,6 @@
 ---
 layout: single
+permalink: /bash/
 title:  "bash/zsh トップページ"
 date:   2022-09-04 10:03:40 +0900
 categories: bash zsh
@@ -207,3 +208,11 @@ https://wiki.archlinux.jp/index.php/Zsh
 https://qiita.com/minnsou/items/3e9f200f9f2cc9a92920
 zsh: https://qiita.com/agotoh/items/e6b22bcfe63162f70e0d
 -->
+
+
+## ワンライナー
+
+```bash
+# 複数ファイルに対する一括処理
+for file in *.markdown ; do mv “$file” “${file%.markdown}.md” ; done
+```

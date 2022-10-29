@@ -62,6 +62,10 @@ footer:
 # Excluded items can be processed by explicitly listing the directories or
 # their entries' file path in the `include:` list.
 #
+include:
+  - _pages
+  - about.md
+    
 # exclude:
 #   - .sass-cache/
 #   - .jekyll-cache/
