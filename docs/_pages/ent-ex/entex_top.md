@@ -99,6 +99,69 @@ pdf化した答案の大半には図がないので，時間がある時に順�
 
 ##  京大数学(前期)
 
+手書き答案の一覧をアップ済み．問題とpdf版の答案については時間があればやりたい．
+
+
+| year | 解答一覧           | 1 | 2 | 3 | 4 | 5 | 6 |
+|------+--------------------+---+---+---+---+---+---|
+| 1961 | [手書き答案][kt61] |   |   |   |   |   |   |
+| 1962 | [手書き答案][kt62] |   |   |   |   |   |   |
+| 1963 | [手書き答案][kt63] |   |   |   |   |   |   |
+| 1964 | [手書き答案][kt64] |   |   |   |   |   |   |
+| 1965 | [手書き答案][kt65] |   |   |   |   |   |   |
+| 1966 | [手書き答案][kt66] |   |   |   |   |   |   |
+| 1967 | [手書き答案][kt67] |   |   |   |   |   |   |
+| 1968 | [手書き答案][kt68] |   |   |   |   |   |   |
+| 1969 | [手書き答案][kt69] |   |   |   |   |   |   |
+| 1970 | [手書き答案][kt70] |   |   |   |   |   |   |
+| 1971 | [手書き答案][kt71] |   |   |   |   |   |   |
+| 1972 | [手書き答案][kt72] |   |   |   |   |   |   |
+| 1973 | [手書き答案][kt73] |   |   |   |   |   |   |
+| 1974 | [手書き答案][kt74] |   |   |   |   |   |   |
+| 1975 | [手書き答案][kt75] |   |   |   |   |   |   |
+| 1976 | [手書き答案][kt76] |   |   |   |   |   |   |
+| 1977 | [手書き答案][kt77] |   |   |   |   |   |   |
+| 1978 | [手書き答案][kt78] |   |   |   |   |   |   |
+| 1979 | [手書き答案][kt79] |   |   |   |   |   |   |
+| 1980 | [手書き答案][kt80] |   |   |   |   |   |   |
+| 1981 | [手書き答案][kt81] |   |   |   |   |   |   |
+| 1982 | [手書き答案][kt82] |   |   |   |   |   |   |
+| 1983 | [手書き答案][kt83] |   |   |   |   |   |   |
+| 1984 | [手書き答案][kt84] |   |   |   |   |   |   |
+| 1985 | [手書き答案][kt85] |   |   |   |   |   |   |
+| 1986 | [手書き答案][kt86] |   |   |   |   |   |   |
+| 1987 | [手書き答案][kt87] |   |   |   |   |   |   |
+| 1988 | [手書き答案][kt88] |   |   |   |   |   |   |
+| 1989 | [手書き答案][kt89] |   |   |   |   |   |   |
+| 1990 | [手書き答案][kt90] |   |   |   |   |   |   |
+| 1991 | [手書き答案][kt91] |   |   |   |   |   |   |
+| 1992 | [手書き答案][kt92] |   |   |   |   |   |   |
+| 1993 | [手書き答案][kt93] |   |   |   |   |   |   |
+| 1994 | [手書き答案][kt94] |   |   |   |   |   |   |
+| 1995 | [手書き答案][kt95] |   |   |   |   |   |   |
+| 1996 | [手書き答案][kt96] |   |   |   |   |   |   |
+| 1997 | [手書き答案][kt97] |   |   |   |   |   |   |
+| 1998 | [手書き答案][kt98] |   |   |   |   |   |   |
+| 1999 | [手書き答案][kt99] |   |   |   |   |   |   |
+| 2000 | [手書き答案][kt00] |   |   |   |   |   |   |
+| 2001 | [手書き答案][kt01] |   |   |   |   |   |   |
+| 2002 | [手書き答案][kt02] |   |   |   |   |   |   |
+| 2003 | [手書き答案][kt03] |   |   |   |   |   |   |
+| 2004 | [手書き答案][kt04] |   |   |   |   |   |   |
+| 2005 | [手書き答案][kt05] |   |   |   |   |   |   |
+| 2006 | [手書き答案][kt06] |   |   |   |   |   |   |
+| 2007 | [手書き答案][kt07] |   |   |   |   |   |   |
+| 2008 | [手書き答案][kt08] |   |   |   |   |   |   |
+| 2009 | [手書き答案][kt09] |   |   |   |   |   |   |
+| 2010 | [手書き答案][kt10] |   |   |   |   |   |   |
+| 2011 | [手書き答案][kt11] |   |   |   |   |   |   |
+| 2012 | [手書き答案][kt12] |   |   |   |   |   |   |
+| 2013 | [手書き答案][kt13] |   |   |   |   |   |   |
+| 2014 | [手書き答案][kt14] |   |   |   |   |   |   |
+
+
+
+
 ##  東工大数学(前期)
 
 東工大については手書き答案の一覧をアップ済み．問題とpdf版の答案については時間があればやりたい．
@@ -575,6 +638,42 @@ pdf化した答案の大半には図がないので，時間がある時に順�
 [ukk04]: {% link _pages/ent-ex/problems/kyodai/kouki/2004/2004.pdf %}
 [ukk05]: {% link _pages/ent-ex/problems/kyodai/kouki/2005/2005.pdf %}
 [ukk06]: {% link _pages/ent-ex/problems/kyodai/kouki/2006/2006.pdf %}
+
+
+[kt61]: {% link _pages/ent-ex/solutions/kyodai/zenki/1961/kt1961.pdf %}
+[kt62]: {% link _pages/ent-ex/solutions/kyodai/zenki/1962/kt1962.pdf %}
+[kt63]: {% link _pages/ent-ex/solutions/kyodai/zenki/1963/kt1963.pdf %}
+[kt64]: {% link _pages/ent-ex/solutions/kyodai/zenki/1964/kt1964.pdf %}
+[kt65]: {% link _pages/ent-ex/solutions/kyodai/zenki/1965/kt1965.pdf %}
+[kt66]: {% link _pages/ent-ex/solutions/kyodai/zenki/1966/kt1966.pdf %}
+[kt67]: {% link _pages/ent-ex/solutions/kyodai/zenki/1967/kt1967.pdf %}
+[kt68]: {% link _pages/ent-ex/solutions/kyodai/zenki/1968/kt1968.pdf %}
+[kt69]: {% link _pages/ent-ex/solutions/kyodai/zenki/1969/kt1969.pdf %}
+[kt70]: {% link _pages/ent-ex/solutions/kyodai/zenki/1970/kt1970.pdf %}
+[kt71]: {% link _pages/ent-ex/solutions/kyodai/zenki/1971/kt1971.pdf %}
+[kt72]: {% link _pages/ent-ex/solutions/kyodai/zenki/1972/kt1972.pdf %}
+[kt73]: {% link _pages/ent-ex/solutions/kyodai/zenki/1973/kt1973.pdf %}
+[kt74]: {% link _pages/ent-ex/solutions/kyodai/zenki/1974/kt1974.pdf %}
+[kt75]: {% link _pages/ent-ex/solutions/kyodai/zenki/1975/kt1975.pdf %}
+[kt76]: {% link _pages/ent-ex/solutions/kyodai/zenki/1976/kt1976.pdf %}
+[kt77]: {% link _pages/ent-ex/solutions/kyodai/zenki/1977/kt1977.pdf %}
+[kt78]: {% link _pages/ent-ex/solutions/kyodai/zenki/1978/kt1978.pdf %}
+[kt79]: {% link _pages/ent-ex/solutions/kyodai/zenki/1979/kt1979.pdf %}
+[kt80]: {% link _pages/ent-ex/solutions/kyodai/zenki/1980/kt1980.pdf %}
+[kt81]: {% link _pages/ent-ex/solutions/kyodai/zenki/1981/kt1981.pdf %}
+[kt82]: {% link _pages/ent-ex/solutions/kyodai/zenki/1982/kt1982.pdf %}
+[kt83]: {% link _pages/ent-ex/solutions/kyodai/zenki/1983/kt1983.pdf %}
+[kt84]: {% link _pages/ent-ex/solutions/kyodai/zenki/1984/kt1984.pdf %}
+[kt85]: {% link _pages/ent-ex/solutions/kyodai/zenki/1985/kt1985.pdf %}
+[kt86]: {% link _pages/ent-ex/solutions/kyodai/zenki/1986/kt1986.pdf %}
+[kt87]: {% link _pages/ent-ex/solutions/kyodai/zenki/1987/kt1987.pdf %}
+[kt88]: {% link _pages/ent-ex/solutions/kyodai/zenki/1988/kt1988.pdf %}
+[kt89]: {% link _pages/ent-ex/solutions/kyodai/zenki/1989/kt1989.pdf %}
+
+
+
+
+
 
 
 
