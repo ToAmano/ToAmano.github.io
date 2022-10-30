@@ -669,6 +669,32 @@ pdf化した答案の大半には図がないので，時間がある時に順�
 [kt87]: {% link _pages/ent-ex/solutions/kyodai/zenki/1987/kt1987.pdf %}
 [kt88]: {% link _pages/ent-ex/solutions/kyodai/zenki/1988/kt1988.pdf %}
 [kt89]: {% link _pages/ent-ex/solutions/kyodai/zenki/1989/kt1989.pdf %}
+[kt90]: {% link _pages/ent-ex/solutions/kyodai/zenki/1990/kt1990.pdf %}
+[kt91]: {% link _pages/ent-ex/solutions/kyodai/zenki/1991/kt1991.pdf %}
+[kt92]: {% link _pages/ent-ex/solutions/kyodai/zenki/1992/kt1992.pdf %}
+[kt93]: {% link _pages/ent-ex/solutions/kyodai/zenki/1993/kt1993.pdf %}
+[kt94]: {% link _pages/ent-ex/solutions/kyodai/zenki/1994/kt1994.pdf %}
+[kt95]: {% link _pages/ent-ex/solutions/kyodai/zenki/1995/kt1995.pdf %}
+[kt96]: {% link _pages/ent-ex/solutions/kyodai/zenki/1996/kt1996.pdf %}
+[kt97]: {% link _pages/ent-ex/solutions/kyodai/zenki/1997/kt1997.pdf %}
+[kt98]: {% link _pages/ent-ex/solutions/kyodai/zenki/1998/kt1998.pdf %}
+[kt99]: {% link _pages/ent-ex/solutions/kyodai/zenki/1999/kt1999.pdf %}
+[kt00]: {% link _pages/ent-ex/solutions/kyodai/zenki/2000/kt2000.pdf %}
+[kt01]: {% link _pages/ent-ex/solutions/kyodai/zenki/2001/kt2001.pdf %}
+[kt02]: {% link _pages/ent-ex/solutions/kyodai/zenki/2002/kt2002.pdf %}
+[kt03]: {% link _pages/ent-ex/solutions/kyodai/zenki/2003/kt2003.pdf %}
+[kt04]: {% link _pages/ent-ex/solutions/kyodai/zenki/2004/kt2004.pdf %}
+[kt05]: {% link _pages/ent-ex/solutions/kyodai/zenki/2005/kt2005.pdf %}
+[kt06]: {% link _pages/ent-ex/solutions/kyodai/zenki/2006/kt2006.pdf %}
+[kt07]: {% link _pages/ent-ex/solutions/kyodai/zenki/2007/kt2007.pdf %}
+[kt08]: {% link _pages/ent-ex/solutions/kyodai/zenki/2008/kt2008.pdf %}
+[kt09]: {% link _pages/ent-ex/solutions/kyodai/zenki/2009/kt2009.pdf %}
+[kt10]: {% link _pages/ent-ex/solutions/kyodai/zenki/2010/kt2010.pdf %}
+[kt11]: {% link _pages/ent-ex/solutions/kyodai/zenki/2011/kt2011.pdf %}
+[kt12]: {% link _pages/ent-ex/solutions/kyodai/zenki/2012/kt2012.pdf %}
+[kt13]: {% link _pages/ent-ex/solutions/kyodai/zenki/2013/kt2013.pdf %}
+[kt14]: {% link _pages/ent-ex/solutions/kyodai/zenki/2014/kt2014.pdf %}
+
 
 
 
