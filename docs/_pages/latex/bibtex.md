@@ -72,7 +72,23 @@ citation example with natbib package. Einstein journal paper \cite{einstein}. we
 
 ```
 
-詳しい各スタイルの詳細については[ここ](https://www.reed.edu/cis/help/LaTeX/bibtexstyles.html)が参考になるかも．APSスタイルの引用をやりたい場合は`apsrev4-2`スタイルを利用すれば良い．基本的にはデフォルトで入っていると思う．
+詳しい各スタイルの詳細については[ここ](https://www.reed.edu/cis/help/LaTeX/bibtexstyles.html)が参考になるかも．APSスタイルの引用をやりたい場合は`apsrev4-2`スタイルを利用すれば良い．基本的にはデフォルトで入っていると思う．ちなみに最近のAPSは参考文献に文献タイトルを載せることを推奨していて，その場合はスタイルの指定を無くし，ドキュメントクラスのオプションに`aps,prd`（ここは人による），`longbibliography`を追加すると文献タイトルも出力できる．
+<!-- https://tex.stackexchange.com/questions/257752/bibtex-how-to-show-article-titles-within-apsrev4-1 -->
+
+ ```latex
+ \documentclass[aps,prd,longbibliography]{revtex4-2} %ここを追加
+ \usepachage[square,numbers]{natbib} %
+ \begin{document}
+
+ citation example with natbib package. Einstein journal paper \cite{einstein}. we can use citet command to include auther in citation regardless of citation style like \c\
+ itet{einstein}.
+
+ %Sets the bibliography style to UNSRT and imports the
+ %bibliography file "sample.bib".
+%  \bibliographystyle{apsrev4-2} % 引用スタイルをコメントアウト
+ \bibliography{sample}        % bibファイル
+ \end{document}
+ ```
 
 また，`citet`コマンドを使うと引用スタイルに関わらず引用部分に名前を追加できるので便利．
 
@@ -168,6 +184,11 @@ hyperrefのオプションはお好みで追加する．色に関しては個人
 
 <!-- https://tex.stackexchange.com/questions/99726/how-tell-latex-to-use-existing-bbl-file-without-running-bibtex -->
 
+
+## revtex関連
+
+
+
 ## 参考文献
 
 https://library.rose-hulman.edu/c.php?g=351878&p=2384440
@@ -175,6 +196,6 @@ https://apps3.aps.org/communications/styleguide/index.html
 
 
 
-[^1]: 今回はサンプルとしてbibファイルを自作したが，ほとんどの場合はgoogle scholarや他のソフトから自動で生成する場合がほとんどなので，自分でbibファイルを作ることはほとんどないと思う．
+[^1]: 今回はサンプルとしてbibファイルを自作したが，実際はgoogle scholarや他のソフトから自動で生成する場合がほとんどなので，自分でbibファイルを作ることはほとんどないと思う．
 
 

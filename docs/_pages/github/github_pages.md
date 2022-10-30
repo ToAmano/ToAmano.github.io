@@ -10,6 +10,22 @@ tags:
 
 ## minimal mistakes
 
+- 画像貼り付け1
+
+https://mmistakes.github.io/minimal-mistakes/post%20formats/post-image-standard/
+
+```liquid
+# 通常のhtml記法
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/filename.jpg" alt="">
+
+# kmarkdown記法
+{% raw %}
+ ![alt]({{ site.url }}{{ site.baseurl }}/assets/images/filename.jpg)
+{% endraw %}
+```
+
+- 画像貼り付け2
+
 ```liquid
 画像の貼り付けにはminimal mistakes helperが使える
 https://mmistakes.github.io/minimal-mistakes/docs/helpers/

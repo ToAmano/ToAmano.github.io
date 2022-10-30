@@ -170,6 +170,7 @@ TikZをベースとした`chemfig`パッケージがある．
 \usepackage{chemfig}
 \chemfig{*6(-=-=-=)} 
 ```
+
 ## 単位をシステマチックに書く
 
 単位を書くときには数字との間にスペースが必要，ローマン体（立体）でないといけないなどの細かい習慣があって意外と普通にlatex文書を書くのは面倒くさい．例えば以下のようにする必要がある．
@@ -184,8 +185,7 @@ TikZをベースとした`chemfig`パッケージがある．
 
 ## 数式や図表の相互参照について
 
-
-参照をよりスマートにやるために`cleveref`というパッケージがある．これを使えばいままで`Fig. \ref{fig:test}`と参照していた部分を`\cref{fig:test}`と書くだけでよくなる．つまり`\ref`している環境がfigureか，tableかなどを見極めて勝手に`Fig.`，`Table.`などと補完してくれる．
+参照をよりスマートにやるために`cleveref`というパッケージがある．これを使えばいままで`Fig. \ref{fig:test}`と参照していた部分を`\cref{fig:test}`と書くだけでよくなる．つまり`\ref`している環境がfigureか，tableかなどを見極めて勝手に`Fig.`，`Table.`などと補完してくれる．人間の手でやっているとどうしてもミスが発生しやすいので，特に理由がなければ使うことをおすすめしたい．
 
 <!-- https://qiita.com/wktkshn/items/110cd6007837938e6c88 -->
 <!-- https://blog.miz-ar.info/2021/01/alternatives-to-autoref/ -->
@@ -213,7 +213,7 @@ https://cns-guide.sfc.keio.ac.jp/2001/11/5/1.html
       |- 02.tex
 ```
 
-ファイルを分割する最も簡単な方法は`\input`コマンドを利用すること．メインファイルから以下のようにサブファイルを読み込める．この時パスの設定に要注意．
+ファイルを分割する最も簡単な方法は`\input`コマンドを利用すること．メインファイルから以下のようにサブファイルを読み込める．この時パスの設定には注意が必要で，コンパイルするファイル（ここだとmain.tex）からの相対パスで指定する．複数のファイルが入れ子になっている場合でも，コンパイルするファイル（これは一つだけ！）からのパスで指定する必要がある．
 
 ```latex:main.tex
 \documentclass[a4]{article}
@@ -233,58 +233,21 @@ https://cns-guide.sfc.keio.ac.jp/2001/11/5/1.html
 ```
 
 
+- 図表の外部化
+  文書ではなく図表の外部化も重要．特にTikzを使って図を作る場合，コンパイルのたびにtikzで図を再コンパイルしていたら時間がかかって仕方がない．この自体を回避するため，tikzの図はそれ単体で先にコンパイルしてpdf化しておいて，メインのTeX文書からはpdfを読みこむようにする．この仕組みを実現する方法としては，個人的におすすめな`standalone`クラスを利用する方法と，tikzに付属する`tikzexternalize`がある．後者は自分の環境ではどうも挙動が安定しないことが多い．standaloneクラスについては[こちら]({% link _pages/latex/latex_standalone.md %})を参照．
 
-<!-- https://geniusium.hatenablog.com/entry/2022/03/16/200355 -->
+- 分割したファイルをまとめる方法．
+<!--https://zenn.dev/ultimatile/articles/b3fbd4ec65373d -->
+	論文投稿の際には分割したファイルを再度まとめたい場合がある．手でやるのは大変なので，`latexpand`コマンドか`texdirflatten`コマンドを利用する．homebrewでmactexを入れた場合にはこれらのコマンドも既にインストールされているはず．
+	```bash
+	# latexpandを使う場合．こちらはメインファイルだけsubmit.texに展開する．
+	latexpand input.tex > submit.tex
+	
+	# texdirflattenを使う場合．こちらは依存ファイル（図表ファイルなど）を全てsubmitディレクトリ以下にコピーする．
+	texdirflatten -1 -f input.tex -o submit
+	```
 
-standaloneクラスは図表を外部化する時に役立つ．外部化のメリットは図表だけを他の用途に使うことができたり，特にtikzの場合にコンパイルの時間を減らせることだろう．利用手順としてはまずstandaloneクラスで書かれた図表のファイルだけを先にコンパイルし，これを`\includestandalone`コマンドでメインのファイルから読み込む．図表読み込みの優先順位をpdf，texから再コンパイルと切り替えることができるので，通常の`includegraphics`や`input`に比べて柔軟に運用できるメリットがある．
 
-単にstandaloneクラスを利用して図表を作ることも可能である．例えば次の例では表だけのpdfを作成できる．こうやって作った図表をパワポなどで利用できるので便利だ． 
-
-```latex:table.tex
-\documentclass{standalone} % これが必須
-```
-
-このファイルを単に以下のようにコンパイルするとtable.pdfという表ができる．このとき通常のlatex文書と違って，余白が全くなくなっていることがわかるだろう．
-
-```bash
-lualatex table.tex
-```
-
-プロジェクトの中でstandaloneクラスを使いたい場合，メインファイルでstandaloneパッケージを読み込む必要がある．ここでは上で作ったtable.texを読み込むことを考えている．
-
-```latex:main.tex
-\documentclass{article}
-\usepackage{standalone}
-
-```
-
-<!-- https://konoyonohana.blog.fc2.com/blog-entry-389.html -->
-standaloneクラスの図表の横幅の制御について．standaloneクラスではデフォルトの横幅として`linewidth: 4.7747in`，`textwidth: 4.7747in`という特殊な値を用いている．このためtikzpictureなどの横幅をこれらの値を使って指定するとメイン文書（例えば2段組のrevtexだと`textwidth: 7.05826in`，`linewidth: 3.40457in`）と整合性が取れなくなる．そこで，完全な対処法ではないものの，standalone文書の方で`varwidth`オプションにメイン文書の`textwidth`の値を指定し，図表の横幅を`textwidth`で指定する．
-
-```latex
-\documentclass[varwidth=7.05826in]{standalone}
-
-\begin{document}
-\begin{tikzpicture}
-\begin{axis}
-[width=0.45\textwidth] 
-\end{axis}
-\end{tikzpicture}
-\end{document}
-```
-
-こういう煩わしさを回避するために本来は横幅を絶対値で指定するのが良いのかもしれない．
-
-ちなみに，`textwidth`の値を知りたければ`layout`パッケージをロードして以下のようにすれば確認できる．（もっと良い方法があるかもしれない）
-
-```latex
-\documentclass{article}
-\usepackage{layout}
-\begin{document}
-textwidth: \printinunitsof{in}\prntlen{\textwidth} % 単位がインチの場合
-linewidth: \printinunitsof{in}\prntlen{\linewidth}
-\end{document}
-```
 
 
 ## 参考文献
