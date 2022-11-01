@@ -33,6 +33,22 @@ https://mmistakes.github.io/minimal-mistakes/docs/helpers/
 ```
 
 
+## mathjax
+
+ガウスの発散定理は，
+  \begin{align}
+    \int_V \nabla\cdot AdV=\int_S A\cdot n dS
+    \tag{1}
+    \label{eq:gauss}
+  \end{align}
+です．式\eqref{eq:gauss}は，微分の体積分はものの関数の面積分になる，と言っています．
+
+<!--
+http://www.yamamo10.jp/yamamoto/internet/WEB/MathJax/index.php#EQ_NUMBER
+http://memopad.bitter.jp/web/mathjax/TeXSyntax.html
+-->
+
+
 ## 参考文献
 
 <!-- 

@@ -7,5 +7,20 @@ categories: intel
 
 
 
+## VASP
+
+## CPMD
+
+## Quantum Espresso
+
+## CP2K 
+
 ## wannier90
   [wannier90]({% link _pages/installation/wannier90_install_to_ohtaka.md %})
+
+
+
+
+## LaTeX (管理者権限のない場合)
+
+

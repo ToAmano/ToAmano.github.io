@@ -175,6 +175,8 @@ ccat(colorlized cat)をインストールする．
 ```bash
 brew install ccat
 ```
+または，実行ファイルを(githubレポジトリ)[https://github.com/owenthereal/ccat/releases]からダウンロードできる．
+
 
 3. [grc(ping/makeなど)](https://github.com/garabik/grc)
 grcというパッケージがあり，これで多くのコマンドの出力に色をつけることができる．
@@ -187,6 +189,15 @@ grcコマンドとgrcatという二つのコマンドがインストールされ
 [[ -s "${HOMEBREW_HOME}/etc/grc.zsh" ]] && source ${HOMEBREW_HOME}/etc/grc.zsh
 ```
 を.zshrcに追記する．より細かいカスタマイズがやりたい場合はgithubページを参照．
+
+ちなみにlinux上で（sudoがなく）githubレポジトリを直接配置した場合，`grc.conf`を`~/.grc/grc.conf`に配置した上で中身のファイル名に直接パスを指定する必要がある．
+```bash
+# grc.confを移動
+cp grc.conf ~/.grc/grc.conf
+# 中身のconf.diffのようなファイル名の部分に直接パスを指定する．
+# 全てのconf.*に対して一括置換する．
+conf.diff → (path/to)/grc/colourfiles/conf.diff
+```
 
 
 4. diff
