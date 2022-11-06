@@ -40,6 +40,10 @@ categories: vscode
 1. [LTeX](https://valentjn.github.io/ltex/)
     latexで英語の文法をチェックしてくれるかなり強力な拡張機能．英単語のスペルミスのみならず英文法もチェックしてくれる．
 
+## その他
+
+1. [drawio](https://usimaru.net/vscode-flow-start/)
+
 ## 設定ファイルをdotfileで管理する
 
 vscodeの設定ファイルは`~/Library/Application\ Support/Code/User/settings.json`にあるので，これをdotfileで管理してシンボリックリンクをはるようにするとよい．

@@ -111,3 +111,9 @@ EMACSとCHROMEの連携
 <!-- 
 https://ohdachi.github.io/ohdachi_lab/researches/2018/02/02/zotero_zotfile.html
 -->
+
+
+- [connected paper](https://www.connectedpapers.com/)
+<!--
+https://note.com/sangmin/n/n92321e835bc2
+-->

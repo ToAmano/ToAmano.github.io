@@ -247,7 +247,18 @@ https://cns-guide.sfc.keio.ac.jp/2001/11/5/1.html
 	texdirflatten -1 -f input.tex -o submit
 	```
 
+<!--
 
+履歴書をlatexで：https://text.baldanders.info/remark/2018/11/resume-in-latex/
+cover letterのためのクラスもある．
+
+-->
+
+
+<!--
+LaTeXソースのinput path - はだメモ
+https://scrapbox.io/hada/LaTeX%E3%82%BD%E3%83%BC%E3%82%B9%E3%81%AEinput_path
+-->
 
 
 ## 参考文献

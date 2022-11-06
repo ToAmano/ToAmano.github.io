@@ -10,6 +10,7 @@ categories: intel
 ## VASP
 
 ## CPMD
+[CPMD v4.3]({% link _pages/installation/CPMD_install_intel.md %})
 
 ## Quantum Espresso
 

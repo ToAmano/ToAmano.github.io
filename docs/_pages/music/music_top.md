@@ -14,3 +14,13 @@ Polonaise Op.21
 Poem tragique Op.34
 Poem op.41
 
+
+## Feinberg
+
+
+
+## Medtner
+
+
+
+

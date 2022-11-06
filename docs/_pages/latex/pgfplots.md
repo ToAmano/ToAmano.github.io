@@ -225,6 +225,12 @@ https://tikz.dev/library-external
   [APSのマニュアル](https://journals.aps.org/prl/authors)によると横幅は8.6cmにするべき？ これがおそらく2カラム組の場合の1カラム幅に対応しているのだろう．これもstandalone環境だとうまくいっているように見える．
 
 
+## tikzをつかったフローチャート作成
+
+https://molina.jp/blog/tikz%E3%81%A6%E3%83%95%E3%83%AD%E3%83%BC%E3%83%81%E3%83%A3%E3%83%BC%E3%83%88%E3%82%92%E6%9B%B8%E3%81%8F/
+
+
+## 参考文献
 
 https://tex.stackexchange.com/questions/480910/pgfplots-how-to-align-plot-width-to-same-width-as-legend
 
