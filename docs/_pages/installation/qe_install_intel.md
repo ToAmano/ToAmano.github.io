@@ -11,6 +11,8 @@ tags:
 
 v6.7/6.8/7.0
 
+これはもしかするとだが，v6.7では最適化が-O2だったのがv.6.8では-O3に変わっている？
+
 ## 日付：2022/04/10
 
 Quantum Espressoをインテルマシン/インテルコンパイラでコンパイルする．
@@ -44,7 +46,37 @@ export F77=mpiifort
 ./configure --with-scalapack=intel --enable-openmp=yes --prefix=${path/to/install}
 ```
 
-`make.inc`の中を確認して，コンパイラの設定やライブラリのリンクが正しく行われているか確認する．
+configureの実行が成功すると，最後に
+
+```
+--------------------------------------------------------------------
+ESPRESSO can take advantage of several optimized numerical libraries
+(essl, fftw, mkl...).  This configure script attempts to find them,
+but may fail if they have been installed in non-standard locations.
+If a required library is not found, the local copy will be compiled.
+
+The following libraries have been found:
+  BLAS_LIBS=  -lmkl_intel_lp64  -lmkl_intel_thread -lmkl_core
+  LAPACK_LIBS=
+  SCALAPACK_LIBS=-lmkl_scalapack_lp64 -lmkl_blacs_intelmpi_lp64
+  FFT_LIBS=
+
+
+
+Please check if this is what you expect.
+
+If any libraries are missing, you may specify a list of directories
+to search and retry, as follows:
+  ./configure LIBDIRS="list of directories, separated by spaces"
+
+Parallel environment detected successfully.\
+Configured for compilation of parallel executables.
+
+For more info, read the ESPRESSO User's Guide (Doc/users-guide.tex).
+--------------------------------------------------------------------
+```
+
+のように表示されて，BLAS/LAPACKのリンクが正常に行われているか出力される．さらに，`make.inc`の中を確認して，コンパイラの設定やライブラリのリンクが正しく行われているか確認する．
 
 ## make
 

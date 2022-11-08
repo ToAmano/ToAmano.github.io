@@ -32,7 +32,7 @@ archディレクトリにいくつかのアーキテクチャ用のmake.include�
 cp arch/makefile.include.linux_intel  ./makefile.include
 ```
 
-ファイルの`MKL_PATH   = $(MKLROOT)/lib/intel64`の前にMKLROOTを追加する．
+ファイルの`MKL_PATH   = $(MKLROOT)/lib/intel64`の前にMKLROOTを追加する．これは環境変数のMKLROOTと同じpathを設定すればよい．
 
 ```
 MKLROOT    = /home/local/intel/compilers_and_libraries_2020.4.304/linux/mkl
@@ -42,7 +42,7 @@ MKLROOT    = /home/local/intel/compilers_and_libraries_2020.4.304/linux/mkl
 
 ## make
 
-あとはmakeするだけ．経験的にVASPのmakeは並列化しても通る気がする．
+あとはmakeするだけ．経験的にVASPのmakeは並列化しても通る気がするが，不可解なエラーでとまったらまずは`-j`を外してみることをおすすめする．
 
 ```
 make -j 16 all
@@ -51,5 +51,24 @@ make -j 16 all
 
 ## R2SCANパッチの当て方 2022/6/12
 
-パッチのページはこちら．
-https://gitlab.com/dhamil/r2scan-subroutines
+パッチのページは[こちら](https://gitlab.com/dhamil/r2scan-subroutines)．READMEにpatchのあてかたがかいてあるが，`src`ディレクトリに行って単に
+
+```
+# git clone 
+git clone https://gitlab.com/dhamil/r2scan-subroutines.git
+
+# srcディレクトリに行ってpatchを当てる
+cd /path/to/vasp.5.4.4/src
+patch < /path/to/r2scan-subroutines/vasp_patch_files/metagga544.diff*
+```
+
+でよい．patchをあてたら再コンパイルが必要だが，これは1分程度でおわる．
+
+```
+# vaspのルートディレクトリへ移動
+cd .. 
+# make
+make all
+```
+
+これでR2SCANを使えるようになる．
