@@ -9,15 +9,25 @@ categories: intel
 
 ## VASP
 
+[VASP v5.4.4 with intel compiler]({% link _pages/installation/VASP_install_intel.md %})
+
 ## CPMD
-[CPMD v4.3]({% link _pages/installation/CPMD_install_intel.md %})
+
+[CPMD v4.3 with intel compiler]({% link _pages/installation/CPMD_install_intel.md %})
 
 ## Quantum Espresso
 
-## CP2K 
+[QE v6.7/6.8/7.0 with intel compiler]({% link _pages/installation/qe_install_intel.md %})
 
 ## wannier90
-  [wannier90]({% link _pages/installation/wannier90_install_to_ohtaka.md %})
+
+[wannier90]({% link _pages/installation/wannier90_install_to_ohtaka.md %})
+
+## CP2K 
+
+CP2Kのinstallはかなり難しい．．．
+
+
 
 
 

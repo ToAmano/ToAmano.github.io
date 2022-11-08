@@ -21,6 +21,9 @@ ifort (IFORT) 19.1.3.304 20200925
 Copyright (C) 1985-2020 Intel Corporation.  All rights reserved.
 ```
 
+追記：2021.07のversionでも同様にcompileできることを確認した．
+
+
 ## make.includeの作成
 
 archディレクトリにいくつかのアーキテクチャ用のmake.includeのサンプルがある．今回はインテル用を利用する．
