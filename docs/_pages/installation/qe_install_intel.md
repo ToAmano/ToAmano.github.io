@@ -44,6 +44,7 @@ export F77=mpiifort
 ./configure --with-scalapack=intel --enable-openmp=yes --prefix=${path/to/install}
 ```
 
+`make.inc`の中を確認して，コンパイラの設定やライブラリのリンクが正しく行われているか確認する．
 
 ## make
 
