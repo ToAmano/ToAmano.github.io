@@ -172,10 +172,22 @@ brew install gls
 
 2. cat 
 ccat(colorlized cat)をインストールする．
+
 ```bash
 brew install ccat
 ```
-または，実行ファイルを(githubレポジトリ)[https://github.com/owenthereal/ccat/releases]からダウンロードできる．
+
+または，実行ファイルを[githubレポジトリ](https://github.com/owenthereal/ccat/releases)からダウンロードできる．実行ファイルへのpathを通し，catにaliasをはるようにする．後々色をカスタマイズすることを考えるとmacでもbrew管理よりgithubを使う方がpathのコントロールがしやすくて良いかもしれない．
+
+```bash
+# ccat
+export PATH=$PATH:${path/tp/ccat}
+
+# cat
+if [[ -x `which ccat` ]]; then
+  alias cat='ccat'
+fi
+```
 
 
 3. [grc(ping/makeなど)](https://github.com/garabik/grc)
@@ -202,18 +214,24 @@ conf.diff → (path/to)/grc/colourfiles/conf.diff
 
 4. diff
 colordiffをインストールする．
+
 ```bash
 brew install colordiff
 ```
+
+または[githubレポジトリ](https://github.com/daveewart/colordiff)を使う．
+
 
 5. less
 <!-- https://atmarkit.itmedia.co.jp/flinux/rensai/linuxtips/357colorlsless.html
  -->
 grcでサポートされておらず，source-highlightを利用する．
+
 ```bash
 brew install source-highlight
 ```
 
+または[githubレポジトリ](https://github.com/scopatz/src-highlite)を使う．
 <!--
 https://wiki.archlinux.jp/index.php/Zsh
 https://qiita.com/minnsou/items/3e9f200f9f2cc9a92920
