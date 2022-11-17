@@ -197,7 +197,7 @@ $ git branch -d issue
 
 ## github-pagesの使い方
 
-[こちら](github_pages.md)
+[こちら]({% link _pages/github/github_pages.md %})
 
 ---
 ## latex文書の運用について
