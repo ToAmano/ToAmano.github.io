@@ -35,6 +35,9 @@ https://mmistakes.github.io/minimal-mistakes/docs/helpers/
 
 ## mathjax
 
+通常のLaTeXと同じく，`tag`による番号づけ，`label`によるラベリング，`\eqref`による参照が可能．
+
+```
 ガウスの発散定理は，
   \begin{align}
     \int_V \nabla\cdot AdV=\int_S A\cdot n dS
@@ -42,10 +45,13 @@ https://mmistakes.github.io/minimal-mistakes/docs/helpers/
     \label{eq:gauss}
   \end{align}
 です．式\eqref{eq:gauss}は，微分の体積分はものの関数の面積分になる，と言っています．
+```
 
 <!--
 http://www.yamamo10.jp/yamamoto/internet/WEB/MathJax/index.php#EQ_NUMBER
 http://memopad.bitter.jp/web/mathjax/TeXSyntax.html
+
+https://www.eng.niigata-u.ac.jp/~nomoto/download/mathjax.pdf
 -->
 
 

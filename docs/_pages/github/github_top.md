@@ -209,3 +209,7 @@ https://zenn.dev/t4t5u0/articles/latexoperation
 
 https://peterroelants.github.io/posts/adding-tags-to-github-pages/
 -->
+
+## 参考文献
+
+[gitignoreのテンプレート](https://github.com/github/gitignore)

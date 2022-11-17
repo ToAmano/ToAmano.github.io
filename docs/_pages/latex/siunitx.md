@@ -59,3 +59,6 @@ siunitxパッケージで単位のみを書くと，例えば\si{\cm}のよう�
 
 <!-- https://tex.stackexchange.com/questions/30817/how-to-use-siunitx-with-non-numerical-values -->
 
+<!--
+https://academia.stackexchange.com/questions/18357/are-there-any-guidelines-for-labeling-axes-in-plots-graphs/28918#28918
+-->

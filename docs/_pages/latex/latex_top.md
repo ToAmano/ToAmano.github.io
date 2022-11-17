@@ -266,6 +266,9 @@ https://scrapbox.io/hada/LaTeX%E3%82%BD%E3%83%BC%E3%82%B9%E3%81%AEinput_path
 [投稿論文のためのテンプレート](https://sharelatex.psi.ch/templates/journals.1)
 もちろん本当に投稿するときはちゃんとその雑誌の公式のテンプレートを用いるべし．TeXの勉強をする際の勉強になる．
 
+[non breaking spaceについて](https://tex.stackexchange.com/questions/15547/when-should-i-use-non-breaking-space)
+
+
 [^1]: LaTeX文書はそのままではpdfに変換することができず，LaTeXエンジンと呼ばれるプログラムを実行する必要がある．このエンジンには色々種類があって難しいのだが，自分は近年登場したlualatexを利用している．以前はupLaTeXを利用していたのだが，これはtex文書を一旦DVI形式に変更し，さらにDVIからpdfへ変換するpdflatexを利用する必要があった．lualatexはtex文書から直接pdf文書を生成してくれるために煩わしさがないので気にいっている．一方でデフォルトでは日本語が使えなかったり，従来のエンジンに比べてコンパイルに時間がかかるといった欠点もある．
 
 <!-- 

@@ -108,3 +108,23 @@ pythonを使う場合，プロジェクトごとに仮想環境を作成し，�
 
 
 <!-- https://sandmark.hateblo.jp/entry/2017/10/22/180000 -->
+
+
+## コーディング全般
+
+<!--
+読みやすいコードのために
+https://future-architect.github.io/articles/20190610/
+https://qiita.com/icoxfog417/items/f737d6c84b733f649461
+https://engineering.linecorp.com/ja/blog/code-readability-vol3/
+https://qiita.com/qython/items/1f7416bbb29f48a153bb
+-->
+
+- 驚き最小原則
+- Separation of concerns
+- Single-responsibility principle
+
+読みやすいコードのために気を付けるべきこと．
+
+- 1: 中身が推測できる関数名（getXXX,）
+- 2: 型や可視性が推測できる変数名（リストならxxxListなど）

@@ -41,3 +41,29 @@ int main(){
   return 0;
 }
 ```
+
+## 命名規則
+
+| スネークケース | snake_case |
+| キャメルケース | camelCase  |
+| パスカルケース | PascalCase |
+
+c++では標準ライブラリがスネークケースなので合わせた方がよい．
+
+
+
+<!--
+命名規則
+https://qiita.com/rinse_/items/a11ec988e7378642e8e2
+-->
+
+<!--
+c++コーディング指針
+https://qiita.com/shirakawa4756/items/7430f447883a74831bf9
+
+c++ベクトルまとめ
+https://qiita.com/ysuzuki19/items/df872d91c9c89cc31aee
+
+C++ 値渡し、ポインタ渡し、参照渡しを使い分けよう
+https://qiita.com/agate-pris/items/05948b7d33f3e88b8967
+-->
