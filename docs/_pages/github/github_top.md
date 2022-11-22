@@ -209,3 +209,15 @@ https://zenn.dev/t4t5u0/articles/latexoperation
 
 https://peterroelants.github.io/posts/adding-tags-to-github-pages/
 -->
+
+## その他
+
+- commitメッセージのテンプレート
+  
+  適当なテンプレートファイル`commit_template`を作った上で
+  
+  ```
+  git config --global commit.template /path/to/commit_template
+  ```
+  
+  とする．`--global`は全てのレポジトリに一括で適用するので，個別のレポジトリに対してやりたければそのレポジトリのディレクトリで`--global`オプションなしで実行する．

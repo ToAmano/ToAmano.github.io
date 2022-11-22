@@ -82,9 +82,12 @@ tabular+table環境を利用した表の作り方については[ここ]({% link
 外部コマンドを利用する場合，一番手っ取り早いのはgnuplotと思う．一旦gnuplotでtikzファイルを作成し，そのtikzファイルをlatexに読み込む方法か，latex内でgnuplot環境を利用する方法が使える．他にpythonを利用する人はmatplotlib+tikzという組み合わせも利用できる．asymptoteはこれらに比べるとドキュメントが充実していないが，環境光を利用した作図ができるので立体図形などの綺麗なグラフィックを作る時（例えば結晶構造とか）には非常に有効．
 
 <!--
+asymptote関連
 https://qiita.com/satl/items/0c11c8808b43f806ee21
 https://geniusium.hatenablog.com/entry/2018/09/16/114600
 https://unity-yuji.xyz/latex-subcaption-subfigure-ref-parenthesis/
+http://hooki.blog23.fc2.com/blog-entry-98.html
+https://tex.stackexchange.com/questions/195199/adding-arrows-on-3d-curves-in-asymptote
 -->
 
 
