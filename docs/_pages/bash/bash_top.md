@@ -171,6 +171,7 @@ brew install gls
 この状態で`ls`と打つと`gls`の方を実行してくれる．
 
 2. cat 
+
 ccat(colorlized cat)をインストールする．
 
 ```bash
@@ -191,28 +192,38 @@ fi
 
 
 3. [grc(ping/makeなど)](https://github.com/garabik/grc)
+
 grcというパッケージがあり，これで多くのコマンドの出力に色をつけることができる．
+
 ```bash
 brew install grc
 ```
+
 grcコマンドとgrcatという二つのコマンドがインストールされ，
 自動で各種コマンドへのAliasを通すには
+
 ```bash
 [[ -s "${HOMEBREW_HOME}/etc/grc.zsh" ]] && source ${HOMEBREW_HOME}/etc/grc.zsh
 ```
+
 を.zshrcに追記する．より細かいカスタマイズがやりたい場合はgithubページを参照．
 
 ちなみにlinux上で（sudoがなく）githubレポジトリを直接配置した場合，`grc.conf`を`~/.grc/grc.conf`に配置した上で中身のファイル名に直接パスを指定する必要がある．
+
 ```bash
 # grc.confを移動
 cp grc.conf ~/.grc/grc.conf
 # 中身のconf.diffのようなファイル名の部分に直接パスを指定する．
 # 全てのconf.*に対して一括置換する．
 conf.diff → (path/to)/grc/colourfiles/conf.diff
+
+# bash_profileやzshrcではpathを通すのを忘れずに．
+# grc
+export PATH=$PATH:${path/to/grc}
 ```
 
-
 4. diff
+
 colordiffをインストールする．
 
 ```bash
@@ -223,6 +234,7 @@ brew install colordiff
 
 
 5. less
+
 <!-- https://atmarkit.itmedia.co.jp/flinux/rensai/linuxtips/357colorlsless.html
  -->
 grcでサポートされておらず，source-highlightを利用する．
@@ -231,7 +243,7 @@ grcでサポートされておらず，source-highlightを利用する．
 brew install source-highlight
 ```
 
-または[githubレポジトリ](https://github.com/scopatz/src-highlite)を使う．
+公式のページは[こちら](https://www.gnu.org/software/src-highlite/)．[githubレポジトリ](https://github.com/scopatz/src-highlite)を使うこともできるが，公式ページの配布コードと違ってconfigureファイルを作成するために`autoreconf`コマンドが必要で，Linux上でコマンドの実行に失敗したので現在使っていない（2022/11/08）．
 <!--
 https://wiki.archlinux.jp/index.php/Zsh
 https://qiita.com/minnsou/items/3e9f200f9f2cc9a92920
@@ -244,4 +256,13 @@ zsh: https://qiita.com/agotoh/items/e6b22bcfe63162f70e0d
 ```bash
 # 複数ファイルに対する一括処理
 for file in *.markdown ; do mv “$file” “${file%.markdown}.md” ; done
+
+# awkで列挿入
+cat in.txt | awk '{print $1 " " "add" " " $2}'
+
+## シンボリックリンクをたどって圧縮する
+tar cfzh /backup/domain.tar.gz /home/aaa/www/domain/*
 ```
+<!--
+https://it-ojisan.tokyo/awk-add-insert/
+-->

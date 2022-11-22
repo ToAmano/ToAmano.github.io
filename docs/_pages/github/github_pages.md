@@ -35,6 +35,60 @@ https://mmistakes.github.io/minimal-mistakes/docs/helpers/
 
 ## mathjax
 
+mathjaxをgithub pagesで使うには，テンプレートファイルをいじる必要がある．`minimal mistakes`の場合は，`_include/head/custom.html`というファイルを以下の内容で作成した．
+
+```custom.html
+{% if page.mathjax %}
+<script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true,
+        tags: "ams",
+        autoload: {
+          color: [],
+          colorV2: ['color']
+        },
+        packages: {'[+]': ['noerrors']}
+      },
+      chtml: {
+        matchFontHeight: false,
+        displayAlign: "left",
+        displayIndent: "2em"
+      },
+      options: {
+        renderActions: {
+          /* add a new named action to render <script type="math/tex"> */
+          find_script_mathtex: [10, function (doc) {
+            for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            }
+          }, '']
+        }
+      },
+      loader: {
+        load: ['[tex]/noerrors']
+      }
+    };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" id="MathJax-script"></script>
+{% endif %}
+```
+
+mathjaxの部分については[こちら](https://qiita.com/memakura/items/e4d2de379f98ad7be498)のページを参考にした．
+
+`minimal mistakes`の場合はこれで自動的に読み込んでくれるようになる．詳しくはgithubレポジトリの`_layouts/default.html`ファイルを参照してみると，ここで`head/custom/html`を読み込むようになっている．一般的なテーマを使っている場合，こちらのlayoutのファイルもいじる必要があるかもしれない．
+
+
+- 通常のLaTeXと同じく，`tag`による番号づけ，`label`によるラベリング，`\eqref`による参照が可能．
+
+```
 ガウスの発散定理は，
   \begin{align}
     \int_V \nabla\cdot AdV=\int_S A\cdot n dS
@@ -42,10 +96,13 @@ https://mmistakes.github.io/minimal-mistakes/docs/helpers/
     \label{eq:gauss}
   \end{align}
 です．式\eqref{eq:gauss}は，微分の体積分はものの関数の面積分になる，と言っています．
+```
 
 <!--
 http://www.yamamo10.jp/yamamoto/internet/WEB/MathJax/index.php#EQ_NUMBER
 http://memopad.bitter.jp/web/mathjax/TeXSyntax.html
+
+https://www.eng.niigata-u.ac.jp/~nomoto/download/mathjax.pdf
 -->
 
 

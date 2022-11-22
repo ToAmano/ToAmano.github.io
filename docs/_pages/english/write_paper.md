@@ -77,3 +77,17 @@ Cardioselective beta-blockers effectively lower blood pressure in most patients.
 <!-- アカデミックヤクザにキレられないためのLaTeX論文執筆メソッド https://qiita.com/suigin/items/10960e516f2d44f6b6de -->
 
 <!-- 論文を書く上での規則 https://qiita.com/Ishotihadus/items/d6088aec3632545833e8 -->
+
+## cover letter 
+
+[参考？](https://www.thinkscience.co.jp/pdf/Ten_tips_for_writing_an_effective_cover_letter_Japanese.pdf)
+[参考?](https://authorservices.taylorandfrancis.com/publishing-your-research/making-your-submission/writing-a-journal-article-cover-letter/)
+
+
+## APS submit前に確認するページ
+
+https://journals.aps.org/prb/authors/tips-authors-physical-review-physical-review-letters
+
+https://journals.aps.org/prb/authors/tips-authors-physical-review-physical-review-letters
+
+https://journals.aps.org/authors/examples-errors-references
