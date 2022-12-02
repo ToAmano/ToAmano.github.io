@@ -88,6 +88,7 @@ Cardioselective beta-blockers effectively lower blood pressure in most patients.
 
 https://journals.aps.org/prb/authors/tips-authors-physical-review-physical-review-letters
 
-https://journals.aps.org/prb/authors/tips-authors-physical-review-physical-review-letters
-
 https://journals.aps.org/authors/examples-errors-references
+
+https://journals.aps.org/prb/authors/editorial-policies-practices
+
