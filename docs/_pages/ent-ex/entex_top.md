@@ -175,7 +175,7 @@ pdf化した答案の大半には図がないので，時間がある時に順�
 | 1990 | [問題][]      |   |   |   |   |   |   |
 | 1991 | [問題][utk91] |   |   |   |   |   |   |
 | 1992 | [問題][utk92] |   |   |   |   |   |   |
-| 1993 | [問題][]      |   |   |   |   |   |   |
+| 1993 | [問題][utk93] |   |   |   |   |   |   |
 | 1994 | [問題][]      |   |   |   |   |   |   |
 | 1995 | [問題][]      |   |   |   |   |   |   |
 | 1996 | [問題][]      |   |   |   |   |   |   |
@@ -558,6 +558,7 @@ pdf化した答案の大半には図がないので，時間がある時に順�
 
 [utk91]: {% link _pages/ent-ex/problems/todai/todai_kouki/1991/1991.pdf %}
 [utk92]: {% link _pages/ent-ex/problems/todai/todai_kouki/1992/1992.pdf %}
+[utk93]: {% link _pages/ent-ex/problems/todai/todai_kouki/1993/1993.pdf %}
 [utk03]: {% link _pages/ent-ex/problems/todai/todai_kouki/2003/2003.pdf %}
 [utk04]: {% link _pages/ent-ex/problems/todai/todai_kouki/2004/2004.pdf %}
 [utk05]: {% link _pages/ent-ex/problems/todai/todai_kouki/2005/2005.pdf %}

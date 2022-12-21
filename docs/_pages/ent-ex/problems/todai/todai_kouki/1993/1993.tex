@@ -1,0 +1,57 @@
+ % LuaLaTeX文書; 文字コーAドはUTF-8
+ \documentclass[unicode,12pt, A4j]{ltjsarticle}% 'unicode'が必要
+ %\usepackage{luatexja}% 日本語したい
+ \usepackage{luatexja-fontspec}
+ %\usepackage[hiragino-pron]{luatexja-preset}% IPAexフォントしたい(ipaex)
+ \usepackage[hiragino-pron,deluxe,expert,bold]{luatexja-preset}
+
+ \usepackage[english]{babel}%多言語文書を作成する
+ \usepackage{amsmath,amssymb}%標準数式表現を拡大する
+ \usepackage{physics}
+ \usepackage[subpreambles=true,sort=true]{standalone}
+% \renewcommand{\kanjifamilydefault}{\gtdefault}% 既定をゴシック体に
+ \usepackage[backend=bibtex,style=phys,articletitle=false,biblabel=brackets,chaptertitle=false,pageranges=false]{biblatex}
+ %\usepackage[style=authoryear,backend=bibtex]{biblatex}
+
+
+ %\addbibresource{../references/tio2_ref.bib}
+ \usepackage{mhchem}
+ % あとは欧文の場合と同じ
+
+  \usepackage{caption}
+  \usepackage[subrefformat=parens]{subcaption}
+\title{東大数学理科後期1993年度}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{問題1}
+$n$を$3$以上の自然数とする．$xy$平面上，原点を中心とし，点$(1,0)$をひとつの頂点に持つ正$n$角形を$P$とする．
+\begin{enumerate}
+ \item $P$の像が$P$に完全に重なるような一次変換を表す行列を全て求めよ．
+ \item (1)で求めた行列すべての和を求めよ．
+\end{enumerate}
+
+\section{問題2}
+$xy$平面において，直線$l$と点$\mathrm{A}$の距離を$d(l,\mathrm{A})$と書くことにする．さらに，相異なる$3$点$\mathrm{A}=(x_1,y_1)$，$\mathrm{B}=(x_2,y_2)$，$\mathrm{C}=(x_3,y_3)$が与えられたとき，
+\begin{align*}
+ f(l)=d(l,\mathrm{A})^2+d(l,\mathrm{B})^2+d(l,\mathrm{C})^2
+\end{align*}
+とおく．
+
+\begin{enumerate}
+ \item ある与えられた直線に平行な直線のうち，$f(l)$を最小にする直線$l_0$は三角形$\mathrm{ABC}$の重心を通ることを示せ．
+ \item 異なる$3$本の直線が$f(l)$を最小にするならば，三角形$\mathrm{ABC}$は生産各駅であることを示せ．
+\end{enumerate}
+
+\section{問題3}
+放物線の一部$y=x^2$，$0\le x\le 2$を$y$軸のまわりに回転してできる回転体型の容器に水を満たし，このなかに，半径$r$の鉛の玉を，それが容器に使えて止まるまでゆっくり沈めた．ただし，鉛直線を$y$軸とする．このとき，次の問いに答えよ．
+\begin{enumerate}
+ \item もとの水面に高さから球の中心の高さを引いた差$s$を$r$の関数としてあらわせ．
+ \item あふれ出る水の体積を最大にする$r$の値を求めよ．
+\end{enumerate}
+
+
+\end{document}
