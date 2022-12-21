@@ -185,9 +185,9 @@ pdf化した答案の大半には図がないので，時間がある時に順�
 | 2000 | [問題][]      |   |   |   |   |   |   |
 | 2001 | [問題][]      |   |   |   |   |   |   |
 | 2002 | [問題][]      |   |   |   |   |   |   |
-| 2003 | [問題][]      |   |   |   |   |   |   |
-| 2004 | [問題][]      |   |   |   |   |   |   |
-| 2005 | [問題][]      |   |   |   |   |   |   |
+| 2003 | [問題][utk03] |   |   |   |   |   |   |
+| 2004 | [問題][utk04] |   |   |   |   |   |   |
+| 2005 | [問題][utk05] |   |   |   |   |   |   |
 | 2006 | [問題][utk06] |   |   |   |   |   |   |
 | 2006 | [問題][utk07] |   |   |   |   |   |   |
 
@@ -558,6 +558,9 @@ pdf化した答案の大半には図がないので，時間がある時に順�
 
 [utk91]: {% link _pages/ent-ex/problems/todai/todai_kouki/1991/1991.pdf %}
 [utk92]: {% link _pages/ent-ex/problems/todai/todai_kouki/1992/1992.pdf %}
+[utk03]: {% link _pages/ent-ex/problems/todai/todai_kouki/2003/2003.pdf %}
+[utk04]: {% link _pages/ent-ex/problems/todai/todai_kouki/2004/2004.pdf %}
+[utk05]: {% link _pages/ent-ex/problems/todai/todai_kouki/2005/2005.pdf %}
 [utk06]: {% link _pages/ent-ex/problems/todai/todai_kouki/2006/2006.pdf %}
 [utk07]: {% link _pages/ent-ex/problems/todai/todai_kouki/2007/2007.pdf %}
 
