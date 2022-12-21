@@ -1,0 +1,84 @@
+ % LuaLaTeX文書; 文字コーAドはUTF-8
+ \documentclass[unicode,12pt, A4j]{ltjsarticle}% 'unicode'が必要
+ %\usepackage{luatexja}% 日本語したい
+ \usepackage{luatexja-fontspec}
+ %\usepackage[hiragino-pron]{luatexja-preset}% IPAexフォントしたい(ipaex)
+ \usepackage[hiragino-pron,deluxe,expert,bold]{luatexja-preset}
+
+ \usepackage[english]{babel}%多言語文書を作成する
+ \usepackage{amsmath,amssymb}%標準数式表現を拡大する
+ \usepackage{physics}
+ \usepackage[subpreambles=true,sort=true]{standalone}
+% \renewcommand{\kanjifamilydefault}{\gtdefault}% 既定をゴシック体に
+ \usepackage[backend=bibtex,style=phys,articletitle=false,biblabel=brackets,chaptertitle=false,pageranges=false]{biblatex}
+ %\usepackage[style=authoryear,backend=bibtex]{biblatex}
+
+
+ %\addbibresource{../references/tio2_ref.bib}
+ \usepackage{mhchem}
+ % あとは欧文の場合と同じ
+
+  \usepackage{caption}
+  \usepackage[subrefformat=parens]{subcaption}
+
+% https://mathlandscape.com/latex-style/
+\everymath{\displaystyle}
+\title{東大数学理科後期2004年度}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{問題1}
+$r$は正の実数とし，角$\theta$は$0<\theta<\frac{\pi}{2}$を満たすとする．$xy$平面の原点$\mathrm{O}$を$\mathrm{P}_0$，$(1,0)$を$\mathrm{P}_1$として，点$\mathrm{P}_2\mathrm{P}_3\cdots$を以下の条件(a)，(b)，(c)が$n=0,1,2,\cdots$に対して満たされるようにとる．
+ \begin{enumerate}
+  \item $\mathrm{P}_{n+1}\mathrm{P}_{n+2}=r\mathrm{P}_{n}\mathrm{P}_{n+1}$
+  \item $\triangle \mathrm{P}_{n}\mathrm{P}_{n+1}\mathrm{P}_{n+2}=\theta$
+  \item 点$\mathrm{P}_n\mathrm{P}_{n+2}\mathrm{P}_{n+3}$は同一直線上にある．
+ \end{enumerate}
+このとき次の問に答えよ．
+ \begin{enumerate}
+  \item $r$を$\theta$を用いてあらわせ．
+  \item 点$\mathrm{P}_n$の座標を$(x_n,y_n)$とする．複素数$z_n=x_n+y_ni$を$\theta$を用いてあらわせ．
+  \item 数列$\{x_n\}$，$\{y_n\}$がともに収束するための必要十分条件は$\frac{\pi}{3}<\theta<\frac{\pi}{2}$であることを証明せよ．
+ \end{enumerate}
+以下$\frac{\pi}{3}<\theta<\frac{\pi}{2}$とする．極限値$\lim_{n\to\infty}x_n$，$\lim_{n\to\infty}y_n$をそれぞれ$\theta$の関数と考えて，$\alpha(\theta)$，$\beta(\theta)$とおく．
+\begin{enumerate}
+ \item 極限値$\lim_{\theta\to{\frac{\pi}{3}+0}}\alpha(\theta)$，$\lim_{\theta\to{\frac{\pi}{3}+0}}\beta(\theta)$をそれぞれ求めよ．
+ \item $\frac{\pi}{3}<\theta<\frac{\pi}{2}$における$\beta(\theta)$の最大値を求めよ．
+\end{enumerate}
+
+
+
+\section{問題2}
+集合$A$,$B$を$A=\{0,1,2,3,4,5,6,7\}$，$B=\{0,1\}$とし，$N$を$3$以上の整数とする．また，各項が$0$または$1$からなる数列を$01$数列と呼ぶことにする．
+ $01$数列$a_1,a_2,\cdots.a_N$に対し，$A$から$B$への写像$f$を用いて，新しい$01$数列$b_1,b_2,\cdots,b_N$を，
+\begin{align*}
+ b_1=f(a_1),b_2=f(2a_1+a_2),b_k=f(4a_{k-2}+2a_{k-1}+a_k)\, (k=3,4,\cdots, N)
+\end{align*}
+と定め，$b_1$,$b_2$,$\cdots$,$b_N$は$a_1$,$a_2$,$\cdots$,$a_N$から$f$によって得られるという．ただし，$A$から$B$への写像$f$とは，$A$の各要素$x$にたいして$B$の要素$f(x)$をただひとつ対応させる規則をさすものとする．次の問に答えよ．
+\begin{enumerate}
+ \item $A$から$B$への写像は，全部で何通りあるか．
+ \item $f(0)=f(3)=f(4)=f(7)=0$，$f(1)=f(2)=f(5)=f(6)=1$，であるとき，
+       \begin{align*}
+	b_k=\frac{1}{2}\left\{1+(-1)^k\right\}\, (k=1,2,\cdots,N)
+       \end{align*}
+       となるような$01$数列$a_1$，$a_2$，$\cdots$，$a_N$を求めよ．
+ \item $A$から$B$への写像$f$が，条件
+       \begin{align*}	
+       (P)\,\, f(2m)\neq f(2m+1)\,\, (m=0,1,2,3)
+       \end{align*}
+       を満たすとする．このような$f$は何通りあるか．
+ \item $A$から$B$への写像$f$が条件(P)をみたすならば，どのような$N$項からなる$01$数列も，ある$01$数列$a_1$,$a_2$,$\cdots$,$a_N$から$f$によって得られることを示せ．
+\end{enumerate}
+
+\section{問題3}
+$xy$平面に点$(-1,0)$を中心とする半径$1$の円$A$と，点$(0,1)$を中心とする半径$1$の円$B$をとる．円$A$の内部を$D$，円$B$の内部を$E$とする．次の問に答えよ．
+\begin{enumerate}
+ \item 点$(-1+\cos\theta,\sin\theta)$における円$A$の接線を$l$とする．円$B$の接線$m$が$l$と直交するとき，$l$と$m$の交点$\mathrm{P}$の座標を$\theta$を用いてあらわせ．
+ \item 領域$D$にも$E$にも重ならないように$1$辺の長さが$2$の正方形を$xy$平面内で動かすとき，この正方形が通り得ない部分の面積を求めよ．
+\end{enumerate}
+
+
+\end{document}
