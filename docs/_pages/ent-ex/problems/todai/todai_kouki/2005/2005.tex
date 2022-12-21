@@ -1,0 +1,70 @@
+ % LuaLaTeX文書; 文字コーAドはUTF-8
+ \documentclass[unicode,12pt, A4j]{ltjsarticle}% 'unicode'が必要
+ %\usepackage{luatexja}% 日本語したい
+ \usepackage{luatexja-fontspec}
+ %\usepackage[hiragino-pron]{luatexja-preset}% IPAexフォントしたい(ipaex)
+ \usepackage[hiragino-pron,deluxe,expert,bold]{luatexja-preset}
+
+ \usepackage[english]{babel}%多言語文書を作成する
+ \usepackage{amsmath,amssymb}%標準数式表現を拡大する
+ \usepackage{physics}
+ \usepackage[subpreambles=true,sort=true]{standalone}
+% \renewcommand{\kanjifamilydefault}{\gtdefault}% 既定をゴシック体に
+ \usepackage[backend=bibtex,style=phys,articletitle=false,biblabel=brackets,chaptertitle=false,pageranges=false]{biblatex}
+ %\usepackage[style=authoryear,backend=bibtex]{biblatex}
+
+
+ %\addbibresource{../references/tio2_ref.bib}
+ \usepackage{mhchem}
+ % あとは欧文の場合と同じ
+
+  \usepackage{caption}
+  \usepackage[subrefformat=parens]{subcaption}
+
+% https://mathlandscape.com/latex-style/
+\everymath{\displaystyle}
+\title{東大数学理科後期2005年度}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{問題1}
+$xy$平面の原点を$\mathrm{O}$として，$2$点$\mathrm{P}(\cos\theta,\sin\theta)$，$\mathrm{Q}(1,0)$をとる．ただし，$0<\theta<\pi$とする．点$A$は線分$\mathrm{PQ}$上を，また点$\mathrm{B}$は線分$\mathrm{OQ}$上を動き，線分$\mathrm{AB}$は$\triangle OPQ$の面積を二等分しているとする．このような線分$\mathrm{AB}$で最も短いものの長さを$l$とおき，これを$\theta$の関数と考えて$l^2=f(\theta)$と表す．
+ \begin{enumerate}
+  \item 線分$\mathrm{AQ}$の長さを$a$，$\mathrm{BQ}$の長さを$b$とすると，$ab=\sin\frac{\theta}{2}$が成立することを示せ．
+  \item $\mathrm{PQ}\ge \frac{1}{2}$，$\mathrm{PQ}<\frac{1}{2}$それぞれの場合について，$f(\theta)$を$\theta$を用いてあらわせ．
+  \item 関数$f(\theta)$は$0<\theta<\pi$で微分可能であることを示し，そのグラフの概形を描け．また，$f(\theta)$の最大値を求めよ．
+ \end{enumerate}
+
+\section{問題2}
+$10$枚のカードに$1$から$10$までの数が$1$つづつ書かれている．これらのカードを用いた次のようなゲームを考える．$r$を自然数とする．このゲームは最大$r$ラウンドからなり，第一ラウンドから始まる．各ラウンドで，プレーヤーは，$10$枚のカードから$1$枚のカードを抜き出し，その数をみてから，「停止」または「続行」のいずれかを選択する．「停止」を選択した場合は，そのラウンドでゲームは終了し，最後に抜き出したカードに書かれた数が特典となる．「続行」を選択した場合は，抜き出したカードをもとに戻して，次のラウンドを実行する．最終ラウンドでは，「停止」しか選択できず，そのラウンドで抜きただしたカードに書かれた数が得点となる．ただし，各ラウンドで，どのカードも等しい確率$\frac{1}{10}$で抜き出されるものとする．
+
+抜き出したカードに書かれた数$x$によって「停止」または「続行」を選択する規則を，そのラウンドにおける戦略という．戦略はラウンドごとに，$0$または$1$の値をとる関数$f(x)\,(x=1,2,\cdots,10)$によって，$f(x)=0$ならば「続行」，$f(x)=1$ならば「停止」と定める．
+
+\begin{enumerate}
+ \item $k$は$1\le k < 10$を満たす自然数とする．関数$f_k(x)$を
+ \item ラウンド数$r$が$2$のとき，得点の期待値が最大となるような，第一ラウンドでの戦略を与え，その時の得点の期待値を求めよ．
+ \item ラウンド数$r$が$3$のとき，特典の期待値が最大となるような，第一ラウンドおよび第二ラウンドでの戦略をそれぞれ与え，その時の得点の期待値を求めよ．
+\end{enumerate}
+
+\section{問題3}
+$a$は実数で，$-\frac{1}{2}\le a<2$を満たすとする．$xy$平面の領域$D$，$E$を
+\begin{align*}
+   D & 1\le x^2+y^2\le 4 \\
+   E & a\le x \le a+1
+\end{align*}
+で定める．領域$D$と$E$の共通部分の面積を$a$の関数と考えて$S(a)$とおく．
+
+\begin{enumerate}
+ \item $S(a)$を定積分であらわせ．
+ \item 導関数$S'(a)$を$a$の関数として求めよ．
+ \item $S(a)$を最大にするような実数$a$を解にもつ$4$次方程式$3x^4+px^3+qx^2+rx+s=0$（$p$,$q$,$r$,$s$は整数）を求めよ．
+ \item (3)で求めた方程式で，$x=\sqrt{2}t$とおき，さらに$z=t-\frac{1}{t}$とすることにより，この方程式を$z$についての$2$次方程式としてあらわせ．
+ \item $S(a)$を最大にするような$a$の値を求めよ．
+\end{enumerate}
+
+
+
+\end{document}
