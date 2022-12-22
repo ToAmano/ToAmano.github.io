@@ -6,6 +6,7 @@ categories: math
 tags:
  - linux
  - bash
+mathjax: true
 ---
 
 ## 行列の対角化の基礎
