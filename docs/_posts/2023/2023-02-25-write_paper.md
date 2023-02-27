@@ -1,7 +1,7 @@
 ---
 layout: single
 title:  "論文執筆チェックリスト基本編"
-date:   2022-12-21 09:00:00 +0900
+date:   2023-2-25 21:00:00 +0900
 categories: latex english
 ---
 
