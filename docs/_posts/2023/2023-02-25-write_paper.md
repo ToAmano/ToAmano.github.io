@@ -1,9 +1,10 @@
 ---
 layout: single
-title: "論文執筆チェックリスト基本編"
-date:  2023-02-25 21:00:00 +0900
+title:  "論文執筆チェックリスト基本編"
+date:   2022-12-21 09:00:00 +0900
 categories: latex english
 ---
+
 
 LaTeXでの論文執筆時の注意点や，論文投稿時の流れなどをまとめておく．まず全般的な注意として，出版社のHPに著者用の注意点などをまとめたページがあるのでそこを参照して，出版社ごとのLaTeXテンプレートや慣習に従う必要がある．
 
@@ -126,6 +127,7 @@ latexpand -o submit.tex input.tex
 これらのpathは文書中の`includegraphics`や`input`で明示されていることが多いが，以下のようにプリアンブルでpathを追加できるので活用したい．
 
 ```
+{% raw %}
  % path for includegraphics
  \graphicspath{{figure/}{table/}}
 
@@ -134,6 +136,7 @@ latexpand -o submit.tex input.tex
   \providecommand*{\input@path}{}
   \g@addto@macro\input@path{{figure/}{table/}}% append
   \makeatother
+{% endraw %}
 ```
 
 こうすれば，元々
