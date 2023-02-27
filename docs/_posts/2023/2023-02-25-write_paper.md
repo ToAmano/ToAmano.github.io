@@ -164,6 +164,66 @@ latexpand -o submit.tex input.tex
 
 そのほかにもいくつかのサンプルがoverleafの[ページ](https://www.overleaf.com/gallery/tagged/cover-letter)にあるので，参考にすると良いと思う．
 
+一例としてmoderncvを使う簡単な例を示す．あまり綺麗な使い方ではない部分があるので注意が必要だが，右上に個人の所属などの情報があり，あとは手紙調の本文があるという最低限の体裁はこれで整えることができる．
+
+```
+\documentclass[12pt,a4paper, roman]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv themes
+\moderncvstyle{classic}                            % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{green}                              % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+
+% adjust the page margins
+\usepackage[scale=0.82]{geometry} % optional
+
+% personal data
+\name{Hogehoge}{Fugafuga}
+\title{Title}                                       % optional
+\address{Hogehoge university}{1-1-1, Tokyo, Japan.} % optional
+\phone[fixed]{000-000-000-000}                      % optional
+\email{hogehoge@gmail.com}                          % optional
+
+
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%-----       letter       ---------------------------------------------------------
+% recipient data
+\recipient{The Editorial Office}{fugafuga publish}
+\date{\today}
+% 文頭
+\opening{\textbf{Paper title}: HOGEHOGE \\
+\textbf{Authors}: FUGAFUGA}
+
+% 文末
+\closing{Sincerely yours,}
+
+\makelettertitle
+
+%
+Dear Editors of fugafuga publisher
+
+\vspace{0.5cm}
+
+hogehoge
+
+\vspace{0.2cm}
+
+hogehoge
+
+\vspace{0.2cm}
+
+hogehoge
+
+\vspace{0.3cm}
+
+\name{On behalf of all the authors, \\ HOGE}{FUGA}
+\makeletterclosing
+
+\end{document}
+```
+
 [参考？](https://www.thinkscience.co.jp/pdf/Ten_tips_for_writing_an_effective_cover_letter_Japanese.pdf)
 [参考?](https://authorservices.taylorandfrancis.com/publishing-your-research/making-your-submission/writing-a-journal-article-cover-letter/)
 
