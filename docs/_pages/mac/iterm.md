@@ -129,6 +129,11 @@ iterm2用のカラープロファイルを提供しているサードパーテ�
 https://blog.stenyan.jp/entry/iterm2
 
 
+### session
+
+- ssh接続がタイムアウトするのを防ぐ：sessionのwhen idle send ASCII codeにチェックを入れる．60 secondsくらいで大丈夫だと思う．
+
+
 
 ## トラブルシューティング
 
