@@ -41,7 +41,12 @@ description: Mac(OSX)に関する設定
   ```bash
   sudo find / -name .DS_Store -delete; killall Finder
   ```
-  
+
+## メール
+
+標準のメーラーははっきり言ってあまり使いやすくないが，かといってかわりも難しい．．．
+
+- Venturaから，いわゆる遅延送信に対応した．設定>作成>送信>送信を取り消すまでの時間といって，10s,20s,30sから選択可能．
 
 
 ## メニューバー
