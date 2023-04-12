@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "CPMD.xでのリスタート計算のやり方""
+title:  "CPMD.xでのリスタート計算のやり方"
 date:   2022-12-18 09:00:00 +0900
 categories: physics
 tags:
