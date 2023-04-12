@@ -40,9 +40,9 @@ description: The top-page of Python.
 
 ### Others
 
-* 統計検定1級 成績最優秀賞（https://www.toukei-kentei.jp/wp-content/uploads/exc201711na.pdf）　
-* スーパーコンピュータ富岳令和5年一般課題「高周波誘電特性の第一原理計算」課題代表者（https://www.hpcioffice.jp/application/files/1216/7644/9492/adoptionlist2023_11.pdf）
-* 統合物質科学リーダー養成プログラム採択生：（http://www.merit.t.u-tokyo.ac.jp/merit/member/generation_009_1.html）
+* [[統計検定1級 成績最優秀賞](https://www.toukei-kentei.jp/wp-content/uploads/exc201711na.pdf)]
+* [[スーパーコンピュータ富岳令和5年一般課題「高周波誘電特性の第一原理計算」課題代表者](https://www.hpcioffice.jp/application/files/1216/7644/9492/adoptionlist2023_11.pdf)]
+* [[統合物質科学リーダー養成プログラム採択生](http://www.merit.t.u-tokyo.ac.jp/merit/member/generation_009_1.html)]
 
 {% comment %}
 インターン：JSR株式会社（2022年3-5月）共同研究の前段として，提案された手法に基づく物質の誘電特性のシミュレータをpythonで実装．複数の物質について実際に計算して実験部門に提案を行った．　
@@ -52,6 +52,7 @@ description: The top-page of Python.
 ## certificates
 
 * 統計検定1級
+* 英語検定1級
 * TOEIC 915点
 * FP3級
 * ITパスポート，情報セキュリティマネジメント，基本情報技術者
