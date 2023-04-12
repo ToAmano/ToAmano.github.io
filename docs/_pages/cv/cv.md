@@ -46,7 +46,7 @@ description: The top-page of Python.
 
 {% comment %}
 インターン：JSR株式会社（2022年3-5月）共同研究の前段として，提案された手法に基づく物質の誘電特性のシミュレータをpythonで実装．複数の物質について実際に計算して実験部門に提案を行った．　
-{% end comment %}
+{% endcomment %}
 
 
 ## certificates
