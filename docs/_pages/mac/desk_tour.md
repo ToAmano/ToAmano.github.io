@@ -17,29 +17,34 @@ description: デスクのセッティング
 据え置き2台とラップトップ1台を利用．
 
 <dl>
-  <dt>imac 2019（3.6 GHz 8コアIntel Core i9+Radeon Pro Vega 48 8 GB）</dt>
-  <dd>メインマシン．中程度のシミュレーションならこのマシンでも回せる．外部ディスプレイ2枚への出力も問題なし．</dd>
-  <dt>自作マシン（intel xeon）</dt>
-  <dd>Linux fedra，主にファイルサーバーや計算機サーバーの勉強用．
-  <dt>macbook pro 14インチ（）</dt>
-  <dd>ノートPC．
-</dd>
+  <dt><strong>imac 2019（3.6 GHz 8コアIntel Core i9+Radeon Pro Vega 48 8 GB）</strong></dt>
+  <dd>imac2014から2020年に買い替えた．メインマシン．中程度のシミュレーションならこのマシンでも回せる．外部ディスプレイ2枚への出力も問題なし．</dd>
+  <dt><strong>自作マシン（intel xeon）</strong></dt>
+  <dd>Linux fedra，主にファイルサーバーや計算機サーバーの勉強用．</dd>
+  <dt><strong>macbook pro 14インチ（）</strong></dt>
+  <dd>ノートPC．</dd>
 </dl>
 
 
 ### ディスプレイまわり
 
-配置は右にimac，中央がstudio display，左がEizoの3ディスプレイ構成．
+配置は右にimac，中央がstudio display，左がEizoの3ディスプレイ構成．imacのディスプレイは写真を見るには綺麗だがダークモードが増えた今となっては反射がきついのが難点．nano-texture glass仕様のstudio displayは本当に反射が少なくて綺麗だが，入力が1つだけだったりwindows/Linuxでは使いにくかったりする．どれも一長一短だ．
 
-- apple studio display nano-texture glass：メインディスプレイ．インターフェースは最悪だが，5K+nano-textureはコーディングには最適
-- Eizo EV2740X：Linux機のディスプレイとしても使えるように，一台は万能型のモニターが必要．
+<dl>
+  <dt>apple studio display nano-texture glass</dt>
+  <dd>メインディスプレイ．インターフェースは最悪だが，5K+nano-textureはコーディングには最適</dd>
+  <dt>Eizo EV2740X</dt>
+  <dd>画面の綺麗さと反射の少なさはstudio displayが上回っている印象だがポートの豊富さが強み．</dd>
+</dl>
 
-全てのディスプレイはエルゴトロンのLX（モニターアーム）で設置．デスクが広く使えるので使えるならモニターアーム推奨．
+全てのディスプレイはエルゴトロンのLX（モニターアーム）で設置．デスクが広く使えるので使えるならモニターアーム推奨．特にimacを買う人はVESA仕様にしておいた方が良いと思う．私はVESA仕様にできるのを知らずにスタンド仕様で買って後で後悔した．
 
 ディスプレイの接続に関してはimacもstudio displayもあまりポートが多くないのでちょっと困る．
+
 - imac：thunderbolt3ポートが2つとUSB-Aが4つ．
 - studio display：入力用のthunderbolt3が1つのみ，USB-Cポートが追加で3つついている
 - Eizo EV2740X：
+
 imac用にthunderbolt3のドッキングステーション（CalDigitのTS3）も使いたいので，imac-TS3-studio displayで一つ，imac-EV2740Xで一つとしてimacのthunderbolt3を使い切っている．ここら辺のインターフェースはappleにはもうちょっとなんとかして欲しい．．．
 
 
@@ -59,14 +64,15 @@ imac用にthunderbolt3のドッキングステーション（CalDigitのTS3）�
 - デスク時計：キングジム LT10：気に入っているプログラムアラームだが生産完了に，アプリもいつまで使えることだか．．． スマート系の商品はこれが怖いので本当は長く商品を出しているところのものを買った方が良いだろう．
 - サンワ USB type-C スタンド 400-HUB088GMN：スマホ/タブレットスタンド
 - SSDケース：logitech LHR-4BNHUC：USB type-C対応でSSD4台まで．付属のケーブルが短すぎるので追加でケーブルを買った意外は満足．
+- デスクライト
+  - BenQ screen bar plus
+  - Philips Hue ライトバー：Hueシリーズは高いけどアプリでの調光に秀でていておすすめ．
 - ケーブル類
   ケーブル類はディスプレイなど性能が必要なものと，充電用などそこまで性能が要らないものに分けて買い揃えると無駄な出費がなくて済む．耐久性はかなり大事でナイロンケーブルやシリコンケーブルで揃えた方が後々困らないと思う．
   - Belkin thunderbolt 4 1m
   - Anker 高耐久ナイロン USB-C & USB-C 1.2m：USB2だが3本1200円で破格の耐久性なので充電用によい
   - Anker PowerLine III Flow USB-C & USB-C ケーブル 1.8m：シリコンケーブルで取り回しと耐久性が良い
   - Anker PowerLine+ USB-C & USB-A 3.0 ケーブル 1.8m：PowerLine+はナイロン製で耐久性が高くて良い．
-  - 
-  - 
   
 - 充電器など
   - Anker PowerPort III 2-Port 100W：なんとapple純正の96W充電器より小さい上に2portついている優れもの．これはおすすめ．
@@ -81,7 +87,3 @@ imac用にthunderbolt3のドッキングステーション（CalDigitのTS3）�
 
 
 
-- [connected paper](https://www.connectedpapers.com/)
-<!--
-https://note.com/sangmin/n/n92321e835bc2
--->
