@@ -14,10 +14,17 @@ description: デスクのセッティング
 
 ### PC
 
-- imac 2019（3.6 GHz 8コアIntel Core i9+Radeon Pro Vega 48 8 GB）
-  メインマシン．中程度のシミュレーションならこのマシンでも回せる．外部ディスプレイ2枚への出力も問題なし．
-- サーバー：自作（intel xeon ），Linux fedra，主にファイルサーバーや計算機サーバーの勉強用．
-- ノート：macbook pro 
+据え置き2台とラップトップ1台を利用．
+
+<dl>
+  <dt>imac 2019（3.6 GHz 8コアIntel Core i9+Radeon Pro Vega 48 8 GB）</dt>
+  <dd>メインマシン．中程度のシミュレーションならこのマシンでも回せる．外部ディスプレイ2枚への出力も問題なし．</dd>
+  <dt>自作マシン（intel xeon）</dt>
+  <dd>Linux fedra，主にファイルサーバーや計算機サーバーの勉強用．
+  <dt>macbook pro 14インチ（）</dt>
+  <dd>ノートPC．
+</dd>
+</dl>
 
 
 ### ディスプレイまわり
