@@ -117,3 +117,5 @@ https://ohdachi.github.io/ohdachi_lab/researches/2018/02/02/zotero_zotfile.html
 <!--
 https://note.com/sangmin/n/n92321e835bc2
 -->
+
+- [デスク備品一覧](desk_tour.md)
