@@ -24,6 +24,10 @@ categories: bash zsh
 [dotfileの設定](dotfiles.md)
 
 
+## tmux
+
+[tmuxの設定](tmux.md)
+
 ## 設定ファイルの読み込み
 ```bash
 source file_name

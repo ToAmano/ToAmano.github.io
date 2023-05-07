@@ -120,6 +120,7 @@ defaults:
       comments: true
       share: true
       related: true
+      mathjax: true # add https://pandanote.info/?p=3715
   # _pages
   - scope:
       path: "pages"
