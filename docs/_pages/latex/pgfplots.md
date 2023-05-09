@@ -67,6 +67,10 @@ https://konoyonohana.blog.fc2.com/blog-entry-97.html
 
 https://latexdraw.com/plot-a-function-and-data-in-latex/
 
+### legend
+
+- https://tex.stackexchange.com/questions/14506/pgfplots-prevent-single-plot-from-being-listed-in-legend
+
 ### フォントの大きさを変える．
 https://tex.stackexchange.com/questions/107057/adjusting-font-size-with-tikz-picture
 
@@ -127,7 +131,13 @@ https://tex.stackexchange.com/questions/124453/connecting-subplots
 
 https://latexdraw.com/exploring-tikz-arrows/
 
+https://tex.stackexchange.com/questions/8007/line-with-arrowhead-in-pgfplot
 
+
+### 関数をプロットする
+
+https://tex.stackexchange.com/questions/384232/pgfplot-function-plotting
+http://abenori.blogspot.com/2015/08/pgfplots.html
 
 ### legendの場所を変更する．
 

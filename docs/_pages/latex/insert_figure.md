@@ -49,7 +49,7 @@ https://clutte.red/blog/2018/11/latex-table-caption/
 \end{figure}
 ```
 
-文書全体で変更したいという場合は
+文書全体で変更したいという場合はプリアンブルに書く．
 
 
 ## [subcaptionパッケージ](https://gitlab.com/axelsommerfeldt/caption)
@@ -63,6 +63,7 @@ https://texblog.org/2007/08/01/placing-figurestables-side-by-side-minipage/
 - subcaptionblock環境
 
  　これは通常よく使われる`minipage環境`にさらにキャプション周りの機能を加えたもの．
+ 
    ```latex
     \begin{subcaptionblock}{.4\textwidth} 
     \centering 
@@ -104,3 +105,7 @@ https://texblog.org/2007/08/01/placing-figurestables-side-by-side-minipage/
 
 \end{document}
 ```
+
+
+
+

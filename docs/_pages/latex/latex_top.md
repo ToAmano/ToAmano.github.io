@@ -149,6 +149,7 @@ LaTeXではスライドショーを作成することもできる．スライド
 
 ## githubでの文書管理
 <!-- https://zenn.dev/junkato/articles/github-actions-to-generate-pdfs-for-pages -->
+<!-- https://qiita.com/denkiuo604/items/63b8c34a60a2340727b1 -->
 
 
 
@@ -262,6 +263,11 @@ cover letterのためのクラスもある．
 LaTeXソースのinput path - はだメモ
 https://scrapbox.io/hada/LaTeX%E3%82%BD%E3%83%BC%E3%82%B9%E3%81%AEinput_path
 -->
+
+## 簡単なチートシート
+
+[こちら]({% link _pages/latex/cheatsheet.md %})
+
 
 
 ## 参考文献
