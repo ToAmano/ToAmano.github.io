@@ -105,7 +105,21 @@ EMACSとCHROMEの連携
 - `shif+space`   :: Things
 - `shift+return` :: iterm2 hotkey
 
+## mac標準コマンド
 
+```
+# smcデータをみる
+sudo powermetrics --samplers smc
+
+# cpu温度確認
+sudo powermetrics --samplers smc | grep -i "CPU die temperature"
+
+# gpu温度確認
+sudo powermetrics --samplers smc | grep -i "GPU die temperature"
+
+# Fan回転数
+sudo powermetrics --samplers smc | grep -i "Fan"
+```
 
 ## その他便利アプリケーション
 
