@@ -128,3 +128,16 @@ https://qiita.com/qython/items/1f7416bbb29f48a153bb
 
 - 1: 中身が推測できる関数名（getXXX,）
 - 2: 型や可視性が推測できる変数名（リストならxxxListなど）
+
+- デバックオプションには`__debug__`変数を利用する．
+  ```
+  if __debug__:
+     print("Debug ON")
+  else:
+     print("Debug OFF")
+  ```
+  のようにして，`-O`オプションをつける．
+  ```
+  python -O abc.py
+  ```
+  [参考](https://stackoverflow.com/questions/13352677/python-equivalent-for-ifdef-debug)
