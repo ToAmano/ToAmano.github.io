@@ -106,7 +106,15 @@ imac用にthunderbolt3のドッキングステーション（CalDigitのTS3）�
   - ipad mini 6世代 ：読書とか論文読んだりとかに最適なサイズ感．6世代からapple pensil2に対応したので購入．
 
 
+## 照明などの自動化
 
+- PhilipsのHueはphilipsの純正スマホアプリhue，純正PCアプリhue syncの他，iosアプリホーム，ショートカットから操作している．（他にalexaなどにも対応）hueブリッジが必須．
+- switchbotの照明他は純正スマホアプリswitchbotから操作可能．ショートカットも利用．switchbot hub miniが必須．
+
+
+{% comment %}
+https://gadget-touch.info/2018/02/07/hue-review/
+{% endcomment %}
 
 https://dirac6582.github.io/
 
