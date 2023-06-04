@@ -105,7 +105,21 @@ EMACSとCHROMEの連携
 - `shif+space`   :: Things
 - `shift+return` :: iterm2 hotkey
 
+## mac標準コマンド
 
+```
+# smcデータをみる
+sudo powermetrics --samplers smc
+
+# cpu温度確認
+sudo powermetrics --samplers smc | grep -i "CPU die temperature"
+
+# gpu温度確認
+sudo powermetrics --samplers smc | grep -i "GPU die temperature"
+
+# Fan回転数
+sudo powermetrics --samplers smc | grep -i "Fan"
+```
 
 ## その他便利アプリケーション
 
@@ -124,3 +138,7 @@ https://note.com/sangmin/n/n92321e835bc2
 -->
 
 - [デスク備品一覧]({% link _pages/mac/desk_tour.md %})
+
+## bootcamp
+
+- bootcamp windowsを使っていてGPUがおかしい場合，デバイスマネージャー>ディスプレイアダプターでGPUを見て正常に動いているかを確認
