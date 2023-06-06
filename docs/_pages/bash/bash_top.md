@@ -257,12 +257,22 @@ zsh: https://qiita.com/agotoh/items/e6b22bcfe63162f70e0d
 
 ## ワンライナー
 
+ワンライナーでなにかをやる時に便利なのは
+
+- for文
+- パイプやxargsコマンド
+
+あたり．
+
 ```bash
 # 複数ファイルに対する一括処理
 for file in *.markdown ; do mv “$file” “${file%.markdown}.md” ; done
 
 # awkで列挿入
 cat in.txt | awk '{print $1 " " "add" " " $2}'
+
+# xargsをつかって複数ファイルの行数をカウント
+ls | xargs wc -l
 
 ## シンボリックリンクをたどって圧縮する
 tar cfzh /backup/domain.tar.gz /home/aaa/www/domain/*
