@@ -31,4 +31,15 @@ https://masa-cbl.hatenadiary.jp/entry/20121202/1354456802
   du -h --max-depth=1 
   ```
 
-- 
+- ファイルの先頭を抽出（head）
+  ```
+  # -nで表示する行数を指定
+  head -n 10 test.txt
+  ```
+
+- ファイルの末尾を抽出（tail）
+  ```
+  # -nで表示する行数を指定
+  tail -n 10 test.txt
+  ```
+
