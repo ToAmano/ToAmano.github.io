@@ -142,3 +142,11 @@ https://note.com/sangmin/n/n92321e835bc2
 ## bootcamp
 
 - bootcamp windowsを使っていてGPUがおかしい場合，デバイスマネージャー>ディスプレイアダプターでGPUを見て正常に動いているかを確認
+
+
+## マルチディスプレイでの設定について
+
+- メインディスプレイの変更 :: システム設定->ディスプレイ->配置で，白いバーをドラッグドロップで移動させる．
+- Dockの場所 :: システム設定->デスクトップとDockから．dockの場所は右ディスプレイの右端，左ディスプレイの左端，（上で設定した）メインディスプレイの下の3つからしか選べない．
+- [Alfread4の表示スクリーンを変更](https://parashuto.com/rriver/tools/alfred-on-multiple-displays) :: appearance=>options=>show Alfread onでactive screenかmouse screenへ変更．
+- 仮想デスクトップと併用する場合，常駐させたいアプリはDockを右クリック->オプション->割り当て先->全てのデスクトップと変更．これで中央ディスプレイは仮想ディスプレイを切り替えながら，左のディスプレイのメーラーは常時表示，みたいなことができる．

@@ -8,7 +8,56 @@ permalink: /python/
 ---
 
 
-## anacondaのinstall
+## pythonの環境構築
+
+pythonの環境構築ではanacondaを使う方法とpyenvを使う方法がよく紹介されている．私はpyenvを使う方法を推奨したい．というのも，パッケージによってはanaconda下で動かないものがまれに存在し，anacondaで環境を作っているとそういう時に困るからだ．pyenvで環境を作っておけばそういう時にanacondaではない（例えばminicondaなど）で環境を作ることができる．というわけで汎用性の面でpyenvの方が優っていると考えている．
+
+### pyenvのinstall方法
+
+macならbrewでインストールすることが可能．
+
+```
+brew install pyenv
+```
+
+[github](https://github.com/pyenv/pyenv)からcloneすることもできて，こちらはどのプラットフォームでも動作するのでおすすめだ．
+
+```
+# ~/.pyenvというディレクトリにインストール
+git clone https://github.com/pyenv/pyenv.git ~/.pyenv
+# オプションでpyenvの高速化のためにdynamic Bash extensionのインストールも可能．
+cd ~/.pyenv && src/configure && make -C src
+```
+
+いずれの方法でインストールしたとしても，bash_profileやzshrcに以下の設定が必要だ．
+
+```
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+```
+
+pyenvで新しい環境を作る場合，
+
+```
+pyenv install --list
+```
+
+でインストールできる環境を確認した上で，例えば
+
+```
+pyenv install anaconda3-2023.03
+```
+
+のようにすれば良い．代替として最新版でよければ
+
+```
+pyenv install anaconda3-latest
+```
+
+でも可．
+
+### anacondaのinstall方法
 
 [公式ページ](https://www.anaconda.com/products/distribution)からgraphical installerまたはcommand line installerをダウンロードできる．
 <!-- https://repo.anaconda.com/archive/Anaconda3-2022.05-MacOSX-arm64.sh -->
