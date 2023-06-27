@@ -24,7 +24,6 @@ conda create -n pytorch
 conda activate pytorch
 ```
 
-
 ## pytorchのインストール
 
 [公式ページ](https://pytorch.org/get-started/locally/)にインストールコマンドがのっているのでそれを用いる．torchvisionは画像処理系，torchaudioは音声処理系のライブラリで，使わないなら入れなくても大丈夫だ．
