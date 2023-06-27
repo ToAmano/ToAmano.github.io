@@ -65,3 +65,4 @@ fig.savefig("sample.png", bbox_inches='tight')
 
 ## まとめ
 
+今回は簡単にjupyterで作成した図表を管理する方法を考えた．まだまだ改善の余地があると思うので色々試してみたい．
