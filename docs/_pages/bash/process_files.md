@@ -42,4 +42,8 @@ https://masa-cbl.hatenadiary.jp/entry/20121202/1354456802
   # -nで表示する行数を指定
   tail -n 10 test.txt
   ```
-
+- ファイルに行番号を追加(awk)
+  ```
+  # NRで行番号を表示できる
+  awk '{print NR": " $0 }' filename
+  ```
