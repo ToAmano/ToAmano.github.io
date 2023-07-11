@@ -147,14 +147,15 @@ USBメモリなどを頻繁に使うのでUSB-Aポートを増やす必要があ
 
 {% include figure image_path="https://lh3.googleusercontent.com/-ulM69JBqJYgP7w6gS1KHMgfdPRX3Liu_p-jc9H90mt0twdsXuJQe4jVkIhHT5RgECa2xLZsKjlAEgTnrs89Tc1F5v4e0nr6t6GSAGWtJLUvgBJ5EaJYXk1qSJQ9ka9LiFYSXjSsQQ=w2400" alt="this is a placeholder image" caption="二種類の設置用アイテムが同梱される" %}
 
-なお，本品に限らずPhilips Hueシリーズをスマホから操作するにはHue ブリッジと呼ばれる製品が必要なので注意．値段は競合に比べて高いが一度購入してしまえば公称100台まで繋げる．
+なお，本品に限らずPhilips Hueシリーズをスマホから操作するにはHue ブリッジと呼ばれる製品が必要なので注意．値段は競合に比べて高いが一度購入してしまえば公称100台まで繋げるため，照明の一元管理が可能になる．philipsは企業として大きいのでhueシリーズの寿命は長いだろうから，hueで揃えて良いかなと感じている．スマート系の製品は販売中止になるとそのうちアプリの対応も中止になってしまうので極力長く続くだろう製品で揃えることを強くお勧めしたい（自戒を込めて．．．）．
 
 ### Philips Hue 100W相当 E26 フルカラー
 
-{% include figure image_path="https://lh3.googleusercontent.com/CjM9auyUTEexrvAV7cMNgxVFiWq9TWddZuKjUQtHL8sNHkxRaXfdCwZjrA3SrXZLuz17L5x8rbmyprUq6ZzYqdMc_MryXkToAxeaTj2T2l2oE2cLbgyRJBFJmjGzOs5-P1IjDY3oSw=w2400" alt="this is a placeholder image" caption="" %}
+{% include figure image_path="https://lh3.googleusercontent.com/pw/AIL4fc86XkfodJhsw8nS_FZaHoZkfX1s2I_Bu1aKFkBuxTuuOElZbggn2tFZg5wGSkr5_S3-453mV5pGI7Zpn33_zNHd05J9h9g8kNCxuPFV58V0WIkSRHE=w2400" alt="this is a placeholder image" caption="75W相当よりは少し大きく出来ているらしい" %}
 
+おなじくHueのE26口金用の電球タイプ照明で，出力に関して100W相当と75W相当（以前は60W相当だった）が，色に関してフルカラー，ホワイトグラデーション，ホワイトとある．私が利用しているのはフルカラー100W相当タイプで最大光量が1600lmあってかなり明るい．75W相当タイプとあまり値段が変わらないのでこちらを購入した．明るいだけあって発熱も凄まじく，100%で使ってると触れない点に注意が必要．
 
-おなじくHueのE26口金用の電球タイプ照明で，出力に関して100W相当と75W相当が，色に関してフルカラー，ホワイトグラデーション，ホワイトとある．私が利用しているのはフルカラー100W相当タイプで最大光量が1600lmあってかなり明るい．75W相当タイプとあまり値段が変わらないのでこちらを購入した．明るいだけあって発熱も凄まじく，100%で使ってると触れない．
+{% include figure image_path="https://lh3.googleusercontent.com/CjM9auyUTEexrvAV7cMNgxVFiWq9TWddZuKjUQtHL8sNHkxRaXfdCwZjrA3SrXZLuz17L5x8rbmyprUq6ZzYqdMc_MryXkToAxeaTj2T2l2oE2cLbgyRJBFJmjGzOs5-P1IjDY3oSw=w2400" alt="this is a placeholder image" caption="E26に対応した機器が別途必要" %}
 
 もともと家にあった適当なクリップ式口金につけて壁に当てて間接照明にしている．値段と明るさを考えると他のhue製品に比べてコストパフォーマンスが高いので，設置方法さえ考えられればおすすめだ．
 
@@ -202,7 +203,9 @@ Phonitorがあまりにも大きくて奥行き70cmのデスクに普通にお�
 
 ### マイク：Blue Yeti nano
 
-コロナがはじまって以降増加したオンライン会議用に購入した．imacの内臓マイクもそこそこ音が良いので劇的に音がよくなった感じはないのだが，1万円ちょっとで買えることを考えるとコストパフォーマンスは良いと思う．機能的にはlogicoolのアプリGhubで音質設定が可能な点がすぐれている．マウスのところでも述べたがGhubの安定性だけもう少しなんとかしてほしい．
+コロナがはじまって以降増加したオンライン会議用に購入した．imacの内臓マイクもそこそこ音が良かったので劇的な改善はなかったが，1万円ちょっとで買えることを考えるとコストパフォーマンスは良いと思う．機能的にはlogicoolのアプリGhubで音質設定が可能な点がすぐれているが，imacでghubが使えない問題のせいで現状ただのマイクになってしまった．マウスのところでも述べたがGhubの安定性だけもう少しなんとかしてほしい．
+
+また，本マイクに限らないがコンデンサーマイクは結構遠くの音も拾うので，在宅会議だとダイナミックマイクの方がよかったのかもしれない．
 
 ## その他の小物
 
@@ -214,11 +217,15 @@ Phonitorがあまりにも大きくて奥行き70cmのデスクに普通にお�
 
 ### スマートスピーカー： echo show5
 
-照明などの音声制御はalexaで行っている．appleのhomepodでもよかったのだが，時計，目覚ましとしても使えるのでディスプレイがついているこちらのタイプにした．
+照明などの音声制御はalexaで行っている．appleのhomepodでもよかったのだが，時計，目覚ましとしても使えるのでディスプレイがついているこちらのタイプにした．実際使ってみて音声の認識はappleのsiriより優れているような気がする．amazonのセールでたまに安くなっている時が狙い目で，通常価格は割高と感じる人も多いかも．
 
 ### 電源タップ：サンワサプライ TAP-SLIM11-3BK，エレコム ECT-2620BK
 
+{% include figure image_path="https://lh3.googleusercontent.com/pw/AIL4fc9va1iMdOshhk9u2F3cYm44nj3IMQBRQDmAAz3klS9RqwMhN-X_MyCsOMvo333i07dSDmHJXBHXtihbFFmEkl8jMOjlKY9lYzXQXalXA1M61N4moUM=w2400" alt="this is a placeholder image" caption="エレコム ECT-2620BK，二つの口だけ幅広に作られている" %}
+
 趣味で電源をたくさんつかうこともあって電源タップの所持数は多い方だと思う．デスクでは合計16個の電源を使っていて，それを2つのコンセントから供給しないといけないので電源タップも口数が多いものに選択肢が限られている．現在はエレコムの10個口タップとサンワの11個口タップをデスク裏に設置して配線管理を行っている．両者ともマグネットでの固定が可能だ．サンワの方は５個だけ３ピンがささるようになっている一方で，両者とも極性非対応なので極性２ピンへは変換アダプタを噛ませる必要があるのが難点．調べた限りだと10個口程度で極性対応のものは業務用以外は見つからなかった．細かい配線の組み方についてはまた別の機会に記事にしたい．
+
+{% include figure image_path="https://lh3.googleusercontent.com/pw/AIL4fc-7xXC9vOWrmRLhdbzzspTJ-dPYyAHmVV8m32g1SNFcKrn_CTPUpmwNHqO6YkSQy8JQqYLg7tmQGMee94JO29WKAFJ2Fo670dzxNt3LKujNPRipi8rQ=w2400" alt="this is a placeholder image" caption="サンワ TAP-SLIM11-3BK，二面に挿すようになっている" %}
 
 ### USB充電器：Anker PowerPort I PD/ PowerPort III 2-Port
 
