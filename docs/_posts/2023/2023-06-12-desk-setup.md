@@ -232,6 +232,9 @@ Phonitorがあまりにも大きくて奥行き70cmのデスクに普通にお�
 デスクのUSB充電器としてAnkerのPowerPort I PD - 1 PD & 4 PowerIQを利用している．これはUSB-Aが4ポートとUSB-Cが1ポートついていてまとめて電源をとるのに便利だ．ただ近年はUSB-Cがより支配的になっているのでこれから買うならUSB-Cポートがたくさんついているものを買うべきだろう．
 他にmac book pro用におなじくAnkerのPowerPort III 2-Port 100Wもつかっていて，これはmac純正より小さい上に2port充電が可能なので非常に良い製品だと思う．自宅用と外出用に二台買うほどお気に入り．
 
+{% include figure image_path="https://lh3.googleusercontent.com/pw/AIL4fc9yT-0O0J1-hH4GqE5xU6pB1HRi_nf_B1EyBmJxUy12M2_RLkNVxb9XfvWgYHRYk4qfXE38DX_XdHkIWKhyVnmayTrGg8eN7T-bnLTLxkqnK_VkOTQ=w2400
+" alt="this is a placeholder image" caption="PowerPort III(左)とappleの純正96W充電器(右)の比較．" %}
+
 ### サーキュレーター：アイリスオーヤマ PCF-SCAI15T
 
 {% include figure image_path="https://lh3.googleusercontent.com/iW1EBooEYzRuRb_tojAa9B1kxLlGZPSm48e8U9RrZQM1uUQwT4hyLD4oPZQOqZgj4N56NZ59vjNT1PWV48LoKs4rdnWCMK0SNOzStZ7gFE2Y6b71mpSLvozeoplz-k-KXIuyzrlRNw" alt="this is a placeholder image" caption="" %}
