@@ -5,11 +5,18 @@ title: デスクのセッティング
 layout: single
 date:   2023-6-12 21:00:00 +0900
 description: 最近トリプルディスプレイの環境になったので，デスクのセッティングを試行錯誤した記録．
+gallery:
+  - image_path: https://lh3.googleusercontent.com/pw/AIL4fc8LCkY3_1bDVjBNxZEccJEwVb7pAtuXRTFUHDvCOqg3G9WS_uXOzadjFc9_zBBLjumjy1pqptW4Y6Lo7KLKVxG1geziQoqyGViLmHalDX05xShHmFQ
+    alt: "placeholder image 1"
+    title: "Image 1 title caption"
+  - image_path: https://lh3.googleusercontent.com/pw/AIL4fc-BB79l9yBJD6GwOzW0F4k-mE1jRF4FBdpeX-oSndQ0Ic_RgLYqlQ1MFMeEQDgoFTrykIENYrGzj33UdmD_NZi3bhbR8K1HCSj2XFNV98tHObxGhX8
+    alt: "placeholder image 2"
+    title: "Image 2 title caption"
 ---
 
 最近Eizoから新しくでたディスプレイEV 2740Xを購入し，自宅のデスクがトリプルディスプレイ環境になった．こうなると自宅の方が作業が捗るということで，世間と逆行して引きこもり傾向が強まっている．この流れで最近デスク環境の整備を行ったので，一旦今までのところをまとめておくことにした．モニターが三枚あるとスペースがかなりカツカツになるので色々と試行錯誤が必要だったのでその辺を記録しておきたい．
 
-{% include figure image_path="https://lh3.googleusercontent.com/pw/AJFCJaXgkl50-MTL7FfiR5CZHnAxZJJbl78sbiRiO4a16II02BHm4sQ4PcAfS8ZsKsJfvSvXHGwc8vv5P9cjH2sukbe9fTu5CBtjb9cTQEypM86jZdtU14A=w2400" alt="this is a placeholder image" caption="" %}
+{% include figure image_path="https://lh3.googleusercontent.com/pw/AJFCJaXgkl50-MTL7FfiR5CZHnAxZJJbl78sbiRiO4a16II02BHm4sQ4PcAfS8ZsKsJfvSvXHGwc8vv5P9cjH2sukbe9fTu5CBtjb9cTQEypM86jZdtU14A" alt="this is a placeholder image" caption="" %}
 
 
 ## パソコン
@@ -18,7 +25,7 @@ description: 最近トリプルディスプレイの環境になったので，�
 
 ### メインPC：imac 2019
 
-{% include figure image_path="https://lh3.googleusercontent.com/pw/AJFCJaXwEzOVSQnwJr8_XWzasTkkuMlYbPOw0HXIIqXORz2eJ7h1YMAJ-g-urcAhco-yYy7rrUcnHJK3zl3kC9wDDL9GjgzF0gXzpLmv86tkFWfRWZxDtBA=w2400" alt="this is a placeholder image" caption="" %}
+{% include figure image_path="https://lh3.googleusercontent.com/pw/AJFCJaXwEzOVSQnwJr8_XWzasTkkuMlYbPOw0HXIIqXORz2eJ7h1YMAJ-g-urcAhco-yYy7rrUcnHJK3zl3kC9wDDL9GjgzF0gXzpLmv86tkFWfRWZxDtBA" alt="this is a placeholder image" caption="" %}
 
 据え置きパソコンは2台運用しており，メインマシンはimac 2019．構成は3.6 GHz 8コアIntel Core i9+Radeon Pro Vega 48 8 GBというもので，2020年コロナが始まったタイミングでそれまで使っていたimac 2014から買い替えた．結局27インチのimacやintel系のmac自体2020年で終わってしまったのでこのタイミングで買い替えたのは正解だった．cpuパワーについては満足しており，計算サーバーを使わなくてもできる小規模の計算についてはimacにやらせることも多い．
 
@@ -32,7 +39,7 @@ description: 最近トリプルディスプレイの環境になったので，�
 
 ### メインディスプレイ：Apple Studio display
 
-{% include figure image_path="https://lh3.googleusercontent.com/QmsQt3AIky8sBXS9l8_fm28y6lqvzvG9zNFEl4wYKKlTDZ7NIdz4oTVhQmVyo7BZ8dRcOwvF_68AkP6rf6XGD2ABc2wqakL39k-voeX3zh7PR-JNEakYJ2yJR4EVQp_vKUbEyKI3Og=w2400" alt="this is a placeholder image" caption="" %}
+{% include figure image_path="https://lh3.googleusercontent.com/QmsQt3AIky8sBXS9l8_fm28y6lqvzvG9zNFEl4wYKKlTDZ7NIdz4oTVhQmVyo7BZ8dRcOwvF_68AkP6rf6XGD2ABc2wqakL39k-voeX3zh7PR-JNEakYJ2yJR4EVQp_vKUbEyKI3Og" alt="this is a placeholder image" caption="" %}
 
 27インチのApple純正ディスプレイ．値段が高いので買うか迷ったが店頭で見て購入することにした．購入時のオプションはnano-textureガラスとVESAマウント仕様で，特にnano-textureガラスの反射の少なさは素晴らしい．ターミナルやIDEをダークモードで使っていることもありimacに代わりメインディスプレイとして利用している．
 
@@ -41,7 +48,7 @@ description: 最近トリプルディスプレイの環境になったので，�
 
 ### サブディスプレイ： EIZO EV2740X
 
-{% include figure image_path="https://lh3.googleusercontent.com/pw/AJFCJaXgHvU07g_PC0ngWBu4Z7qoDNvdudWK6Y7zc9LIBz4sGm1Qka5wZprCqC6kksZGVNv-5rXb-mYNswg44wDusSaN-obSUu2fUsOs_3ZVN6dMLz7-9ec=w2400" alt="this is a placeholder image" caption="" %}
+{% include figure image_path="https://lh3.googleusercontent.com/pw/AJFCJaXgHvU07g_PC0ngWBu4Z7qoDNvdudWK6Y7zc9LIBz4sGm1Qka5wZprCqC6kksZGVNv-5rXb-mYNswg44wDusSaN-obSUu2fUsOs_3ZVN6dMLz7-9ec" alt="this is a placeholder image" caption="" %}
 
 3枚目のモニターとしてEizoの新しい4K27インチディスプレイを向かって左側に配置．Studio Displayをもう一台買うことも考えたが，mac以外のOSで動くか怪しいところがあり，Linux/Windows機をいじることがあるのでEIZOにした．前モデルからパネルが変わっていて，直接比較したがこちらの方がより綺麗なので買うならこちらが良い．ベゼルの薄さも特筆すべき点で，並べるとstudio displayは野暮ったく見える．またUSBポートが豊富についており，デイジーチェーンにも対応しているとのことなのでこれで揃えてしまうのもありだと思う．自作のLinux機はHDMIで，imacからはUSB-Cで繋いで切り替えて利用できるようにしている．
 
@@ -50,7 +57,7 @@ description: 最近トリプルディスプレイの環境になったので，�
 
 ### サブディスプレイ：ipad pro 11インチ
 
-{% include figure image_path="https://lh3.googleusercontent.com/JQwUG9T_9lMaVOkOdR5sJQE4ozUvP9Y3x7cZN62nfng7QHmFaE9xLTy49_Mfl3ubB_JYnB3R47LdgARyFiKmkyvDoDLMcLQtKa_11J21BvnnmdTzrfP4435K-h1jCx7TAhIoRhyr6w=w2400" alt="this is a placeholder image" caption="" %}
+{% include figure image_path="https://lh3.googleusercontent.com/JQwUG9T_9lMaVOkOdR5sJQE4ozUvP9Y3x7cZN62nfng7QHmFaE9xLTy49_Mfl3ubB_JYnB3R47LdgARyFiKmkyvDoDLMcLQtKa_11J21BvnnmdTzrfP4435K-h1jCx7TAhIoRhyr6w" alt="this is a placeholder image" caption="" %}
 
 デスクではipad proも愛用している．最近のmac osだとsidercarという機能でipadを拡張ディスプレイ，ミラーリングとして利用するかまたはキーボードマイスのリンク（ユニバーサルコントロール）が可能だ．拡張ディスプレイだと私の環境だと動作がカク付くこともあったのでキーボードマウスのリンクをしている．特に純正カレンダーアプリはipadだと予定のリスト表示が可能になっていて，mac osだとできないのでカレンダー画面を常駐させている．必要な時にはいつでもipadとして利用できるので一台あると何かと便利だ．
 
@@ -67,8 +74,16 @@ imacと2枚のディスプレイはそれぞれエルゴトロンLXで設置し�
 
 imacはスタンド仕様のものだが，amazonで販売されているアダプタ（VIVO Adapter VESA Mount Kitというやつ）を介して無理やりLXで吊っている．ただしimacは10kg近くあってエルゴトロンLXの耐荷重11.3kgは少々心許なかった．実際LXのネジをかなり固くしてようやく安定してくれるかなという感じで，揺れも相対的に大きい．できればより耐荷重の大きいモニターアームを使うことをおすすめしたい．
 
-{% include figure image_path="https://lh3.googleusercontent.com/G_-jRs0auDIIkzPM8S7Eiu_Q8NhRh33J3Lno85omA3pIOqbMp6VxmY2PpCtkqyjAyx-bnKkP6J-w3RKqHWlgCkb9E-OPN9nQO5YnbRzMBUYbJlXbWtoCeHgdvUk6GOgcBwg9vb2PBA=w2400
-" alt="this is a placeholder image" caption="アダプターはすごくしっかりしているのでおすすめ" %}
+{% include figure image_path="https://lh3.googleusercontent.com/G_-jRs0auDIIkzPM8S7Eiu_Q8NhRh33J3Lno85omA3pIOqbMp6VxmY2PpCtkqyjAyx-bnKkP6J-w3RKqHWlgCkb9E-OPN9nQO5YnbRzMBUYbJlXbWtoCeHgdvUk6GOgcBwg9vb2PBA
+" alt="this is a placeholder image" caption="imac用のアダプターはすごくしっかりしているのでおすすめ" %}
+
+エルゴトロンに限らないが，デスクを保護したい場合にはモニターアーム用のプレートを使うのが良い．荷重もより分散してかかるために安定性も上がっているはずだ．
+
+{% include gallery caption="This is a sample gallery with **Markdown support**." %}
+
+また，私のように頻繁にデスクをいじりたい人にはエルゴトロン純正のクイックリリースブラケットも良い．これを使うとモニターアームとモニターアームを簡単に取り外しできるようになる．3000円とちょっと値段ははるがその価値はある．
+
+{% include figure image_path="https://lh3.googleusercontent.com/pw/AIL4fc_CkT9Wpog1BjOLO0igcV7fF-xirAYL78VWJsHtHyvPvNoOXqM5n8B_rZhldhRNwRaabtvQZfU1fuf8R8i9EZXD1qOp0N4xGvYkxrN43-N9C6bUmgs" alt="this is a placeholder image" caption="右側をディスプレイ側に，左側をモニターアーム側につけて利用する" %}
 
 ## USB・SSDなど機能拡張
 
@@ -221,11 +236,11 @@ Phonitorがあまりにも大きくて奥行き70cmのデスクに普通にお�
 
 ### 電源タップ：サンワサプライ TAP-SLIM11-3BK，エレコム ECT-2620BK
 
-{% include figure image_path="https://lh3.googleusercontent.com/pw/AIL4fc9va1iMdOshhk9u2F3cYm44nj3IMQBRQDmAAz3klS9RqwMhN-X_MyCsOMvo333i07dSDmHJXBHXtihbFFmEkl8jMOjlKY9lYzXQXalXA1M61N4moUM=w2400" alt="this is a placeholder image" caption="エレコム ECT-2620BK，二つの口だけ幅広に作られている" %}
+{% include figure image_path="https://lh3.googleusercontent.com/pw/AIL4fc9va1iMdOshhk9u2F3cYm44nj3IMQBRQDmAAz3klS9RqwMhN-X_MyCsOMvo333i07dSDmHJXBHXtihbFFmEkl8jMOjlKY9lYzXQXalXA1M61N4moUM" alt="this is a placeholder image" caption="エレコム ECT-2620BK，二つの口だけ幅広に作られている" %}
 
 趣味で電源をたくさんつかうこともあって電源タップの所持数は多い方だと思う．デスクでは合計16個の電源を使っていて，それを2つのコンセントから供給しないといけないので電源タップも口数が多いものに選択肢が限られている．現在はエレコムの10個口タップとサンワの11個口タップをデスク裏に設置して配線管理を行っている．両者ともマグネットでの固定が可能だ．サンワの方は５個だけ３ピンがささるようになっている一方で，両者とも極性非対応なので極性２ピンへは変換アダプタを噛ませる必要があるのが難点．調べた限りだと10個口程度で極性対応のものは業務用以外は見つからなかった．細かい配線の組み方についてはまた別の機会に記事にしたい．
 
-{% include figure image_path="https://lh3.googleusercontent.com/pw/AIL4fc-7xXC9vOWrmRLhdbzzspTJ-dPYyAHmVV8m32g1SNFcKrn_CTPUpmwNHqO6YkSQy8JQqYLg7tmQGMee94JO29WKAFJ2Fo670dzxNt3LKujNPRipi8rQ=w2400" alt="this is a placeholder image" caption="サンワ TAP-SLIM11-3BK，二面に挿すようになっている" %}
+{% include figure image_path="https://lh3.googleusercontent.com/pw/AIL4fc_KbVSz59I-n8I1lyze5esVXHDEGIagnNJxgr1V4U2utAbVUbhliwccCjjZBDORhwq6vNXClfeXJK_CyzxxAMZXteE3pjZGEn_B1RNgc63BKuBIIgg" alt="this is a placeholder image" caption="サンワ TAP-SLIM11-3BK，二面に挿すようになっている" %}
 
 ### USB充電器：Anker PowerPort I PD/ PowerPort III 2-Port
 
