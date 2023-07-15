@@ -124,6 +124,12 @@ USBメモリなどを頻繁に使うのでUSB-Aポートを増やす必要があ
 
 {% include figure image_path="https://lh3.googleusercontent.com/CApGd_PzIkHDVSj4K9MM8Me3JINKHSacIH0P9jmy8PABp3zSTpP-9COOuQ1JRshBcQMpfE0iLI8xprUDN7OtUzcF7yhj7TLbghpNP0SmgO0Yi1yQPGlmugrDX9xrX0u9B0bY5Hkytg=w2400" alt="this is a placeholder image" caption="付属のサーマルシートをSSDにはったところ．このシートがSSDケースと密着する設計になっている．" %}
 
+### USBメモリ：Sandisk dual drive Go USB Type-C
+
+{% include figure image_path="https://lh3.googleusercontent.com/pw/AIL4fc9pTeAtnNaoOYCUpUigHxjLyKZj_kkWO26jjmS_Ae8aszuWnNNiCYir-9C6CDqFP-6BqCoqYO-Yht4AKtTG5Kq0dxrC-kWaRQrKh3EAghI8hUjN9JA" alt="this is a placeholder image" caption="" %}
+
+簡単なデータのやり取りには依然としてUSBメモリが便利で活用しています．USB-CとUSB-Aが混在する昨今の環境では，このサンディスクのメモリのようにUSB-CとUSB-Aの両方が入っているものが便利です．特にmac book proはUSB-C端子しかないのでこの手のメモリでないと使えません．欠点は小さいためか他のUSBメモリと比べて発熱がすごいことです（笑．
+
 ## キーボードとマウス
 
 {% include figure image_path="https://lh3.googleusercontent.com/VMKXgYoJLf23NYTkOjhDCd9jaHJGNekhHPJioAeX_SMXfM_voWFzfI3YO1u_wUYRZym_eOosYVc4ytzjV5NUYWA45oXqWjUDe7WRm0gsUEiosmZDHgeCp26M0ssfjPq_pUo5F-ZH8Q=w2400" alt="this is a placeholder image" caption="" %}
