@@ -5,11 +5,18 @@ title: デスクのセッティング
 layout: single
 date:   2023-6-12 21:00:00 +0900
 description: 最近トリプルディスプレイの環境になったので，デスクのセッティングを試行錯誤した記録．
+gallery:
+  - image_path: https://lh3.googleusercontent.com/pw/AIL4fc8LCkY3_1bDVjBNxZEccJEwVb7pAtuXRTFUHDvCOqg3G9WS_uXOzadjFc9_zBBLjumjy1pqptW4Y6Lo7KLKVxG1geziQoqyGViLmHalDX05xShHmFQ
+    alt: "placeholder image 1"
+    title: "Image 1 title caption"
+  - image_path: https://lh3.googleusercontent.com/pw/AIL4fc-BB79l9yBJD6GwOzW0F4k-mE1jRF4FBdpeX-oSndQ0Ic_RgLYqlQ1MFMeEQDgoFTrykIENYrGzj33UdmD_NZi3bhbR8K1HCSj2XFNV98tHObxGhX8
+    alt: "placeholder image 2"
+    title: "Image 2 title caption"
 ---
 
 最近Eizoから新しくでたディスプレイEV 2740Xを購入し，自宅のデスクがトリプルディスプレイ環境になった．こうなると自宅の方が作業が捗るということで，世間と逆行して引きこもり傾向が強まっている．この流れで最近デスク環境の整備を行ったので，一旦今までのところをまとめておくことにした．モニターが三枚あるとスペースがかなりカツカツになるので色々と試行錯誤が必要だったのでその辺を記録しておきたい．
 
-{% include figure image_path="https://lh3.googleusercontent.com/pw/AJFCJaXgkl50-MTL7FfiR5CZHnAxZJJbl78sbiRiO4a16II02BHm4sQ4PcAfS8ZsKsJfvSvXHGwc8vv5P9cjH2sukbe9fTu5CBtjb9cTQEypM86jZdtU14A=w2400" alt="this is a placeholder image" caption="" %}
+{% include figure image_path="https://lh3.googleusercontent.com/pw/AJFCJaXgkl50-MTL7FfiR5CZHnAxZJJbl78sbiRiO4a16II02BHm4sQ4PcAfS8ZsKsJfvSvXHGwc8vv5P9cjH2sukbe9fTu5CBtjb9cTQEypM86jZdtU14A" alt="this is a placeholder image" caption="" %}
 
 
 ## パソコン
@@ -18,7 +25,7 @@ description: 最近トリプルディスプレイの環境になったので，�
 
 ### メインPC：imac 2019
 
-{% include figure image_path="https://lh3.googleusercontent.com/pw/AJFCJaXwEzOVSQnwJr8_XWzasTkkuMlYbPOw0HXIIqXORz2eJ7h1YMAJ-g-urcAhco-yYy7rrUcnHJK3zl3kC9wDDL9GjgzF0gXzpLmv86tkFWfRWZxDtBA=w2400" alt="this is a placeholder image" caption="" %}
+{% include figure image_path="https://lh3.googleusercontent.com/pw/AJFCJaXwEzOVSQnwJr8_XWzasTkkuMlYbPOw0HXIIqXORz2eJ7h1YMAJ-g-urcAhco-yYy7rrUcnHJK3zl3kC9wDDL9GjgzF0gXzpLmv86tkFWfRWZxDtBA" alt="this is a placeholder image" caption="" %}
 
 据え置きパソコンは2台運用しており，メインマシンはimac 2019．構成は3.6 GHz 8コアIntel Core i9+Radeon Pro Vega 48 8 GBというもので，2020年コロナが始まったタイミングでそれまで使っていたimac 2014から買い替えた．結局27インチのimacやintel系のmac自体2020年で終わってしまったのでこのタイミングで買い替えたのは正解だった．cpuパワーについては満足しており，計算サーバーを使わなくてもできる小規模の計算についてはimacにやらせることも多い．
 
@@ -32,7 +39,7 @@ description: 最近トリプルディスプレイの環境になったので，�
 
 ### メインディスプレイ：Apple Studio display
 
-{% include figure image_path="https://lh3.googleusercontent.com/QmsQt3AIky8sBXS9l8_fm28y6lqvzvG9zNFEl4wYKKlTDZ7NIdz4oTVhQmVyo7BZ8dRcOwvF_68AkP6rf6XGD2ABc2wqakL39k-voeX3zh7PR-JNEakYJ2yJR4EVQp_vKUbEyKI3Og=w2400" alt="this is a placeholder image" caption="" %}
+{% include figure image_path="https://lh3.googleusercontent.com/QmsQt3AIky8sBXS9l8_fm28y6lqvzvG9zNFEl4wYKKlTDZ7NIdz4oTVhQmVyo7BZ8dRcOwvF_68AkP6rf6XGD2ABc2wqakL39k-voeX3zh7PR-JNEakYJ2yJR4EVQp_vKUbEyKI3Og" alt="this is a placeholder image" caption="" %}
 
 27インチのApple純正ディスプレイ．値段が高いので買うか迷ったが店頭で見て購入することにした．購入時のオプションはnano-textureガラスとVESAマウント仕様で，特にnano-textureガラスの反射の少なさは素晴らしい．ターミナルやIDEをダークモードで使っていることもありimacに代わりメインディスプレイとして利用している．
 
@@ -41,7 +48,7 @@ description: 最近トリプルディスプレイの環境になったので，�
 
 ### サブディスプレイ： EIZO EV2740X
 
-{% include figure image_path="https://lh3.googleusercontent.com/pw/AJFCJaXgHvU07g_PC0ngWBu4Z7qoDNvdudWK6Y7zc9LIBz4sGm1Qka5wZprCqC6kksZGVNv-5rXb-mYNswg44wDusSaN-obSUu2fUsOs_3ZVN6dMLz7-9ec=w2400" alt="this is a placeholder image" caption="" %}
+{% include figure image_path="https://lh3.googleusercontent.com/pw/AJFCJaXgHvU07g_PC0ngWBu4Z7qoDNvdudWK6Y7zc9LIBz4sGm1Qka5wZprCqC6kksZGVNv-5rXb-mYNswg44wDusSaN-obSUu2fUsOs_3ZVN6dMLz7-9ec" alt="this is a placeholder image" caption="" %}
 
 3枚目のモニターとしてEizoの新しい4K27インチディスプレイを向かって左側に配置．Studio Displayをもう一台買うことも考えたが，mac以外のOSで動くか怪しいところがあり，Linux/Windows機をいじることがあるのでEIZOにした．前モデルからパネルが変わっていて，直接比較したがこちらの方がより綺麗なので買うならこちらが良い．ベゼルの薄さも特筆すべき点で，並べるとstudio displayは野暮ったく見える．またUSBポートが豊富についており，デイジーチェーンにも対応しているとのことなのでこれで揃えてしまうのもありだと思う．自作のLinux機はHDMIで，imacからはUSB-Cで繋いで切り替えて利用できるようにしている．
 
@@ -50,7 +57,7 @@ description: 最近トリプルディスプレイの環境になったので，�
 
 ### サブディスプレイ：ipad pro 11インチ
 
-{% include figure image_path="https://lh3.googleusercontent.com/JQwUG9T_9lMaVOkOdR5sJQE4ozUvP9Y3x7cZN62nfng7QHmFaE9xLTy49_Mfl3ubB_JYnB3R47LdgARyFiKmkyvDoDLMcLQtKa_11J21BvnnmdTzrfP4435K-h1jCx7TAhIoRhyr6w=w2400" alt="this is a placeholder image" caption="" %}
+{% include figure image_path="https://lh3.googleusercontent.com/JQwUG9T_9lMaVOkOdR5sJQE4ozUvP9Y3x7cZN62nfng7QHmFaE9xLTy49_Mfl3ubB_JYnB3R47LdgARyFiKmkyvDoDLMcLQtKa_11J21BvnnmdTzrfP4435K-h1jCx7TAhIoRhyr6w" alt="this is a placeholder image" caption="" %}
 
 デスクではipad proも愛用している．最近のmac osだとsidercarという機能でipadを拡張ディスプレイ，ミラーリングとして利用するかまたはキーボードマイスのリンク（ユニバーサルコントロール）が可能だ．拡張ディスプレイだと私の環境だと動作がカク付くこともあったのでキーボードマウスのリンクをしている．特に純正カレンダーアプリはipadだと予定のリスト表示が可能になっていて，mac osだとできないのでカレンダー画面を常駐させている．必要な時にはいつでもipadとして利用できるので一台あると何かと便利だ．
 
@@ -67,8 +74,16 @@ imacと2枚のディスプレイはそれぞれエルゴトロンLXで設置し�
 
 imacはスタンド仕様のものだが，amazonで販売されているアダプタ（VIVO Adapter VESA Mount Kitというやつ）を介して無理やりLXで吊っている．ただしimacは10kg近くあってエルゴトロンLXの耐荷重11.3kgは少々心許なかった．実際LXのネジをかなり固くしてようやく安定してくれるかなという感じで，揺れも相対的に大きい．できればより耐荷重の大きいモニターアームを使うことをおすすめしたい．
 
-{% include figure image_path="https://lh3.googleusercontent.com/G_-jRs0auDIIkzPM8S7Eiu_Q8NhRh33J3Lno85omA3pIOqbMp6VxmY2PpCtkqyjAyx-bnKkP6J-w3RKqHWlgCkb9E-OPN9nQO5YnbRzMBUYbJlXbWtoCeHgdvUk6GOgcBwg9vb2PBA=w2400
-" alt="this is a placeholder image" caption="アダプターはすごくしっかりしているのでおすすめ" %}
+{% include figure image_path="https://lh3.googleusercontent.com/G_-jRs0auDIIkzPM8S7Eiu_Q8NhRh33J3Lno85omA3pIOqbMp6VxmY2PpCtkqyjAyx-bnKkP6J-w3RKqHWlgCkb9E-OPN9nQO5YnbRzMBUYbJlXbWtoCeHgdvUk6GOgcBwg9vb2PBA
+" alt="this is a placeholder image" caption="imac用のアダプターはすごくしっかりしているのでおすすめ" %}
+
+エルゴトロンに限らないが，デスクを保護したい場合にはモニターアーム用のプレートを使うのが良い．荷重もより分散してかかるために安定性も上がっているはずだ．
+
+{% include gallery caption="This is a sample gallery with **Markdown support**." %}
+
+また，私のように頻繁にデスクをいじりたい人にはエルゴトロン純正のクイックリリースブラケットも良い．これを使うとモニターアームとモニターアームを簡単に取り外しできるようになる．3000円とちょっと値段ははるがその価値はある．
+
+{% include figure image_path="https://lh3.googleusercontent.com/pw/AIL4fc_CkT9Wpog1BjOLO0igcV7fF-xirAYL78VWJsHtHyvPvNoOXqM5n8B_rZhldhRNwRaabtvQZfU1fuf8R8i9EZXD1qOp0N4xGvYkxrN43-N9C6bUmgs" alt="this is a placeholder image" caption="右側をディスプレイ側に，左側をモニターアーム側につけて利用する" %}
 
 ## USB・SSDなど機能拡張
 
@@ -109,6 +124,12 @@ USBメモリなどを頻繁に使うのでUSB-Aポートを増やす必要があ
 
 {% include figure image_path="https://lh3.googleusercontent.com/CApGd_PzIkHDVSj4K9MM8Me3JINKHSacIH0P9jmy8PABp3zSTpP-9COOuQ1JRshBcQMpfE0iLI8xprUDN7OtUzcF7yhj7TLbghpNP0SmgO0Yi1yQPGlmugrDX9xrX0u9B0bY5Hkytg=w2400" alt="this is a placeholder image" caption="付属のサーマルシートをSSDにはったところ．このシートがSSDケースと密着する設計になっている．" %}
 
+### USBメモリ：Sandisk dual drive Go USB Type-C
+
+{% include figure image_path="https://lh3.googleusercontent.com/pw/AIL4fc9pTeAtnNaoOYCUpUigHxjLyKZj_kkWO26jjmS_Ae8aszuWnNNiCYir-9C6CDqFP-6BqCoqYO-Yht4AKtTG5Kq0dxrC-kWaRQrKh3EAghI8hUjN9JA" alt="this is a placeholder image" caption="" %}
+
+簡単なデータのやり取りには依然としてUSBメモリが便利で活用しています．USB-CとUSB-Aが混在する昨今の環境では，このサンディスクのメモリのようにUSB-CとUSB-Aの両方が入っているものが便利です．特にmac book proはUSB-C端子しかないのでこの手のメモリでないと使えません．欠点は小さいためか他のUSBメモリと比べて発熱がすごいことです（笑．
+
 ## キーボードとマウス
 
 {% include figure image_path="https://lh3.googleusercontent.com/VMKXgYoJLf23NYTkOjhDCd9jaHJGNekhHPJioAeX_SMXfM_voWFzfI3YO1u_wUYRZym_eOosYVc4ytzjV5NUYWA45oXqWjUDe7WRm0gsUEiosmZDHgeCp26M0ssfjPq_pUo5F-ZH8Q=w2400" alt="this is a placeholder image" caption="" %}
@@ -123,9 +144,9 @@ USBメモリなどを頻繁に使うのでUSB-Aポートを増やす必要があ
 
 {% include figure image_path="https://lh3.googleusercontent.com/eOyANhY8xXVIMR_pFdmyTfUsGv_n_Z-dISUsGmiQngzelxjQYQMgoRF29G6WDT_XNMmB35JxbYSq9TC0XVb8RUBWIS6nHCb7416xA2vsagVskd13t1XetgNXIkozX15oWCHhdc116g=w2400" alt="this is a placeholder image" caption="" %}
 
-マウスは先代のMX master2が壊れたのを機に購入．ゲーミング用のマウスだけあって親指部のボタンが6つあり，それを全てGHUBという専用ソフトウェアでカスタマイズできるので自由度が高い．のだが2023/6現在なぜかimacのGHUBが起動しなくなってしまい困っている．．． mac book proの方では動いているので何かの設定がおかしいのだろうが原因究明できずにいる．
+マウスは先代のMX master2が壊れたのを機に購入．ゲーミング用のマウスだけあって親指部のボタンが6つあり，それを全てGHUBという専用ソフトウェアでカスタマイズできるので自由度が高い．のだが2023/6現在なぜかimacのGHUBが起動しなくなってしまい困っている．．． mac book proの方では動いているので何かの設定がおかしいのだろうが原因究明できずにいる．仕方ないのでmac book proの方でオンボードメモリにプロファイルを設定してimacの方でも利用できるようにしてある．このようにGHUBは結構不安定なアプリで，気づくと起動しなくなっていたりということが多い．windows版はもう少しマシなのかもしれないが，macで使おうとしている人は要注意．GHUBに限らずMx master系のアプリLogi optionsも不安定だったことも付言しておきたい．詳細な設定についてはまたどこかで記事にするつもりだ．
 
-また，3年使って表面ラバーがだいぶヘタってきてしまってあと1-2年で買い替えないとダメそうだ．表面にラバーを使っていると触り心地は良いが耐久性はよくないということがよく勉強になった．
+耐久性についてだが，3年使って表面ラバーがだいぶヘタってきてしまってあと1-2年で買い替えないとダメそう．表面にラバーを使っていると触り心地は良いが耐久性はよくないということがよく勉強になった．一方で今のところチャタリングなどの現象は皆無で快適に利用できている．Mx master系は3回買っていずれも長く持たずにチャタリングや接触不良で買い替えることになってイメージが良くなかったが，今回のG604でロジクール製マウスに対する印象が少し変わった．
 
 ### マウスパッド/リストレスト：エレコム マウスパッドhigh，リストレスト30cm
 
@@ -147,21 +168,17 @@ USBメモリなどを頻繁に使うのでUSB-Aポートを増やす必要があ
 
 {% include figure image_path="https://lh3.googleusercontent.com/-ulM69JBqJYgP7w6gS1KHMgfdPRX3Liu_p-jc9H90mt0twdsXuJQe4jVkIhHT5RgECa2xLZsKjlAEgTnrs89Tc1F5v4e0nr6t6GSAGWtJLUvgBJ5EaJYXk1qSJQ9ka9LiFYSXjSsQQ=w2400" alt="this is a placeholder image" caption="二種類の設置用アイテムが同梱される" %}
 
-なお，本品に限らずPhilips Hueシリーズをスマホから操作するにはHue ブリッジと呼ばれる製品が必要なので注意．値段は競合に比べて高いが一度購入してしまえば公称100台まで繋げる．
+なお，本品に限らずPhilips Hueシリーズをスマホから操作するにはHue ブリッジと呼ばれる製品が必要なので注意．値段は競合に比べて高いが一度購入してしまえば公称100台まで繋げるため，照明の一元管理が可能になる．philipsは企業として大きいのでhueシリーズの寿命は長いだろうから，hueで揃えて良いかなと感じている．スマート系の製品は販売中止になるとそのうちアプリの対応も中止になってしまうので極力長く続くだろう製品で揃えることを強くお勧めしたい（自戒を込めて．．．）．
 
 ### Philips Hue 100W相当 E26 フルカラー
 
-{% include figure image_path="https://lh3.googleusercontent.com/CjM9auyUTEexrvAV7cMNgxVFiWq9TWddZuKjUQtHL8sNHkxRaXfdCwZjrA3SrXZLuz17L5x8rbmyprUq6ZzYqdMc_MryXkToAxeaTj2T2l2oE2cLbgyRJBFJmjGzOs5-P1IjDY3oSw=w2400" alt="this is a placeholder image" caption="" %}
+{% include figure image_path="https://lh3.googleusercontent.com/pw/AIL4fc86XkfodJhsw8nS_FZaHoZkfX1s2I_Bu1aKFkBuxTuuOElZbggn2tFZg5wGSkr5_S3-453mV5pGI7Zpn33_zNHd05J9h9g8kNCxuPFV58V0WIkSRHE=w2400" alt="this is a placeholder image" caption="75W相当よりは少し大きく出来ているらしい" %}
 
+おなじくHueのE26口金用の電球タイプ照明で，出力に関して100W相当と75W相当（以前は60W相当だった）が，色に関してフルカラー，ホワイトグラデーション，ホワイトとある．私が利用しているのはフルカラー100W相当タイプで最大光量が1600lmあってかなり明るい．75W相当タイプとあまり値段が変わらないのでこちらを購入した．明るいだけあって発熱も凄まじく，100%で使ってると触れない点に注意が必要．
 
-おなじくHueのE26口金用の電球タイプ照明で，出力に関して100W相当と75W相当が，色に関してフルカラー，ホワイトグラデーション，ホワイトとある．私が利用しているのはフルカラー100W相当タイプで最大光量が1600lmあってかなり明るい．75W相当タイプとあまり値段が変わらないのでこちらを購入した．
+{% include figure image_path="https://lh3.googleusercontent.com/CjM9auyUTEexrvAV7cMNgxVFiWq9TWddZuKjUQtHL8sNHkxRaXfdCwZjrA3SrXZLuz17L5x8rbmyprUq6ZzYqdMc_MryXkToAxeaTj2T2l2oE2cLbgyRJBFJmjGzOs5-P1IjDY3oSw=w2400" alt="this is a placeholder image" caption="E26に対応した機器が別途必要" %}
 
 もともと家にあった適当なクリップ式口金につけて壁に当てて間接照明にしている．値段と明るさを考えると他のhue製品に比べてコストパフォーマンスが高いので，設置方法さえ考えられればおすすめだ．
-
-
-### Philips Hue ライトリボンプラス V4
-
-2mのテープライトで，デスクの裏側にはって壁を照らすのに利用している．こちらも上の電球タイプとおなじく1600mlあってかなり明るい．テープライトなので色々な活用方法があって，例えばモニター裏に貼ったらライトバーより安上がりだったな〜などと考えたりする．
 
 ### デスクライト：BenQ screen bar plus
 
@@ -169,7 +186,7 @@ USBメモリなどを頻繁に使うのでUSB-Aポートを増やす必要があ
 
 モニターの上に置いて設置するユニークなデスクライト．普通のデスクライトは結構場所をとるのでこのアイデアは素晴らしいものの，光量はさすがに少なめ．ケーブルが短くて取り回しが悪いのが最大の不満点で，新しいのはリモコン部が無線になっていてケーブルマネジメントの観点からはそちらの方が良さそう．あと，マルチディスプレイ環境で使う場合はディスプレイの角度によっては隣のディスプレイに光が映り込む．studio displayに設置して使っているが，これだとstudio displayのカメラを塞いでしまうところにも注意が必要だ．
 
-運用としてはswitchbotのスマートプラグにつけて，他の照明と一括でつけたり消したりできるようにしている．これも結構消し忘れが多いのでこの運用はおすすめだ．
+運用としてはswitchbotのスマートプラグにつけて，他の照明と一括でつけたり消したりできるようにしている．私のように消し忘れが多い人にはこの運用はおすすめだ．
 
 
 ### シーリングライト：Switchbot ceiling light pro
@@ -197,7 +214,7 @@ USBメモリなどを頻繁に使うのでUSB-Aポートを増やす必要があ
 
 ### ヘッドホンアンプ：SPL Phonitor X
 
-ヘッドホンアンプが欲しかったので買ってしまった．音に関しては（好みもあると思うが）文句なく良いと思う．一方でデスクに設置するにはサイズ（特に奥行き！）が大きかったのと，発熱がすごいのが難点ではある．本当は電源つけっぱなしでこちらからスピーカーに繋ぎたかったのだが発熱のせいでそれがやりにくいのが残念．
+ヘッドホンアンプが欲しかったので買ってしまった．音に関しては（好みもあると思うが）文句なく良いと思う．一方でデスクに設置するにはサイズ（特に奥行き！）が大きかったのと，発熱がすごいのが難点ではある．本機にはADI2 DACと異なりヘッドホン端子とライン出力の切り替えスイッチがあるので，本当は電源つけっぱなしでこちらからスピーカーに繋ぎたかったのだが発熱のせいでそれがやりにくいのが残念．
 
 ### デスク拡張： サンワサプライ デスクエクステンション W70cm×D25cm
 
@@ -207,7 +224,9 @@ Phonitorがあまりにも大きくて奥行き70cmのデスクに普通にお�
 
 ### マイク：Blue Yeti nano
 
-コロナがはじまって以降増加したオンライン会議用に購入した．imacの内臓マイクもそこそこ音が良いので劇的に音がよくなった感じはないのだが，1万円ちょっとで買えることを考えるとコストパフォーマンスは良いと思う．機能的にはlogicoolのアプリGhubで音質設定が可能な点がすぐれている．マウスのところでも述べたがGhubの安定性だけもう少しなんとかしてほしい．
+コロナがはじまって以降増加したオンライン会議用に購入した．imacの内臓マイクもそこそこ音が良かったので劇的な改善はなかったが，1万円ちょっとで買えることを考えるとコストパフォーマンスは良いと思う．機能的にはlogicoolのアプリGhubで音質設定が可能な点がすぐれているが，imacでghubが使えない問題のせいで現状ただのマイクになってしまった．マウスのところでも述べたがGhubの安定性だけもう少しなんとかしてほしい．
+
+また，本マイクに限らないがコンデンサーマイクは結構遠くの音も拾うので，在宅会議だとダイナミックマイクの方がよかったのかもしれない．
 
 ## その他の小物
 
@@ -219,16 +238,23 @@ Phonitorがあまりにも大きくて奥行き70cmのデスクに普通にお�
 
 ### スマートスピーカー： echo show5
 
-照明などの音声制御はalexaで行っている．appleのhomepodでもよかったのだが，時計，目覚ましとしても使えるのでディスプレイがついているこちらのタイプにした．
+照明などの音声制御はalexaで行っている．appleのhomepodでもよかったのだが，時計，目覚ましとしても使えるのでディスプレイがついているこちらのタイプにした．実際使ってみて音声の認識はappleのsiriより優れているような気がする．amazonのセールでたまに安くなっている時が狙い目で，通常価格は割高と感じる人も多いかも．
 
 ### 電源タップ：サンワサプライ TAP-SLIM11-3BK，エレコム ECT-2620BK
 
+{% include figure image_path="https://lh3.googleusercontent.com/pw/AIL4fc9va1iMdOshhk9u2F3cYm44nj3IMQBRQDmAAz3klS9RqwMhN-X_MyCsOMvo333i07dSDmHJXBHXtihbFFmEkl8jMOjlKY9lYzXQXalXA1M61N4moUM" alt="this is a placeholder image" caption="エレコム ECT-2620BK，二つの口だけ幅広に作られている" %}
+
 趣味で電源をたくさんつかうこともあって電源タップの所持数は多い方だと思う．デスクでは合計16個の電源を使っていて，それを2つのコンセントから供給しないといけないので電源タップも口数が多いものに選択肢が限られている．現在はエレコムの10個口タップとサンワの11個口タップをデスク裏に設置して配線管理を行っている．両者ともマグネットでの固定が可能だ．サンワの方は５個だけ３ピンがささるようになっている一方で，両者とも極性非対応なので極性２ピンへは変換アダプタを噛ませる必要があるのが難点．調べた限りだと10個口程度で極性対応のものは業務用以外は見つからなかった．細かい配線の組み方についてはまた別の機会に記事にしたい．
+
+{% include figure image_path="https://lh3.googleusercontent.com/pw/AIL4fc_KbVSz59I-n8I1lyze5esVXHDEGIagnNJxgr1V4U2utAbVUbhliwccCjjZBDORhwq6vNXClfeXJK_CyzxxAMZXteE3pjZGEn_B1RNgc63BKuBIIgg" alt="this is a placeholder image" caption="サンワ TAP-SLIM11-3BK，二面に挿すようになっている" %}
 
 ### USB充電器：Anker PowerPort I PD/ PowerPort III 2-Port
 
 デスクのUSB充電器としてAnkerのPowerPort I PD - 1 PD & 4 PowerIQを利用している．これはUSB-Aが4ポートとUSB-Cが1ポートついていてまとめて電源をとるのに便利だ．ただ近年はUSB-Cがより支配的になっているのでこれから買うならUSB-Cポートがたくさんついているものを買うべきだろう．
 他にmac book pro用におなじくAnkerのPowerPort III 2-Port 100Wもつかっていて，これはmac純正より小さい上に2port充電が可能なので非常に良い製品だと思う．自宅用と外出用に二台買うほどお気に入り．
+
+{% include figure image_path="https://lh3.googleusercontent.com/pw/AIL4fc9yT-0O0J1-hH4GqE5xU6pB1HRi_nf_B1EyBmJxUy12M2_RLkNVxb9XfvWgYHRYk4qfXE38DX_XdHkIWKhyVnmayTrGg8eN7T-bnLTLxkqnK_VkOTQ=w2400
+" alt="this is a placeholder image" caption="PowerPort III(左)とappleの純正96W充電器(右)の比較．" %}
 
 ### サーキュレーター：アイリスオーヤマ PCF-SCAI15T
 
