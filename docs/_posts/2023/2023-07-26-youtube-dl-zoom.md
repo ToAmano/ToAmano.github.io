@@ -21,6 +21,8 @@ $ youtube-dl --version
 2021.12.17
 ```
 
+Zoomはyoutube-dlが公式で対応している．[対応サイトリスト](https://ytdl-org.github.io/youtube-dl/supportedsites.html)にも記載がある．
+
 ## zoomの動画ページから必要な情報を取得
 
 ここではchromeを使う方法を紹介するが，他のブラウザでも似たことができると思う．まず，webページで右クリック->検証として開発者ツールを起動する．タブの中に「Network」があるのでそこに移動し，その状態でwebページを再読み込みするとネットワークのやりとりの一覧が表示される．
