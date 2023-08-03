@@ -8,7 +8,7 @@ categories:
  - code
 tags:
  - bash
-description: youtube-dlでzoomの動画をダウンロードする．
+description: python+jupyter notebookで使える強力な原子構造の描画ツールnglviewを使っていて，えられた画像を保存したいということがあった．この場合に使える手法について調べた．
 ---
 
 python+jupyter notebookで使える強力な原子構造の描画ツールnglviewを使っていて，えられた画像を保存したいということがあった．この場合に使える手法について調べた．
