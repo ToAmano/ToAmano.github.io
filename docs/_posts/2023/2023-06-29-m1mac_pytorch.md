@@ -3,7 +3,7 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 title: m1 macのpytorchでGPUを利用する
 layout: single
-date:   2023-6-29 21:00:00 +0900
+date:   2023-6-29 21:00:00 +0900 
 categories: 
  - code
 tags:
