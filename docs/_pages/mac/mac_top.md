@@ -123,8 +123,10 @@ sudo powermetrics --samplers smc | grep -i "Fan"
 
 ## その他便利アプリケーション
 
-- Alfread4
+- Alfread4(brewで入る)
   spotlightの代わりとして活用できる．
+- qlmarkdown(brewで入る)
+  finderのクイックルックでmarkdownを見れる
 
 ## zotero
 <!-- 
