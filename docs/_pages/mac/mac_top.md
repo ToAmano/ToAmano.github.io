@@ -57,6 +57,8 @@ description: Mac(OSX)に関する設定
 
 - hidenbar
   
+- [MacBing](https://goodsnooze.gumroad.com/l/macbing)
+  - macのメニューバーからBingChatを開ける
 - spaceman
   
 

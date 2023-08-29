@@ -151,6 +151,7 @@ LaTeXではスライドショーを作成することもできる．スライド
 <!-- https://zenn.dev/junkato/articles/github-actions-to-generate-pdfs-for-pages -->
 <!-- https://qiita.com/denkiuo604/items/63b8c34a60a2340727b1 -->
 
+- [latexプロジェクト用の公式gitignore](https://github.com/github/gitignore/blob/main/TeX.gitignore)
 
 
 ## 化学
