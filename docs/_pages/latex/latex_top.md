@@ -151,6 +151,7 @@ LaTeXではスライドショーを作成することもできる．スライド
 <!-- https://zenn.dev/junkato/articles/github-actions-to-generate-pdfs-for-pages -->
 <!-- https://qiita.com/denkiuo604/items/63b8c34a60a2340727b1 -->
 
+- [latexプロジェクト用の公式gitignore](https://github.com/github/gitignore/blob/main/TeX.gitignore)
 
 
 ## 化学
@@ -198,6 +199,21 @@ TikZをベースとした`chemfig`パッケージがある．
 ## predifinedな変数
 https://cns-guide.sfc.keio.ac.jp/2001/11/5/1.html
 
+## [自作（あるいは配布）クラスファイルのインストール方法](https://texwiki.texjp.org/?LaTeX%E5%85%A5%E9%96%80%2F%E5%90%84%E7%A8%AE%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E3%81%AE%E5%88%A9%E7%94%A8)
+
+1: latexのクラスファイルの場所を`kpsewich`コマンドで探る
+
+  ```bash
+  kpsewhich amsmath.sty
+  > /usr/local/texlive/2023/texmf-dist/tex/latex/amsmath/amsmath.sty
+  ```
+  これで見えた`/usr/local/texlive/2023/texmf-dist/tex/latex`以下に`パッケージ名/パッケージ名.sty`という形式でファイルを設置する．`sudo`権限が必要．
+
+2: mktexlsrによる更新
+
+  ```bash
+  sudo mktexlsr
+  ```
 
 ## プロジェクトでのファイル管理（ファイルの分割など） 
 

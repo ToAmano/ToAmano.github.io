@@ -47,7 +47,7 @@ description: Mac(OSX)に関する設定
 標準のメーラーははっきり言ってあまり使いやすくないが，かといってかわりも難しい．．．
 
 - Venturaから，いわゆる遅延送信に対応した．設定>作成>送信>送信を取り消すまでの時間といって，10s,20s,30sから選択可能．
-
+- 自分を自動的にcc/bccに入れるには，環境設定>作成>「自動的に自分をcc/bccに含める」にチェック
 
 ## メニューバー
 
@@ -57,6 +57,8 @@ description: Mac(OSX)に関する設定
 
 - hidenbar
   
+- [MacBing](https://goodsnooze.gumroad.com/l/macbing)
+  - macのメニューバーからBingChatを開ける
 - spaceman
   
 
@@ -123,8 +125,10 @@ sudo powermetrics --samplers smc | grep -i "Fan"
 
 ## その他便利アプリケーション
 
-- Alfread4
+- Alfread4(brewで入る)
   spotlightの代わりとして活用できる．
+- qlmarkdown(brewで入る)
+  finderのクイックルックでmarkdownを見れる
 
 ## zotero
 <!-- 
