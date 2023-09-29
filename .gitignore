@@ -5,6 +5,7 @@ docs/_site/
 .jekyll-metadata
 vendor
 
+.history/
 
 *.~undo-tree~
 .DS_Store
