@@ -20,7 +20,8 @@ description: The top-page of Python.
 
 ### Domestic 
 
-* 天野智仁，山崎民雄，常行真司 「局所双極子モーメントの機械学習による高分子の誘電特性計算」 日本物理学会2023秋期大会 予定
+* T. Amano, T.Yamazaki, S. Tsuneyuki "The first-principles study of THz dielectric properties with a machine learning model for dipole moment" HISML2023
+* 天野智仁，山崎民雄，常行真司 「局所双極子モーメントの機械学習による高分子の誘電特性計算」 日本物理学会2023秋期大会 2023/09/17
 * 天野智仁, 山崎⺠雄, 常行真司 「双極子モーメントの機械学習モデルによる誘電特性の研究」日本物理学会2023春期大会 2023/03/22
 * T. Amano, T. Yamazaki, R. Akashi, T.tadano, S. Tsuneyuki「First-principles study of lattice dielectric function in rutile TiO2」YITP workshop Fundamentals in density functional theory (DFT2022) 2022/12/12
 * 天野智仁、山崎民雄，明石遼介、常行真司「ルチル型 TiO2 における格子誘電関数の第一原理的研究」 日本物理学会2022秋期大会 2022/09/14
@@ -35,10 +36,10 @@ description: The top-page of Python.
 
 ### Domestic
 
-* 天野智仁、明石遼介、常行真司「ルチル型 TiO2 における格子誘電関数の第一原理的研究」 計算物質科学の新展開2022 
-* 天野智仁、山崎民雄，明石遼介、只野央将，常行真司 「ルチル型 TiO2 の格子誘電特性:自己無撞着フォノン法による第一原理的研究」計算物質科学の新展開2023 
-* 天野智仁, 山崎⺠雄, 常行真司 「双極子モーメントの機械学習モデルによる誘電特性の研究」 計算物理春の学校2023
-
+* 天野智仁，明石遼介、常行真司「ルチル型 TiO2 における格子誘電関数の第一原理的研究」 計算物質科学の新展開2022 
+* 天野智仁，山崎民雄，明石遼介、只野央将，常行真司 「ルチル型 TiO2 の格子誘電特性:自己無撞着フォノン法による第一原理的研究」計算物質科学の新展開2023 
+* 天野智仁，山崎⺠雄, 常行真司 「双極子モーメントの機械学習モデルによる誘電特性の研究」 計算物理春の学校2023
+* 天野智仁，山崎⺠雄, 常行真司 「双極子モーメントの機械学習モデルによる誘電特性の研究」 ipi ダイキンシンポジウム2023
 
 
 ### Others
