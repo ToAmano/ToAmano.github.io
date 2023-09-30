@@ -124,6 +124,10 @@ USBメモリなどを頻繁に使うのでUSB-Aポートを増やす必要があ
 
 {% include figure image_path="https://lh3.googleusercontent.com/CApGd_PzIkHDVSj4K9MM8Me3JINKHSacIH0P9jmy8PABp3zSTpP-9COOuQ1JRshBcQMpfE0iLI8xprUDN7OtUzcF7yhj7TLbghpNP0SmgO0Yi1yQPGlmugrDX9xrX0u9B0bY5Hkytg=w2400" alt="this is a placeholder image" caption="付属のサーマルシートをSSDにはったところ．このシートがSSDケースと密着する設計になっている．" %}
 
+### ポータブルSSD2： 
+
+
+
 ### USBメモリ：Sandisk dual drive Go USB Type-C
 
 {% include figure image_path="https://lh3.googleusercontent.com/pw/AIL4fc9pTeAtnNaoOYCUpUigHxjLyKZj_kkWO26jjmS_Ae8aszuWnNNiCYir-9C6CDqFP-6BqCoqYO-Yht4AKtTG5Kq0dxrC-kWaRQrKh3EAghI8hUjN9JA" alt="this is a placeholder image" caption="" %}
@@ -278,6 +282,12 @@ imacの冷却用に使っているアイリスオーヤマのサーキュレー�
 {% include figure image_path="https://lh3.googleusercontent.com/oaFW-rPrK-HB40CjkUszkHSV9ezyLea6i6ltzibPw3criKR2VUiGORS25B7g3HCuujF7N0raVgMPDzFAFu3GEQd89qwuAVZq4n-3bD7_Ql3u3a5WlpNDPDxuvndyEZ-J5vf_fuAsew=w2400" alt="this is a placeholder image" caption="" %}
 
 未だにCDを買ってリッピングをすることがあるので必須ということでデスクに配置してある．以前はapple純正のバスパワータイプを使っていたが音飛びが酷かったので奮発して購入した．こちらは全く音飛びがないのでやっぱり餅は餅屋ということか．今の所CDの読み込みにしか利用していないがBluerayも読めるらしく，未だにこの手のメディアを使う人なら一台持っていて損はないと思う．windows機だといくつか付属のソフトが使えるらしいが，macには非対応なのが残念．（使うだけならmacでも問題ない．）
+
+### マグカップホルダー
+
+{% include figure image_path="" alt="" caption="" %}
+
+amazonで見つけたクランプタイプのマグカップホルダー．机の上のスペースを確保できるだけでなく，デスク上で飲み物をこぼす事故がなくなったのでおすすめ．
 
 ## 今後やりたいこと
 
