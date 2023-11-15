@@ -57,7 +57,7 @@ legend style={fill=white, fill opacity=1, draw opacity=1, text opacity=1},
 
 ## 凡例ごとに指定を変更する
 
-例えばグラフの線は太さ`2`で書いたけど，凡例では太さ`4`でより太く見せたい，というような場合，`\addlegendimage`コマンドで細かく指定できる．このとき，`addplot`の方の凡例を表示しないようにするためにはオプションで`[forgot plot]`を指定する．
+例えばグラフの線は太さ`2`で書いたけど，凡例では太さ`4`でより太く見せたい，というような場合，`\addlegendimage`コマンドで細かく指定できる．このとき，`addplot`の方の凡例を表示しないようにするためにはオプションで`[forgot plot]`を指定する．以下に例を示す．
 
 ```tex
 \documentclass{standalone}
@@ -79,6 +79,7 @@ legend style={fill=white, fill opacity=1, draw opacity=1, text opacity=1},
 \end{tikzpicture}
 \end{document}
 ```
+
 
 
 ## 参考文献
