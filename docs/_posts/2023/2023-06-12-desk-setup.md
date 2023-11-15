@@ -116,15 +116,19 @@ USBメモリなどを頻繁に使うのでUSB-Aポートを増やす必要があ
 
 音楽や写真などは外部SSDに保存するため，ケースとしてHDD/SSDを4台まで接続できるlogitechのHDDケースを利用している．USB-Cで繋げるのと2.5インチSSDをマウントできるアダプターが入っていてSSDでも問題なく使えるということで選択した．接続時はLEDインジケーターがひかるようになっているのも便利．かれこれ3年使っているが今の所トラブルもなく満足しているが，唯一不満なのは電源ケーブルと付属USB-Cケーブルの長さが少し短いところ．結局付属USB-Cはより長いものを買い足して利用している．
 
-### ポータブルSSD：Samsung 970 EVO Plus 2TB（MZ-V7S2T0B/EC） + 玄人志向 M.2 NVMe SSD ケース（GWM.2NVST-U3G2CCA）
+### ポータブルSSD (M2)：Samsung 970 EVO Plus 2TB（MZ-V7S2T0B/EC） + 玄人志向 M.2 NVMe SSD ケース（GWM.2NVST-U3G2CCA）
 
 {% include figure image_path="https://lh3.googleusercontent.com/-hW7ufe5piYvc-qDrz7oQQLXtjjB4hfXPdfsB2Vm5Rrz02xwtIv4K5Hb7JfOGS6WwU00Whx-Au5uQUN7ReteDJsZZkJ2XJjb6epIfelQa2OuXXyvystXP_Z9GFZBsbB6gAAKfbEuNw" alt="this is a placeholder image" caption="" %}
 
-据え置きのSSDとは別に，外出用のポータブルSSDも利用している．ポータブルSSDは完成品もたくさん売っていてそれでも問題ないが，安く済ませたかったのでケースとSSDをそれぞれ別で購入した．用途的に高速転送がしたかったのでM.2 SSDを選択している．品質はさすがSamsungで文句なし．一方ケースの方はamazonなんかで調べると大量にヒットするのでどれでも良いだろう．私は用途上実績のあるものが使いたかったので玄人志向のものを利用している．これは放熱のことを考えて作られているようで，熱伝導シートが付属してきた．実際に使っていて今まで問題もなくタフに使いたい場合におすすめだ．
+据え置きのSSDとは別に，外出用のポータブルSSDも利用している．ポータブルSSDは完成品もたくさん売っていてそれでも問題ないが，安く済ませたかったのでケースとSSDをそれぞれ別で購入した．用途的に高速転送がしたかったのでM.2 SSDを選択している．品質はさすがSamsungで文句なし．一方ケースの方はamazonなんかで調べると大量にヒットするのでどれでも良いだろう．私は用途上実績のあるものが使いたかったので玄人志向のものを利用している．これは放熱のことを考えて作られているようで，熱伝導シートが付属してきた．M2 SSDはかなり発熱するので，排熱に気を使っている製品の方が安心だと思う．実際に使っていて今まで問題もなくタフに使いたい場合におすすめだ．
 
 {% include figure image_path="https://lh3.googleusercontent.com/CApGd_PzIkHDVSj4K9MM8Me3JINKHSacIH0P9jmy8PABp3zSTpP-9COOuQ1JRshBcQMpfE0iLI8xprUDN7OtUzcF7yhj7TLbghpNP0SmgO0Yi1yQPGlmugrDX9xrX0u9B0bY5Hkytg=w2400" alt="this is a placeholder image" caption="付属のサーマルシートをSSDにはったところ．このシートがSSDケースと密着する設計になっている．" %}
 
-### ポータブルSSD2： 
+### ポータブルSSD2 (SATA)： Samsung 870 EVO 2TB (MZ-77E2T0B/EC) + ロジテック SSDケース LGB-PBSUC
+
+{% include figure image_path="" alt="" caption="" %}
+
+同じく外出用のポータブルSSDとして，SATAのSSDも利用している．SATAはM2ほど速度は出ないが発熱はないので，単純にデータ置き場として非常に便利だ．SSDとしてはSamsungのものを利用している．昔はとんでもない値段だったSamsumgのSATA SSDもだいぶ値段が落ちてきているので手軽に購入しやすい．ケースの方は安価なものだとUSB3.0 microB接続のものが多く，このケーブルを1本余計に持ち歩くのは非常に面倒臭いので多少高くてもUSB-Cでつなげるものを使いたくてロジテックのPBSUCというケースを購入した．より高級なやつだと複数端子がついているものもあるので，自分の用途と合わせて選択できるのが良い．接続時にはLEDランプが点灯するようになっているのも便利でおすすめできる商品だと思う．
 
 
 
