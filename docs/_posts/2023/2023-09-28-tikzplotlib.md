@@ -19,7 +19,7 @@ matplotlibで作成したグラフを，tikzファイルに変換することが
 
 ```python
 pip install tikzplotlib
-conda install tikzplotlib
+conda install -c conda-forge tikzplotlib
 ```
 
 ## 使い方
