@@ -15,7 +15,7 @@ description: The top-page of Python.
 
 ### International
 
-* T. Amano, T. Yamazaki, S. Tsuneyuki "The first-principles study of THz dielectric properties with a machine learning model for dipole moment" MRM2023, under preparation
+* T. Amano, T. Yamazaki, S. Tsuneyuki "The first-principles study of THz dielectric properties with a machine learning model for dipole moment" Advanced Materials Research Grand Meeting MRM2023, 2023/12/12
 * T. Amano, T. Yamazaki, R. Akashi, S. Tsuneyuki「First-principles study of lattice dielectric function in rutile TiO2」33rd IUPAP Conference on Computational Physics 2022/08/04
 
 ### Domestic 

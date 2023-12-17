@@ -123,6 +123,37 @@ table {
 - この手のツールとしてはありがちだがたまに綺麗に変換されないケースがある．
 - 3D plotでは使えない（公式マニュアルでも言及あり）．
 
+## (追記) matplotlib.3.8.0以降で使えない問題
+
+自分の環境に入っている`tikzplotlib     0.10.1`はmatplotlib3.8系とは互換性がなかった．matplotlibの3.8で`backend_pgf.common_texification`が廃止されてしまったのが原因．
+
+## (追記) matplotlib.3.7.0で利用する．
+
+そこで，別途tikzplotlib専用に仮想環境を作成し，matplotlib3.7.0系を利用するとうまくいく．
+
+```bash
+conda create -n tikzplotlib
+conda activate tikzplotlib
+pip install matplotlib==3.7.3
+pip install tikzplotlib
+```
+
+ただし，このままだと実際にtikzplotlibを実行したときに以下のように怒られてしまった．
+
+```python
+/path/to/lib/python3.12/site-packages/tikzplotlib/_legend.py", line 81, in draw_legend
+    if obj._ncol != 1:
+AttributeError: 'Legend' object has no attribute '_ncol'. Did you mean: '_ncols'?
+```
+
+そこで，この`_legend.py`内のif文を
+
+```python
+if obj._ncols != 1:
+```
+
+と書き換えてやるとうまくいく．この問題はtikzplotlibのgithubのissueにも立てられているが今のところ修正されていないようだ．
+
 
 ## まとめ
 
