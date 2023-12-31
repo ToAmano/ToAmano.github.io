@@ -3,7 +3,7 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 title: docuteを利用したLaTeXの分割コンパイル
 layout: single
-date:   2023-12-12 21:00:00 +0900
+date:   2023-3-31 21:00:00 +0900
 description: デスクのマイクとカメラのセッティング
 ---
 
