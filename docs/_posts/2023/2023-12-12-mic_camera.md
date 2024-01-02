@@ -5,6 +5,15 @@ title: デスクのマイクとカメラのセッティング
 layout: single
 date:   2023-12-12 21:00:00 +0900
 description: デスクのマイクとカメラをデスク奥にセッティングした．これでデスクを広く使うことができる．
+gallery1:
+  - url: /assets/images/unsplash-gallery-image-1.jpg
+    image_path: https://lh3.googleusercontent.com/pw/ABLVV87q4w3GTHUr-zaa6XP-hWmkreVlJGu6rkZ9MdoTy7iws0d8V4w-ur2FXs_GNCB-kb6F9As65y8natdd8l2tzvQaZWB_z8ZL_ft8reknefFeckWouc2sEEDNGaCql84c1PkqKz3tJlXXfld2GWwEYuls=w800-h532-s-no-gm?authuser=0
+    alt: "placeholder image 1"
+    title: "Image 1 title caption"
+  - url: /assets/images/unsplash-gallery-image-2.jpg
+    image_path: https://lh3.googleusercontent.com/pw/ABLVV86Qp1_HDJw2RLXA9OS5j21laegIUfFLczBscPCnisbfY7uXuC-h0Rw-IwivFEXU0EyFp3oyWnvQN_bRlXIbUh51jJvtBc3yLsS24zb1zdB4wnVmFSvhLp3fENte10DPwGqfsRCT5QESmsFUjXQ-CD2j=w800-h532-s-no-gm?authuser=0
+    alt: "placeholder image 2"
+    title: "Image 2 title caption"
 ---
 
 今までデスクに直置きしていてずっと邪魔だと感じていたマイクとカメラをデスクの奥にクランプで設置した．27インチのトリプルディスプレイ環境でどういう商品を選べばよいか少し難儀したので，一例として紹介しようと思う．この環境の問題は，デスク前面がディスプレイに覆われているのでマイクやカメラを設置するスペースが限られていることだ．おそらく唯一の方法はマイクとカメラがモニターの上にくるように吊り下げることで，これを実現する方法を考えてみた．
@@ -20,12 +29,11 @@ description: デスクのマイクとカメラをデスク奥にセッティン�
 
 開封．内容物はアーム本体，エクステンション用の棒，カウンターウェイト(260g)，さいごに接続ネジ径の変換アダプタ．本体のネジは1/4インチで，アダプタは1/4" - 3/8"(AKG規格)と1/4" - 5/8"(shure規格)の二種類が付属してくるので大抵のマイクには対応しているものと思われる．
 
-{% include figure image_path="https://photos.app.goo.gl/vZ8xVpCoTDFtBi5R8" alt="this is a placeholder image" caption=""%}
-
 
 {% include figure image_path="https://lh3.googleusercontent.com/pw/ABLVV87q4w3GTHUr-zaa6XP-hWmkreVlJGu6rkZ9MdoTy7iws0d8V4w-ur2FXs_GNCB-kb6F9As65y8natdd8l2tzvQaZWB_z8ZL_ft8reknefFeckWouc2sEEDNGaCql84c1PkqKz3tJlXXfld2GWwEYuls=w800-h532-s-no-gm?authuser=0
 " alt="this is a placeholder image" caption=""%}
 
+{% include gallery1 caption="This is a sample gallery with **Markdown support**." %}
 
 アーム本体はプラスチック製でなかなか良い出来だ．買う前にヨドバシカメラで色々マイクアームをみてきてもっと目立つかなと思っていたのでいざ自分のデスクに付けてみて思ったより目立たなくて安心した．それだけデスクがごちゃごちゃしているということかもしれないが．．． マイクアームはどうしても高さがあってふとした瞬間に目に入るので，デザイン面は多少こだわって選んだほうがよいかもしれない．
 
