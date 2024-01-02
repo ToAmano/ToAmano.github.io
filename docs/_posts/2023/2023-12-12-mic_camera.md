@@ -33,7 +33,7 @@ gallery1:
 {% include figure image_path="https://lh3.googleusercontent.com/pw/ABLVV87q4w3GTHUr-zaa6XP-hWmkreVlJGu6rkZ9MdoTy7iws0d8V4w-ur2FXs_GNCB-kb6F9As65y8natdd8l2tzvQaZWB_z8ZL_ft8reknefFeckWouc2sEEDNGaCql84c1PkqKz3tJlXXfld2GWwEYuls=w800-h532-s-no-gm?authuser=0
 " alt="this is a placeholder image" caption=""%}
 
-{% include gallery1 caption="This is a sample gallery with **Markdown support**." %}
+{% include gallery id="gallery1" caption="This is a sample gallery with **Markdown support**." %}
 
 アーム本体はプラスチック製でなかなか良い出来だ．買う前にヨドバシカメラで色々マイクアームをみてきてもっと目立つかなと思っていたのでいざ自分のデスクに付けてみて思ったより目立たなくて安心した．それだけデスクがごちゃごちゃしているということかもしれないが．．． マイクアームはどうしても高さがあってふとした瞬間に目に入るので，デザイン面は多少こだわって選んだほうがよいかもしれない．
 
