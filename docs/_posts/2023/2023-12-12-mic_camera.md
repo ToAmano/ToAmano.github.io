@@ -41,7 +41,15 @@ gallery4:
     image_path: https://lh3.googleusercontent.com/pw/ABLVV86qAe86rAcGIBtCZbrGGS7cOKRzfZT-2zW0ffgZUQj42UgUyCU0TIo25bdN4IidWYufN02x14sB3KA5cBLirSxw7xmLLnxrRtBVeFmZe-vP-i1QZU8BgSbpSCGzK3kVY475PaHBB3TjAHtp5RwdsaZn=w800-h532-s-no-gm?authuser=0
     alt: "placeholder image 2"
     title: "Image 2 title caption"
-
+gallery5:
+  - url: /assets/images/unsplash-gallery-image-1.jpg
+    image_path:  https://lh3.googleusercontent.com/pw/ABLVV84KhfEGPwLgnR9CuqGcNkrPwrJ6rCfubJDBr573oNHUMRX8Pew3cLCmG20UFcfhFbjLmoX9gepdWwwbrgZcruzWsga1KLZfCTx25Q6EiNj0-OYNvHuFja5t_dZZwZP3_cit7VsOMLpjVWVVwFKkRVXa=w800-h532-s-no-gm?authuser=0
+    alt: "placeholder image 1"
+    title: "Image 1 title caption"
+  - url: /assets/images/unsplash-gallery-image-2.jpg
+    image_path: https://lh3.googleusercontent.com/pw/ABLVV86qAe86rAcGIBtCZbrGGS7cOKRzfZT-2zW0ffgZUQj42UgUyCU0TIo25bdN4IidWYufN02x14sB3KA5cBLirSxw7xmLLnxrRtBVeFmZe-vP-i1QZU8BgSbpSCGzK3kVY475PaHBB3TjAHtp5RwdsaZn=w800-h532-s-no-gm?authuser=0
+    alt: "placeholder image 2"
+    title: "Image 2 title caption"
 
 
 ---
@@ -61,14 +69,14 @@ gallery4:
 
 アダプタをかませる際はこのような感じで使える．
 
-{% include gallery id="gallery1" caption="(左)アダプタ二種類 (右)アダプタを噛ませたところ．" %}
+{% include gallery id="gallery2" caption="(左)アダプタ二種類 (右)アダプタを噛ませたところ．" %}
 
 アーム本体はプラスチック製でなかなか良い出来だ．買う前にヨドバシカメラで色々マイクアームをみてきてもっと目立つかなと思っていたのでいざ自分のデスクに付けてみて思ったより目立たなくて安心した．それだけデスクがごちゃごちゃしているということかもしれないが．．． マイクアームはどうしても高さがあってふとした瞬間に目に入るので，デザイン面は多少こだわってシンプルなものを選んだほうがよいかもしれない．
 
 
-
 実際にエクステンションを噛ませた状態でデスク奥に設置してみると，アームの第一関節が27インチモニターの上に来るので高さにはかなり余裕がある．これなら使うときだけデスク奥から引っ張ってくるという使い方ができる．まさに自分のようにデスクがモニターで覆い尽くされている人にぴったりだと思う．実際に高さを測ってみるとだいたい75~78cmくらいだった．これは27インチモニターの場合，マイクの大きさによってはモニタースタンドで高さが高めになっていると引っかかるかもしれないくらいの高さだろう．自分の場合はモニターアームで低めの高さで固定していることもあって全く問題なかった．
 
+{% include figure image_path="https://lh3.googleusercontent.com/pw/ABLVV847gFTme2BUSsc5oRcKRMLNRp8l33jQGJOZ-mEljiRlv_jwXoBpZ3ZP0Dq1gvwgQQhTzdDp0GUPgWFEqPOgYVvKPFp7jy0Y2myd8u8Z_b37lXuR9tixchO6o6e9nP7oPLxGhGKWJsuBsBths1WLKike=w800-h532-s-no-gm?authuser=0" alt="this is a placeholder image" caption="デスクに設置したときの全体像"%}
 
 一つ誤算だったのはそのままマイクを設置すると接続部とマイクのケーブル穴が干渉してマイクにケーブルが刺さらない！ということだった．．． そこでYeti nano用のショックマウントを購入した．これが結構高くて余計な出費になったが，ものは良さそうなのでしょうがない．実際ショックマウントとしてどれくらいの効果があるのかは物の性質上自分ではよくわからないのが惜しい（笑
 
@@ -88,9 +96,12 @@ gallery4:
 
 velbonのクランプキットは高さが68cm，クランプ幅は45mmまで対応している．スライディングアームIIは全長50cmだ．両方使うことで割りと余裕をもってモニター上に設置することができた．思ってたより仰角の自由が効くので柔軟に角度調節ができるので，レイアウトに制約がある場合にもおすすめだ．一点注意しないといけないのは，デスク後ろに数十センチのスペースがあったほうがスライディングアームの自由度を活かせる，ということ．ちなみに今回の設置方法だと画角は35mmくらいでちょうどよかった．あまり広角を使わなくてすむので歪みも少ないし部屋の汚い背景が写りにくいという副次効果も得られた．もっと自分からの距離を離せるなら50mmくらいで使うことも可能かもしれない．
 
+{% include figure image_path="https://lh3.googleusercontent.com/pw/ABLVV86Nlh62CiyfutgHYfbOlGmO9bmAgnhaQVlE67vvMO1XFp5dC5xhdmx3hXWqeVx1Nx9hlZCfvUv5ys03VdTIrCs1NMfKMRya7_lNkdiHjG-IrpYvwxJvvXHsk0_nkdxPiOceNgfJOQORmstfGkcqA6t8=w800-h532-s-no-gm?authuser=0" alt="this is a placeholder image" caption="座った位置から見たカメラとマイク．意外と存在感がないので気にならない．"%}
 
-スライディングアームとカメラの設置にはもともと所有していたleofotoの自由雲台MT25を利用した．スライディングアームIIは一応カウンターウェイト用のフックがついているのだが，1kg程度なら全く不要だったのも嬉しい誤算．
 
+スライディングアームとカメラの設置にはもともと所有していたleofotoの自由雲台MT25を利用した．スライディングアームIIは一応カウンターウェイト用のフックがついているのだが，1kg程度なら全く不要だったのも嬉しい誤算．これにα7iv+SEL1635Zで良い感じの環境ができあがった．座った状態だとごちゃごちゃした部分はすべて隠れてカメラだけが見えるので，気が散ることもなかった．
+
+{% include gallery id="gallery5" caption="デスク裏に設置した様子．．汚いのはご容赦を．．．" %}
 
 
 
