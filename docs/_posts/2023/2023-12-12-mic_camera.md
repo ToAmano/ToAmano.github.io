@@ -4,6 +4,8 @@
 title: デスクのマイクとカメラのセッティング
 layout: single
 date:   2023-12-12 21:00:00 +0900
+header:
+  teaser: "https://lh3.googleusercontent.com/pw/ABLVV86Nlh62CiyfutgHYfbOlGmO9bmAgnhaQVlE67vvMO1XFp5dC5xhdmx3hXWqeVx1Nx9hlZCfvUv5ys03VdTIrCs1NMfKMRya7_lNkdiHjG-IrpYvwxJvvXHsk0_nkdxPiOceNgfJOQORmstfGkcqA6t8=w800-h532-s-no-gm?authuser=0"
 description: デスクのマイクとカメラをデスク奥にセッティングした．これでデスクを広く使うことができる．
 gallery1:
   - url: /assets/images/unsplash-gallery-image-1.jpg
