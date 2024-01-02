@@ -14,6 +14,36 @@ gallery1:
     image_path: https://lh3.googleusercontent.com/pw/ABLVV86Qp1_HDJw2RLXA9OS5j21laegIUfFLczBscPCnisbfY7uXuC-h0Rw-IwivFEXU0EyFp3oyWnvQN_bRlXIbUh51jJvtBc3yLsS24zb1zdB4wnVmFSvhLp3fENte10DPwGqfsRCT5QESmsFUjXQ-CD2j=w800-h532-s-no-gm?authuser=0
     alt: "placeholder image 2"
     title: "Image 2 title caption"
+gallery2:
+  - url: /assets/images/unsplash-gallery-image-1.jpg
+    image_path: https://lh3.googleusercontent.com/pw/ABLVV84a3YbbMi_6qOisI7rBz3g4tvbujJMcvpVpmJNsI9aj5SegxnbibDb_aIYKWuQ9bTCbqFvFVy5X1uWT0NdGDxkWzOAkddnhvfuS8i2iW7seo-kSCzf0Y29O9z7ddhBm1WrcPmltySDHGoVu4mtR8LDP=w800-h532-s-no-gm?authuser=0
+    alt: "placeholder image 1"
+    title: "Image 1 title caption"
+  - url: /assets/images/unsplash-gallery-image-2.jpg
+    image_path: https://lh3.googleusercontent.com/pw/ABLVV84yHS0vSNyvxp5Fnn6nJEMMnkatCor0Y3k1eX8M02gw7ZmDn4m3KsY-5ykym7wBCJWNGPcZi5ZStq52EweSobb7FmhQjiPRW0WDSW4gG_JoU1HUy90SriKtk0n9WDOZAzDhTN1fbaGXfbvfWcLZHyZv=w800-h532-s-no-gm?authuser=0
+    alt: "placeholder image 2"
+    title: "Image 2 title caption"
+gallery3:
+  - url: /assets/images/unsplash-gallery-image-1.jpg
+    image_path:  https://lh3.googleusercontent.com/pw/ABLVV84KtuCqIcXYUeMKYgp4Rp4drtYoMfNVKu4GBbQUfTO6DaucoHrVP3hF4UJOSU0P_ZWx04uMA879OvwBJvJOqlWCkKS7AIJdUbhqLa-Y6DV1cGA19Kf3ML5E5OWm50dMAP6ixCa7IVmUDz5kHxwQdPfZ=w800-h532-s-no-gm?authuser=0
+    alt: "placeholder image 1"
+    title: "Image 1 title caption"
+  - url: /assets/images/unsplash-gallery-image-2.jpg
+    image_path: https://lh3.googleusercontent.com/pw/ABLVV86Ow15a0IaECpkdQDu90-V-rll7X0FhFhc0pcZalpnI54h_YaJJCle-Dp_O9mMNamfBiFoDcu3-pzEbQUsKuGetwfp2ZAAOkjGDzje6hcblQIYCZG95VcFi1gHAQQn8fyFRDjLGUzcOgpnyK8YMu9pH=w800-h532-s-no-gm?authuser=0
+    alt: "placeholder image 2"
+    title: "Image 2 title caption"
+gallery4:
+  - url: /assets/images/unsplash-gallery-image-1.jpg
+    image_path:  https://lh3.googleusercontent.com/pw/ABLVV850ceHOGsLzfrl9L4C718ts_ee06Fsud37VX9FQBx6UxI-rMBpvEKCIWNBgQ5GPtKvILiARXcaZlGr909tAy04375DwqPJAPvn4zMojNdTC5wR2o7KwzAqZQBidgey2ZP3NsxTY3OkkdwHpwocgd-FX=w800-h532-s-no-gm?authuser=0
+    alt: "placeholder image 1"
+    title: "Image 1 title caption"
+  - url: /assets/images/unsplash-gallery-image-2.jpg
+    image_path: https://lh3.googleusercontent.com/pw/ABLVV86qAe86rAcGIBtCZbrGGS7cOKRzfZT-2zW0ffgZUQj42UgUyCU0TIo25bdN4IidWYufN02x14sB3KA5cBLirSxw7xmLLnxrRtBVeFmZe-vP-i1QZU8BgSbpSCGzK3kVY475PaHBB3TjAHtp5RwdsaZn=w800-h532-s-no-gm?authuser=0
+    alt: "placeholder image 2"
+    title: "Image 2 title caption"
+
+
+
 ---
 
 今までデスクに直置きしていてずっと邪魔だと感じていたマイクとカメラをデスクの奥にクランプで設置した．27インチのトリプルディスプレイ環境でどういう商品を選べばよいか少し難儀したので，一例として紹介しようと思う．この環境の問題は，デスク前面がディスプレイに覆われているのでマイクやカメラを設置するスペースが限られていることだ．おそらく唯一の方法はマイクとカメラがモニターの上にくるように吊り下げることで，これを実現する方法を考えてみた．
@@ -23,19 +53,17 @@ gallery1:
 
 マイクをデスクに設置する製品としてはマイクアームというものが広く使われている．モニターアームのマイク版ともいうべきアイテムで，好きな位置にマイクを固定できるように複数の関節が動くようになっている．基本的にはデスクにクランプで固定して設置する．
 
-いくつかのパターンがあり，デスクのサイドに固定することを想定しているものや，デスクの奥に固定するものがある．私の場合，机はディスプレイ3枚に占拠されており，デスクのサイドに固定することはスペース上不可能だったので，デスクの奥に設置することになった．この際，ディスプレイの邪魔にならないようにアームにある程度高さが必要で，なかなか実物を展示している店もないので商品探しに苦労した．最初に目星をつけたのは使っているマイク（Yeti blue nano）と同じくlogicoolが出しているBlue Compassというやつで正直これでも良かったのだが，より高さのあるelgatoのwave mic armというやつを見つけてこちらを購入した．compassより数千円安かったのも決め手の一つ．（この手のものにあまりお金をかける気にもならなかったので．．．）このwave mic arcは上下のアームの長さが40cmずつあるのに加えて，15センチの延長ポールも付属してくるため，特に高さが必要なユーザーにはぴったりの商品である．
-
-対応マイクの重量は250~1000g，デスクへのクランプ部分は60mmまでなので大半の場合には問題なく使えると思う．
+いくつかのパターンがあり，デスクのサイドに固定することを想定しているものや，デスクの奥に固定するものがある．私の場合，机はディスプレイ3枚に占拠されており，デスクのサイドに固定することはスペース上不可能だったので，デスクの奥に設置することになった．この際，ディスプレイの邪魔にならないようにアームにある程度高さが必要で，なかなか実物を展示している店もないので商品探しに苦労した．最初に目星をつけたのは使っているマイク（Yeti blue nano）と同じくlogicoolが出しているBlue Compassというやつで正直これでも良かったのだが，より高さのあるelgatoのwave mic armというやつを見つけてこちらを購入した．compassより数千円安かったのも決め手の一つ．（この手のものにあまりお金をかける気にもならなかったので．．．）このwave mic arcは上下のアームの長さが40cmずつあるのに加えて，15センチの延長ポールも付属してくるため，特に高さが必要なユーザーにはぴったりの商品である．対応マイクの重量は250~1000g，デスクへのクランプ部分は60mmまでなので大半の場合には問題なく使えると思う．
 
 開封．内容物はアーム本体，エクステンション用の棒，カウンターウェイト(260g)，さいごに接続ネジ径の変換アダプタ．本体のネジは1/4インチで，アダプタは1/4" - 3/8"(AKG規格)と1/4" - 5/8"(shure規格)の二種類が付属してくるので大抵のマイクには対応しているものと思われる．
 
+{% include gallery id="gallery1" caption="Elgato wave mic armの開封" %}
 
-{% include figure image_path="https://lh3.googleusercontent.com/pw/ABLVV87q4w3GTHUr-zaa6XP-hWmkreVlJGu6rkZ9MdoTy7iws0d8V4w-ur2FXs_GNCB-kb6F9As65y8natdd8l2tzvQaZWB_z8ZL_ft8reknefFeckWouc2sEEDNGaCql84c1PkqKz3tJlXXfld2GWwEYuls=w800-h532-s-no-gm?authuser=0
-" alt="this is a placeholder image" caption=""%}
+アダプタをかませる際はこのような感じで使える．
 
-{% include gallery id="gallery1" caption="This is a sample gallery with **Markdown support**." %}
+{% include gallery id="gallery1" caption="(左)アダプタ二種類 (右)アダプタを噛ませたところ．" %}
 
-アーム本体はプラスチック製でなかなか良い出来だ．買う前にヨドバシカメラで色々マイクアームをみてきてもっと目立つかなと思っていたのでいざ自分のデスクに付けてみて思ったより目立たなくて安心した．それだけデスクがごちゃごちゃしているということかもしれないが．．． マイクアームはどうしても高さがあってふとした瞬間に目に入るので，デザイン面は多少こだわって選んだほうがよいかもしれない．
+アーム本体はプラスチック製でなかなか良い出来だ．買う前にヨドバシカメラで色々マイクアームをみてきてもっと目立つかなと思っていたのでいざ自分のデスクに付けてみて思ったより目立たなくて安心した．それだけデスクがごちゃごちゃしているということかもしれないが．．． マイクアームはどうしても高さがあってふとした瞬間に目に入るので，デザイン面は多少こだわってシンプルなものを選んだほうがよいかもしれない．
 
 
 
@@ -44,6 +72,7 @@ gallery1:
 
 一つ誤算だったのはそのままマイクを設置すると接続部とマイクのケーブル穴が干渉してマイクにケーブルが刺さらない！ということだった．．． そこでYeti nano用のショックマウントを購入した．これが結構高くて余計な出費になったが，ものは良さそうなのでしょうがない．実際ショックマウントとしてどれくらいの効果があるのかは物の性質上自分ではよくわからないのが惜しい（笑
 
+{% include gallery id="gallery3" caption="Yetiのショックマウント compass．" %}
 
 ショックマウントを介せば無事ケーブルも繋げて完璧な状態になった．マイクアームの背面にシリコン製のフタがあって，取り外して中にケーブルを収納できるようになっている．これでかなりごちゃごちゃせずにセッティングができて今のところ満足している．
 
@@ -55,13 +84,14 @@ gallery1:
 
 ネットを見ているといろいろな試行錯誤が乗っていて非常に参考になった．今回は非常にオーソドックスにクランプ式の一脚（？）の上に，角度の調整できるアームを取り付けるという方法を取った．VelbonのクランプキットとslikのスライディングアームIIという組み合わせで，これはネット上でもよく見る組み合わせだ．これをデスクの裏に設置して，モニター越しにカメラを設置する．
 
-velbonのクランプキットは高さが68cm，クランプ幅は45mmまで対応している．スライディングアームIIは全長50cmだ．両方使うことで割りと余裕をもってモニター上に設置することができた．思ってたより仰角の自由が効くので柔軟に角度調節ができる．
+{% include gallery id="gallery4" caption="VelbonのクランプキットとslikのスライディングアームII．" %}
+
+velbonのクランプキットは高さが68cm，クランプ幅は45mmまで対応している．スライディングアームIIは全長50cmだ．両方使うことで割りと余裕をもってモニター上に設置することができた．思ってたより仰角の自由が効くので柔軟に角度調節ができるので，レイアウトに制約がある場合にもおすすめだ．一点注意しないといけないのは，デスク後ろに数十センチのスペースがあったほうがスライディングアームの自由度を活かせる，ということ．ちなみに今回の設置方法だと画角は35mmくらいでちょうどよかった．あまり広角を使わなくてすむので歪みも少ないし部屋の汚い背景が写りにくいという副次効果も得られた．もっと自分からの距離を離せるなら50mmくらいで使うことも可能かもしれない．
 
 
 スライディングアームとカメラの設置にはもともと所有していたleofotoの自由雲台MT25を利用した．スライディングアームIIは一応カウンターウェイト用のフックがついているのだが，1kg程度なら全く不要だったのも嬉しい誤算．
 
 
-こういう設置方法の場合，画角は35mmくらいでちょうどよかった．あまり広角を使わなくてすむので歪みも少ないし部屋の汚い背景が写りにくいという副次効果もエられた．もっと自分からの距離を離せるなら50mmくらいで使うことも可能かもしれない．
 
 
 ## まとめ
