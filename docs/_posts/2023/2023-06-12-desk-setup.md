@@ -12,6 +12,15 @@ gallery:
   - image_path: https://lh3.googleusercontent.com/pw/AIL4fc-BB79l9yBJD6GwOzW0F4k-mE1jRF4FBdpeX-oSndQ0Ic_RgLYqlQ1MFMeEQDgoFTrykIENYrGzj33UdmD_NZi3bhbR8K1HCSj2XFNV98tHObxGhX8
     alt: "placeholder image 2"
     title: "Image 2 title caption"
+gallery1:
+  - url: /assets/images/unsplash-gallery-image-1.jpg
+    image_path: https://lh3.googleusercontent.com/pw/ABLVV87tR8e30hH-BEZzUHjNXZsZTWBbRpoo6RwzV4N6c-4FNunQWD5AO-mDS8XngrmVRe_wq_eB2YTqeIe4tZQNWWSMbCyCumrUv4lAYlFPiQTuCY4N_jCGnUDQLZX8UdMWDVFABZMQZC1POXyPy8mct9Ih=w800-h532-s-no-gm?authuser=0
+    alt: "placeholder image 1"
+    title: "Image 1 title caption"
+  - url: /assets/images/unsplash-gallery-image-2.jpg
+    image_path: https://lh3.googleusercontent.com/pw/ABLVV87VR4wa4V2k76VEuTLO4BuxXYVcQsMbYrg5-J_jXFCqXr9ZlbbrTBZl3_GRk06f0_msj642tt3KLcJNkd-FU8ZD3bALePirGew5MYLHmB_I6iEeA1nsYxUaS6MfvoDDw3P0FJqWzNiWnsqliVxP0UB4=w800-h532-s-no-gm?authuser=0
+    alt: "placeholder image 2"
+    title: "Image 2 title caption"
 ---
 
 最近Eizoから新しくでたディスプレイEV 2740Xを購入し，自宅のデスクがトリプルディスプレイ環境になった．こうなると自宅の方が作業が捗るということで，世間と逆行して引きこもり傾向が強まっている．この流れで最近デスク環境の整備を行ったので，一旦今までのところをまとめておくことにした．モニターが三枚あるとスペースがかなりカツカツになるので色々と試行錯誤が必要だったのでその辺を記録しておきたい．
@@ -126,7 +135,7 @@ USBメモリなどを頻繁に使うのでUSB-Aポートを増やす必要があ
 
 ### ポータブルSSD2 (SATA)： Samsung 870 EVO 2TB (MZ-77E2T0B/EC) + ロジテック SSDケース LGB-PBSUC
 
-{% include figure image_path="" alt="" caption="" %}
+{% include gallery id="gallery1" caption="" %}
 
 同じく外出用のポータブルSSDとして，SATAのSSDも利用している．SATAはM2ほど速度は出ないが発熱はないので，単純にデータ置き場として非常に便利だ．SSDとしてはSamsungのものを利用している．昔はとんでもない値段だったSamsumgのSATA SSDもだいぶ値段が落ちてきているので手軽に購入しやすい．ケースの方は安価なものだとUSB3.0 microB接続のものが多く，このケーブルを1本余計に持ち歩くのは非常に面倒臭いので多少高くてもUSB-Cでつなげるものを使いたくてロジテックのPBSUCというケースを購入した．より高級なやつだと複数端子がついているものもあるので，自分の用途と合わせて選択できるのが良い．接続時にはLEDランプが点灯するようになっているのも便利でおすすめできる商品だと思う．
 
