@@ -15,12 +15,15 @@ description: The top-page of Python.
 
 ### International
 
+* T. Amano, T. Yamazaki, S. Tsuneyuki “First-principles study of THz dielectric properties of liquid molecules with a machine learning model for dipole moments” American Physics Society April Meeting 2023, 2023/3/7 
 * T. Amano, T. Yamazaki, S. Tsuneyuki "The first-principles study of THz dielectric properties with a machine learning model for dipole moment" Advanced Materials Research Grand Meeting MRM2023, 2023/12/12
 * T. Amano, T. Yamazaki, R. Akashi, S. Tsuneyuki「First-principles study of lattice dielectric function in rutile TiO2」33rd IUPAP Conference on Computational Physics 2022/08/04
 
 ### Domestic 
 
-* T. Amano, T.Yamazaki, S. Tsuneyuki "The first-principles study of THz dielectric properties with a machine learning model for dipole moment" HISML2023
+
+* T. Amano, “First-principles and machine learning study of anharmonic vibration and dielectric properties of materials”, Theory Seminar at the Institute for Solid State Physics, 2024/1/26
+* T. Amano, T.Yamazaki, S. Tsuneyuki "The first-principles study of THz dielectric properties with a machine learning model for dipole moment" HIerarchical Structure and Machine Learning (HISML) 2023, 2023/10/10
 * 天野智仁，山崎民雄，常行真司 「局所双極子モーメントの機械学習による高分子の誘電特性計算」 日本物理学会2023秋期大会 2023/09/17
 * 天野智仁, 山崎⺠雄, 常行真司 「双極子モーメントの機械学習モデルによる誘電特性の研究」日本物理学会2023春期大会 2023/03/22
 * T. Amano, T. Yamazaki, R. Akashi, T.tadano, S. Tsuneyuki「First-principles study of lattice dielectric function in rutile TiO2」YITP workshop Fundamentals in density functional theory (DFT2022) 2022/12/12
@@ -31,15 +34,16 @@ description: The top-page of Python.
 ### International
 
 * T. Amano, T. Yamazaki, S. Tsuneyuki "The first-principles study of THz dielectric properties with a machine learning model for dipole moment" 34rd IUPAP Conference on Computational Physics 2023/08/05
-* Tomohito Amano， Natsumi Ogawa， Wren Yamada， Tokihiro Ikeda， 他 4 名 “Efficiency measurement of next generation scintillator GAGG at high energy using the 992KeV resonance of the 27Al(p&γ)28Si reaction” 5th Joint Meeting of the APS Division of Nuclear Physics and the Physical Society of Japan 
+* Tomohito Amano, Natsumi Ogawa, Wren Yamada, Tokihiro Ikeda, T. Koiwai, M. Niikura, K. Wimmer, H. Sakurai, "Efficiency measurement of next generation scintillator GAGG at high energy using the 992KeV resonance of the 27Al(p&γ)28Si reaction" 5th Joint Meeting of the APS Division of Nuclear Physics and the Physical Society of Japan 
+
 
 
 ### Domestic
 
-* 天野智仁，明石遼介、常行真司「ルチル型 TiO2 における格子誘電関数の第一原理的研究」 計算物質科学の新展開2022 
-* 天野智仁，山崎民雄，明石遼介、只野央将，常行真司 「ルチル型 TiO2 の格子誘電特性:自己無撞着フォノン法による第一原理的研究」計算物質科学の新展開2023 
-* 天野智仁，山崎⺠雄, 常行真司 「双極子モーメントの機械学習モデルによる誘電特性の研究」 計算物理春の学校2023
-* 天野智仁，山崎⺠雄, 常行真司 「双極子モーメントの機械学習モデルによる誘電特性の研究」 ipi ダイキンシンポジウム2023
+* 天野智仁,明石遼介、常行真司「ルチル型 TiO2 における格子誘電関数の第一原理的研究」 計算物質科学の新展開2022 
+* 天野智仁,山崎民雄,明石遼介、只野央将,常行真司 「ルチル型 TiO2 の格子誘電特性:自己無撞着フォノン法による第一原理的研究」計算物質科学の新展開2023 
+* 天野智仁,山崎⺠雄, 常行真司 「双極子モーメントの機械学習モデルによる誘電特性の研究」 計算物理春の学校2023
+* 天野智仁,山崎⺠雄, 常行真司 「双極子モーメントの機械学習モデルによる誘電特性の研究」 ipi ダイキンシンポジウム2023
 
 
 ### Others
@@ -49,7 +53,7 @@ description: The top-page of Python.
 * [[統合物質科学リーダー養成プログラム採択生](http://www.merit.t.u-tokyo.ac.jp/merit/member/generation_009_1.html)]
 
 {% comment %}
-インターン：JSR株式会社（2022年3-5月）共同研究の前段として，提案された手法に基づく物質の誘電特性のシミュレータをpythonで実装．複数の物質について実際に計算して実験部門に提案を行った．　
+インターン：JSR株式会社（2022年3-5月）共同研究の前段として,提案された手法に基づく物質の誘電特性のシミュレータをpythonで実装．複数の物質について実際に計算して実験部門に提案を行った．　
 {% endcomment %}
 
 
@@ -59,6 +63,6 @@ description: The top-page of Python.
 * 英語検定1級
 * TOEIC 930点
 * FP3級
-* ITパスポート，情報セキュリティマネジメント，基本情報技術者
+* ITパスポート, 情報セキュリティマネジメント, 基本情報技術者
 * JDLA Deep Learning for GENERAL 2022#3
 * JDLA Deep Learning for ENGINEER 2023#2
