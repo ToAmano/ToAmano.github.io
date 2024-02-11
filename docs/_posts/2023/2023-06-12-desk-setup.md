@@ -227,7 +227,10 @@ USBメモリなどを頻繁に使うのでUSB-Aポートを増やす必要があ
 
 {% include figure image_path="https://lh3.googleusercontent.com/xTQsYlsyU9uTYBIag-WNQZu_3pkPwLFy38IX3XYktLmgRcECWmvjsRkCjOSrPQbjQl-j5p3Pyzz69uz-vemGtPx_eJN_SMPFo2-eHu1E9WWSAVeBUMKI6d3Rz11_lseTkkLmqgK9Pw=w2400" alt="this is a placeholder image" caption="" %}
 
-元はヘッドホンを楽しむために購入したDAC．サイズも小さくてデスクにちょうどよい大きさなのも良い．接続はimacからADI-2 DAC FSにだして，XLRをヘッドホンアンプPhonitor Xに，RCAをスピーカーreveal 402につないでいる．電源つけっぱなしでも全然発熱しないので長時間音楽を聞いたりしても問題ない．一方で，XLRとRCAの出力切り替えができないという問題があって，しょうがないのでスピーカーはswitchbotのプラグをかましてalexaから電源を切れるようにした．これならヘッドホンを使いたい時にはスピーカーを切ってヘッドホンアンプに出力が行く寸法だ．
+元はヘッドホンを楽しむために購入したDAC．サイズも小さくてデスクにちょうどよい大きさなのも良い．接続はimacからADI-2 DAC FSにだして，XLRをヘッドホンアンプPhonitor Xに，RCAをスピーカーreveal 402につないでいる．電源つけっぱなしでも全然発熱しないので長時間音楽を聞いたりしても問題ない．一方で，XLRとRCAの出力切り替えができないという問題があって，しょうがないのでスピーカーはswitchbotのプラグをかましてalexaから電源を切れるようにした．これならヘッドホンを使いたい時にはスピーカーを切ってヘッドホンアンプに出力が行く寸法だ．ただしあまりエレガントではないので，DACから複数の出力を切り替えたい人は最初からそれができる商品を探した方がよいだろう．
+
+[HiFiオーディオ機器にADI-2 DAC FSを正しい基準レベルで接続する](https://synthax.jp/tutorials/articles/hifi-reference-level.html)
+
 
 ### ヘッドホンアンプ：SPL Phonitor X
 
