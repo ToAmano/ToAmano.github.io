@@ -20,6 +20,7 @@ mac版とwindows版で設定が異なるようなので注意．`デザイン`�
 {% comment %}
 https://qiita.com/Ishotihadus/items/01a76cd3f7afebcb65b1
 [https://qiita.com/kunichiko/items/eaf5b505c59c82c25074](https://qiita.com/kunichiko/items/eaf5b505c59c82c25074)
+[プレゼンテーションを上達させるオススメ本20選 | プレゼンのgood presen!"](https://goodpresen.jp/journal/journal-693/#index02_05)
 {% endcomment %}
 
 
