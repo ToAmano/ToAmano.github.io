@@ -23,10 +23,10 @@ description: The top-page of Python.
 ### Domestic 
 
 * T. Amano, “First-principles and machine learning study of anharmonic vibration and dielectric properties of materials”, Theory Seminar at the Institute for Solid State Physics, Chiba, Japan, 2024/1/26 (invited)
-* 天野智仁，山崎民雄，常行真司 「局所双極子モーメントの機械学習による高分子の誘電特性計算」 日本物理学会2023秋期大会, 仙台, 2023/09/17
+* 天野智仁, 山崎民雄, 常行真司 「局所双極子モーメントの機械学習による高分子の誘電特性計算」 日本物理学会2023秋期大会, 仙台, 2023/09/17
 * 天野智仁, 山崎⺠雄, 常行真司 「双極子モーメントの機械学習モデルによる誘電特性の研究」日本物理学会2023春期大会, オンライン, 2023/03/22
 * T. Amano, T. Yamazaki, R. Akashi, T.tadano, S. Tsuneyuki "First-principles study of lattice dielectric function in rutile TiO<sub>2</sub>" YITP workshop Fundamentals in density functional theory (DFT2022), Kyoto, Japan, 2022/12/12
-* 天野智仁、山崎民雄，明石遼介、常行真司「ルチル型 TiO<sub>2</sub> における格子誘電関数の第一原理的研究」 日本物理学会2022秋期大会, 東京, 2022/09/14
+* 天野智仁, 山崎民雄, 明石遼介, 常行真司 「ルチル型 TiO<sub>2</sub> における格子誘電関数の第一原理的研究」 日本物理学会2022秋期大会, 東京, 2022/09/14
 
 ## Poster presentations
 
