@@ -48,6 +48,7 @@ description: The top-page of Python.
 
 ### Others
 
+* [[令和5年度理学系研究科研究奨励賞](https://www.s.u-tokyo.ac.jp/ja/info/10252/)]  https://www.phys.s.u-tokyo.ac.jp/award/41753/
 * [[統計検定1級 成績最優秀賞](https://www.toukei-kentei.jp/wp-content/uploads/exc201711na.pdf)]
 * [[スーパーコンピュータ富岳令和5年一般課題「高周波誘電特性の第一原理計算」課題代表者](https://www.hpcioffice.jp/application/files/1216/7644/9492/adoptionlist2023_11.pdf)]
 * [[統合物質科学リーダー養成プログラム採択生](http://www.merit.t.u-tokyo.ac.jp/merit/member/generation_009_1.html)]
@@ -63,6 +64,6 @@ description: The top-page of Python.
 * 英語検定1級
 * TOEIC 930点
 * FP3級
-* ITパスポート, 情報セキュリティマネジメント, 基本情報技術者
+* ITパスポート, 情報セキュリティマネジメント, 基本情報技術者，応用情報技術者
 * JDLA Deep Learning for GENERAL 2022#3
 * JDLA Deep Learning for ENGINEER 2023#2
