@@ -108,7 +108,7 @@ wget https://github.com/lammps/lammps/archive/stable_2Aug2023_update2.tar.gz
 tar xf stable_2Aug2023_update2.tar.gz
 ```
 
-lammpsのディレクトリへ行ってビルドする．大事なのは前節でインストールした`USER-DEEPMD`ディレクトリをlammpsの`src`ディレクトリへコピーすること．
+lammpsのディレクトリへ行ってビルドする．大事なのは前節でインストールした`USER-DEEPMD`ディレクトリをlammpsの`src`ディレクトリへコピーすること．また，`openmp`を有効にするためには， `MAKE/Makefile.mpi`ディレクトリで`CCFLAGS`と`LINKFLAGS`に`-fopenmp`を追加する必要がある．
 
 ```bash
 cd lammps-stable_2Aug2023_update2/src/
@@ -120,6 +120,13 @@ make yes-openmd
 
 # installation
 make mpi 
+```
+
+`CCFLAGS`と`LINKFLAGS`の一例は以下．
+
+```bash
+CCFLAGS =       -g -O3 -std=c++11 -fopenmp
+LINKFLAGS =     -g -O3 -std=c++11 -fopenmp
 ```
 
 ## 実行時の注意
