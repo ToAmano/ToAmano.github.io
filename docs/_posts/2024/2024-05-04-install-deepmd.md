@@ -1,7 +1,7 @@
 ---
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-title: ipad proをモニターアームに接続する
+title: Deepmd installation with AMD ZEN on Linux 
 layout: single
 date:   2024-1-2 21:00:00 +0900
 header:
@@ -54,6 +54,22 @@ gallery5:
     title: "Image 2 title caption"
 
 ---
+
+今回はAMD CPU用に最適化されたTensorflowと，それを用いたdeepmdのinstallを行う．この場合は当然ながらcondaなどのパッケージマネージャは利用できず，全て手で入れる必要がある．
+
+## 環境
+
+|      |     |
+| ---  | --- |
+| 日付 | 2024/4/10 |
+| 環境 | Red Hat Enterprise Linux 8.6 |
+
+
+## 
+
+
+
+
 
 先日のマイクとカメラに引き続き，今度はipadをモニターアームに設置した．既存の製品としてはタブレットを掴むようにして設置するタブレットアームが様々発売されているが，今回はMagFlottから出ているマグネット式のvesa mountを購入した．私はipad pro 11インチを4枚目のモニターとしてカレンダーなど常駐させるアプリの表示スペースとして使ったり，最新のsonomaで可能になったデスクトップに固定できるウィジェット置き場として使ったりしている．今まではipadを机の上においていたので邪魔だし視線を落とさないと行けないしと結構結構困っていたのが一気に解消されたので紹介したい．
 
