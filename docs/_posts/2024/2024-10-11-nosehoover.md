@@ -1,9 +1,9 @@
----
+OB---
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 title: LaTexにおけるNose Hooverサーモスタット
 layout: single
-date:   2024-10-12 21:00:00 +0900
+date:   2024-10-11 21:00:00 +0900
 header:
   teaser: 
 description: LaTeXにおいて，Nose Hooverサーモスタットを表示する
