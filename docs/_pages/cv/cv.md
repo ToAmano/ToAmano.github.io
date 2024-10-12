@@ -6,8 +6,13 @@ layout: single
 description: The top-page of Python.
 ---
 
+## Submitted
+
+1. __T. Amano__, T, Yamazaki, S. Tsuneyuki, "The first-principles study of THz dielectric properties with a machine learning model for dipole moment", submitted to Springer Proceedings in Physics.
 
 ## Refereed Papers
+
+2. __T. Amano__, T. Yamazaki, S. Tsuneyuki, "Chemical bond based machine learning model for dipole moment: Application to dielectric properties of liquid methanol and ethanol", Phys. Rev. B accepted [[arXiv](https://arxiv.org/abs/2407.08390)]
 
 1. __T. Amano__, T. Yamazaki, R. Akashi, T. Tadano, S. Tsuneyuki, "Lattice dielectric properties of rutile TiO<sub>2</sub>: First-principles anharmonic self-consistent phonon study", Phys. Rev. B **107**, 094305 (2023). [[link](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.107.094305)] [[arXiv](https://arxiv.org/abs/2210.15873)]
 
@@ -32,10 +37,10 @@ description: The top-page of Python.
 
 ### International
 
-* T. Amano, T. Yamazaki, S. Tsuneyuki "The first-principles study of THz dielectric properties with a machine learning model for dipole moment" 34rd IUPAP Conference on Computational Physics, Kobe, Japan, 2023/08/05
-* T. Amano, N. Ogawa, W. Yamada, T. Ikeda, T. Koiwai, M. Niikura, K. Wimmer, H. Sakurai, "Efficiency measurement of next generation scintillator GAGG at high energy using the 992KeV resonance of the <sup>27</sup>Al(p,γ)<sup>28</sup>Si reaction" 5th Joint Meeting of the APS Division of Nuclear Physics and the Physical Society of Japan, Hawaii, USA, 2018/10/26 
-* Ogawa, N., Amano, T., Yamada, W., Ikeda, T., Koiwai, T., Niikura, M., ... & Wimmer, K. "Resolution measurement of next generation scintillator GAGG at high energy using the 992 keV resonance of the 27 Al (p, γ) 28 Si reaction" 5th Joint Meeting of the APS Division of Nuclear Physics and the Physical Society of Japan, Hawaii, USA, 2018/10/26 
-* Yamada, W., Amano, T., Ogawa, N., Sakurai, H., Wimmer, K., Niikura, M., ... & Ikeda, T. "Linearity measurement of next generation scintillatorGAGG at high energies using the 992KeV resonance of the 27Al (p, γ) 28Sireaction" 5th Joint Meeting of the APS Division of Nuclear Physics and the Physical Society of Japan, Hawaii, USA, 2018/10/26 
+* __T. Amano__, T. Yamazaki, S. Tsuneyuki "The first-principles study of THz dielectric properties with a machine learning model for dipole moment" 34rd IUPAP Conference on Computational Physics, Kobe, Japan, 2023/08/05
+* __T. Amano__, N. Ogawa, W. Yamada, T. Ikeda, T. Koiwai, M. Niikura, K. Wimmer, H. Sakurai, "Efficiency measurement of next generation scintillator GAGG at high energy using the 992KeV resonance of the <sup>27</sup>Al(p,γ)<sup>28</sup>Si reaction" 5th Joint Meeting of the APS Division of Nuclear Physics and the Physical Society of Japan, Hawaii, USA, 2018/10/26 
+* Ogawa, N., __Amano, T.__, Yamada, W., Ikeda, T., Koiwai, T., Niikura, M., ... & Wimmer, K. "Resolution measurement of next generation scintillator GAGG at high energy using the 992 keV resonance of the 27 Al (p, γ) 28 Si reaction" 5th Joint Meeting of the APS Division of Nuclear Physics and the Physical Society of Japan, Hawaii, USA, 2018/10/26 
+* Yamada, W., __Amano, T.__, Ogawa, N., Sakurai, H., Wimmer, K., Niikura, M., ... & Ikeda, T. "Linearity measurement of next generation scintillatorGAGG at high energies using the 992KeV resonance of the 27Al (p, γ) 28Sireaction" 5th Joint Meeting of the APS Division of Nuclear Physics and the Physical Society of Japan, Hawaii, USA, 2018/10/26 
 
 
 ### Domestic
