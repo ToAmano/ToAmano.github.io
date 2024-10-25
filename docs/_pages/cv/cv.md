@@ -12,7 +12,7 @@ description: The top-page of Python.
 
 ## Refereed Papers
 
-2. __T. Amano__, T. Yamazaki, S. Tsuneyuki, "Chemical bond based machine learning model for dipole moment: Application to dielectric properties of liquid methanol and ethanol", Phys. Rev. B accepted [[arXiv](https://arxiv.org/abs/2407.08390)]
+2. __T. Amano__, T. Yamazaki, S. Tsuneyuki, "Chemical bond based machine learning model for dipole moment: Application to dielectric properties of liquid methanol and ethanol", Phys. Rev. B accepted [[link](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.110.165159)] [[arXiv](https://arxiv.org/abs/2407.08390)] [[press](https://www.s.u-tokyo.ac.jp/ja/press/10552/)]
 
 1. __T. Amano__, T. Yamazaki, R. Akashi, T. Tadano, S. Tsuneyuki, "Lattice dielectric properties of rutile TiO<sub>2</sub>: First-principles anharmonic self-consistent phonon study", Phys. Rev. B **107**, 094305 (2023). [[link](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.107.094305)] [[arXiv](https://arxiv.org/abs/2210.15873)]
 
