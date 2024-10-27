@@ -12,7 +12,7 @@ description: The top-page of Python.
 
 ## Refereed Papers
 
-2. __T. Amano__, T. Yamazaki, S. Tsuneyuki, "Chemical bond based machine learning model for dipole moment: Application to dielectric properties of liquid methanol and ethanol", Phys. Rev. B **110**, 165159 (2024).[[link](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.110.165159)] [[arXiv](https://arxiv.org/abs/2407.08390)]
+2. __T. Amano__, T. Yamazaki, S. Tsuneyuki, "Chemical bond based machine learning model for dipole moment: Application to dielectric properties of liquid methanol and ethanol", Phys. Rev. B **110**, 165159 (2024).[[press](https://www.s.u-tokyo.ac.jp/ja/press/10544/)] [[link](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.110.165159)] [[arXiv](https://arxiv.org/abs/2407.08390)]
 
 1. __T. Amano__, T. Yamazaki, R. Akashi, T. Tadano, S. Tsuneyuki, "Lattice dielectric properties of rutile TiO<sub>2</sub>: First-principles anharmonic self-consistent phonon study", Phys. Rev. B **107**, 094305 (2023). [[link](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.107.094305)] [[arXiv](https://arxiv.org/abs/2210.15873)]
 
@@ -45,6 +45,7 @@ description: The top-page of Python.
 
 ### Domestic
 
+* 天野智仁，山崎⺠雄, 常行真司 「高周波誘電特性の第一原理計算（hp230124）」 第11回「富岳」を中核とするHPCIシステム利用研究課題 成果報告会, 東京, 2024/10/25
 * 天野智仁, 山崎⺠雄, 常行真司 「双極子モーメントの機械学習モデルによる誘電特性の研究」 ipi ダイキンシンポジウム2023, 東京, 2023/10/24
 * 天野智仁, 山崎民雄, 明石遼介, 只野央将, 常行真司 「ルチル型 TiO<sub>2</sub> の格子誘電特性:自己無撞着フォノン法による第一原理的研究」計算物質科学の新展開2023, 千葉, 2023/4/3
 * 天野智仁, 山崎⺠雄, 常行真司 「双極子モーメントの機械学習モデルによる誘電特性の研究」 計算物理春の学校2023, 沖縄, 2023/3/14
