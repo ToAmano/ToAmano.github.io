@@ -1,4 +1,4 @@
-OB---
+---
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 title: 論文投稿時のLaTeXテンプレートリンク集
@@ -19,6 +19,7 @@ https://journals.aps.org/revtex
 ## ACS Publishing
 ### Journal of physical chemistry, Journal of Chemical Theory and Computation, etc.
 https://pubs.acs.org/page/4authors/submission/tex.html
+
 
 ## IOP Publishing
 ### MLST
