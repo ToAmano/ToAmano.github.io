@@ -14,11 +14,13 @@ description: The top-page of Python.
 
 1. __T. Amano__, T. Yamazaki, S. Tsuneyuki, "The first-principles study of THz dielectric properties with a machine learning model for dipole moment", submitted to Springer Proceedings in Physics.
 
+
 ## Refereed Papers
 
 2. __T. Amano__, T. Yamazaki, S. Tsuneyuki, "Chemical bond based machine learning model for dipole moment: Application to dielectric properties of liquid methanol and ethanol", Phys. Rev. B **110**, 165159 (2024).[[press](https://www.s.u-tokyo.ac.jp/ja/press/10544/)] [[link](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.110.165159)] [[arXiv](https://arxiv.org/abs/2407.08390)]
 
 1. __T. Amano__, T. Yamazaki, R. Akashi, T. Tadano, S. Tsuneyuki, "Lattice dielectric properties of rutile TiO<sub>2</sub>: First-principles anharmonic self-consistent phonon study", Phys. Rev. B **107**, 094305 (2023). [[link](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.107.094305)] [[arXiv](https://arxiv.org/abs/2210.15873)]
+
 
 ## Oral presentations
 
