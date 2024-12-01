@@ -8,7 +8,11 @@ description: The top-page of Python.
 
 ## Submitted
 
-1. __T. Amano__, T, Yamazaki, S. Tsuneyuki, "The first-principles study of THz dielectric properties with a machine learning model for dipole moment", submitted to Springer Proceedings in Physics.
+3. N. Matsumura, Y. Yoshimoto, T. Yamazaki, __T. Amano__, T. Noda, N. Ebata, T. Kasano, Y. Sakai, "A Generator of Neural Network Potential for Molecular Dynamics: Constructing Robust and Accurate Potentials with Active Learning for Nanosecond-scale Simulations". [[arXiv](https://arxiv.org/abs/2411.17191)]
+
+2. __T. Amano__, T. Yamazaki, N. Matsumura, Y. Yoshimoto, S. Tsuneyuki, "Transferability of the chemical bond-based machine learning model for dipole moment: the GHz to THz dielectric properties of liquid propylene glycol and polypropylene glycol". [[arXiv](https://arxiv.org/abs/2410.22718)]
+
+1. __T. Amano__, T. Yamazaki, S. Tsuneyuki, "The first-principles study of THz dielectric properties with a machine learning model for dipole moment", submitted to Springer Proceedings in Physics.
 
 ## Refereed Papers
 
