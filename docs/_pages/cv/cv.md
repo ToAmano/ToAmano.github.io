@@ -69,10 +69,8 @@ description: The top-page of Python.
 ## Scholarship
 * [[統合物質科学リーダー養成プログラム採択生](http://www.merit.t.u-tokyo.ac.jp/merit/member/generation_009_1.html)]
 
-{% comment %}
-インターン：JSR株式会社（2022年3-5月）共同研究の前段として,提案された手法に基づく物質の誘電特性のシミュレータをpythonで実装．複数の物質について実際に計算して実験部門に提案を行った．　
-{% endcomment %}
-
+## Internship
+* JSR Corporation (2022/3-2022/5)
 
 ## certificates
 
