@@ -3,7 +3,7 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 title: westone audio mach80
 layout: single
-date:   2023-3-31 21:00:00 +0900
+date:   2026-12-31 21:00:00 +0900
 description: 新しいイヤホンとしてwestone audioのmach80を購入したので簡単に購入時のインプレッション．
 ---
 
