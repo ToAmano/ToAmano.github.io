@@ -8,10 +8,11 @@ description: The top-page of Python.
 
 ## Submitted
 
-2.  __T. Amano__, T, Yamazaki, Naoki Matsumura, Yuta Yoshimoto, S. Tsuneyuki "Transferability of the chemical bond-based machine learning model for dipole moment: the GHz to THz dielectric properties of liquid propylene glycol and polypropylene glycol" [[arXiv](https://arxiv.org/abs/2410.22718)]
+3. N. Matsumura, Y. Yoshimoto, T. Yamazaki, __T. Amano__, T. Noda, N. Ebata, T. Kasano, Y. Sakai, "A Generator of Neural Network Potential for Molecular Dynamics: Constructing Robust and Accurate Potentials with Active Learning for Nanosecond-scale Simulations". [[arXiv](https://arxiv.org/abs/2411.17191)]
 
-1. __T. Amano__, T, Yamazaki, S. Tsuneyuki, "The first-principles study of THz dielectric properties with a machine learning model for dipole moment", submitted to Springer Proceedings in Physics.
+2. __T. Amano__, T. Yamazaki, N. Matsumura, Y. Yoshimoto, S. Tsuneyuki, "Transferability of the chemical bond-based machine learning model for dipole moment: the GHz to THz dielectric properties of liquid propylene glycol and polypropylene glycol". [[arXiv](https://arxiv.org/abs/2410.22718)]
 
+1. __T. Amano__, T. Yamazaki, S. Tsuneyuki, "The first-principles study of THz dielectric properties with a machine learning model for dipole moment", submitted to Springer Proceedings in Physics.
 
 
 ## Refereed Papers
@@ -68,10 +69,8 @@ description: The top-page of Python.
 ## Scholarship
 * [[統合物質科学リーダー養成プログラム採択生](http://www.merit.t.u-tokyo.ac.jp/merit/member/generation_009_1.html)]
 
-{% comment %}
-インターン：JSR株式会社（2022年3-5月）共同研究の前段として,提案された手法に基づく物質の誘電特性のシミュレータをpythonで実装．複数の物質について実際に計算して実験部門に提案を行った．　
-{% endcomment %}
-
+## Internship
+* JSR Corporation (2022/3-2022/5)
 
 ## certificates
 
