@@ -35,6 +35,8 @@ url: "https://toamano.github.io" # the base hostname & protocol for your site, e
 github_username:  toamano
 repository: toamano/toamano.github.io.git
 
+enable_copy_code_button: true
+
 author:
   name: "T. Amano"
 #  avatar: "/assets/images/bio-photo.jpg"
@@ -94,6 +96,12 @@ plugins:
    - jekyll-include-cache # for mm mistakes
    - jekyll-org
 
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
    
 header_pages:
   - about.md
@@ -167,3 +175,4 @@ defaults:
       layout: single
       author_profile: false
       share: true
+
