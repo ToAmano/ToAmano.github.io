@@ -34,7 +34,7 @@ SlurmのステップジョブはジョブAの完了をトリガーにジョブB�
 
 ここでは以下のようなスクリプトで記述されるjobAとjobBを考える．jobAでファイルを作成し，jobBでそれを読み込んで出力する単純なもの．パーティション名は各自の環境のものに変更する．大事なのは前述の通り，`job-name` を同じにすること．ここでは`JOBNAME` で固定した．
 
-```bash
+```bash:jobA.sh
 #!/bin/bash
 #SBATCH --job-name="JOBNAME" # ここを同じにする
 #SBATCH --no-requeue
@@ -49,7 +49,7 @@ cat <<- EOF > ./test_singleton.txt
 EOF
 ```
 
-```bash
+```bash:jobB.sh
 #!/bin/bash
 #SBATCH --job-name="JOBNAME" # ここを同じにする
 #SBATCH --no-requeue
