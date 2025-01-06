@@ -4,6 +4,10 @@
 title: slurmにおけるstep jobの実行方法
 layout: single
 date:   2025-1-4 21:00:00 +0900
+categories: linux
+tags:
+ - linux
+ - slurm
 header:
   teaser:
 description: SlurmのステップジョブはジョブAの完了をトリガーにジョブBを実行する方法で，sbatch -d singletonオプションを使用して実現する．これにより依存関係を持つジョブを効率的に管理できる． 
