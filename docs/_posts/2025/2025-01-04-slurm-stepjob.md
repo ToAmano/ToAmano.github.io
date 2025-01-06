@@ -9,6 +9,8 @@ header:
 description: SlurmのステップジョブはジョブAの完了をトリガーにジョブBを実行する方法で，sbatch -d singletonオプションを使用して実現する．これにより依存関係を持つジョブを効率的に管理できる． 
 ---
 
+SlurmのステップジョブはジョブAの完了をトリガーにジョブBを実行する方法で，sbatch -d singletonオプションを使用して実現する．これにより依存関係を持つジョブを効率的に管理できる．
+
 ## slurmにおけるstep job
 
 そもそもジョブスケジューラーにおける逐次実行（ステップジョブ）とは，一つのジョブが終わったのをトリガーに他のジョブを実行することをさす．例えばjobAとjobBを投入した時，通常はjobAもBもシステムに空きがあれば勝手に実行されてしまうが，ステップジョブの場合には両者を同時に投入していてもjobBはjobAが終わった後に実行するように指示する．こうするとjobBではjobAの結果を利用できる．これを人の手でやる場合はjobAが終わったのを確認してからjobBを投入する必要があるが，ジョブの数が増えてきたりするとステップジョブで全てのジョブを同時に投入できる方が良い．ステップジョブはさまざまな場面で活用できる．1週間かかる計算をジョブの制限時間が1日のシステムで実行する場合は，元のジョブを7個に分割してステップ実行する．他にも，多段階からなる計算で計算ごとにノード数を変更したい場合にもステップジョブが活用できる．
@@ -62,17 +64,16 @@ sbatch jobA.sh
 sbatch -d singleton jobB.sh
 ```
 
-`squeue` 上ではステップジョブになったジョブには(Dependency)の表示がされる．
+`squeue` 上ではステップジョブになったジョブには(Dependency)の表示がされる．ここでは，jobidがxxxxxx7 のものがjobAに対応し，xxxxxx8 のものがjobBに対応している．
 
 ```bash
 $ squeue
              JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
            xxxxxx8     i8cpu  JOBNAME  xxxxxxx PD       0:00      1 (Dependency)
-           xxxxxx7     i8cpu  JOBNAME  xxxxxxx PD       0:00      1 (QOSMaxJobsPerUserLimit)
-           xxxxxx5     i8cpu       fd  xxxxxxx  R       0:35      2 c15u11n[2-3]
+           xxxxxx7     i8cpu  JOBNAME  xxxxxxx PD       0:00      1 c15u11n[2-2]
 ```
 
-さらに詳細な情報は`scontrol show jobid` で確認できるが，こちらでも`singleton` によってジョブの投入待ちになっていることがわかる．
+さらに詳細な情報は`scontrol show jobid` で確認できるが，jobBの詳細を見てみるとこちらでも`singleton` によってジョブの投入待ちになっていることがわかる．
 
 ```bash
 $ scontrol show job <jobid>
