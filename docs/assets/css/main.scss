@@ -10,12 +10,12 @@ html {
   }
 
   @include breakpoint($large) {
-      font-size: 20px; // change to whatever
+      font-size: 18px; // change to whatever
       line-height: 1.5;	    
   }
 
   @include breakpoint($x-large) {
-      font-size: 22px; // change to whatever
+      font-size: 18px; // change to whatever
       line-height: 1.5;
   }
 }
