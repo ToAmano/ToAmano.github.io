@@ -115,10 +115,11 @@ analytics:
     tracking_id: "G-F5ZSWKZTY1"
     anonymize_ip: false # default
   
-
+# 
 show_excerpts: true
 
-  # Defaults
+
+# Defaults
 defaults:
   # _posts
   - scope:
@@ -126,6 +127,8 @@ defaults:
       type: posts
     values:
       layout: single
+      # https://mmistakes.github.io/minimal-mistakes/docs/layouts/#wide-page
+      classes: wide
       author_profile: true
       read_time: true
       comments: true
