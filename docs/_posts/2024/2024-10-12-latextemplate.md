@@ -23,19 +23,24 @@ Physical Reviewを代表とするAPSジャーナル系は**revtexパッケージ
 
 - [revtex](https://journals.aps.org/revtex)
 
-{% raw %}
-<details><summary>revtex サンプル</summary>
+<details><summary>revtex MWE</summary>
+<pre><code class="language-latex">
+\documentclass[luatex,twocolumn,showpacs,aps,prb,reprint,amsfonts,amsmath,amssymb,floatfix,superscriptaddress, longbibliography]{revtex4-2}
 
-```python
-print('Hello world!')
-```
+\usepackage{lipsum}
 
-</details>
-{% endraw %}
+\begin{document}
+\onecolumngrid
+\begin{abstract}
+ \lipsum[2]
+\end{abstract}
+\twocolumngrid
 
-<details><summary>revtex サンプル</summary>
-<pre><code class="language-python">
-print('Hello world!')
+\section{Introduction}
+\lipsum[10]
+
+\end{document}
+
 </code></pre>
 </details>
 
