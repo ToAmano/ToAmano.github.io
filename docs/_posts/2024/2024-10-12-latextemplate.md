@@ -33,6 +33,12 @@ print('Hello world!')
 </details>
 {% endraw %}
 
+<details><summary>revtex サンプル</summary>
+<pre><code class="language-python">
+print('Hello world!')
+</code></pre>
+</details>
+
 ## ACS Publishing
 
 Americal Chemical Societyの発行するJournal of physical chemistryやJournal of Chemical Theory and Computationといった雑誌には**achemsoパッケージ**が用意されている．これも追加インストールが不要なので使いやすい．bibtex用の`achemso`スタイルも提供されている．
