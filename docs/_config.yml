@@ -120,6 +120,7 @@ show_excerpts: true
 words_per_minute: 200
 
 # https://mmistakes.github.io/minimal-mistakes/docs/utility-classes/
+markdown: kramdown
 kramdown:
   input: GFM
   hard_wrap: false
