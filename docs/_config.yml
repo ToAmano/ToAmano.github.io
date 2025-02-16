@@ -138,6 +138,7 @@ defaults:
       classes: wide
       author_profile: true
       read_time: true
+      show_date: true
       comments: true
       share: true
       related: true
@@ -149,6 +150,7 @@ defaults:
     values:
       layout: single
       author_profile: true
+      show_date: true
   # _docs
   - scope:
       path: ""
