@@ -23,9 +23,9 @@ Physical Reviewを代表とするAPSジャーナル系は**revtexパッケージ
 
 - [revtex](https://journals.aps.org/revtex)
 
-<details><summary>すごく長い文章とかプログラムとか</summary>
+<details><summary>revtex サンプル</summary>
 
-```python
+```
 print('Hello world!')
 ```
 
