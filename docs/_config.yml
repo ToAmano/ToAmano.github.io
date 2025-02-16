@@ -118,6 +118,7 @@ analytics:
 # 
 show_excerpts: true
 words_per_minute: 200
+show_date: true
 
 # https://mmistakes.github.io/minimal-mistakes/docs/utility-classes/
 markdown: kramdown
