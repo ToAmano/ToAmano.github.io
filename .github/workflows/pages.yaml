@@ -64,7 +64,7 @@ jobs:
       #- name: ls lha
       #  run: ls -lha /home/runner/work/660nm.github.io/660nm.github.io/docs/_site/
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v3
         with:
           path: ./docs/_site/
 
