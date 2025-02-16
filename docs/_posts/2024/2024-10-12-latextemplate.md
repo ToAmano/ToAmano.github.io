@@ -23,13 +23,15 @@ Physical Reviewを代表とするAPSジャーナル系は**revtexパッケージ
 
 - [revtex](https://journals.aps.org/revtex)
 
+{% raw %}
 <details><summary>revtex サンプル</summary>
 
-```
+```python
 print('Hello world!')
 ```
 
 </details>
+{% endraw %}
 
 ## ACS Publishing
 
