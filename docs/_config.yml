@@ -117,7 +117,7 @@ analytics:
   
 # 
 show_excerpts: true
-
+words_per_minute: 200
 
 # Defaults
 defaults:
