@@ -109,7 +109,7 @@ sudo mktexlsr
 
 \title{MWE for NeurIPS2024}
 
-\author{%
+\author{
   Taro Yamada \\
   Department of Japan\\
   \texttt{hogehoge@email.com} \\
