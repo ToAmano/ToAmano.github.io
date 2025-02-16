@@ -28,8 +28,10 @@ Physical Reviewを代表とするAPSジャーナル系は**revtexパッケージ
 \documentclass[luatex,twocolumn,showpacs,aps,prb,reprint,amsfonts,amsmath,amssymb,floatfix,superscriptaddress, longbibliography]{revtex4-2}
 
 \usepackage{lipsum}
-
 \begin{document}
+\title{Title} % title inside the document
+\author{Taro Yamada}
+ \affiliation{Japan}
 \onecolumngrid
 \begin{abstract}
  \lipsum[2]
@@ -40,7 +42,6 @@ Physical Reviewを代表とするAPSジャーナル系は**revtexパッケージ
 \lipsum[10]
 
 \end{document}
-
 </code></pre>
 </details>
 
@@ -49,6 +50,26 @@ Physical Reviewを代表とするAPSジャーナル系は**revtexパッケージ
 Americal Chemical Societyの発行するJournal of physical chemistryやJournal of Chemical Theory and Computationといった雑誌には**achemsoパッケージ**が用意されている．これも追加インストールが不要なので使いやすい．bibtex用の`achemso`スタイルも提供されている．
 
 - [achemso](https://pubs.acs.org/page/4authors/submission/tex.html)
+
+<details><summary>achemso MWE</summary>
+<pre><code class="language-latex">
+\documentclass[journal=jacsat,manuscript=article]{achemso}
+
+\usepackage{lipsum}
+\title{Title} % title outside the document
+\begin{document}
+\title{Title}
+\begin{abstract}
+ \lipsum[2]
+\end{abstract}
+
+\section{Introduction}
+\lipsum[10]
+
+\end{document}
+
+</code></pre>
+</details>
 
 ## IOP Publishing
 
