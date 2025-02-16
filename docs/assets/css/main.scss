@@ -1,0 +1,22 @@
+@import "minimal-mistakes";
+
+html {
+  font-size: 16px; // change to whatever
+  line-height: 1.5;
+
+  @include breakpoint($medium) {
+      font-size: 18px; // change to whatever
+      line-height: 1.5;
+  }
+
+  @include breakpoint($large) {
+      font-size: 18px; // change to whatever
+      line-height: 1.5;	    
+  }
+
+  @include breakpoint($x-large) {
+      font-size: 18px; // change to whatever
+      line-height: 1.5;
+  }
+}
+
