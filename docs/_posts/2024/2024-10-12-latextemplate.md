@@ -19,13 +19,20 @@ description: 代表的な雑誌のLaTeXテンプレートへのリンクをま�
 
 ## American Physics Society
 
-Physical Reviewを代表とするAPSジャーナル系は**revtexパッケージ**が用意されており，デフォルトでインストールされているケースがほとんどである．追加でインストールが不要なので手軽に利用でき，フォーマットも綺麗なのでおすすめ．ただし日本語には非対応．
+Physical Reviewを代表とするAPSジャーナル系は**revtexパッケージ**が用意されており，デフォルトでインストールされているケースがほとんどである．追加でインストールが不要なので手軽に利用でき，フォーマットも綺麗なのでおすすめ．ただし日本語には非対応．revtexは`apsrev4-2`というbibtex用のスタイルも提供している．
 
 - [revtex](https://journals.aps.org/revtex)
 
+<details><summary>すごく長い文章とかプログラムとか</summary>
+
+```python
+print('Hello world!')
+```
+</details>
+
 ## ACS Publishing
 
-Americal Chemical Societyの発行するJournal of physical chemistryやJournal of Chemical Theory and Computationといった雑誌には**achemsoパッケージ**が用意されている．これも追加インストールが不要なので使いやすい．
+Americal Chemical Societyの発行するJournal of physical chemistryやJournal of Chemical Theory and Computationといった雑誌には**achemsoパッケージ**が用意されている．これも追加インストールが不要なので使いやすい．bibtex用の`achemso`スタイルも提供されている．
 
 - [achemso](https://pubs.acs.org/page/4authors/submission/tex.html)
 
@@ -91,7 +98,7 @@ sudo mv Styles /usr/local/texlive/2023/texmf-dist/tex/latex/neurips_2024
 sudo mktexlsr
 ```
 
-これで無事利用できるようになる．以下簡単なMWEだ．
+これで無事利用できるようになる．以下サンプルファイルをベースにした簡単なMWEだ．
 
 ```latex
 \documentclass{article}
@@ -132,7 +139,7 @@ sudo mktexlsr
 \end{document}
 ```
 
-つぎに，bibtexのスタイルファイル（`.bst`）を含むパッケージの場合，これはまた別のディレクトリに配置する必要がある．基本的にはスタイルファイルのディレクトリ（`tex/latex`）と似た場所（`bibtex/bst`）にあるが，あるが，これも`kpsewhich`で検索できる．
+つぎに，bibtexのスタイルファイル（`.bst`）を含むパッケージの場合，これはまた別のディレクトリに配置する必要がある．基本的にはスタイルファイルのディレクトリ（`tex/latex`）と似た場所（`bibtex/bst`）にあるが，これも`kpsewhich`で検索できる．
 
 ```bash
 $ kpsewhich apsrev4-2.bst
@@ -148,4 +155,4 @@ $ kpsewhich apsrev4-2.bst
 ## TODO
 
 - パッケージごとに例を表示
-- 対応している主要機能の調査
+- 対応している主要機能の調査（推奨エンジンなど）
