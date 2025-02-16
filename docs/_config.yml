@@ -119,6 +119,11 @@ analytics:
 show_excerpts: true
 words_per_minute: 200
 
+# https://mmistakes.github.io/minimal-mistakes/docs/utility-classes/
+kramdown:
+  input: GFM
+  hard_wrap: false
+
 # Defaults
 defaults:
   # _posts
