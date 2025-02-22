@@ -7,8 +7,6 @@ date:   2025-2-15 21:00:00 +0900
 categories: coding
 tags:
  - latex
- - apple
- - python
 header:
   teaser: 
 description: LaTeXにおける便利な参照管理パッケージcleverefの使い方
