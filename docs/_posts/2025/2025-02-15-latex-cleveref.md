@@ -17,7 +17,7 @@ description: LaTeXにおける便利な参照管理パッケージcleverefの使
 
 ---
 
-LaTeXでは，図・表・数式・章などの要素に固有のラベル（`\label`）をうち，後から参照する際は`\ref` コマンドを利用すると図表番号を自動で管理できる．ただし`\ref` コマンドは番号だけを出力するため，図，表，式に合わせて「Figure \ref{a}」，「Table \ref{b}」，「Equation \ref{c}」のように接頭語をつけて参照する必要がある．以下に簡単な例を示す．
+LaTeXでは，図・表・数式・章などの要素に固有のラベル（`\label`）をうち，後から参照する際は`\ref` コマンドを利用すると図表番号を自動で管理できる．ただし`\ref` コマンドは番号だけを出力するため，図，表，式に合わせて「Figure {% raw %}\ref{a}{% endraw %}」，「Table  {% raw %}\ref{b}{% endraw %}」，「Equation {% raw %}\ref{c}{% endraw %}」のように接頭語をつけて参照する必要がある．以下に簡単な例を示す．
 
 ```latex
 \documentclass{article}
@@ -32,7 +32,7 @@ Figure. \ref{fig:example} is the example figure. In Table \ref{tab:example}, we 
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.5\textwidth]{example.png}
+    \includegraphics[width=0.5\textwidth]{example-image-a}
     \caption{An example figure.}
     \label{fig:example}
 \end{figure}
@@ -139,7 +139,7 @@ cleverefでは`\cref` コマンド(文頭では`\Cref`)を利用して参照先�
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.5\textwidth]{example.png}
+    \includegraphics[width=0.5\textwidth]{example-image-a}
     \caption{An example figure.}
     \label{fig:example}
 \end{figure}
