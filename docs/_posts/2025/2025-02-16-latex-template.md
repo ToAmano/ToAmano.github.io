@@ -162,6 +162,7 @@ submit/
 最終的にはすべて平らなディレクトリ構造にすることを考えると，`\includesgraphics{figures/fig01/fig01.pdf}` のようにフルパス指定の表記だと後で書き直す必要がでてくる．そこで`\includegraphics` および`\input`のパスの指定をして`\includesgraphics{fig01.pdf}`としたほうが便利である．そこでプリアンブルで以下のようにパス指定する．`\graphicspath` はincludegraphics用のコマンドで，一方でinputの方はそのようなコマンドがないので自前で定義する必要がある．
 
 ```latex
+{% raw %}
 \documentclass{article}
 \usepackage{lipsum} % dummy text
 \usepackage{graphicx}
@@ -176,6 +177,7 @@ submit/
 \begin{document}
 \input{result.tex}
 \end{document}
+{% endraw %}
 ```
 
 これでinputファイルやincludegraphicsのパス指定は簡略化できる．
