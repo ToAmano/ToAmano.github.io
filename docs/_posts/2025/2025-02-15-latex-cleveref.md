@@ -15,8 +15,6 @@ description: LaTeXにおける便利な参照管理パッケージcleverefの使
 
 ## LaTeXにおける図/表/式等の引用
 
----
-
 LaTeXでは，図・表・数式・章などの要素に固有のラベル（`\label`）をうち，後から参照する際は`\ref` コマンドを利用すると図表番号を自動で管理できる．ただし`\ref` コマンドは番号だけを出力するため，図，表，式に合わせて「Figure {% raw %}\ref{a}{% endraw %}」，「Table  {% raw %}\ref{b}{% endraw %}」，「Equation {% raw %}\ref{c}{% endraw %}」のように接頭語をつけて参照する必要がある．以下に簡単な例を示す．
 
 ```latex
@@ -79,8 +77,6 @@ We can reference \cref{sec:example}
 
 ## cleverefの特徴
 
----
-
 cleverefは上述の接頭辞の自動判別の他，複数参照もよしなにやってくれるなどの機能をサポートする．
 
 1. 参照タイプを自動判別
@@ -101,8 +97,6 @@ cleverefは上述の接頭辞の自動判別の他，複数参照もよしなに
     
 
 ## 基本的な使い方
-
----
 
 ### インストールと設定
 
@@ -201,8 +195,6 @@ cleveref-sample.png
 
 ## 接頭辞のカスタマイズ
 
----
-
 ### 接頭辞の変更
 
 デフォルトの接頭辞はプリアンブルで`\crefname` および`\Crefname`を使用してカスタマイズできる．これで言語や投稿先に合わせて一括で設定を変更できる．形式は
@@ -254,13 +246,9 @@ cleveref-sample.png
 
 ## まとめ
 
----
-
 cleverefパッケージはLaTeX文書内での参照作業を大幅に簡略化し柔軟な表現を可能にする便利ツールだ．私が利用するのは複数参照と接頭辞の自動割当くらいだが，それでも相当効率化できる．
 
 ## 補足
-
----
 
 数式や図表のラベル名の付け方をどうするべきかは難しい問題だ．私は上の例のように接頭辞とコロンから始めたうえで，論文ならば図表や数式の番号と中身，書籍ならば小番号を利用してラベリングするようにしている．
 
@@ -277,8 +265,6 @@ fig:2-4:2:myfig #2-4節の図2
 ```
 
 ## 参考文献
-
----
 
 - [CTAN: Package cleveref](https://ctan.org/pkg/cleveref)
 - [Overleaf: cleveref Documentation](https://www.overleaf.com/learn/latex/Cleveref)
