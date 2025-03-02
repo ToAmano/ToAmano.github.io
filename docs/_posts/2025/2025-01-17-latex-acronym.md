@@ -16,8 +16,6 @@ LaTeXのacronymパッケージを使用して略語を管理する方法を説�
 
 # 文書における略語の管理
 
----
-
 文章中で略語を使う場合，初出の時にはフルスペルと略語を併記し，2回目からは略語のみを用いる．以下のような簡単な文書を例に考える．
 
 > This document discusses artificial intelligence and machine learning. First, we will briefly review the concept of the machine learning. Then, artificial intelligence techniques will be explored in detail.
@@ -38,8 +36,6 @@ LaTeXのacronymパッケージを使用して略語を管理する方法を説�
 
 # acronymパッケージ
 
----
-
 acronymパッケージは略語管理に特化したパッケージで，略語の定義と略語自体の使用を一元的に管理できる．他に似たことができるパッケージとしてGlossariesもあるが，こちらは名前の通り，用語集全般（略語，単語，定義など）を管理することを目的としたより複雑なパッケージであり，論文等で単に略語管理をしたいだけならオーバースペックだと思う．一方でacronymは略語管理に特化しており，より軽量で簡単に利用できる．基本的にはデフォルトでインストールされていて追加のインストールは不要で，プリアンブルで`\usepackage{acronym}` とすることで利用できる．acronymの機能は大きく分けて二つある．
 
 - 初回のみ完全な名称を表示
@@ -53,8 +49,6 @@ acronymパッケージは略語管理に特化したパッケージで，略語�
 
 # acronymの使い方
 
----
-
 acronymパッケージの使い方は簡単で，略語データをacronym環境に定義し，文中では`\ac{略語}` の形で略語を呼び出すだけで良い．詳細なドキュメントはターミナルから
 
 ```latex
@@ -64,8 +58,6 @@ texdoc acronym
 で確認できる．ここでは個人的によく使う機能に絞って説明する．
 
 ## 基本の使い方（略語データの管理と文中での略語利用）
-
----
 
 略語データはacronym環境の中に`\acro{登録名}{略語}{フルスペル}` の形で定義する．最初の引数が登録名で，あとから呼び出すときはこの登録名を使う．二つ目の引数がpdf上に表示される略語，最後の引数が単語のフルスペルである．例えば
 
@@ -107,8 +99,6 @@ Then, \ac{AI} techniques will be explored in detail.
 
 ## 複数の略語呼び出し方法
 
----
-
 略語を呼び出すコマンド（`\ac`）にはいくつかの派生系がある．以下によく使う一部のものをリストアップする．特に複数形を呼び出す`\acp` は非常に便利だ．
 
 - \acp: 複数形（例: “AIs”）
@@ -118,8 +108,6 @@ Then, \ac{AI} techniques will be explored in detail.
 - \acf: フルスペルと略語を明示的に併記（例: “Artificial Intelligence (AI)”）
 
 ## チャプターごとにフルスペルアウトする
-
----
 
 書籍などの長い文章で，チャプターごとや章ごとに再度略語のフルスペルを書きたい場合は，`\acresetall` を文中で利用する．このマクロが使われた後では，次回`\ac`から略語を利用した時に再度フルスペルとカッコ内の略語を表示する．
 
@@ -153,13 +141,9 @@ Then, \ac{AI} techniques will be explored in detail.
 
 # まとめ
 
----
-
 LaTeXにおける略語管理パッケージ，acronymの基本的な使い方を紹介した．論文等では頻繁に略語を用いるため，略語を自動的に管理する仕組みは必須である．acronymは非常に簡単に使える上に機能的にも優れており，まずはこのパッケージを利用して略語管理するのが良いと思う．
 
 # 参考文献
-
----
 
 [CTAN: Package acronym](https://ctan.org/pkg/acronym?lang=en)
 
