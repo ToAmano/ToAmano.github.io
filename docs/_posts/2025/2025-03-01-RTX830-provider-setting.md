@@ -31,9 +31,9 @@ RTX830は1Gbpsにしか対応していないので追々RTX1300あたりに置�
 
 ## 工場出荷状態へのリセット
 
-前の設定が残っていてRTX830にログインできなくなってしまったので工場出荷状態にリセットした．前の設定が色々残ってて心配という場合もこれをやっておけば一から設定できる．
+前の設定が残っていてRTX830にログインできなくなってしまったので工場出荷状態にリセットした．前の設定が色々残ってて心配という場合もリセットしておけば一から設定できるので安心だ．
 
-手順は簡単で全面のmicroSD + USB + DOWNLOAD の3つのボタンを押しながら電源をONにするだけ．POWERランプが数分間点滅し，その後点灯に変わればリセット完了．
+手順は簡単で全面のmicroSD + USB + DOWNLOAD の3つのボタンを押しながら電源をONにするだけ．POWERランプが数分間点滅し，その後点灯に変わればリセット完了．少し時間がかかるので気長に待つ．
 
 ## LAN経由でのGUIアクセス
 
@@ -109,7 +109,7 @@ IPv4/IPv6の接続状況はこういう[サポートページ](http://kiriwake.i
 
 - ルーターのIPアドレス変更
     
-    初期設定の`192.168.100.1` が気に入らない場合，簡単設定>基本設定>LANアドレスから変更できる．
+    初期設定の`192.168.100.1` が気に入らない場合，簡単設定>基本設定>LANアドレスから変更できる．変更が反映されるのに数分かかるのと，一回PCのLANを抜き差ししないと設定が反映されない点に注意する．
     
     {% include figure popup=true image_path="/assets/posts/2025-03-01-RTX830-provider-setting/13_set_lanaddress.png" alt="" caption="" %}
 
@@ -159,8 +159,8 @@ IPv4/IPv6の接続状況はこういう[サポートページ](http://kiriwake.i
   - [RTX830ユーザマニュアル](https://www.rtpro.yamaha.co.jp/RT/manual/rtx830/Users.pdf)
 
 - 今回利用したかもめインターネットの公式資料
-  - [【VNEサービス】「v6プラス」対応機種 | 株式会社JPIX](https://www.jpix.ad.jp/service/?p=3565)
-  - [【VNEサービス】「v6プラス」固定IPサービス 機器設定例 | 株式会社JPIX](https://www.jpix.ad.jp/service/?p=3458)
+  - [v6プラス 対応機種 | 株式会社JPIX](https://www.jpix.ad.jp/service/?p=3565)
+  - [v6プラス 固定IPサービス 機器設定例 | 株式会社JPIX](https://www.jpix.ad.jp/service/?p=3458)
 
 - その他ネット記事
   - [■RTX830を機械的な操作で初期化する方法](https://paradigmshift.x0.to/2020/09/27/568/)
