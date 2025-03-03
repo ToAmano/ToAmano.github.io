@@ -104,6 +104,11 @@ RTX830は1Gbpsにしか対応していないので追々RTX1300あたりに置�
 
 これでネットワークに無事接続できた．[みんなのネット回線速度](https://minsoku.net/)で速度を測ったところ，深夜で下りが800Mbps弱，上りが100Mbps程度だった．ルーターやケーブルを更新すればもう少し早くなりそうなので，新しいおもちゃを手に入れたと思って色々試してみようと思う．
 
+更新：その後ケーブルをCAT6A対応のものに変えたところ，ちゃんと速度が出るようになった．上り下りともに1Gbpsにほぼ張り付いているので，これはRTX830が律速になっている気配がある．というわけで，古いよくわからないケーブルを使っている場合はちゃんと新しいものに入れ替えようという話でした．（CAT6Aケーブルはそんなに高くもないし．）
+
+{% include figure popup=true image_path="/assets/posts/2025-03-01-RTX830-provider-setting/11a_check_speed.png" alt="" caption="" %}
+
+
 IPv4/IPv6の接続状況はこういう[サポートページ](http://kiriwake.isp-support.jp/)があってv6プラスを利用できているか確認できる．無事v6プラスで接続していることも確認できた．
 
 {% include figure popup=true image_path="/assets/posts/2025-03-01-RTX830-provider-setting/12_check_ipv6.png" alt="" caption="" %}
