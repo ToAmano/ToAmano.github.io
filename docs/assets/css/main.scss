@@ -1,22 +1,57 @@
-@import "minimal-mistakes";
+@charset "utf-8";
 
-html {
-  font-size: 16px; // change to whatever
-  line-height: 1.5;
+/* dracula syntax highlighting (base16) */
+/* https://github.com/dracula/base16-dracula-scheme */
+$base00: #282936;
+$base01: #3a3c4e;
+$base02: #4d4f68;
+$base03: #626483;
+$base04: #62d6e8;
+$base05: #e9e9f4;
+$base06: #f1f2f8;
+$base07: #f7f7fb;
+$base08: #ea51b2;
+$base09: #b45bcf;
+$base0a: #00f769;
+$base0b: #ebff87;
+$base0c: #a1efe4;
+$base0d: #62d6e8;
+$base0e: #b45bcf;
+$base0f: #00f769;
 
-  @include breakpoint($medium) {
-      font-size: 18px; // change to whatever
-      line-height: 1.5;
-  }
+/* type scale */
+$type-size-1 : 1em;  // ~39.056px
+$type-size-2 : 1em;  // ~31.248px
+$type-size-3 : 1em;  // ~25.008px
+$type-size-4 : 1em;   // ~20px
+$type-size-5 : 1em;      // ~16px
+$type-size-6 : 0.75em;   // ~12px
+$type-size-7 : 0.6875em; // ~11px
+$type-size-8 : 0.625em;  // ~10px
 
-  @include breakpoint($large) {
-      font-size: 18px; // change to whatever
-      line-height: 1.5;	    
-  }
 
-  @include breakpoint($x-large) {
-      font-size: 18px; // change to whatever
-      line-height: 1.5;
-  }
-}
+$global-font-family: 'Noto Sans Japanese', sans-serif;
+
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
+@import "minimal-mistakes"; // main partials
+
+// html {
+//   font-size: 8px; // change to whatever
+//   line-height: 1.5;
+
+//   @include breakpoint($medium) {
+//       font-size: 8px; // change to whatever
+//       line-height: 1.5;
+//   }
+
+//   @include breakpoint($large) {
+//       font-size: 8px; // change to whatever
+//       line-height: 1.5;	    
+//   }
+
+//   @include breakpoint($x-large) {
+//       font-size: 8px; // change to whatever
+//       line-height: 1.5;
+//   }
+// }
 
