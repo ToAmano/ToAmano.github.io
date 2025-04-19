@@ -63,8 +63,8 @@ description: The top-page of Python.
 
 ### Others
 
-* [[統計検定1級 成績最優秀賞](https://www.toukei-kentei.jp/wp-content/uploads/exc201711na.pdf)]
-* [[スーパーコンピュータ富岳令和5年一般課題「高周波誘電特性の第一原理計算」課題代表者](https://www.hpcioffice.jp/application/files/1216/7644/9492/adoptionlist2023_11.pdf)]
+* [[統計検定1級 成績最優秀賞](https://www.toukei-kentei.jp/hubfs/files/past/pbt/pbt_exc201711.pdf)]
+* [[スーパーコンピュータ富岳令和5年一般課題「高周波誘電特性の第一原理計算」課題代表者](https://www.hpci-office.jp/output/hp230124/outcome.pdf?1745064781d)]
 
 ## Award
 * [[令和5年度理学系研究科研究奨励賞](https://www.s.u-tokyo.ac.jp/ja/info/10252/)]  https://www.phys.s.u-tokyo.ac.jp/award/41753/
