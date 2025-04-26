@@ -1,13 +1,14 @@
 ---
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-title: LaTeXでgit更新の差分をハイライトする(latexdiff-vc)
+title: 【latexdiff-vc】LaTeXでgit更新の差分をハイライトする
 layout: single
 date:   2025-3-2 21:00:00 +0900
 categories: coding
 tags:
  - latex
  - git
+toc: true
 header:
   teaser:
 description: LaTeXでgit更新の差分をハイライトするコマンド，latexdiff-vcの簡単な使い方の紹介．
