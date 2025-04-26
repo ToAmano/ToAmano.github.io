@@ -1,4 +1,4 @@
----
+OB---
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 title: LaTeXでgit更新の差分をハイライトする(latexdiff-vc)
@@ -78,21 +78,18 @@ vcはVersion Controlの略で，`latexdiff-vc` は `latexdiff` コマンド�
 `-r`に何もオプションをつけない場合，このコマンドは最新のコミットとの差分を取得する．
 
 ```
-latexdiff-vc --git --pdf -r main.tex
+latexdiff-vc --git -r main.tex
 ```
 
 このコマンドは以下の動作をする．
 
 1. `main.tex` の最新版と直前のコミットを比較
 2. `diff.tex` を生成
-3. (pdfオプションをつけた場合)`pdflatex` でコンパイルして `diff.pdf` を作成
-
-pdfオプションをつけた場合のコンパイルコマンドは変更できないので，lualatexを利用していると自動でのコンパイルには失敗する可能性がある．
 
 現実的には特定のコミットとの差分を見たい場合が多い．この場合は`-r` オプションで過去のコミットIDを指定する．以下の例では1a2b3cを自身のコミットIDで置き換える．
 
 ```bash
-latexdiff-vc --git --pdf -r 1a2b3c main.tex
+latexdiff-vc --git -r 1a2b3c main.tex
 ```
 
 `latexdiff` 自体のオプションは全く同じものが全て`latexdiff-vc` でも使えるので，例えば可視化方法を変更したければ上述の`--type` オプションが使える．latexdiff-vc特有の（latexdiffにはない）オプションで有用なものを二つ挙げておく．
@@ -105,8 +102,21 @@ latexdiff-vc --git --pdf -r 1a2b3c main.tex
 一般的には論文を作るときは複数のlatexファイルを用意していることが多いので，単純に一つのファイルのdiffをとってもあまり嬉しくない．そこで`--flatten` オプションを利用して`input` で読み込んでいる複数ファイルをひとまとめにできる．これはlatexpandとかと似た挙動．投稿時とは違って画像のパスを変更する必要はないため，こうして生成されたファイルをそのままコンパイルすればめでたく変更点が強調されたpdfが出来上がる．
 
 ```bash
-latexdiff-vc --git --pdf --flatten -r 1a2b3c main.tex
+latexdiff-vc --git --flatten -r 1a2b3c main.tex
 ```
+
+さらに，生成されたtexファイルをlatexmkでコンパイルしたい場合，`--run` オプションをつけて以下のように実行する．
+
+```bash
+latexdiff-vc --git --run -c LATEX='latexmk -f' --flatten --force -r 1a2b3c main.tex
+```
+
+`--run` オプションはdiffファイルを生成した後，latexコマンドを使ってコンパイルする．`-c` オプションでコンパイルコマンドを指定でき，ここに`latexmk` を使えば一気通貫でコンパイルできる．
+
+ **Notice:** 注意点として，bibファイルを用いて文献管理をしている場合，`latexdiff-vc`はbblファイルを利用してdiffを取るため，bblファイルがgit管理されていないとdiffを取るのに失敗する．
+
+通常bblファイルをgit管理するのは推奨されない（.gitignoreのデフォルトには.bblが含まれる）が，簡単なworkaroundとしてレポジトリに.bblファイルを含めるようにすればこのエラーは回避できる．
+ {: .notice}
 
 ## まとめ
 
