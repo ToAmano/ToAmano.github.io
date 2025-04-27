@@ -18,6 +18,9 @@ description: LaTeXでの論文作成において、ファイルを階層化し�
 
 プロジェクトディレクトリの直下におおもとのソースファイル`main.tex` があり，`/docs`に文書ファイル，`/figures`に図，`/tables`に表，`/include`に図表をいれるフロート環境のファイル，`/reference`に参考文献のbibファイルが配置される以下のような構成を考える．`/submit` には最終的に投稿するひとまとめのファイル群を格納する．`/history` はrevisionの履歴を残すためのディレクトリである．
 
+レポジトリを以下のリンクに配置した．
+- [paper_template](https://github.com/ToAmano/paper_template)
+
 <aside>
 💡
 
