@@ -12,15 +12,22 @@ header:
 description: LaTeXにて，tikzで作成した図表を本文書と分離する二つの代表的方法，tikzexternalizeとstandaloneの使い方について解説．
 gallery1:
  - url: /assets/posts/2025-04-27-latex-standalone-figure/test.png
+   image_path: /assets/posts/2025-04-27-latex-standalone-figure/test.png
+   alt: "placeholder image 1"
+   title: "Image 1 title caption"
+ - url: /assets/posts/2025-04-27-latex-standalone-figure/test-figure0.png
    image_path: /assets/posts/2025-04-27-latex-standalone-figure/test-figure0.png
    alt: "placeholder image 1"
    title: "Image 1 title caption"
 gallery2:
  - url: /assets/posts/2025-04-27-latex-standalone-figure/main.png
+   image_path: /assets/posts/2025-04-27-latex-standalone-figure/main.png
+   alt: "placeholder image 1"
+   title: "Image 1 title caption"
+ - url: /assets/posts/2025-04-27-latex-standalone-figure/sine_cosine.png
    image_path: /assets/posts/2025-04-27-latex-standalone-figure/sine_cosine.png
    alt: "placeholder image 1"
    title: "Image 1 title caption"
-
 ---
 
 論文用の図表をどのソフトウェアで作成するかは人によるところだが，私はLaTeXの中で閉じるのが好きでtikz/pgfplotを利用している．この時に問題になるのがtikzのコンパイルの遅さである．特に図表が増えて来たり，データ点が多い図があると平気で数分以上かかるようになり，頻繁に再コンパイルして変更をチェックすることができない．
