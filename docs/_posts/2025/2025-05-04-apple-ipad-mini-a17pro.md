@@ -151,4 +151,4 @@ Apple Pencilを使ったメモ書きとしても非常に便利．11/13インチ
 
 第六世代のiPad miniから，最新のA17proに買い替えた．買い替えて何か劇的に変わったことはなかったが，相変わらず使い勝手は良いオススメのデバイスだ．最近iPad Pro/Airも購入したので，追ってそれらのレビューもしたい．
 
-{% include figure popup=true image_path="/assets/posts/2025-05-04-apple-ipad-mini-a17pro/ipad_items.jpg" alt="" caption="最近の散在もといお布施の数々．いくつか想定外の出費もあったのでしばらくは節制しないと．．．" %}
+{% include figure popup=true image_path="/assets/posts/2025-05-04-apple-ipad-mini-a17pro/apple_items.jpg" alt="" caption="最近の散在もといお布施の数々．いくつか想定外の出費もあったのでしばらくは節制しないと．．．" %}
