@@ -97,7 +97,7 @@ Pythonでは、PEP8スタイルに準拠したコードを自動で整形・検�
 
     以下のマーケットプレイスからインストールできる．
 
-    [](https://marketplace.visualstudio.com/items?itemName=ms-python.black-formatter)
+  - [black](https://marketplace.visualstudio.com/items?itemName=ms-python.black-formatter)
 
     .vscode/settings.json に以下を追加する．1行目がblackを利用する指定，2行目は保存時に自動でフォーマッタを適用する設定．
 
@@ -134,7 +134,7 @@ isort は Python スクリプト内の**import 文を自動でソート・整形
 
     isortもVS Codeの拡張機能として提供されるようになったため，pipからインストールして使う必要がなくなった．以下のマーケットプレイスからインストールできる．
 
-    [](https://marketplace.visualstudio.com/items?itemName=ms-python.isort)
+  - [isort](https://marketplace.visualstudio.com/items?itemName=ms-python.isort)
 
     .vscode/settings.json に以下の設定を追加する．
 
@@ -181,7 +181,7 @@ flake8 はコード中の**スタイル違反やバグの可能性がある構�
 
     flake8もVS Codeの拡張機能として提供されるようになったため，pipからインストールして使う必要がなくなった．以下のマーケットプレイスからインストールできる．インストールしたらそのまま利用できる．
 
-    [](https://marketplace.visualstudio.com/items?itemName=ms-python.flake8)
+  - [flake8](https://marketplace.visualstudio.com/items?itemName=ms-python.flake8)
 
 ### pylint：詳細な静的解析を行うリンター
 
@@ -210,7 +210,7 @@ flake8 はコード中の**スタイル違反やバグの可能性がある構�
 
     pylintもVS Codeの拡張機能として提供されるようになったため，pipからインストールして使う必要がなくなった．以下のマーケットプレイスからインストールできる．インストールしたらそのまま利用できる．
 
-    [](https://marketplace.visualstudio.com/items?itemName=ms-python.pylint)
+  - [pylint](https://marketplace.visualstudio.com/items?itemName=ms-python.pylint)
 
 ## その他
 
