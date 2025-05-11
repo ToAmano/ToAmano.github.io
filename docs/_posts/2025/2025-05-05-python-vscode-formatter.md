@@ -3,7 +3,7 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 title: [vscode] pythonフォーマッタとリンタ
 layout: single
-date:   2025-5-4 21:00:00 +0900
+date:   2025-5-5 21:00:00 +0900
 categories: coding
 tags:
  - python
@@ -233,17 +233,17 @@ notebookでもフォーマッタを適用したい場合，setting.jsonに以下
 
 リンターを利用していると，以下のように外部のライブラリのimportが解決できずにエラー扱いになることがある．この場合は，利用しているPythonのインタープリターが自分の利用したい仮想環境になっていない可能性がある．例えば仮想環境Aにはaseが入っているがBには入っておらず，リンターが仮想環境BのPythonを利用しているとこのようなエラーが発生する．
 
-{% include figure popup=true image_path="/assets/posts/2025-05-04-python-vscode-formatter/linter_error_externallib.png" alt="" caption="" %}
+{% include figure popup=true image_path="/assets/posts/2025-05-05-python-vscode-formatter/linter_error_externallib.png" alt="" caption="" %}
 
 この場合は`cmd+Shft+P` からPythonと検索して「Python: インタープリターを選択」から所望の仮想環境を選択する．
 
-{% include figure popup=true image_path="/assets/posts/2025-05-04-python-vscode-formatter/select_python_interpreter.png" alt="" caption="" %}
+{% include figure popup=true image_path="/assets/posts/2025-05-05-python-vscode-formatter/select_python_interpreter.png" alt="" caption="" %}
 
 ### リンターのimport errorを解消する: ①自作ライブラリ
 
 次に，同様のエラーが自作ライブラリで出る場合，単純に自作ライブラリのパスがVS Codeにちゃんと渡っていないだけの場合が多いだろう．
 
-{% include figure popup=true image_path="/assets/posts/2025-05-04-python-vscode-formatter/linter_error_internallib.png" alt="" caption="" %}
+{% include figure popup=true image_path="/assets/posts/2025-05-05-python-vscode-formatter/linter_error_internallib.png" alt="" caption="" %}
 
 プロジェクトのルートディレクトリに`.vscode/settings.json` ファイルを配置すると，このsettings.jsonはこのプロジェクトでのみ参照される設定ファイルとなる．このファイルの中に以下のように追加のパスを設定する．（パスは自分の環境に合わせること）
 
