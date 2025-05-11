@@ -1,7 +1,7 @@
 ---
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-title: [vscode] pythonフォーマッタとリンタ
+title: 【vscode】 pythonフォーマッタとリンタ
 layout: single
 date:   2025-5-5 21:00:00 +0900
 categories: coding
@@ -257,6 +257,6 @@ notebookでもフォーマッタを適用したい場合，setting.jsonに以下
 
 - [VS Code linting](https://code.visualstudio.com/docs/python/linting)
 - [flake8の使い方とオプション - Qiita](https://qiita.com/raku_taro/items/93dacae018fb192d05b5)
-- [VSCodeでblackとflake8の設定をしてみた | DevelopersIO](https://dev.classmethod.jp/articles/vscode_black_flake8/)
+- [VSCodeでblackとflake8の設定をしてみた DevelopersIO](https://dev.classmethod.jp/articles/vscode_black_flake8/)
 - [VSCodeで自作モジュールのimportエラーを解消してみた](https://dev.classmethod.jp/articles/vscode_python_import_error/)
 - [VSCode拡張機能のBlack Formatterとisortを用いたPythonのコードフォーマット](https://nujust.hatenablog.com/entry/2022/07/24/114715)
