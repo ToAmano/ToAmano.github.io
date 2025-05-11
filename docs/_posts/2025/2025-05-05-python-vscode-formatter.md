@@ -25,13 +25,13 @@ VS CodeでPython用のフォーマッタとリンタを設定する方法につ�
 - スタイルガイド（例：PEP8）に基づいた統一
 
 言語ごとにガイドラインで決められたスタイルがある．今回扱うPythonならPEP8，C++なら
-****[Google C++ Style Guide](https://google.github.io/styleguide/cppguide.html)など，言語ごとによく用いられるガイドが存在する．スタイルの統一を手作業で行うのは非現実的なので，基本的にこれらのガイドに従ってくれるフォーマッタを利用することで，コーディング中に自動でスタイルの統一を行うのが一般的だ．
+[Google C++ Style Guide](https://google.github.io/styleguide/cppguide.html)など，言語ごとによく用いられるガイドが存在する．スタイルの統一を手作業で行うのは非現実的なので，基本的にこれらのガイドに従ってくれるフォーマッタを利用することで，コーディング中に自動でスタイルの統一を行うのが一般的だ．
 
-また，コード中の**スタイル違反やバグの可能性がある構文**を静的に検出するツールであるリンタと呼ばれるものも存在し，コーディング中に明確にスタイル違反を認識できる．フォーマッタと合わせて利用することが多い．VS Codeにおけるリンターの使い方については，[こちらの記事](https://code.visualstudio.com/docs/python/linting)も参照のこと．
+また，コード中のスタイル違反やバグの可能性がある構文を静的に検出するツールであるリンタと呼ばれるものも存在し，コーディング中に明確にスタイル違反を認識できる．フォーマッタと合わせて利用することが多い．VS Codeにおけるリンターの使い方については，[こちらの記事](https://code.visualstudio.com/docs/python/linting)も参照のこと．
 
 ## PEP8とは
 
-今回はPythonがテーマなのでPEP8について簡単に触れる．PEP8とは、Python Enhancement Proposal 8 の略であり，Pythonにおける公式な**コードスタイルガイドライン**である。以下のような観点からスタイルが定義されている：
+今回はPythonがテーマなのでPEP8について簡単に触れる．PEP8とは、Python Enhancement Proposal 8 の略であり，Pythonにおける公式なコードスタイルガイドラインである。以下のような観点からスタイルが定義されている：
 
 - インデント
 - 空白・空行の使い方
@@ -70,11 +70,11 @@ Pythonでは、PEP8スタイルに準拠したコードを自動で整形・検�
     2. **black**：コード全体の整形
 - リンター
     1. **flake8**：構文やスタイルの違反チェック
-    2. pylint：構文やスタイルの違反チェック
+    2. **pylint**：構文やスタイルの違反チェック
 
 ### black：コードフォーマッタ
 
-`black` は Python コードを**自動的かつ強制的に整形**するツールである．
+`black` は Python コードを自動的かつ強制的に整形するツールである．
 
 - **特徴**
   - PEP8に準拠した整形
@@ -95,22 +95,22 @@ Pythonでは、PEP8スタイルに準拠したコードを自動で整形・検�
 
 - **VS Codeで使う場合**
 
-    以下のマーケットプレイスからインストールできる．
+  以下のマーケットプレイスからインストールできる．
 
   - [black](https://marketplace.visualstudio.com/items?itemName=ms-python.black-formatter)
 
-    .vscode/settings.json に以下を追加する．1行目がblackを利用する指定，2行目は保存時に自動でフォーマッタを適用する設定．
+  .vscode/settings.json に以下を追加する．1行目がblackを利用する指定，2行目は保存時に自動でフォーマッタを適用する設定．
 
-    ```yaml
-      "[python]": {
-        "editor.defaultFormatter": "ms-python.black-formatter",
-        "editor.formatOnType": true,
-      },
-    ```
+  ```yaml
+    "[python]": {
+      "editor.defaultFormatter": "ms-python.black-formatter",
+      "editor.formatOnType": true,
+    },
+  ```
 
 ### **isort：インポート文の整列ツール**
 
-isort は Python スクリプト内の**import 文を自動でソート・整形**するためのツールである．標準ライブラリ・サードパーティ・ローカルモジュールを分類し、読みやすく一貫性のある並び順に自動で変換する．
+isort は Python スクリプト内のimport 文を自動でソート・整形するためのツールである．標準ライブラリ・サードパーティ・ローカルモジュールを分類し、読みやすく一貫性のある並び順に自動で変換する．
 
 - **特徴**
   - import 文を自動でグルーピング
@@ -136,30 +136,30 @@ isort は Python スクリプト内の**import 文を自動でソート・整形
 
   - [isort](https://marketplace.visualstudio.com/items?itemName=ms-python.isort)
 
-    .vscode/settings.json に以下の設定を追加する．
+  .vscode/settings.json に以下の設定を追加する．
 
-    ```yaml
-     "isort.args":["--profile", "black"],
-    ```
+  ```yaml
+    "isort.args":["--profile", "black"],
+  ```
 
-    さらに，blackと同時に利用する場合，以下のようにsetting.jsonに設定する．
+  さらに，blackと同時に利用する場合，以下のようにsetting.jsonに設定する．
 
-    ```yaml
-      "[python]": {
-        "editor.defaultFormatter": "ms-python.black-formatter",
-        "editor.formatOnSave": true,
-        "editor.codeActionsOnSave": {
-            "source.organizeImports": "explicit"
-        },
+  ```yaml
+    "[python]": {
+      "editor.defaultFormatter": "ms-python.black-formatter",
+      "editor.formatOnSave": true,
+      "editor.codeActionsOnSave": {
+          "source.organizeImports": "explicit"
       },
-      "isort.args":["--profile", "black"],
-    ```
+    },
+    "isort.args":["--profile", "black"],
+  ```
 
 ### **flake8：コードの静的解析ツール**
 
-flake8 はコード中の**スタイル違反やバグの可能性がある構文**を静的に検出するツールである。PEP8違反、未使用の変数、構文エラーなどを早期に発見できる。
+flake8 はコード中のスタイル違反やバグの可能性がある構文を静的に検出するツールである。PEP8違反、未使用の変数、構文エラーなどを早期に発見できる。
 
-- 特徴
+- **特徴**
   - PEP8違反の検出
   - 未使用の変数や定義の指摘
   - 拡張プラグインにより機能強化可能
@@ -179,13 +179,13 @@ flake8 はコード中の**スタイル違反やバグの可能性がある構�
 
 - **VS Codeで使う方法**
 
-    flake8もVS Codeの拡張機能として提供されるようになったため，pipからインストールして使う必要がなくなった．以下のマーケットプレイスからインストールできる．インストールしたらそのまま利用できる．
+  flake8もVS Codeの拡張機能として提供されるようになったため，pipからインストールして使う必要がなくなった．以下のマーケットプレイスからインストールできる．インストールしたらそのまま利用できる．
 
   - [flake8](https://marketplace.visualstudio.com/items?itemName=ms-python.flake8)
 
 ### pylint：詳細な静的解析を行うリンター
 
-`pylint` は Python の静的解析ツールの中でも特に多機能であり、**PEP8 のスタイル違反だけでなく、未使用の変数、意味のない比較、関数やクラスの設計の問題点**まで検出できる。`flake8` よりもチェックが厳しく、開発初期やコード品質の向上を目的としたレビューに適している。
+`pylint` は Python の静的解析ツールの中でも特に多機能であり、PEP8 のスタイル違反だけでなく、未使用の変数、意味のない比較、関数やクラスの設計の問題点まで検出できる。`flake8` よりもチェックが厳しく、開発初期やコード品質の向上を目的としたレビューに適している。
 
 - **特徴**
   - 100点満点によるスコア評価（品質の定量化が可能）
@@ -208,7 +208,7 @@ flake8 はコード中の**スタイル違反やバグの可能性がある構�
 
 - **VS Codeで使う方法**
 
-    pylintもVS Codeの拡張機能として提供されるようになったため，pipからインストールして使う必要がなくなった．以下のマーケットプレイスからインストールできる．インストールしたらそのまま利用できる．
+  pylintもVS Codeの拡張機能として提供されるようになったため，pipからインストールして使う必要がなくなった．以下のマーケットプレイスからインストールできる．インストールしたらそのまま利用できる．
 
   - [pylint](https://marketplace.visualstudio.com/items?itemName=ms-python.pylint)
 
