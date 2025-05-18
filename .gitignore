@@ -6,6 +6,7 @@ docs/_site/
 vendor
 
 .history/
+.vscode/
 
 *.~undo-tree~
 .DS_Store
