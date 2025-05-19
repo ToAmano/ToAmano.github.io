@@ -189,7 +189,7 @@ pdf化した答案の大半には図がないので，時間がある時に順�
 | 2004 | [問題][utk04] |   |   |   |   |   |   |
 | 2005 | [問題][utk05] |   |   |   |   |   |   |
 | 2006 | [問題][utk06] |   |   |   |   |   |   |
-| 2006 | [問題][utk07] |   |   |   |   |   |   |
+| 2007 | [問題][utk07] |   |   |   |   |   |   |
 
 
 **  京大数学（後期）
@@ -555,7 +555,7 @@ pdf化した答案の大半には図がないので，時間がある時に順�
 <!-- [ut14-6]: {% link _pages/ent-ex/solutions/todai/todai-zenki/2014/14-6/ut-14-6.pdf %} -->
 {% endcomment %}
 
-
+[utk90]: {% link _pages/ent-ex/problems/todai/todai_kouki/1990/1990.pdf %}
 [utk91]: {% link _pages/ent-ex/problems/todai/todai_kouki/1991/1991.pdf %}
 [utk92]: {% link _pages/ent-ex/problems/todai/todai_kouki/1992/1992.pdf %}
 [utk93]: {% link _pages/ent-ex/problems/todai/todai_kouki/1993/1993.pdf %}
