@@ -1,0 +1,91 @@
+ % LuaLaTeX文書; 文字コーAドはUTF-8
+ \documentclass[unicode,12pt, A4j]{ltjsarticle}% 'unicode'が必要
+ %\usepackage{luatexja}% 日本語したい
+ \usepackage{luatexja-fontspec}
+ %\usepackage[hiragino-pron]{luatexja-preset}% IPAexフォントしたい(ipaex)
+ \usepackage[hiragino-pron,deluxe,expert,bold]{luatexja-preset}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+ \usepackage[english]{babel}%多言語文書を作成する
+ \usepackage{amsmath,amssymb}%標準数式表現を拡大する
+ \usepackage{physics}
+ \usepackage[subpreambles=true,sort=true]{standalone}
+% \renewcommand{\kanjifamilydefault}{\gtdefault}% 既定をゴシック体に
+ \usepackage[backend=bibtex,style=phys,articletitle=false,biblabel=brackets,chaptertitle=false,pageranges=false]{biblatex}
+ %\usepackage[style=authoryear,backend=bibtex]{biblatex}
+
+
+ \usepackage{mhchem}
+ % あとは欧文の場合と同じ
+
+  \usepackage{caption}
+  \usepackage[subrefformat=parens]{subcaption}
+\title{東大数学理科後期1994年度}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{問題1}
+正の整数 $m$ と $k = 1, 2, \dots, m$ に対して $0 \leq a_k \leq k$ を満たす整数$a_1, \dots, a_m$ が与えられたときに
+\[
+[a_m, a_{m-1}, \dots, a_1]_m = a_m \cdot m! + a_{m-1} \cdot (m-1)! + \cdots + a_1 \cdot 1!
+\]
+とおく。ただし、ただし $a_m \neq 0$ とする。
+\begin{enumerate}
+  \item 
+  \[
+    [m, m-1, \dots, 1]_m = [1, 0, \dots, 0]_{m+1} - 1
+  \]
+  を証明せよ。
+  \item すべての正の整数は $[a_m, a_{m-1}, \dots, a_1]_m$ の形にただ一通りに表示できることを証明せよ。
+  \item $n$ が $5$ 以上の整数のとき $\dfrac{n!}{5}$ を $[a_m, a_{m-1}, \dots, a_1]_m$ の形に表示せよ。
+\end{enumerate}
+
+\section{問題2}
+一辺の長さが $l$ の正方形の内部に半径 $1$ の円が入っている．ここで $l > 2$ とする．
+
+この円が図のように正方形の角から出発して正方形の辺にそってすべらずに正方形の内部
+をころがる．ただし円が正方形の他の辺に接すればすぐにはその辺にそってすべらずにころ
+がるとする．この円の中心が最初にもとの位置にもどってくるまでの円周上の点 $P$ の軌
+跡を考える．
+
+\begin{enumerate}
+\item[(1)] $P$ の軌跡の始点と終点が一致するための $l$ の条件を求めよ．
+\item[(2)] $l$ は (1) の条件を満たす最小の長さとする．このとき $P$ の軌跡の長さのとりうる値
+の範囲を求めよ．
+\end{enumerate}
+
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}[scale=1.2]
+    % 正方形
+    \draw (0,0) rectangle (4,4);
+    
+    % 円
+    \draw (1,1) circle (1);
+    
+    % 辺の長さ l
+    \draw[<->] (0,-0.5) -- (4,-0.5) node[midway, below] {$l$};
+    
+    % 点 P と矢印
+    \draw (1,1) -- (1.707,1.707);
+    \fill (1.707,1.707) circle (0.07) node[above right] {$P$};
+    \draw[-{Stealth[length=2mm]}] (1.5,1.8) arc (45:135:0.4);
+\end{tikzpicture}
+\end{figure}
+
+
+\section{問題3}
+ある会社である工事を受注した．その工事はまず第1工程，第2工程，検査の順に行い，3つの作業はそれぞれ1日を必要とする．検査では第1工程，第2工程に欠陥があるかないかが分かる．検査の結果第1工程に欠陥があれば，工事は第1工程，第2工程ともやり直し，改めて検査をする．第1工程に欠陥がなく第2工程のみに欠陥があれば，第2工程のみやり直して検査をする．これらの作業は日曜日を除いて引き続いて行い，検査の結果第1，第2工程ともに欠陥がなければ工事は終了する．各工程はそれまでの経過とは独立に確率 $p$ で欠陥が発生するものとする．月曜日から工事を始めた場合の $n$ 週間以内にその工事が終了する確率を $P(n)$ とする．
+
+\begin{enumerate}
+  \item $P(1)$ を求めよ．
+  \item $P(n)$ を求めよ．
+  \item $p = \dfrac{1}{2}$ のとき $1 - P(n) < \dfrac{1}{1000}$ を満たす最小の正整数 $n$ を求めよ．
+\end{enumerate}
+
+
+
+\end{document}
