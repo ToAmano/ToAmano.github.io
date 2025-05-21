@@ -178,8 +178,8 @@ pdf化した答案の大半には図がないので，時間がある時に順�
 | 1993 | [問題][utk93] |   |   |   |   |   |   |
 | 1994 | [問題][utk94] |   |   |   |   |   |   |
 | 1995 | [問題][utk95] |   |   |   |   |   |   |
-| 1996 | [問題][]      |   |   |   |   |   |   |
-| 1997 | [問題][]      |   |   |   |   |   |   |
+| 1996 | [問題][utk96] |   |   |   |   |   |   |
+| 1997 | [問題][utk97] |   |   |   |   |   |   |
 | 1998 | [問題][]      |   |   |   |   |   |   |
 | 1999 | [問題][]      |   |   |   |   |   |   |
 | 2000 | [問題][]      |   |   |   |   |   |   |
@@ -561,6 +561,8 @@ pdf化した答案の大半には図がないので，時間がある時に順�
 [utk93]: {% link _pages/ent-ex/problems/todai/todai_kouki/1993/1993.pdf %}
 [utk94]: {% link _pages/ent-ex/problems/todai/todai_kouki/1994/1994.pdf %}
 [utk95]: {% link _pages/ent-ex/problems/todai/todai_kouki/1995/1995.pdf %}
+[utk96]: {% link _pages/ent-ex/problems/todai/todai_kouki/1996/1996.pdf %}
+[utk97]: {% link _pages/ent-ex/problems/todai/todai_kouki/1997/1997.pdf %}
 [utk03]: {% link _pages/ent-ex/problems/todai/todai_kouki/2003/2003.pdf %}
 [utk04]: {% link _pages/ent-ex/problems/todai/todai_kouki/2004/2004.pdf %}
 [utk05]: {% link _pages/ent-ex/problems/todai/todai_kouki/2005/2005.pdf %}
