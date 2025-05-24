@@ -14,20 +14,16 @@ categories: math
 <!-- #+TAGS: org-mode jekyll -->
 <!-- #+DATE: 2022-09-04 10:03:40 +0900 -->
 
-
-
-##  東大，京大，東工大数学の過去問
+## 東大，京大，東工大数学の過去問
 
 高校時代に作成した過去問の解答置き場．間違っている可能性あり．当時は[ここのサイト](http://server-test.net/math/)を参考にして答案を作っていたので答案は1961年からあるが，今回このページを開設するにあたって問題は国会図書館のアーカイブからひっぱってきなおした．たしか当時高校には1954年以降の過去問題集が置いてあったと思う．答えについてはその問題集でチェックした記憶があるが，まだ市販で手に入るものだろうか？
 
-
-##  このページの作成方針
+## このページの作成方針
 
 - 基本的には高校時代に作成した答案（をpdf化したもの）をベースとする．当時から比べると大学数学や大学物理に関する知識が増えて，問題のバックグラウンドに関する理解が増えていると思うので，あまり答案を魔改造することは避ける（受験生が勉強する時には等身大の答案の方が参考になると思うので．．．）．バックグラウンドについて追記したい場合は別途講評のページをつくるか答案の後ろに注釈としてつける．
 - 高校生当時に自分で割り振っていた問題の分野と難易度を示す（予定）．分野は暫定的に以下のように分けてある．難易度はabcの三段階評価で全体の問題の中の相対的なもの．
 
-
-##  東大数学(前期)
+## 東大数学(前期)
 
 問題の一覧表．
 未はpdf化が澄んでいないもの，とりあえずは答案をスキャンしてアップロードすることを目標にする．
@@ -39,7 +35,6 @@ pdf化した答案の大半には図がないので，時間がある時に順�
 編注:a は完成，b は微妙，c は図がほしい，d は作成中で，w は texwork の遺物 (作り直しを視野に入れる）
 
 編注:行列については当時答えを作っていない．時間があれば作ることを考えよう．
-
 
 | year | 問題一覧 | 1                    | 2                  | 3                    | 4                    | 5                    | 6                 |
 |------|----------|----------------------|--------------------|----------------------|----------------------|----------------------|-------------------|
@@ -95,7 +90,6 @@ pdf化した答案の大半には図がないので，時間がある時に順�
 | 12   |          |                      |                    |                      |                      |                      |                   |
 | 13   |          |                      |                    |                      |                      |                      | [空間][ut13-6]    |
 | 14   |          |                      |                    |                      |                      |                      |                   |
-
 
 ## 京大数学(前期)
 
@@ -160,13 +154,6 @@ pdf化した答案の大半には図がないので，時間がある時に順�
 | 2013 | [手書き答案][tk13] |   |   |   |   |   |   |
 | 2014 | [手書き答案][tk14] |   |   |   |   |   |   |
 
-
-
-
-
-
-
-
 ## 東大数学（後期）
 
 | year | 問題一覧      | 1 | 2 | 3 | 4 | 5 | 6 |
@@ -181,16 +168,15 @@ pdf化した答案の大半には図がないので，時間がある時に順�
 | 1996 | [問題][utk96] |   |   |   |   |   |   |
 | 1997 | [問題][utk97] |   |   |   |   |   |   |
 | 1998 | [問題][]      |   |   |   |   |   |   |
-| 1999 | [問題][]      |   |   |   |   |   |   |
+| 1999 | [問題][utk99] |   |   |   |   |   |   |
 | 2000 | [問題][]      |   |   |   |   |   |   |
 | 2001 | [問題][]      |   |   |   |   |   |   |
-| 2002 | [問題][]      |   |   |   |   |   |   |
+| 2002 | [問題][utk02] |   |   |   |   |   |   |
 | 2003 | [問題][utk03] |   |   |   |   |   |   |
 | 2004 | [問題][utk04] |   |   |   |   |   |   |
 | 2005 | [問題][utk05] |   |   |   |   |   |   |
 | 2006 | [問題][utk06] |   |   |   |   |   |   |
 | 2007 | [問題][utk07] |   |   |   |   |   |   |
-
 
 ## 京大数学（後期）
 
@@ -215,24 +201,18 @@ pdf化した答案の大半には図がないので，時間がある時に順�
 | 2005 | [問題][ukk05] |   |   |   |   |   |   |
 | 2006 | [問題][ukk06] |   |   |   |   |   |   |
 
-
-
-
-
-
 ## 東工大数学（後期）
-## 東大数学（文系専用問題）
 
+## 東大数学（文系専用問題）
 
 <!-- 解答ファイルへのpath-->
 [ut61-1]: {% link _pages/ent-ex/solutions/todai/todai-zenki/1961/61-1/ut-61-1.pdf %}
-[ut61-1]: {% link _pages/ent-ex/solutions/todai/todai-zenki/1961/61-1/ut-61-1.pdf %}
+[ut61-1]: {% link_pages/ent-ex/solutions/todai/todai-zenki/1961/61-1/ut-61-1.pdf %}
 [ut61-2]: {% link _pages/ent-ex/solutions/todai/todai-zenki/1961/61-2/ut-61-2.pdf %}
-[ut61-3]: {% link _pages/ent-ex/solutions/todai/todai-zenki/1961/61-3/ut-61-3.pdf %}
+[ut61-3]: {% link_pages/ent-ex/solutions/todai/todai-zenki/1961/61-3/ut-61-3.pdf %}
 [ut61-4]: {% link _pages/ent-ex/solutions/todai/todai-zenki/1961/61-4/ut-61-4.pdf %}
-[ut61-5]: {% link _pages/ent-ex/solutions/todai/todai-zenki/1961/61-5/ut-61-5.pdf %}
+[ut61-5]: {% link_pages/ent-ex/solutions/todai/todai-zenki/1961/61-5/ut-61-5.pdf %}
 [ut61-6]: {% link _pages/ent-ex/solutions/todai/todai-zenki/1961/61-6/ut-61-6.pdf %}
-
 
 {% comment %}
 <!-- [ut62-1]: {% link _pages/ent-ex/solutions/todai/todai-zenki/1962/62-1/ut-62-1.pdf %} -->
@@ -563,91 +543,84 @@ pdf化した答案の大半には図がないので，時間がある時に順�
 [utk95]: {% link _pages/ent-ex/problems/todai/todai_kouki/1995/1995.pdf %}
 [utk96]: {% link _pages/ent-ex/problems/todai/todai_kouki/1996/1996.pdf %}
 [utk97]: {% link _pages/ent-ex/problems/todai/todai_kouki/1997/1997.pdf %}
+[utk99]: {% link _pages/ent-ex/problems/todai/todai_kouki/1999/1999.pdf %}
+[utk02]: {% link _pages/ent-ex/problems/todai/todai_kouki/2002/2002.pdf %}
 [utk03]: {% link _pages/ent-ex/problems/todai/todai_kouki/2003/2003.pdf %}
 [utk04]: {% link _pages/ent-ex/problems/todai/todai_kouki/2004/2004.pdf %}
 [utk05]: {% link _pages/ent-ex/problems/todai/todai_kouki/2005/2005.pdf %}
 [utk06]: {% link _pages/ent-ex/problems/todai/todai_kouki/2006/2006.pdf %}
 [utk07]: {% link _pages/ent-ex/problems/todai/todai_kouki/2007/2007.pdf %}
 
-
-
 [ukk89]: {% link _pages/ent-ex/problems/kyodai/kouki/1989/1989.pdf %}
-[ukk90]: {% link _pages/ent-ex/problems/kyodai/kouki/1990/1990.pdf %}
+[ukk90]: {% link_pages/ent-ex/problems/kyodai/kouki/1990/1990.pdf %}
 [ukk91]: {% link _pages/ent-ex/problems/kyodai/kouki/1991/1991.pdf %}
-[ukk92]: {% link _pages/ent-ex/problems/kyodai/kouki/1992/1992.pdf %}
+[ukk92]: {% link_pages/ent-ex/problems/kyodai/kouki/1992/1992.pdf %}
 [ukk93]: {% link _pages/ent-ex/problems/kyodai/kouki/1993/1993.pdf %}
-[ukk94]: {% link _pages/ent-ex/problems/kyodai/kouki/1994/1994.pdf %}
+[ukk94]: {% link_pages/ent-ex/problems/kyodai/kouki/1994/1994.pdf %}
 [ukk95]: {% link _pages/ent-ex/problems/kyodai/kouki/1995/1995.pdf %}
-[ukk96]: {% link _pages/ent-ex/problems/kyodai/kouki/1996/1996.pdf %}
+[ukk96]: {% link_pages/ent-ex/problems/kyodai/kouki/1996/1996.pdf %}
 [ukk97]: {% link _pages/ent-ex/problems/kyodai/kouki/1997/1997.pdf %}
-[ukk98]: {% link _pages/ent-ex/problems/kyodai/kouki/1998/1998.pdf %}
+[ukk98]: {% link_pages/ent-ex/problems/kyodai/kouki/1998/1998.pdf %}
 [ukk99]: {% link _pages/ent-ex/problems/kyodai/kouki/1999/1999.pdf %}
-[ukk00]: {% link _pages/ent-ex/problems/kyodai/kouki/2000/2000.pdf %}
+[ukk00]: {% link_pages/ent-ex/problems/kyodai/kouki/2000/2000.pdf %}
 [ukk01]: {% link _pages/ent-ex/problems/kyodai/kouki/2001/2001.pdf %}
-[ukk02]: {% link _pages/ent-ex/problems/kyodai/kouki/2002/2002.pdf %}
+[ukk02]: {% link_pages/ent-ex/problems/kyodai/kouki/2002/2002.pdf %}
 [ukk03]: {% link _pages/ent-ex/problems/kyodai/kouki/2003/2003.pdf %}
-[ukk04]: {% link _pages/ent-ex/problems/kyodai/kouki/2004/2004.pdf %}
+[ukk04]: {% link_pages/ent-ex/problems/kyodai/kouki/2004/2004.pdf %}
 [ukk05]: {% link _pages/ent-ex/problems/kyodai/kouki/2005/2005.pdf %}
-[ukk06]: {% link _pages/ent-ex/problems/kyodai/kouki/2006/2006.pdf %}
-
-
+[ukk06]: {% link_pages/ent-ex/problems/kyodai/kouki/2006/2006.pdf %}
 
 [tk61]: {% link _pages/ent-ex/solutions/toukou/toukou-zenki/t1961/t1961.pdf %}
-[tk62]: {% link _pages/ent-ex/solutions/toukou/toukou-zenki/t1962/t1962.pdf %}
+[tk62]: {% link_pages/ent-ex/solutions/toukou/toukou-zenki/t1962/t1962.pdf %}
 [tk63]: {% link _pages/ent-ex/solutions/toukou/toukou-zenki/t1963/t1963.pdf %}
-[tk64]: {% link _pages/ent-ex/solutions/toukou/toukou-zenki/t1964/t1964.pdf %}
+[tk64]: {% link_pages/ent-ex/solutions/toukou/toukou-zenki/t1964/t1964.pdf %}
 [tk65]: {% link _pages/ent-ex/solutions/toukou/toukou-zenki/t1965/t1965.pdf %}
-[tk66]: {% link _pages/ent-ex/solutions/toukou/toukou-zenki/t1966/t1966.pdf %}
+[tk66]: {% link_pages/ent-ex/solutions/toukou/toukou-zenki/t1966/t1966.pdf %}
 [tk67]: {% link _pages/ent-ex/solutions/toukou/toukou-zenki/t1967/t1967.pdf %}
-[tk68]: {% link _pages/ent-ex/solutions/toukou/toukou-zenki/t1968/t1968.pdf %}
+[tk68]: {% link_pages/ent-ex/solutions/toukou/toukou-zenki/t1968/t1968.pdf %}
 [tk69]: {% link _pages/ent-ex/solutions/toukou/toukou-zenki/t1969/t1969.pdf %}
-[tk70]: {% link _pages/ent-ex/solutions/toukou/toukou-zenki/t1970/t1970.pdf %}
+[tk70]: {% link_pages/ent-ex/solutions/toukou/toukou-zenki/t1970/t1970.pdf %}
 [tk71]: {% link _pages/ent-ex/solutions/toukou/toukou-zenki/t1971/t1971.pdf %}
-[tk72]: {% link _pages/ent-ex/solutions/toukou/toukou-zenki/t1972/t1972.pdf %}
+[tk72]: {% link_pages/ent-ex/solutions/toukou/toukou-zenki/t1972/t1972.pdf %}
 [tk73]: {% link _pages/ent-ex/solutions/toukou/toukou-zenki/t1973/t1973.pdf %}
-[tk74]: {% link _pages/ent-ex/solutions/toukou/toukou-zenki/t1974/t1974.pdf %}
+[tk74]: {% link_pages/ent-ex/solutions/toukou/toukou-zenki/t1974/t1974.pdf %}
 [tk75]: {% link _pages/ent-ex/solutions/toukou/toukou-zenki/t1975/t1975.pdf %}
-[tk76]: {% link _pages/ent-ex/solutions/toukou/toukou-zenki/t1976/t1976.pdf %}
+[tk76]: {% link_pages/ent-ex/solutions/toukou/toukou-zenki/t1976/t1976.pdf %}
 [tk77]: {% link _pages/ent-ex/solutions/toukou/toukou-zenki/t1977/t1977.pdf %}
-[tk78]: {% link _pages/ent-ex/solutions/toukou/toukou-zenki/t1978/t1978.pdf %}
+[tk78]: {% link_pages/ent-ex/solutions/toukou/toukou-zenki/t1978/t1978.pdf %}
 [tk79]: {% link _pages/ent-ex/solutions/toukou/toukou-zenki/t1979/t1979.pdf %}
-[tk80]: {% link _pages/ent-ex/solutions/toukou/toukou-zenki/t1980/t1980.pdf %}
+[tk80]: {% link_pages/ent-ex/solutions/toukou/toukou-zenki/t1980/t1980.pdf %}
 [tk81]: {% link _pages/ent-ex/solutions/toukou/toukou-zenki/t1981/t1981.pdf %}
-[tk82]: {% link _pages/ent-ex/solutions/toukou/toukou-zenki/t1982/t1982.pdf %}
+[tk82]: {% link_pages/ent-ex/solutions/toukou/toukou-zenki/t1982/t1982.pdf %}
 [tk83]: {% link _pages/ent-ex/solutions/toukou/toukou-zenki/t1983/t1983.pdf %}
-[tk84]: {% link _pages/ent-ex/solutions/toukou/toukou-zenki/t1984/t1984.pdf %}
+[tk84]: {% link_pages/ent-ex/solutions/toukou/toukou-zenki/t1984/t1984.pdf %}
 [tk85]: {% link _pages/ent-ex/solutions/toukou/toukou-zenki/t1985/t1985.pdf %}
-[tk86]: {% link _pages/ent-ex/solutions/toukou/toukou-zenki/t1986/t1986.pdf %}
+[tk86]: {% link_pages/ent-ex/solutions/toukou/toukou-zenki/t1986/t1986.pdf %}
 [tk87]: {% link _pages/ent-ex/solutions/toukou/toukou-zenki/t1987/t1987.pdf %}
-[tk88]: {% link _pages/ent-ex/solutions/toukou/toukou-zenki/t1988/t1988.pdf %}
+[tk88]: {% link_pages/ent-ex/solutions/toukou/toukou-zenki/t1988/t1988.pdf %}
 [tk89]: {% link _pages/ent-ex/solutions/toukou/toukou-zenki/t1989/t1989.pdf %}
-[tk90]: {% link _pages/ent-ex/solutions/toukou/toukou-zenki/t1990/t1990.pdf %}
+[tk90]: {% link_pages/ent-ex/solutions/toukou/toukou-zenki/t1990/t1990.pdf %}
 [tk91]: {% link _pages/ent-ex/solutions/toukou/toukou-zenki/t1991/t1991.pdf %}
-[tk92]: {% link _pages/ent-ex/solutions/toukou/toukou-zenki/t1992/t1992.pdf %}
+[tk92]: {% link_pages/ent-ex/solutions/toukou/toukou-zenki/t1992/t1992.pdf %}
 [tk93]: {% link _pages/ent-ex/solutions/toukou/toukou-zenki/t1993/t1993.pdf %}
-[tk94]: {% link _pages/ent-ex/solutions/toukou/toukou-zenki/t1994/t1994.pdf %}
+[tk94]: {% link_pages/ent-ex/solutions/toukou/toukou-zenki/t1994/t1994.pdf %}
 [tk95]: {% link _pages/ent-ex/solutions/toukou/toukou-zenki/t1995/t1995.pdf %}
-[tk96]: {% link _pages/ent-ex/solutions/toukou/toukou-zenki/t1996/t1996.pdf %}
+[tk96]: {% link_pages/ent-ex/solutions/toukou/toukou-zenki/t1996/t1996.pdf %}
 [tk97]: {% link _pages/ent-ex/solutions/toukou/toukou-zenki/t1997/t1997.pdf %}
-[tk98]: {% link _pages/ent-ex/solutions/toukou/toukou-zenki/t1998/t1998.pdf %}
+[tk98]: {% link_pages/ent-ex/solutions/toukou/toukou-zenki/t1998/t1998.pdf %}
 [tk99]: {% link _pages/ent-ex/solutions/toukou/toukou-zenki/t1999/t1999.pdf %}
-[tk00]: {% link _pages/ent-ex/solutions/toukou/toukou-zenki/t2000/t2000.pdf %}
+[tk00]: {% link_pages/ent-ex/solutions/toukou/toukou-zenki/t2000/t2000.pdf %}
 [tk01]: {% link _pages/ent-ex/solutions/toukou/toukou-zenki/t2001/t2001.pdf %}
-[tk02]: {% link _pages/ent-ex/solutions/toukou/toukou-zenki/t2002/t2002.pdf %}
+[tk02]: {% link_pages/ent-ex/solutions/toukou/toukou-zenki/t2002/t2002.pdf %}
 [tk03]: {% link _pages/ent-ex/solutions/toukou/toukou-zenki/t2003/t2003.pdf %}
-[tk04]: {% link _pages/ent-ex/solutions/toukou/toukou-zenki/t2004/t2004.pdf %}
+[tk04]: {% link_pages/ent-ex/solutions/toukou/toukou-zenki/t2004/t2004.pdf %}
 [tk05]: {% link _pages/ent-ex/solutions/toukou/toukou-zenki/t2005/t2005.pdf %}
-[tk06]: {% link _pages/ent-ex/solutions/toukou/toukou-zenki/t2006/t2006.pdf %}
+[tk06]: {% link_pages/ent-ex/solutions/toukou/toukou-zenki/t2006/t2006.pdf %}
 [tk07]: {% link _pages/ent-ex/solutions/toukou/toukou-zenki/t2007/t2007.pdf %}
-[tk08]: {% link _pages/ent-ex/solutions/toukou/toukou-zenki/t2008/t2008.pdf %}
+[tk08]: {% link_pages/ent-ex/solutions/toukou/toukou-zenki/t2008/t2008.pdf %}
 [tk09]: {% link _pages/ent-ex/solutions/toukou/toukou-zenki/t2009/t2009.pdf %}
-[tk10]: {% link _pages/ent-ex/solutions/toukou/toukou-zenki/t2010/t2010.pdf %}
+[tk10]: {% link_pages/ent-ex/solutions/toukou/toukou-zenki/t2010/t2010.pdf %}
 [tk11]: {% link _pages/ent-ex/solutions/toukou/toukou-zenki/t2011/t2011.pdf %}
-[tk12]: {% link _pages/ent-ex/solutions/toukou/toukou-zenki/t2012/t2012.pdf %}
+[tk12]: {% link_pages/ent-ex/solutions/toukou/toukou-zenki/t2012/t2012.pdf %}
 [tk13]: {% link _pages/ent-ex/solutions/toukou/toukou-zenki/t2013/t2013.pdf %}
-[tk14]: {% link _pages/ent-ex/solutions/toukou/toukou-zenki/t2014/t2014.pdf %}
-
-
-
-
-
+[tk14]: {% link_pages/ent-ex/solutions/toukou/toukou-zenki/t2014/t2014.pdf %}
