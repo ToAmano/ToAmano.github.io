@@ -24,6 +24,14 @@ description: The top-page of Python.
 
 1. __T. Amano__, T. Yamazaki, S. Tsuneyuki, "The first-principles study of THz dielectric properties with a machine learning model for dipole moment", accepted for Proceedings of 34rd IUPAP Conference on Computational Physics (refereed).
 
+## Book
+
+1. __T. Amano__, "First-Principles and Machine Learning Study of Anharmonic Vibration and Dielectric Properties of Materials", Springer Thesis (2025). [[link](https://link.springer.com/book/10.1007/978-981-96-4024-9)]
+
+## Thesis
+
+1. __T. Amano__, "First-principles and machine learning study of anharmonic vibration and dielectric properties of materials". [[link](https://repository.dl.itc.u-tokyo.ac.jp/records/2012621)]
+
 
 ## Oral presentations
 
