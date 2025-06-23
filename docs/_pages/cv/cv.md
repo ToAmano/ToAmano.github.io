@@ -32,6 +32,9 @@ description: my cv
 
 1. __T. Amano__, "First-principles and machine learning study of anharmonic vibration and dielectric properties of materials". [[link](https://repository.dl.itc.u-tokyo.ac.jp/records/2012621)]
 
+## Others
+
+1. 生成AIの将来技術動向[[link](https://www.pwc.com/jp/ja/knowledge/thoughtleadership/generative-ai-survey2025-consideration.html)]
 
 ## Oral presentations
 
