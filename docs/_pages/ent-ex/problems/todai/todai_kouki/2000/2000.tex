@@ -1,0 +1,90 @@
+ % LuaLaTeX文書; 文字コーAドはUTF-8
+ \documentclass[unicode,12pt, A4j]{ltjsarticle}% 'unicode'が必要
+ %\usepackage{luatexja}% 日本語したい
+ \usepackage{luatexja-fontspec}
+ %\usepackage[hiragino-pron]{luatexja-preset}% IPAexフォントしたい(ipaex)
+ \usepackage[hiragino-pron,deluxe,expert,bold]{luatexja-preset}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{calc}
+\usepackage{ifthen}
+ \usepackage[english]{babel}%多言語文書を作成する
+ \usepackage{amsmath,amssymb}%標準数式表現を拡大する
+ \usepackage{physics}
+ \usepackage[subpreambles=true,sort=true]{standalone}
+% \renewcommand{\kanjifamilydefault}{\gtdefault}% 既定をゴシック体に
+
+ \usepackage{mhchem}
+ % あとは欧文の場合と同じ
+
+
+
+
+  \usepackage{caption}
+  \usepackage[subrefformat=parens]{subcaption}
+\title{東大数学理科後期2000年度}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{問題1}
+$k$ を正整数とし, $x$ を変数とする $k$ 次多項式 $P_k(x)$ について次の条件
+\[
+(C) \quad
+\begin{cases}
+P_k(x) - P_k(x-1) = x^{k-1} \\
+P_k(0) = 0
+\end{cases}
+\]
+を考える. ただし, $x^0 = 1$ と定める. このとき, 次の問に答えよ.
+\begin{enumerate}
+    \item $k = 1, 2$ に対し, $P_k(x)$ を求めよ.
+    \item すべての $k \ge 3$ に対し, 条件 $(C)$ を満たす $P_k(x)$ が存在し, しかもただ一つであることを示せ.
+    \item 正整数 $k$ に対し, $k$ 次の多項式 $Q_k(x)$ を次の条件が成立するように定める.
+    \[
+    \begin{cases}
+    Q_k(0) = Q_k(1) = \cdots = Q_k(k-1) = 0 \\
+    Q_k(k) = 1
+    \end{cases}
+    \]
+    このとき, $k$ 個の整数 $c_1, c_2, \dots, c_k$ がそれぞれただ一つ存在して,
+    \[
+    P_k(x) = \sum_{j=1}^k c_j Q_j(x)
+    \]
+    と表されることを示せ.
+\end{enumerate}
+
+
+\section{問題2}
+正整数 $l$ を与える. 各正整数 $n$ に対して, 関数
+\[
+y = x^l \sin nx, \quad 0 \le x \le 2\pi
+\]
+のグラフと $x$ 軸で囲まれる図形を $C_n$ とする.
+\begin{enumerate}
+    \item $C_n$ を $x$ 軸のまわりに回転させてできる回転体の体積を $V_n$ とするとき, 極限値
+    \[
+    \lim_{n \to \infty} V_n
+    \]
+    を求めよ.
+    \item $C_n$ を $y$ 軸のまわりに回転させてできる回転体の体積を $W_n$ とするとき, 極限値
+    \[
+    \lim_{n \to \infty} W_n
+    \]
+    を求めよ.
+\end{enumerate}
+
+\section{問題3}
+背番号 1 から 5 までを順に付けた 5 人が, 何も置かれていないテーブルに向かっている. 最初 5 人は各自 3 枚のコインを持っている. それを背番号順に必ず 1 枚または 2 枚テーブルの上に置いてゆく. ただし, 手もとに 2 枚以上のコインがあるときに 1 枚だけコインを置く確率を $p$ とし, $p$ は人によらず一定とする.
+
+背番号 5 の人が置き終わったところ (一巡目が終わったところ) で, 再び背番号 1 の人から順に手もとに残ったコインをテーブルに置いてゆく.
+
+\begin{enumerate}
+    \item 一巡目が終わったとき, テーブルの上に 7 枚のコインが置かれている確率 $Q$ を求めよ. また, その $Q$ を最大にする $p$ の値と, そのときの $Q$ の値を求めよ.
+    \item 一巡目を終えるとき, 背番号 5 の人が, テーブルの上に 7 枚目のコインを置く確率 $R$ を求めよ. また, その $R$ を最大にする $p$ の値を求めよ.
+    \item 二巡目が終わったときのテーブルの上のコインの数の期待値を求めよ.
+\end{enumerate}
+
+\end{document}
