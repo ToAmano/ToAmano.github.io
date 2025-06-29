@@ -205,7 +205,7 @@ pdf化した答案の大半には図がないので，時間がある時に順�
 | 2011 |  | [手書き答案][tkka11]   |   |   |
 
 
-## 東工大数学（後期）
+## 京大数学（後期）
 
 | year | 問題一覧      | 1 | 2 | 3 | 4 | 5 | 6 |
 |------|---------------|---|---|---|---|---|---|
@@ -656,44 +656,44 @@ pdf化した答案の大半には図がないので，時間がある時に順�
 [tk14]: {% link _pages/ent-ex/solutions/toukou/toukou-zenki/t2014/t2014.pdf %}
 
 <!-- 東大 後期-->
-[utka90]: {% link _pages/ent-ex/solutions/東京後期_整理完了/東大1990.pdf}
-[utka91]: {% link _pages/ent-ex/solutions/東京後期_整理完了/東大1991.pdf}
-[utka92]: {% link _pages/ent-ex/solutions/東京後期_整理完了/東大1992.pdf}
-[utka93]: {% link _pages/ent-ex/solutions/東京後期_整理完了/東大1993.pdf}
-[utka94]: {% link _pages/ent-ex/solutions/東京後期_整理完了/東大1994.pdf}
-[utka95]: {% link _pages/ent-ex/solutions/東京後期_整理完了/東大1995.pdf}
-[utka96]: {% link _pages/ent-ex/solutions/東京後期_整理完了/東大1996.pdf}
-[utka97]: {% link _pages/ent-ex/solutions/東京後期_整理完了/東大1997.pdf}
-[utka98]: {% link _pages/ent-ex/solutions/東京後期_整理完了/東大1998.pdf}
-[utka99]: {% link _pages/ent-ex/solutions/東京後期_整理完了/東大1999.pdf}
-[utka00]: {% link _pages/ent-ex/solutions/東京後期_整理完了/東大2000.pdf}
-[utka01]: {% link _pages/ent-ex/solutions/東京後期_整理完了/東大2001.pdf}
-[utka02]: {% link _pages/ent-ex/solutions/東京後期_整理完了/東大2002.pdf}
-[utka03]: {% link _pages/ent-ex/solutions/東京後期_整理完了/東大2003.pdf}
-[utka04]: {% link _pages/ent-ex/solutions/東京後期_整理完了/東大2004.pdf}
-[utka05]: {% link _pages/ent-ex/solutions/東京後期_整理完了/東大2005.pdf}
-[utka06]: {% link _pages/ent-ex/solutions/東京後期_整理完了/東大2006.pdf}
+[utka90]: {% link _pages/ent-ex/solutions/東京後期_整理完了/東大1990.pdf %}
+[utka91]: {% link _pages/ent-ex/solutions/東京後期_整理完了/東大1991.pdf %}
+[utka92]: {% link _pages/ent-ex/solutions/東京後期_整理完了/東大1992.pdf %}
+[utka93]: {% link _pages/ent-ex/solutions/東京後期_整理完了/東大1993.pdf %}
+[utka94]: {% link _pages/ent-ex/solutions/東京後期_整理完了/東大1994.pdf %}
+[utka95]: {% link _pages/ent-ex/solutions/東京後期_整理完了/東大1995.pdf %}
+[utka96]: {% link _pages/ent-ex/solutions/東京後期_整理完了/東大1996.pdf %}
+[utka97]: {% link _pages/ent-ex/solutions/東京後期_整理完了/東大1997.pdf %}
+[utka98]: {% link _pages/ent-ex/solutions/東京後期_整理完了/東大1998.pdf %}
+[utka99]: {% link _pages/ent-ex/solutions/東京後期_整理完了/東大1999.pdf %}
+[utka00]: {% link _pages/ent-ex/solutions/東京後期_整理完了/東大2000.pdf %}
+[utka01]: {% link _pages/ent-ex/solutions/東京後期_整理完了/東大2001.pdf %}
+[utka02]: {% link _pages/ent-ex/solutions/東京後期_整理完了/東大2002.pdf %}
+[utka03]: {% link _pages/ent-ex/solutions/東京後期_整理完了/東大2003.pdf %}
+[utka04]: {% link _pages/ent-ex/solutions/東京後期_整理完了/東大2004.pdf %}
+[utka05]: {% link _pages/ent-ex/solutions/東京後期_整理完了/東大2005.pdf %}
+[utka06]: {% link _pages/ent-ex/solutions/東京後期_整理完了/東大2006.pdf %}
 
 <!-- 東工大 後期-->
-[tkka90]: {% link _pages/ent-ex/solutions/東工後期_整理完了/TK1990.pdf}
-[tkka91]: {% link _pages/ent-ex/solutions/東工後期_整理完了/TK1991.pdf}
-[tkka92]: {% link _pages/ent-ex/solutions/東工後期_整理完了/TK1992.pdf}
-[tkka93]: {% link _pages/ent-ex/solutions/東工後期_整理完了/TK1993.pdf}
-[tkka94]: {% link _pages/ent-ex/solutions/東工後期_整理完了/TK1994.pdf}
-[tkka95]: {% link _pages/ent-ex/solutions/東工後期_整理完了/TK1995.pdf}
-[tkka96]: {% link _pages/ent-ex/solutions/東工後期_整理完了/TK1996.pdf}
-[tkka97]: {% link _pages/ent-ex/solutions/東工後期_整理完了/TK1997.pdf}
-[tkka98]: {% link _pages/ent-ex/solutions/東工後期_整理完了/TK1998.pdf}
-[tkka99]: {% link _pages/ent-ex/solutions/東工後期_整理完了/TK1999.pdf}
-[tkka00]: {% link _pages/ent-ex/solutions/東工後期_整理完了/TK2000.pdf}
-[tkka01]: {% link _pages/ent-ex/solutions/東工後期_整理完了/TK2001.pdf}
-[tkka02]: {% link _pages/ent-ex/solutions/東工後期_整理完了/TK2002.pdf}
-[tkka03]: {% link _pages/ent-ex/solutions/東工後期_整理完了/TK2003.pdf}
-[tkka04]: {% link _pages/ent-ex/solutions/東工後期_整理完了/TK2004.pdf}
-[tkka05]: {% link _pages/ent-ex/solutions/東工後期_整理完了/TK2005.pdf}
-[tkka06]: {% link _pages/ent-ex/solutions/東工後期_整理完了/TK2006.pdf}
-[tkka07]: {% link _pages/ent-ex/solutions/東工後期_整理完了/TK2007.pdf}
-[tkka08]: {% link _pages/ent-ex/solutions/東工後期_整理完了/TK2008.pdf}
-[tkka09]: {% link _pages/ent-ex/solutions/東工後期_整理完了/TK2009.pdf}
-[tkka10]: {% link _pages/ent-ex/solutions/東工後期_整理完了/TK2010.pdf}
-[tkka11]: {% link _pages/ent-ex/solutions/東工後期_整理完了/TK2011.pdf}
+[tkka90]: {% link _pages/ent-ex/solutions/東工後期_整理完了/TK1990.pdf %}
+[tkka91]: {% link _pages/ent-ex/solutions/東工後期_整理完了/TK1991.pdf %}
+[tkka92]: {% link _pages/ent-ex/solutions/東工後期_整理完了/TK1992.pdf %}
+[tkka93]: {% link _pages/ent-ex/solutions/東工後期_整理完了/TK1993.pdf %}
+[tkka94]: {% link _pages/ent-ex/solutions/東工後期_整理完了/TK1994.pdf %}
+[tkka95]: {% link _pages/ent-ex/solutions/東工後期_整理完了/TK1995.pdf %}
+[tkka96]: {% link _pages/ent-ex/solutions/東工後期_整理完了/TK1996.pdf %}
+[tkka97]: {% link _pages/ent-ex/solutions/東工後期_整理完了/TK1997.pdf %}
+[tkka98]: {% link _pages/ent-ex/solutions/東工後期_整理完了/TK1998.pdf %}
+[tkka99]: {% link _pages/ent-ex/solutions/東工後期_整理完了/TK1999.pdf %}
+[tkka00]: {% link _pages/ent-ex/solutions/東工後期_整理完了/TK2000.pdf %}
+[tkka01]: {% link _pages/ent-ex/solutions/東工後期_整理完了/TK2001.pdf %}
+[tkka02]: {% link _pages/ent-ex/solutions/東工後期_整理完了/TK2002.pdf %}
+[tkka03]: {% link _pages/ent-ex/solutions/東工後期_整理完了/TK2003.pdf %}
+[tkka04]: {% link _pages/ent-ex/solutions/東工後期_整理完了/TK2004.pdf %}
+[tkka05]: {% link _pages/ent-ex/solutions/東工後期_整理完了/TK2005.pdf %}
+[tkka06]: {% link _pages/ent-ex/solutions/東工後期_整理完了/TK2006.pdf %}
+[tkka07]: {% link _pages/ent-ex/solutions/東工後期_整理完了/TK2007.pdf %}
+[tkka08]: {% link _pages/ent-ex/solutions/東工後期_整理完了/TK2008.pdf %}
+[tkka09]: {% link _pages/ent-ex/solutions/東工後期_整理完了/TK2009.pdf %}
+[tkka10]: {% link _pages/ent-ex/solutions/東工後期_整理完了/TK2010.pdf %}
+[tkka11]: {% link _pages/ent-ex/solutions/東工後期_整理完了/TK2011.pdf %}
