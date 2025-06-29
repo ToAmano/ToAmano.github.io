@@ -1,0 +1,38 @@
+ % LuaLaTeX文書; 文字コーAドはUTF-8
+ \documentclass[unicode,12pt, a4paper]{ltjsarticle}% 'unicode'が必要
+ %\usepackage{luatexja}% 日本語したい
+ \usepackage{luatexja-fontspec}
+ %\usepackage[hiragino-pron]{luatexja-preset}% IPAexフォントしたい(ipaex)
+ \usepackage[hiragino-pron,deluxe,expert,bold]{luatexja-preset}
+
+ \usepackage[english]{babel}%多言語文書を作成する
+ \usepackage{amsmath,amssymb}%標準数式表現を拡大する
+ \usepackage{physics}
+ \usepackage[subpreambles=true,sort=true]{standalone}
+% \renewcommand{\kanjifamilydefault}{\gtdefault}% 既定をゴシック体に
+ \usepackage[backend=bibtex,style=phys,articletitle=false,biblabel=brackets,chaptertitle=false,pageranges=false]{biblatex}
+ %\usepackage[style=authoryear,backend=bibtex]{biblatex}
+
+
+ %\addbibresource{../references/tio2_ref.bib}
+ \usepackage{mhchem}
+ % あとは欧文の場合と同じ
+
+  \usepackage{caption}
+  \usepackage[subrefformat=parens]{subcaption}
+\title{東工大理系後期1993年度}
+
+\begin{document}
+\maketitle
+\section{問題1}
+一辺の長さが $1$ の立方体を，中心を通る対角線のうちの一本を軸として回転させたとき，この立方体が通過する部分の体積を求めよ．
+
+\section{問題2}
+$A=\begin{pmatrix} 2 & 1 \\ 0 & 2 \end{pmatrix}$ とし，正の整数 $n$ に対し $A^n = \begin{pmatrix} a_n & b_n \\ c_n & d_n \end{pmatrix}$ とおく．
+    \begin{enumerate}
+        \item $a_n, b_n, c_n, d_n$ を求めよ．
+        \item $a_n, b_n, c_n, d_n$ を $3$ で割った余りを $\alpha_n, \beta_n, \gamma_n, \delta_n$ と書く．
+        $\begin{pmatrix} \alpha_n & \beta_n \\ \gamma_n & \delta_n \end{pmatrix} = \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix}$ となるための必要十分条件は $n$ が $6$ の倍数であることを示せ．
+    \end{enumerate}
+
+\end{document}

@@ -1,0 +1,42 @@
+ % LuaLaTeX文書; 文字コーAドはUTF-8
+ \documentclass[unicode,12pt, a4paper]{ltjsarticle}% 'unicode'が必要
+ %\usepackage{luatexja}% 日本語したい
+ \usepackage{luatexja-fontspec}
+ %\usepackage[hiragino-pron]{luatexja-preset}% IPAexフォントしたい(ipaex)
+ \usepackage[hiragino-pron,deluxe,expert,bold]{luatexja-preset}
+
+ \usepackage[english]{babel}%多言語文書を作成する
+ \usepackage{amsmath,amssymb}%標準数式表現を拡大する
+ \usepackage{physics}
+ \usepackage[subpreambles=true,sort=true]{standalone}
+% \renewcommand{\kanjifamilydefault}{\gtdefault}% 既定をゴシック体に
+ \usepackage[backend=bibtex,style=phys,articletitle=false,biblabel=brackets,chaptertitle=false,pageranges=false]{biblatex}
+ %\usepackage[style=authoryear,backend=bibtex]{biblatex}
+
+
+ %\addbibresource{../references/tio2_ref.bib}
+ \usepackage{mhchem}
+ % あとは欧文の場合と同じ
+
+  \usepackage{caption}
+  \usepackage[subrefformat=parens]{subcaption}
+\title{東工大理系後期1995年度}
+
+\begin{document}
+\maketitle
+\section{問題1}
+一辺の長さが $2$ の立方体 $C$ がある．$S_0$ を $C$ の $6$ つの面に内接する球とする．次に $S_0$ に外接し，$C$ の $3$ つの面と内接する球 $S_1$ を取る．$S_1$ に外接し，$C$ の $3$ つの面に内接する球 $S_2$ を $S_1$ の外側（$S_0$ と反対側）に取る．以下帰納的に，$S_0, \ldots, S_n$ まで取れたとして，$S_n$ に外接し，$C$ の $3$ つの面に内接する球 $S_{n+1}$ を $S_n$ の外側に取る．
+    \begin{enumerate}
+        \item $S_n$ の半径を $n$ の式で表せ．
+        \item 立方体 $C$ の中でどの $S_n$ ($n=0,1,2,\ldots$) にも含まれない部分の体積を求めよ．
+    \end{enumerate}
+
+
+\section{問題2}
+楕円 $C: \frac{x^2}{a^2} + y^2 = 1$ ($a \ge 1$) が与えられている．
+    \begin{enumerate}
+        \item $C$ の外部の点 $P(X,Y)$ から $C$ への $2$ 接線が直交するように $P$ を動かす．$P$ の軌跡を求めよ．
+        \item $S$ を (1) で求めた $P$ の軌跡とする．$S$ と $C$ で囲まれた部分を直線 $x=2a$ を軸として，回転してできる回転体の体積を求めよ．
+    \end{enumerate}
+
+\end{document}

@@ -1,0 +1,45 @@
+ % LuaLaTeX文書; 文字コーAドはUTF-8
+ \documentclass[unicode,12pt, a4paper]{ltjsarticle}% 'unicode'が必要
+ %\usepackage{luatexja}% 日本語したい
+ \usepackage{luatexja-fontspec}
+ %\usepackage[hiragino-pron]{luatexja-preset}% IPAexフォントしたい(ipaex)
+ \usepackage[hiragino-pron,deluxe,expert,bold]{luatexja-preset}
+
+ \usepackage[english]{babel}%多言語文書を作成する
+ \usepackage{amsmath,amssymb}%標準数式表現を拡大する
+ \usepackage{physics}
+ \usepackage[subpreambles=true,sort=true]{standalone}
+% \renewcommand{\kanjifamilydefault}{\gtdefault}% 既定をゴシック体に
+ \usepackage[backend=bibtex,style=phys,articletitle=false,biblabel=brackets,chaptertitle=false,pageranges=false]{biblatex}
+ %\usepackage[style=authoryear,backend=bibtex]{biblatex}
+
+
+ %\addbibresource{../references/tio2_ref.bib}
+ \usepackage{mhchem}
+ % あとは欧文の場合と同じ
+
+  \usepackage{caption}
+  \usepackage[subrefformat=parens]{subcaption}
+\title{東工大理系後期1990年度}
+
+\begin{document}
+\maketitle
+\section{問題1}
+$(x+1)(x-2)$ の小数第 $1$ 位を四捨五入したものが $1+5x$ と等しくなるような実数 $x$ を求めよ．
+
+\section{問題2}
+\quad $n$ を $2$ 以上の整数とする．
+
+
+\begin{enumerate}
+  \item $n-1$ 次多項式 $P_n(x)$ と $n$ 次多項式 $Q_n(x)$ で実数 $\theta$ に対して
+\[ \sin(2n\theta) = n \sin(2\theta) P_n(\sin^2\theta), \quad \cos(2n\theta) = Q_n(\sin^2\theta) \]
+を満たすものが存在することを帰納法を用いて示せ．
+  \item $k=1, 2, \dots, n-1$ に対して $\alpha_k = \left(\sin\frac{k\pi}{2n}\right)^{-2}$ とおくと
+\[ P_n(x) = (1-\alpha_1 x)(1-\alpha_2 x)\cdots(1-\alpha_{n-1} x) \]
+となることを示せ．
+  \item $\sum_{k=1}^{n-1} \alpha_k = \frac{2n^2-2}{3}$ を示せ．
+\end{enumerate}
+
+
+\end{document}

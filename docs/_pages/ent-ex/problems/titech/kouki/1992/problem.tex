@@ -1,0 +1,34 @@
+ % LuaLaTeX文書; 文字コーAドはUTF-8
+ \documentclass[unicode,12pt, a4paper]{ltjsarticle}% 'unicode'が必要
+ %\usepackage{luatexja}% 日本語したい
+ \usepackage{luatexja-fontspec}
+ %\usepackage[hiragino-pron]{luatexja-preset}% IPAexフォントしたい(ipaex)
+ \usepackage[hiragino-pron,deluxe,expert,bold]{luatexja-preset}
+
+ \usepackage[english]{babel}%多言語文書を作成する
+ \usepackage{amsmath,amssymb}%標準数式表現を拡大する
+ \usepackage{physics}
+ \usepackage[subpreambles=true,sort=true]{standalone}
+% \renewcommand{\kanjifamilydefault}{\gtdefault}% 既定をゴシック体に
+ \usepackage[backend=bibtex,style=phys,articletitle=false,biblabel=brackets,chaptertitle=false,pageranges=false]{biblatex}
+ %\usepackage[style=authoryear,backend=bibtex]{biblatex}
+
+
+ %\addbibresource{../references/tio2_ref.bib}
+ \usepackage{mhchem}
+ % あとは欧文の場合と同じ
+
+  \usepackage{caption}
+  \usepackage[subrefformat=parens]{subcaption}
+\title{東工大理系後期1992年度}
+
+\begin{document}
+\maketitle
+\section{問題1}
+$x$ の関数 $\displaystyle F(x) = \int_0^1 \frac{|t-x|}{t+1} dt$ の最小値を求めよ．
+
+\section{問題2}
+$0 < a < 1$ とする．座標平面上で原点 $A_0$ から出発して $x$ 軸の正の方向に $a$ だけ進んだ点を $A_1$ とする．次に $A_1$ で進行方向を反時計回りに $120^\circ$ 回転し $a^2$ だけ進んだ点を $A_2$ とする．以後同様に $A_{n-1}$ で反時計回りに $120^\circ$ 回転して $a^n$ だけ進んだ点を $A_n$ とする．このとき点列 $A_0, A_1, A_2, \dots$ の極限の座標を求めよ．
+
+
+\end{document}

@@ -1,0 +1,37 @@
+ % LuaLaTeX文書; 文字コーAドはUTF-8
+ \documentclass[unicode,12pt, a4paper]{ltjsarticle}% 'unicode'が必要
+ %\usepackage{luatexja}% 日本語したい
+ \usepackage{luatexja-fontspec}
+ %\usepackage[hiragino-pron]{luatexja-preset}% IPAexフォントしたい(ipaex)
+ \usepackage[hiragino-pron,deluxe,expert,bold]{luatexja-preset}
+
+ \usepackage[english]{babel}%多言語文書を作成する
+ \usepackage{amsmath,amssymb}%標準数式表現を拡大する
+ \usepackage{physics}
+ \usepackage[subpreambles=true,sort=true]{standalone}
+% \renewcommand{\kanjifamilydefault}{\gtdefault}% 既定をゴシック体に
+ \usepackage[backend=bibtex,style=phys,articletitle=false,biblabel=brackets,chaptertitle=false,pageranges=false]{biblatex}
+ %\usepackage[style=authoryear,backend=bibtex]{biblatex}
+
+
+ %\addbibresource{../references/tio2_ref.bib}
+ \usepackage{mhchem}
+ % あとは欧文の場合と同じ
+
+  \usepackage{caption}
+  \usepackage[subrefformat=parens]{subcaption}
+\title{東工大理系後期1991年度}
+
+\begin{document}
+\maketitle
+\section{問題1}
+10進表示の$n$桁の正の整数で，隣り合う桁の数字が互いに相異なるような数の個数 を$a_n$とするとき，次の問いに答えよ．
+    \begin{enumerate}
+        \item $a_n$を求めよ．
+        \item 上の数のうちで，1の位の数字が0である数の個数を$b_n$とするとき，$ \lim_{n \to \infty} \frac{b_n}{a_n}$を求めよ．
+    \end{enumerate}
+
+\section{問題2}
+原点Oを中心とする半径2の円Kの内部に，一辺の長さが2で対角線の交点がO となるような正方形ABCDをとる．K上の点Pにおいて，線分POと角$\theta$で交わる2 本の半直線を引く．このとき，PがK上のどのような位置にあっても，これら2本の半直線が正方形ABCDを通るような$\theta$の最大値を求めよ．
+
+\end{document}

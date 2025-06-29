@@ -1,0 +1,46 @@
+ % LuaLaTeX文書; 文字コーAドはUTF-8
+ \documentclass[unicode,12pt, a4paper]{ltjsarticle}% 'unicode'が必要
+ %\usepackage{luatexja}% 日本語したい
+ \usepackage{luatexja-fontspec}
+ %\usepackage[hiragino-pron]{luatexja-preset}% IPAexフォントしたい(ipaex)
+ \usepackage[hiragino-pron,deluxe,expert,bold]{luatexja-preset}
+
+ \usepackage[english]{babel}%多言語文書を作成する
+ \usepackage{amsmath,amssymb}%標準数式表現を拡大する
+ \usepackage{physics}
+ \usepackage[subpreambles=true,sort=true]{standalone}
+% \renewcommand{\kanjifamilydefault}{\gtdefault}% 既定をゴシック体に
+ \usepackage[backend=bibtex,style=phys,articletitle=false,biblabel=brackets,chaptertitle=false,pageranges=false]{biblatex}
+ %\usepackage[style=authoryear,backend=bibtex]{biblatex}
+
+
+ %\addbibresource{../references/tio2_ref.bib}
+ \usepackage{mhchem}
+ % あとは欧文の場合と同じ
+
+  \usepackage{caption}
+  \usepackage[subrefformat=parens]{subcaption}
+\title{東工大理系後期1994年度}
+
+\begin{document}
+\maketitle
+\section{問題1}
+関数 $f(x)$ に対し
+\[ F(x) = \int_0^x f(t)dt \]
+とおく．ある定数 $a, b, c$ が存在して
+\[ F(x) = x^2 + a|x-b| + cx \]
+が常に成立し，さらに $3$ つの条件
+\begin{enumerate}
+    \item[(i)] $f(x)$ は連続
+    \item[(ii)] $F(1) = 0$
+    \item[(iii)] $f(0) = 1$
+\end{enumerate}
+が満たされているとする．このとき $f(x)$ を求めよ．
+
+
+\section{問題2}
+自然数 $n=1,2,3,\cdots\cdots$ に対して，$(2-\sqrt{3})^n$ という形の数を考える．これらの数
+はいずれも，それぞれ適当な自然数 $m$ が存在して $\sqrt{m}-\sqrt{m-1}$ という表示をもつこと
+を示せ．
+
+\end{document}
