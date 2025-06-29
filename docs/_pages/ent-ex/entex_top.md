@@ -596,12 +596,12 @@ pdf化した答案の大半には図がないので，時間がある時に順�
 [ukk05]: {% link _pages/ent-ex/problems/kyodai/kouki/2005/2005.pdf %}
 [ukk06]: {% link _pages/ent-ex/problems/kyodai/kouki/2006/2006.pdf %}
 
-[ttk90]: {% link _pages/ent-ex/problems/titech/kouki/1990/problem.pdf %}
-[ttk91]: {% link _pages/ent-ex/problems/titech/kouki/1991/problem.pdf %}
-[ttk92]: {% link _pages/ent-ex/problems/titech/kouki/1992/problem.pdf %}
-[ttk93]: {% link _pages/ent-ex/problems/titech/kouki/1993/problem.pdf %}
-[ttk94]: {% link _pages/ent-ex/problems/titech/kouki/1994/problem.pdf %}
-[ttk95]: {% link _pages/ent-ex/problems/titech/kouki/1995/problem.pdf %}
+[tkk90]: {% link _pages/ent-ex/problems/titech/kouki/1990/problem.pdf %}
+[tkk91]: {% link _pages/ent-ex/problems/titech/kouki/1991/problem.pdf %}
+[tkk92]: {% link _pages/ent-ex/problems/titech/kouki/1992/problem.pdf %}
+[tkk93]: {% link _pages/ent-ex/problems/titech/kouki/1993/problem.pdf %}
+[tkk94]: {% link _pages/ent-ex/problems/titech/kouki/1994/problem.pdf %}
+[tkk95]: {% link _pages/ent-ex/problems/titech/kouki/1995/problem.pdf %}
 
 <!-- 手書き答案へのpath-->
 
