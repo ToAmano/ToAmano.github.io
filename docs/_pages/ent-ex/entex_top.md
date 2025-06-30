@@ -186,22 +186,22 @@ pdf化した答案の大半には図がないので，時間がある時に順�
 | 1993 | [問題][tkk93] | [手書き答案][tkka93] |   |   |
 | 1994 | [問題][tkk94] | [手書き答案][tkka94] |   |   |
 | 1995 | [問題][tkk95] | [手書き答案][tkka95] |   |   |
-| 1996 |               | [手書き答案][tkka96] |   |   |
-| 1997 |               | [手書き答案][tkka97] |   |   |
-| 1998 |               | [手書き答案][tkka98] |   |   |
-| 1999 |               | [手書き答案][tkka99] |   |   |
-| 2000 |               | [手書き答案][tkka00] |   |   |
-| 2001 |               | [手書き答案][tkka01] |   |   |
-| 2002 |               | [手書き答案][tkka02] |   |   |
-| 2003 |               | [手書き答案][tkka03] |   |   |
-| 2004 |               | [手書き答案][tkka04] |   |   |
-| 2005 |               | [手書き答案][tkka05] |   |   |
-| 2006 |               | [手書き答案][tkka06] |   |   |
-| 2007 |               | [手書き答案][tkka07] |   |   |
-| 2008 |               | [手書き答案][tkka08] |   |   |
-| 2009 |               | [手書き答案][tkka09] |   |   |
-| 2010 |               | [手書き答案][tkka10] |   |   |
-| 2011 |               | [手書き答案][tkka11] |   |   |
+| 1996 | [問題][tkk96] | [手書き答案][tkka96] |   |   |
+| 1997 | [問題][tkk97] | [手書き答案][tkka97] |   |   |
+| 1998 | [問題][tkk98] | [手書き答案][tkka98] |   |   |
+| 1999 | [問題][tkk99] | [手書き答案][tkka99] |   |   |
+| 2000 | [問題][tkk00] | [手書き答案][tkka00] |   |   |
+| 2001 | [問題][tkk01] | [手書き答案][tkka01] |   |   |
+| 2002 | [問題][tkk02] | [手書き答案][tkka02] |   |   |
+| 2003 | [問題][tkk03] | [手書き答案][tkka03] |   |   |
+| 2004 | [問題][tkk04] | [手書き答案][tkka04] |   |   |
+| 2005 | [問題][tkk05] | [手書き答案][tkka05] |   |   |
+| 2006 | [問題][tkk06] | [手書き答案][tkka06] |   |   |
+| 2007 | [問題][tkk07] | [手書き答案][tkka07] |   |   |
+| 2008 | [問題][tkk08] | [手書き答案][tkka08] |   |   |
+| 2009 | [問題][tkk09] | [手書き答案][tkka09] |   |   |
+| 2010 | [問題][tkk10] | [手書き答案][tkka10] |   |   |
+| 2011 | [問題][tkk11] | [手書き答案][tkka11] |   |   |
 
 
 ## 京大数学（後期）
@@ -602,6 +602,22 @@ pdf化した答案の大半には図がないので，時間がある時に順�
 [tkk93]: {% link _pages/ent-ex/problems/titech/kouki/1993/problem.pdf %}
 [tkk94]: {% link _pages/ent-ex/problems/titech/kouki/1994/problem.pdf %}
 [tkk95]: {% link _pages/ent-ex/problems/titech/kouki/1995/problem.pdf %}
+[tkk96]: {% link _pages/ent-ex/problems/titech/kouki/1996/problem.pdf %}
+[tkk97]: {% link _pages/ent-ex/problems/titech/kouki/1997/problem.pdf %}
+[tkk98]: {% link _pages/ent-ex/problems/titech/kouki/1998/problem.pdf %}
+[tkk99]: {% link _pages/ent-ex/problems/titech/kouki/1999/problem.pdf %}
+[tkk00]: {% link _pages/ent-ex/problems/titech/kouki/2000/problem.pdf %}
+[tkk01]: {% link _pages/ent-ex/problems/titech/kouki/2001/problem.pdf %}
+[tkk02]: {% link _pages/ent-ex/problems/titech/kouki/2002/problem.pdf %}
+[tkk03]: {% link _pages/ent-ex/problems/titech/kouki/2003/problem.pdf %}
+[tkk04]: {% link _pages/ent-ex/problems/titech/kouki/2004/problem.pdf %}
+[tkk05]: {% link _pages/ent-ex/problems/titech/kouki/2005/problem.pdf %}
+[tkk06]: {% link _pages/ent-ex/problems/titech/kouki/2006/problem.pdf %}
+[tkk07]: {% link _pages/ent-ex/problems/titech/kouki/2007/problem.pdf %}
+[tkk08]: {% link _pages/ent-ex/problems/titech/kouki/2008/problem.pdf %}
+[tkk09]: {% link _pages/ent-ex/problems/titech/kouki/2009/problem.pdf %}
+[tkk10]: {% link _pages/ent-ex/problems/titech/kouki/2010/problem.pdf %}
+[tkk11]: {% link _pages/ent-ex/problems/titech/kouki/2011/problem.pdf %}
 
 <!-- 手書き答案へのpath-->
 

@@ -1,0 +1,36 @@
+ % LuaLaTeX文書; 文字コーAドはUTF-8
+ \documentclass[unicode,12pt, a4paper]{ltjsarticle}% 'unicode'が必要
+ %\usepackage{luatexja}% 日本語したい
+ \usepackage{luatexja-fontspec}
+ %\usepackage[hiragino-pron]{luatexja-preset}% IPAexフォントしたい(ipaex)
+ \usepackage[hiragino-pron,deluxe,expert,bold]{luatexja-preset}
+
+ \usepackage[english]{babel}%多言語文書を作成する
+ \usepackage{amsmath,amssymb}%標準数式表現を拡大する
+ \usepackage{physics}
+ \usepackage[subpreambles=true,sort=true]{standalone}
+% \renewcommand{\kanjifamilydefault}{\gtdefault}% 既定をゴシック体に
+ \usepackage[backend=bibtex,style=phys,articletitle=false,biblabel=brackets,chaptertitle=false,pageranges=false]{biblatex}
+ %\usepackage[style=authoryear,backend=bibtex]{biblatex}
+
+
+ %\addbibresource{../references/tio2_ref.bib}
+ \usepackage{mhchem}
+ % あとは欧文の場合と同じ
+
+  \usepackage{caption}
+  \usepackage[subrefformat=parens]{subcaption}
+\title{東工大理系後期1996年度}
+
+\begin{document}
+\maketitle
+\section{問題1}
+円 $C: x^2+y^2=1$ 上の2点 P$(1,0)$ と Q$(\cos\theta, \sin\theta)$ を通り円 $C$ と直交する円を $C_\theta$ とする．ただし，円 $C$ と $C_\theta$ が直交するとは交点におけるそれぞれの接線が直交することをいう．このとき次の問いに答えよ．
+
+\begin{enumerate}
+    \item $0 < \theta < \pi$ のとき $C$ の内部と $C_\theta$ の内部の共通部分の面積 $S_\theta$ を求めよ．
+    \item $C$ の内部にある $C_\theta$ の円弧 PQ の中点を $A_\theta$ とする．$\theta$ が $0 < \theta < \pi$ の範囲を動くとき $A_\theta$ の軌跡の方程式を求めよ．
+    \item $A_\theta$ の軌跡と $x$ 軸で囲まれる部分を $x$ 軸のまわりに回転してできる立体の体積 $V$ を求めよ．
+\end{enumerate}
+
+\end{document}

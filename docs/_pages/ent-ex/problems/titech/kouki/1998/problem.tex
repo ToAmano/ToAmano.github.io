@@ -1,0 +1,41 @@
+ % LuaLaTeX文書; 文字コーAドはUTF-8
+ \documentclass[unicode,12pt, a4paper]{ltjsarticle}% 'unicode'が必要
+ %\usepackage{luatexja}% 日本語したい
+ \usepackage{luatexja-fontspec}
+ %\usepackage[hiragino-pron]{luatexja-preset}% IPAexフォントしたい(ipaex)
+ \usepackage[hiragino-pron,deluxe,expert,bold]{luatexja-preset}
+
+ \usepackage[english]{babel}%多言語文書を作成する
+ \usepackage{amsmath,amssymb}%標準数式表現を拡大する
+ \usepackage{physics}
+ \usepackage[subpreambles=true,sort=true]{standalone}
+% \renewcommand{\kanjifamilydefault}{\gtdefault}% 既定をゴシック体に
+ \usepackage[backend=bibtex,style=phys,articletitle=false,biblabel=brackets,chaptertitle=false,pageranges=false]{biblatex}
+ %\usepackage[style=authoryear,backend=bibtex]{biblatex}
+
+
+ %\addbibresource{../references/tio2_ref.bib}
+ \usepackage{mhchem}
+ % あとは欧文の場合と同じ
+
+  \usepackage{caption}
+  \usepackage[subrefformat=parens]{subcaption}
+\title{東工大理系後期1998年度}
+
+\begin{document}
+\maketitle
+\section{問題1}
+実数 $a, b$ に対し $x_n = \frac{1}{n^b} \left\{ \frac{1}{n^a} + \frac{1}{(n+1)^a} + \dots + \frac{1}{(2n-1)^a} \right\}$, $n=1,2,3,\dots$ とおく．$n \to \infty$ のとき $x_n$ が収束するための $a, b$ の条件およびそのときの極限値を求めよ．
+
+
+\section{問題2}
+$yz$ 平面の直線 $y=z$ を $l_1$, 直線 $y=z+\sqrt{2}$ を $l_2$ とする．$xyz$ 空間において $l_1$ を
+軸にして $l_2$ を回転してできる円柱面（内部は含まない）を $C$ とする．さらに $z$ 軸を軸と
+して $C$ を回転してできる回転体 $R$ とする．
+\begin{enumerate}
+    \item $xy$ 平面で $C$ を切った切り口に現れる楕円の方程式を求めよ．
+    \item $R$ の $yz$ 平面による断面を図示せよ．
+    \item $R$ の $-2 \le z \le 2$ の部分の体積を求めよ．
+\end{enumerate}
+
+\end{document}

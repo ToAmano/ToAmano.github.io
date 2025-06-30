@@ -1,0 +1,53 @@
+ % LuaLaTeX文書; 文字コーAドはUTF-8
+ \documentclass[unicode,12pt, a4paper]{ltjsarticle}% 'unicode'が必要
+ %\usepackage{luatexja}% 日本語したい
+ \usepackage{luatexja-fontspec}
+ %\usepackage[hiragino-pron]{luatexja-preset}% IPAexフォントしたい(ipaex)
+ \usepackage[hiragino-pron,deluxe,expert,bold]{luatexja-preset}
+
+ \usepackage[english]{babel}%多言語文書を作成する
+ \usepackage{amsmath,amssymb}%標準数式表現を拡大する
+ \usepackage{physics}
+ \usepackage{tikz}
+ \usetikzlibrary{math}
+ \usepackage{caption}
+ \usepackage{subcaption}
+ \usepackage[subpreambles=true,sort=true]{standalone}
+% \renewcommand{\kanjifamilydefault}{\gtdefault}% 既定をゴシック体に
+ \usepackage[backend=bibtex,style=phys,articletitle=false,biblabel=brackets,chaptertitle=false,pageranges=false]{biblatex}
+ %\usepackage[style=authoryear,backend=bibtex]{biblatex}
+
+
+ %\addbibresource{../references/tio2_ref.bib}
+ \usepackage{mhchem}
+ % あとは欧文の場合と同じ
+
+  \usepackage{caption}
+  \usepackage[subrefformat=parens]{subcaption}
+\title{東工大理系後期2001年度}
+
+\begin{document}
+\maketitle
+\section{問題1}
+$n=1,2,3,\dots$ に対して $a_n = \tan(11n)$ とおく．このとき，次の (1)～(4) を示せ．
+ただし，$\pi = 3.14159265\dots$ は円周率である．
+
+\begin{enumerate}
+    \item $\dfrac{\pi}{711} < 11 - \dfrac{7\pi}{2} < \dfrac{\pi}{709}$.
+    \item $a_1 < 0 < a_2$.
+    \item $a_1, a_3, a_5, a_7, \dots, a_{707}, a_{709}$ は増加数列である．
+    \item 無限数列 $a_1, a_3, a_5, a_7, \dots$ は増加数列ではない．
+\end{enumerate}
+
+
+
+\section{問題2}
+$xy$ 平面の原点 $(0,0)$ を中心とする半径 $a, b$ の同心円上にそれぞれ動点 $A, B$ がある．$C=(1,0)$ とすると $\triangle ABC$ の面積は，$A$ が $A_0 = \left(a\cos\dfrac{3\pi}{4}, a\sin\dfrac{3\pi}{4}\right)$, $B$ が
+$B_0 = \left(b\cos\dfrac{4\pi}{3}, b\sin\dfrac{4\pi}{3}\right)$ のときに最大値をとるという．
+
+\begin{enumerate}
+    \item $a, b$ を求めよ．
+    \item $\triangle A_0 B_0 C_0$ の外接円の半径 $R$ を求めよ．
+\end{enumerate}
+
+\end{document}

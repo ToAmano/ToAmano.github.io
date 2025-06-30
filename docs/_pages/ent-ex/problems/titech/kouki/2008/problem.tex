@@ -1,0 +1,53 @@
+ % LuaLaTeX文書; 文字コーAドはUTF-8
+ \documentclass[unicode,12pt, a4paper]{ltjsarticle}% 'unicode'が必要
+ %\usepackage{luatexja}% 日本語したい
+ \usepackage{luatexja-fontspec}
+ %\usepackage[hiragino-pron]{luatexja-preset}% IPAexフォントしたい(ipaex)
+ \usepackage[hiragino-pron,deluxe,expert,bold]{luatexja-preset}
+
+ \usepackage[english]{babel}%多言語文書を作成する
+ \usepackage{amsmath,amssymb}%標準数式表現を拡大する
+ \usepackage{physics}
+ \usepackage{tikz}
+ \usetikzlibrary{math}
+ \usepackage{caption}
+ \usepackage{subcaption}
+ \usepackage[subpreambles=true,sort=true]{standalone}
+% \renewcommand{\kanjifamilydefault}{\gtdefault}% 既定をゴシック体に
+ \usepackage[backend=bibtex,style=phys,articletitle=false,biblabel=brackets,chaptertitle=false,pageranges=false]{biblatex}
+ %\usepackage[style=authoryear,backend=bibtex]{biblatex}
+
+
+ %\addbibresource{../references/tio2_ref.bib}
+ \usepackage{mhchem}
+ % あとは欧文の場合と同じ
+
+  \usepackage{caption}
+  \usepackage[subrefformat=parens]{subcaption}
+\title{東工大理系後期2008年度}
+
+\begin{document}
+\maketitle
+\section{問題1}
+次の問に答えよ．
+\begin{enumerate}
+ \item 実数 $a_1, a_2, x_1, x_2, y_1, y_2$ が
+  \begin{align*} 0 &< a_1 \le a_2 \\ a_1 x_1 &\le a_1 y_1 \\ a_1 x_1 + a_2 x_2 &\le a_1 y_1 + a_2 y_2 \end{align*}
+  をみたすとしている．このとき $x_1 + x_2 \le y_1 + y_2$ であることを証明せよ．
+ \item $n$ を $2$ 以上の整数とし，$3n$ 個の実数 $a_1, a_2, \dots, a_n, x_1, x_2, \dots, x_n, y_1, y_2, \dots, y_n$ が
+  \[ 0 < a_1 \le a_2 \le \dots \le a_n \]
+  および $n$ 個の不等式
+  \[ \sum_{i=1}^j a_i x_i \le \sum_{i=1}^j a_i y_i \quad (j=1, 2, \dots, n) \]
+  をみたしているならば，
+  \[ \sum_{i=1}^n x_i \le \sum_{i=1}^n y_i \]
+  であることを証明せよ．
+\end{enumerate}
+
+\section{問題2}
+自然数 $n$ に対して
+\begin{align*}
+   I_n = \int_0^1 x^2 |\sin n\pi x| dx   
+\end{align*}
+とおく．極限値 $\displaystyle \lim_{n \to \infty} I_n$ を求めよ．
+
+\end{document}

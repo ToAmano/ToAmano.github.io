@@ -1,0 +1,49 @@
+ % LuaLaTeX文書; 文字コーAドはUTF-8
+ \documentclass[unicode,12pt, a4paper]{ltjsarticle}% 'unicode'が必要
+ %\usepackage{luatexja}% 日本語したい
+ \usepackage{luatexja-fontspec}
+ %\usepackage[hiragino-pron]{luatexja-preset}% IPAexフォントしたい(ipaex)
+ \usepackage[hiragino-pron,deluxe,expert,bold]{luatexja-preset}
+
+ \usepackage[english]{babel}%多言語文書を作成する
+ \usepackage{amsmath,amssymb}%標準数式表現を拡大する
+ \usepackage{physics}
+ \usepackage{tikz}
+ \usetikzlibrary{math}
+ \usepackage{caption}
+ \usepackage{subcaption}
+ \usepackage[subpreambles=true,sort=true]{standalone}
+% \renewcommand{\kanjifamilydefault}{\gtdefault}% 既定をゴシック体に
+ \usepackage[backend=bibtex,style=phys,articletitle=false,biblabel=brackets,chaptertitle=false,pageranges=false]{biblatex}
+ %\usepackage[style=authoryear,backend=bibtex]{biblatex}
+
+
+ %\addbibresource{../references/tio2_ref.bib}
+ \usepackage{mhchem}
+ % あとは欧文の場合と同じ
+
+  \usepackage{caption}
+  \usepackage[subrefformat=parens]{subcaption}
+\title{東工大理系後期2007年度}
+
+\begin{document}
+\maketitle
+\section{問題1}
+1 から 6 までの目がそれぞれ $\frac{1}{6}$ の確率で出るサイコロを 3 回振って出た目を順に
+$n_1, n_2, n_3$ とし, 次の 3 次方程式を考える.
+$$ x^3 - n_1 x + (-1)^{n_2} n_3 = 0 $$
+\begin{enumerate}
+    \item この方程式が相異なる 3 個の実数解をもつ確率を求めよ.
+    \item この方程式が自然数解をもつ確率を求めよ.
+\end{enumerate}
+
+
+\section{問題2}
+$0 < x < \frac{\pi}{2}$ に対して関数 $f(x) = \frac{x}{\tan x}$, $g(x) = \frac{x}{\tan x} + \frac{\tan x}{x}$ を考える.
+\begin{enumerate}
+    \item $f'(x), f''(x)$ の正負を判定し, $y=f(x)$ のグラフをかけ.
+    \item $g'(x), g''(x)$ の正負を判定し, $y=g(x)$ のグラフをかけ.
+    \item 正定数 $a$ に対して, 2 曲線 $y = \log \frac{a}{f(x)}$ と $y=g(x)$ のグラフが交わるための条件を求めよ.
+\end{enumerate}
+
+\end{document}

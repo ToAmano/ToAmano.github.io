@@ -1,0 +1,39 @@
+ % LuaLaTeX文書; 文字コーAドはUTF-8
+ \documentclass[unicode,12pt, a4paper]{ltjsarticle}% 'unicode'が必要
+ %\usepackage{luatexja}% 日本語したい
+ \usepackage{luatexja-fontspec}
+ %\usepackage[hiragino-pron]{luatexja-preset}% IPAexフォントしたい(ipaex)
+ \usepackage[hiragino-pron,deluxe,expert,bold]{luatexja-preset}
+
+ \usepackage[english]{babel}%多言語文書を作成する
+ \usepackage{amsmath,amssymb}%標準数式表現を拡大する
+ \usepackage{physics}
+ \usepackage{tikz}
+ \usetikzlibrary{math}
+ \usepackage{caption}
+ \usepackage{subcaption}
+ \usepackage[subpreambles=true,sort=true]{standalone}
+% \renewcommand{\kanjifamilydefault}{\gtdefault}% 既定をゴシック体に
+ \usepackage[backend=bibtex,style=phys,articletitle=false,biblabel=brackets,chaptertitle=false,pageranges=false]{biblatex}
+ %\usepackage[style=authoryear,backend=bibtex]{biblatex}
+
+
+ %\addbibresource{../references/tio2_ref.bib}
+ \usepackage{mhchem}
+ % あとは欧文の場合と同じ
+
+  \usepackage{caption}
+  \usepackage[subrefformat=parens]{subcaption}
+\title{東工大理系後期2009年度}
+
+\begin{document}
+\maketitle
+\section{問題1}
+$a$ が与えられた実数のとき，$xyz$ 空間の点 C$(a,0,3)$ から出た光が球 $x^2+y^2+(z-1)^2 \leqq 1$ でさえぎられてできる $xy$ 平面上の影を $S$ とする．点 $(X,Y,0)$ が $S$ に含まれる条件を求めよ．
+
+
+\section{問題2}
+$p>0, q>0$ であるような点 P$(p,q)$ から双曲線 $y = -\frac{1}{x}$ へ引いた $2$ 本の接線の接点を $A, B$ とする．$pq$ を $t$ とおいて，三角形 PAB の面積を $t$ の式で表せ．また，この面積の最小値を求めよ．
+
+
+\end{document}

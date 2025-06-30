@@ -1,0 +1,52 @@
+ % LuaLaTeX文書; 文字コーAドはUTF-8
+ \documentclass[unicode,12pt, a4paper]{ltjsarticle}% 'unicode'が必要
+ %\usepackage{luatexja}% 日本語したい
+ \usepackage{luatexja-fontspec}
+ %\usepackage[hiragino-pron]{luatexja-preset}% IPAexフォントしたい(ipaex)
+ \usepackage[hiragino-pron,deluxe,expert,bold]{luatexja-preset}
+
+ \usepackage[english]{babel}%多言語文書を作成する
+ \usepackage{amsmath,amssymb}%標準数式表現を拡大する
+ \usepackage{physics}
+ \usepackage{tikz}
+ \usetikzlibrary{math}
+ \usepackage{caption}
+ \usepackage{subcaption}
+ \usepackage[subpreambles=true,sort=true]{standalone}
+% \renewcommand{\kanjifamilydefault}{\gtdefault}% 既定をゴシック体に
+ \usepackage[backend=bibtex,style=phys,articletitle=false,biblabel=brackets,chaptertitle=false,pageranges=false]{biblatex}
+ %\usepackage[style=authoryear,backend=bibtex]{biblatex}
+
+
+ %\addbibresource{../references/tio2_ref.bib}
+ \usepackage{mhchem}
+ % あとは欧文の場合と同じ
+
+  \usepackage{caption}
+  \usepackage[subrefformat=parens]{subcaption}
+\title{東工大理系後期2000年度}
+
+\begin{document}
+\maketitle
+\section{問題1}
+実数 $a, b$ にたいし $f(x) = x^3 + x^2 + (a+b-a^2)x + ab$ とおく．
+
+\begin{enumerate}
+\item $f(x)$ を因数分解せよ．
+
+\item すべての $x \ge 0$ にたいし $f(x) \ge 0$ が成り立つための $a, b$ の条件を求め，それを満たす点 $(a, b)$ の存在する範囲を図示せよ．
+\end{enumerate}
+
+
+
+\section{問題2}
+\begin{enumerate}
+    \item (1) $m \ge 0, n \ge 1$ である整数 $m, n$ にたいし $\displaystyle a_{m,n} = \int_0^\pi \theta^m \cos n\theta d\theta$, $\displaystyle b_{m,n} = \int_0^\pi \theta^m \sin n\theta d\theta$ とおくとき，次の式を示せ．
+    \begin{align*}
+ a_{m+1,n} = -\frac{m+1}{n}b_{m,n}, \quad b_{m+1,n} = (-1)^{n+1}\frac{\pi^{m+1}}{n} + \frac{m+1}{n}a_{m,n} 
+\end{align*}
+
+    \item 半径 $1$ の球球体上の定点を端点とする長さ $\pi$ のひもを考える．このひもが球の外側の空間を動くとき，ひもの通過しうる領域の体積を求めよ．
+\end{enumerate}
+
+\end{document}

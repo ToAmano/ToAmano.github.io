@@ -1,0 +1,49 @@
+ % LuaLaTeX文書; 文字コーAドはUTF-8
+ \documentclass[unicode,12pt, a4paper]{ltjsarticle}% 'unicode'が必要
+ %\usepackage{luatexja}% 日本語したい
+ \usepackage{luatexja-fontspec}
+ %\usepackage[hiragino-pron]{luatexja-preset}% IPAexフォントしたい(ipaex)
+ \usepackage[hiragino-pron,deluxe,expert,bold]{luatexja-preset}
+
+ \usepackage[english]{babel}%多言語文書を作成する
+ \usepackage{amsmath,amssymb}%標準数式表現を拡大する
+ \usepackage{physics}
+ \usepackage{tikz}
+ \usetikzlibrary{math}
+ \usepackage{caption}
+ \usepackage{subcaption}
+ \usepackage[subpreambles=true,sort=true]{standalone}
+% \renewcommand{\kanjifamilydefault}{\gtdefault}% 既定をゴシック体に
+ \usepackage[backend=bibtex,style=phys,articletitle=false,biblabel=brackets,chaptertitle=false,pageranges=false]{biblatex}
+ %\usepackage[style=authoryear,backend=bibtex]{biblatex}
+
+
+ %\addbibresource{../references/tio2_ref.bib}
+ \usepackage{mhchem}
+ % あとは欧文の場合と同じ
+
+  \usepackage{caption}
+  \usepackage[subrefformat=parens]{subcaption}
+\title{東工大理系後期2010年度}
+
+\begin{document}
+\maketitle
+\section{問題1}
+$a, b, t$は実数で, $a \ge 0 > b$とする. 次の漸化式により, 数列$a_n, b_n$ $(n=1, 2, \dots)$を定める.
+    \[ a_1=a, \quad b_1=b \]
+    \[ a_{n+1} = \left(\frac{t}{2} + \frac{5}{t^2+1}\right) a_n + \left(\frac{t}{2} - \frac{5}{t^2+1}\right) b_n, \quad b_{n+1} = \left(\frac{t}{2} - \frac{5}{t^2+1}\right) a_n + \left(\frac{t}{2} + \frac{5}{t^2+1}\right) b_n \]
+    \begin{enumerate}
+        \item $a_n$を$a, b, t, n$を用いて表せ.
+        \item $n \to \infty$とするとき, $a_n$が収束するための$a, b, t$についての必要十分条件を求めよ.
+    \end{enumerate}
+
+
+\section{問題2}
+座標平面上で$y = (\log x)^2 \, (x>0)$の表す曲線を$C$とし, $\alpha > 0$に対し, 点$(\alpha, (\log \alpha)^2)$における$C$の接線を$L(\alpha)$で表す.
+    \begin{enumerate}
+        \item $C$のグラフの概形を掛け.
+        \item $C$と$L(\alpha)$との共有点の個数を$n(\alpha)$とする. $n(\alpha)$を求めよ.
+        \item $0 < \alpha < 1$とし, $C$と$L(\alpha)$および$x$軸とで囲まれる領域の面積を$S(\alpha)$とする. $S(\alpha)$を求めよ.
+    \end{enumerate}
+
+\end{document}

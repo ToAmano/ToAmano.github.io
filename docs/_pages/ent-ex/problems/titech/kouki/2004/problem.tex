@@ -1,0 +1,48 @@
+ % LuaLaTeX文書; 文字コーAドはUTF-8
+ \documentclass[unicode,12pt, a4paper]{ltjsarticle}% 'unicode'が必要
+ %\usepackage{luatexja}% 日本語したい
+ \usepackage{luatexja-fontspec}
+ %\usepackage[hiragino-pron]{luatexja-preset}% IPAexフォントしたい(ipaex)
+ \usepackage[hiragino-pron,deluxe,expert,bold]{luatexja-preset}
+
+ \usepackage[english]{babel}%多言語文書を作成する
+ \usepackage{amsmath,amssymb}%標準数式表現を拡大する
+ \usepackage{physics}
+ \usepackage{tikz}
+ \usetikzlibrary{math}
+ \usepackage{caption}
+ \usepackage{subcaption}
+ \usepackage[subpreambles=true,sort=true]{standalone}
+% \renewcommand{\kanjifamilydefault}{\gtdefault}% 既定をゴシック体に
+ \usepackage[backend=bibtex,style=phys,articletitle=false,biblabel=brackets,chaptertitle=false,pageranges=false]{biblatex}
+ %\usepackage[style=authoryear,backend=bibtex]{biblatex}
+
+
+ %\addbibresource{../references/tio2_ref.bib}
+ \usepackage{mhchem}
+ % あとは欧文の場合と同じ
+
+  \usepackage{caption}
+  \usepackage[subrefformat=parens]{subcaption}
+\title{東工大理系後期2004年度}
+
+\begin{document}
+\maketitle
+\section{問題1}
+場所1から場所$n$に異なる$n$個のものが並んでいる．これらを並べ替えてどれもが元の位置にならないようにする方法の総数を$D(n)$とする．ただし$n \ge 2$とする．
+
+\begin{enumerate}
+    \item $n=4$の場合の並べ替え方をすべて書き出して，$D(4)$を求めよ．
+    \item $n \ge 4$に対して $D(n)=(n-1)\{D(n-2)+D(n-1)\}$を証明せよ．
+\end{enumerate}
+
+
+\section{問題2}
+$n$を2以上の個数とする．2つの曲線$C_1: y=x^n$と$C_2: y=n^x$について，次の問いに答えよ．
+
+\begin{enumerate}
+    \item $C_1$と$C_2$は$x<0$において，ただ1つの点$P_n$で交わることを示せ．
+    \item $C_1$と$C_2$の交点の個数を求めよ．
+    \item $P_n$の$n \to \infty$のときの極限の位置を求めよ．
+\end{enumerate}
+\end{document}

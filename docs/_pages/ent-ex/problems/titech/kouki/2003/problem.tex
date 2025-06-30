@@ -1,0 +1,46 @@
+ % LuaLaTeX文書; 文字コーAドはUTF-8
+ \documentclass[unicode,12pt, a4paper]{ltjsarticle}% 'unicode'が必要
+ %\usepackage{luatexja}% 日本語したい
+ \usepackage{luatexja-fontspec}
+ %\usepackage[hiragino-pron]{luatexja-preset}% IPAexフォントしたい(ipaex)
+ \usepackage[hiragino-pron,deluxe,expert,bold]{luatexja-preset}
+
+ \usepackage[english]{babel}%多言語文書を作成する
+ \usepackage{amsmath,amssymb}%標準数式表現を拡大する
+ \usepackage{physics}
+ \usepackage{tikz}
+ \usetikzlibrary{math}
+ \usepackage{caption}
+ \usepackage{subcaption}
+ \usepackage[subpreambles=true,sort=true]{standalone}
+% \renewcommand{\kanjifamilydefault}{\gtdefault}% 既定をゴシック体に
+ \usepackage[backend=bibtex,style=phys,articletitle=false,biblabel=brackets,chaptertitle=false,pageranges=false]{biblatex}
+ %\usepackage[style=authoryear,backend=bibtex]{biblatex}
+
+
+ %\addbibresource{../references/tio2_ref.bib}
+ \usepackage{mhchem}
+ % あとは欧文の場合と同じ
+
+  \usepackage{caption}
+  \usepackage[subrefformat=parens]{subcaption}
+\title{東工大理系後期2003年度}
+
+\begin{document}
+\maketitle
+\section{問題1}
+$xyz$ 空間の $2$ 点 $P, Q$ を, $\triangle OPQ (O$ は原点$)$ の面積が正の一定値 $S$ となるように動かす. $P, Q$ から $xy$ 平面に引いた垂線をそれぞれ $P', Q'$ とし, $\triangle OP'Q'$ の面積を $S_1$ とする. ただし, $O, P', Q'$ が同一線上にあるときは $S_1=0$ とする. 同様に $P, Q$ から $yz$ 平面, $zx$ 平面に垂線を引いて作っ
+た三角形の面積を $S_2, S_3$ とする.
+    \begin{enumerate}
+        \item $S^2 = S_1^2 + S_2^2 + S_3^2$ を証明せよ.
+        \item $S_1+S_2+S_3$ の最大値, 最小値を求めよ.
+    \end{enumerate}
+
+
+\section{問題2}
+$m$ を $0$ 以上の整数とする. 直線 $2x+3y=m$ 上の点 $(x,y)$ で, $x, y$ がともに $0$ 以上の整数であるものの個数を $N(m)$ とする.
+    \begin{enumerate}
+        \item $N(m+6)=N(m)+1$ を証明せよ.
+        \item $N(m)=1-m+\left[\frac{m}{2}\right]+\left[\frac{2m}{3}\right]$ を証明せよ. ただし, $[a]$ は $a$ 以下の最大の整数を表すものとする.
+    \end{enumerate}
+\end{document}

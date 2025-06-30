@@ -1,0 +1,56 @@
+ % LuaLaTeX文書; 文字コーAドはUTF-8
+ \documentclass[unicode,12pt, a4paper]{ltjsarticle}% 'unicode'が必要
+ %\usepackage{luatexja}% 日本語したい
+ \usepackage{luatexja-fontspec}
+ %\usepackage[hiragino-pron]{luatexja-preset}% IPAexフォントしたい(ipaex)
+ \usepackage[hiragino-pron,deluxe,expert,bold]{luatexja-preset}
+
+ \usepackage[english]{babel}%多言語文書を作成する
+ \usepackage{amsmath,amssymb}%標準数式表現を拡大する
+ \usepackage{physics}
+ \usepackage{tikz}
+ \usetikzlibrary{math}
+ \usepackage{caption}
+ \usepackage{subcaption}
+ \usepackage[subpreambles=true,sort=true]{standalone}
+% \renewcommand{\kanjifamilydefault}{\gtdefault}% 既定をゴシック体に
+ \usepackage[backend=bibtex,style=phys,articletitle=false,biblabel=brackets,chaptertitle=false,pageranges=false]{biblatex}
+ %\usepackage[style=authoryear,backend=bibtex]{biblatex}
+
+
+ %\addbibresource{../references/tio2_ref.bib}
+ \usepackage{mhchem}
+ % あとは欧文の場合と同じ
+
+  \usepackage{caption}
+  \usepackage[subrefformat=parens]{subcaption}
+\title{東工大理系後期2002年度}
+
+\begin{document}
+\maketitle
+\section{問題1}
+$n$ を自然数とする．
+
+\begin{enumerate}
+    \item 
+    実数 $x$ に対して，$\displaystyle \sum_{k=0}^{n} (-1)^k x^{2k} - \frac{1}{1+x^2}$ を求めよ．
+
+    \item 
+    不等式 $\displaystyle \left| \sum_{k=0}^{n} \frac{(-1)^k}{2k+1} - \int_0^1 \frac{1}{1+x^2} dx \right| \leq \frac{1}{2n+3}$ が成り立つことを示せ．
+
+    \item 
+    極限 $\displaystyle \lim_{n \to \infty} \sum_{k=0}^{n} \frac{(-1)^k}{2k+1}$ を求めよ．
+\end{enumerate}
+
+
+\section{問題2}
+$xy$ 平面上に原点 $O$ を中心とする半径 $1$ の円 $C$ がある．$C$ を底面，$(0,0,\sqrt{3})$ を頂点とする直円すい $S$ を考える．点 $P(1,0,0)$ および $Q(-2,0,0)$ をとる．さらに，動点 $M(\cos\theta,\sin\theta,0)$ ($0 \leq \theta < 2\pi$) を線分 $MQ$ が $M$ 以外に $C$ と交わらないように動かす．
+
+\begin{enumerate}
+    \item 
+    $\theta$ のとりうる値の範囲を求めよ．
+
+    \item 
+    点 $P$ から動点 $M$ までは直円すい $S$ の側面を通り，$M$ からは直線にそって点 $Q$ へ向かう道を考える．このような $P$ から $Q$ までの全ての道の長さの最小値を求 めよ．
+\end{enumerate}
+\end{document}
