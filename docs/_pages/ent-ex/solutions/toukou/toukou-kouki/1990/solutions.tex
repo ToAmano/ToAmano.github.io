@@ -9,70 +9,116 @@
 \usepackage{amsmath,amssymb,ascmac}
 \usepackage{enumerate}
 \usepackage{multicol}
+\usepackage{cleveref}
 \usepackage{framed}
 \usepackage{fancyhdr}
 \usepackage{latexsym}
+\usepackage{tikz}
+\usepackage{pgfplots}
+ \usetikzlibrary{math}
 % \usepackage{indent}
 \usepackage{cases}
+\usepackage{float}
 \allowdisplaybreaks
 \pagestyle{fancy}
 \lhead{}
 \chead{}
-\rhead{東京大学前期$1961$年$6$番}
+\rhead{東工大後期$1990$年$1$番}
 \begin{document}
-\input{macros}
 \begin{oframed}
-$a$，$b$，$c$は定数であって，函数$f(x)=a\sin x+b\cos x+c\cos 2x$は$x=\dfrac{\pi}{4}$において
-極大値$6\sqrt{2}$をとり，また$\int_0^{2\pi} f(x)\cos x dx=5\pi$である．このとき
-\begin{enumerate}[(1)]
-\item $a$，$b$，$c$を求めよ．
-\item $0\le x\le 2\pi$の範囲で$f(x)$を最小にする$x$の値とその時の$f(x)$の値とを求めよ．
-\end{enumerate}
+$(x+1)(x-2)$ の小数第 $1$ 位を四捨五入したものが $1+5x$ と等しくなるような実数 $x$を求めよ．
 \end{oframed}
 \setlength{\columnseprule}{0.4pt}
 \begin{multicols}{2}
 {\bf[解]}
-     $\cos x=t$,$\sin x=s$とおく．
-     \[f'(x)=at-bs+2c\cos 2x\]
-     である．まず，極大値の条件から
-     $f\left(\dfrac{\pi}{4}\right)=0$が必要である．これと題意の条件から
-          \begin{align*}
-          &\left\{
-               \begin{array}{l}
-               f'\left(\dfrac{\pi}{4}\right)=0 \\
-               f\left(\dfrac{\pi}{4}\right)=6\sqrt{2} \\
-               \dint{0}{2\pi}f(x)\cos x dx=5\pi 
-               \end{array}
-          \right.  \\
-          \Leftrightarrow
-          &\left\{
-               \begin{array}{l}
-               \dfrac{\sqrt{2}}{2}(a-b)=0 \\
-               \dfrac{\sqrt{2}}{2}(a+b)+c=6\sqrt{2} \\
-               b\pi=5\pi 
-               \end{array}
-         \right.
-         \end{align*}
-    故に$(a,b,c)=(5,5,\sqrt{2})$となる．
-      $f'(x)$に値を代入する．
-          \begin{align*}
-          f'(x)&=5t-5s+2\sqrt{2}(t^2-s^2) \\
-          &=(t-s)\left(5+4\sin\left(x+\frac{\pi}{4}\right)\right)
-          \end{align*}
-     したがって，下表を得る．
-      \begin{align*}
-     \begin{array}{|c|c|c|c|c|c|c|c|} \hline
-     x & 0 &    &  \pi/4&     &5\pi/4            &     &2\pi  \\ \hline
-     f' &    &+  & 0      & -    & 0                 &+   &        \\ \hline
-     f &  5 &\ne&        &\se &-4\sqrt{2}      &\ne&        \\ \hline
-     \end{array}
-     \end{align*}
-     故に$x=\dfrac{\pi}{4}$で極大となり十分である．以上から
-     \begin{enumerate}[(1)]
-     \item $(a,b,c)=(5,5,\sqrt{2})$ 
-     \item $\min f(x)=f\left(\dfrac{5\pi}{4}\right)=-4\sqrt{2}$ 
-     \end{enumerate}
-     となる．$\cdots$(答)
-          \newpage
+
+実数 $x$ に対して $f(x) = (x+1)(x-2)$, $g(x) = 1+5x$ とおく．題意から，
+    \begin{align}\label{eq:1}
+        g(x) \in \mathbb{Z}, \quad g(x) - \frac{1}{2} \le f(x) < g(x) + \frac{1}{2} 
+    \end{align}
+    をみたす $x \in \mathbb{R}$ をもとめればよい．
+    $g(x) \in \mathbb{Z}$ から $5x \in \mathbb{Z}$．つまり，$x = \frac{t}{5}$ ($t \in \mathbb{Z}$)
+    とかける．\cref{eq:1}に代入して$t$の条件式を求めると，
+    \begin{align}
+        t + \frac{1}{2} &\le \left(\frac{t}{5}+1\right)\left(\frac{t}{5}-2\right) < t+\frac{3}{2} \nonumber \\
+        t + \frac{1}{2} &\le \frac{1}{25}t^2  - \frac{1}{5}t - 2 < t+\frac{3}{2} \nonumber \\
+        \therefore 125 &\le 2t^2 - 60t < 175 \label{eq:2}
+    \end{align}
+    を得る．
+
+    ここで，二次関数$y = p(t) = 2t^2 - 60t$ のグラフの概形は\cref{fig:graph}のようになっており，
+    \begin{align*}
+     &p(-3) = 198 & p(-1) = 62 \\
+     &p(31) = 62  & p(33) = 198 
+    \end{align*}
+    だから，\cref{eq:2}を満たすような$t \in \mathbb{Z}$は $t=-2, 32$ である．したがって求めるべき$x=t/5$は$x = \frac{32}{5}, -\frac{2}{5}$ である． $\cdots$(答)
+
+\begin{figure}[H]
+     \centering
+     % Define values for clarity
+\def\yBoundaryLower{125}
+\def\yBoundaryUpper{175}
+\def\yAtIntPoints{128} % y-value for t=-2 and t=32
+
+% % Calculate t-values for y=125
+\pgfmathsetmacro{\tLowerSmallMinus}{15 - 0.5 * sqrt(1150)} % 15 - (5/2)*sqrt(46) approx -1.95
+\pgfmathsetmacro{\tUpperSmallPlus}{15 + 0.5 * sqrt(1150)} % 15 + (5/2)*sqrt(46) approx 31.95
+
+% % Calculate t-values for y=175
+\pgfmathsetmacro{\tLowerLargeMinus}{15 - 0.5 * sqrt(1250)} % 15 - (25/2)*sqrt(2) approx -2.675
+\pgfmathsetmacro{\tUpperLargePlus}{15 + 0.5 * sqrt(1250)} % 15 + (25/2)*sqrt(2) approx 32.675
+
+\begin{tikzpicture}[
+    xscale=0.1, % Adjust x-axis scale for width
+    % yscale=0.005, % Original value causing error
+    yscale=0.01,
+    ]
+% Define t-range for plotting
+\def\tmin{-3}
+\def\tmax{33}
+\def\ymin{-10}
+\def\ymax{250}
+
+% Axes
+\draw[->] (\tmin, 0) -- (\tmax, 0) node[right] {$t$};
+\draw[->] (0, \ymin) -- (0, \ymax) node[above] {$y$};
+
+% Label the origin
+\node at (0,0) [below right] {$0$};
+
+% Plot the function y = 2t^2 - 60t
+\draw[blue, thick, domain=\tmin:\tmax, samples=100] plot (\x, {2*\x*\x - 60*\x});
+
+% % Mark Vertex
+\fill[red] (-2, 128) circle (5pt);
+\fill[red] (32, 128) circle (5pt);
+% \draw[dashed, gray] (\tVertex, 0) -- (\tVertex, \yVertex);
+% \node at (\tVertex, 0) [below] {$15$};
+% \node at (0, \yVertex) [left] {$-450$};
+
+
+% % Vertical lines and points for t=-2 and t=32 (where y=128)
+% % These are the integer solutions mentioned in the problem description for the given y range.
+\draw[dashed, gray] (-2, 0) -- (-2, \yAtIntPoints);
+\node at (-2, 0) [below] {$-2$};
+\draw[dashed, gray] (32, 0) -- (32, \yAtIntPoints);
+\node at (32, 0) [below] {$32$};
+\draw[dashed, gray] (0, \yAtIntPoints) -- (32, \yAtIntPoints);
+\node at (0, \yAtIntPoints) [right] {$128$};
+
+% % Dashed lines from the approximate intersection points to the t-axis
+% % For y=125
+\draw[dashed, gray] (\tmin, \yBoundaryLower) -- (\tmax, \yBoundaryLower);
+% % For y=175
+\draw[dashed, gray] (\tmin, \yBoundaryUpper) -- (\tmax, \yBoundaryUpper);
+
+% % Highlight the parts of the parabola where 125 <= y < 175
+\draw[red, ultra thick, domain=\tLowerLargeMinus:\tLowerSmallMinus, samples=50] plot (\x, {2*\x*\x - 60*\x});
+\draw[red, ultra thick, domain=\tUpperSmallPlus:\tUpperLargePlus, samples=50] plot (\x, {2*\x*\x - 60*\x});
+\end{tikzpicture}
+\caption{二次関数 $y = 2t^2 - 60t$ のグラフ}
+\label{fig:graph}
+\end{figure}
+     \newpage
 \end{multicols}
 \end{document}
