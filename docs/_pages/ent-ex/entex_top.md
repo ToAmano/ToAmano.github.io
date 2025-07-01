@@ -180,7 +180,7 @@ pdf化した答案の大半には図がないので，時間がある時に順�
 
 | year | 問題一覧      | 解答一覧             | 1 | 2 |
 |------|---------------|----------------------|---|---|
-| 1990 | [問題][tkk90] | [手書き答案][tkka90] |   |   |
+| 1990 | [問題][tkk90] | [手書き答案][tkka90] | [答案][tkka90_1]  |   |
 | 1991 | [問題][tkk91] | [手書き答案][tkka91] |   |   |
 | 1992 | [問題][tkk92] | [手書き答案][tkka92] |   |   |
 | 1993 | [問題][tkk93] | [手書き答案][tkka93] |   |   |
@@ -229,7 +229,7 @@ pdf化した答案の大半には図がないので，時間がある時に順�
 
 ## 東大数学（文系専用問題）
 
-<!-- 解答ファイルへのpath-->
+<!-- TeX解答ファイルへのpath-->
 [ut61-1]: {% link _pages/ent-ex/solutions/todai/todai-zenki/1961/61-1/ut-61-1.pdf %}
 [ut61-2]: {% link _pages/ent-ex/solutions/todai/todai-zenki/1961/61-2/ut-61-2.pdf %}
 [ut61-3]: {% link _pages/ent-ex/solutions/todai/todai-zenki/1961/61-3/ut-61-3.pdf %}
@@ -557,6 +557,9 @@ pdf化した答案の大半には図がないので，時間がある時に順�
 <!-- [ut14-5]: {% link _pages/ent-ex/solutions/todai/todai-zenki/2014/14-5/ut-14-5.pdf %} -->
 <!-- [ut14-6]: {% link _pages/ent-ex/solutions/todai/todai-zenki/2014/14-6/ut-14-6.pdf %} -->
 {% endcomment %}
+
+[tkka90_1]: {% link _pages/ent-ex/solutions/toukou/toukou-kouki/1990/1/solutions.pdf %}
+
 
 <!-- 問題へのPath -->
 [utk90]: {% link _pages/ent-ex/problems/todai/todai_kouki/1990/1990.pdf %}
