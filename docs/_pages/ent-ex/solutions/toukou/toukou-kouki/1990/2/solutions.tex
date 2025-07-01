@@ -1,0 +1,163 @@
+\documentclass[a4paper,10pt]{ltjsarticle}
+\usepackage{luatexja}
+\usepackage[hiragino-pron]{luatexja-preset}
+
+\usepackage[truedimen,top=25truemm,bottom=20truemm,left=15truemm,right=15truemm]{geometry}
+\setlength{\textwidth}{54\zw}
+\setlength{\textheight}{73\zw}
+
+\usepackage{amsmath,amssymb,ascmac}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{cleveref}
+\usepackage{framed}
+\usepackage{fancyhdr}
+\usepackage{latexsym}
+\usepackage{mathtools}
+\usepackage{tikz}
+\usepackage{pgfplots}
+ \usetikzlibrary{math}
+% \usepackage{indent}
+\usepackage{cases}
+\usepackage{float}
+\allowdisplaybreaks
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{東工大後期$1990$年$2$番}
+\begin{document}
+\begin{oframed}
+$n$ を $2$ 以上の整数とする．
+\begin{enumerate}
+  \item $n-1$ 次多項式 $P_n(x)$ と $n$ 次多項式 $Q_n(x)$ で実数 $\theta$ に対して
+\[ \sin(2n\theta) = n \sin(2\theta) P_n(\sin^2\theta), \quad \cos(2n\theta) = Q_n(\sin^2\theta) \]
+を満たすものが存在することを帰納法を用いて示せ．
+  \item $k=1, 2, \dots, n-1$ に対して $\alpha_k = \left(\sin\frac{k\pi}{2n}\right)^{-2}$ とおくと
+\[ P_n(x) = (1-\alpha_1 x)(1-\alpha_2 x)\cdots(1-\alpha_{n-1} x) \]
+となることを示せ．
+  \item $\sum_{k=1}^{n-1} \alpha_k = \frac{2n^2-2}{3}$ を示せ．
+\end{enumerate}
+\end{oframed}
+\setlength{\columnseprule}{0.4pt}
+\begin{multicols}{2}
+{\bf[解]}
+
+$n \in \mathbb{N}$ に拡張して考えて良い．
+
+(1) 数学的帰納法で題意を示す．
+
+\vspace{10pt}
+
+(i)
+$n=1, 2$ のとき
+\begin{align*}
+    P_1(x) &= 1, P_2(x) = 1-2x \\
+    Q_1(x) &= 1-2x, Q_2(x) = 8x^2 - 8x + 1 \quad \cdots (*)
+\end{align*}
+とすれば良く成立する．
+
+\vspace{10pt}
+
+(ii)
+以下 $n=k, k+1 \in \mathbb{N}$ での成立を仮定し，$n=k+2$ での成立を示す．
+和積公式より，
+\begin{align*}
+    \sin(2k+4)\theta 
+    &= 2\sin(2k+2)\theta\cos2\theta - \sin2k\theta \\
+    \cos(2k+4)\theta 
+    &= 2\cos(2k+2)\theta\cos2\theta - \cos2k\theta 
+\end{align*}
+であり，ここに$n=k, k+1$ のときの $P_n(x), Q_n(x)$ を代入して
+\begin{align*}
+    \sin(2k+4)\theta 
+    &= \{2(1-2\sin^2\theta)(k+1)P_{k+1}(\sin^2\theta) - kP_k(\sin^2\theta)\}\sin(2\theta) \\
+    \cos(2k+4)\theta
+    &= 2(1-2\sin^2\theta)Q_{k+1}(\sin^2\theta) - Q_k(\sin^2\theta)
+\end{align*}
+を得る．従って，
+\begin{align*}
+    \begin{dcases}
+        P_{k+2}(x) &= \frac{1}{k+2}\{2(1-2x)(k+1)P_{k+1}(x) - kP_k(x)\} \\
+        Q_{k+2}(x) &= 2(1-2x)Q_{k+1}(x) - Q_k(x)
+    \end{dcases}
+\end{align*}
+とすれば、$P_{k+2}(x), Q_{k+2}(x)$ は $k+1, k+2$ 次多公式であり条件を満たす．以上から $n=k+2$ でも成立．
+
+(i), (ii) より，数学的帰納法により題意は示された．
+
+\vspace{10pt}
+(2) 題意を示すには，因数定理より$P_n(x)$ の零点が$x=1/\alpha_{k}$であること，および$0$次の係数が$1$であることを示せば良い．
+まずは前者から示す．
+$0 \le \theta < 2\pi$ とする．
+$\sin(2n\theta) = 0 \Leftrightarrow 2n\theta = 0, \pi, 2\pi, \dots$
+だから、これ以外の時、(1)から
+$$P_n(\sin^2\theta) = \frac{\sin(2n\theta)}{n\sin(2\theta)} \qquad \cdots\cdots ②$$
+だから、$P_n(\sin^2\theta)=0 \Leftrightarrow \sin(2n\theta)=0$
+$\theta_k = \frac{k\pi}{2n} \quad (k=1, 2, \dots, 2n-1, \text{ただし} k \ne n, 2n, 3n, \dots)$ となる。$x=\sin^2\theta$ とすると、$\sin^2\theta$ の周期性から
+$P_n(x)=0 \Leftrightarrow x = \sin^2\frac{k\pi}{2n} \quad (k=1, 2, \dots, n-1)$
+これら $n-1$ 個の解は互いに異なり、さらに $P_n(x)$ は $n-1$ 次式だから、これが $P_n(x)=0$ の全ての解である。$A\ne 0$ として
+$$P_n(x) = A \prod_{k=1}^{n-1} \left(x - \sin^2\frac{k\pi}{2n}\right) \qquad \cdots\cdots ③$$
+とおける。以下 $A$ を求める。$P_n(x)$ の定数項を $a_n$ とすると、(1)及び(2)から
+$$\begin{cases} a_1=1, a_2=1 \\ a_{n+2} = \frac{1}{n+2}\{2(n+1)a_{n+1} - na_n\} \end{cases}$$
+となり、帰納的に $a_n=1$ である。③で係数比較して
+$$A \prod_{k=1}^{n-1} \left(-\sin^2\frac{k\pi}{2n}\right) = 1$$
+$$\therefore A = \frac{1}{\prod_{k=1}^{n-1} \left(-\sin^2\frac{k\pi}{2n}\right)}$$
+だから、③に代入して
+$$P_n(x) = \prod_{k=1}^{n-1} \left(1 - \frac{x}{\sin^2\frac{k\pi}{2n}}\right) = \prod_{k=1}^{n-1} (1-d_k x) \qquad \cdots\cdots ④$$
+と表せる。
+
+(3)
+$\sum_{k=1}^{n-1} \alpha_k$ は、$P_n(x)$ の $x$ の1次の項の係数を $b_n$ として、
+$$
+\sum_{k=1}^{n-1} \alpha_k = -b_n \quad \cdots\cdots {5}
+$$
+と表せる。ここで、$b_n$ について、($*$) から
+$$
+\begin{cases}
+b_1 = 0, \ b_2 = -2 \\
+b_{n+2} = \frac{1}{n+2} [2(n+1)(b_{n+1} - 2) - n b_n] \quad (\because a_n=1)
+\end{cases}
+\quad \cdots\cdots {6}
+$$
+となる。以下、$b_n = -\frac{2}{3}(n^2 - 1)$ となることを数学的帰納法により示す。
+
+\vspace{10pt}
+
+(i) $n=1, 2$ のとき
+$b_1 = -\frac{2}{3}(1^2-1) = 0$
+$b_2 = -\frac{2}{3}(2^2-1) = -2$
+となり、${6}$ の初期条件と一致するため成立する。
+
+\vspace{10pt}
+
+(ii) $n=k, k+1$ での成立を仮定する。すなわち、
+$b_k = -\frac{2}{3}(k^2 - 1)$, $b_{k+1} = -\frac{2}{3}((k+1)^2 - 1)$
+が成り立つと仮定する。このとき、$n=k+2$ での成立を示す。
+${6}$ の漸化式に $n=k$ を代入し、仮定を用いると、
+\begin{align*}
+b_{k+2} &= \frac{1}{k+2} \left[ 2(k+1)(b_{k+1} - 2) - k b_k \right] \\
+&= \frac{1}{k+2} \left[ 2(k+1) \left\{ -\frac{2}{3}((k+1)^2 - 1) - 2 \right\} - k \left\{ -\frac{2}{3}(k^2 - 1) \right\} \right] \\
+&= \frac{1}{k+2} \left[ 2(k+1) \left\{ -\frac{2}{3}(k^2+2k) - 2 \right\} + \frac{2}{3}k(k^2 - 1) \right] \\
+&= \frac{1}{k+2} \left[ -\frac{4}{3}(k+1)(k^2+2k) - 4(k+1) + \frac{2}{3}k(k^2-1) \right] \\
+&= \frac{2}{3(k+2)} \left[ -2(k+1)k(k+2) - 6(k+1) + k(k-1)(k+1) \right] \\
+&= \frac{2(k+1)}{3(k+2)} \left[ -2k(k+2) - 6 + k(k-1) \right] \\
+&= \frac{2(k+1)}{3(k+2)} \left[ -2k^2 - 4k - 6 + k^2 - k \right] \\
+&= \frac{2(k+1)}{3(k+2)} (-k^2 - 5k - 6) \\
+&= -\frac{2(k+1)}{3(k+2)} (k+2)(k+3) \\
+&= -\frac{2}{3}(k+1)(k+3) \\
+&= -\frac{2}{3}((k+2)^2 - 1)
+\end{align*}
+よって、$n=k+2$ のときも成立する。
+
+\vspace{10pt}
+
+(i), (ii) より、すべての自然数 $n$ に対して $b_n = -\frac{2}{3}(n^2 - 1)$ が示された。
+これと ${5}$ から、
+$$
+\sum_{k=1}^{n-1} \alpha_k = -b_n = \frac{2}{3}(n^2-1)
+$$
+となる。
+
+     \newpage
+\end{multicols}
+\end{document}
