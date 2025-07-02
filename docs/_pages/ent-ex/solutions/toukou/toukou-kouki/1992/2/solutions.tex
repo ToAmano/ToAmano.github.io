@@ -1,0 +1,86 @@
+\documentclass[a4paper,10pt]{ltjsarticle}
+\usepackage{luatexja}
+\usepackage[hiragino-pron]{luatexja-preset}
+
+\usepackage[truedimen,top=25truemm,bottom=20truemm,left=15truemm,right=15truemm]{geometry}
+\setlength{\textwidth}{54\zw}
+\setlength{\textheight}{73\zw}
+
+\usepackage{amsmath,amssymb,ascmac}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{cleveref}
+\usepackage{framed}
+\usepackage{fancyhdr}
+\usepackage{latexsym}
+\usepackage{mathtools}
+\usepackage{tikz}
+\usepackage{pgfplots}
+ \usetikzlibrary{math}
+% \usepackage{indent}
+\usepackage{cases}
+\usepackage{float}
+\usepackage{cases}
+  \usepackage{caption}
+  \usepackage[subrefformat=parens]{subcaption}
+\allowdisplaybreaks
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{東工大後期$1992$年$2$番}
+\begin{document}
+\begin{oframed}
+$0 < a < 1$ とする．
+座標平面上で原点 $A_0$ から出発して $x$ 軸の正の方向に $a$ だけ進んだ点を $A_1$ とする．
+次に $A_1$ で進行方向を反時計回りに $120^\circ$ 回転し $a^2$ だけ進んだ点を $A_2$ とする．
+以後同様に $A_{n-1}$ で反時計回りに $120^\circ$ 回転して $a^n$ だけ進んだ点を $A_n$ とする．
+このとき点列 $A_0, A_1, A_2, \dots$ の極限の座標を求めよ．
+\end{oframed}
+\setlength{\columnseprule}{0.4pt}
+\begin{multicols}{2}
+{\bf[解]}
+
+
+ベクトル $\vec{A_n A_{n+1}}$ を表す複素数を $d_n$ と表す．
+また、$e(\theta) = \cos\theta + i\sin\theta$ とし，$p=e(2\pi/3)$とする．題意から，
+\begin{align*}
+\begin{dcases}
+d_{n+1} = a p d_n & (n \ge 0) \\
+d_0 = a &
+\end{dcases}  
+\end{align*}
+となる．これは初項 $d_0 = a$、公比 $ap$ の等比数列だから，その一般項は，
+\begin{align*}
+d_n = a(ap)^n  
+\end{align*}
+となる．
+したがって，点 $A_n$ を表す複素数を $t_n$ とおくと，$n\ge 1$に対して
+\begin{align}
+ t_n = \sum_{k=0}^{n-1} d_k = a \frac{1-(ap)^n}{1-ap}  
+\end{align}
+となる．題意より$0<a<1$であり，またその定義から$|p|=1$であるから
+$\lim_{n \to \infty} (ap)^n = 0$となり，$t_n$の極限値は
+\begin{align*}
+    \lim_{n \to \infty} t_n &= \frac{a}{1-ap} 
+\end{align*}
+である．ここに$p=-1/2+i\sqrt{3}/2$を代入すると
+\begin{align*}
+    \lim_{n \to \infty} t_n
+    &= \frac{a(1-a\bar{p})}{(1-ap)(1-a\bar{p})} \\
+    &= \frac{a(1-a\bar{p})}{1-2a\Re p + a^2} \\
+    &= \frac{2a-a^2(-1-i\sqrt{3})}{2(1+a + a^2)} \\
+    &= \frac{a(2+a)+i\sqrt{3}a^2}{2(1+a + a^2)} \\
+\end{align*}
+したがって、求める座標は
+\begin{align*}
+\left( \frac{a(2+a)}{2(a^2+a+1)}, \frac{\sqrt{3}a^2}{2(a^2+a+1)} \right)  
+\end{align*}
+である．$\cdots$(答)
+
+\vspace{10pt}
+{\bf[解説]}
+複素数の問題で，点$A_n$の座標に関する漸化式さえ立てられれば容易に解ける問題だ．
+
+\newpage
+\end{multicols}
+\end{document}
