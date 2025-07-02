@@ -181,7 +181,7 @@ pdf化した答案の大半には図がないので，時間がある時に順�
 | year | 問題一覧      | 解答一覧             | 1                | 2                |
 |------|---------------|----------------------|------------------|------------------|
 | 1990 | [問題][tkk90] | [手書き答案][tkka90] | [答案][tkka90_1] | [答案][tkka90_2] |
-| 1991 | [問題][tkk91] | [手書き答案][tkka91] | [答案][tkka91_1] |                  |
+| 1991 | [問題][tkk91] | [手書き答案][tkka91] | [答案][tkka91_1] | [答案][tkka92_2] |
 | 1992 | [問題][tkk92] | [手書き答案][tkka92] |                  |                  |
 | 1993 | [問題][tkk93] | [手書き答案][tkka93] |                  |                  |
 | 1994 | [問題][tkk94] | [手書き答案][tkka94] |                  |                  |
@@ -561,6 +561,7 @@ pdf化した答案の大半には図がないので，時間がある時に順�
 [tkka90_1]: {% link _pages/ent-ex/solutions/toukou/toukou-kouki/1990/1/solutions.pdf %}
 [tkka90_2]: {% link _pages/ent-ex/solutions/toukou/toukou-kouki/1990/2/solutions.pdf %}
 [tkka91_1]: {% link _pages/ent-ex/solutions/toukou/toukou-kouki/1991/1/solutions.pdf %}
+[tkka91_2]: {% link _pages/ent-ex/solutions/toukou/toukou-kouki/1991/2/solutions.pdf %}
 
 <!-- 問題へのPath -->
 [utk90]: {% link _pages/ent-ex/problems/todai/todai_kouki/1990/1990.pdf %}

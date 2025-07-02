@@ -20,247 +20,326 @@
 % \usepackage{indent}
 \usepackage{cases}
 \usepackage{float}
+\usepackage{cases}
+  \usepackage{caption}
+  \usepackage[subrefformat=parens]{subcaption}
 \allowdisplaybreaks
 \pagestyle{fancy}
 \lhead{}
 \chead{}
-\rhead{東工大後期$1990$年$2$番}
+\rhead{東工大後期$1991$年$2$番}
 \begin{document}
 \begin{oframed}
-$n$ を $2$ 以上の整数とする．
-\begin{enumerate}
-  \item $n-1$ 次多項式 $P_n(x)$ と $n$ 次多項式 $Q_n(x)$ で実数 $\theta$ に対して
-\[ \sin(2n\theta) = n \sin(2\theta) P_n(\sin^2\theta), \quad \cos(2n\theta) = Q_n(\sin^2\theta) \]
-を満たすものが存在することを帰納法を用いて示せ．
-  \item $k=1, 2, \dots, n-1$ に対して $\alpha_k = \left(\sin\frac{k\pi}{2n}\right)^{-2}$ とおくと
-\[ P_n(x) = (1-\alpha_1 x)(1-\alpha_2 x)\cdots(1-\alpha_{n-1} x) \]
-となることを示せ．
-  \item $\displaystyle \sum_{k=1}^{n-1} \alpha_k = \frac{2n^2-2}{3}$ を示せ．
-\end{enumerate}
+原点Oを中心とする半径2の円Kの内部に，一辺の長さが2で対角線の交点がO となるような正方形ABCDをとる．K上の点Pにおいて，線分POと角$\theta$で交わる2 本の半直線を引く．このとき，PがK上のどのような位置にあっても，これら2本の半直線が正方形ABCDを通るような$\theta$の最大値を求めよ．
 \end{oframed}
 \setlength{\columnseprule}{0.4pt}
 \begin{multicols}{2}
 {\bf[解]}
 
-$n \in \mathbb{N}$ に拡張して考えて良い．
+座標平面上で考える．円Kを原点中心半径$2$の円$x^2+y^2=4$とし，正方形ABCDを$A(1,1), B(1,-1), C(-1,-1), D(-1,1)$とする．
+K上の点Pを$P(c=2\cos\alpha,s=2\sin\alpha)$とする．対称性から $0 \le \alpha \le \pi/4 \dots$ で調べれば良い．
 
-(1) 数学的帰納法で題意を示す．
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[scale=0.8]
+        % Main circle and axes
+        \draw[->] (-2.5,0) -- (2.5,0) node[right] {$x$};
+        \draw[->] (0,-2.5) -- (0,2.5) node[above] {$y$};
+        \node at (0,0) [below left] {O};
+
+        % Unit circle
+        \draw (0,0) circle (2);
+        \node at (1,1)   [above] {A};
+        \node at (1,-1)  [below] {B};
+        \node at (-1,-1) [below] {C};
+        \node at (-1,1)  [above] {D};
+
+        % Square passing through A,B,C,D
+        \draw (1,1) -- (1,-1) -- (-1,-1) -- (-1,1) -- cycle;
+
+        % Point P and related lines
+        \coordinate (P) at ({2*cos(15)}, {2*sin(15)}); 
+        \fill (P) circle (1.5pt) node[right] {P($\alpha$)};
+        \draw[dashed] (0,0) -- (P);
+        \draw[dotted] (1,1) -- ({sqrt(3)},1);
+        \draw[dotted] (0,0) -- ({sqrt(3)},1);
+        
+
+        % Line from O to A and P
+        % \draw (0,0) -- (1,0) node[below right] {A};
+        % \draw (0,0) -- (0,1) node[above right] {C}; % C is actually (0,1)
+
+        % Point P and line from P to A and B
+        \coordinate (P_coord) at (1.5, 0.8); % Example coordinates for P
+        % \coordinate (A_coord) at (1,0);
+        % \coordinate (B_coord) at (-1,0);
+
+        % Labels for the main diagram
+       \node at (2,0) [below right] {2};
+        % \node at (2.5,0.5) {$\theta$};
+    \end{tikzpicture}
+    \caption{座標平面上の円Kと正方形ABCD}
+\end{figure}
+
+点Pが直線DA上にくる時，$\alpha = \pi/6$であることに注意する．線分PO と角 $\theta$ をなす半直線 $l, m$ とする．$\theta$を大きくしていったとき，$l, m$ が正方形ABCDを通る条件は，$\alpha$ によって異なるため，
+\begin{numcases}{}
+ 0     &\le \alpha \le \pi/6 \label{eq:1}\\
+ \pi/6 &\le \alpha \le \pi/4 \label{eq:2}
+\end{numcases}
+の2つの場合分けで考える．\cref{eq:1} の場合は，$\theta$ が最大となるとき $l, m$ は A または B を通る．したがって，$\min \angle \mathrm{OP}(\alpha)\mathrm{B}$, $\min \angle \mathrm{OP}(\alpha)\mathrm{A}$ のうち，小さい方が最大の $\theta$ を与える．一方で\cref{eq:2} の場合は，$\theta$ が最大となるとき $l, m$ は B または D を通る．したがって，$\min \angle \mathrm{OP}(\alpha)\mathrm{B}$, $\min \angle \mathrm{OP}(\alpha)\mathrm{C}$ のうち，小さい方が最大の $\theta$ を与える．これらの場合をそれぞれ図に示す．
+
+これらの条件を数式に起こすと
+\begin{numcases}{}
+ \max \theta = \min \left(\min \angle \mathrm{OPB}, \min \angle \mathrm{OPA}\right) & $\displaystyle 0 \le \alpha \le \frac{\pi}{6}$ \label{eq:3}\\
+ \max \theta = \min \left(\min \angle \mathrm{OPB}, \min \angle \mathrm{OPD}\right) & $\displaystyle \frac{\pi}{6} \le \alpha \le \frac{\pi}{4}$ \label{eq:4} 
+\end{numcases}
+となる．この区間では$0\le\theta<\pi/2$であるから，$\theta$の最大値は$\cos\theta$の最小値に対応する．以下では$\cos\theta$の最小値を求める．
+\begin{figure}[H]
+    \centering
+  \begin{subcaptionblock}{0.5\linewidth}
+    \centering
+    \begin{tikzpicture}[scale=0.8]
+        % Main circle and axes
+        \draw[->] (-2.5,0) -- (2.5,0) node[right] {$x$};
+        \draw[->] (0,-2.5) -- (0,2.5) node[above] {$y$};
+        \node at (0,0) [below left] {O};
+
+        % Unit circle
+        \draw (0,0) circle (2);
+        \node at (1,1)   [above] {A};
+        \node at (1,-1)  [below] {B};
+        \node at (-1,-1) [below] {C};
+        \node at (-1,1)  [above] {D};
+
+        % Square passing through A,B,C,D
+        \draw (1,1) -- (1,-1) -- (-1,-1) -- (-1,1) -- cycle;
+
+        % Point P and related lines
+        \coordinate (P) at ({2*cos(15)}, {2*sin(15)}); 
+        \fill (P) circle (1.5pt) node[right] {P($\alpha$)};
+        \draw[dashed] (0,0) -- (P);
+
+        % Line from P to A and B
+        \draw (P) -- (1,1) ;
+        \draw (P) -- (1,-1);
+
+        % Labels for the main diagram
+       \node at (2,0) [below right] {2};
+        % \node at (2.5,0.5) {$\theta$};
+    \end{tikzpicture}
+    \subcaption{$0\le\alpha\le \pi/6$の場合}
+  \end{subcaptionblock}\hfill
+  \begin{subcaptionblock}{0.5\linewidth}
+    \centering
+    \begin{tikzpicture}[scale=0.8]
+        % Main circle and axes
+        \draw[->] (-2.5,0) -- (2.5,0) node[right] {$x$};
+        \draw[->] (0,-2.5) -- (0,2.5) node[above] {$y$};
+        \node at (0,0) [below left] {O};
+
+        % Unit circle
+        \draw (0,0) circle (2);
+        \node at (1,1)   [above] {A};
+        \node at (1,-1)  [below] {B};
+        \node at (-1,-1) [below] {C};
+        \node at (-1,1)  [above] {D};
+
+        % Square passing through A,B,C,D
+        \draw (1,1) -- (1,-1) -- (-1,-1) -- (-1,1) -- cycle;
+
+        % Point P and related lines
+        \coordinate (P) at ({2*cos(40)}, {2*sin(40)}); 
+        \fill (P) circle (1.5pt) node[right] {P($\alpha$)};
+        \draw[dashed] (0,0) -- (P);
+
+        % Line from P to C and B
+        \draw (P) -- (-1,1) ;
+        \draw (P) -- (1,-1);
+
+        % Labels for the main diagram
+       \node at (2,0) [below right] {2};
+        % \node at (2.5,0.5) {$\theta$};
+    \end{tikzpicture}
+    \subcaption{$\pi/6\le\alpha\le \pi/4$の場合}
+  \end{subcaptionblock}\hfill
+
+\end{figure}
+
+まず，$\angle \mathrm{OP}(\alpha)\mathrm{A}$, $\angle \mathrm{OP}(\alpha)\mathrm{B}$, $\angle \mathrm{OP}(\alpha)\mathrm{D}$の表現について考える．対称性から$\angle \mathrm{OP}(\alpha)\mathrm{A}$について考えれば十分である．$\triangle \mathrm{OPA}$に余弦定理を用いると，
+\begin{align*}
+\cos \angle \mathrm{OPA} 
+&= \frac{\mathrm{OP}^2 + \mathrm{PA}^2 - \mathrm{OA}^2}{2 \mathrm{OP} \cdot \mathrm{PA}} \\
+&= \frac{2 + \mathrm{PA}^2 }{4\mathrm{PA}} \\
+&= \frac{1}{4} \left(\mathrm{PA} + \frac{2}{\mathrm{PA}}\right)
+\end{align*}
+を得る．ここで，PがK上の点であるから$\mathrm{OP} = 2$であること，および$\mathrm{OA}=\sqrt{2}$を利用した．ここで新しく関数$f(x)$を
+\begin{align*}
+f(x) = \frac{1}{4}\left(x + \frac{2}{x}\right) \quad (x > 0)
+\end{align*}
+で定義すると，残りの2つの角についても同様に，
+\begin{align*}
+ \cos \angle \mathrm{OPA} &= f(\mathrm{PA}) \\
+ \cos \angle \mathrm{OPB} &= f(\mathrm{PB}) \\
+ \cos \angle \mathrm{OPD} &= f(\mathrm{PD}) 
+\end{align*}
+と表せる．$f(x)$の増減と，$\alpha$を動かしたときの各線分の長さの取りうる値から，$\cos\theta$の最小値を求める．
+
+$f'(x)=(1-2/x^2)/4$から，$f(x)$の増減表およびグラフの概形は図のようになる．
+
+\begin{table}[H]
+    \centering
+\caption{$f(x)$の増減表}
+\begin{tabular}{|c||c|c|c|c|}
+\hline
+$x$ & $(0)$ & $\dots$ & $\sqrt{2}$ & $\dots$ \\
+\hline
+$f'$ & & $-$ & $0$ & $+$ \\
+\hline
+$f$ & $(+\infty)$ & $\searrow$ & $\sqrt{2}/2$ & $\nearrow$ \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{figure}[H]
+  \centering
+\begin{tikzpicture}[xscale=1.3]
+    % Axes
+    \draw[->] (0,0) -- (5.5,0) node[below] {$x$};
+    \draw[->] (0,0) -- (0,5.5) node[left] {$y$};
+
+    % Origin label
+    \node at (0,0) [below left] {0};
+
+    % Plot of f(x) = x + 2/x
+    \draw[thick, blue, domain=0.5:5, samples=100] plot (\x, {\x + 2/\x});
+
+    % Minima point
+    \draw[dashed] ({sqrt(2)}, 0) -- ({sqrt(2)}, {2*sqrt(2)});
+    \draw[dashed] (0, {2*sqrt(2)}) -- ({sqrt(2)}, {2*sqrt(2)});
+
+    % Labels for x-axis points from the image
+    \node at ({sqrt(2)},0) [below] {$\sqrt{2}$}; % x_min = sqrt(2)
+
+    % Label for y-axis points from the image
+    \node at (0, {2*sqrt(2)}) [left] {$2\sqrt{2}$}; % y_min = 2*sqrt(2)
+    \node at (0, {2*sqrt(3)}) [left] {$\sqrt{3}/2$}; % This seems like 3/2, but f(x) min is 2sqrt(2) approx 2.828, so 3/2 is below min.
+
+    % Specific labels from the image (very hard to read and precisely place without context)
+    % I will approximate their positions.
+    \node at ({sqrt(3)-1},0) [below] {$\sqrt{3}-1$}; 
+    \node at ({sqrt(8-2*sqrt(3))},-0.5) [below] {$\sqrt{8-2\sqrt{3}}$}; 
+    \node at ({sqrt(6)},0) [above] {$\sqrt{6}$}; 
+    \node at ({sqrt(3)+1},0) [below] {$\sqrt{3}+1$}; 
+    \draw[dashed] (0, {2*sqrt(3)}) -- ({sqrt(3)+1}, {2*sqrt(3)});
+
+    % Drawing dashed lines for the approximated specific x-values
+    \draw[dashed] ({sqrt(3)-1},0) -- ({sqrt(3)-1},{2*sqrt(3)});
+    \draw[dashed] ({sqrt(8-2*sqrt(3))},-0.5) -- ({sqrt(8-2*sqrt(3))},3.06883);
+    \draw[dashed] ({sqrt(6)},0) -- ({sqrt(6)},{sqrt(6)*4/3});
+    \draw[dashed] ({sqrt(3)+1},0) -- ({sqrt(3)+1},{2*sqrt(3)});
+\end{tikzpicture}
+\caption{$f(x)$の概形}
+\end{figure}
 
 \vspace{10pt}
+(i) $0 \le \alpha \le \pi/6$の場合
 
-(i)
-$n=1, 2$ のとき
+この場合，
 \begin{align*}
-    P_1(x) &= 1, P_2(x) = 1-2x \\
-    Q_1(x) &= 1-2x, Q_2(x) = 8x^2 - 8x + 1 \quad \cdots (*)
-\end{align*}
-とすれば良く成立する．
-
-\vspace{10pt}
-
-(ii)
-以下 $n=k, k+1 \in \mathbb{N}$ での成立を仮定し，$n=k+2$ での成立を示す．
-和積公式より，
-\begin{align*}
-    \sin(2k+4)\theta 
-    &= 2\sin(2k+2)\theta\cos2\theta - \sin2k\theta \\
-    \cos(2k+4)\theta 
-    &= 2\cos(2k+2)\theta\cos2\theta - \cos2k\theta 
-\end{align*}
-であり，ここに$n=k, k+1$ のときの $P_n(x), Q_n(x)$ を代入して
-\begin{align*}
-    \sin(2k+4)\theta 
-    =& 2 (k+1) \sin(2\theta) P_{k+1}(\sin^2\theta) \cos 2\theta \\
-     &- 2 k \sin(2\theta) P_k(\sin^2\theta) \\
-    =& \left\{2(1-2\sin^2\theta)(k+1)P_{k+1}(\sin^2\theta) \right. \\
-     & \left. - kP_k(\sin^2\theta)\right\}\sin(2\theta) \\
-    \cos(2k+4)\theta
-    =& 2Q_{k+1}(\sin^2\theta)\cos2\theta - Q_{k}(\sin^2\theta) \\
-    =& 2(1-2\sin^2\theta)Q_{k+1}(\sin^2\theta) - Q_k(\sin^2\theta)
-\end{align*}
-を得る．ただし途中で半角公式$\cos2\theta = 1-2\sin^2\theta$を利用した．
-従って$x=\sin^2\theta$ とおいて
-\begin{align}\label{eq:condition}
-    \begin{dcases}
-        P_{k+2}(x) &= \frac{1}{k+2}\{2(1-2x)(k+1)P_{k+1}(x) - kP_k(x)\} \\
-        Q_{k+2}(x) &= 2(1-2x)Q_{k+1}(x) - Q_k(x)
-    \end{dcases}
-\end{align}
-とすれば，$P_{k+2}(x), Q_{k+2}(x)$ は $k+1, k+2$ 次多公式であり条件を満たす．以上から $n=k+2$ でも成立．
-
-(i), (ii) より，数学的帰納法により題意は示された．
-
-\vspace{10pt}
-(2) 題意を示すには，因数定理より$P_n(x)$ の零点が$x=1/\alpha_{k}$であること，および$0$次の係数が$1$であることを示せば良い．
-まずは前者から示す．$x=\sin^2\theta$ とすると、$\sin^2\theta$ の周期性から
-\begin{align}\label{eq:1}
- 0 \le \theta < \frac{\pi}{2}
-\end{align}
-の範囲のみ考えれば良い．以下 $\theta$ をこの範囲で考える．
-\begin{align}\label{eq:2}
- \sin(2\theta) = 0 \Leftrightarrow \theta = 0 
-\end{align}
-だから、これ以外の時、(1)から
-\begin{align*}
-  P_n(\sin^2\theta) = \frac{\sin(2n\theta)}{2n\sin(2\theta)} \qquad \cdots\cdots ②
-\end{align*}
-とかける．したがって$P_n(\sin^2\theta)=0$ となるのは $\sin(2n\theta)=0$ のときである.この条件は\cref{eq:1,eq:2}に注意して
-\begin{align*}
-  \theta = \frac{k\pi}{2n} \quad (k=1, 2, \dots, n-1)
-\end{align*}
-となる. これら $n-1$ 個の$\theta$に対して$x$は異なる値を取り，さらに $P_n(x)$ は $n-1$ 次式だから、これが $P_n(x)=0$ の全ての解である．これで1つ目の条件は示された．したがって因数定理から，$A\ne 0$ として
-\begin{align}\label{eq:3}
-  P_n(x) = A \prod_{k=1}^{n-1} \left(x - \sin^2\frac{k\pi}{2n}\right) 
-\end{align}
-とおける。以下 $A$ を求める。$P_n(x)$ の定数項を $a_n$ とすると、\cref{eq:condition}から
-\begin{align}
- \begin{dcases} 
-  & a_1=1, a_2=1 \\ 
-  & a_{n+2} = \frac{1}{n+2}\{2(n+1)a_{n+1} - na_n\} 
-\end{dcases}
-\end{align}
-となり、帰納的に $a_n=1$ である．これで2つ目の条件が示された．\cref{eq:3}で定数項の係数を比較して
-\begin{align*}
-  A &\prod_{k=1}^{n-1} \left(-\sin^2\frac{k\pi}{2n}\right) = 1 \\
-  \therefore A &= \frac{1}{\prod_{k=1}^{n-1} \left(-\sin^2\frac{k\pi}{2n}\right)}
-\end{align*}
-だから、これを\cref{eq:3}に代入して
-\begin{align}
-  P_n(x) = \prod_{k=1}^{n-1} \left(1 - \frac{x}{\sin^2\frac{k\pi}{2n}}\right) = \prod_{k=1}^{n-1} (1-\alpha_k x) 
-\end{align}
-を得る．以上より題意は示された．
-
-\vspace{10pt}
-(3)
-$\displaystyle \sum_{k=1}^{n-1} \alpha_k$ は、(2)の結果より$P_n(x)$ の $x$ の1次の項の係数を $b_n$ として、
-\begin{align}\label{eq:5}
-\sum_{k=1}^{n-1} \alpha_k = -b_n 
-\end{align}
-と表せる。したがって，題意を示すには
-\begin{align}\label{eq:4}
-b_n = -\frac{2}{3}(n^2 - 1)
-\end{align}
-を示せばよい．ここで，$b_n$ については\cref{eq:condition}から
-\begin{align}\label{eq:6}
 \begin{dcases}
-b_1 = 0, \ b_2 = -2 \\
-b_{n+2} = \frac{1}{n+2} [2(n+1)(b_{n+1} - 2) - n b_n] \quad (\because a_n=1)
+ \mathrm{PA} & \text{単調減少で}\sqrt{2} \ge \mathrm{PA} \ge \sqrt{3}-1 \text{まで動く．} \\
+ \mathrm{PB} & \text{単調増加で}\sqrt{2} \le \mathrm{PB} \le \sqrt{8-2\sqrt{3}} \text{まで動く．} 
 \end{dcases}
-\end{align}
-なる漸化式が成立する．これを用いて以下 \cref{eq:4} がすべての$n$について成立することを数学的帰納法により示す．
-
-\vspace{10pt}
-(i) $n=1, 2$ のとき
-\begin{align*}
-b_1 &= -\frac{2}{3}(1^2-1) = 0 \\
-b_2 &= -\frac{2}{3}(2^2-1) = -2  
 \end{align*}
-となり、\cref{eq:6} の初期条件と一致するため成立する．
-
-\vspace{10pt}
-(ii) $n=k, k+1$ での成立を仮定する。すなわち、
-$b_k = -\frac{2}{3}(k^2 - 1)$, $b_{k+1} = -\frac{2}{3}((k+1)^2 - 1)$
-が成り立つと仮定する．このとき、$n=k+2$ での成立を示す．
-\cref{eq:6} の漸化式に $n=k$ を代入して仮定を用いると，
+だから，$f(x)$のグラフの増減から，
 \begin{align*}
-b_{k+2} 
-&= \frac{1}{k+2} \left[ 2(k+1)(b_{k+1} - 2) - k b_k \right] \\
-&= \frac{1}{k+2} \left[ 2(k+1) \left\{ -\frac{2}{3}((k+1)^2 - 1) - 2 \right\} - k \left\{ -\frac{2}{3}(k^2 - 1) \right\} \right] \\
-&= \frac{1}{k+2} \left[ 2(k+1) \left\{ -\frac{2}{3}(k^2+2k) - 2 \right\} + \frac{2}{3}k(k^2 - 1) \right] \\
-&= \frac{1}{k+2} \left[ -\frac{4}{3}(k+1)(k^2+2k) - 4(k+1) + \frac{2}{3}k(k^2-1) \right] \\
-&= \frac{2}{3(k+2)} \left[ -2(k+1)k(k+2) - 6(k+1) + k(k-1)(k+1) \right] \\
-&= \frac{2(k+1)}{3(k+2)} \left[ -2k(k+2) - 6 + k(k-1) \right] \\
-&= \frac{2(k+1)}{3(k+2)} (-k^2 - 5k - 6) \\
-&= -\frac{2(k+1)}{3(k+2)} (k+2)(k+3) \\
-&= -\frac{2}{3}(k+1)(k+3) \\
-&= -\frac{2}{3}((k+2)^2 - 1)
+\begin{dcases}
+ \max \left(\cos \angle \mathrm{APO}\right) = \frac{\sqrt{3}}{2} & \mathrm{PA} = \sqrt{3}-1 \\
+ \max \left(\cos \angle \mathrm{BPO}\right) =  \beta             & \mathrm{PB} = \sqrt{8-2\sqrt{3}} 
+\end{dcases}
 \end{align*}
-よって、$n=k+2$ のときも成立する．
+となる．ここで$\beta=f(\sqrt{8-2\sqrt{3}})$とおいた．$f(x)$のグラフの概形より$\sqrt{3}/2>\beta$だから，このときの$\max \theta$は\cref{eq:3}より$\cos \angle \mathrm{APO} = \frac{\sqrt{3}}{2}$すなわち$\max \theta=\pi/6$である．
 
 \vspace{10pt}
+(ii) $\pi/6 \le \alpha \le \pi/4$の場合
 
-(i), (ii) より、すべての自然数 $n$ に対して $b_n = -\frac{2}{3}(n^2 - 1)$ が示された．
-これと \cref{eq:5} から、
+この場合，
 \begin{align*}
-\sum_{k=1}^{n-1} \alpha_k = -b_n = \frac{2}{3}(n^2-1)
-  \end{align*}
-となり題意は示された．
+\begin{dcases}
+ \mathrm{PD} & \text{単調減少で}\sqrt{3}+1 \ge \mathrm{PD} \ge \sqrt{6} \text{まで動く．} \\
+ \mathrm{PB} & \text{単調増加で}\sqrt{8-2\sqrt{3}} \le \mathrm{PB} \le \sqrt{6} \text{まで動く．} 
+\end{dcases}
+\end{align*}
+だから，$f(x)$のグラフの増減から，
+\begin{align*}
+\begin{dcases}
+ \max \left(\cos \angle \mathrm{DPO}\right) = \frac{\sqrt{3}}{2} & \mathrm{PD} = \sqrt{3}+1 \\
+ \max \left(\cos \angle \mathrm{BPO}\right) = \frac{\sqrt{6}}{3} & \mathrm{PB} = \sqrt{6} 
+\end{dcases}
+\end{align*}
+となる．$\sqrt{3}/2>\sqrt{6}{3}$より，したがってこのときの$\max \theta$は\cref{eq:4}より$cos \angle \mathrm{DPO} = \frac{\sqrt{3}}{2}$すなわち$\max \theta=\pi/6$である．
+
+\vspace{10pt}
+以上(i),(ii)から，どちらの場合も$\max \theta = \pi/6$である．したがって，求める最大値は$\displaystyle \max\theta = \frac{\pi}{6}$である．$\cdots$(答)
 
 \vspace{10pt}
 {\bf[解説]}
-この問題は帰納法を用いて多項式の性質を示し，最終的には$\sin$の逆二乗和を求める問題である．帰納法を利用するだけなので問題の難易度としては高くないが，この問題の背景としてはチェビシフ多項式と呼ばれる三角関数から派生した多項式と，バーゼル問題という無限級数の和を求める問題があり，これを知っているとより深く理解できる．
 
-第一種および第二種チェビシフ多項式$T_n(x), U_n(x)$は以下の式で定義される．
-\begin{align*}
-    T_n(x) &= \cos(n\theta) \quad (\text{ただし } x = \cos\theta) \\
-    U_n(x) &= \frac{\sin(n\theta)}{\sin\theta} \quad (\text{ただし } x = \cos\theta)
-\end{align*}
-ここで、$T_n(x)$ も $U_n(x)$ も $n$ 次の多項式であることが帰納的に示せる．このように三角関数が$\cos\theta$に関する多項式に変換できるのは本問中の証明でみも見たように加法定理の帰結である．いくつか$n$の小さい値に対して例示すると
-\begin{align*}
-    T_0(x) &= 1, \quad T_1(x) = x, \\
-    T_2(x) &= 2x^2 - 1, T_3(x) &= 4x^3 - 3x \\
-    U_0(x) &= 1, \quad U_1(x) = 2x, \\
-    U_2(x) = 4x^2 - 1, \quad U_3(x) = 8x^3 - 4x
-\end{align*}
-のようになる．
-チェビシフ多項式は以下のような三項間漸化式を満たす．
-\begin{align*}
-    T_{n+1}(x) &= 2xT_n(x) - T_{n-1}(x) \\
-    U_{n+1}(x) &= 2xU_n(x) - U_{n-1}(x)
-\end{align*}
-本文では$P_n(x)$と$Q_n(x)$が$\sin^{2}\theta$による関数として定義されているため漸化式が複雑になっている．また，$T_n(x)$と$U_n(x)$は
-\begin{align*}
-    nU_{n-1}(x) = T'_n(x)
-\end{align*}
-というきれいな微分の関係で結ばれている．
+平面図形の問題．「2本の半直線が正方形ABCDを通る」というのをそのまま数式に起こすのは大変だが，最大値や最小値を求めるだけということで極端な場合だけを考えればすむことを使えばそこまで大変ではない．また，図形的な図形的な感覚を使えばほとんど計算なしで答えも出せる良問だろう．
 
-チェビシフ多項式には数多くの重要な性質があるが，ここでは例として母関数および直交性を紹介する．
-チェビシフ多項式の母関数は以下のように表される
-\begin{align*}
-    \sum_{n=0}^{\infty} T_n(x) t^n &= \frac{1 - xt}{1 - 2xt + t^2} \\
-    \sum_{n=0}^{\infty} U_n(x) t^n &= \frac{1}{1 - 2xt + t^2}
-\end{align*}
-ここで、$|t|<1$の範囲で収束する．
-また、チェビシフ多項式は直交性を満たす．
-すなわち、$n, m \in \mathbb{Z}$ にたいして
-\begin{align*}
-    \int_{-1}^{1} T_n(x) T_m(x)\frac{1}{\sqrt{1-x^2}} \, dx &= N_{n}\delta_{nm} \\
-    \int_{-1}^{1}  U_n(x) U_m(x) \sqrt{1-x^2} \, dx &= \frac{\pi}{2} \delta_{nm} 
-\end{align*}
-が成り立つ．ただし$N_0=\pi$、$N_n = \frac{\pi}{2}$ ($n \ge 1$)である．
-この直交性は、チェビシフ多項式が$[-1, 1]$の区間で定義される重み関数$\sqrt{1-x^2}^{\pm 1}$に対して直交することを意味する．
-この性質は最小二乗近似の問題において重要な役割を果たす．
-また、チェビシフ多項式は数値解析や信号処理などの分野でも広く利用されている．
+今回の解説では，\cref{eq:3,eq:4}から$\theta$の最大値を関数$f(x)$を導入してかなり丁寧に求めたが，$\angle \mathrm{APO}$,$\angle \mathrm{BPO}$,$\angle \mathrm{DPO}$が単調に変化することは図から自明としてしまっても良いかもしれない．この場合は後半の解答は細かい数値の比較は除いて以下のように簡略化できる．
 
-次に，バーゼル問題について紹介する．バーゼル問題は逆二乗和の収束値を求める問題であり，以下のように定義される．
-\begin{align*}
-    \sum_{n=1}^{\infty} \frac{1}{n^2} = \frac{\pi^2}{6}
-\end{align*}
-このようになぜか右辺に$\pi$が現れるのが面白い問題である．この問題はオイラーによって解かれたのち，いくつかの解法が知られているが，
-ここでは本文と関連する証明方法を説明する．
+\vspace{10pt}
+(i) $0 \le \alpha \le \pi/6$の場合
 
-自然数$n$にたいして，$k=1,2,\dots,n$ として $\theta_k = \frac{k\pi}{2n+1}$ とおく．$0 < \theta_k < \frac{\pi}{2}$ から 
-\begin{align}
- 0 < \sin\theta_k < \theta_k < \tan\theta_k
-\end{align}
-だから，逆数をとって2乗して整理すると，
-\begin{align*}
- \frac{1}{\tan^2\theta_k} &\le \frac{1}{\theta_k^2} \le \frac{1}{\sin^2\theta_k} \\
- \frac{\pi^2}{(2n+1)^2} \left(-1 + \frac{1}{\sin^2\theta_k}\right) &\le \frac{1}{k^2} \le \frac{\pi^2}{(2n+1)^2} \frac{1}{\sin^2\theta_k}
-\end{align*}
-$k$ について和をとって $\displaystyle A_n = \sum_{k=1}^n \frac{1}{\sin^2\theta_k}$ とおくと，
-\begin{align}
-\frac{\pi^2}{(2n+1)^2} \left(-n + A_n\right) \le \sum_{k=1}^n \frac{1}{k^2} \le \frac{\pi^2}{(2n+1)^2} A_n
-\end{align}
-だから，$A_n$ を求めると $\displaystyle \sum_{k=1}^n \frac{1}{k^2}$ が求まる．そして，$A_n$が本問(3)で求めたそのものである．したがって，(3)の結果を代入すると
-\begin{align*}
-  \frac{\pi^2}{(2n+1)^2} \left(-n + \frac{2}{3}(n^2-1)\right) \le \sum_{k=1}^n \frac{1}{k^2} \le \frac{\pi^2}{(2n+1)^2} \frac{2}{3}(n^2-1)
-\end{align*}
-両辺とも$n\to\infty$の極限を取ると$\pi^2/6$に収束するから，挟み撃ちの定理により
-\begin{align*}
- \sum_{k=1}^n \frac{1}{k^2} \longrightarrow \frac{\pi^2}{6}
-\end{align*}
-が得られる．
+図からこの区間で$\angle \mathrm{OPB}$は$P=(\sqrt{3},1)$で最小値を，$\angle \mathrm{OPA}$は$P=(\sqrt{3},1)$で最小値$\pi/6$を取る．このうち小さいのは後者であり，求める$\max\theta=\pi/6$である．
+
+\vspace{10pt}
+(ii) $\pi/6 \le \alpha \le \pi/4$の場合
+
+図からこの区間で$\angle \mathrm{OPB}$は$P=(\sqrt{2},\sqrt{2})$で最小値$\arccos(\sqrt{6}/3)$を，$\angle \mathrm{OPD}$は$P=(\sqrt{3},1)$で最小値$\pi/6$を取る．このうち小さいのは後者であり，求める$\max\theta=\pi/6$である．
+
+以上(i), (ii)から，いずれの場合も求める最大値は$\max\theta=\pi/6$である．
+
+結局$\angle \mathrm{APO}$,$\angle \mathrm{BPO}$,$\angle \mathrm{DPO}$のうちで，$\angle \mathrm{BPO}$が最小になることはなく，$\angle \mathrm{APO}$と$\angle \mathrm{DPO}$のみ考えればよい．そして，いずれも許容角度が最小となるのは$P=(\sqrt{3},1)$であり，このときPADは一直線で$\angle \mathrm{APO}=\angle \mathrm{DPO}=\pi/6$だから答え自体はすぐにでるのだが，これはグラフからはそこまではっきりわかることでもないような気もするのである程度丁寧に記述していったほうがよいだろう．
+
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[scale=0.8]
+        % Main circle and axes
+        \draw[->] (-2.5,0) -- (2.5,0) node[right] {$x$};
+        \draw[->] (0,-2.5) -- (0,2.5) node[above] {$y$};
+        \node at (0,0) [below left] {O};
+
+        % Unit circle
+        \draw (0,0) circle (2);
+        \node at (1,1)   [above] {A};
+        \node at (1,-1)  [below] {B};
+        \node at (-1,-1) [below] {C};
+        \node at (-1,1)  [above] {D};
+
+        % Square passing through A,B,C,D
+        \draw (1,1) -- (1,-1) -- (-1,-1) -- (-1,1) -- cycle;
+
+        % Point P and related lines
+        \coordinate (P) at ({sqrt(3)}, 1); 
+        \fill (P) circle (1.5pt) node[right] {P($\pi/6$)};
+        \draw[dashed] (0,0) -- (P);
+        \filldraw[gray, opacity=0.3] (-2.5,1) -- (P) -- (-1,{-sqrt(3)-2}) -- cycle;
+        \draw[solid]  (-2.5,1) -- (P);
+        \draw[solid]  (-1,{-sqrt(3)-2}) -- (P);
+
+        % Point P and line from P to A and B
+        \coordinate (P_coord) at (1.5, 0.8); % Example coordinates for P
+        % \coordinate (A_coord) at (1,0);
+        % \coordinate (B_coord) at (-1,0);
+
+        % Labels for the main diagram
+       \node at (2,0) [below right] {2};
+        % \node at (2.5,0.5) {$\theta$};
+    \end{tikzpicture}
+    \caption{許容される$\max\theta$が最も小さくなる，$\alpha=\pi/6$，すなわち$P=(\sqrt{3},1)$のときの図形}
+\end{figure}
 
 
 \newpage
