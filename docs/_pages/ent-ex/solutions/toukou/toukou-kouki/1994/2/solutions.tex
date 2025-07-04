@@ -42,23 +42,25 @@ $a_n = (2-\sqrt{3})^n$ とおく。二項係数が整数であるから,
 $A_n, B_n$を自然数として
 \begin{align*} 
   a_n 
-  &=(2+\sqrt{3})^n \\
-  &= (2^n + {}_n\mathrm{C}_2 \cdot 2^{n-2} \cdot 3 + \dots) + \sqrt{3}({}_n\mathrm{C}_1 \cdot 2^{n-1} + {}_n\mathrm{C}_3 \cdot 2^{n-3} \cdot 3 + \dots) \\ 
-  &= A_n + \sqrt{3}B_n \end{align*}
+  =& (2-\sqrt{3})^n \\
+  =& (2^n + {}_n\mathrm{C}_2 \cdot 2^{n-2} \cdot 3 + \dots) \\
+   & -\sqrt{3}({}_n\mathrm{C}_1 \cdot 2^{n-1} + {}_n\mathrm{C}_3 \cdot 2^{n-3} \cdot 3 + \dots) \\ 
+  =& A_n - \sqrt{3}B_n 
+\end{align*}
 と表せる．$A_n$および$B_n$のみたす漸化式を求めるため，$a_{n+1}=(2-\sqrt{3})a_{n}$を$A$および$B$で表すと
 \begin{align*} 
-  A_{n+1} + \sqrt{3}B_{n+1} 
-  &= (2+\sqrt{3})(A_n + \sqrt{3}B_n) \\ 
-  &= 2A_n + 3B_n + \sqrt{3}(A_n + 2B_n) 
-$\therefore 
+  A_{n+1} - \sqrt{3}B_{n+1} 
+  &= (2-\sqrt{3})(A_n - \sqrt{3}B_n) \\ 
+  &= 2A_n + 3B_n - \sqrt{3}(A_n + 2B_n) \\
+\therefore &
 \begin{cases} 
-  A_{n+1} = 2A_n + 3B_n \\ 
+  A_{n+1} = 2A_n+ 3B_n \\ 
   B_{n+1} = A_n + 2B_n 
-\end{cases} \quad \text{①}$
+\end{cases} \quad \text{①}
 \end{align*}
 となる．初期条件は$n=1$のとき
 \begin{align}\label{eq:2}
-  A_{1} = 2 & B_{1} = 1
+  &A_{1} = 2 & B_{1} = 1
 \end{align}
 となる．
 
@@ -74,40 +76,64 @@ $n=1$の時の成立は\cref{eq:2}より明らかだから, $n=k \in \mathbb{N}$
   &= (2A_k + 3B_k)^2 \\ 
   &= 4A_k^2 + 9B_k^2 + 12A_kB_k \\ 
   &= 4(3B_k^2 + 1) + 9B_k^2 + 12A_kB_k \quad (\text{∵仮定}) \\ 
-  &= 12B_k^2 + 4 + 9B_k^2 + 12A_kB_k \\ 
   &= 21B_k^2 + 4 + 12A_kB_k 
 \end{align*}
+および
 \begin{align*} 
   3B_{k+1}^2 + 1 
   &= 3(A_k + 2B_k)^2 + 1 \\ 
   &= 3(A_k^2 + 4A_kB_k + 4B_k^2) + 1 \\ 
   &= 3A_k^2 + 12A_kB_k + 12B_k^2 + 1 \\ 
   &= 3(3B_k^2 + 1) + 12A_kB_k + 12B_k^2 + 1 \quad (\text{∵仮定}) \\ 
-  &= 9B_k^2 + 3 + 12A_kB_k + 12B_k^2 + 1 \\ 
   &= 21B_k^2 + 4 + 12A_kB_k 
 \end{align*}
-$A_{k+1}^2 = 3B_{k+1}^2 + 1$ が成り立つ。
-よって$n=k+1$でも②は成立。以上から②は示された。したがって
-$A_n = m$ とおくと $m^2 = 3B_n^2 + 1$ より $3B_n^2 = m^2-1$。
-$B_n = \sqrt{\frac{m^2-1}{3}}$。
-$A_n + \sqrt{3}B_n = 2+\sqrt{3}$
-$A_n - \sqrt{3}B_n = 2-\sqrt{3}$
-$A_n = m$, $B_n = \sqrt{(m^2-1)/3}$ とおくと, $A_n \in \mathbb{N}$, $B_n \in \mathbb{N}$。
-$A_n = m$, $B_n = \sqrt{(m^2-1)/3}$ となって, $A_n - \sqrt{3}B_n = m - \sqrt{m^2-1}$ と表せる。
-$\cdots$(答)
+だから，$A_{k+1}^2 = 3B_{k+1}^2 + 1$ が成り立つ．
+よって$n=k+1$でも\cref{eq:3}は成立．
+
+以上から\cref{eq:3}は示された．したがって
+$m=A_n^2$ とおくと $3B_n^2 = m-1$となり，
+\begin{align*}
+  a_n 
+  &= A_n - \sqrt{3} B_n \\
+  &= \sqrt{m} - \sqrt{m-1}
+\end{align*}
+を得る．以上で題意は示された．$\cdots$(答)
 
 \vspace{10pt}
 {\bf[解説]}
 
-$bn=(2+\sqrt{3})^n = An + \sqrt{3}Bn$ と $An$ と $Bn$ とおけて 
-\begin{align}
-1 = An^2 - 3Bn^2
-\end{align}
-より、
-\begin{align}
-an = \sqrt{An^2 + 3Bn^2} = \sqrt{m} + \sqrt{m-1}  
-\end{align}
+いわゆる二次体の問題である．二次体とは，平方数でない整数$d$を用いて
+\begin{align*}
+  q = A + B\sqrt{d}
+\end{align*}
+と表されるような数の集合である．ここで$A,B \in \mathbb{Q}$である．
 
+$a_n$とペアとなる$(2-\sqrt{3})^n$を同時に考えることでもっと綺麗に解けるので別解として示す．
+\begin{align*}
+  b_n = (2+\sqrt{3})^n
+\end{align*}
+と定義すると，$a_n$と同様に
+\begin{align*}
+  b_n = A_n + \sqrt{3} B_n
+\end{align*}
+とかける．$a_n$と$b_n$の積を計算すると
+\begin{align*}
+  a_nb_n 
+  &= (2+\sqrt{3})^n(2-\sqrt{3})^n \\
+  &= \left(4-3\right)^n \\
+  &= 1
+\end{align*}
+である．一方この積は$A_n$と$B_n$を使うと
+\begin{align*}
+  a_nb_n 
+  &= (A_n+\sqrt{3}B_n)(A_n-\sqrt{3}B_n) \\
+  &= A_n^2 -3B_n2 
+\end{align*}
+と書ける．従って
+\begin{align*}
+  A_n^2 = 3B_n^2 +1
+\end{align*}
+をえる．これは\cref{eq:3}であり，以下容易に題意が示される．
 
 \newpage
 \end{multicols}
