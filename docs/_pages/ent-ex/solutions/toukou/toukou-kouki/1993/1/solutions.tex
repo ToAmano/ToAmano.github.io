@@ -1,0 +1,227 @@
+\documentclass[a4paper,10pt]{ltjsarticle}
+\usepackage{luatexja}
+\usepackage[hiragino-pron]{luatexja-preset}
+
+\usepackage[truedimen,top=25truemm,bottom=20truemm,left=15truemm,right=15truemm]{geometry}
+\setlength{\textwidth}{54\zw}
+\setlength{\textheight}{73\zw}
+
+\usepackage{amsmath,amssymb,ascmac}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{physics}
+\usepackage{cleveref}
+\usepackage{framed}
+\usepackage{fancyhdr}
+\usepackage{latexsym}
+\usepackage{mathtools}
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+\usepackage{pgfplots}
+ \usetikzlibrary{math}
+% \usepackage{indent}
+\usepackage{cases}
+\usepackage{float}
+\usepackage{lmodern}
+
+\allowdisplaybreaks
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{東工大後期$1993$年$1$番}
+\begin{document}
+\begin{oframed}
+一辺の長さが $1$ の立方体を，中心を通る対角線のうちの一本を軸として回転させたとき，この立方体が通過する部分の体積を求めよ．
+
+\end{oframed}
+\setlength{\columnseprule}{0.4pt}
+\begin{multicols}{2}
+{\bf[解]}
+\cref{fig:1}のように、一辺の長さが1の立方体の8頂点を定める。回転軸をOEとし、その方向ベクトルを
+\begin{align*}
+\va*{l} = 
+\begin{pmatrix} 
+    1 \\ 
+    1 \\ 
+    1 
+\end{pmatrix}    
+\end{align*}
+とする．
+OE上の点$P_{t} = t\va*{l}$ ($0 \le t \le 1$)を通り，$\va*{l}$に垂直な平面$x+y+z=3t$で立体を切断したときの断面積を考える．
+これをOEを軸に回転させたときの面積を$S(t)$とする．
+最終的に、この$S(t)$を線分OEに沿って積分することで、回転体の体積$V$を求める．
+対称性から，$0\le t\le 1/2$についてのみ考えれば十分である．
+
+\begin{figure}[H]
+\centering
+\tdplotsetmaincoords{70}{110}
+\begin{tikzpicture}[scale=2, tdplot_main_coords]
+    \coordinate (O) at (0,0,0);
+    \coordinate (A) at (1,0,0);
+    \coordinate (C) at (0,1,0);
+    \coordinate (D) at (0,0,1);
+    \coordinate (B) at (1,1,0);
+    \coordinate (F) at (1,0,1);
+    \coordinate (G) at (0,1,1);
+    \coordinate (E) at (1,1,1);
+
+    \draw[thick,->] (0,0,0) -- (1.5,0,0) node[anchor=north east]{$x$};
+    \draw[thick,->] (0,0,0) -- (0,1.5,0) node[anchor=north west]{$y$};
+    \draw[thick,->] (0,0,0) -- (0,0,1.5) node[anchor=south]{$z$};
+
+    \draw[dashed] (O) -- (A);
+    \draw[dashed] (O) -- (C);
+    \draw[dashed] (O) -- (D);
+    \draw (A) -- (B) -- (C) -- (G) -- (E) -- (F) -- (A);
+    \draw (C) -- (B);
+    \draw (D) -- (F);
+    \draw (D) -- (G);
+    \draw (B) -- (E);
+
+
+    \node[below] at (O) {O};
+    \node[below] at (A) {A};
+    \node[below] at (B) {B};
+    \node[below] at (C) {C};
+    \node[left] at (D) {D};
+    \node[below right] at (F) {F};
+    \node[above] at (G) {G};
+    \node[above] at (E) {E};
+\end{tikzpicture}
+\caption{立方体と頂点の定義}
+\label{fig:1}
+\end{figure}
+
+\section{断面積S(t)の計算}
+
+\subsection{$0 \le t \le \frac{1}{3}$ の場合}
+
+断面は\cref{fig:2}のように，3点$(3t,0,0), (0,3t,0), (0,0,3t)$を頂点とする正三角形となる．
+回転の軸となる点$P_t(t,t,t)$から最も遠い点はこの三角形の頂点である．
+例えば、点Q$(3t,0,0)$を考えると、回転体の半径の2乗は$\overline{P_t Q}^2$で与えられる．
+\begin{align*}
+\overline{P_t Q}^2 
+&= (3t-t)^2 + (0-t)^2 + (0-t)^2 \\
+&= 6t^2 
+\end{align*}
+より，この場合の回転断面積$S(t)$は
+\begin{align}
+ S(t) 
+ &= \pi \overline{P_t Q}^2 \nonumber \\
+ &= 6\pi t^2 \label{eq:1}
+\end{align}
+となる．
+
+\begin{figure}[H]
+\centering
+\tdplotsetmaincoords{70}{120}
+\begin{tikzpicture}[scale=2.5, tdplot_main_coords]
+    \coordinate (O) at (0,0,0);
+    \coordinate (E) at (1,1,1);
+    \def\t{0.25} % t = 1/4 の断面
+    \coordinate (P) at (\t,\t,\t);
+    \coordinate (V1) at (0, 3*\t, 0);
+    \coordinate (V2) at (0, 0, 3*\t);
+    \coordinate (V3) at (3*\t, 0, 0);
+
+    \draw[thick,->] (0,0,0) -- (1.5,0,0) node[anchor=north east]{$x$};
+    \draw[thick,->] (0,0,0) -- (0,1.5,0) node[anchor=north west]{$y$};
+    \draw[thick,->] (0,0,0) -- (0,0,1.5) node[anchor=south]{$z$};
+
+    \draw[dashed] (O) -- (1,0,0) -- (1,1,0) -- (0,1,0) -- cycle;
+    \draw[dashed] (0,0,1) -- (1,0,1) -- (1,1,1) -- (0,1,1) -- cycle;
+    \draw[dashed] (1,0,0) -- (1,0,1); \draw[dashed] (1,1,0) -- (1,1,1); \draw[dashed] (0,1,0) -- (0,1,1);
+    
+    \draw[thick, fill=cyan, opacity=0.4] (V1) -- (V2) -- (V3)  -- cycle;
+    \draw[thick, red, dashed] (O) -- (E);
+    \fill[red] (P) circle (0.5pt) node[above] {$P_t$};
+    \fill[blue] (V3) circle (0.5pt) node[right] {Q};
+    \draw[blue] (P) -- (V3);
+\end{tikzpicture}
+\caption{三角形の断面 ($t=1/4$の例)}
+\label{fig:2}
+\end{figure}
+
+\subsection{$\frac{1}{3} \le t \le \frac{2}{3}$ の場合}
+
+断面は\cref{fig:3}のような六角形となる．
+この六角形の頂点の一つは，例えば辺AB上の点Q$(1, 3t-1, 0)$である．
+\begin{figure}[H]
+\centering
+\tdplotsetmaincoords{70}{120}
+\begin{tikzpicture}[scale=2.5, tdplot_main_coords]
+    \coordinate (O) at (0,0,0);
+    \coordinate (E) at (1,1,1);
+    \def\t{0.5} % t = 1/2 の断面
+    \coordinate (P) at (\t,\t,\t);
+    \coordinate (V1) at (1, 3*\t-1, 0);
+    \coordinate (V2) at (1, 0, 3*\t-1);
+    \coordinate (V3) at (3*\t-1, 0, 1);
+    \coordinate (V4) at (0, 3*\t-1, 1);
+    \coordinate (V5) at (0, 1, 3*\t-1);
+    \coordinate (V6) at (3*\t-1, 1, 0);
+
+    \draw[thick,->] (0,0,0) -- (1.5,0,0) node[anchor=north east]{$x$};
+    \draw[thick,->] (0,0,0) -- (0,1.5,0) node[anchor=north west]{$y$};
+    \draw[thick,->] (0,0,0) -- (0,0,1.5) node[anchor=south]{$z$};
+
+    \draw[dashed] (O) -- (1,0,0) -- (1,1,0) -- (0,1,0) -- cycle;
+    \draw[dashed] (0,0,1) -- (1,0,1) -- (1,1,1) -- (0,1,1) -- cycle;
+    \draw[dashed] (1,0,0) -- (1,0,1); \draw[dashed] (1,1,0) -- (1,1,1); \draw[dashed] (0,1,0) -- (0,1,1);
+    
+    \draw[thick, fill=cyan, opacity=0.4] (V1) -- (V2) -- (V3) -- (V4) -- (V5) -- (V6) -- cycle;
+    \draw[thick, red, dashed] (O) -- (E);
+    \fill[red] (P) circle (0.5pt) node[above] {$P_t$};
+    \fill[blue] (V5) circle (0.5pt) node[right] {Q};
+    \draw[blue] (P) -- (V5);
+\end{tikzpicture}
+\caption{六角形の断面 ($t=1/2$の例)}
+\label{fig:3}
+\end{figure}
+対称性から点$P_t$と各頂点の距離はいずれも等しく，回転半径は点$P_t(t,t,t)$とこの六角形の頂点との距離で決まる．
+\begin{align*}
+ \overline{P_t Q}^2 
+ &= (1-t)^2 + (3t-1-t)^2 + (0-t)^2 \\
+ &= (1-t)^2 + (2t-1)^2 + t^2 \\
+ &= (1-2t+t^2) + (4t^2-4t+1) + t^2 \\
+ &= 6t^2 - 6t + 2 
+\end{align*}
+よって，この場合の回転断面積$S(t)$は
+\begin{align}
+  S(t) 
+    &= \pi \overline{P_t Q}^2 \nonumber \\
+    &= \pi (6t^2 - 6t + 2) \label{eq:2}
+\end{align}
+となる．
+
+
+\subsection{体積Vの計算}
+この立体は$t=\frac{1}{2}$（立方体の中心）に関して対称であるため，
+体積の半分$\frac{V}{2}$を$t=0$から$t=\frac{1}{2}$まで積分して求める．
+積分要素$dl$は$P_t = t\va*{l}$の移動距離であるため$dl = \sqrt{1^2+1^2+1^2}dt = \sqrt{3}dt$となる．
+\begin{align*}
+   \frac{V}{2} 
+   &= \int_{0}^{1/2} S(t) \sqrt{3} \dd t 
+\end{align*}
+ここに\cref{eq:1,eq:2}を代入して
+\begin{align*}
+\frac{V}{2} 
+&= \sqrt{3}\pi \left( \int_{0}^{1/3} 6t^2 \dd t + \int_{1/3}^{1/2} (6t^2 - 6t + 2) \dd t \right) \\
+&= \sqrt{3}\pi \left( \left[ 2t^3 \right]_{0}^{1/3} + \left[ 2t^3 - 3t^2 + 2t \right]_{1/3}^{1/2} \right) \\
+&= \sqrt{3}\pi \left( \frac{2}{27} + \left\{ \frac{1}{4} - \frac{3}{4} + 1 \right\} - \left\{ \frac{2}{27} - \frac{1}{3} + \frac{2}{3} \right\} \right) \\
+&= \sqrt{3}\pi \left( \frac{2}{27} + \frac{1}{2} - \frac{11}{27} \right) \\
+&= \sqrt{3}\pi \left( \frac{1}{2} - \frac{9}{27} \right) = \sqrt{3}\pi \left( \frac{1}{2} - \frac{1}{3} \right) = \sqrt{3}\pi \left( \frac{1}{6} \right) \\
+&= \frac{\sqrt{3}}{6}\pi
+\end{align*}
+したがって、求める体積$V$は、
+\begin{align*}
+V = 2 \times \frac{\sqrt{3}}{6}\pi = \frac{\sqrt{3}}{3}\pi 
+\end{align*}
+である．$\cdots$(答)
+
+
+{\bf[解説]}
+
+     \newpage
+\end{multicols}
+\end{document}
