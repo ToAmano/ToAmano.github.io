@@ -18,10 +18,10 @@
 \usepackage{tikz}
 \usepackage{tikz-3dplot}
 \usepackage{pgfplots}
- \usetikzlibrary{math}
- \usetikzlibrary{calc}
- \usetikzlibrary{angles}
- \usetikzlibrary{quotes}
+\usetikzlibrary{math}
+\usetikzlibrary{calc}
+\usetikzlibrary{angles}
+\usetikzlibrary{quotes}
 % \usepackage{indent}
 \usepackage{cases}
 \usepackage{float}
@@ -29,14 +29,14 @@
 \pagestyle{fancy}
 \lhead{}
 \chead{}
-\rhead{東工大後期$1994$年$1$番}
+\rhead{東工大後期$1995$年$1$番}
 \begin{document}
 \begin{oframed}
-一辺の長さが $2$ の立方体 $C$ がある．
-$S_0$ を $C$ の $6$ つの面に内接する球とする．
-次に $S_0$ に外接し，$C$ の $3$ つの面と内接する球 $S_1$ を取る．
-$S_1$ に外接し，$C$ の $3$ つの面に内接する球 $S_2$ を $S_1$ の外側（$S_0$ と反対側）に取る．
-以下帰納的に，$S_0, \ldots, S_n$ まで取れたとして，$S_n$ に外接し，$C$ の $3$ つの面に内接する球 $S_{n+1}$ を $S_n$ の外側に取る．
+    一辺の長さが $2$ の立方体 $C$ がある．
+    $S_0$ を $C$ の $6$ つの面に内接する球とする．
+    次に $S_0$ に外接し，$C$ の $3$ つの面と内接する球 $S_1$ を取る．
+    $S_1$ に外接し，$C$ の $3$ つの面に内接する球 $S_2$ を $S_1$ の外側（$S_0$ と反対側）に取る．
+    以下帰納的に，$S_0, \ldots, S_n$ まで取れたとして，$S_n$ に外接し，$C$ の $3$ つの面に内接する球 $S_{n+1}$ を $S_n$ の外側に取る．
     \begin{enumerate}
         \item $S_n$ の半径を $n$ の式で表せ．
         \item 立方体 $C$ の中でどの $S_n$ ($n=0,1,2,\ldots$) にも含まれない部分の体積を求めよ．
@@ -44,183 +44,183 @@ $S_1$ に外接し，$C$ の $3$ つの面に内接する球 $S_2$ を $S_1$ の
 \end{oframed}
 \setlength{\columnseprule}{0.4pt}
 \begin{multicols}{2}
-{\bf[解]}
+    {\bf[解]}
 
-(1)
-\cref{fig:1}のように，立方体の頂点A, B, C, D, E, F, G, Hに対し題意の3面を
-ABCD, AEFB, AEHDとする. 各球の中心は
-立方体及び球の対称性から対角線AG上にある．
-$S_n$の中心を$O_n$，半径を$r_n$とおく．
-断面AEGCを\cref{fig:2}に示す．$AC=2\sqrt{2}$,$AE=2$より，$\angle\mathrm{GAC}=|theta$と置くと
-\begin{align}
-    \sin\theta &= \frac{\mathrm{AE}}{\mathrm{AG}} = \frac{1}{\sqrt{3}} \label{eq:1}\\
-    \cos\theta &= \frac{\mathrm{AC}}{\mathrm{AG}} = \frac{\sqrt{2}}{\sqrt{3}} \label{eq:2}
-\end{align}
-が成り立つことに注意する．
+    (1)
+    \cref{fig:1}のように，立方体の頂点A, B, C, D, E, F, G, Hに対し題意の3面を
+    ABCD, AEFB, AEHDとする. 各球の中心は
+    立方体及び球の対称性から対角線AG上にある．
+    $S_n$の中心を$O_n$，半径を$r_n$とおく．
+    断面AEGCを\cref{fig:2}に示す．$AC=2\sqrt{2}$,$AE=2$より，$\angle\mathrm{GAC}=|theta$と置くと
+    \begin{align}
+        \sin\theta & = \frac{\mathrm{AE}}{\mathrm{AG}} = \frac{1}{\sqrt{3}} \label{eq:1}        \\
+        \cos\theta & = \frac{\mathrm{AC}}{\mathrm{AG}} = \frac{\sqrt{2}}{\sqrt{3}} \label{eq:2}
+    \end{align}
+    が成り立つことに注意する．
 
-\begin{figure}[H]
-\centering
-\tdplotsetmaincoords{70}{110}
-\begin{tikzpicture}[scale=2, tdplot_main_coords]
-    \coordinate (D) at (0,0,0);
-    \coordinate (A) at (1,0,0);
-    \coordinate (C) at (0,1,0);
-    \coordinate (B) at (1,1,0);
-    \coordinate (H) at (0,0,1);
-    \coordinate (E) at (1,0,1);
-    \coordinate (G) at (0,1,1);
-    \coordinate (F) at (1,1,1);
+    \begin{figure}[H]
+        \centering
+        \tdplotsetmaincoords{70}{110}
+        \begin{tikzpicture}[scale=2, tdplot_main_coords]
+            \coordinate (D) at (0,0,0);
+            \coordinate (A) at (1,0,0);
+            \coordinate (C) at (0,1,0);
+            \coordinate (B) at (1,1,0);
+            \coordinate (H) at (0,0,1);
+            \coordinate (E) at (1,0,1);
+            \coordinate (G) at (0,1,1);
+            \coordinate (F) at (1,1,1);
 
-    \draw[dashed] (D) -- (A);
-    \draw[dashed] (D) -- (C);
-    \draw[dashed] (D) -- (H);
-    \draw (A) -- (B) -- (C) -- (G) -- (F) -- (E) -- (A);
-    \draw (C) -- (B);
-    \draw (H) -- (E);
-    \draw (H) -- (G);
-    \draw (B) -- (F);
-
-
-    \node[below] at (D) {D};
-    \node[below] at (A) {A};
-    \node[below] at (B) {B};
-    \node[below] at (C) {C};
-    \node[above] at (H) {H};
-    \node[above] at (E) {E};
-    \node[above] at (G) {G};
-    \node[above] at (F) {F};
-\end{tikzpicture}
-\caption{立方体と頂点の定義}
-\label{fig:1}
-\end{figure}
-
-\begin{figure}[H]
-    \centering
-\begin{tikzpicture}[scale=2]
-    % First circle (radius rn)
-    \coordinate (E) at (0, 0); % Center of the first circle
-    \coordinate (G) at ({2*sqrt(2)}, 0); % Center of the first circle
-    \coordinate (C) at ({2*sqrt(2)}, 2); % Center of the first circle
-    \coordinate (A) at (0, 2); % Center of the first circle
-    \coordinate (On) at ({sqrt(2)}, 1); % Center of the first circle
-    \coordinate (O1) at ({2*sqrt(2)-sqrt(6)}, {sqrt(3)});
-    \draw (A) -- (C) -- (G) -- (E) -- cycle;
-    \draw (A) -- (G);
-    \fill (On) circle [radius=0.5pt];
-    \fill (O1) circle [radius=0.5pt];
+            \draw[dashed] (D) -- (A);
+            \draw[dashed] (D) -- (C);
+            \draw[dashed] (D) -- (H);
+            \draw (A) -- (B) -- (C) -- (G) -- (F) -- (E) -- (A);
+            \draw (C) -- (B);
+            \draw (H) -- (E);
+            \draw (H) -- (G);
+            \draw (B) -- (F);
 
 
-    \draw (On) circle (1); % Radius 1.5cm for visualization
-    \draw (O1) circle ({2-sqrt(3)}); % Radius 1.5cm for visualization
-    \node[above] at ({1.5*sqrt(2)-0.5*sqrt(6)},{0.5+sqrt(3)*0.5}) {$r_0$}; % Label for radius
-    \node[below] at (On) {$O_0$};
-    \node[below] at (O1) {$O_1$};
-    \node[left]  at (E) {E};
-    \node[left]  at (A) {A};
-    \node[right]  at (C) {C};
-    \node[right]  at (G) {G};
-    
+            \node[below] at (D) {D};
+            \node[below] at (A) {A};
+            \node[below] at (B) {B};
+            \node[below] at (C) {C};
+            \node[above] at (H) {H};
+            \node[above] at (E) {E};
+            \node[above] at (G) {G};
+            \node[above] at (F) {F};
+        \end{tikzpicture}
+        \caption{立方体と頂点の定義}
+        \label{fig:1}
+    \end{figure}
 
-    \draw[dashed] (On) -- ({sqrt(2)},2);
-    \draw[dashed] (O1) -- ({2*sqrt(2)-sqrt(6)},2);
-    \draw[dashed] (O1) -- ({sqrt(2)},{sqrt(3)});
-    
-    \node[left] at (0,1) {$2$};
-    \node[above] at ({sqrt(2)},2) {$2\sqrt{2}$};
-    
-    \path pic["$\theta$",draw,angle radius=7mm,angle eccentricity=1.3] {angle = G--A--C};
+    \begin{figure}[H]
+        \centering
+        \begin{tikzpicture}[scale=2]
+            % First circle (radius rn)
+            \coordinate (E) at (0, 0); % Center of the first circle
+            \coordinate (G) at ({2*sqrt(2)}, 0); % Center of the first circle
+            \coordinate (C) at ({2*sqrt(2)}, 2); % Center of the first circle
+            \coordinate (A) at (0, 2); % Center of the first circle
+            \coordinate (On) at ({sqrt(2)}, 1); % Center of the first circle
+            \coordinate (O1) at ({2*sqrt(2)-sqrt(6)}, {sqrt(3)});
+            \draw (A) -- (C) -- (G) -- (E) -- cycle;
+            \draw (A) -- (G);
+            \fill (On) circle [radius=0.5pt];
+            \fill (O1) circle [radius=0.5pt];
 
-\end{tikzpicture}
-\caption{断面AEGC}
-\label{fig:2}
-\end{figure}
 
-半径$r_n$に関する漸化式を導出することで$r_n$の一般項を求める．
-円$S_n$と$S_{n+1}$に着目して\cref{fig:3}を考える．
+            \draw (On) circle (1); % Radius 1.5cm for visualization
+            \draw (O1) circle ({2-sqrt(3)}); % Radius 1.5cm for visualization
+            \node[above] at ({1.5*sqrt(2)-0.5*sqrt(6)},{0.5+sqrt(3)*0.5}) {$r_0$}; % Label for radius
+            \node[below] at (On) {$O_0$};
+            \node[below] at (O1) {$O_1$};
+            \node[left]  at (E) {E};
+            \node[left]  at (A) {A};
+            \node[right]  at (C) {C};
+            \node[right]  at (G) {G};
 
-\begin{figure}[H]
-    \centering
-\begin{tikzpicture}[scale=2]
-    % First circle (radius rn)
-    \coordinate (G) at ({2*sqrt(2)}, 0); % Center of the first circle
-    \coordinate (C) at ({2*sqrt(2)}, 2); % Center of the first circle
-    \coordinate (A) at (0, 2); % Center of the first circle
-    \coordinate (On) at ({sqrt(2)}, 1); % Center of the first circle
-    \coordinate (O1) at ({2*sqrt(2)-sqrt(6)}, {sqrt(3)});
-    \draw (A) -- (C);
-    \draw (A) -- (G);
-    \fill (On) circle [radius=0.5pt];
-    \fill (O1) circle [radius=0.5pt];
 
-    \draw (On) circle (1); % Radius 1.5cm for visualization
-    \draw (O1) circle ({2-sqrt(3)}); % Radius 1.5cm for visualization
-    \node[above] at ({1.5*sqrt(2)-0.5*sqrt(6)},{0.5+sqrt(3)*0.5}) {$r_0$}; % Label for radius
-    \node[below] at (On) {$O_n$};
-    \node[below] at (O1) {$O_{n+1}$};
-    \node[left]  at (A) {A};
-    \node[right]  at (C) {C};
+            \draw[dashed] (On) -- ({sqrt(2)},2);
+            \draw[dashed] (O1) -- ({2*sqrt(2)-sqrt(6)},2);
+            \draw[dashed] (O1) -- ({sqrt(2)},{sqrt(3)});
 
-    \draw[dashed] (On) -- ({sqrt(2)},2);
-    \draw[dashed] (O1) -- ({2*sqrt(2)-sqrt(6)},2);
-    \draw[dashed] (O1) -- ({sqrt(2)},{sqrt(3)});
+            \node[left] at (0,1) {$2$};
+            \node[above] at ({sqrt(2)},2) {$2\sqrt{2}$};
 
-    \node[above] at ({sqrt(2)},2) {$T_n$};
-    \node[above] at ({2*sqrt(2)-sqrt(6)},2) {$T_{n+1}$};
-    \node[right] at ({sqrt(2)},{sqrt(3)}) {$R_{n}$};
-    
-    \path pic["$\theta$",draw,angle radius=7mm,angle eccentricity=1.3] {angle = G--A--C};
+            \path pic["$\theta$",draw,angle radius=7mm,angle eccentricity=1.3] {angle = G--A--C};
 
-\end{tikzpicture}
-\caption{$S_n$と$S_{n+1}$の関係}
-\label{fig:3}
-\end{figure}
+        \end{tikzpicture}
+        \caption{断面AEGC}
+        \label{fig:2}
+    \end{figure}
 
-$O_n$から$AC$に引いた垂線と$AC$との交点を$T_n$と置くと，その定義より$O_nT_n$の長さは$r_n$に等しい．
-一方で，$O_{n+1}$から$O_nT_n$に引いた垂線と$O_nT_n$の交点を$R_n$と置くと，
-\begin{align*}
-O_nT_n
-&=O_{n+1}T_{n+1}+O_nR_n \\
-&=O_{n+1}+O_nO_{n+1}\sin\theta \\
-&=r_{n+1}+\left(r_{n}+r_{n+1}\sin\theta\right)
-\end{align*}
-と表されるので，$r_n$と$r_{n+1}$の関係は
-\begin{align}
-r_{n}
-&=r_{n+1}+(r_{n}+r_{n+1}\sin\theta) \\
-\therefore
-r_{n+1} &= \frac{1-\sin\theta}{1+\sin\theta} r_{n}
-\end{align}
-となる．$r_0=1$と合わせると，この等比級数の解は
-\begin{align}
-    r_{n} 
-    &= \left(\frac{1-\sin\theta}{1+\sin\theta}\right)^n \\
-    &= (2-\sqrt{3})^n
-\end{align}
-となる．ただし，\cref{eq:1}を用いた．$\cdots$(答)
+    半径$r_n$に関する漸化式を導出することで$r_n$の一般項を求める．
+    円$S_n$と$S_{n+1}$に着目して\cref{fig:3}を考える．
 
-\vspace{10pt}
-(2)
-立方体 $C$ の中でどの $S_k$ ($k=0,1,\ldots, n$) にも含まれない部分の体積を$V_n$とする．
-求めるべき値は$\displaystyle V = \lim_{n\to\infty}V_n$である．
-$S_k\, (k=0,1,\cdots,n)$同士は互いに体積を共有することはないから，
-体積$V_n$は立方体$C$の体積から，$S_k\, (k=0,1,\cdots,n)$の体積を減じたものに等しく，
-\begin{align*}
-    V_n &= 8 - \frac{4}{3}\pi \sum_{k=0}^{n} r_k^3 \\
-    &= 8 - \frac{4}{3}\pi \sum_{k=0}^{n} (2-\sqrt{3})^{3k} \\
-    &= 8 - \frac{4}{3}\pi \frac{1-(2-\sqrt{3})^{3(n+1)}}{1-(2-\sqrt{3})^3}
-\end{align*}
-となる．
+    \begin{figure}[H]
+        \centering
+        \begin{tikzpicture}[scale=2]
+            % First circle (radius rn)
+            \coordinate (G) at ({2*sqrt(2)}, 0); % Center of the first circle
+            \coordinate (C) at ({2*sqrt(2)}, 2); % Center of the first circle
+            \coordinate (A) at (0, 2); % Center of the first circle
+            \coordinate (On) at ({sqrt(2)}, 1); % Center of the first circle
+            \coordinate (O1) at ({2*sqrt(2)-sqrt(6)}, {sqrt(3)});
+            \draw (A) -- (C);
+            \draw (A) -- (G);
+            \fill (On) circle [radius=0.5pt];
+            \fill (O1) circle [radius=0.5pt];
 
-$(2-\sqrt{3})^3 < 1$ だから求める体積$V$は
-\begin{align*}
-    V &= \lim_{n \to \infty} V_n \\
-    &= 8 - \frac{4}{3}\pi \frac{1}{1-(2-\sqrt{3})^3} \\
-    &= 8 - \frac{6\sqrt{3}+10}{15}\pi 
-\end{align*}
-である．$\cdots$(答)
+            \draw (On) circle (1); % Radius 1.5cm for visualization
+            \draw (O1) circle ({2-sqrt(3)}); % Radius 1.5cm for visualization
+            \node[above] at ({1.5*sqrt(2)-0.5*sqrt(6)},{0.5+sqrt(3)*0.5}) {$r_0$}; % Label for radius
+            \node[below] at (On) {$O_n$};
+            \node[below] at (O1) {$O_{n+1}$};
+            \node[left]  at (A) {A};
+            \node[right]  at (C) {C};
 
-{\bf[解説]}
+            \draw[dashed] (On) -- ({sqrt(2)},2);
+            \draw[dashed] (O1) -- ({2*sqrt(2)-sqrt(6)},2);
+            \draw[dashed] (O1) -- ({sqrt(2)},{sqrt(3)});
 
-     \newpage
+            \node[above] at ({sqrt(2)},2) {$T_n$};
+            \node[above] at ({2*sqrt(2)-sqrt(6)},2) {$T_{n+1}$};
+            \node[right] at ({sqrt(2)},{sqrt(3)}) {$R_{n}$};
+
+            \path pic["$\theta$",draw,angle radius=7mm,angle eccentricity=1.3] {angle = G--A--C};
+
+        \end{tikzpicture}
+        \caption{$S_n$と$S_{n+1}$の関係}
+        \label{fig:3}
+    \end{figure}
+
+    $O_n$から$AC$に引いた垂線と$AC$との交点を$T_n$と置くと，その定義より$O_nT_n$の長さは$r_n$に等しい．
+    一方で，$O_{n+1}$から$O_nT_n$に引いた垂線と$O_nT_n$の交点を$R_n$と置くと，
+    \begin{align*}
+        O_nT_n
+         & =O_{n+1}T_{n+1}+O_nR_n                        \\
+         & =O_{n+1}+O_nO_{n+1}\sin\theta                 \\
+         & =r_{n+1}+\left(r_{n}+r_{n+1}\sin\theta\right)
+    \end{align*}
+    と表されるので，$r_n$と$r_{n+1}$の関係は
+    \begin{align}
+        r_{n}
+                & =r_{n+1}+(r_{n}+r_{n+1}\sin\theta)        \\
+        \therefore
+        r_{n+1} & = \frac{1-\sin\theta}{1+\sin\theta} r_{n}
+    \end{align}
+    となる．$r_0=1$と合わせると，この等比級数の解は
+    \begin{align}
+        r_{n}
+         & = \left(\frac{1-\sin\theta}{1+\sin\theta}\right)^n \\
+         & = (2-\sqrt{3})^n
+    \end{align}
+    となる．ただし，\cref{eq:1}を用いた．$\cdots$(答)
+
+    \vspace{10pt}
+    (2)
+    立方体 $C$ の中でどの $S_k$ ($k=0,1,\ldots, n$) にも含まれない部分の体積を$V_n$とする．
+    求めるべき値は$\displaystyle V = \lim_{n\to\infty}V_n$である．
+    $S_k\, (k=0,1,\cdots,n)$同士は互いに体積を共有することはないから，
+    体積$V_n$は立方体$C$の体積から，$S_k\, (k=0,1,\cdots,n)$の体積を減じたものに等しく，
+    \begin{align*}
+        V_n & = 8 - \frac{4}{3}\pi \sum_{k=0}^{n} r_k^3                             \\
+            & = 8 - \frac{4}{3}\pi \sum_{k=0}^{n} (2-\sqrt{3})^{3k}                 \\
+            & = 8 - \frac{4}{3}\pi \frac{1-(2-\sqrt{3})^{3(n+1)}}{1-(2-\sqrt{3})^3}
+    \end{align*}
+    となる．
+
+    $(2-\sqrt{3})^3 < 1$ だから求める体積$V$は
+    \begin{align*}
+        V & = \lim_{n \to \infty} V_n                       \\
+          & = 8 - \frac{4}{3}\pi \frac{1}{1-(2-\sqrt{3})^3} \\
+          & = 8 - \frac{6\sqrt{3}+10}{15}\pi
+    \end{align*}
+    である．$\cdots$(答)
+
+    {\bf[解説]}
+
+    \newpage
 \end{multicols}
 \end{document}
