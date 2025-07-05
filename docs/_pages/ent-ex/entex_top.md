@@ -185,7 +185,7 @@ pdf化した答案の大半には図がないので，時間がある時に順�
 | 1992 | [問題][tkk92] | [手書き答案][tkka92] | [答案][tkka92_1] | [答案][tkka92_2] |
 | 1993 | [問題][tkk93] | [手書き答案][tkka93] | [答案][tkka93_1] |  行列につき割愛  |
 | 1994 | [問題][tkk94] | [手書き答案][tkka94] | [答案][tkka94_1] | [答案][tkka94_2] |
-| 1995 | [問題][tkk95] | [手書き答案][tkka95] |                  |                  |
+| 1995 | [問題][tkk95] | [手書き答案][tkka95] | [答案][tkka95_1] | [答案][tkka95_2] |
 | 1996 | [問題][tkk96] | [手書き答案][tkka96] |                  |                  |
 | 1997 | [問題][tkk97] | [手書き答案][tkka97] |                  |                  |
 | 1998 | [問題][tkk98] | [手書き答案][tkka98] |                  |                  |
@@ -567,7 +567,8 @@ pdf化した答案の大半には図がないので，時間がある時に順�
 [tkka93_1]: {% link _pages/ent-ex/solutions/toukou/toukou-kouki/1993/1/solutions.pdf %}
 [tkka94_1]: {% link _pages/ent-ex/solutions/toukou/toukou-kouki/1994/1/solutions.pdf %}
 [tkka94_2]: {% link _pages/ent-ex/solutions/toukou/toukou-kouki/1994/2/solutions.pdf %}
-
+[tkka95_1]: {% link _pages/ent-ex/solutions/toukou/toukou-kouki/1995/1/solutions.pdf %}
+[tkka95_2]: {% link _pages/ent-ex/solutions/toukou/toukou-kouki/1995/2/solutions.pdf %}
 
 <!-- 問題へのPath -->
 [utk90]: {% link _pages/ent-ex/problems/todai/todai_kouki/1990/1990.pdf %}
