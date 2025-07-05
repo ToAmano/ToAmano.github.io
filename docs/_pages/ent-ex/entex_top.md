@@ -188,8 +188,8 @@ pdf化した答案の大半には図がないので，時間がある時に順�
 | 1995 | [問題][tkk95] | [手書き答案][tkka95] | [答案][tkka95_1] | [答案][tkka95_2] |
 | 1996 | [問題][tkk96] | [手書き答案][tkka96] | [答案][tkka96_1] | なし             |
 | 1997 | [問題][tkk97] | [手書き答案][tkka97] | [答案][tkka97_1] | [答案][tkka97_2] |
-| 1998 | [問題][tkk98] | [手書き答案][tkka98] |                  |                  |
-| 1999 | [問題][tkk99] | [手書き答案][tkka99] |                  |                  |
+| 1998 | [問題][tkk98] | [手書き答案][tkka98] | [答案][tkka98_1] |                  |
+| 1999 | [問題][tkk99] | [手書き答案][tkka99] | [答案][tkka99_1] |                  |
 | 2000 | [問題][tkk00] | [手書き答案][tkka00] |                  |                  |
 | 2001 | [問題][tkk01] | [手書き答案][tkka01] |                  |                  |
 | 2002 | [問題][tkk02] | [手書き答案][tkka02] |                  |                  |
@@ -572,6 +572,10 @@ pdf化した答案の大半には図がないので，時間がある時に順�
 [tkka96_1]: {% link _pages/ent-ex/solutions/toukou/toukou-kouki/1996/1/solutions.pdf %}
 [tkka97_1]: {% link _pages/ent-ex/solutions/toukou/toukou-kouki/1997/1/solutions.pdf %}
 [tkka97_2]: {% link _pages/ent-ex/solutions/toukou/toukou-kouki/1997/2/solutions.pdf %}
+[tkka98_1]: {% link _pages/ent-ex/solutions/toukou/toukou-kouki/1998/1/solutions.pdf %}
+[tkka99_1]: {% link _pages/ent-ex/solutions/toukou/toukou-kouki/1999/1/solutions.pdf %}
+
+
 
 
 <!-- 問題へのPath -->
