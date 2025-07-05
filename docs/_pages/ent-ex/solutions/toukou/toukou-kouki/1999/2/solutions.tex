@@ -1,0 +1,288 @@
+% TODO :: 図1の更新
+\documentclass[a4paper,10pt]{ltjsarticle}
+\usepackage{luatexja}
+\usepackage[hiragino-pron]{luatexja-preset}
+
+\usepackage[truedimen,top=25truemm,bottom=20truemm,left=15truemm,right=15truemm]{geometry}
+\setlength{\textwidth}{54\zw}
+\setlength{\textheight}{73\zw}
+
+\usepackage{amsmath,amssymb,ascmac}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{cleveref}
+\usepackage{framed}
+\usepackage{fancyhdr}
+\usepackage{latexsym}
+\usepackage{mathtools}
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+\usepackage{pgfplots}
+ \usetikzlibrary{math}
+ \usetikzlibrary{calc}
+ \usetikzlibrary{angles}
+ \usetikzlibrary{quotes}
+% \usepackage{indent}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{cases}
+\usepackage{float}
+\usepackage{cases}
+  \usepackage{caption}
+  \usepackage[subrefformat=parens]{subcaption}
+\allowdisplaybreaks
+\tdplotsetmaincoords{70}{110}
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{東工大後期$1999$年$2$番}
+\begin{document}
+\begin{oframed}
+\begin{enumerate}
+  \item 半径 $1$ の円に内接する $6$ 個の半径の等しい円を図 $1$ のように描き，さらに図 $2$ のように $6$ 個の小さな半径の等しい円を描く，この操作を無限にくり返したとき，$6$ 個ずつ次々に描かれる円の面積の総和 $S_2$ と，それらの円の円周の長さの総和 $C_2$ を求めよ．
+  \item (1) で $6$ 個の円を次々に描いていった．一般に，自然数 $n \ge 2$ に対して $3n$ 個の円を用いて同様の操作を行うとき，描かれる円の面積の総和 $S_n$ と，それらの円の円周の長さの総和 $C_n$ を求めよ．
+  \item 数列 $S_2, S_3, S_4, \cdots$ の極限値を求めよ．
+\end{enumerate}
+
+\begin{figure}[H]
+  \centering
+  \begin{subcaptionblock}{0.5\linewidth}
+    \centering
+\begin{tikzpicture}
+    % 中心に配置する円（オプション: 問題文には明示されていないが、図1には中心に円がない）
+    % \draw (0,0) circle (0.5cm);
+
+    % 周囲の6つの円
+    % 外側の円の半径をR=3cmとする。
+    % 周囲の円の半径をrとする。
+    % 中心から周囲の円の中心までの距離をdとする。
+    % d = R - r
+    % また、中心から周囲の円の中心までの距離がd、周囲の円の半径がrであるとき、
+    % sin(30度) = r / d より、d = 2r
+    % よって、R - r = 2r => R = 3r => r = R/3
+    % d = 2R/3
+    \def\R{3} % 外側の円の半径
+    \tikzmath{
+    \r = \R / 3; % 周囲の円の半径
+    \d = \R - \r; % 中心から周囲の円の中心までの距離
+    }
+    % 外側の大きな円
+    \draw (0,0) circle (\R); % 適当なサイズに調整
+    \foreach \i in {0, 60, ..., 300} {
+        \draw ({\d*cos(\i)}, {\d*sin(\i)}) circle (\r cm);
+    }
+\end{tikzpicture}
+\subcaption{図1}
+\end{subcaptionblock}\hfill
+  \begin{subcaptionblock}{0.5\linewidth}
+    \centering
+\begin{tikzpicture}
+    \def\R{3} % 外側の円の半径
+    \tikzmath{
+    \r = \R / 3; % 周囲の円の半径
+    \d = \R - \r; % 中心から周囲の円の中心までの距離
+    }
+    % 最も外側の大きな円（半径1と仮定）
+    \draw (0,0) circle (\R);
+    % 外側の大きな円
+    \foreach \i in {0, 60, ..., 300} {
+      \coordinate (C\i) at ({\d*cos(\i)}, {\d*sin(\i)});
+      \draw (C\i) circle (\r);
+      \draw (0,0) -- (C\i); % 中心から外側の円の中心への直線
+    }
+    \tikzmath{
+    \rsmall = \r / 3; % 周囲の円の半径
+    \dsmall = \r - \rsmall; % 中心から周囲の円の中心までの距離
+    }
+    % 内側の小きな円
+    \foreach \i in {0, 60, ..., 300} {
+        \draw ({\dsmall*cos(\i)}, {\dsmall*sin(\i)}) circle (\rsmall);
+    }
+\end{tikzpicture}
+\subcaption{図2}
+\end{subcaptionblock}\hfill
+\end{figure}
+
+\end{oframed}
+\setlength{\columnseprule}{0.4pt}
+\begin{multicols}{2}
+{\bf[解]}
+はじめから(2)のような一般的な状況を考える．すなわち，自然数 $n\ge 2$ に対して $3n$ 個の円を用いて操作を行っていく．そこで最初に(2)から考えよう．
+$k$回目の操作で描かれる円の半径を$r_{n}(k)$とおく．
+
+\begin{figure}[H]
+  \centering
+\begin{tikzpicture}
+    % 中心に配置する円（オプション: 問題文には明示されていないが、図1には中心に円がない）
+    % \draw (0,0) circle (0.5cm);
+
+    % 周囲の6つの円
+    % 外側の円の半径をR=3cmとする。
+    % 周囲の円の半径をrとする。
+    % 中心から周囲の円の中心までの距離をdとする。
+    % d = R - r
+    % また、中心から周囲の円の中心までの距離がd、周囲の円の半径がrであるとき、
+    % sin(30度) = r / d より、d = 2r
+    % よって、R - r = 2r => R = 3r => r = R/3
+    % d = 2R/3
+    \def\R{3} % 外側の円の半径
+    \tikzmath{
+    \r = \R / 3; % 周囲の円の半径
+    \d = \R - \r; % 中心から周囲の円の中心までの距離
+    }
+    % 外側の大きな円
+    \draw (0,0) circle (\R); % 適当なサイズに調整
+    \foreach \i in {0, 60, ..., 300} {
+        \draw ({\d*cos(\i)}, {\d*sin(\i)}) circle (\r cm);
+    }
+    \node[left] at (0,0) {$O$};
+    \node[below] at ({\d*cos(0)}, {\d*sin(0)}) {$A$};
+    \node[above] at ({3*\d/4}, {sqrt(3)*\d/4}) {$B$};
+    \draw (0,0) -- ({\d*cos(0)}, {\d*sin(0)});
+    \draw (0,0) -- ({3*\d/4}, {sqrt(3)*\d/4});
+    \draw ({\d*cos(0)}, {\d*sin(0)}) -- ({3*\d/4}, {sqrt(3)*\d/4});
+    \node[below] at ({\d*cos(0)/2}, {\d*sin(0)}) {$1-r_n(1)$};
+    \node[right] at ({7*\d/8}, {sqrt(3)*\d/8}) {$r_n(1)$};
+\end{tikzpicture}
+\caption{$k=1$の様子}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+\begin{tikzpicture}
+        \coordinate (O_prime) at (0,0);
+        \coordinate (B_prime) at (3,0);
+        \coordinate (A_prime) at (3,2);
+
+        \draw (O_prime) node[below left] {O} -- (B_prime) node[below left] {B};
+        \draw (B_prime) -- (A_prime) node[above right] {A};
+        \draw (A_prime) -- (O_prime);
+
+        \node[below right] at (0.4,1.7) {$1-r_n(1)$};
+        \node[right] at  (3, 1) {$r_n(1)$};
+        \draw (0.3,0) arc (0:33.7:0.3) node[right] {$\pi/3n$}; %shift={(0.05, 0.1)}
+\end{tikzpicture}
+\caption{$k=1$のときの半径の導出}
+\label{fig:1}
+\end{figure}
+
+まず初期条件$k=1$を考える．ひとつの円の中心を$A$，隣接する円との接点$B$とする．\cref{fig:1}で $\angle \text{AOB}= \dfrac{\pi}{3n}$ だから
+\begin{align}
+    \sin \dfrac{\pi}{3n} 
+    &= \frac{AB}{OA} \nonumber \\
+    &=\frac{r_n(1)}{1-r_n(1)} \nonumber \\
+    \therefore 
+    r_n(1) &= \frac{\sin \frac{\pi}{3n}}{1+\sin \frac{\pi}{3n}} \label{eq:1}
+\end{align}
+と求まる．
+
+\begin{figure}[H]
+    \centering
+\begin{tikzpicture}[scale=2]
+    % First circle (radius rn)
+    \coordinate (G) at ({2*sqrt(2)}, 0); % Center of the first circle
+    \coordinate (C) at ({2*sqrt(2)}, 2); % Center of the first circle
+    \coordinate (A) at (0, 2); % Center of the first circle
+    \coordinate (On) at ({sqrt(2)}, 1); % Center of the first circle
+    \coordinate (O1) at ({2*sqrt(2)-sqrt(6)}, {sqrt(3)});
+    \draw (A) -- (C);
+    \draw (A) -- (G);
+    \fill (On) circle [radius=0.5pt];
+    \fill (O1) circle [radius=0.5pt];
+
+    \draw (On) circle (1); % Radius 1.5cm for visualization
+    \draw (O1) circle ({2-sqrt(3)}); % Radius 1.5cm for visualization
+    \node[above] at ({1.5*sqrt(2)-0.5*sqrt(6)},{0.5+sqrt(3)*0.5}) {$r_n(k)$}; % Label for radius
+    \node[below] at (On) {$O_k$};
+    \node[below] at (O1) {$O_{k+1}$};
+    \node[left]  at (A) {A};
+    \node[right]  at (C) {C};
+
+    \draw[dashed] (On) -- ({sqrt(2)},2);
+    \draw[dashed] (O1) -- ({2*sqrt(2)-sqrt(6)},2);
+    \draw[dashed] (O1) -- ({sqrt(2)},{sqrt(3)});
+
+    \node[above] at ({sqrt(2)},2) {$T_k$};
+    \node[above] at ({2*sqrt(2)-sqrt(6)},2) {$T_{k+1}$};
+    \node[right] at ({sqrt(2)},{sqrt(3)}) {$R_{k}$};
+    
+    \path pic["$\theta$",draw,angle radius=7mm,angle eccentricity=1.3] {angle = G--A--C};
+
+\end{tikzpicture}
+\caption{$r_n(k+1)$と$r_{n}(k)$の関係}
+\label{fig:3}
+\end{figure}
+
+円の半径の一般項$r_n(k)$と$r_n(k+1)$を考える．\cref{fig:3}で$k$回目の円の中心$O_k$とおく．半径$1$の最初の円の中心$A$とし，$A$から各円に接する直線を$AC$とする．$O_k$から$AC$におろした垂線の足を$T_k$とおく．$O_k$から$O_kT_k$におろした垂線の足を$R_k$とおく．
+
+線分$O_kT_k$の長さは半径$r_n(k)$に等しい．別の表現で$O_kT_k$を計算すると
+\begin{align*}
+  O_kT_k 
+  &= O_kR_k + R_kT_k \\
+  &= O_kO_{k+1}\sin\frac{\pi}{3n} + r_n(k+1) \\
+  &= \left(r_n(k)+r_n(k+1)\right)\sin\frac{\pi}{3n} + r_n(k+1) 
+\end{align*}
+となる．したがって
+\begin{align*}
+  r_n(k) &= \left(r_n(k)+r_n(k+1)\right)\sin\frac{\pi}{3n} + r_n(k+1)  \\
+  r_n(k+1) &= \frac{1-a_n}{1+a_n}r_n(k) \label{eq:2}
+\end{align*}
+なる漸化式を得る．
+\cref{eq:1,eq:2}から等比数列の公式より，一般項は
+\begin{align}
+r_n(k) 
+ &= \left(\frac{1-a_n}{1+a_n}\right)^{k-1} r_n(1) \\
+ &= \left(\frac{1-a_n}{1+a_n}\right)^{k-1}\frac{a_n}{1+a_n}
+\end{align}
+となる．$A = \left(\frac{1-a_n}{1+a_n}\right)$ として $|A|<1$ だから，円の面積の総和は
+\begin{align}
+S_n 
+&= \lim_{k \to \infty} \sum_{p=1}^{k} r^2_n(p) \cdot \pi \cdot 3n \\
+&= \pi \left(\frac{a_n}{1+a_n}\right)^2 \frac{1}{1-A^2} \cdot 3n \\
+&= \frac{3\pi}{4} n a_n  \label{eq:3}
+\end{align}
+である．円周の総和は
+\begin{align}
+C_n 
+&= \lim_{p=1}^{k} \sum_{p=1}^{k} 2\pi r_n(p) \cdot 3n \\
+&= 6n\pi \frac{a_n}{1+a_n} \frac{1}{1-A} \\
+&= 3n\pi \label{eq:4}
+\end{align}
+と求まる．
+
+\vspace{10pt}
+(1)
+\cref{eq:3,eq:4}に$n=2$を代入して
+\begin{align*}
+  &S_2 = \dfrac{3}{4}\pi & C_2 = 6\pi
+\end{align*}
+である．$\cdots$(答)
+
+\vspace{10pt}
+(2)
+\cref{eq:3,eq:4}が答えである．
+\begin{align*}
+  S_n &= \frac{3\pi}{4} n \sin \dfrac{\pi}{3n} \\
+  C_n &= 3n\pi
+\end{align*}$\cdots$(答)
+
+\vspace{10pt}
+(3)
+\cref{eq:3}の$n\to\infty$の極限をとって
+\begin{align*}
+  \lim_{n\to\infty} S_n 
+  &= \lim_{n\to\infty} \dfrac{\pi^2}{4} \dfrac{3n}{\pi} \sin \dfrac{\pi}{3n} \\
+  &= \frac{\pi^2}{4} 
+\end{align*}
+である．ただし，$n\to\infty$で$3n/\pi\to 0$であることを用いた．$\cdots$(答)
+
+\vspace{10pt}
+{\bf[解説]}
+
+平面図形の問題．1995年の1番とほぼ同様の円を敷き詰めていく問題である．特に漸化式の導出はほぼ全く同じなため，過去問演習をやっていた人にとってはボーナス問題だった可能性が高い．
+問題としても漸化式が立てば極限値の計算は非常に容易なので，簡単な部類である．
+(1)は本来誘導の意図だろうが，漸化式が立つという見通しがあれば先に(2)に手を出して，(1)はあとから値を代入すればだいぶ時間の短縮になる．
+
+\newpage
+\end{multicols}
+\end{document}

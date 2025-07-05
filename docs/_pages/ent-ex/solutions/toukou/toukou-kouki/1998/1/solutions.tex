@@ -45,8 +45,8 @@
 \begin{align*}
 x_n 
 &= \frac{1}{n^{b}} \sum_{k=0}^{n-1} \frac{1}{(n+k)^a} \\
-&= \frac{1}{n^{b}} \sum_{k=n}^{2n-1} \frac{1}{\left(1+k\right)^a} \\
-&= \frac{1}{n^{a+b-1}} \frac{1}{n}\sum_{k=0}^{n-1} \frac{1}{\left(1+\frac{k}{n}\right)^a} \quad \cdots \text{①}
+&= \frac{1}{n^{b}} \sum_{k=n}^{2n-1} \frac{1}{k^a} \\
+&= \frac{1}{n^{a+b-1}} \frac{1}{n}\sum_{k=n}^{2n-1} \frac{1}{\left(\frac{k}{n}\right)^a} 
 \end{align*}
 ここで
 \begin{align*}
