@@ -1,0 +1,241 @@
+\documentclass[a4paper,10pt]{ltjsarticle}
+\usepackage{luatexja}
+\usepackage[hiragino-pron]{luatexja-preset}
+
+\usepackage[truedimen,top=25truemm,bottom=20truemm,left=15truemm,right=15truemm]{geometry}
+\setlength{\textwidth}{54\zw}
+\setlength{\textheight}{73\zw}
+
+\usepackage{amsmath,amssymb,ascmac}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{physics}
+\usepackage{cleveref}
+\usepackage{framed}
+\usepackage{fancyhdr}
+\usepackage{latexsym}
+\usepackage{mathtools}
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+\usepackage{pgfplots}
+ \usetikzlibrary{math}
+ \usetikzlibrary{calc}
+ \usetikzlibrary{angles}
+ \usetikzlibrary{quotes}
+ \usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+% \usepackage{indent}
+\usepackage{cases}
+\usepackage{float}
+\allowdisplaybreaks
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{東工大後期$1996$年$1$番}
+\begin{document}
+\begin{oframed}
+円 $C: x^2+y^2=1$ 上の2点 P$(1,0)$ と Q$(\cos\theta, \sin\theta)$ を通り円 $C$ と直交する円を $C_\theta$ とする．ただし，円 $C$ と $C_\theta$ が直交するとは交点におけるそれぞれの接線が直交することをいう．このとき次の問いに答えよ．
+
+\begin{enumerate}
+    \item $0 < \theta < \pi$ のとき $C$ の内部と $C_\theta$ の内部の共通部分の面積 $S_\theta$ を求めよ．
+    \item $C$ の内部にある $C_\theta$ の円弧 PQ の中点を $A_\theta$ とする．$\theta$ が $0 < \theta < \pi$ の範囲を動くとき $A_\theta$ の軌跡の方程式を求めよ．
+    \item $A_\theta$ の軌跡と $x$ 軸で囲まれる部分を $x$ 軸のまわりに回転してできる立体の体積 $V$ を求めよ．
+\end{enumerate}
+
+\end{oframed}
+\setlength{\columnseprule}{0.4pt}
+\begin{multicols}{2}
+{\bf[解]}
+
+(1)
+$C$,$C_{\theta}$の中心をそれぞれ$O$,$O_{\theta}$とする．
+\cref{fig:1}に概形を示す．
+題意より，点$P$での接線$OD$と$O'D$が直交し，
+また点$Q$での接線$OB$と$BO'$が直交する．
+
+\begin{figure}[H]
+    \centering
+\begin{tikzpicture}[scale=2]
+    \draw[->] (-2,0) -- (2,0) node[right] {$x$};
+    \draw[->] (0,-1.5) -- (0,1.5) node[above] {$y$};
+% First circle C_0
+\draw (0,0) coordinate (O) circle (1);
+\node at (-0.2,0) {O};
+
+% Point D
+\coordinate (P) at (1,0);
+\node at (1.2,0) {P};
+
+% Angle theta = 60 degrees = pi/3
+\def\theta{60}
+\coordinate (Q) at (\theta:1);
+\node[above] at (\theta:1) {Q};
+\draw (O) -- (Q);
+\draw (O) -- (P);
+\pic [draw, angle radius=0.3cm] {angle=P--O--Q};
+\node at (0.4,0.2) {$\theta$};
+
+\coordinate (O') at (1,{(1-cos(60))/sin(60)});
+\draw (O') circle ({(1-cos(60))/sin(60)});
+\node[right] at (O') {$O'$};
+\fill[black] (O') circle (0.5pt);
+\draw[dotted] (Q) -- (O');
+\draw[dotted] (P) -- (O');
+\end{tikzpicture}
+\caption{円$C$と$C_{\theta}$}
+\label{fig:1}
+\end{figure}
+
+したがって，$O'(X,Y)$とおくと,
+\begin{align}
+    &\begin{dcases}
+    \va*{OP}\cdot \va*{PO'} = 0 \\
+    \va*{OQ}\cdot \va*{QO'} = 0
+    \end{dcases} \\
+    \therefore
+    &\begin{dcases}
+    \mqty(1\\0)\cdot \mqty(X-1\\Y) = 0 \\
+    \mqty(\cos\theta\\ \sin\theta)\cdot \mqty(X-\cos\theta\\ \sin\theta) = 0 
+    \end{dcases} \\
+    \therefore
+    &\begin{dcases}
+    X=1 \\
+    Y = \frac{1-\cos\theta}{\sin\theta} \quad (\because 0 < \theta < \pi) \quad \cdots\text{②}
+    \end{dcases} 
+\end{align}
+である. したがって, $C_{\theta}$の半径$R_{\theta}$は
+\begin{align}
+    R_{\theta} 
+    &= \mathrm{PO'} \\
+    &= Y \\
+    &= \frac{1-\cos\theta}{\sin\theta} \\
+    &= \frac{\sin\frac{\theta}{2}}{\cos\frac{\theta}{2}} \\
+    &= \tan\frac{\theta}{2}
+\end{align}
+である．ただし，最後の行で倍角公式を利用した．
+したがって，
+\begin{align*}
+    \tan \angle DOO' 
+    &= \frac{OD'}{OD} \\
+    &=\tan\frac{\theta}{2}
+\end{align*}
+となり，$\angle DOO'=\theta/2$であることがわかる．
+
+求める共通領域の面積$S_\theta$は, 扇形$OPQ$と扇形$O'PQ$の面積の和から，四角形$OPO'Q$を引いたものに等しい．$\angle PO'Q=\pi-\theta$に注意して，
+\begin{align*}
+    \text{扇形}OPQ  &= \frac{1}{2}\theta \\
+    \text{扇形}O'PQ &= \frac{1}{2}\left(\pi-\theta\right)\tan^2\frac{\theta}{2} \\
+    \text{四角形}OPO'Q &= 2\triangle ODO' \\
+    &= \tan\frac{\theta}{2}
+\end{align*}
+より，求める面積$S_{\theta}$は
+\begin{align*}
+    S_{\theta} 
+    &= \text{扇形}OPQ + \text{扇形}O'PQ -\text{四角形}OPO'Q \\
+    &= \frac{1}{2}\theta + \frac{1}{2}\left(\pi-\theta\right) -\tan\frac{\theta}{2}
+\end{align*}
+である．$\cdots$(答)
+
+(2) 
+線分$OO'$の長さは，倍角公式より
+\begin{align*}
+    OO' 
+    &= \sqrt{1+\frac{(1-\cos\theta)^2}{\sin^2\theta}} \\
+    &= \sqrt{\frac{1+\sin^2\theta + \cos^2\theta -2\cos\theta}{\sin^2\theta}} \\
+    &= \sqrt{\frac{2 -2\cos\theta}{\sin^2\theta}} \\
+    &= \sqrt{\frac{4\sin^2\frac{\theta}{2}}{4\sin^2\frac{\theta}{2}\cos^2\frac{\theta}{2}}} \\
+    &= \sqrt{\frac{4\sin^2\frac{\theta}{2}}{4\sin^2\frac{\theta}{2}\cos^2\frac{\theta}{2}}} \\
+    &= \frac{1}{\cos\frac{\theta}{2}}
+\end{align*}
+と表せる．
+
+$A_{\theta}$は線分$OO'$上にあって，線分$OA_{theta}$の長さは
+\begin{align*}
+    OA_{\theta} 
+    &= OO' - O'A_{\theta} \\
+    &= \frac{1}{\cos\frac{\theta}{2}} -  \frac{\sin\frac{\theta}{2}}{\cos\frac{\theta}{2}} \\
+    &= \frac{1-\sin\frac{\theta}{2}}{\cos\frac{\theta}{2}}
+\end{align*}
+だから，
+\begin{align*}
+    \va*{OA_{\theta}} 
+    &=  \frac{1-\sin\frac{\theta}{2}}{\cos\frac{\theta}{2}} \mqty(\cos\frac{\theta}{2}\\ \sin\frac{\theta}{2}) \\
+    &\equiv \mqty(x\\ y)
+\end{align*}
+とかける．
+\begin{align}
+    x &= 1-\sin\frac{\theta}{2} \\
+    y &= \frac{\sin\frac{\theta}{2}\left(1-\sin\frac{\theta}{2}\right)}{\cos\frac{\theta}{2}}
+\end{align}
+において，$0<\theta<\pi$より，$\cos\theta/2>0$だから，
+\begin{align}
+    \sin\frac{\theta}{2} = \sqrt{1-\cos^2\frac{\theta}{2}}
+\end{align}
+を代入して
+\begin{align}
+    x &= 1-\sin\frac{\theta}{2} \\
+    y &= \frac{\sin\frac{\theta}{2}\left(1-\sin\frac{\theta}{2}\right)}{\sqrt{1-\cos^2\frac{\theta}{2}}}
+\end{align}
+1つ目の式から$\sin(\theta/2)$を消去して
+\begin{align*}
+    &\sin\frac{\theta}{2} = 1-x & (0<x<1)
+\end{align*}
+を2つ目の式に代入して
+\begin{align*}
+    Y 
+    &= \frac{(1-x)\cdot x}{\sqrt{1-(1-x)^2}} \\
+    &= \frac{x(1-x)}{\sqrt{2x-x^2}} \quad (0<x<1)
+\end{align*}
+がもとめる軌跡である．
+
+(3)
+(2)でもとめたグラフは$0<x<1$で$y>0$であり，\cref{fig:3}のようになる．
+
+\begin{figure}[H]
+    \begin{tikzpicture}
+\begin{axis}[
+    axis lines=middle, % 軸を中央に配置
+    xlabel=$x$,
+    ylabel=$y$,
+    xmin=-0.1, xmax=1.1, % x軸の範囲を0から1より少し広めに設定
+    ymin=-0.1, ymax=0.5, % y軸の範囲を適切に設定（関数の挙動を見て調整）
+    grid=both, % グリッドを表示
+    grid style={line width=.1pt, draw=gray!10}, % グリッドのスタイル
+    major grid style={line width=.2pt,draw=gray!50}, % 主要グリッドのスタイル
+    samples=100, % サンプル数を増やして滑らかな曲線に
+    domain=0.001:0.999, % xの定義域を0と1の境界で少し内側にする（分母が0になるのを避けるため）
+    no markers, % プロット点にマーカーを表示しない
+]
+\addplot[blue, thick] expression[
+    % pgfplotsでルートを扱う場合、sqrt()を使用します。
+    % 2x-x^2 = x(2-x)
+    y filter/.code={\pgfmathparse{x*(1-x)/sqrt(2*x-x*x)}\pgfmathresult}
+]{x};
+\end{axis}
+\end{tikzpicture}
+\end{figure}
+
+したがってもとめる体積は
+\begin{align*}
+V 
+&= \pi \int_0^1 y^2 dx \\
+&= \pi \int_0^1 \frac{x^2(1-x)^2}{x(2-x)} dx \\
+&= \pi \int_0^1 \left(-x^2 - 1 + \frac{2}{2-x}\right) dx \\
+&= \pi \left[-\frac{1}{3}x^3 - x - 2\log|2-x|\right]_0^1 \\
+&= \pi \left(2\log 2 - \frac{4}{3}\right)    
+\end{align*}
+となる．$\cdots$(答)
+
+{\bf[解説]}
+平面図形の問題．
+ポイントは対称性から$\angle POO'=\theta/2$と，直線$OO'$が$\angle POQ$を半分に分割する直線になっていることである．
+本解答では座標からこの事実を導出したが，対称性からこの事実を認めてしまえば，$O'$の座標は直線
+\begin{align*}
+    y = \tan\frac{\theta}{2} x
+\end{align*}
+と$x=1$の交点であるから$O'=(1,\tan(\theta/2))$と求まる．
+以降の計算も$\theta/2$を用いて行ったほうが見通しが良い．
+
+\newpage
+\end{multicols}
+\end{document}

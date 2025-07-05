@@ -1,0 +1,181 @@
+\documentclass[a4paper,10pt]{ltjsarticle}
+\usepackage{luatexja}
+\usepackage[hiragino-pron]{luatexja-preset}
+
+\usepackage[truedimen,top=25truemm,bottom=20truemm,left=15truemm,right=15truemm]{geometry}
+\setlength{\textwidth}{54\zw}
+\setlength{\textheight}{73\zw}
+
+\usepackage{amsmath,amssymb,ascmac}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{physics}
+\usepackage{cleveref}
+\usepackage{framed}
+\usepackage{fancyhdr}
+\usepackage{latexsym}
+\usepackage{mathtools}
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{intersections}
+\usepgfplotslibrary{fillbetween}
+ \usetikzlibrary{math}
+ \usetikzlibrary{calc}
+ \usetikzlibrary{angles}
+ \usetikzlibrary{quotes}
+% \usepackage{indent}
+\usepackage{cases}
+\usepackage{float}
+\allowdisplaybreaks
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{東工大後期$1997$年$1$番}
+\begin{document}
+\begin{oframed}
+放物線 $y=x^2$ を $C_1$ とし, $C_1$ 上に両端をもつ長さ $1$ の線分の中点の軌跡を $C_2$ とする. $C_1$, $C_2$ および $2$ 直線 $x=\pm a$ ($a>0$) で囲まれる部分の面積を $S_a$ とするとき, $\displaystyle \lim_{a \to \infty} S_a$ を求めよ.
+\end{oframed}
+\setlength{\columnseprule}{0.4pt}
+\begin{multicols}{2}
+{\bf[解]}
+
+(1)
+\subsection{$C_2$の軌跡}
+まず，$C_2$ の軌跡を求める． 題意の直線の 2 端点 P$(\alpha,\alpha^2)$, Q$(\beta,\beta^2)$ ($\alpha < \beta$) とおく．この概形は\cref{fig:2}である．
+
+\begin{figure}[H]
+\begin{tikzpicture}{scale=2.0}
+\begin{axis}[
+    axis lines=middle,
+    xlabel=$x$,
+    ylabel=$y$,
+    xmin=-2.5, xmax=2.5,
+    ymin=0, ymax=2.0,
+    xtick={\empty},
+    ytick={\empty},
+    tick style={draw=none},
+    no markers,
+    clip=false % Allows drawing outside the axis limits if needed
+]
+
+% Define the functions
+\addplot[name path=C1, thick, domain=-1.2:1.2] {x^2};
+\draw (axis cs:0.5,0.25) -- (axis cs:-1, 1);
+\node[right] at (axis cs:0.5,0.25) {$Q$};
+\node[left] at (axis cs:-1,1) {$P$};
+\fill (axis cs:0.5,0.25) circle [radius=1pt];
+\fill (axis cs:-1,1) circle [radius=1pt];
+
+% Labels for C1 and C2
+\node at (axis cs:1.2, 0.5) {$C_1$};
+
+\end{axis}
+\end{tikzpicture}
+\caption{$C_1$の概形}
+\label{fig:2}
+\end{figure}
+
+$|PQ| > 0$, $|PQ|=1 \Longleftrightarrow |PQ|^2=1$ だから，
+\begin{align}
+&(\beta-\alpha)^2+(\beta^2-\alpha^2)^2 = 1 \nonumber \\
+\therefore &(\beta-\alpha)^2\left[1 + (\alpha+\beta)^2\right] = 1 \label{eq:1}
+\end{align}
+ここで，$p=\alpha+\beta$, $q=\beta-\alpha$ とおく．$\alpha,\beta \in\mathbb{R}$ および $\alpha < \beta$から
+\begin{align}
+ q >0    \label{eq:2}
+\end{align}
+となる．題意の中点を$M(X,Y)$ とすると
+\begin{align}
+X &= \frac{1}{2}(\alpha+\beta)=\frac{p}{2} \label{eq:3}\\
+Y &= \frac{1}{2}\left(\alpha^2+\beta^2\right) = \frac{1}{4}\left[(\alpha+\beta)^2+(\beta-\alpha)^2\right] = \frac{1}{4}\left(p^2+q^2\right)\label{eq:4}
+\end{align}
+となることに注意する．さらに，\cref{eq:1}を$p$ と $q$ で書くと
+\begin{align*}
+ & q^2(1+p^2) &= 1 \\
+ \therefore 
+ &q^2 = \frac{1}{1+p^2} \quad (\because 1+p^2\neq 0)
+\end{align*}
+で，これは\cref{eq:2}を満たす．\cref{eq:3,eq:4}に代入して$p$および$q$を消去して$X$, $Y$の関係を求めれば，それが求める軌跡である．
+\cref{eq:3}から$p=2X$だから，\cref{eq:4}から，
+\begin{align*}
+Y 
+&= \frac{1}{4}\left(p^2+1/(1+p^2)\right) \\
+&= \frac{1}{4}\left((2X)^2+1/(1+(2X)^2)\right) \\
+&= \frac{1}{4}\left((4X^2+1/(1+4X^2)\right) 
+\end{align*}
+である，これが$C_2$の軌跡である．$X$はすべての実数を取る．
+
+\subsection{$S_{a}$の極限値}
+
+以上より，求める面積$S_{a}$は\cref{fig:1}の斜線部である．
+
+\begin{figure}[H]
+\begin{tikzpicture}{scale=2.0}
+\begin{axis}[
+    axis lines=middle,
+    xlabel=$x$,
+    ylabel=$y$,
+    xmin=-2.5, xmax=2.5,
+    ymin=0, ymax=2.0,
+    xtick={\empty},
+    ytick={\empty},
+    tick style={draw=none},
+    no markers,
+    clip=false % Allows drawing outside the axis limits if needed
+]
+
+% Define the functions
+\addplot[name path=C1, blue, thick, domain=-1.2:1.2] {x^2};
+\addplot[name path=C2, red, thick, domain=-1.2:1.2] {x^2 + 1/(4*(1+4*x^2))};
+
+% Draw the vertical lines at x=-2 and x=2
+\draw[dashed] (axis cs:-1,0) -- (axis cs:-1, {(-1)^2 + 1/(4*(1+4*(-1)^2))});
+\draw[dashed] (axis cs:1,0) -- (axis cs:1, {1^2 + 1/(4*(1+4*1^2))});
+
+% Fill the region between C1 and C2 from x=-2 to x=2
+\addplot[gray!50, fill opacity=0.5] fill between[of=C2 and C1];
+
+% Labels for C1 and C2
+\node[blue] at (axis cs:1.2, 0.5) {$C_1$};
+\node[red] at  (axis cs:1, 1.5) {$C_2$};
+
+% Labels for -a and a, which are now -2 and 2
+\node[below] at (axis cs:-1, 0) {$-a$};
+\node[below] at (axis cs:1, 0) {$a$};
+
+\end{axis}
+\end{tikzpicture}
+\caption{$C_1$と$C_2$の概形}
+\label{fig:1}
+\end{figure}
+
+$C_1$と$C_2$が偶関数だから，$0\le x$の部分の面積の$2$倍が求める面積であり，
+\begin{align}
+\frac{1}{2}S_a 
+&= \int_0^a \left(x^2+\frac{1}{4(1+4x^2)} - x^2 \right)dx \nonumber \\
+&= \frac{1}{4}\int_0^a \frac{1}{1+4x^2} dx \label{eq:5}
+\end{align}
+ここで，$x=\frac{1}{2}\tan\theta$ ($0 \le \theta < \pi/2$) とすると，$\frac{dx}{d\theta} = \frac{1}{2\cos^2\theta}$，又 $a = \frac{1}{2}\tan \alpha$ となる $\alpha$ があるので，
+\cref{eq:5}に代入して
+\begin{align}
+\frac{1}{2}S_a 
+&= \frac{1}{4}\int_0^\alpha \frac{1}{1+\tan^2\theta} \cdot \frac{1}{a2\cos^2\theta} d\theta 
+ \nonumber \\
+&= \frac{1}{8}\int_0^\alpha d\theta \nonumber \\
+&= \frac{\alpha}{8} \nonumber \\
+\therefore 
+S_a &= \frac{\alpha}{4} \label{eq:6}
+\end{align}
+と面積が求まる．$a = \frac{1}{2}\tan \alpha$より，$a\to\infty$で$\alpha\to\pi/2$だから，\cref{eq:6}の極限は
+\begin{align*}
+ \lim_{a\to\infty} S_a = \frac{1}{4} \frac{\pi}{2} = \frac{\pi}{8}     
+\end{align*}
+となる．$\cdots$(答)
+
+{\bf[解説]}
+
+     \newpage
+\end{multicols}
+\end{document}
