@@ -1,0 +1,119 @@
+\documentclass[a4paper,10pt]{ltjsarticle}
+\usepackage{luatexja}
+\usepackage[hiragino-pron]{luatexja-preset}
+
+\usepackage[truedimen,top=25truemm,bottom=20truemm,left=15truemm,right=15truemm]{geometry}
+\setlength{\textwidth}{54\zw}
+\setlength{\textheight}{73\zw}
+
+\usepackage{amsmath,amssymb,ascmac}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{physics}
+\usepackage{cleveref}
+\usepackage{framed}
+ \usepackage{caption}
+ \usepackage{subcaption}
+\usepackage{fancyhdr}
+\usepackage{latexsym}
+\usepackage{mathtools}
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{intersections}
+\usepgfplotslibrary{fillbetween}
+ \usetikzlibrary{math}
+ \usetikzlibrary{calc}
+ \usetikzlibrary{angles}
+ \usetikzlibrary{quotes}
+ \usetikzlibrary{patterns}
+% \usepackage{indent}
+\usepackage{cases}
+\usepackage{float}
+\allowdisplaybreaks
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{東工大後期$2002$年$1$番}
+\begin{document}
+
+\begin{oframed}
+  $n$ を自然数とする．
+
+  \begin{enumerate}
+    \item
+          実数 $x$ に対して，$\displaystyle \sum_{k=0}^{n} (-1)^k x^{2k} - \frac{1}{1+x^2}$ を求めよ．
+
+    \item
+          不等式 $\displaystyle \left| \sum_{k=0}^{n} \frac{(-1)^k}{2k+1} - \int_0^1 \frac{1}{1+x^2} dx \right| \leq \frac{1}{2n+3}$ が成り立つことを示せ．
+
+    \item
+          極限 $\displaystyle \lim_{n \to \infty} \sum_{k=0}^{n} \frac{(-1)^k}{2k+1}$ を求めよ．
+  \end{enumerate}
+\end{oframed}
+\setlength{\columnseprule}{0.4pt}
+\begin{multicols}{2}
+  {\bf[解]}
+
+  (1)
+  $x \in \mathbb{R}$だから$-x^2 \neq 1$なので，第一項は公比$-x^2$の等比数列の和である．
+  \begin{align*}
+    \text{(与式)}
+     & = \frac{1-(-x^2)^{n+1}}{1-(-x^2)} - \frac{1}{1+x^2} \\
+     & = \frac{-(-x^2)^{n+1}}{1+x^2}
+  \end{align*}
+  となり題意は示された．
+
+  \vspace{10pt}
+  (2)
+  (1)の両辺を$[0,1]$で積分して絶対値をとると
+  \begin{align}
+    \left| \int_0^1 \sum_{k=0}^n (-x^2)^k dx - \int_0^1 \frac{1}{1+x^2} dx \right|
+    = \left| \int_0^1 \frac{x^{2n+2}}{1+x^2} dx \right| \label{eq:1}
+  \end{align}
+  である．以下各項を評価する．まず左辺第一項は先に積分を処理することで
+  \begin{align}
+    \int_0^1 \sum_{k=0}^n (-x^2)^k dx
+     & = \sum_{k=0}^n \left[ \frac{(-1)^k x^{2k+1}}{2k+1} \right]_0^1 \nonumber \\
+     & = \sum_{k=0}^n \frac{(-1)^k}{2k+1} \label{eq:2}
+  \end{align}
+  であり，右辺は積分区間内で$0\le x\le 1$より$1+x^2\ge 1$だから
+  \begin{align}
+    \int_0^1 \frac{x^{2n+2}}{1+x^2} dx
+     & \le \int_0^1 x^{2n+2} dx      \nonumber \\
+     & = \frac{1}{2n+3} \label{eq:3}
+  \end{align}
+  となる．\cref{eq:2,eq:3}を\cref{eq:1}に代入して
+  \begin{align}
+    \left| \sum_{k=0}^n \frac{(-1)^k}{2k+1} - \int_0^1 \frac{1}{1+x^2} dx \right| \le \frac{1}{2n+3} \label{eq:4}
+  \end{align}
+  となり，題意は示された．
+
+  \vspace{10pt}
+  (3)
+  (2)で示した\cref{eq:4}の右辺は$n\to\infty$で$0$に収束するから，挟み撃ちの定理より
+  \begin{align}
+    \lim_{n\to\infty} \sum_{k=0}^n \frac{(-1)^k}{2k+1} = \int_0^1 \frac{1}{1+x^2} dx \label{eq:5}
+  \end{align}
+  である．右辺の積分は$x=\tan\theta$と置換すると
+  \begin{align*}
+    \int_0^1 \frac{1}{1+x^2} dx
+     & = \int_0^{\pi/4} \frac{1}{1+\tan^2\theta} \frac{dx}{d\theta} d\theta \\
+     & = \int_0^{\pi/4} \cos^2\theta \frac{1}{\cos^2\theta} d\theta         \\
+     & = \int_0^{\pi/4} d\theta                                             \\
+     & = \frac{\pi}{4}
+  \end{align*}
+  だから，\cref{eq:5}に代入して
+  \begin{align*}
+    \lim_{n\to\infty} \sum_{k=0}^n \frac{(-1)^k}{2k+1} = \frac{\pi}{4}
+  \end{align*}
+  である．  $\cdots$(答)
+
+
+  \vspace{10pt}
+  {\bf[解説]}
+
+  \newpage
+\end{multicols}
+\end{document}

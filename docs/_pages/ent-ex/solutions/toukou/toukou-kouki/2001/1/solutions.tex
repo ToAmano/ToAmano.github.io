@@ -1,0 +1,192 @@
+\documentclass[a4paper,10pt]{ltjsarticle}
+\usepackage{luatexja}
+\usepackage[hiragino-pron]{luatexja-preset}
+
+\usepackage[truedimen,top=25truemm,bottom=20truemm,left=15truemm,right=15truemm]{geometry}
+\setlength{\textwidth}{54\zw}
+\setlength{\textheight}{73\zw}
+
+\usepackage{amsmath,amssymb,ascmac}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{physics}
+\usepackage{cleveref}
+\usepackage{framed}
+ \usepackage{caption}
+ \usepackage{subcaption}
+\usepackage{fancyhdr}
+\usepackage{latexsym}
+\usepackage{mathtools}
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{intersections}
+\usepgfplotslibrary{fillbetween}
+ \usetikzlibrary{math}
+ \usetikzlibrary{calc}
+ \usetikzlibrary{angles}
+ \usetikzlibrary{quotes}
+ \usetikzlibrary{patterns}
+% \usepackage{indent}
+\usepackage{cases}
+\usepackage{float}
+\allowdisplaybreaks
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{東工大後期$2001$年$1$番}
+\begin{document}
+\begin{oframed}
+  $n=1,2,3,\dots$ に対して $a_n = \tan(11n)$ とおく．このとき，次の (1)～(4) を示せ．
+  ただし，$\pi = 3.14159265\dots$ は円周率である．
+
+  \begin{enumerate}
+    \item $\dfrac{\pi}{711} < 11 - \dfrac{7\pi}{2} < \dfrac{\pi}{709}$.
+    \item $a_1 < 0 < a_2$.
+    \item $a_1, a_3, a_5, a_7, \dots, a_{707}, a_{709}$ は増加数列である．
+    \item 無限数列 $a_1, a_3, a_5, a_7, \dots$ は増加数列ではない．
+  \end{enumerate}
+\end{oframed}
+\setlength{\columnseprule}{0.4pt}
+\begin{multicols}{2}
+  {\bf[解]}
+
+  (1) 与式を同値変形すると
+  \begin{align}
+     & \dfrac{\pi}{711} < 11 - \dfrac{7\pi}{2} < \dfrac{\pi}{709} \nonumber \\
+    \iff
+     & \frac{15598}{4965} < \pi < \frac{15642}{4979}\label{eq:1}
+  \end{align}
+  だから，これを示す．両辺計算すると
+  \begin{align*}
+    \mathrm{LHS} = \frac{15598}{4965} = 3.141591... < \pi \\
+    \mathrm{RHS} = \frac{15642}{4979} = 3.141594... > \pi
+  \end{align*}
+  となり，\cref{eq:1}は示された．$\cdots$(答)
+
+
+  \vspace{10pt}
+  (2)
+  まず$a_1=\tan(11)$について考える．
+  $\tan \theta$ は周期 $\pi$ の周期関数だから $\tan 11 = \tan (11-3\pi)$ である．
+  (1) で示された不等式の各辺に$\pi/2$を足して
+  \begin{align*}
+    \dfrac{\pi}{711} + \frac{\pi}{2} < 11 - 3\pi < \dfrac{\pi}{709} + \frac{\pi}{2}
+  \end{align*}
+  であり，従って
+  \begin{align*}
+    \frac{\pi}{2} < 11 - 3\pi < \pi
+  \end{align*}
+  が成り立つ．この範囲では$\tan\theta$は負であるから，
+  \begin{align}
+    a_1 = \tan(11) = \tan\left(11-3\pi\right) < 0 \label{eq:2}
+  \end{align}
+  である．
+
+  次に$a_2=\tan(22)$について考える．同様に(1)で示した不等式の各辺$2$倍して
+  \begin{align*}
+    \dfrac{2\pi}{711} < 22 - 7\pi < \dfrac{2\pi}{709}
+  \end{align*}
+  であり，従って
+  \begin{align*}
+    0 < 22 - 7\pi < \dfrac{\pi}{2}
+  \end{align*}
+  を得る．この範囲では$\tan\theta$は正であり，$\tan\theta$の周期性より$\tan 22 = \tan (22-7\pi)$だから，
+  \begin{align}
+    a_2 = \tan(22) = \tan\left(22-7\pi\right) > 0 \label{eq:3}
+  \end{align}
+  を得る．以上\cref{eq:2,eq:3}より
+  \begin{align*}
+    a_1 < 0 < a_2
+  \end{align*}
+  であり題意は示された．$\cdots$(答)
+
+  \vspace{10pt}
+  (3)
+  簡単のため
+  \begin{align*}
+    \theta_n = 22n-11-7n\pi
+  \end{align*}
+  とおく．$\tan\theta$の周期性より
+  \begin{align}
+    a_{2n-1} = \tan\theta_n \label{eq:6}
+  \end{align}
+  となることに注意する．
+
+  (1) で示した式の各辺 $2n-1$ ($>0$) 倍して，
+  \begin{align}
+     & \frac{2n-1}{709}\pi < 22n-11 - \frac{\pi}{2}(2n-1)\pi < \frac{2n-1}{709}\pi  \nonumber                    \\
+     & \frac{2n-1}{711}\pi + \frac{7}{2}\pi < 22n-11 - 7n\pi < \frac{2n-1}{709}\pi + \frac{7}{2}\pi \label{eq:4}
+  \end{align}
+  である．$n=1,2,\cdots,355$ の時，
+  \begin{align*}
+    0 < \frac{2n-1}{711}\pi < \frac{2n-1}{709}\pi \le \pi
+  \end{align*}
+  である．従って，
+  \begin{align*}
+    \frac{7}{2}\pi<\theta_n<\frac{9}{2}\pi
+  \end{align*}
+  である．この区間では$\tan\theta_n$は単調増加である．
+
+  さらに，$\theta_n$は短調増加であることが以下のように示せる．
+  \cref{eq:4}より，$n=1,2,\cdots,354$に対して
+  \begin{align}
+     & \theta_n < \frac{2n-1}{709}\pi + \frac{1}{2}\pi < \frac{2n+1}{711}\pi + \frac{1}{2}\pi < \theta_{n+1} \nonumber \\
+    \therefore
+     & \theta_n < \theta_{n+1} \label{eq:5}
+  \end{align}
+  である．ただし
+  \begin{align*}
+    \frac{2n-1}{711} - \frac{2n-1}{709} = \frac{(2n-1)(-4n+1420)}{711 \cdot 709} \ge \frac{709 \cdot 0}{711 \cdot 709} = 0
+  \end{align*}
+  を利用した．
+
+  以上\cref{eq:4,eq:5}より，
+  \begin{align*}
+    \frac{7\pi}{2} < \theta_1 < \theta_2 < \cdots < \theta_{355} < \frac{9\pi}{2}
+  \end{align*}
+  が成り立つ．この区間内で$\tan\theta_n$は単調増加だから，
+  \begin{align*}
+    \tan \theta_1 < \tan \theta_2 < \cdots < \tan \theta_{355}
+  \end{align*}
+  が成り立つ．従って\cref{eq:6}より$n=355$のとき$2n+1=709$に注意して
+  \begin{align*}
+    a_1 < a_3 < \cdots < a_{709}
+  \end{align*}
+  となる．よって題意は示された．$\cdots$(答)
+
+  \vspace{10pt}
+  (4)
+
+  $a_{711}<0<a_{709}$であることを示せば，題意は示される．
+  (3) の\cref{eq:4}で$n=355$として
+  \begin{align*}
+     & \frac{709}{711}\pi + \frac{7}{2}\pi < \theta_{355} < \frac{709}{709}\pi + \frac{7}{2}\pi \\
+    \therefore
+     & 4\pi < \theta_{355} < 4\pi + \frac{1}{2}\pi
+  \end{align*}
+  この区間で$0<\tan\theta$だから，
+  \begin{align*}
+    0 < \tan\theta_{355} = a_{709}
+  \end{align*}
+  だから$0<a_{709}$である．
+
+  次に$a_{711}$について，\cref{eq:4}で$n=356$として
+  \begin{align*}
+     & \frac{711}{711}\pi + \frac{7}{2}\pi < \theta_{356} < \frac{711}{709}\pi + \frac{7}{2}\pi \\
+    \therefore
+     & 4\pi + \frac{1}{2}\pi < \theta_{356} < 4\pi + \pi
+  \end{align*}
+  である．この区間で$\tan\theta$は負だから
+  \begin{align*}
+    a_{711} = \tan\theta_{356} < 0
+  \end{align*}
+  である．以上より$a_{711}<0<a_{709}$であり，$a_{2n-1}, (n=1,2,\cdots)$が増加列ではないことが示された．$\cdots$(答)
+
+  \vspace{10pt}
+  {\bf[解説]}
+
+  \newpage
+\end{multicols}
+\end{document}
