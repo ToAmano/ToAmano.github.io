@@ -1,0 +1,609 @@
+% TODO : 解説の証明を追加
+\documentclass[a4paper,10pt]{ltjsarticle}
+\usepackage{luatexja}
+\usepackage[hiragino-pron]{luatexja-preset}
+
+\usepackage[truedimen,top=25truemm,bottom=20truemm,left=15truemm,right=15truemm]{geometry}
+\setlength{\textwidth}{54\zw}
+\setlength{\textheight}{73\zw}
+
+\usepackage{amsmath,amssymb,ascmac}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{cleveref}
+\usepackage{framed}
+\usepackage{fancyhdr}
+\usepackage{latexsym}
+\usepackage{mathtools}
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+\usepackage{pgfplots}
+ \usetikzlibrary{math}
+ \usetikzlibrary{calc}
+ \usetikzlibrary{angles}
+ \usetikzlibrary{quotes}
+ \usetikzlibrary{patterns}
+ \usetikzlibrary{intersections} 
+ \usepgfplotslibrary{fillbetween}
+% \usepackage{indent}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{cases}
+\usepackage{float}
+\usepackage{cases}
+  \usepackage{caption}
+  \usepackage[subrefformat=parens]{subcaption}
+\allowdisplaybreaks
+\tdplotsetmaincoords{70}{110}
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{東工大後期$2000$年$2$番}
+\begin{document}
+\begin{oframed}
+  \begin{enumerate}
+    \item (1) $m \ge 0, n \ge 1$ である整数 $m, n$ にたいし $\displaystyle a_{m,n} = \int_0^\pi \theta^m \cos n\theta d\theta$, $\displaystyle b_{m,n} = \int_0^\pi \theta^m \sin n\theta d\theta$ とおくとき，次の式を示せ．
+          \begin{align*}
+            a_{m+1,n} = -\frac{m+1}{n}b_{m,n}, \quad b_{m+1,n} = (-1)^{n+1}\frac{\pi^{m+1}}{n} + \frac{m+1}{n}a_{m,n}
+          \end{align*}
+
+    \item 半径 $1$ の球球体上の定点を端点とする長さ $\pi$ のひもを考える．このひもが球の外側の空間を動くとき，ひもの通過しうる領域の体積を求めよ．
+  \end{enumerate}
+\end{oframed}
+
+
+\setlength{\columnseprule}{0.4pt}
+\begin{multicols}{2}
+  {\bf[解]}
+  (1)
+  $m \ge 0, n \ge 1$とする．部分積分法を用いて題意を示す．
+  \begin{align*}
+    \quad a_{m+1,n}
+     & = \int_0^\pi \theta^{m+1} \cos n\theta \, d\theta                                                                        \\
+     & = \frac{1}{n} \left[ \theta^{m+1} \sin n\theta \right]_0^\pi - \frac{m+1}{n} \int_0^\pi \theta^m \sin n\theta \, d\theta \\
+     & = -\frac{m+1}{n} b_{m,n}
+  \end{align*}                                                                                                                                                \\
+  および
+  \begin{align*}
+    \quad b_{m+1,n}
+     & = \int_0^\pi \theta^{m+1} \sin n\theta \, d\theta                                                                         \\
+     & = -\frac{1}{n} \left[ \theta^{m+1} \cos n\theta \right]_0^\pi + \frac{m+1}{n} \int_0^\pi \theta^m \cos n\theta \, d\theta \\
+     & = (-1)^{n+1} \frac{\pi^{m+1}}{n} + \frac{m+1}{n} a_{m,n}
+  \end{align*}
+  より題意は示された．$\cdots$(答)
+
+  \vspace{10pt}
+  (2)
+  半径1の球面が $x^2+y^2+z^2=1$ となるように空間座標をおく．
+  $xy$平面でひもがうごく領域を$D$，紐の固定された端点$A(1,0,0)$として，
+  $D$を$x$軸まわりに回転した立体の体積$V$を求めれば良い．
+  紐の自由に動く端点を$P(X,Y,0)$とする．
+  対称性から$y \geq 0$のみ考える．
+
+  \begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[scale=0.8]
+      % Define pi for convenience
+      \pgfmathsetmacro{\mypi}{pi}
+
+      % Axes
+      \draw[->] (0,0) -- (2.5 + \mypi, 0) node[right] {$x$};
+      \draw[->] (0,0) -- (0, 1.5 + \mypi) node[above] {$y$};
+
+      % Center of the circle
+      \coordinate (center) at (1,0);
+
+      % Arc of the quarter circle
+      \draw[pattern=north west lines, thick] (center) -- (1, \mypi) arc (90:0: \mypi) -- cycle;
+
+      % Markings on the axes
+      \draw (1, 0.1) -- (1, -0.1) node[below] {$A(1,0)$};
+      \draw (1+\mypi, 0.1) -- (1+\mypi, -0.1) node[below] {$1+\pi$};
+      \draw (0.1, \mypi) -- (-0.1, \mypi) node[left] {$\pi$};
+
+      % Dashed line from (1,pi) to axes
+      \draw[dashed] (1, \mypi) -- (1, 0);
+      \draw[dashed] (1, \mypi) -- (0, \mypi);
+
+      % Dot at (1,pi)
+      \fill (1, \mypi) circle (2pt);
+      \fill (\mypi +1, 0) circle (2pt);
+
+    \end{tikzpicture}
+    \caption{$x>1$での点$P$の様子}
+    \label{fig:1}
+  \end{figure}
+
+  \subsection*{1. $1 \le x$の時}
+  ひもの端点$P$は球面に阻害されることなく動けるので，$(x-1)^2+y^2=\pi^2$上をうごく．
+  この様子を\cref{fig:1}に示す．
+
+  \subsection*{2. $2 \le x$の時}
+  この場合，$P$が動ける限界にある場合，紐は円上のある点Q$(x,\cos\theta, \sin\theta)$まで円に張り付き，
+  そこから直線$QA$が円の接線になる．
+  ただし$y \geq 0$から$0\le\theta\le\pi$の範囲で考える．
+
+  円弧$AQ$の長さは$\theta$だから線分$QA$の長さは$\pi-\theta$であり，
+  その方向ベクトルは円の接線になることから$(-\sin\theta,\cos\theta)$である．
+  この様子を\cref{fig:2}に示す．
+
+  \begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[scale=1.5]
+      \pgfmathsetmacro{\mypi}{pi}
+      % Draw the axes
+      \draw[->] (-2,0) -- (2,0) node[right] {$x$};
+      \draw[->] (0,-1.5) -- (0,2) node[above] {$y$};
+
+      % Draw the circle
+      \draw (0,0) circle (1);
+
+      % Mark points on axes
+      \node at (-1,0) [below left] {-1};
+      \node at (0,0) [below right] {0};
+      %\node at (1,0) [below right] {1};
+      \node at (0,1) [above left] {1};
+      \node at (0.3,0.3) {$\theta$};
+
+      % Define angle theta and point Q
+      \def\thetadeg{60} % Example angle for Q
+      \coordinate (O) at (0,0);
+      \coordinate (A) at (1,0);
+      \coordinate (Q) at (\thetadeg:1); % Q(cos(theta), sin(theta))
+
+      % Draw point A
+      \fill (A) circle (1.5pt);
+      \node at (A) [below right] {$A(1,0)$};
+
+      % Draw point Q
+      \fill (Q) circle (1.5pt);
+      \node at (Q) [above right] {$Q(\cos\theta,\sin\theta)$};
+
+      % Draw the radius OQ
+      \draw[dashed] (O) -- (Q);
+
+      % Draw the angle theta arc
+      \draw[thick] (0.3,0) arc (0:\thetadeg:0.3);
+      % \node at (\thetadeg/2:0.6) [below] {$\theta$};
+
+      % Draw the tangent line at Q
+      % The tangent line is perpendicular to the radius OQ.
+      % The slope of OQ is tan(theta). The slope of the tangent is -1/tan(theta) = -cot(theta).
+      % Or, simply, the tangent line extends along the direction (sin(theta), -cos(theta)) from Q
+      % For a point (cos(theta), sin(theta)), the normal vector is (cos(theta), sin(theta)).
+      % The tangent vector is (-sin(theta), cos(theta))
+      \pgfmathsetmacro{\QX}{cos(\thetadeg)}
+      \pgfmathsetmacro{\QY}{sin(\thetadeg)}
+
+      % Point P on the y-axis, connected to the tangent line (from the image, it seems P is the y-intercept of the tangent, or just a point on the y-axis where the tangent line extends to)
+      \pgfmathsetmacro{\Px}{\QX-(\mypi-\thetadeg*\mypi/180)*\QY}
+      \pgfmathsetmacro{\Py}{\QY+(\mypi-\thetadeg*\mypi/180)*\QX}
+
+
+      \coordinate (P_coord) at (\Px, \Py);
+      \node at (P_coord) [above left] {P};
+      \fill (P_coord) circle (1.5pt);
+
+      % Connect P to Q with a line that looks like the tangent segment in the image
+      % This part might need adjustment based on how precisely P is defined in the original problem.
+      % Based on the image, the tangent line goes through P.
+      % The point P seems to be the y-intercept of the tangent.
+      % Let's draw the line from P to some point on the tangent beyond Q to make it look like the image.
+      % No, the image shows a line segment from P to Q, which *is* part of the tangent.
+      \draw (P_coord) -- (Q); % Redrawing to make sure it looks like the image.
+      % The previous tangent drawing should have taken care of this, but the segment PQ is explicitly drawn in the image.
+
+    \end{tikzpicture}
+    \caption{$x\le 1$での点$P$の様子}
+    \label{fig:2}
+  \end{figure}
+
+  従って，ベクトル$QP$は
+  \begin{align*}
+    \vec{QP} = (\pi-\theta)
+    \begin{pmatrix}
+      -\sin\theta \\
+      \cos\theta
+    \end{pmatrix}
+  \end{align*}
+  と表せる．従って点$P$の座標は
+  \begin{align}
+    \vec{OP}
+     & = \vec{OQ} + \vec{QP}       \nonumber           \\
+     & =
+    \begin{pmatrix}
+      \cos\theta \\
+      \sin\theta
+    \end{pmatrix}
+    + (\pi-\theta)
+    \begin{pmatrix}
+      -\sin\theta \\
+      \cos\theta
+    \end{pmatrix}
+    \equiv
+    \begin{pmatrix}
+      X \\
+      Y
+    \end{pmatrix}       \nonumber                      \\
+    \therefore
+     & \begin{dcases}
+         X(\theta) = \cos\theta - (\pi-\theta)\sin\theta \\
+         Y(\theta) = \sin\theta + (\pi-\theta)\cos\theta
+       \end{dcases}\label{eq:1}
+  \end{align}
+  である．このパラメータ表示の曲線が$xy$平面でどのような軌跡になるかを調べる．
+
+  \begin{align}
+    \frac{dx}{d\theta}
+     & = -\sin\theta - (\pi-\theta)\cos\theta + \sin\theta \nonumber \\
+     & = -(\pi-\theta) \cos\theta  \label{eq:2}
+  \end{align}
+  であるから，\cref{table:1}を得る．
+
+  \begin{table}[H]
+    \centering
+    \caption{$(X,Y)$の$\theta$による変化}
+    \label{table:1}
+    \begin{tabular}{|c||c|c|c|c|c|}
+      \hline\hline
+      $\theta$             & $0$     &              & $\pi/2$      &               & $\pi$    \\
+      \hline\hline
+      $\frac{dX}{d\theta}$ &         & $-$          & $0$          & $+$           &          \\
+      \hline
+      $X$                  &         & $\leftarrow$ &              & $\rightarrow$ &          \\
+      \hline
+      $(X,Y)$              & $(1,0)$ &              & $(-\pi/2,1)$ &               & $(-1,0)$ \\
+      \hline\hline
+    \end{tabular}
+  \end{table}
+
+  これと$Y \ge 0$に注意して，$P$の軌跡は\cref{fig:3}のようになる．
+  図のように$0\le\theta\le\pi/2$の部分を$Y_{+}$,$\pi/2\le\theta\le\pi$の部分を$Y_{-}$と定義する．
+
+  \begin{figure}[H]
+    \begin{tikzpicture}
+      \begin{axis}[
+          axis lines=middle,
+          xlabel=$x$,
+          ylabel=$y$,
+          xmin=-2, xmax=2,
+          ymin= 0, ymax=4,
+          xtick = {\empty},
+          ytick = {\empty},
+          % xtick={-pi/2,-1,0,1},
+          % ytick={-1,0,1},
+          % yticklabels={$-1$, $0$, $1$, $-\frac{\pi}{2}$}, % Custom label for -pi/2
+          xlabel style={at=(current axis.right of origin), anchor=west},
+          ylabel style={at=(current axis.above origin), anchor=south},
+          clip=false, % Allow labels outside the axis box
+        ]
+
+        % Plot of the circle x^2+y^2=1 for 0 < theta < pi
+        \addplot[
+          domain=0:pi,
+          samples=100,
+          name path=circle_arc, % Name for filling
+        ] ({cos(deg(x))}, {sin(deg(x))});
+
+        % Plot of the parametric curve
+        \addplot[
+          domain=0.01:pi-0.01, % Avoid division by zero issues at exact 0 and pi for derivative (not needed here, but good practice)
+          samples=100,
+          name path=parametric_curve, % Name for filling
+        ] ({cos(deg(x)) - (pi-x)*sin(deg(x))}, {sin(deg(x)) + (pi-x)*cos(deg(x))});
+
+        % Fill the area between the two curves
+        \addplot[
+          pattern = north west lines,
+          % fill=gray!30, % Light gray fill
+          draw=none, % No border for the fill
+        ] fill between[of=circle_arc and parametric_curve];
+
+        % Annotations for theta values
+        \node at (axis cs:1,pi) [anchor=south west] {$\theta=0$};
+        \node at (axis cs:-pi/2,1) [anchor=east] {$\theta=\pi/2$};
+        \node at (axis cs:-1,0) [anchor=south west] {$\theta=\pi$};
+        \node at (axis cs:0,0) [anchor=north] {$0$};
+        \node at (axis cs:1,0) [anchor=north] {$1$};
+        \node at (axis cs:-1,0) [anchor=north] {$-1$};
+        \node at (axis cs:0,1) [anchor=north west] {$1$};
+        \node at (axis cs:-pi/2,0) [anchor=north] {$-\frac{\pi}{2}$};
+        \addplot[
+          only marks,       % 点のみをプロット
+          mark=*,           % 丸のマーク
+          mark size=1.5pt,  % マークのサイズ
+        ] coordinates {(1,pi)};
+        \addplot[
+          only marks,       % 点のみをプロット
+          mark=*,           % 丸のマーク
+          mark size=1.5pt,  % マークのサイズ
+        ] coordinates {(-pi/2,1)};
+        \addplot[
+          only marks,       % 点のみをプロット
+          mark=*,           % 丸のマーク
+          mark size=1.5pt,  % マークのサイズ
+        ] coordinates {(-1,0)};
+
+        \draw [dashed,thick] (axis cs:{-pi/2},1) -- (axis cs:{-pi/2},0); % To x-axis
+        \draw [dashed,thick] (axis cs:{-pi/2},1) -- (axis cs:{0},1);       % To y-axis
+        \draw [dashed,thick] (axis cs:1,{pi}) -- (axis cs:0,{pi});       % To y-axis
+
+        % Annotations for Y+ and Y-
+        % Y+ is at theta=pi/2 on the parametric curve
+        \pgfmathsetmacro{\YplusX}{cos(90) - (pi-pi/2)*sin(90)}
+        \pgfmathsetmacro{\YplusY}{sin(90) - (pi-pi/2)*cos(90)}
+        \node at (axis cs:\YplusX, \YplusY) [anchor=south west] {$Y_+$};
+
+        % Y- is at theta=0 on the parametric curve's y-value, but it seems to be around -pi/2 from the image
+        % Let's calculate the value at theta=0 for Y(0) and X(0)
+        % %\pgfmathsetmacro{\YminusXat0}{cos(0) - (pi-0)*sin(0)} % X(0) = 1
+        % %\pgfmathsetmacro{\YminusYat0}{sin(0) - (pi-0)*cos(0)} % Y(0) = -pi
+        % %\node at (axis cs:\YminusXat0, \YminusYat0) [anchor=north west] {$-\frac{\pi}{2}$}; % This is actually Y(0) = -pi. The image seems to imply -pi/2.
+
+        % The previous annotations seem redundant with the final decision. Let's simplify and make them consistent with the image.
+        % The image has Y+ pointing to the top of the filled area, and Y- pointing to the bottom of the filled area.
+        % Let's use the actual plotted points for Y+ and Y- and add the text labels.
+
+        % Y+/Y- annotation as depicted (pointing to the top of the shaded area)
+        \node[above] at (axis cs:-0.4,3) {$Y_+$}; % On the circle, as it looks like the top boundary.
+        \node[below left] at (axis cs:-1.5,0.5) {$Y_{-}$}; % Placed near the visual minimum of the curve.
+
+      \end{axis}
+    \end{tikzpicture}
+    \caption{$x\le 1$での点$P$の軌跡}
+    \label{fig:3}
+  \end{figure}
+
+
+
+  以下，回転体の体積$V$を求める．点$P$全体の軌跡は\cref{fig:4}で示す通りである．
+  これを$x$軸周りに回転した体積が求める体積である．
+  $V$は$x\le 1$の部分の回転体の体積$V_{<}$と$1\le x$の部分の回転体の体積$V_{>}$の和から，球$x^2+y^2+z^2=1$の体積$V_{s}$を引いたものである．
+  すなわち
+  \begin{align}
+    V = V_{>} + V_{<} - V_{s} \label{eq:7}
+  \end{align}
+
+  \begin{figure}[H]
+    \begin{tikzpicture}[yscale=1.0]
+      \begin{axis}[
+          axis lines=middle,
+          xlabel=$x$,
+          ylabel=$y$,
+          xmin=-2, xmax=5,
+          ymin= 0, ymax=5,
+          xtick = {\empty},
+          ytick = {\empty},
+          % xtick={-pi/2,-1,0,1},
+          % ytick={-1,0,1},
+          % yticklabels={$-1$, $0$, $1$, $-\frac{\pi}{2}$}, % Custom label for -pi/2
+          xlabel style={at=(current axis.right of origin), anchor=west},
+          ylabel style={at=(current axis.above origin), anchor=south},
+          clip=false, % Allow labels outside the axis box
+        ]
+
+        % Plot of the circle x^2+y^2=1 for 0 < theta < pi
+        \addplot[
+          domain=0:pi,
+          samples=100,
+          name path=circle_arc, % Name for filling
+        ] ({cos(deg(x))}, {sin(deg(x))});
+
+        \addplot[
+          domain=0:pi/2,
+          samples=100,
+          name path=circle_arc2, % Name for filling
+        ] ({pi*cos(deg(x))+1}, {pi*sin(deg(x))});
+
+        % Plot of the parametric curve
+        \addplot[
+          domain=0.01:pi-0.01, % Avoid division by zero issues at exact 0 and pi for derivative (not needed here, but good practice)
+          samples=100,
+          name path=parametric_curve, % Name for filling
+        ] ({cos(deg(x)) - (pi-x)*sin(deg(x))}, {sin(deg(x)) + (pi-x)*cos(deg(x))});
+
+        % Fill the area between the two curves
+        \addplot[
+          pattern = north west lines,
+          % fill=gray!30, % Light gray fill
+          draw=none, % No border for the fill
+        ] fill between[of=circle_arc and parametric_curve];
+
+
+        \addplot[draw=none,name path=xaxis,domain=1:1+pi] ({x},0);
+        \addplot[
+          pattern = north west lines,
+          draw=none, % No border for the fill
+        ] fill between[of=circle_arc2 and xaxis];
+
+
+        % Annotations for theta values
+        \node at (axis cs:1,pi) [anchor=south west] {$\theta=0$};
+        \node at (axis cs:-pi/2,1) [anchor=east] {$\theta=\pi/2$};
+        \node at (axis cs:-1,0) [anchor=south west] {$\theta=\pi$};
+        \node at (axis cs:0,0) [anchor=north] {$0$};
+        \node at (axis cs:1,0) [anchor=north] {$1$};
+        \node at (axis cs:1+pi,0) [anchor=north] {$1+\pi$};
+        \node at (axis cs:-1,0) [anchor=north] {$-1$};
+        \node at (axis cs:0,1) [anchor=north west] {$1$};
+        \node at (axis cs:-pi/2,0) [anchor=north] {$-\frac{\pi}{2}$};
+        \node at (axis cs:0.5,0.5) [anchor=north] {$V_{s}$};
+        \node at (axis cs:2,2) [anchor=north,fill=white] {$V_{+}$};
+        \node at (axis cs:-0.5,2) [anchor=north,fill=white] {$V_{-}$};
+
+        \addplot[
+          only marks,       % 点のみをプロット
+          mark=*,           % 丸のマーク
+          mark size=1.5pt,  % マークのサイズ
+        ] coordinates {(1,pi)};
+        \addplot[
+          only marks,       % 点のみをプロット
+          mark=*,           % 丸のマーク
+          mark size=1.5pt,  % マークのサイズ
+        ] coordinates {(-pi/2,1)};
+        \addplot[
+          only marks,       % 点のみをプロット
+          mark=*,           % 丸のマーク
+          mark size=1.5pt,  % マークのサイズ
+        ] coordinates {(-1,0)};
+
+        \draw [dashed,thick] (axis cs:{-pi/2},1) -- (axis cs:{-pi/2},0); % To x-axis
+        \draw [dashed,thick] (axis cs:{-pi/2},1) -- (axis cs:{0},1);       % To y-axis
+        \draw [dashed,thick] (axis cs:1,{pi}) -- (axis cs:0,{pi});       % To y-axis
+
+        % Annotations for Y+ and Y-
+        % Y+ is at theta=pi/2 on the parametric curve
+        \pgfmathsetmacro{\YplusX}{cos(90) - (pi-pi/2)*sin(90)}
+        \pgfmathsetmacro{\YplusY}{sin(90) - (pi-pi/2)*cos(90)}
+        \node at (axis cs:\YplusX, \YplusY) [anchor=south west] {$Y_+$};
+
+        % Y- is at theta=0 on the parametric curve's y-value, but it seems to be around -pi/2 from the image
+        % Let's calculate the value at theta=0 for Y(0) and X(0)
+        % %\pgfmathsetmacro{\YminusXat0}{cos(0) - (pi-0)*sin(0)} % X(0) = 1
+        % %\pgfmathsetmacro{\YminusYat0}{sin(0) - (pi-0)*cos(0)} % Y(0) = -pi
+        % %\node at (axis cs:\YminusXat0, \YminusYat0) [anchor=north west] {$-\frac{\pi}{2}$}; % This is actually Y(0) = -pi. The image seems to imply -pi/2.
+
+        % The previous annotations seem redundant with the final decision. Let's simplify and make them consistent with the image.
+        % The image has Y+ pointing to the top of the filled area, and Y- pointing to the bottom of the filled area.
+        % Let's use the actual plotted points for Y+ and Y- and add the text labels.
+
+        % Y+/Y- annotation as depicted (pointing to the top of the shaded area)
+        \node[above] at (axis cs:-0.4,3) {$Y_+$}; % On the circle, as it looks like the top boundary.
+        \node[below left] at (axis cs:-1.5,0.5) {$Y_{-}$}; % Placed near the visual minimum of the curve.
+
+      \end{axis}
+    \end{tikzpicture}
+    \caption{点$P$の軌跡の全体像}
+    \label{fig:4}
+  \end{figure}
+
+  $V_{s}$および$V_{+}$はそれぞれ半径$1$の球と半径$\pi$の球の半分だから
+  \begin{align}
+    V_{s} & = \frac{4\pi}{3} \label{eq:8}   \\
+    V_{+} & = \frac{2\pi^4}{3} \label{eq:9}
+  \end{align}
+  である．$V_{-}$は，$Y_{+}$と$Y_{-}$を分けて考えると
+  \begin{align*}
+    V_{-}
+     & = \pi \int_{-\frac{\pi}{2}}^{1} Y_{+}^2 dx - \pi \int_{-\frac{\pi}{2}}^{-1} Y_{-}^2 dx                                        \\
+     & = \pi \int_{0}^{\frac{\pi}{2}} Y^2 \frac{dx}{d\theta} d\theta - \pi \int_{\pi}^{\frac{\pi}{2}} Y^2 \frac{dx}{d\theta} d\theta \\
+     & = -\pi \int_{0}^{\pi} Y^2 \frac{dx}{d\theta} d\theta  \quad \dots \text{③}
+  \end{align*}
+  と表せる．\cref{eq:1,eq:2}を代入して
+  \begin{align*}
+    V_{-} =  -\pi \int_{0}^{\pi} \{ \sin\theta + (\pi - \theta) \cos\theta \}^2 \cdot \left[-(\pi - \theta)\cos\theta\right] d\theta
+  \end{align*}
+  である．$\pi - \theta \to \theta$ と変数を置き換えて
+  \begin{align*}
+    V_{-}
+    = & -\pi \int_{0}^{\pi} \{ \sin\theta - \theta\cos\theta \}^2 \theta \cos\theta  d\theta                                                      \\
+    = & -\pi \int_{0}^{\pi} \left[\theta^3\cos^3\theta -2 \theta^2\sin\theta\cos^2\theta + \theta \sin^2\theta\cos\theta \right]  d\theta         \\
+    = & -\pi \int_{0}^{\pi} \left[\theta^3\cos^3\theta -2 \theta^2\sin\theta(1-\sin^2\theta) + \theta (1-\cos^2\theta)\cos\theta \right]  d\theta \\
+    = & -\pi \int_{0}^{\pi} \left[\left(\theta^3-\theta\right)\cos^3\theta + 2\theta^2\sin^3\theta \right.                                        \\
+      & + \left.-2 \theta^2\sin\theta + \theta \cos\theta \right]  d\theta
+  \end{align*}
+  となる．
+
+  ここで，三倍角の公式
+  \begin{align*}
+    \sin 3\theta & = 3\sin\theta - 4 \sin^3\theta \\
+    \cos 3\theta & =-3\cos\theta + 4 \cos^3\theta
+  \end{align*}
+  を用いて$\cos^3\theta$, $\sin^3\theta$を除去すると
+  \begin{align*}
+    V_{-}
+    = & -\pi \int_{0}^{\pi} \left[
+    \left(\theta^3-\theta\right)\frac{1}{4}\left(\cos 3\theta + 3\cos\theta \right)\right. \\
+      & + \left. \frac{2}{4}\theta^2\left(-\sin 3\theta + 3\sin\theta \right)
+    -2 \theta^2\sin\theta + \theta \cos\theta \right]  d\theta                             \\
+    = & -\pi \int_{0}^{\pi} \left[
+      \frac{1}{4}\left(\theta^3-\theta\right)\cos 3\theta
+    -\frac{1}{2}\theta^2\sin 3\theta \right.                                               \\
+      & \left. -\frac{1}{2}\theta^2\sin\theta
+      +\frac{1}{4} \left(3\theta^3+\theta\right) \cos\theta \right]  d\theta
+  \end{align*}
+  となる．各項の積分を，(1)の結果を利用して簡単にして解く．まず，積分を$a_{m,n}$および$b_{m,n}$で表すと
+  \begin{align}
+    V_{-}
+     & = -\pi \left[ \frac{1}{4}a_{3,3}-\frac{1}{4}a_{1,3} - \frac{1}{2}b_{2,3} -\frac{1}{2}b_{2,1}+\frac{3}{4}a_{3,1}+\frac{1}{4}a_{1,1} \right] \label{eq:5}
+  \end{align}
+  である．(1)の漸化式および$n\le 1$に対して$a_{0,n}=0$, $b_{0,n}=2/n$より，それぞれの項は$m$の小さい順に整理すると
+  \begin{align*}
+    a_{1,1} & = - b_{0,1} = -2                                                         \\
+    a_{1,3} & = -\frac{1}{3} b_{0,3} = -\frac{2}{9}                                    \\
+    b_{2,1} & = \pi^2 + 2 a_{1,1} = \pi^2 - 4                                          \\
+    b_{2,3} & = \frac{\pi^2}{3} + \frac{2}{3} a_{1,3} = \frac{\pi^2}{3} - \frac{4}{27} \\
+    a_{3,1} & = - 3 b_{2,1}                                                            \\
+    a_{3,3} & = -b_{2,3}
+  \end{align*}
+  である．\cref{eq:5}にこれらを代入する．
+  先に$a_{3,3}, a_{3,1}$を$b$に変換し，最後に$b$に具体的な値を代入すると，
+  \begin{align}
+    V_{-}
+     & = -\pi \left[ -\frac{1}{4}b_{2,3}+\frac{1}{18} - \frac{1}{2}b_{2,3} -\frac{1}{2}b_{2,1}-\frac{9}{4}b_{2,1}-\frac{1}{2} \right] \nonumber    \\
+     & = -\pi \left[ -\frac{3}{4}b_{2,3} -\frac{11}{4}b_{2,1}-\frac{4}{9} \right]                                                     \nonumber    \\
+     & = -\pi \left[ -\frac{3}{4}\left( \frac{\pi^2}{3} - \frac{4}{27}\right) -\frac{11}{4}\left(\pi^2-4\right)-\frac{4}{9} \right]   \nonumber    \\
+     & = -\pi \left[ -3\pi^2 + \frac{32}{3}  \right]                                                                                  \label{eq:6}
+  \end{align}
+  と求まる．\cref{eq:8,eq:9,eq:6}を\cref{eq:7}に代入して求める体積は
+  \begin{align*}
+    V
+     & = \frac{2}{3}\pi^4 -\pi \left[ -3\pi^2 + \frac{32}{3}  \right] - \frac{4}{3}\pi \\
+     & = \frac{2}{3}\pi^4 + 3\pi^3 -12 \pi
+  \end{align*}
+  である．$\cdots$(答)
+
+  \vspace{10pt}
+  {\bf[解説]}
+  空間図形の問題．
+  (2)が本題だが，条件を式に落とし込む前半パートと，回転体の体積を求めるための計算を行う後半パート，
+  どちらも程よい難易度で解いていて楽しい問題だ．
+
+  まず前半パートについてだが，線分$PQ$が円の接線となることを今回は証明なしに用いた．
+  図からほぼ明らかなので答案中ではわざわざ証明しなくても良いだろうが，
+  ここでは数式的な証明を与えておこう．
+  要するに$P(X,Y)$に$A$から曲線を引いた時，$AP$の長さが最短になるようにするにはどうすれば良いか，ということである．
+  答案中のように$A$から$Q$までは円に張り付き，$QP$が直線になるところは自明なのでこの前提でどのように$Q$を取れば良いか考える．
+
+
+
+  次に後半パートについてだが，積分するところで誘導に乗る形で(1)を利用したが，
+  三角関数と多項式の積の形なので部分分数分解を繰り返すことで積分可能で，
+  人によっては慣れている分直接積分を計算してしまった方が早いかもしれない．
+  または時間が余れば直接積分で検算しに行く，という形だろう．
+
+  以下各項の積分を与える．
+  \begin{align*}
+    \bullet \int_0^\pi (\theta^3-\theta) \cos 3\theta d\theta
+    = & \left[ \frac{1}{3}(\theta^3-\theta) \sin 3\theta + \frac{1}{9}(3\theta^2-1) \cos 3\theta \right. \\
+      & \left. - \frac{1}{27} \cdot 6\theta \sin 3\theta- \frac{6}{81} \cos 3\theta \right]_0^\pi        \\
+    = & \left[ -\frac{1}{9}(3\pi^2-1) + \frac{1}{9}+\frac{12}{81} \right]                                \\
+    = & -\frac{1}{3}\pi^2 + \frac{10}{27}                                                                \\
+    \bullet \int_0^\pi (3\theta^3+\theta) \cos\theta d\theta
+    = & \left[ (3\theta^3+\theta) \sin\theta + (9\theta^2+1) \cos\theta \right.                          \\
+      & \left. - 18\theta\sin\theta - 18\cos\theta \right]_0^\pi                                         \\
+    = & [-(9\pi^2+1) - 1 + 36]                                                                           \\
+    = & -9\pi^2 + 34                                                                                     \\
+    \bullet \int_0^\pi \theta^2 \sin 3\theta d\theta
+    = & \left[ -\frac{1}{3}t^2 \cos 3t + \frac{2}{9}t \sin 3t + \frac{2}{27} \cos 3t \right]_0^\pi       \\
+    = & \frac{1}{3}\pi^2 - \frac{4}{27}                                                                  \\
+    \bullet \int_0^\pi \theta^2 \sin \theta d\theta
+    = & \left[ - \theta^2 \cos \theta + 2 \theta \sin \theta + 2\cos \theta \right]_0^\pi                \\
+    = & \pi^2 -4
+  \end{align*}
+  従って，
+  \begin{align*}
+    \frac{V_{<}}{-\pi}
+    = & \frac{1}{4}\left(-\frac{1}{3}\pi^2 + \frac{10}{27}\right) + \frac{1}{4}(-9\pi^2+34)          \\
+      & - \frac{1}{2}\left(\frac{1}{3}\pi^2 - \frac{4}{27}\right) - \frac{1}{2}\left(\pi^2 -4\right) \\
+    = & -3\pi^2 + \frac{32}{3}
+  \end{align*}
+  となって，同じ答えを得る．$\cdots$(答)
+
+  \vspace{10pt}
+  {\bf[解説]}
+
+
+  \newpage
+\end{multicols}
+\end{document}
