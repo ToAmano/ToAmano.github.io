@@ -194,14 +194,14 @@ pdf化した答案の大半には図がないので，時間がある時に順�
 | 2001 | [問題][tkk01] | [手書き答案][tkka01] | [答案][tkka01_1] |                  |
 | 2002 | [問題][tkk02] | [手書き答案][tkka02] | [答案][tkka02_1] |                  |
 | 2003 | [問題][tkk03] | [手書き答案][tkka03] | [答案][tkka03_1] | [答案][tkka03_2] |
-| 2004 | [問題][tkk04] | [手書き答案][tkka04] |                  |                  |
+| 2004 | [問題][tkk04] | [手書き答案][tkka04] | [答案][tkka04_1] | [答案][tkka04_2] |
 | 2005 | [問題][tkk05] | [手書き答案][tkka05] |                  |                  |
 | 2006 | [問題][tkk06] | [手書き答案][tkka06] |                  |                  |
 | 2007 | [問題][tkk07] | [手書き答案][tkka07] |                  |                  |
-| 2008 | [問題][tkk08] | [手書き答案][tkka08] |                  |                  |
+| 2008 | [問題][tkk08] | [手書き答案][tkka08] | [答案][tkka08_1] | [答案][tkka08_2] |
 | 2009 | [問題][tkk09] | [手書き答案][tkka09] |                  |                  |
 | 2010 | [問題][tkk10] | [手書き答案][tkka10] |                  |                  |
-| 2011 | [問題][tkk11] | [手書き答案][tkka11] |                  |                  |
+| 2011 | [問題][tkk11] | [手書き答案][tkka11] | [答案][tkka11_1] | [答案][tkka11_2] |
 
 
 ## 京大数学（後期）
@@ -582,7 +582,14 @@ pdf化した答案の大半には図がないので，時間がある時に順�
 [tkka02_1]: {% link _pages/ent-ex/solutions/toukou/toukou-kouki/2002/1/out/solutions.pdf %}
 [tkka03_1]: {% link _pages/ent-ex/solutions/toukou/toukou-kouki/2003/1/out/solutions.pdf %}
 [tkka03_2]: {% link _pages/ent-ex/solutions/toukou/toukou-kouki/2003/2/out/solutions.pdf %}
+[tkka04_1]: {% link _pages/ent-ex/solutions/toukou/toukou-kouki/2004/1/out/solutions.pdf %}
+[tkka04_2]: {% link _pages/ent-ex/solutions/toukou/toukou-kouki/2004/2/out/solutions.pdf %}
 
+[tkka08_1]: {% link _pages/ent-ex/solutions/toukou/toukou-kouki/2008/1/out/solutions.pdf %}
+[tkka08_2]: {% link _pages/ent-ex/solutions/toukou/toukou-kouki/2008/2/out/solutions.pdf %}
+
+[tkka11_1]: {% link _pages/ent-ex/solutions/toukou/toukou-kouki/2011/1/out/solutions.pdf %}
+[tkka11_2]: {% link _pages/ent-ex/solutions/toukou/toukou-kouki/2011/2/out/solutions.pdf %}
 
 
 <!-- 問題へのPath -->
