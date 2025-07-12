@@ -190,10 +190,10 @@ pdf化した答案の大半には図がないので，時間がある時に順�
 | 1997 | [問題][tkk97] | [手書き答案][tkka97] | [答案][tkka97_1] | [答案][tkka97_2] |
 | 1998 | [問題][tkk98] | [手書き答案][tkka98] | [答案][tkka98_1] | [答案][tkka98_2] |
 | 1999 | [問題][tkk99] | [手書き答案][tkka99] | [答案][tkka99_1] | [答案][tkka99_2] |
-| 2000 | [問題][tkk00] | [手書き答案][tkka00] | [答案][tkka00_1] |                  |
+| 2000 | [問題][tkk00] | [手書き答案][tkka00] | [答案][tkka00_1] | [答案][tkka00_2] |
 | 2001 | [問題][tkk01] | [手書き答案][tkka01] | [答案][tkka01_1] |                  |
 | 2002 | [問題][tkk02] | [手書き答案][tkka02] | [答案][tkka02_1] |                  |
-| 2003 | [問題][tkk03] | [手書き答案][tkka03] |                  |                  |
+| 2003 | [問題][tkk03] | [手書き答案][tkka03] | [答案][tkka03_1] | [答案][tkka03_2] |
 | 2004 | [問題][tkk04] | [手書き答案][tkka04] |                  |                  |
 | 2005 | [問題][tkk05] | [手書き答案][tkka05] |                  |                  |
 | 2006 | [問題][tkk06] | [手書き答案][tkka06] |                  |                  |
@@ -573,12 +573,15 @@ pdf化した答案の大半には図がないので，時間がある時に順�
 [tkka97_1]: {% link _pages/ent-ex/solutions/toukou/toukou-kouki/1997/1/solutions.pdf %}
 [tkka97_2]: {% link _pages/ent-ex/solutions/toukou/toukou-kouki/1997/2/solutions.pdf %}
 [tkka98_1]: {% link _pages/ent-ex/solutions/toukou/toukou-kouki/1998/1/solutions.pdf %}
-[tkka98_1]: {% link _pages/ent-ex/solutions/toukou/toukou-kouki/1998/2/out/solutions.pdf %}
+[tkka98_2]: {% link _pages/ent-ex/solutions/toukou/toukou-kouki/1998/2/out/solutions.pdf %}
 [tkka99_1]: {% link _pages/ent-ex/solutions/toukou/toukou-kouki/1999/1/solutions.pdf %}
 [tkka99_2]: {% link _pages/ent-ex/solutions/toukou/toukou-kouki/1999/2/solutions.pdf %}
 [tkka00_1]: {% link _pages/ent-ex/solutions/toukou/toukou-kouki/2000/1/out/solutions.pdf %}
+[tkka00_2]: {% link _pages/ent-ex/solutions/toukou/toukou-kouki/2000/2/out/solutions.pdf %}
 [tkka01_1]: {% link _pages/ent-ex/solutions/toukou/toukou-kouki/2001/1/out/solutions.pdf %}
 [tkka02_1]: {% link _pages/ent-ex/solutions/toukou/toukou-kouki/2002/1/out/solutions.pdf %}
+[tkka03_1]: {% link _pages/ent-ex/solutions/toukou/toukou-kouki/2003/1/out/solutions.pdf %}
+[tkka03_2]: {% link _pages/ent-ex/solutions/toukou/toukou-kouki/2003/2/out/solutions.pdf %}
 
 
 
