@@ -1,0 +1,106 @@
+% TODO :: ライプニッツ級数についての解説を追加
+\documentclass[a4paper,10pt]{ltjsarticle}
+\usepackage{luatexja}
+\usepackage[hiragino-pron]{luatexja-preset}
+
+\usepackage[truedimen,top=25truemm,bottom=20truemm,left=15truemm,right=15truemm]{geometry}
+\setlength{\textwidth}{54\zw}
+\setlength{\textheight}{73\zw}
+
+\usepackage{amsmath,amssymb,ascmac}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{physics}
+\usepackage{cleveref}
+\usepackage{framed}
+ \usepackage{caption}
+ \usepackage{subcaption}
+\usepackage{fancyhdr}
+\usepackage{latexsym}
+\usepackage{mathtools}
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{intersections}
+\usepgfplotslibrary{fillbetween}
+ \usetikzlibrary{math}
+ \usetikzlibrary{calc}
+ \usetikzlibrary{angles}
+ \usetikzlibrary{quotes}
+ \usetikzlibrary{patterns}
+% \usepackage{indent}
+\usepackage{cases}
+\usepackage{float}
+\allowdisplaybreaks
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{東工大後期$2004$年$1$番}
+\begin{document}
+
+\begin{oframed}
+  場所1から場所$n$に異なる$n$個のものが並んでいる．
+  これらを並べ替えてどれもが元の位置にならないようにする方法の総数を$D(n)$とする．ただし$n \ge 2$とする．
+
+  \begin{enumerate}
+    \item $n=4$の場合の並べ替え方をすべて書き出して，$D(4)$を求めよ．
+    \item $n \ge 4$に対して $D(n)=(n-1)\{D(n-2)+D(n-1)\}$を証明せよ．
+  \end{enumerate}
+\end{oframed}
+\setlength{\columnseprule}{0.4pt}
+\begin{multicols}{2}
+  {\bf[解]}
+  $n$個のものを数字の$1$から$n$であらわし，一つの並べ方を$n$桁の整数で表す．
+  場所$i$をこの整数の$i$桁目に対応させる．
+  わかりやすさのため$i$桁目の数字を$A_i$とする．
+  よって一つの並べ方は$A_nA_{n-1}\cdots A_{2}A_{1}$となる．
+  最初の並べ方は場所$i$に整数$i$が置いてあるパターンとする．
+  例えば，$n=4$のとき，最初の並べ方は$4321$であるとする．
+
+  \vspace{10pt}
+  (1)
+  $n=4$の時，$4$つのものを$1,2,3,4$の整数であらわして，全ての並べ方をリストアップすると
+  \begin{table}[H]
+    \centering
+    \begin{tabular}{ccc}
+      $3412$ & $2413$ & $3214$                     \\
+      $3142$ & $2143$ & $2134$                     \\
+      $1432$ & $1243$ & $1234$                     \\
+      \multicolumn{3}{c}{\rule[0.5ex]{3em}{0.4pt}} \\
+    \end{tabular}
+  \end{table}
+  の$9$通りだから，$D(4)=9$である．$\cdots$(答)
+
+  \vspace{10pt}
+  (2)
+  $n\ge 4$とする．
+  対称性から$A_1=2,3,\dots,n$となる並べ方は等しいので、以下$A_1=2$として考える．
+  $A_2,A_3, A_4, \dots, A_n$に$1,3,4,\cdots n$を題意を満たすように並べれば良い．
+
+  \subsection{$A_2=1$の時．}
+
+  $A_3, A_4, \dots, A_n$に$3,4,\dots,n$を題意をみたすように並べれば良く，$D(n-2)$通り．
+
+  \subsection{$A_2 \ne 1$の時．}
+
+  $1$は$A_3$から$A_n$のどこへでも配置できる．
+  $1$を$2$で置き換えれば，$2$を$A_3$から$A_n$のどこかに配置することになり，$2$は$A_2$には置けないから，
+  これは要するに$2,3,\cdots,n$を$A_2,A_3,\cdots, A_n$に条件を満たして配置することと同じである．
+  従って場合の数は$D(n-1)$通りである．
+
+  以上で全ての場合が尽くされているから，求める場合の数は$A_1$を動かして$n-1$倍した
+  \begin{align*}
+    D(n) = (n-1) \{ D(n-1) + D(n-2) \}
+  \end{align*}
+  である．よって題意は示された．$\cdots$(答)
+
+  \vspace{10pt}
+  {\bf[解説]}
+
+
+
+
+  \newpage
+\end{multicols}
+\end{document}
