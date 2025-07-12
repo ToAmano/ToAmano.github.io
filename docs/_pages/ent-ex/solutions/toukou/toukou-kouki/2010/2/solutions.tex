@@ -1,0 +1,442 @@
+\documentclass[a4paper,10pt]{ltjsarticle}
+\usepackage{luatexja}
+\usepackage[hiragino-pron]{luatexja-preset}
+
+\usepackage[truedimen,top=25truemm,bottom=20truemm,left=15truemm,right=15truemm]{geometry}
+\setlength{\textwidth}{54\zw}
+\setlength{\textheight}{73\zw}
+
+\usepackage{amsmath,amssymb,ascmac}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{cleveref}
+\usepackage{framed}
+\usepackage{fancyhdr}
+\usepackage{latexsym}
+\usepackage{mathtools}
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+\usepackage{pgfplots}
+ \usetikzlibrary{math}
+ \usetikzlibrary{calc}
+ \usetikzlibrary{angles}
+ \usetikzlibrary{quotes}
+ \usepgfplotslibrary{fillbetween} 
+
+ \pgfplotsset{compat=1.18}
+% \usepackage{indent}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{cases}
+\usepackage{float}
+\usepackage{cases}
+  \usepackage{caption}
+  \usepackage[subrefformat=parens]{subcaption}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\tikzset{
+  arrowStyle/.style={ -Straight Barb[], semithick },
+  straightArrow/.style={ arrowStyle, scale=0.35 },
+  roundedArrow/.style={ arrowStyle, scale=0.4, rounded corners=2pt },
+  bentArrow/.style={ arrowStyle, scale=0.4 }
+}
+
+\newcommand{\diagonalArrowNE}{\tikz[ baseline={([yshift=-0.6ex]current bounding box.center)} ] \draw[ straightArrow ] (0,0) to (1,1);}
+\newcommand{\diagonalArrowSE}{\tikz[ baseline={([yshift=-0.6ex]current bounding box.center)} ] \draw[ straightArrow ] (0,1) to (1,0);}
+
+\newcommand{\roundedArrowRU}{\tikz[ baseline={([yshift=-0.6ex]current bounding box.center)} ] \draw[ roundedArrow ] (0,0) .. controls(1,0) .. (1,1);}
+\newcommand{\roundedArrowRD}{\tikz[ baseline={([yshift=-0.6ex]current bounding box.center)} ] \draw[ roundedArrow ] (0,1) .. controls(1,1) .. (1,0);}
+\newcommand{\roundedArrowDR}{\tikz[ baseline={([yshift=-0.6ex]current bounding box.center)} ] \draw[ roundedArrow ] (0,1) .. controls(0,0) .. (1,0);}
+\newcommand{\roundedArrowUR}{\tikz[ baseline={([yshift=-0.6ex]current bounding box.center)} ] \draw[ roundedArrow ] (0,0) .. controls(0,1) .. (1,1);}
+
+\newcommand{\bentArrowRU}{\tikz[ baseline={([yshift=-0.6ex]current bounding box.center)} ] \draw[ bentArrow ] (0,0) to [bend right] (1.3,0.8);}
+\newcommand{\bentArrowDR}{\tikz[ baseline={([yshift=-0.6ex]current bounding box.center)} ] \draw[ bentArrow ] (0,0.8) to [bend right] (1.3,0);}
+\newcommand{\bentArrowRD}{\tikz[ baseline={([yshift=-0.6ex]current bounding box.center)} ] \draw[ bentArrow ] (0,0.8) to [bend left] (1.3,0);}
+\newcommand{\bentArrowUR}{\tikz[ baseline={([yshift=-0.6ex]current bounding box.center)} ] \draw[ bentArrow ] (0,0) to [bend left] (1.3,0.8);}
+
+\allowdisplaybreaks
+\tdplotsetmaincoords{70}{110}
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{東工大後期$2010$年$2$番}
+\begin{document}
+\begin{oframed}
+  座標平面上で$y = (\log x)^2 \, (x>0)$の表す曲線を$C$とし, $\alpha > 0$に対し, 点$(\alpha, (\log \alpha)^2)$における$C$の接線を$L(\alpha)$で表す.
+  \begin{enumerate}
+    \item $C$のグラフの概形を掛け.
+    \item $C$と$L(\alpha)$との共有点の個数を$n(\alpha)$とする. $n(\alpha)$を求めよ.
+    \item $0 < \alpha < 1$とし, $C$と$L(\alpha)$および$x$軸とで囲まれる領域の面積を$S(\alpha)$とする. $S(\alpha)$を求めよ.
+  \end{enumerate}
+\end{oframed}
+
+
+\setlength{\columnseprule}{0.4pt}
+\begin{multicols}{2}
+  {\bf[解]}
+  関数を
+  \begin{align*}
+    f(x) = \left(\log x\right)^2 & (x>0)
+  \end{align*}
+  とおく．
+
+  \vspace{10pt}
+  (1)
+  一階，二階微分は
+  \begin{align}
+    f'(x)  & = 2 \frac{\log x}{x}    \label{eq:1} \\
+    f''(x) & = 2 \frac{1-\log x}{x^2}
+  \end{align}
+  であるから，増減表は\cref{table:1}となる．
+  \begin{table}[H]
+    \centering
+    \caption{$f(x)$の増減表}
+    \label{table:1}
+    \begin{tabular}{|c||c|c|c|c|c|c|c|}
+      \hline
+      $x$   & $0$        & $\cdots$          & $1$ & $\cdots$          & $e$ & $\cdots$           & \infty   \\
+      \hline
+      $f'$  &            & $-$               & $0$ & $+$               & $+$ & $+$                &          \\
+      \hline
+      $f''$ &            & $+$               & $+$ & $+$               & $0$ & $-$                &          \\
+      \hline
+      $f$   & $(\infty)$ & $\roundedArrowDR$ & $0$ & $\roundedArrowRU$ & $1$ & $\roundedArrowUR $ & (\infty) \\
+      \hline
+    \end{tabular}
+  \end{table}
+  従って，グラフの概形は\cref{fig:1}となる．
+  \begin{figure}[H]
+    %\centering
+    \begin{tikzpicture}
+      \begin{axis}[
+          axis lines=middle,
+          xmin=0, xmax=4,
+          ymin=0, ymax=2,
+          xlabel=$x$,
+          ylabel=$y$,
+          xtick={1,e},
+          xticklabels={$1$,$e$},
+          ytick={1}, % 1/e の近似値と -log n / n の例
+          yticklabels={$1$},
+          grid=none,
+          %no markers,
+          clip=false, % ラベルが軸からはみ出しても表示されるように
+        ]
+
+        % h(x) = (ln x) / x のプロット
+        \addplot[blue, thick, domain=0.25:4, samples=100,smooth] {ln(x)*ln(x)};
+
+        % f(t)ラベル
+        \node[above] at (axis cs:e, 1.2) {$f(t)$};
+
+        % 極大点とy軸のラベルを結ぶ破線
+        \draw[dashed] (axis cs:e, {ln(e)*ln(e)}) -- (axis cs:0, {ln(e)*ln(e)});
+        \draw[dashed] (axis cs:e, {ln(e)*ln(e)}) -- (axis cs:e, 0);
+      \end{axis}
+    \end{tikzpicture}
+    \caption{$f(x)$の概形.$x=e$が変曲点となる．}
+    \label{fig:1}
+  \end{figure}
+
+  $\cdots$(答)
+
+  \vspace{10pt}
+  (2)
+  $P(\alpha, f(\alpha))$ での接線 $L(\alpha)$ は,\cref{eq:1}から
+  \begin{align*}
+    y
+     & = l(x)                                               \\
+     & = f'(x) (x - \alpha) + f(\alpha)                     \\
+     & = 2\frac{\log \alpha}{\alpha} (x-\alpha) + f(\alpha)
+  \end{align*}
+  であるから，$L(\alpha)$ と $C$ の共有点の個数は
+  \begin{align*}
+    l(x) = f(x) \\
+    (\log x)^2 - (\log \alpha)^2 - 2\frac{\log \alpha}{\alpha} (x-\alpha) = 0 \quad \cdots \textcircled{1}
+  \end{align*}
+  の $x>0$ の解の個数にひとしい.
+  \textcircled{1} の左辺を $g(x)$ とおく：
+  \begin{align*}
+    g(x) = (\log x)^2 - (\log \alpha)^2 - 2\frac{\log \alpha}{\alpha} (x-\alpha)
+  \end{align*}
+  $g(x)$の一階微分は
+  \begin{align*}
+    g'(x) = 2 \left( \frac{\log x}{x} - \frac{\log \alpha}{\alpha} \right)
+  \end{align*}
+  であるから，この符号は
+  \begin{align*}
+    h(x) = \frac{\log x}{x}
+  \end{align*}
+  の挙動による．
+  \cref{eq:1}より$h(x) = f'(x)/2$だから，
+  \begin{align*}
+    h'(x) = \frac{f''(x)}{2}
+  \end{align*}
+  であり，$h(x)$の増減表は\cref{table:2}となる．
+  \begin{table}[H]
+    \centering
+    \caption{$h(x)$の増減表}
+    \label{table:2}
+    \begin{tabular}{|c||c|c|c|c|c|}
+      \hline
+      $x$  & $0$         & $\cdots$   & $e$ & $\cdots$   & \infty \\
+      \hline
+      $h'$ &             & $+$        & $0$ & $-$        &        \\
+      \hline
+      $f$  & $(-\infty)$ & $\nearrow$ & $1$ & $\searrow$ & (0)    \\
+      \hline
+    \end{tabular}
+  \end{table}
+  従ってグラフの概形は\cref{fig:2}となる．
+  \begin{figure}[H]
+    %\centering
+    \begin{tikzpicture}
+      \begin{axis}[
+          axis lines=middle,
+          xmin=0, xmax=6,
+          ymin=-1.5, ymax=1,
+          xlabel=$x$,
+          ylabel=$y$,
+          xtick={1,e},
+          xticklabels={$1$,$e$},
+          ytick={0.367879, -0.5}, % 1/e の近似値と -log n / n の例
+          yticklabels={$\frac{1}{e}$, $-\frac{\log \alpha}{\alpha}$},
+          grid=none,
+          %no markers,
+          clip=false, % ラベルが軸からはみ出しても表示されるように
+        ]
+
+        % h(x) = (ln x) / x のプロット
+        \addplot[blue, thick, domain=0.5:5, samples=100,smooth] {ln(x)/x};
+
+        % h(t)ラベル
+        \node[above right] at (axis cs:e, {ln(e)/e}) {$h(t)$};
+
+        % 極大点とy軸のラベルを結ぶ破線
+        \draw[dashed] (axis cs:e, {ln(e)/e}) -- (axis cs:0, {ln(e)/e});
+        \draw[dashed] (axis cs:e, {ln(e)/e}) -- (axis cs:e, 0);
+
+        % -log n / n の水平線（例として）
+        \draw[red, dashed] (axis cs:0.01, -0.5) -- (axis cs:6, -0.5);
+      \end{axis}
+    \end{tikzpicture}
+    \caption{$h(x)$の概形.$x=e$で最大値をとり，$\alpha$の値によって$g'(x)$の零点の数が変化する．}
+    \label{fig:2}
+  \end{figure}
+
+  以下$\alpha$の値によって場合わけする．
+
+  \subsection{$0<\alpha\le 1$の時}
+
+  $g'(x) = 0$となる$x$は$x=\alpha$ただ一つである．
+  $x<\alpha$では$g'(x)<0$, $\alpha<x$では$g'(x)>0$である．
+  また，$g(x)$の極限値は
+  \begin{align*}
+    \lim_{x\to 0} g(x)      & = \infty \\
+    \lim_{x\to \infty} g(x) & = \infty
+  \end{align*}
+  である．
+  従って$g(x)$の増減表は\cref{table:3}のようになる．
+  \begin{table}[H]
+    \centering
+    \caption{$g(x)$の増減表}
+    \label{table:3}
+    \begin{tabular}{|c||c|c|c|c|c|}
+      \hline
+      $x$  & $0$        & $\cdots$   & $\alpha$ & $\cdots$   & \infty   \\
+      \hline
+      $g'$ &            & $-$        & $0$      & $+$        &          \\
+      \hline
+      $g$  & $(\infty)$ & $\searrow$ & $0$      & $\nearrow$ & (\infty) \\
+      \hline
+    \end{tabular}
+  \end{table}
+
+  従って，$g(x)=0$の解の数は$x=\alpha$ただ一つ．
+
+
+  \subsection{$\alpha=e$の時}
+
+  $g'(x) = 0$となる$x$は$x=\alpha$ただ一つである．
+  それ以外のとき，$g'(x)<0$である．
+  また，$g(x)$の極限値は
+  \begin{align*}
+    \lim_{x\to 0} g(x)      & = \infty  \\
+    \lim_{x\to \infty} g(x) & = -\infty
+  \end{align*}
+  である．
+  従って$g(x)$の増減表は\cref{table:4}のようになる．
+  \begin{table}[H]
+    \centering
+    \caption{$g(x)$の増減表}
+    \label{table:4}
+    \begin{tabular}{|c||c|c|c|c|c|}
+      \hline
+      $x$  & $0$        & $\cdots$   & $\alpha$ & $\cdots$   & $\infty$    \\
+      \hline
+      $g'$ &            & $-$        & $0$      & $-$        &             \\
+      \hline
+      $g$  & $(\infty)$ & $\searrow$ & $0$      & $\nearrow$ & $(-\infty)$ \\
+      \hline
+    \end{tabular}
+  \end{table}
+  よって，$g(x)=0$の解の数は$x=\alpha$ただ一つ．
+
+  \subsection{$1 < \alpha, \, \alpha\neq e$の時}
+  この時は$x=\alpha$以外にもう一つ$g'(x)=0$となる$x$がある．
+  これを$x=\beta$とする．
+  また，$g(x)$の極限値は
+  \begin{align*}
+    \lim_{x\to 0} g(x)      & = \infty  \\
+    \lim_{x\to \infty} g(x) & = -\infty
+  \end{align*}
+  である．
+  よって$g(x)$の増減表は\cref{table:5}となる．
+  \begin{table}[H]
+    \centering
+    \caption{$h(x)$の増減表}
+    \label{table:5}
+    \begin{tabular}{|c||c|c|c|c|c|c|c|}
+      \hline
+      $x$  & $0$        & $\cdots$   & $\alpha$ & $\cdots$   & $\beta$ & $\cdots$   & $\infty$    \\
+      \hline
+      $g'$ &            & $-$        & $0$      & $+$        & $0$     & $-$        &             \\
+      \hline
+      $g$  & $(\infty)$ & $\searrow$ & $0$      & $\nearrow$ &         & $\searrow$ & $(-\infty)$ \\
+      \hline
+    \end{tabular}
+  \end{table}
+  従って，$g(x)=0$の解の数は二つである．
+
+  以上三つの場合わけにより全ての場合は尽くされた．
+  従って求める共有点の個数は
+  \begin{align*}
+    \begin{dcases}
+      0 < \alpha \le 1, \alpha = e & \cdots \text{1つ} \\
+      1 < \alpha (\alpha \ne e)    & \cdots \text{2つ}
+    \end{dcases}
+  \end{align*}
+  である．  $\cdots$(答)
+
+  % $g(x)$ は$0<x$で連続だから平均値の定理より，$x \ne \alpha$ の時
+  % \begin{align*}
+  %   g(x) = (x-a) g'(c)
+  % \end{align*}
+  % をみたす $c$ が $x$ と $\alpha$ の間に存在する．
+  % 従って，$g'(c)$
+
+  % ここで $g'(x) = 2 \left( \frac{\log x}{x} - \frac{\log a}{a} \right)$ であること及び, $f''(x)$ の考え方から $y = \frac{\log x}{x}$ のグラフが下図であることから, つぎの $g(x)=0$ の解の数は
+  % \begin{align*}
+  %   \begin{cases}
+  %     0 < \alpha \le 1          & \cdots \textcircled{0}_1 \\
+  %     1 < \alpha (\alpha \ne e) & \cdots \textcircled{0}_2 \\
+  %     \alpha = e                & \cdots \textcircled{0}_3
+  %   \end{cases}
+  % \end{align*}
+  % $\alpha$ の値に打ちすぎ, $x = \alpha$ だけ解だから
+  % \begin{align*}
+  %   \begin{cases}
+  %     0 < \alpha \le 1, \alpha = e & \cdots \textcircled{1} \\
+  %     1 < \alpha (\alpha \ne e)    & \cdots \textcircled{2}
+  %   \end{cases}
+  % \end{align*}
+
+  \vspace{10pt}
+  (3)
+  $P$から$x$軸に下ろした垂足$Q(\alpha,0)$, $L(a)$と$x$軸の交点$R$, また$T(1,0)$とおく.
+  すると$R$の$x$座標は
+  \begin{align*}
+     & 2\frac{\log \alpha}{\alpha} (x-\alpha) + \left(\log \alpha\right)^2 = 0 \\
+     & x = \alpha - \frac{\alpha}{2}\log\alpha
+  \end{align*}
+  となる．
+  題意の領域の概形は\cref{fig:3}のようになる．
+  \begin{figure}[H]
+    %\centering
+    \begin{tikzpicture}
+      \begin{axis}[
+          axis lines=middle,
+          xmin=0, xmax=1.2,
+          ymin=0, ymax=1,
+          xlabel=$x$,
+          ylabel=$y$,
+          xtick={0.5,1},
+          xticklabels={$\alpha$,$1$},
+          ytick={0.48},
+          yticklabels={$\left(\log \alpha\right)^2$},
+          grid=none,
+          %no markers,
+          clip=false, % ラベルが軸からはみ出しても表示されるように
+        ]
+
+        % h(x) = (ln x) / x のプロット
+        \addplot[name path=A, blue, thick, domain=0.4:1, samples=100,smooth] {ln(x)*ln(x)};
+
+        % f(x)の接線@x=1/2
+        \addplot[name path=B, blue, thick, domain=0.4:0.7, samples=100,smooth] {-4*ln(2)*(x-1/2)+ln(2)*ln(2)};
+
+        \addplot[name path=C,draw=none, domain=0.673:1] {0};
+        % 埋める
+        \addplot[gray!30, fill opacity=0.5] fill between[of=A and B, soft clip={domain=0.5:0.673}];
+        \addplot[gray!30, fill opacity=0.5] fill between[of=A and C, soft clip={domain=0.673:1}];
+
+        % h(t)ラベル
+        \node[above right] at (axis cs:0.7, 0.4) {$f(x)$};
+        \node[above right] at (axis cs:0.3, 0.5) {$L(\alpha)$};
+
+
+        % 極大点とy軸のラベルを結ぶ破線
+        \draw[dashed] (axis cs:1/2, {ln(2)*ln(2)}) -- (axis cs:1/2, 0);
+        \draw[dashed] (axis cs:1/2, {ln(2)*ln(2)}) -- (axis cs:0, {ln(2)*ln(2)});
+
+        % 点とラベルを追加
+        \node[circle, fill, inner sep=1.5pt, label={T}] at (axis cs:1,0) {};
+        \node[circle, fill, inner sep=1.5pt, label={above right:P}] at (axis cs:1/2,{ln(2)*ln(2)}) {};
+        \node[circle, fill, inner sep=1.5pt, label={above right:Q}] at (axis cs:1/2,0) {};
+        \node[circle, fill, inner sep=1.5pt, label={above right:R}] at (axis cs:{1/2+ln(2)/4},0) {};
+
+      \end{axis}
+    \end{tikzpicture}
+    \caption{求める面積の概形}
+    \label{fig:3}
+  \end{figure}
+  求める面積$S(\alpha)$は，図形$PQT$の面積$A(\alpha)$から，三角形$PQR$の面積$B(\alpha)$を減じたものに等しい．
+  すなわち
+  \begin{align}
+    S(\alpha) = A(\alpha) - B(\alpha) \label{eq:2}
+  \end{align}
+  まず，$\triangle PQR$について，
+  \begin{align*}
+    |QR|
+     & = \alpha - \frac{1}{2}\alpha\log\alpha - \alpha \\
+     & = - \frac{1}{2}\alpha\log\alpha
+  \end{align*}
+  および
+  \begin{align*}
+    |PQ| = \left(\log \alpha\right)^2
+  \end{align*}
+  だから，
+  \begin{align}
+    B(\alpha)
+     & = \frac{1}{2}|QR||PQ|  \nonumber                            \\
+     & = \frac{-1}{4}\alpha\left(\log \alpha\right)^3 \label{eq:3}
+  \end{align}
+  である．
+  次に$A(\alpha)$は部分積分法を繰り返し用いて
+  \begin{align}
+    A(\alpha)
+     & = \int_{\alpha}^{1} (\log x)^2 dx     \nonumber                                            \\
+     & = \left[ x(\log x)^2 - 2x\log x + 2x \right]_{\alpha}^{1}   \nonumber                      \\
+     & = (0 - 0 + 2)-(\alpha (\log \alpha)^2 - 2\alpha \log \alpha + 2\alpha)           \nonumber \\
+     & = 2 - \alpha (\log \alpha)^2 + 2\alpha \log \alpha -2\alpha  \label{eq:4}
+  \end{align}
+  だから，\cref{eq:3,eq:4}を\cref{eq:2}に代入して
+  \begin{align*}
+    S(\alpha)
+     & = 2 -\alpha (\log \alpha)^2 + 2\alpha \log \alpha - 2\alpha + \frac{1}{4}\alpha (\log \alpha)^3
+  \end{align*}
+  が求める面積である．  $\cdots$(答)
+  \newpage
+\end{multicols}
+\end{document}
