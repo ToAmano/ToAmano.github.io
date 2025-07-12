@@ -200,7 +200,7 @@ pdf化した答案の大半には図がないので，時間がある時に順�
 | 2007 | [問題][tkk07] | [手書き答案][tkka07] |                  |                  |
 | 2008 | [問題][tkk08] | [手書き答案][tkka08] | [答案][tkka08_1] | [答案][tkka08_2] |
 | 2009 | [問題][tkk09] | [手書き答案][tkka09] | [答案][tkka09_1] | [答案][tkka09_2] |
-| 2010 | [問題][tkk10] | [手書き答案][tkka10] |                  |                  |
+| 2010 | [問題][tkk10] | [手書き答案][tkka10] | [答案][tkka10_1] | [答案][tkka10_2] |
 | 2011 | [問題][tkk11] | [手書き答案][tkka11] | [答案][tkka11_1] | [答案][tkka11_2] |
 
 
@@ -589,7 +589,8 @@ pdf化した答案の大半には図がないので，時間がある時に順�
 [tkka08_2]: {% link _pages/ent-ex/solutions/toukou/toukou-kouki/2008/2/out/solutions.pdf %}
 [tkka09_1]: {% link _pages/ent-ex/solutions/toukou/toukou-kouki/2009/1/out/solutions.pdf %}
 [tkka09_2]: {% link _pages/ent-ex/solutions/toukou/toukou-kouki/2009/2/out/solutions.pdf %}
-
+[tkka10_1]: {% link _pages/ent-ex/solutions/toukou/toukou-kouki/2010/1/out/solutions.pdf %}
+[tkka10_2]: {% link _pages/ent-ex/solutions/toukou/toukou-kouki/2010/2/out/solutions.pdf %}
 [tkka11_1]: {% link _pages/ent-ex/solutions/toukou/toukou-kouki/2011/1/out/solutions.pdf %}
 [tkka11_2]: {% link _pages/ent-ex/solutions/toukou/toukou-kouki/2011/2/out/solutions.pdf %}
 
