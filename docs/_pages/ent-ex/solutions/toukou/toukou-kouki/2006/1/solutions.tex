@@ -1,0 +1,141 @@
+\documentclass[a4paper,10pt]{ltjsarticle}
+\usepackage{luatexja}
+\usepackage[hiragino-pron]{luatexja-preset}
+
+\usepackage[truedimen,top=25truemm,bottom=20truemm,left=15truemm,right=15truemm]{geometry}
+\setlength{\textwidth}{54\zw}
+\setlength{\textheight}{73\zw}
+
+\usepackage{amsmath,amssymb,ascmac}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{physics}
+\usepackage{cleveref}
+\usepackage{framed}
+ \usepackage{caption}
+ \usepackage{subcaption}
+\usepackage{fancyhdr}
+\usepackage{latexsym}
+\usepackage{mathtools}
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{intersections}
+\usepgfplotslibrary{fillbetween}
+ \usetikzlibrary{math}
+ \usetikzlibrary{calc}
+ \usetikzlibrary{angles}
+ \usetikzlibrary{quotes}
+ \usetikzlibrary{patterns}
+
+% \usepackage{indent}
+
+\usepackage{cases}
+\usepackage{float}
+\allowdisplaybreaks
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{東工大後期$2005$年$1$番}
+\begin{document}
+
+\begin{oframed}
+  数列 $\{a_m\}$ (ただし $a_m = m$ とする) に対し $\displaystyle b_n = \sum_{m=1}^{n} a_m$ とおく．
+  \begin{enumerate}
+    \item $0 < r < 1$ とするとき，$\displaystyle \lim_{n \to \infty} nr^n = 0$ および $\displaystyle \lim_{n \to \infty} n^2r^n = 0$ となることを証明せよ．
+    \item $S_m = a_1r + a_2r^2 + \dots + a_mr^m$, $T_n = b_1r + b_2r^2 + \dots + b_nr^n$ とおくとき，
+          $\displaystyle \lim_{m \to \infty} S_m$ および $\displaystyle \lim_{n \to \infty} T_n$ を求めよ．
+  \end{enumerate}
+\end{oframed}
+\setlength{\columnseprule}{0.4pt}
+\begin{multicols}{2}
+  {\bf[解]}
+
+  (1)
+  $0 < r < 1$ の時，$r = \frac{1}{t} (t>1)$ とおける．
+  一般化二項定理より
+  \begin{align*}
+    t^n
+    = & \{1+(t-1)\}^n                                  \\
+    = & 1 + (t-1) + \frac{n(n-1)}{2!}(t-1)^2+\cdots    \\
+      & +\frac{n(n-1)\cdots(n-k+1)}{k!}(t-1)^k +\cdots \\
+    > & \frac{n(n-1)\cdots(n-k+1)}{k!}(t-1)^k
+  \end{align*}
+  だから，$n > 0$ の時
+  \begin{align}
+    0 < n^k \cdot r^n = \frac{n^k}{t^n} < \frac{n^k}{\frac{n(n-1)\cdots(n-k+1)}{k!}(t-1)^k} \nonumber \\
+    = \frac{n^k}{n(n-1)\cdots(n-k)}\frac{(k+1)!}{(t-1)^{k+1}}\label{eq:1}
+  \end{align}
+  であり，
+  \begin{align*}
+    \frac{n^k }{n(n-1)\cdots(n-k+1)} = \frac{1}{\left(1-\frac{1}{n}\right)\cdots\left(1-\frac{k-1}{n}\right) } \xrightarrow{n\to\infty} 0
+  \end{align*}
+  となるから，\cref{eq:1}の右辺は$0$に収束する．したがってはさみうちの定理から，
+  \begin{align*}
+    \lim_{n\to\infty} n^k \cdot r^n = 0
+  \end{align*}
+  である．$k=1,2$として題意は示された．$\cdots$(答)
+
+  \vspace{10pt}
+  (2)
+  まず，
+  \begin{align*}
+    b_n = \frac{n(n+1)}{2}
+  \end{align*}
+  である．題意より
+  \begin{align*}
+    S_m & = \sum_{k=1}^m k \cdot r^k                 \\
+    T_n & = \frac{1}{2}\sum_{k=1}^n k(k+1) \cdot r^k
+  \end{align*}
+  である．
+  先に$S_m$から考える．
+  $S_m - rS_m$を計算すると
+  \begin{align*}
+    S_m - rS_m
+     & =  \sum_{k=1}^m k \cdot r^k -  \sum_{k=1}^m k \cdot r^{k+1}               \\
+     & =  \sum_{k=1}^m k \cdot r^k -  \sum_{k=2}^{m+1} (k-1) \cdot r^{k}         \\
+     & =  \sum_{k=1}^m k \cdot r^k -  \sum_{k=1}^{m} (k-1) \cdot r^{k} -mr^{m+1} \\
+     & =  \sum_{k=1}^m r^k -mr^{m+1}                                             \\
+     & =  \frac{r(1-r^m)}{1-r} -mr^{m+1}
+  \end{align*}
+  と書けるから，
+  \begin{align*}
+    S_m  = \frac{1}{1-r}\left[\frac{r(1-r^m)}{1-r} -mr^{m+1}\right]
+  \end{align*}
+  を得る．(1)の結果を用いて$m\to\infty$の極限では，
+  \begin{align}
+    \lim_{m\to\infty}S_m = \frac{r}{(1-r)^2}\label{eq:2}
+  \end{align}
+  となる．$\cdots$(答)
+
+  \vspace{10pt}
+  次に，$T_n$を考える．
+  $T_n-rT_n$を計算すると
+  \begin{align*}
+    T_n -rT_n
+     & = \frac{1}{2}\sum_{k=1}^n k(k+1) \cdot r^k - \frac{1}{2}\sum_{k=1}^n k(k+1) \cdot r^{k+1}                       \\
+     & = \frac{1}{2}\sum_{k=1}^n k(k+1) \cdot r^k - \frac{1}{2}\sum_{k=2}^{n+1} (k-1)k \cdot r^{k}                     \\
+     & = \frac{1}{2}\sum_{k=1}^n k(k+1) \cdot r^k - \frac{1}{2}\sum_{k=1}^{n} (k-1)k \cdot r^{k} - \frac{n(n+1)}{2}r^n \\
+     & = \frac{1}{2}\sum_{k=1}^n \left[k(k+1)- (k-1)k \right] \cdot r^k - \frac{n(n+1)}{2}r^n                          \\
+     & = \sum_{k=1}^n k \cdot r^k - \frac{n(n+1)}{2}r^n                                                                \\
+     & = S_n - \frac{n(n+1)}{2}r^n
+  \end{align*}
+  だから，
+  \begin{align*}
+    T_n = \frac{1}{1-r}\left[ S_n - \frac{n(n+1)}{2}r^n  \right]
+  \end{align*}
+  である．(1)から，二項目は$n\to\infty$で$0$に収束する．従って，\cref{eq:2}から
+  \begin{align*}
+    \lim_{n\to\infty}T_n
+     & = \frac{1}{1-r}\lim_{n\to\infty}S_n \\
+     & = \frac{r}{(1-r)^3}
+  \end{align*}
+  が求める極限値である．$\cdots$(答)
+
+  \vspace{10pt}
+  {\bf[解説]}
+
+  \newpage
+\end{multicols}
+\end{document}
