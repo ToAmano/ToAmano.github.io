@@ -1,0 +1,273 @@
+\documentclass[a4paper,10pt]{ltjsarticle}
+\usepackage{luatexja}
+\usepackage[hiragino-pron]{luatexja-preset}
+
+\usepackage[truedimen,top=25truemm,bottom=20truemm,left=15truemm,right=15truemm]{geometry}
+\setlength{\textwidth}{54\zw}
+\setlength{\textheight}{73\zw}
+
+\usepackage{amsmath,amssymb,ascmac}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{cleveref}
+\usepackage{framed}
+\usepackage{fancyhdr}
+\usepackage{latexsym}
+\usepackage{mathtools}
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+\usepackage{pgfplots}
+ \usetikzlibrary{math}
+ \usetikzlibrary{calc}
+ \usetikzlibrary{angles}
+ \usetikzlibrary{quotes}
+ \usetikzlibrary{patterns}
+ \usetikzlibrary{intersections}
+ \usepgfplotslibrary{fillbetween}
+ \pgfplotsset{compat=1.18}
+% \usepackage{indent}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{cases}
+\usepackage{float}
+\usepackage{cases}
+  \usepackage{caption}
+  \usepackage[subrefformat=parens]{subcaption}
+\allowdisplaybreaks
+\tdplotsetmaincoords{70}{110}
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{東工大後期$2007$年$2$番}
+\begin{document}
+\begin{oframed}
+  $0 < x < \frac{\pi}{2}$ に対して関数 $\displaystyle f(x) = \frac{x}{\tan x}$, $\displaystyle g(x) = \frac{x}{\tan x} + \frac{\tan x}{x}$ を考える.
+  \begin{enumerate}
+    \item $f'(x), f''(x)$ の正負を判定し, $y=f(x)$ のグラフをかけ.
+    \item $g'(x), g''(x)$ の正負を判定し, $y=g(x)$ のグラフをかけ.
+    \item 正定数 $a$ に対して, 2 曲線 $y = \log \frac{a}{f(x)}$ と $y=g(x)$ のグラフが交わるための条件を求めよ.
+  \end{enumerate}
+\end{oframed}
+
+\setlength{\columnseprule}{0.4pt}
+\begin{multicols}{2}
+  {\bf[解]}
+
+  (1)
+  $f(x)$の一階微分は
+  \begin{align*}
+    f'(x)
+     & = \frac{\tan x - x/\cos^2 x}{\tan^2x} \\
+     & = \frac{\sin x\cos x - x}{\sin^2 x}
+  \end{align*}
+  である．
+  $0<x<\pi/2$では$\sin x < x$, $0<\cos x<1$より
+  \begin{align}
+    f'(x)<0 \label{eq:1}
+  \end{align}
+  が成立する．$\cdots$(答)
+
+  次に$f(x)$の二階微分は
+  \begin{align*}
+    f''(x)
+     & = \frac{d}{dx}\left( \frac{1}{\tan x} - \frac{x}{\sin^2 x} \right)            \\
+     & = \left( -\frac{1}{\sin^2x} - \frac{\sin^2x-2x\sin x\cos x}{\sin^4 x} \right) \\
+     & = \frac{2\cos x(x-\tan x)}{\sin^3 x}
+  \end{align*}
+  である．$0<x<\pi/2$では$x < \tan x$より
+  \begin{align}
+    f''(x) < 0 \label{eq:2}
+  \end{align}
+  となる．$\cdots$(答)
+
+  \cref{eq:1,eq:2}より，$0<x<\pi/2$で$f(x)$は上に凸で単調減少する．
+  また，極限値は
+  \begin{align*}
+    \begin{dcases}
+      f(x) \xrightarrow{x \to 0} 1 \\
+      f(x) \xrightarrow{x \to \pi/2} 0
+    \end{dcases}
+  \end{align*}
+  だから，グラフの概形は\cref{fig:1}である．
+
+  \begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+      \begin{axis}[
+          axis lines=middle,
+          xmin=0, xmax=2,
+          ymin=0, ymax=2,
+          xlabel=$x$,
+          ylabel=$y$,
+          xtick={1.57},
+          xticklabels={$\pi/2$},
+          ytick={1},
+          yticklabels={$1$},
+          grid=none,
+          %no markers,
+          clip=false, % ラベルが軸からはみ出しても表示されるように
+        ]
+
+        % h(x) = (ln x) / x のプロット
+        \addplot[blue, thick, domain=0:1.57,samples=100,smooth] {x*cos(deg(x))/sin(deg(x))};
+
+        % f(t)ラベル
+        \node[above] at (axis cs:0.8, 0.8) {$f(x)$};
+        \addplot[only marks, mark=*, black] coordinates {(1.57,0)};
+        \addplot[only marks, mark=*, black] coordinates {(0,1)};
+
+      \end{axis}
+    \end{tikzpicture}
+    \caption{$f(x)$の概形.}
+    \label{fig:1}
+  \end{figure}
+
+
+  \vspace{10pt}
+  (2)
+  $g(x) = f(x) + \frac{1}{f(x)}$ だから
+  $g(x)$の一階微分は
+  \begin{align*}
+    g'(x)
+     & = f'(x) - \frac{f'(x)}{f^2(x)}           \\
+     & = f'(x)\left(1 - \frac{1}{f^2(x)}\right)
+  \end{align*}
+  である．\cref{eq:1}および$0<f(x)<1$より，
+  \begin{align}
+    g'(x)>0 \label{eq:3}
+  \end{align}
+  である．$\cdots$(答)
+
+  次に$g(x)$の二階微分は
+  \begin{align*}
+    g''(x)
+     & = f''(x)\left(1 - \frac{1}{f(x)^2}\right) + 2 \frac{f'(x)^2}{f(x)^3}
+  \end{align*}
+  であり，\cref{eq:1,eq:2}および$0<f(x)<1$から
+  \begin{align}
+    g''(x)>0 \label{eq:4}
+  \end{align}
+  である．$\cdots$(答)
+
+  また，極限値は
+  \begin{align*}
+    \begin{dcases}
+      g(x) \xrightarrow{x \to 0} 2 \\
+      g(x) \xrightarrow{x \to \pi/2} \infty
+    \end{dcases}
+  \end{align*}
+  であるから，グラフの概形は\cref{fig:2}である．
+
+  \begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+      \begin{axis}[
+          axis lines=middle,
+          xmin=0, xmax=2,
+          ymin=0, ymax=10,
+          xlabel=$x$,
+          ylabel=$y$,
+          xtick={1.57},
+          xticklabels={$\pi/2$},
+          ytick={2},
+          yticklabels={$2$},
+          grid=none,
+          %no markers,
+          clip=false, % ラベルが軸からはみ出しても表示されるように
+        ]
+
+        % h(x) = (ln x) / x のプロット
+        \addplot[blue, thick, domain=0.01:1.5,samples=100,smooth] {x*cos(deg(x))/sin(deg(x))+sin(deg(x))/(x*cos(deg(x)))};
+
+        % f(t)ラベル
+        \node[above] at (axis cs:0.8, 0.8) {$g(x)$};
+        \addplot[only marks, mark=*, black] coordinates {(0,2)};
+
+        % 極大点とy軸のラベルを結ぶ破線
+        % \draw[dashed] (axis cs:e, {ln(e)*ln(e)}) -- (axis cs:0, {ln(e)*ln(e)});
+        \draw[dashed] (axis cs:pi/2, 0) -- (axis cs:pi/2, 10);
+      \end{axis}
+    \end{tikzpicture}
+    \caption{$g(x)$の概形.}
+    \label{fig:2}
+  \end{figure}
+
+
+  \vspace{10pt}
+  (3)
+  新しく
+  \begin{align*}
+    h(x) = \log \frac{a}{f(x)} - g(x)
+  \end{align*}
+  とおく．
+  $0 < x < \pi/2$ で $h(x)=0$ が実解を持つ条件をもとめれば良い．
+  以下 $A = \log a$ とする．
+  $h(x)$ の一階微分は\cref{eq:3}より
+  \begin{align*}
+    h'(x)
+     & = - \frac{f'(x)}{f(x)} - g'(x)                                                       \\
+     & = - \frac{f'(x)}{f(x)} - f'(x)\left(1 - \frac{1}{f(x)^2}\right) \quad (\because (3)) \\
+     & = \frac{f'(x)}{f(x)^2} (f(x)^2 + f(x)-1)
+  \end{align*}
+  である．
+  \begin{align*}
+    f(x)^2 + f(x) -1 = 0 \\
+    \iff
+    f(x) = \frac{-1 \pm \sqrt{5}}{2}
+  \end{align*}
+  だが，$0<f(x)<1$よりあり得るのは符号が負の場合で
+  \begin{align*}
+    f(x) = \frac{-1 + \sqrt{5}}{2}
+  \end{align*}
+  である．(1)より$f(x)$は単調減少だから，これを満たす$x$がただ一つあるから，
+  それを$x=\alpha$とおくと，
+  $h(x)$の増減表は\cref{table:1}となる．
+
+  \begin{table}[H]
+    \centering
+    \caption{$h(x)$の増減表}
+    \label{table:1}
+    \begin{tabular}{|c||c|c|c|c|c|}
+      \hline
+      $x$  & $(0)$   & $\cdots$   & $\alpha$ & $\cdots$   & $(\pi/2)$   \\
+      \hline
+      $h'$ &         & $+$        & $0$      & $-$        &             \\
+      \hline
+      $h$  & $(A-2)$ & $\nearrow$ &          & $\searrow$ & $(-\infty)$ \\
+      \hline
+    \end{tabular}
+  \end{table}
+  ここで，
+  \begin{align*}
+    f(\alpha)
+     & = \frac{-1+\sqrt{5}}{2}                         \\
+    g(\alpha)
+     & = f(\alpha) + \frac{1}{f(\alpha)}               \\
+     & = \frac{-1+\sqrt{5}}{2} + \frac{2}{-1+\sqrt{5}} \\
+     & = \sqrt{5}
+  \end{align*}
+  より，
+  \begin{align*}
+    h(\alpha)
+     & = A - \log f(\alpha) - g(\alpha)                           \\
+     & = A - \log \frac{-1+\sqrt{5}}{2} - \sqrt{5}                \\
+     & = A - \log \left[\frac{-1+\sqrt{5}}{2} e^{\sqrt{5}}\right]
+  \end{align*}
+  である．したがって，増減表とあわせて$h(x)=0$が実数解を持つ条件は
+  $h(\alpha)\ge 0$であり，求める$a$の条件は
+  \begin{align*}
+    h(\alpha) \ge 0                                            \\
+    \iff
+    A \ge \log \left[\frac{-1+\sqrt{5}}{2} e^{\sqrt{5}}\right] \\
+    \iff
+    a \ge \frac{1+\sqrt{5}}{2} e^{\sqrt{5}}
+  \end{align*}
+  となる．
+  ただし$\log x$が単調増加であることを利用した．$\cdots$(答)
+
+  \vspace{10pt}
+  {\bf[解説]}
+
+  \newpage
+\end{multicols}
+\end{document}
