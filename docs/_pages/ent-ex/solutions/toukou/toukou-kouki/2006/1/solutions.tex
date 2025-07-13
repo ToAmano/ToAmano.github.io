@@ -37,101 +37,364 @@
 \pagestyle{fancy}
 \lhead{}
 \chead{}
-\rhead{東工大後期$2005$年$1$番}
+\rhead{東工大後期$2006$年$1$番}
 \begin{document}
 
 \begin{oframed}
-  数列 $\{a_m\}$ (ただし $a_m = m$ とする) に対し $\displaystyle b_n = \sum_{m=1}^{n} a_m$ とおく．
+  $a, b$ を正の数とする．$xy$ 座標平面において，楕円 $ax^2 + by^2 = 1$ の第 4 象限
+  $(x \ge 0, y \le 0)$ に含まれる部分を $C$，傾き $t \ge 0$ の半直線 $y = tx \ (x \ge 0)$ を $l_t$ とする．
+  $l_t$ 上の点 $P$ と $C$ 上の点 $P'$ を結ぶ線分 $PP'$ が $y$ 軸に平行になるように動くとき，線分
+  $PP'$ の長さを最大にする $P$ を $P_t$ で表し，$t \ge 0$ が変化するときに $P_t$ が描く曲線を $C'$ と
+  する．また，楕円 $ax^2 + by^2 = 1$ と $C'$ との交点を $Q(\alpha, \beta)$ とする．
+
   \begin{enumerate}
-    \item $0 < r < 1$ とするとき，$\displaystyle \lim_{n \to \infty} nr^n = 0$ および $\displaystyle \lim_{n \to \infty} n^2r^n = 0$ となることを証明せよ．
-    \item $S_m = a_1r + a_2r^2 + \dots + a_mr^m$, $T_n = b_1r + b_2r^2 + \dots + b_nr^n$ とおくとき，
-          $\displaystyle \lim_{m \to \infty} S_m$ および $\displaystyle \lim_{n \to \infty} T_n$ を求めよ．
+    \item 曲線 $C'$ の方程式 $y = f(x)$ を求めよ．
+    \item $\alpha$ と $\beta$ を求めよ．
+    \item 直線 $y = \beta$，曲線 $C'$ および $y$ 軸が囲む領域を $D$ とする．$D$ を $y$ 軸の回りに $1$ 回
+          回転してできる回転体の体積 $V$ を求めよ．
   \end{enumerate}
 \end{oframed}
 \setlength{\columnseprule}{0.4pt}
 \begin{multicols}{2}
   {\bf[解]}
 
-  (1)
-  $0 < r < 1$ の時，$r = \frac{1}{t} (t>1)$ とおける．
-  一般化二項定理より
+  題意より，
   \begin{align*}
-    t^n
-    = & \{1+(t-1)\}^n                                  \\
-    = & 1 + (t-1) + \frac{n(n-1)}{2!}(t-1)^2+\cdots    \\
-      & +\frac{n(n-1)\cdots(n-k+1)}{k!}(t-1)^k +\cdots \\
-    > & \frac{n(n-1)\cdots(n-k+1)}{k!}(t-1)^k
+     & C: ax^2 + by^2 = 1 \quad (x \ge 0, y \le 0) \\
+     & l_t: y = tx \quad (t \ge 0, x \ge 0)
   \end{align*}
-  だから，$n > 0$ の時
-  \begin{align}
-    0 < n^k \cdot r^n = \frac{n^k}{t^n} < \frac{n^k}{\frac{n(n-1)\cdots(n-k+1)}{k!}(t-1)^k} \nonumber \\
-    = \frac{n^k}{n(n-1)\cdots(n-k)}\frac{(k+1)!}{(t-1)^{k+1}}\label{eq:1}
-  \end{align}
-  であり，
+  である．$l_t$,$C$上の点$P,P'$は
+  $P(X,tX), P'(X,Y)$とおける．ただし
   \begin{align*}
-    \frac{n^k }{n(n-1)\cdots(n-k+1)} = \frac{1}{\left(1-\frac{1}{n}\right)\cdots\left(1-\frac{k-1}{n}\right) } \xrightarrow{n\to\infty} 0
+     & 0 \le X \le \frac{1}{\sqrt{a}} \\
+     & Y = -\sqrt{\frac{1 - aX^2}{b}}
   \end{align*}
-  となるから，\cref{eq:1}の右辺は$0$に収束する．したがってはさみうちの定理から，
+  である．この様子を\cref{fig:1}に示す．
+
+  \begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+      \begin{axis}[
+          axis lines=middle, % Draws x and y axes intersecting at the origin
+          xlabel=$x$,
+          ylabel=$y$,
+          xmin=-0.2, xmax=1.8,
+          ymin=-1.8, ymax=1.8,
+          xtick=\empty, % Suppress numerical x-axis ticks
+          ytick=\empty, % Suppress numerical y-axis ticks
+          clip=false, % Allow nodes/labels to extend beyond the axis limits
+          %xlabel style={at={(axis description cs:1,0.5)},anchor=north west}, % Position x-axis label
+          %ylabel style={at={(axis description cs:0.5,1)},anchor=south east}, % Position y-axis label
+        ]
+
+        % Define parameters a, b, t. Choose values that create a similar visual.
+        \pgfmathsetmacro{\aval}{0.5} % Example value for 'a' (e.g., 1/2)
+        \pgfmathsetmacro{\bval}{0.5} % Example value for 'b' (e.g., 1/2)
+        \pgfmathsetmacro{\tval}{1.5} % Example value for 't' for the line y=tx
+
+        % Plot the curve C: ax^2 + by^2 = 1 in the 4th quadrant (x >= 0, y <= 0)
+        % Solve for y: by^2 = 1 - ax^2  =>  y = -sqrt((1-ax^2)/b)
+        % The x-domain for this curve is from 0 to 1/sqrt(a) (where y=0)
+        \addplot[domain=0:sqrt(1/\aval), samples=100, blue, thick] plot (\x, {-sqrt((1-\aval*\x*\x)/\bval)});
+        \node[below right] at (axis cs:1.2,-1.2) {C}; % Label for curve C
+
+        % Plot the line lt: y = tx
+        % Determine an x-coordinate for point P to ensure the line is drawn appropriately.
+        \pgfmathsetmacro{\xp}{0.8} % x-coordinate for points P and P'
+        \addplot[domain=0:\xp*1.2, samples=2, red, thick] plot (\x, {\tval*\x});
+        \node[above right] at (axis cs:\xp*1.1, \tval*\xp*1.2) {$l_t$}; % Label for line lt
+
+        % Calculate coordinates for P and P'
+        \pgfmathsetmacro{\ypP}{\tval*\xp} % y-coordinate for P on line lt
+        \pgfmathsetmacro{\ypPprime}{-sqrt((1-\aval*\xp*\xp)/\bval)} % y-coordinate for P' on curve C
+
+        % Draw point P
+        \addplot[only marks, mark=*, mark size=2pt] coordinates {(\xp, \ypP)};
+        \node[above left] at (axis cs:\xp, \ypP) {P};
+
+        \addplot[only marks, mark=*, mark size=2pt] coordinates {(sqrt(1/\aval), 0)};
+        \addplot[only marks, mark=*, mark size=2pt] coordinates {(0,-1.414)};
+
+
+        % Draw point P'
+        \addplot[only marks, mark=*, mark size=2pt] coordinates {(\xp, \ypPprime)};
+        \node[below left] at (axis cs:\xp, \ypPprime) {P'};
+
+        % Draw the vertical dashed line connecting P and P'
+        \draw[dashed, gray] (axis cs:\xp, \ypP) -- (axis cs:\xp, \ypPprime);
+        \draw[dashed, gray] (axis cs:\xp, \ypP) -- (axis cs:0, \ypP);
+        \draw[dashed, gray] (axis cs:0, \ypPprime) -- (axis cs:\xp, \ypPprime);
+
+
+        % Label for 1/sqrt(a) on the x-axis
+        \node[above] at (axis cs:{sqrt(1/\aval)},0) {$\frac{1}{\sqrt{a}}$};
+
+        \node[left] at (axis cs:\xp,0) {$X$};
+        \node[left] at (axis cs:0,\ypP) {$tX$};
+        \node[left] at (axis cs:0,\ypPprime) {$Y$};
+
+
+        % Label for the origin
+        \node[below left] at (axis cs:0,0) {O};
+
+      \end{axis}
+    \end{tikzpicture}
+    \caption{$C$および$l_t$の概形}
+    \label{fig:1}
+  \end{figure}
+
+
+
+
+  $PP' = g(X)$とおくと，
   \begin{align*}
-    \lim_{n\to\infty} n^k \cdot r^n = 0
+    g(X)
+     & = tX + |Y|                       \\
+     & = tX + \sqrt{\frac{1 - aX^2}{b}}
   \end{align*}
-  である．$k=1,2$として題意は示された．$\cdots$(答)
+  より，一階微分は
+  \begin{align*}
+    g'(x)
+     & = t + \frac{1}{\sqrt{b}} \frac{-2ax}{2\sqrt{1-ax^2}}                              \\
+     & = \frac{t\sqrt{b(1-ax^2)}-ax}{\sqrt{b(1-ax^2)}}                                   \\
+     & = \frac{t^2b(1-ax^2)-a^2x^2}{\sqrt{b(1-ax^2)}\left(t\sqrt{b(1-ax^2)}+ax\right)}   \\
+     & = \frac{bt^2 - (abt^2+a^2)x^2}{\sqrt{b(1-ax^2)}\left(t\sqrt{b(1-ax^2)}+ax\right)}
+    % & = \frac{(bt)^2 - (bt)^2 a^2 X^2}{b\sqrt{1-ax^2}\{\sqrt{b}t\sqrt{1-ax^2} - a x \sqrt{t}\}}
+  \end{align*}
+  と書ける．
+  分母は常に正であり，$g'=0$となるのは
+  \begin{align*}
+    \alpha = \sqrt{\frac{bt^2}{abt^2 + a^2}}
+  \end{align*}
+  の時である．
+  増減表は\cref{table:1}となる．
+  \begin{table}[H]
+    \centering
+    \caption{$g(x)$の増減表}
+    \label{table:1}
+    \begin{tabular}{|c|c|c|c|c|c|}
+      \hline
+      $X$  & $0$          &     & $\alpha$ &     & $\frac{1}{\sqrt{a}}$ \\
+      \hline
+      $g'$ &              & $+$ & $0$      & $-$ &                      \\
+      \hline
+      $g$  & $1/\sqrt{b}$ &     &          &     & $t/\sqrt{a}$         \\
+      \hline
+    \end{tabular}
+  \end{table}
+
+  よって $X = \alpha$ で $g(X)$は最大だから，$P_t$の座標は
+  \begin{align*}
+    X & = \alpha  \\
+    Y & = t\alpha
+  \end{align*}
+  で与えられる.
+
+  ここから$t$を消去すれば，題意の曲線$C'$の表示を得る．
+  まず，$t=0$の時, $P_0(0,0)$である．
+  次に $t \ne 0$の時$X \ne 0$から
+  \begin{align*}
+    t = \frac{Y}{X}
+  \end{align*}
+  であり，$X=\alpha$ に代入して
+  \begin{align*}
+         & X  = \sqrt{\frac{bt^2}{abt^2 + a^2}}                         \\
+         & X  = \sqrt{\frac{b(Y/X)^2}{ab(Y/X)^2 + a^2 }}                \\
+    \iff & X^2 \{ ab Y^2  + a^2 X^2 \} = b Y^2 \quad (\because X \ge 0) \\
+    \iff & Y^2 (b-abX^2) = a^2 X^4                                      \\
+    \iff & Y = \frac{aX^2}{\sqrt{b(1-aX^2)}}
+  \end{align*}
+  ただし，$X=1/\sqrt{3}$の時はこの式は成り立たないから，$0 < X < \frac{1}{\sqrt{a}}$である．
+  この式は$t=0$でも成立するから，求めるべき曲線$C'$の表示は
+  \begin{align*}
+    f(X) = \frac{aX^2}{\sqrt{b(1-aX^2)}} \quad \left(0 \le X < \frac{1}{\sqrt{a}}\right)
+  \end{align*}
+  である．$\cdots$(答)
+
+  \begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+      \begin{axis}[
+          axis lines=middle, % Draws x and y axes intersecting at the origin
+          xlabel=$x$,
+          ylabel=$y$,
+          xmin=-0.2, xmax=1.8,
+          ymin=-1.8, ymax=1.8,
+          xtick=\empty, % Suppress numerical x-axis ticks
+          ytick=\empty, % Suppress numerical y-axis ticks
+          clip=false, % Allow nodes/labels to extend beyond the axis limits
+          %xlabel style={at={(axis description cs:1,0.5)},anchor=north west}, % Position x-axis label
+          %ylabel style={at={(axis description cs:0.5,1)},anchor=south east}, % Position y-axis label
+        ]
+
+        % Define parameters a, b, t. Choose values that create a similar visual.
+        \pgfmathsetmacro{\aval}{0.5} % Example value for 'a' (e.g., 1/2)
+        \pgfmathsetmacro{\bval}{0.5} % Example value for 'b' (e.g., 1/2)
+        \pgfmathsetmacro{\tval}{1.5} % Example value for 't' for the line y=tx
+
+        % Plot the curve C: ax^2 + by^2 = 1 in the 4th quadrant (x >= 0, y <= 0)
+        % Solve for y: by^2 = 1 - ax^2  =>  y = -sqrt((1-ax^2)/b)
+        % The x-domain for this curve is from 0 to 1/sqrt(a) (where y=0)
+        \addplot[domain=0:sqrt(1/\aval)-0.2, samples=100, red, thick] plot (\x, {\aval*x*x/sqrt(\bval*(1-\aval*x*x))});
+        \addplot[domain=0:sqrt(1/\aval), samples=100, blue, thick] plot (\x, {-sqrt((1-\aval*\x*\x)/\bval)});
+        \addplot[domain=0:sqrt(1/\aval), samples=100, blue, thick] plot (\x, {sqrt((1-\aval*\x*\x)/\bval)});
+        \node[below right] at (axis cs:1.2,-1.2) {C}; % Label for curve C
+
+        % Plot the line lt: y = tx
+        % Determine an x-coordinate for point P to ensure the line is drawn appropriately.
+        \pgfmathsetmacro{\xp}{0.8} % x-coordinate for points P and P'
+        \node[above right] at (axis cs:\xp*1.1, \tval*\xp*1.2) {$C'$}; % Label for line lt
+
+        % Calculate coordinates for P and P'
+        \pgfmathsetmacro{\ypP}{\tval*\xp} % y-coordinate for P on line lt
+        \pgfmathsetmacro{\ypPprime}{-sqrt((1-\aval*\xp*\xp)/\bval)} % y-coordinate for P' on curve C
+        \pgfmathsetmacro{\xmax}{sqrt(1/\aval)} % y-coordinate for P on line lt
+
+        % Draw point P
+        \addplot[only marks, mark=*, mark size=2pt] coordinates {(\xmax, 0)};
+        % Draw the vertical dashed line connecting P and P'
+        \draw[dashed, black, thick] (axis cs:\xmax,0) -- (axis cs:\xmax,1.8);
+
+        % Label for 1/sqrt(a) on the x-axis
+        \node[above right] at (axis cs:{sqrt(1/\aval)},0) {$\frac{1}{\sqrt{a}}$};
+        % Label for the origin
+        \node[below left] at (axis cs:0,0) {O};
+
+        % Draw point P'
+        \pgfmathsetmacro{\alpha}{1/sqrt(2*\aval)};
+        \pgfmathsetmacro{\beta}{1/sqrt(2*\bval)};
+        \addplot[only marks, mark=*, mark size=2pt] coordinates {(\alpha, \beta)};
+        \node[below left] at (axis cs:\alpha, \beta) {Q};
+      \end{axis}
+    \end{tikzpicture}
+    \caption{$C$および$C'$の概形}
+    \label{fig:2}
+  \end{figure}
+
 
   \vspace{10pt}
-  (2)
-  まず，
+  (2) $C$と$C'$の方程式の連立解を求める．
+  楕円$C$の式に$y=f(x)$を代入して$y$を除去すると，
   \begin{align*}
-    b_n = \frac{n(n+1)}{2}
+               & ax^2 + b\frac{(ax^2)^2}{b(1-ax^2)} = 1 \\
+    \therefore & ax^2(1-ax^2) + a^2x^4 = 1-ax^2         \\
+    \therefore & 2ax^2 = 1                              \\
+    \therefore & x = \sqrt{\frac{1}{2a}}
   \end{align*}
-  である．題意より
+  であり，この時，
   \begin{align*}
-    S_m & = \sum_{k=1}^m k \cdot r^k                 \\
-    T_n & = \frac{1}{2}\sum_{k=1}^n k(k+1) \cdot r^k
+    y & = f(x)                         \\
+      & =\frac{a/2a}{\sqrt{b(1-a/2a)}} \\
+      & = \sqrt{\frac{1}{2a}}
   \end{align*}
-  である．
-  先に$S_m$から考える．
-  $S_m - rS_m$を計算すると
+  である．以上から
   \begin{align*}
-    S_m - rS_m
-     & =  \sum_{k=1}^m k \cdot r^k -  \sum_{k=1}^m k \cdot r^{k+1}               \\
-     & =  \sum_{k=1}^m k \cdot r^k -  \sum_{k=2}^{m+1} (k-1) \cdot r^{k}         \\
-     & =  \sum_{k=1}^m k \cdot r^k -  \sum_{k=1}^{m} (k-1) \cdot r^{k} -mr^{m+1} \\
-     & =  \sum_{k=1}^m r^k -mr^{m+1}                                             \\
-     & =  \frac{r(1-r^m)}{1-r} -mr^{m+1}
+     & \alpha = \sqrt{\frac{1}{2a}}
+     & \beta  = \sqrt{\frac{1}{2b}}
   \end{align*}
-  と書けるから，
-  \begin{align*}
-    S_m  = \frac{1}{1-r}\left[\frac{r(1-r^m)}{1-r} -mr^{m+1}\right]
-  \end{align*}
-  を得る．(1)の結果を用いて$m\to\infty$の極限では，
-  \begin{align}
-    \lim_{m\to\infty}S_m = \frac{r}{(1-r)^2}\label{eq:2}
-  \end{align}
-  となる．$\cdots$(答)
+  である．$\cdots$(答)
 
   \vspace{10pt}
-  次に，$T_n$を考える．
-  $T_n-rT_n$を計算すると
+  (3)
+  $f(x)$は区間内で単調増加で， グラフ概形および領域$D$は\cref{fig:3}である．
+
+  \begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+      \begin{axis}[
+          axis lines=middle, % Draws x and y axes intersecting at the origin
+          xlabel=$x$,
+          ylabel=$y$,
+          xmin=-0.2, xmax=1.8,
+          ymin=-0.2, ymax=1.8,
+          xtick=\empty, % Suppress numerical x-axis ticks
+          ytick=\empty, % Suppress numerical y-axis ticks
+          clip=false, % Allow nodes/labels to extend beyond the axis limits
+          %xlabel style={at={(axis description cs:1,0.5)},anchor=north west}, % Position x-axis label
+          %ylabel style={at={(axis description cs:0.5,1)},anchor=south east}, % Position y-axis label
+        ]
+
+        % Define parameters a, b, t. Choose values that create a similar visual.
+        \pgfmathsetmacro{\aval}{0.5} % Example value for 'a' (e.g., 1/2)
+        \pgfmathsetmacro{\bval}{0.5} % Example value for 'b' (e.g., 1/2)
+        \pgfmathsetmacro{\tval}{1.5} % Example value for 't' for the line y=tx
+
+        % Plot the curve C: ax^2 + by^2 = 1 in the 4th quadrant (x >= 0, y <= 0)
+        % Solve for y: by^2 = 1 - ax^2  =>  y = -sqrt((1-ax^2)/b)
+        % The x-domain for this curve is from 0 to 1/sqrt(a) (where y=0)
+        \addplot[name path=A, domain=0:sqrt(1/\aval)-0.2, samples=100, red, thick] plot (\x, {\aval*x*x/sqrt(\bval*(1-\aval*x*x))});
+        \addplot[domain=0:sqrt(1/\aval), samples=100, blue, thick] plot (\x, {sqrt((1-\aval*\x*\x)/\bval)});
+        \node[below right] at (axis cs:1.2,1.2) {C}; % Label for curve C
+
+
+        % Plot the line lt: y = tx
+        % Determine an x-coordinate for point P to ensure the line is drawn appropriately.
+        \pgfmathsetmacro{\xp}{0.8} % x-coordinate for points P and P'
+        \node[above right] at (axis cs:\xp*1.1, \tval*\xp*1.2) {$C'$}; % Label for line lt
+
+        % Calculate coordinates for P and P'
+        \pgfmathsetmacro{\ypP}{\tval*\xp} % y-coordinate for P on line lt
+        \pgfmathsetmacro{\ypPprime}{-sqrt((1-\aval*\xp*\xp)/\bval)} % y-coordinate for P' on curve C
+        \pgfmathsetmacro{\xmax}{sqrt(1/\aval)} % y-coordinate for P on line lt
+
+        % Draw point P
+        \addplot[only marks, mark=*, mark size=2pt] coordinates {(\xmax, 0)};
+        % Draw the vertical dashed line connecting P and P'
+        \draw[dashed, black, thick] (axis cs:\xmax,0) -- (axis cs:\xmax,1.8);
+
+        % Label for 1/sqrt(a) on the x-axis
+        \node[above right] at (axis cs:{sqrt(1/\aval)},0) {$\frac{1}{\sqrt{a}}$};
+        % Label for the origin
+        \node[below left] at (axis cs:0,0) {O};
+
+        % Draw point P'
+        \pgfmathsetmacro{\alphaa}{1/sqrt(2*\aval)};
+        \pgfmathsetmacro{\betaa}{1/sqrt(2*\bval)};
+        \addplot[only marks, mark=*, mark size=2pt] coordinates {(\alphaa, \betaa)};
+        \node[below left] at (axis cs:\alphaa, \betaa) {Q};
+        \draw[name path = B, dashed, black, thick] (axis cs:0,\betaa) -- (axis cs:\alphaa,\betaa);
+        \addplot[pattern=north west lines] fill between [of=A and B, soft clip={domain=0:\alphaa}];
+        \node[left] at (axis cs:0,\betaa) {$\beta$};
+        \node[fill=white] at (axis cs:0.5,0.5) {$D$};
+        \draw[dashed, black, thick] (axis cs:\alphaa,0) -- (axis cs:\alphaa,\betaa);
+        \node[above right] at (axis cs:\alphaa,0) {$\alpha$};
+
+      \end{axis}
+    \end{tikzpicture}
+    \caption{$D$の概形}
+    \label{fig:3}
+  \end{figure}
+
+
+  以下，バームクーヘン積分法によって$D$を$y$軸周りに回転した回転体の体積$V$を求める．
+  $x \sim x+dx \quad (dx \ll 1)$の部分を軸まわりに回した
+  立体の体積は幅$dx$, 高さ$\frac{1}{\sqrt{2b}}-f(x)$, 長さ$2\pi x$の直方体で近似できるので,
+  求める立体の体積$V$として，
+  \begin{align}
+    V = 2\pi \int_{0}^{\sqrt{\frac{1}{2a}}} \left(\frac{1}{\sqrt{2b}} - f(x)\right)x dx \label{eq:1}
+  \end{align}
+  である．一項目は
+  \begin{align}
+    \int_{0}^{\sqrt{\frac{1}{2a}}} \frac{1}{\sqrt{2b}} x dx
+     & = \frac{1}{2} \frac{1}{\sqrt{2b}} x^2 \Big|_{0}^{\sqrt{\frac{1}{2a}}} \nonumber \\
+     & = \frac{1}{4\sqrt{2}} \frac{1}{a\sqrt{b}} \label{eq:2}
+  \end{align}
+  であり，二項目は$s=1-ax^2$と置換すると
+  \begin{align}
+    \int_{0}^{\sqrt{\frac{1}{2a}}} f(x)x dx
+     & = \int_{1}^{1/2} \frac{1-s}{\sqrt{bs}} \frac{1}{-2a} ds                        \nonumber       \\
+     & = \frac{1}{2a\sqrt{b}} \int_{1/2}^{1} \left(\frac{1}{\sqrt{s}} - \sqrt{s}\right) ds  \nonumber \\
+     & = \frac{1}{2a\sqrt{b}} \left[2\sqrt{s} - \frac{2}{3} s^{3/2}\right]_{1/2}^{1}     \nonumber    \\
+     & = \frac{1}{2a\sqrt{b}} \left[2\left(1-\frac{1}{\sqrt{2}}\right) -
+    \frac{2}{3}\left(1-\frac{1}{2\sqrt{2}}\right)\right]                               \nonumber      \\
+     & = \frac{1}{2a\sqrt{b}} \left(\frac{4}{3} - \frac{5\sqrt{2}}{6}\right) \label{eq:3}
+  \end{align}
+  だから，\cref{eq:2,eq:2}を\cref{eq:1}に代入して
   \begin{align*}
-    T_n -rT_n
-     & = \frac{1}{2}\sum_{k=1}^n k(k+1) \cdot r^k - \frac{1}{2}\sum_{k=1}^n k(k+1) \cdot r^{k+1}                       \\
-     & = \frac{1}{2}\sum_{k=1}^n k(k+1) \cdot r^k - \frac{1}{2}\sum_{k=2}^{n+1} (k-1)k \cdot r^{k}                     \\
-     & = \frac{1}{2}\sum_{k=1}^n k(k+1) \cdot r^k - \frac{1}{2}\sum_{k=1}^{n} (k-1)k \cdot r^{k} - \frac{n(n+1)}{2}r^n \\
-     & = \frac{1}{2}\sum_{k=1}^n \left[k(k+1)- (k-1)k \right] \cdot r^k - \frac{n(n+1)}{2}r^n                          \\
-     & = \sum_{k=1}^n k \cdot r^k - \frac{n(n+1)}{2}r^n                                                                \\
-     & = S_n - \frac{n(n+1)}{2}r^n
+    V & = 2\pi \left[ \frac{1}{4\sqrt{2}a\sqrt{b}}  - \frac{1}{2a\sqrt{b}} \left(\frac{4}{3} - \frac{5\sqrt{2}}{6}\right) \right] \\
+      & = \frac{2\pi}{a\sqrt{b}} \left[ \frac{13\sqrt{2}}{24} - \frac{2}{3} \right]
   \end{align*}
-  だから，
-  \begin{align*}
-    T_n = \frac{1}{1-r}\left[ S_n - \frac{n(n+1)}{2}r^n  \right]
-  \end{align*}
-  である．(1)から，二項目は$n\to\infty$で$0$に収束する．従って，\cref{eq:2}から
-  \begin{align*}
-    \lim_{n\to\infty}T_n
-     & = \frac{1}{1-r}\lim_{n\to\infty}S_n \\
-     & = \frac{r}{(1-r)^3}
-  \end{align*}
-  が求める極限値である．$\cdots$(答)
+  が求める体積である．  $\cdots$(答)
 
   \vspace{10pt}
   {\bf[解説]}
