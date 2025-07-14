@@ -1,0 +1,381 @@
+\documentclass[a4paper,10pt]{ltjsarticle}
+\usepackage{luatexja}
+\usepackage[hiragino-pron]{luatexja-preset}
+
+\usepackage[truedimen,top=25truemm,bottom=20truemm,left=15truemm,right=15truemm]{geometry}
+\setlength{\textwidth}{54\zw}
+\setlength{\textheight}{73\zw}
+
+\usepackage{amsmath,amssymb,ascmac}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{cleveref}
+\usepackage{framed}
+\usepackage{fancyhdr}
+\usepackage{latexsym}
+\usepackage{mathtools}
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+\usepackage{pgfplots}
+ \usetikzlibrary{math}
+ \usetikzlibrary{calc}
+ \usetikzlibrary{angles}
+ \usetikzlibrary{quotes}
+% \usepackage{indent}
+\usepackage{caption}
+\usepackage{physics}
+\usepackage{subcaption}
+\usepackage{cases}
+\usepackage{float}
+\usepackage{cases}
+  \usepackage{caption}
+  \usepackage[subrefformat=parens]{subcaption}
+\allowdisplaybreaks
+\tdplotsetmaincoords{70}{110}
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{東工大後期$2001$年$2$番}
+\begin{document}
+\begin{oframed}
+  $xy$ 平面の原点 $(0,0)$ を中心とする半径 $a, b$ の同心円上にそれぞれ動点 $A, B$ がある．
+  $C=(1,0)$ とすると $\triangle ABC$ の面積は，$A$ が $A_0 = \left(a\cos\dfrac{3\pi}{4}, a\sin\dfrac{3\pi}{4}\right)$, $B$ が
+  $B_0 = \left(b\cos\dfrac{4\pi}{3}, b\sin\dfrac{4\pi}{3}\right)$ のときに最大値をとるという．
+
+  \begin{enumerate}
+    \item $a, b$ を求めよ．
+    \item $\triangle A_0 B_0 C_0$ の外接円の半径 $R$ を求めよ．
+  \end{enumerate}
+\end{oframed}
+
+
+\setlength{\columnseprule}{0.4pt}
+\begin{multicols}{2}
+  {\bf[解]}
+  $A(a\cos\alpha, a\sin\alpha)$, $B(b\cos\beta, b\sin\beta)$とおく ($0 \le \alpha, \beta < 2\pi$)と
+  \begin{align*}
+    \vec{CA} & = \begin{pmatrix} a\cos\alpha-1 \\ a\sin\alpha \end{pmatrix} \\
+    \vec{CB} & = \begin{pmatrix} b\cos\beta-1 \\ b\sin\beta \end{pmatrix}
+  \end{align*}
+  だから，$\triangle ABC$の面積$T$として
+  \begin{align*}
+    T
+     & = \frac{1}{2} \left| (a\cos\alpha-1)b\sin\beta - a\sin\alpha(b\cos\beta-1) \right|                \\
+     & = \frac{1}{2} \left| ab\sin(\beta-\alpha) - b\sin\beta + a\sin\alpha \right| \dots\textcircled{2}
+  \end{align*}
+  である．$triangle ABC$の様子を\cref{fig:1}に示す．
+
+  \begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+      \begin{axis}[
+          axis lines=middle,
+          xmin=-4, xmax=4,
+          ymin=-4, ymax=4,
+          xlabel=$x$,
+          ylabel=$y$,
+          axis equal, % x軸とy軸のスケールを同じにする
+          grid=none,
+          xtick={1}, % Cのx座標
+          ytick={\empty}, % y軸の目盛りは図に合わせて省略
+          % ラベルの位置調整
+          every axis x label/.style={at={(ticklabel* cs:1)},anchor=west},
+          every axis y label/.style={at={(ticklabel* cs:1)},anchor=south},
+          % 目盛りラベルのスタイル
+          tick label style={font=\footnotesize},
+        ]
+
+        % 定数aとbを定義
+        \pgfmathsetmacro{\vala}{(sqrt(3)+1)/sqrt(2)} % a = (sqrt(3)+1)/sqrt(2) approx 1.93
+        \pgfmathsetmacro{\valb}{sqrt(3)+1}          % b = sqrt(3)+1 approx 2.73
+
+        % 小さい方の円 (半径a)
+        \addplot[domain=0:360, samples=100, dashed] ({\vala * cos(x)}, {\vala * sin(x)});
+
+        % 大きい方の円 (半径b)
+        \addplot[domain=0:360, samples=100, thick] ({\valb * cos(x)}, {\valb * sin(x)});
+
+        % 原点O
+        \node[label={-90:O}] at (axis cs:0,0) {};
+
+        % 点C(1,0)
+        \coordinate (C) at (axis cs:1,0);
+        \fill (C) circle (2pt);
+        \node at (C) [above] {$C$};
+        % \node at (axis cs:1, -0.2) {$1$}; % 1のラベル
+
+        % 点A (半径a, 角度3pi/4)
+        \pgfmathsetmacro{\angleA}{135} % 角度を度に変換
+        \pgfmathsetmacro{\Ax}{\vala * cos(\angleA)}
+        \pgfmathsetmacro{\Ay}{\vala * sin(\angleA)}
+        \coordinate (A) at (axis cs:\Ax,\Ay);
+        \fill (A) circle (2pt);
+        \node at (A) [above left] {$A$};
+        \coordinate (AA) at (axis cs:\vala,0);
+        \node at (AA) [above right] {$a$};
+
+        % 点B (半径b, 角度4pi/3)
+        \pgfmathsetmacro{\angleB}{240} % 角度を度に変換
+        \pgfmathsetmacro{\Bx}{\valb * cos(\angleB)}
+        \pgfmathsetmacro{\By}{\valb * sin(\angleB)}
+        \coordinate (B) at (axis cs:\Bx,\By);
+        \fill (B) circle (2pt);
+        \node at (B) [below left] {$B$};
+        \coordinate (BB) at (axis cs:\valb,0);
+        \node at (BB) [above right] {$b$};
+
+        % 線分 AC
+        \draw (A) -- (C) -- (B) -- cycle;
+
+        % 線分 AO
+        \draw[dashed] (A) -- (axis cs:0,0);
+
+        % 線分 BO
+        \draw[dashed] (B) -- (axis cs:0,0);
+
+        % % AO と BC の直角マーク
+        % % AO と BC の交点 (概略位置)
+        % \coordinate (IntAOBC) at ($(A)!0.5!(axis cs:0,0)$); % AOの中点あたり
+        % \draw[black] ($(C)!0.2cm!90:(B)$) -- ($(C)!0.2cm!90:(B)-(B)+(C)$) -- ($(B)!0.2cm!-90:(C)$); % 簡易的な直角マーク。正確な交点計算は複雑。
+        % % この直角マークは画像に完全に合わせるのは難しいです。
+        % % 厳密な直角マークを描画するには、線分の交点を計算し、その点から短い線を引く必要があります。
+
+        % % BO と AC の直角マーク
+        % % BO と AC の交点 (概略位置)
+        % \coordinate (IntBOAC) at ($(B)!0.5!(axis cs:0,0)$); % BOの中点あたり
+        % \draw[black] ($(C)!0.2cm!90:(A)$) -- ($(C)!0.2cm!90:(A)-(A)+(C)$) -- ($(A)!0.2cm!-90:(C)$); % 簡易的な直角マーク
+
+      \end{axis}
+    \end{tikzpicture}
+    \caption{三角形$ABC$の様子}
+    \label{fig:1}
+  \end{figure}
+
+  $\triangle ABC$ の面積が最大の時を考える．
+  まず $A$ を固定して $B$ を動かすと，$T$が最大になるのは
+  直線$AC$と直線$OB$が直交する時である．従って，
+  \begin{align*}
+    \mqty(a\cos\alpha-1 \\ a\sin\alpha) \cdot \mqty( \cos\beta \\ \sin\beta) = 0
+  \end{align*}
+  題意より，これが$\alpha=3\pi/4, \beta=4\pi/3$で成り立つから
+  \begin{align*}
+               & \mqty(-a\frac{\sqrt{2}}{2}-1                     \\ a\frac{\sqrt{2}}{2}) \cdot \mqty( 1 \\ \sqrt{3}) = 0 \\
+               & -a\frac{\sqrt{2}}{2}-1 + \frac{\sqrt{6}}{2}a = 0 \\
+               & (\sqrt{6}-\sqrt{2})a = 2                         \\
+    \therefore & a = \frac{\sqrt{2}}{\sqrt{3}-1}                  \\
+               & = \frac{\sqrt{2}(\sqrt{3}+1)}{2}
+  \end{align*}
+  が必要である．
+
+  全く同様に，$B$ を固定して $A$ を動かすと，$T$が最大になるのは
+  直線$BC$と直線$OA$が直交する時である．従って，
+  \begin{align*}
+    \mqty(b\cos\beta-1 \\ b\sin\beta) \cdot \mqty( \cos\alpha \\ \sin\alpha) = 0
+  \end{align*}
+  題意より，これが$\alpha=3\pi/4, \beta=4\pi/3$で成り立つから
+  \begin{align*}
+    \mqty(-b\frac{1}{2}-1                     \\ a\frac{\sqrt{3}}{2}) \cdot \mqty( 1 \\ 1) = 0 \\
+    -b\frac{1}{2}-1 + \frac{\sqrt{3}}{2}b = 0 \\
+    (\sqrt{3}-1)b = 2                         \\
+    b = \frac{2}{\sqrt{3}-1}                  \\
+    = \sqrt{3}+1
+  \end{align*}
+  が必要である．
+
+  以上より
+  \begin{align*}
+    a & =  \frac{\sqrt{2}(\sqrt{3}+1)}{2} \\
+    b & = \sqrt{3}+1
+  \end{align*}
+  が必要．
+
+  逆にこの時，$(\alpha,\beta)=(\frac{\pi}{4},\frac{3\pi}{4})$ が $\triangle ABC$ の面積の最大値を与えることを示す．
+  まず $\triangle ABC$ の面積には必ず最大値が存在することに留意する．
+  最大値を与える $\alpha,\beta$ は必要条件の導出に利用したのと同様の条件
+  \begin{align*}
+    \vec{BC}\cdot\vec{OA}=0 \\
+    \vec{AC}\cdot\vec{OB}=0
+  \end{align*}
+  を満たすから，
+  \begin{align}
+     & \mqty(b\cos\beta-1                                             \\ b\sin\beta) \cdot \mqty(\cos\alpha \\ \sin\alpha) = 0,
+    \mqty(a\cos\alpha-1                                               \\ a\sin\alpha) \cdot \mqty( \cos\beta \\ \sin\beta ) = 0 \\
+     & \begin{dcases}
+         b\cos(\beta-\alpha) = \cos\alpha \\
+         a\cos(\beta-\alpha) = \cos\beta
+       \end{dcases}                               \\
+     & \begin{dcases}
+         b\cos(\beta-\alpha) = \cos\alpha \\
+         \frac{\sqrt{2}}{2}b\cos(\beta-\alpha) = \cos\beta
+       \end{dcases} \label{eq:2}
+    \dots\textcircled{8}
+  \end{align}
+  が成り立つ．ただし，最後の行で$a=\sqrt{2}b/2$を利用した．
+  以下
+  \begin{align*}
+    t = \cos\alpha
+  \end{align*}
+  とおくと，\cref{eq:2}から
+  \begin{align}
+    \begin{dcases}
+      \cos\beta = \frac{\sqrt{2}}{2} t \\
+      \cos(\beta-\alpha) = \frac{1}{b} t
+    \end{dcases} \label{eq:5}
+  \end{align}
+  だから，二つ目の式を展開して
+  \begin{align}
+    \cos\beta\cos\alpha + \sin\alpha\sin\beta = \frac{t}{b}                      \\
+    \frac{\sqrt{2}}{2} t^2 \pm \sqrt{1-t^2} \sqrt{1-\frac{t^2}{2}} = \frac{t}{b} \\
+    \pm \sqrt{1-t^2}\sqrt{1-\frac{t^2}{2}} = t\left(\frac{1}{b}-\frac{\sqrt{2}}{2}t\right) \label{eq:4}
+  \end{align}
+  両辺二乗して整理すると
+  \begin{align}
+     & \left(1-t^2\right)\left(1-\frac{t^2}{2}\right) = t^2\left(\frac{1}{b}-\frac{\sqrt{2}}{2}t\right)^2 \\
+     & 1-\frac{3}{2}t^2 = \frac{1}{b^2}t^2-\frac{\sqrt{2}}{b}t^3                                          \\
+     & \frac{\sqrt{2}}{b}t^3  - \left(\frac{1}{b^2}+\frac{3}{2}\right)t^2 +1 = 0
+  \end{align}
+  ここで$1/b=(b-2)/2$に注意すると
+  \begin{align*}
+    \frac{1}{b^2} = \frac{2-\sqrt{3}}{2} = \frac{3-b}{2} = -\frac{1}{b} + \frac{1}{2}
+  \end{align*}
+  より変形を続けて
+  \begin{align}
+     & \frac{\sqrt{2}}{b}t^3 + \left(\frac{1}{b}-2\right)t^2 +1 = 0       \nonumber                                 \\
+     & \left(t+\frac{\sqrt{2}}{2}\right)\left[\frac{\sqrt{2}}{b}t^2-2t+\sqrt{2}\right] = 0 \nonumber                \\
+     & \left(t+\frac{\sqrt{2}}{2}\right)\left[\frac{\sqrt{2}}{2}(\sqrt{3}-1)t^2-2t+\sqrt{2}\right] = 0 \label{eq:3}
+  \end{align}
+
+  ここで，大括弧の中の$t$の二次式の判別式$D$は
+  \begin{align*}
+    D/4 = 1 - \frac{\sqrt{2}}{2} \sqrt{2}(\sqrt{3}-1) = -\sqrt{3} < 0
+  \end{align*}
+  より負だから，この二次式は常に正であり，\cref{eq:3}の実数解は
+  \begin{align*}
+     & t=-\frac{1}{\sqrt{2}}                   \\
+    \therefore
+     & \alpha = \frac{3\pi}{4}, \frac{5\pi}{4}
+  \end{align*}
+  のみである．この時\cref{eq:5}より
+  \begin{align*}
+     & \cos\beta = \frac{1}{2}              \\
+    \therefore
+     & \beta = \frac{\pi}{3},\frac{5\pi}{3}
+  \end{align*}
+  である．
+  また，$t<0$より\cref{eq:4}で複号負が採用される．
+  すなわち
+  \begin{align*}
+    \sin\alpha \sin\beta < 0
+  \end{align*}
+  である．
+  以上の条件を満たす$(\alpha,\beta)$の組は
+  \begin{align*}
+    (\alpha,\beta) = (\frac{3}{4}\pi, \frac{3}{4}\pi), (\frac{5}{4}\pi, \frac{7}{4}\pi)
+  \end{align*}
+  の二つである．
+  対称性からいずれの場合も$\triangle ABC$の面積は等しくなるから，
+  たしかに $(\alpha,\beta) = (\frac{\pi}{4}, \frac{3}{4}\pi)$ で $\triangle ABC$ の面積は最大となる．
+  以上から十分である．
+
+  よって，求める $(a,b)$ は
+  \begin{align}
+    \begin{dcases}
+      a = \frac{\sqrt{2}(\sqrt{3}+1)}{2} \\
+      b = \sqrt{3}+1
+    \end{dcases} \label{eq:6}
+  \end{align}
+  である．
+
+  \vspace{10pt}
+  (2)
+
+  \cref{eq:6}より$A,B$ の座標は
+  \begin{align*}
+    A\left(-\frac{\sqrt{2}a}{2},\frac{\sqrt{2}a}{2}\right) = \left(-\frac{b}{2},\frac{\sqrt{2}a}{2}\right) \\
+    B\left(-\frac{a}{2},\frac{-\sqrt{3}b}{2}\right)                                                        \\
+  \end{align*}
+  であり，$x$座標が等しいことに注意する．
+
+  線分ABの長さは従って
+  \begin{align*}
+    |AB|
+     & = \frac{\sqrt{2}}{2}a + \frac{\sqrt{3}}{2}b \\
+     & = \frac{1+\sqrt{3}b}{2}                     \\
+     & = \frac{1}{2}b^2
+  \end{align*}
+  である．
+
+  $\triangle ABC$に正弦定理を用いると，外接円の半径$R$は
+  \begin{align*}
+    \frac{|AB|}{\sin\angle ACB} = 2R
+  \end{align*}
+  である．
+  $\angle ACB=\pi/6+\pi/4=5\pi/12$より
+  \begin{align}
+    R
+     & = \frac{|AB|}{2\sin\angle ACB}                  \\
+     & = \frac{b^2}{4\sin\frac{5\pi}{12}} \label{eq:7}
+  \end{align}
+  である．
+
+  ここで，\cref{eq:5}より
+  \begin{align*}
+    \cos\left(\beta-\alpha\right) = \cos\frac{7\pi}{12} = -\frac{\sqrt{2}}{2b} \\
+    \therefore
+    cos\frac{5\pi}{12} = \frac{\sqrt{2}}{2b}
+  \end{align*}
+  だから，
+  \begin{align*}
+    \sin\frac{5\pi}{12}
+     & = \sqrt{1-\frac{1}{2b^2}}      \\
+     & = \frac{\sqrt{3}+1}{2\sqrt{2}} \\
+     & = \frac{b}{2\sqrt{2}}
+  \end{align*}
+  であり，\cref{eq:7}に代入して求める外接円の半径は
+  \begin{align*}
+    R
+     & = \frac{2\sqrt{2}b^2}{2 \cdot 2b} \\
+     & = \frac{\sqrt{2}}{2}b             \\
+     & = \frac{\sqrt{2}(\sqrt{3}+1)}{2}
+  \end{align*}
+  となる．
+
+
+  \vspace{10pt}
+  {\bf[解説]}
+  三角形ABCが最大となる条件の部分だが，今回は
+  これは図形的に自明ではあるが，点と直線の距離の公式から同様の結果を導くこともできるので紹介する．
+
+  $A$ を固定して $B$ を動かすと，$T$が最大になるのは直線$AC$と点$B$の距離が最大になる時である．
+  題意の条件よりこの時$\alpha=3\pi/4$だから，直線$AC$の方程式は
+  \begin{align*}
+    y = \frac{-a}{a+\sqrt{2}}(x-1)
+  \end{align*}
+  だから，$AC$と$B$の距離は，点と直線の距離公式より
+  \begin{align*}
+    \frac{\left| -ab\cos\theta - (a+\sqrt{2})b\sin\theta +a)\right|}{(1-\sqrt{2})^2+1}
+  \end{align*}
+  である．$a,b>0$より，これが最大になるのは
+  \begin{align*}
+    ab\cos\theta + (a+\sqrt{2})b\sin\theta = \mqty(a \\ a+\sqrt{2}) \cdot \vec{OB}
+  \end{align*}
+  が最小のとき．これは$\vec{OB}$が$(a,a+\sqrt{2})$と成す角$\pi$の時である．
+  ここで，ベクトル$(a,a+\sqrt{2})$は$\vec{CA}$と直交するベクトルであり，
+  従ってこの条件は$\vec{OB}\cdot\vec{CA}$に他ならない．
+  これで点と直線の距離公式による導出ができた．
+
+  この時$\beta=4\pi/3$だから，
+  \begin{align*}
+    \mqty(a \\ a+\sqrt{2}) \parallel \mqty(\cos\frac{\pi}{3} \\ \sin\frac{\pi}{3})
+  \end{align*}
+  より，
+  \begin{align*}
+    \frac{a}{a+\sqrt{2}} = \frac{1}{\sqrt{3}} \\
+    a & = \frac{\sqrt{2}}{\sqrt{3}-1}         \\
+      & = \frac{\sqrt{2}(\sqrt{3}+1)}{2}
+  \end{align*}
+  であることが必要．
+
+  \newpage
+\end{multicols}
+\end{document}
