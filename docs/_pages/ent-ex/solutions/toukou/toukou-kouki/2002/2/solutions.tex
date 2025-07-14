@@ -1,0 +1,442 @@
+\documentclass[a4paper,10pt]{ltjsarticle}
+\usepackage{luatexja}
+\usepackage[hiragino-pron]{luatexja-preset}
+
+\usepackage[truedimen,top=25truemm,bottom=20truemm,left=15truemm,right=15truemm]{geometry}
+\setlength{\textwidth}{54\zw}
+\setlength{\textheight}{73\zw}
+
+\usepackage{amsmath,amssymb,ascmac}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{cleveref}
+\usepackage{framed}
+\usepackage{fancyhdr}
+\usepackage{latexsym}
+\usepackage{mathtools}
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+\usepackage{pgfplots}
+ \usetikzlibrary{math}
+ \usetikzlibrary{calc}
+ \usetikzlibrary{angles}
+ \usetikzlibrary{quotes}
+% \usepackage{indent}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{cases}
+\usepackage{float}
+\usepackage{cases}
+  \usepackage{caption}
+  \usepackage[subrefformat=parens]{subcaption}
+\allowdisplaybreaks
+\tdplotsetmaincoords{70}{110}
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{東工大後期$2002$年$2$番}
+\begin{document}
+\begin{oframed}
+  $xy$ 平面上に原点 $O$ を中心とする半径 $1$ の円 $C$ がある．
+  $C$ を底面，$(0,0,\sqrt{3})$ を頂点とする直円すい $S$ を考える．
+  点 $P(1,0,0)$ および $Q(-2,0,0)$ をとる．
+  さらに，動点 $M(\cos\theta,\sin\theta,0)$ ($0 \leq \theta < 2\pi$) を線分 $MQ$ が $M$ 以外に $C$ と交わらないように動かす．
+
+  \begin{enumerate}
+    \item
+          $\theta$ のとりうる値の範囲を求めよ．
+    \item
+          点 $P$ から動点 $M$ までは直円すい $S$ の側面を通り，$M$ からは直線にそって点 $Q$ へ向かう道を考える．このような $P$ から $Q$ までの全ての道の長さの最小値を求 めよ．
+  \end{enumerate}
+\end{oframed}
+
+
+\setlength{\columnseprule}{0.4pt}
+\begin{multicols}{2}
+  {\bf[解]}
+
+  $xyz$空間の原点$O(0,0,0)$, 円錐の頂点を$R(0,0,\sqrt{3})$とする．
+  円錐の概形は\cref{fig:1}となる．
+
+  \begin{figure}[H]
+    \centering
+    \tdplotsetmaincoords{70}{110} % 視点の角度 (仰角, 方位角)
+    \begin{tikzpicture}[tdplot_main_coords,scale=2.0]
+      \pgfsetlinewidth{0.8pt}
+
+      % 軸の描画
+      \draw[-stealth] (-2,0,0) -- (2,0,0) node [pos=1.1] {x};
+      \draw[-stealth] (0,-2,0) -- (0,2,0) node [pos=1.1] {y};
+      \draw[-stealth] (0,0,-0.5) -- (0,0,2) node [pos=1.1] {z};
+
+      % 原点のラベル
+      \node at (0,0,0) [anchor=north west] {O};
+
+      % 頂点
+      \coordinate (apex) at (0,0,{sqrt(3)});
+      \node at (apex) [anchor=south west] {$\sqrt{3}$};
+      \node at (apex) [anchor=south east] {$R$};
+
+      % 底面の円 (xy平面上)
+      \tdplotsetrotatedcoords{0}{0}{0}
+      \draw [tdplot_rotated_coords, thick] (0,0) circle (1);
+
+      % 底面の補助線 (x軸上)
+      \draw [dashed] (1,0,0) -- (-1,0,0);
+      \node [tdplot_rotated_coords, anchor=west] at (1,0) {P};
+      \node [tdplot_rotated_coords, anchor=east] at (-2,0) {Q};
+
+      % 底面の補助線 (y軸上)
+      \draw [dashed] (0,1,0) -- (0,-1,0);
+      \node [tdplot_rotated_coords, anchor=south] at (-0.707,0.707) {M};
+
+      % 円錐の側面
+      \draw (apex) -- (1,0,0);
+      \draw (apex) -- (0,1,0);
+      \draw (apex) -- (-1,0,0);
+      \draw (apex) -- (0,-1,0);
+
+      % 円錐の側面 (背面を破線で表現 - 概略)
+      \draw [dashed] (apex) -- ({cos(135)},{sin(135)},0);
+      \draw [dashed] (apex) -- ({cos(225)},{sin(225)},0);
+
+      % 母線の長さを表現 (概略)
+      % \draw (0.3,0,1.2) -- (1,0,0);
+      % \node [anchor=south west] at (0,-0.5,1.2) {$|PM|=2$};
+    \end{tikzpicture}
+    \caption{円錐の様子}
+    \label{fig:1}
+  \end{figure}
+
+
+  (1)
+  $xy$平面で考える．
+  線分 $MQ$ が $M$ 以外に $C$ と交わらないということは，
+  $\theta$の境界の値では，$MQ$と$C$が接するので，まずはこの場合を考える．
+  この様子を\cref{fig:2}に示す．
+
+  \begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+      \begin{axis}[
+          axis lines=middle,
+          xmin=-2.5, xmax=2.5,
+          ymin=-2.5, ymax=2.5,
+          xtick={-2,-1,1}, % x軸の目盛り
+          ytick={-1,1}, % y軸の目盛り (円の半径と関連)
+          xlabel=$x$,
+          ylabel=$y$,
+          enlargelimits=false, % 軸の限界を拡大しない
+          grid=none, % グリッドは描画しない
+          every axis x label/.style={at={(ticklabel* cs:1)},anchor=north east}, % x軸ラベルの位置
+          every axis y label/.style={at={(ticklabel* cs:1)},anchor=south west}, % y軸ラベルの位置
+          xmajorgrids=false, % x軸のグリッド線なし
+          ymajorgrids=false, % y軸のグリッド線なし
+        ]
+
+        % 円 x^2 + y^2 = 1
+        \addplot[domain=0:360, samples=100, blue, thick] ({cos(x)}, {sin(x)});
+
+        % 点 (0,0) を示す
+        \node[label={-90:O}] at (axis cs:0,0) {};
+
+        % 接線 y = 1/2(x-2)
+        \addplot[domain=-2.5:2, red, dashed] {(x+2)/sqrt(3)};
+
+        % 接線 y = -1/2(x-2)
+        \addplot[domain=-2.5:2, red, dashed] {-(x+2)/sqrt(3)};
+
+        % 描画された図に一致する接点と直角マークを追加 (近似的に配置)
+        % 上の接点
+        \coordinate (P1) at (axis cs:-1/2, {sqrt(3)/2});
+        \fill[black] (P1) circle (1.5pt);
+
+        % 下の接点
+        \coordinate (P2) at (axis cs:-1/2, {-sqrt(3)/2});
+        \fill[black] (P2) circle (1.5pt);
+
+        % P
+        \coordinate (P) at (axis cs:1, 0);
+        \fill[black] (P) circle (1.5pt);
+
+        % Q
+        \coordinate (Q) at (axis cs:-2, 0);
+        \fill[black] (Q) circle (1.5pt);
+
+
+        % 接線と半径の直角マーク
+        % 上の接点
+        \draw[black] (axis cs:0,0) -- (P1);
+        \draw[fill=white, draw=black] (0.2, 0) -- (0.2, 0.2) -- (0, 0.2) -- cycle; % 円に近い直角
+
+        % 下の接点
+        \draw[black] (axis cs:0,0) -- (P2);
+        \draw[fill=white, draw=black] (0.2, 0) -- (0.2, -0.2) -- (0, -0.2) -- cycle; % 円に近い直角
+
+        \node[above right] at (P) {$P$};
+        \node[above] at (P1) {$M$};
+        \node[above] at (Q) {$Q$};
+
+      \end{axis}
+    \end{tikzpicture}
+    \caption{$xy$平面での$P,Q,M$の様子}
+    \label{fig:2}
+  \end{figure}
+
+  $M$での$C$の接線の方程式は
+  \begin{align*}
+    \cos\theta x + \sin\theta y = 1
+  \end{align*}
+  であり，これが$Q(-2,0)$を通るので，
+  \begin{align*}
+    -2\cos\theta = 1 \\
+    \therefore
+    \theta = \pm \frac{4\pi}{3}
+  \end{align*}
+  である．
+  従って$\theta$の取り得る範囲はこれらの$\theta$の時より点$M$が$Q$側になる場合で，
+  \begin{align*}
+    \frac{2\pi}{3} \le \theta \le \frac{4\pi}{3}
+  \end{align*}
+  である．$\cdots$(答)
+
+  \vspace{10pt}
+  (2)
+  Sの展開図上で線分PMとなる曲線を$D$とする．
+  PからMまでの最短経路は, PからMまで$D$上通り,
+  MからQまで直線MQを通る経路である．$\cdots$(*)
+
+  最短経路の長さ$f(\theta)$とすると
+  \begin{align}
+    f(\theta) = |PM| + |QM|\label{eq:1}
+  \end{align}
+  である．
+
+  まず線分PMの長さを求める．
+  Sの側面の展開図は\cref{fig:3}である．
+
+  \begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[scale=2.5]
+      % 点R
+      \coordinate (R) at (0,0);
+      \node at (R) [below] {R};
+
+      % 点P (左)
+      \coordinate (P1) at (1,0);
+      \node at (P1) [below] {P};
+
+      % 点P (右)
+      \coordinate (P2) at (-1,0);
+      \node at (P2) [below] {P};
+
+      % 点O
+      \coordinate (O) at (0,1);
+
+      % 弧を描画
+      \draw (P1) arc [radius=1, start angle=0, end angle=180];
+
+      % 点M (弧上の適当な点 - 中心角を考慮)
+      \coordinate (M) at ({1/sqrt(2)},{1/sqrt(2)});
+      \node at (M) [above] {M};
+
+      % 線分P1P2
+      \draw (P1) -- (P2);
+
+      % 線分RM
+      \draw (R) -- (M);
+
+      % 線分MP2
+      \draw [ultra thick] (M) -- (P1);
+
+      % 直角マーク
+      \draw (-0.1,0) -- (-0.1,0.1) -- (0.1,0.1) -- (0.1,0);
+
+      % 角の記号
+      \draw (0.2,0) arc (0:45:0.2);
+      \node at (0.25,0.1) {$\frac{\theta}{2}$};
+
+      % 破線 (中心からRへ)
+      \draw [dashed] (O) -- (R);
+    \end{tikzpicture}
+    \caption{円錐側面の展開図}
+    \label{fig:3}
+  \end{figure}
+
+  対称性から
+  \begin{align}
+    0 \le \theta \le \pi \label{eq:4}
+  \end{align}
+  として考える．
+
+  まず，PMの劣弧の長さは，$\angle POQ=\theta$より
+  \begin{align*}
+    \text{劣弧PM} & = \theta
+  \end{align*}
+  だから，円錐の側面の長さが$PR=2$であることにも留意すると
+  \begin{align*}
+    \angle \text{MRP} & = \frac{\theta}{2}
+  \end{align*}
+  となるので，展開図上のPMの長さ$l(\theta)$は
+  \begin{align}
+    l(\theta) & = 4 \sin \frac{\theta}{2} \label{eq:2}
+  \end{align}
+  となる．
+
+  次に，線分QMの長さを求める．これは各点の座標から，
+  \begin{align}
+    |\text{QM}|
+     & = \sqrt{(\cos\theta+2)^2 + \sin^2\theta} \\
+     & = \sqrt{5+4\cos\theta} \label{eq:3}
+  \end{align}
+  となる．
+
+  以上\cref{eq:2,eq:3}を\cref{eq:1}に代入すると，$\theta$を与えた時の最短経路の長さ$f(\theta)$は
+  \begin{align}
+    f(\theta)
+     & = l(\theta) + |\text{QM}|                                   \\
+     & = 4\sin\frac{\theta}{2} + \sqrt{5+4\cos\theta} \label{eq:5}
+  \end{align}
+  となる．
+  (1)および\cref{eq:4}から，この関数の
+  \begin{align}
+    \frac{2\pi}{3} \le \theta \le \pi \label{eq:6}
+  \end{align}
+  での最小値をもとめにば良い．新しく
+  \begin{align*}
+    t=\cos\frac{\theta}{2}
+  \end{align*}
+  とおくと，半角および倍角の公式から
+  \begin{align*}
+    \sin\frac{\theta}{4}
+     & = \sqrt{\frac{1-\cos\frac{\theta}{2}}{2}} \quad (\sin\frac{\theta}{4}\ge 0) \\
+     & = \sqrt{\frac{1-t}{2}}
+  \end{align*}
+  および
+  \begin{align*}
+    \cos\theta
+     & = 2\cos^2\frac{\theta}{2} - 1 \\
+     & = 2t^2-1
+  \end{align*}
+  から，$f$の変数を$\theta$から$t$に移して
+  \begin{align}
+    f(t)
+     & = 4\sqrt{\frac{1-t}{2}} + \sqrt{5+4(2t^2-1)} \nonumber \\
+     & = 2\sqrt{2(1-t)} + \sqrt{8t^2+1} \label{eq:9}
+  \end{align}
+  となる．
+  \cref{eq:6}から
+  \begin{align}
+    0\le t \le \frac{1}{2} \label{eq:7}
+  \end{align}
+  である．$f$の一階微分は
+  \begin{align*}
+    f'(t)
+     & = \frac{-2}{\sqrt{2(1-t)}} + \frac{16t}{2\sqrt{8t^2+1}}                                                            \\                                      \\
+     & = \frac{-2\sqrt{8t^2+1} + 8t\sqrt{2(1-t)}}{\sqrt{2(1-t)}\sqrt{8t^2+1}}                                             \\
+     & = \frac{-4(8t^2+1) + 2\cdot 8^2t^2(1-t)}{2\sqrt{2(1-t)}\sqrt{8t^2+1}\left(2\sqrt{8t^2+1} + 8t\sqrt{2(1-t)}\right)} \\
+     & = \frac{4(-32t^3 + 24t^2-1)}{\sqrt{2(1-t)}\sqrt{8t^2+1}\left(\sqrt{8t^2+1} + 8t\sqrt{2(1-t)}\right)}
+  \end{align*}
+  である．この分母は常に正だから，$f'(t)$の正負は分子の正負と等しい．
+  そこで分子を因数分解すると
+  \begin{align*}
+    -32t^3 + 24t^2-1
+     & = -32\left(t^3-\frac{3}{4}t^2+\frac{1}{32}\right)                                                                           \\
+     & = -32\left(t-\frac{1}{4}\right)\left(t^2-\frac{1}{2}t-\frac{1}{8}\right)                                                    \\
+     & = -32\left(t-\frac{1}{4}\right)\left(t-\frac{1}{4}+\sqrt{\frac{3}{16}}\right)\left(t-\frac{1}{4}-\sqrt{\frac{3}{16}}\right)
+  \end{align*}
+  である．\cref{eq:7}の$t$の区間に注意して，
+  \begin{align*}
+    \frac{1}{4}-\sqrt{\frac{3}{16}} < 0 < \frac{1}{4} < \frac{1}{2} < \frac{1}{4}+\sqrt{\frac{3}{16}}
+  \end{align*}
+  だから，$f(t)$の増減表は\cref{table:1}となる．
+
+  \begin{table}[H]
+    \centering
+    \caption{$f(t)$の増減表}
+    \label{table:1}
+    \begin{tabular}{|c||c|c|c|c|c|}
+      \hline
+      $t$  & $0$           &            & $1/4$ &            & $1/2$        \\
+      \hline
+      $f'$ &               & $-$        & $0$   & $+$        &              \\
+      \hline
+      $f$  & $1+2\sqrt{2}$ & $\searrow$ &       & $\nearrow$ & $2+\sqrt{3}$ \\
+      \hline
+    \end{tabular}
+  \end{table}
+
+  従って，求める最小値は$t=1/4$の時で
+  \begin{align*}
+    \min f(t)
+     & = f\left(\frac{1}{4}\right)                                                  \\
+     & = 2\sqrt{2\left(1-\frac{1}{4}\right)} + \sqrt{8\left(\frac{1}{4}\right)^2+1} \\
+     & = \sqrt{6} + \sqrt{\frac{3}{2}}                                              \\
+     & = \frac{3\sqrt{6}}{2}
+  \end{align*}
+  である．$\cdots$(答)
+
+
+  \vspace{10pt}
+  {\bf[解説]}
+  最後の$f(\theta)$の最小値を求める部分はいくつかやり方がある．
+  いずれもこの形のまま計算するのは厳しく，なんらか新しい変数を置いてやることになるだろう．
+  今回の解答のように，$\theta/2$を利用する方が$\theta/4$と$\theta$を対称に扱っていて計算は早い．
+
+  それを見るために，$t=\sin\frac{\theta}{4}$として求めてみよう．
+  $\theta$の動く範囲が\cref{eq:4}だから，
+  \begin{align}
+    \frac{1}{2} \le t \le \frac{\sqrt{2}}{2} \label{eq:10}
+  \end{align}
+  である．\cref{eq:9}に倍角公式を利用して$t$で表すと
+  \begin{align*}
+    f(t) & = 4t + \sqrt{9-32t^2(1-t^2)}
+  \end{align*}
+  だから，一階微分は
+  \begin{align*}
+    f'(t)
+     & = 4 + \frac{128t^3 - 64t}{2\sqrt{9-32t^2(1-t^2)}}              \\
+     & = 4 \frac{\sqrt{32t^4-32t^2+9}+16t^3-8t}{\sqrt{32t^4-32t^2+9}}
+  \end{align*}
+  となり，分母は常に正だから$f'$の符号は分子の符号に等しい．
+  \begin{align*}
+                    & f'(t) \ge 0                                                                            \\
+    \Leftrightarrow & \sqrt{32t^4-32t^2+9} \ge 8t(1-2t^2) \quad (\ge 0) \quad (\because \text{\cref{eq:10}}) \\
+    \Leftrightarrow & 32t^4-32t^2+9 \ge 64t^2(1-2t^2)^2                                                      \\
+    \Leftrightarrow & 256s^3-288s^2+96s-9 \le 0 \quad (s=t^2, \frac{1}{4} \le s \le \frac{1}{2})             \\
+    \Leftrightarrow & (s-\frac{3}{8})(256s^2-192s+24) \le 0                                                  \\
+    \Leftrightarrow & (s-\frac{3}{8})(s-\frac{3+\sqrt{3}}{16})(s-\frac{3-\sqrt{3}}{16}) \le 0
+  \end{align*}
+  だから. $f$の増減表は\cref{table:2}となる．
+  \begin{table}[H]
+    \centering
+    \caption{$f$の増減表}
+    \label{table:2}
+    \begin{tabular}{|c||c|c|c|c|c|}
+      \hline
+      $t$     & $\frac{1}{2}$ &            & $\frac{\sqrt{6}}{4}$ &            & $\frac{\sqrt{2}}{2}$ \\
+      \hline
+      $s=t^2$ & $\frac{1}{4}$ &            & $\frac{3}{8}$        &            & $\frac{1}{2}$        \\
+      \hline
+      $f'$    &               & $-$        & $0$                  & $+$        &                      \\
+      \hline
+      $f$     &               & $\searrow$ &                      & $\nearrow$ &                      \\
+      \hline
+    \end{tabular}
+  \end{table}
+  したがって，$f(t)$は
+  \begin{align*}
+    t=\frac{\sqrt{6}}{4}
+  \end{align*}
+  で最小値
+  \begin{align*}
+    \min f(\theta)
+     & = \sqrt{6}+\frac{\sqrt{6}}{2} \\
+     & = \frac{3\sqrt{6}}{2}
+  \end{align*}
+  をとる.
+
+
+  \newpage
+\end{multicols}
+\end{document}
