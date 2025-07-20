@@ -696,28 +696,28 @@ pdf化した答案の大半には図がないので，時間がある時に順�
 [utka06]: {% link _pages/ent-ex/solutions/東京後期_整理完了/東大2006.pdf %}
 
 <!-- 東工大 後期-->
-[tkka90]: {% link _pages/ent-ex/solutions/東工後期_整理完了/TK1990.pdf %}
-[tkka91]: {% link _pages/ent-ex/solutions/東工後期_整理完了/TK1991.pdf %}
-[tkka92]: {% link _pages/ent-ex/solutions/東工後期_整理完了/TK1992.pdf %}
-[tkka93]: {% link _pages/ent-ex/solutions/東工後期_整理完了/TK1993.pdf %}
-[tkka94]: {% link _pages/ent-ex/solutions/東工後期_整理完了/TK1994.pdf %}
-[tkka95]: {% link _pages/ent-ex/solutions/東工後期_整理完了/TK1995.pdf %}
-[tkka96]: {% link _pages/ent-ex/solutions/東工後期_整理完了/TK1996.pdf %}
-[tkka97]: {% link _pages/ent-ex/solutions/東工後期_整理完了/TK1997.pdf %}
-[tkka98]: {% link _pages/ent-ex/solutions/東工後期_整理完了/TK1998.pdf %}
-[tkka99]: {% link _pages/ent-ex/solutions/東工後期_整理完了/TK1999.pdf %}
-[tkka00]: {% link _pages/ent-ex/solutions/東工後期_整理完了/TK2000.pdf %}
-[tkka01]: {% link _pages/ent-ex/solutions/東工後期_整理完了/TK2001.pdf %}
-[tkka02]: {% link _pages/ent-ex/solutions/東工後期_整理完了/TK2002.pdf %}
-[tkka03]: {% link _pages/ent-ex/solutions/東工後期_整理完了/TK2003.pdf %}
-[tkka04]: {% link _pages/ent-ex/solutions/東工後期_整理完了/TK2004.pdf %}
-[tkka05]: {% link _pages/ent-ex/solutions/東工後期_整理完了/TK2005.pdf %}
-[tkka06]: {% link _pages/ent-ex/solutions/東工後期_整理完了/TK2006.pdf %}
-[tkka07]: {% link _pages/ent-ex/solutions/東工後期_整理完了/TK2007.pdf %}
-[tkka08]: {% link _pages/ent-ex/solutions/東工後期_整理完了/TK2008.pdf %}
-[tkka09]: {% link _pages/ent-ex/solutions/東工後期_整理完了/TK2009.pdf %}
-[tkka10]: {% link _pages/ent-ex/solutions/東工後期_整理完了/TK2010.pdf %}
-[tkka11]: {% link _pages/ent-ex/solutions/東工後期_整理完了/TK2011.pdf %}
+[tkka90]: {% link _pages/ent-ex/solutions/TK_kouki/1990.pdf %}
+[tkka91]: {% link _pages/ent-ex/solutions/TK_kouki/1991.pdf %}
+[tkka92]: {% link _pages/ent-ex/solutions/TK_kouki/1992.pdf %}
+[tkka93]: {% link _pages/ent-ex/solutions/TK_kouki/1993.pdf %}
+[tkka94]: {% link _pages/ent-ex/solutions/TK_kouki/1994.pdf %}
+[tkka95]: {% link _pages/ent-ex/solutions/TK_kouki/1995.pdf %}
+[tkka96]: {% link _pages/ent-ex/solutions/TK_kouki/1996.pdf %}
+[tkka97]: {% link _pages/ent-ex/solutions/TK_kouki/1997.pdf %}
+[tkka98]: {% link _pages/ent-ex/solutions/TK_kouki/1998.pdf %}
+[tkka99]: {% link _pages/ent-ex/solutions/TK_kouki/1999.pdf %}
+[tkka00]: {% link _pages/ent-ex/solutions/TK_kouki/2000.pdf %}
+[tkka01]: {% link _pages/ent-ex/solutions/TK_kouki/2001.pdf %}
+[tkka02]: {% link _pages/ent-ex/solutions/TK_kouki/2002.pdf %}
+[tkka03]: {% link _pages/ent-ex/solutions/TK_kouki/2003.pdf %}
+[tkka04]: {% link _pages/ent-ex/solutions/TK_kouki/2004.pdf %}
+[tkka05]: {% link _pages/ent-ex/solutions/TK_kouki/2005.pdf %}
+[tkka06]: {% link _pages/ent-ex/solutions/TK_kouki/2006.pdf %}
+[tkka07]: {% link _pages/ent-ex/solutions/TK_kouki/2007.pdf %}
+[tkka08]: {% link _pages/ent-ex/solutions/TK_kouki/2008.pdf %}
+[tkka09]: {% link _pages/ent-ex/solutions/TK_kouki/2009.pdf %}
+[tkka10]: {% link _pages/ent-ex/solutions/TK_kouki/2010.pdf %}
+[tkka11]: {% link _pages/ent-ex/solutions/TK_kouki/2011.pdf %}
 
 <!-- 京大 後期-->
 [ukka89]: {% link _pages/ent-ex/solutions/京都後期_整理完了/京都1989.pdf %}
