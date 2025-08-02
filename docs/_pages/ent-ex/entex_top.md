@@ -696,6 +696,8 @@ pdf化した答案の大半には図がないので，時間がある時に順�
 [utka04]: {% link _pages/ent-ex/solutions/東京後期_整理完了/東大2004.pdf %}
 [utka05]: {% link _pages/ent-ex/solutions/東京後期_整理完了/東大2005.pdf %}
 [utka06]: {% link _pages/ent-ex/solutions/東京後期_整理完了/東大2006.pdf %}
+[utka07]: {% link _pages/ent-ex/solutions/東京後期_整理完了/東大2007.pdf %}
+
 
 <!-- 東工大 後期-->
 [tkka90]: {% link _pages/ent-ex/solutions/TK_kouki/1990.pdf %}
@@ -740,4 +742,3 @@ pdf化した答案の大半には図がないので，時間がある時に順�
 [ukka04]: {% link _pages/ent-ex/solutions/京都後期_整理完了/京都2004.pdf %}
 [ukka05]: {% link _pages/ent-ex/solutions/京都後期_整理完了/京都2005.pdf %}
 [ukka06]: {% link _pages/ent-ex/solutions/京都後期_整理完了/京都2006.pdf %}
-[ukka07]: {% link _pages/ent-ex/solutions/京都後期_整理完了/京都2007.pdf %}
