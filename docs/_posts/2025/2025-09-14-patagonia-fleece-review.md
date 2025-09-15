@@ -13,9 +13,6 @@ header:
 description: 2024秋シーズンに，秋冬のアウトドアや日常使いに向けてPatagoniaの定番フリース「Rシリーズ」から4点を購入したので比較レビュー．
 ---
 
-
-## はじめに
-
 2024秋シーズンに，秋冬のアウトドアや日常使いに向けてPatagoniaの定番フリース「Rシリーズ」から以下の4点を購入した．
 
 - **R1 Air Crew**
@@ -25,7 +22,7 @@ description: 2024秋シーズンに，秋冬のアウトドアや日常使いに
 
 まとめて4つも同系統の服を購入するのも珍しいので比較レビューを残しておく．
 
-{% include figure popup=true image_path="/assets/posts/2025-09-14-patagonia-fleece-review/DSC_0210.jpg" alt="" caption="左上: " %}
+{% include figure popup=true image_path="/assets/posts/2025-09-14-patagonia-fleece-review/DSC_0210.jpg" alt="" caption="左上: R1サーマルジャケット，右上：R1サーマルクルー，左下：R1エアークルー，右下：R2テックフェイスプルオーバー" %}
 
 
 ## Rシリーズの概要
@@ -134,11 +131,11 @@ R1シリーズで最も暖かいラインではありながら，R2テックフ�
 
 特徴的なのは保温性を上げるための裏面のマイクログリッド構造で，R1 Airと比べると差がわかりやすい．このおかげで保温性に関してはR1 Airと比べると断然暖かいので，ちょっと寒いくらいの日に着ていくとオーバースペックだ．後述するジャケットは前面のジップで調整できるのだがクルータイプはそれができないため，ジャケットタイプより一段暖かいと思っておくとよさそうだ．とはいえ本品も通気性がかなりよくてオーバーヒートしにくいのが非常に良い．気温やシチュエーションでR1エアーと使い分けられる．
 
-{% include figure popup=true image_path="/assets/posts/2025-09-14-patagonia-fleece-review/DSC_0230.jpg" alt="" caption="" %}
+{% include figure popup=true image_path="/assets/posts/2025-09-14-patagonia-fleece-review/DSC_0230.jpg" alt="" caption="左がR1エアーの裏地，右がR1サーマルの裏地．仕上げパターンが全く違うのがわかる．" %}
 
 肌触りも非常に滑らかで，着心地は快適だ．かなり暖かいので冬の日常着としてかなり良いのではないかと思う．　内側のマイクログリッドは触るとフカフカで気持ちが良い．
 
-{% include figure popup=true image_path="/assets/posts/2025-09-14-patagonia-fleece-review/DSC_0222.jpg" alt="" caption="" %}
+{% include figure popup=true image_path="/assets/posts/2025-09-14-patagonia-fleece-review/DSC_0222.jpg" alt="" caption="内側はマイクログリッド構造，外側は軽い防風となるように加工されている．" %}
 
 R1サーマルは厚いのと表面の生地もしっかりしているためか，多少の風ならシェルジャケットなしでも行動できた．
 
