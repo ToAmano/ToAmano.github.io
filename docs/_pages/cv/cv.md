@@ -57,6 +57,8 @@ description: my cv
 
 ### International
 
+
+* __T. Amano__, T. Yamazaki, S. Tsuneyuki "First-principles study of THz dielectric properties of molecular liquids with a machine learning model for dipole moments" Psi-k 2025, Lausanne, Switzerland, 2025/08/27
 * __T. Amano__, T. Yamazaki, S. Tsuneyuki "The first-principles study of THz dielectric properties with a machine learning model for dipole moment" 34rd IUPAP Conference on Computational Physics, Kobe, Japan, 2023/08/05
 * __T. Amano__, N. Ogawa, W. Yamada, T. Ikeda, T. Koiwai, M. Niikura, K. Wimmer, H. Sakurai, "Efficiency measurement of next generation scintillator GAGG at high energy using the 992KeV resonance of the <sup>27</sup>Al(p,γ)<sup>28</sup>Si reaction" 5th Joint Meeting of the APS Division of Nuclear Physics and the Physical Society of Japan, Hawaii, USA, 2018/10/26 
 * Ogawa, N., __Amano, T.__, Yamada, W., Ikeda, T., Koiwai, T., Niikura, M., ... & Wimmer, K. "Resolution measurement of next generation scintillator GAGG at high energy using the 992 keV resonance of the 27 Al (p, γ) 28 Si reaction" 5th Joint Meeting of the APS Division of Nuclear Physics and the Physical Society of Japan, Hawaii, USA, 2018/10/26 
