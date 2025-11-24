@@ -96,6 +96,7 @@ description: my cv
 
 ## certificates
 
+* Microsoft Certified: Azure Fundamentals (AZ-900)
 * 統計検定1級
 * 英語検定1級
 * TOEIC 930
