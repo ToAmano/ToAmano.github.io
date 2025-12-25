@@ -96,6 +96,7 @@ description: my cv
 
 ## certificates
 
+* 情報処理安全確保支援士 試験合格
 * Microsoft Certified: Azure Fundamentals (AZ-900)
 * 統計検定1級
 * 英語検定1級
