@@ -96,12 +96,15 @@ description: my cv
 
 ## certificates
 
-* 情報処理安全確保支援士 試験合格
-* Microsoft Certified: Azure Fundamentals (AZ-900)
 * 統計検定1級
 * 英語検定1級
 * TOEIC 930
-* FP3級
-* ITパスポート, 情報セキュリティマネジメント, 基本情報技術者，応用情報技術者
+* 情報処理安全確保支援士 試験合格
+* 応用情報技術者
+* 基本情報技術者
+* ITパスポート
+* 情報セキュリティマネジメント
+* Microsoft Certified: Azure Fundamentals (AZ-900)
 * JDLA Deep Learning for GENERAL 2022#3
 * JDLA Deep Learning for ENGINEER 2023#2
+* FP3級
