@@ -69,7 +69,7 @@ Gamma MXは裏地にフリース素材を貼り付けて保温性を備えたソ
 
 {% include figure popup=true image_path="/assets/posts/2025-12-27-arcteryx-gamma-mx-review/DSC_0314.jpg" alt="" caption="" %}
 
-内側にはドローコードがついていてチンガードを調整できる．
+内側にはドローコードがついていてチンガードを調整できる．ただし，内側に配置してしまったために非常に操作しにくくなっており，一回ジップを下ろさないと調整できない．別途紹介するベータSLのように外側に配置してくれていれば．．．と思ってしまう．
 
 {% include figure popup=true image_path="/assets/posts/2025-12-27-arcteryx-gamma-mx-review/DSC_0319.jpg" alt="" caption="" %}
 
