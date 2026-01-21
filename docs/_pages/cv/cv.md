@@ -105,6 +105,7 @@ description: my cv
 * ITパスポート
 * 情報セキュリティマネジメント
 * Microsoft Certified: Azure Fundamentals (AZ-900)
+* Microsoft Certified: Azure AI Fundamentals (AI-900)
 * JDLA Deep Learning for GENERAL 2022#3
 * JDLA Deep Learning for ENGINEER 2023#2
 * FP3級
