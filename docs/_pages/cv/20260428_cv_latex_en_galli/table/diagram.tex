@@ -1,0 +1,30 @@
+\documentclass[multi=tabular]{standalone}
+% \usepackage[ipaex]{luatexja-preset} % standaloneとlualatexjaを共存させる方法？
+\usepackage{multirow}
+\usepackage{comment}
+\usepackage{graphics}
+\usepackage{color}
+%\usepackage{caption}
+%\captionsetup{labelformat=empty}
+
+\begin{document}
+ \renewcommand{\arraystretch}{1.8}
+%　http://coffee.guhaw.com/Entry/350/
+ {\tabcolsep = 0.15cm
+  \begin{tabular}{lcccc}
+   \hline\hline
+%    &\multicolumn{2}{c}{$\mathrm{r^2}$SCAN} && neutron~[1]    \\ \cline{2-3}
+    && Loop  & Bubble & 4ph    \\
+   \hline 
+%  \multicolumn{2}{c}{物理的意味}   & エネルギーシフト & エネルギーシフト & 3フォノン散乱 & 4フォノン散乱  \\ 
+  \multicolumn{2}{c}{Imaginary}          & × & $\circ$ & $\circ$  \\ 
+   \multicolumn{2}{c}{Frequency-dependence} & × & $\circ$ & $\circ$  \\
+   \multirow{2}{*}{Treatment}& Real       & SCPH+B & SCPH+B       & Perturbation \\ 
+                             & Imaginary  & -    & Perturbation & Perturbation  \\ 
+    \hline
+   \hline
+  \end{tabular}
+}
+
+\renewcommand{\arraystretch}{1.0}
+\end{document}

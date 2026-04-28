@@ -1,0 +1,318 @@
+
+%% start of file `template.tex'.
+%% Copyright 2006-2015 Xavier Danaux (xdanaux@gmail.com), 2020-2022 moderncv maintainers (github.com/moderncv).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+\documentclass[11pt,a4paper,sans,colorlinks,lualatex,article]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+\usepackage{luatexja}
+% \usepackage[hiragino-pron,deluxe,expert,bold]{luatexja-preset}
+
+% moderncv themes
+\moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
+\moderncvcolor{blue}                               % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% adjust the page margins
+\usepackage[scale=0.80]{geometry}
+\setlength{\footskip}{136.00005pt}                 % depending on the amount of information in the footer, you need to change this value. comment this line out and set it to the size given in the warning
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvheadnamewidth}{10cm}            % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+% font loading
+% for luatex and xetex, do not use inputenc and fontenc
+% see https://tex.stackexchange.com/a/496643
+\ifxetexorluatex
+  \usepackage{fontspec}
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Ligatures=TeX}
+  \setmainfont{Latin Modern Roman}
+  \setsansfont{Latin Modern Sans}
+  \setmonofont{Latin Modern Mono}
+  \setmathfont{Latin Modern Math} 
+\else
+  \usepackage[T1]{fontenc}
+  \usepackage{lmodern}
+\fi
+
+% document language
+\usepackage[english]{babel}  % FIXME: using spanish breaks moderncv
+
+% personal data
+\name{Tomohito}{Amano}
+% \title{test}                                        % optional, remove / comment the line if not wanted
+\born{26 July 1996}                                 % optional, remove / comment the line if not wanted
+% \address{street and number}{postcode city}{country}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
+\phone[mobile]{+81~(090)~8172~9874}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
+% \phone[fixed]{+2~(345)~678~901}
+% \phone[fax]{+3~(456)~789~012}
+\email{amanotomohito040@gmail.com} % optional, remove / comment the line if not wanted
+% \homepage{www.johndoe.com}       % optional, remove / comment the line if not wanted
+
+% Social icons
+%\social[linkedin]{john.doe}                        % optional, remove / comment the line if not wanted
+% \social[xing]{john\_doe}                           % optional, remove / comment the line if not wanted
+% \social[twitter]{ji\_doe}                             % optional, remove / comment the line if not wanted
+% \social[github]{jdoe}                              % optional, remove / comment the line if not wanted
+% \social[gitlab]{jdoe}                              % optional, remove / comment the line if not wanted
+% \social[stackoverflow]{0000000/johndoe}            % optional, remove / comment the line if not wanted
+% \social[bitbucket]{jdoe}                           % optional, remove / comment the line if not wanted
+% \social[skype]{jdoe}                               % optional, remove / comment the line if not wanted
+% \social[orcid]{0000-0000-000-000}                  % optional, remove / comment the line if not wanted
+% \social[researchgate]{jdoe}                        % optional, remove / comment the line if not wanted
+% \social[researcherid]{jdoe}                        % optional, remove / comment the line if not wanted
+% \social[telegram]{jdoe}                            % optional, remove / comment the line if not wanted
+% \social[whatsapp]{12345678901}                     % optional, remove / comment the line if not wanted
+% \social[signal]{12345678901}                       % optional, remove / comment the line if not wanted
+% \social[matrix]{@johndoe:matrix.org}               % optional, remove / comment the line if not wanted
+% \social[googlescholar]{googlescholarid}            % optional, remove / comment the line if not wanted
+
+% \extrainfo{additional information}                 % optional, remove / comment the line if not wanted
+%\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+\quote{}                                 % optional, remove / comment the line if not wanted
+
+% bibliography adjustments (only useful if you make citations in your resume, or print a list of publications using BibTeX)
+%   to show numerical labels in the bibliography (default is to show no labels)
+%\makeatletter\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}\makeatother
+\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}
+%   to redefine the bibliography heading string ("Publications")
+%\renewcommand{\refname}{Articles}
+
+% https://stackoverflow.com/questions/71263063/latex-error-option-clash-for-package-hyperref
+% \usepackage{hyperref}
+
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage[version=4]{mhchem}
+\usepackage{siunitx}
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+% https://copyprogramming.com/howto/undefined-control-sequence-with-hypersetup-in-moderncv
+\hypersetup{
+    colorlinks = true,
+    linkcolor = blue,
+    urlcolor  = blue,
+    citecolor = blue,
+    anchorcolor = blue,
+    citebordercolor=green,
+    linkbordercolor=red,
+    urlbordercolor=cyan,
+    filecolor=magenta,      
+   }
+
+%-----       letter       ---------------------------------------------------------
+% recipient data
+\recipient{Dear Prof. Giulia Galli}{}
+\date{April 28, 2025}
+\opening{Dear Prof. Giulia Galli,}
+\closing{Yours faithfully,}
+% \enclosure[Attached]{curriculum vit\ae{}}          % use an optional argument to use a string other than "Enclosure", or redefine \enclname
+\makelettertitle
+
+% 書き出し
+I am writing to express my strong interest in joining your group at the University of Chicago as a visiting researcher. I am currently affiliated with the University of Tokyo and consider visiting your group under the formal dispatch of Prof. Synge Todo. I would be honored to pursue collaborative research under your supervision.
+
+% 主文
+My research background lies in first-principles calculations, molecular dynamics, and machine-learning or data-driven modeling of dielectric and vibrational properties of condensed matter systems. During my PhD and subsequent research activities, I have developed two complementary methodological approaches to dielectric-propety calculations. One is a first-principles framework for crystalline materials that combines density functional theory with anharmonic lattice-dynamics calculations, including phonon anharmonicity, and was implemented through extensions to the open-source code ALAMODE. The other is a first-principles and machine-learning-based approach for molecular liquids, in which machine-learning models of dipole moments are trained on \textit{ab-initio} Wannier function data, developed as the open-source software MLWC. Through these projects, I have gained experience in developing, maintaining, and operating scalable computational software in collaborative environments.
+
+I am particularly interested in exploring how first-principles and machine-learning approaches can be combined to describe electronic properties of complex materials at scale, and I believe that your group’s work on electronic-structure theory and materials modeling provides an ideal environment for this research. I am confident that my background in computational materials science and software-oriented research would allow me to contribute productively to ongoing projects in your group.
+
+Thank you very much for considering my application. I would be grateful for the opportunity to discuss possible research directions. Please find my short CV and publication list attached for your reference.
+
+\makeletterclosing
+
+%\clearpage\end{CJK*}                              % if you are typesetting your resume in Chinese using CJK; the \clearpage is required for fancyhdr to work correctly with CJK, though it kills the page numbering by making \lastpage undefined
+
+% 
+\clearpage
+
+%\begin{CJK*}{UTF8}{gbsn} % to typeset your resume in Chinese using CJK
+%----- resume  ---------------------------------------------------------
+\makecvtitle
+
+\section{Work and Research}
+\cventry{2026/4--present}{Project Researcher}{Prof. Synge Todo, The University of Tokyo}{Tokyo}{}
+{Development of first-principles and machine-learning-based methodologies to compute spin relaxation time of crystals.}
+
+\cventry{2024/4--2026/3}{Digital Consultant}{PwC Consulting LLC}{Tokyo}{}
+{Design and deployment of large-scale generative AI applications on cloud infrastructure, with a focus on reliability, scalability, and long-term maintainability.\newline{}
+Detailed achievements:
+\begin{itemize}
+  \item Designed, developed, and maintained enterprise-grade generative AI applications deployed on Microsoft Azure, serving approximately 10,000 users. 
+  \item Experienced end-to-end system development, including application architecture design, cloud resource configuration, deployment pipelines, and operational monitoring.
+  \item Contributed to a team-based development effort involving approximately 10 engineers, following Git-based workflows with code reviews and collaborative version control practices.
+\end{itemize}}
+
+\cventry{2024/4--2026/3}{Visiting Researcher}{Prof. Shinji Tsuneyuki, The University of Tokyo}{Tokyo}{}
+{Continued the research projects described in the PhD Course section, with a primary focus on finalizing data analysis, publishing results, and maintaining the developed computational frameworks.}
+
+\cventry{2021/4--2024/3}{PhD Course}{Prof. Shinji Tsuneyuki, The University of Tokyo}{Tokyo}{}
+{Development of first-principles and machine-learning-based methodologies to compute dielectric properties of crystals, molecular liquids, and polymers.\newline{}
+Detailed achievements:
+\begin{itemize}
+  \item Conducted joint research projects with Fujitsu Ltd. and JSR Corporation on dielectric materials for next-generation communication technologies.
+  \item Developed a machine-learning-assisted methodology to evaluate dielectric properties of polymers, integrating first-principles simulations with data-driven modeling.
+  \begin{itemize}
+   \item Performed large-scale first-principles simulations using the supercomputer Fugaku
+   \item Developed an open-source software package MLWC (Machine Learning Wannier Centers) for predicting dielectric properties of condensed molecular systems.
+   \item Developed a robust machine learning force field for liquid polymers using active sampling scheme, enabling long-time and large-scale simulations.
+  \end{itemize}
+  \item Established an \textit{ab-initio} framework for calculating dielectric functions of strongly anharmonic crystals beyond the harmonic approximation.
+  \begin{itemize}
+  \item Extended the open-source lattice-dynamics code ALAMODE by implementing new functionalities for dielectric function and Green’s function calculations based on anharmonic phonon theory.
+  \end{itemize}
+\end{itemize}}
+
+\cventry{2019/4--2021/3}{Master Course}{Prof. Shinji Tsuneyuki, The University of Tokyo}{Tokyo}{}
+{Numerical investigation of the Holstein model in the strong-coupling regime using coherent potential approximation, Monte Carlo simulations, and Green’s function analysis.}
+
+\cventry{2018/4--2018/9}{Bachelor Course}{Prof. Hiroyoshi Sakurai, Prof. Kathrin Wimmer, The University of Tokyo}{Tokyo}{}
+{Measurement of the intrinsic $\gamma$ ray efficiency of GAGG(Ce) scintillators up to $\SI[per-mode=symbol,per-symbol = p]{10}{\mega eV}$
+Benchmark experiment for $\gamma$ ray scintillator GAGG at RIKEN. Designed/constructed measurement circuit.} 
+
+\section{Computer skills}
+\cvitemwithcomment{Python}{Proficient}{\raggedright Applied to machine-learning model development, data analysis, and scientific post-processing.}
+\cvitemwithcomment{C/C++}{Proficient}{\raggedright Used for high performance calculations including Green's function calculations and aharmonic phonon calculations.}
+\cvitemwithcomment{Linux}{intermediate}{\raggedright Experienced in maintaining a laboratory computing cluster (\textasciitilde 20 CPUs), including software installation, job management, and network configuration.}
+\cvitemwithcomment{fortran}{basic}{\raggedright Capable of reading and modifying open-source DFT codes such as Quantum ESPRESSO.}
+
+\section{Software}
+\cvitemwithcomment{VASP}{Proficient}{\raggedright DFT calculations for lattice dynamics and anharmonic phonon properties, including post-processing force-constant extraction and \textit{ab-initio} molecular dynamics calculations.}
+\cvitemwithcomment{Quantum Espresso}{Experienced}{\raggedright DFT calculations for lattice dynamics and anharmonic phonon properties, including post-processing force-constant extraction.}
+\cvitemwithcomment{CPMD}{Proficient}{\raggedright \textit{ab-initio} molecular dynamics calculations and Wannier functions calculations, with development of custom post-processing pipelines to extract machine-learning-ready datasets.}
+
+\cvitemwithcomment
+{LAMMPS}
+{Intermediate}
+{\raggedright Classical and machine-learning molecular dynamics simulations, including large-scale trajectory generation and analysis for molecular systems.}
+
+\cvitemwithcomment
+{DeepMD}
+{Intermediate}
+{\raggedright Development and application of deep neural network interatomic potentials trained on \textit{ab-initio} data, and their integration with LAMMPS for large-scale molecular dynamics simulations.}
+
+\cvitemwithcomment{ALAMODE}{Proficient}{\raggedright Extended the ALAMODE code by implementing routines for dielectric function and Green’s function calculations}
+\cvitemwithcomment{MLWC}{Author}{\raggedright Open-source software for constructing machine learning model for dipole moment applicable to molecular systems, using \textit{ab-initio} Wannier functions as training data.}
+
+\section{Award}
+\cventry{2024/3}{The School of Science Encouragement Award}{}{}{}
+{Awarded for outstanding academic achievements and research performance in the School of Science, the University of Tokyo.}
+\cventry{2024/3}{Springer Thesis Award}{}{}{}
+{Selected for the Springer Thesis Award for an excellent doctoral thesis in condensed matter physics.}
+
+\section{Scholarship}
+\cventry{2019/12--2024/3}{Material Education program for the future leaders in Research, Industry, and Teaching. MERIT}{}{}{}
+{Competitive scholarship awarded to outstanding students in materials science.}
+
+\section{Research Interests}
+\cvitem{\textit{ab-initio} calculation}{First-principles methods for electronic, vibrational, and dielectric properties of condensed matter and molecular systems.}
+\cvitem{Molecular dynamics}{Classical, \textit{ab-initio}, and machine learning molecular dynamics simulations for crystalline and liquid systems.}
+\cvitem{Phonon Anharmonicity}{Anharmonic lattice dynamics and phonon-mediated phenomena beyond the harmonic approximation.}
+\cvitem{Machine learning}{Machine learning techniques for modeling physical properties from first-principles data and enabling scalable materials simulations.}
+
+
+\section{Publication}
+\subsection{Refereed Papers}
+\cvlistitem{\underline{T. Amano}, T. Yamazaki, N. Matsumura, Y. Yoshimoto, S. Tsuneyuki, Transferability of the chemical bond-based machine learning model for dipole moment: the GHz to THz dielectric properties of liquid propylene glycol and polypropylene glycol, Phys. Rev. B 111, 165149 (2025). \href{https://doi.org/10.1103/PhysRevB.111.165149}{[Link]} \href{https://arxiv.org/abs/2410.22718}{[Link]}}
+
+\cvlistitem{N. Matsumura, Y. Yoshimoto, T. Yamazaki, \underline{T. Amano}, T. Noda, N. Ebata, T. Kasano, Y. Sakai, Generator of Neural Network Potential for Molecular Dynamics: Constructing Robust and Accurate Potentials with Active Learning for Nanosecond-Scale Simulations, J. Chem. Theory Comput. 21, 3832 (2025). \href{https://doi.org/10.1021/acs.jctc.4c01613}{[Link]} \href{https://arxiv.org/abs/2411.17191}{[Link]}}
+
+\cvlistitem{\underline{T. Amano}, T. Yamazaki, and S. Tsuneyuki, Chemical bond based machine learning model for dipole moment: Application to dielectric properties of liquid methanol and ethanol, Phys. Rev. B 110, 165159 (2024). \href{https://www.s.u-tokyo.ac.jp/ja/press/10544/}{[Link]}\href{https://arxiv.org/abs/2407.08390}{[arXiv]}}
+
+\cvlistitem{\underline{T. Amano}, T. Yamazaki, R. Akashi, T. Tadano, and S. Tsuneyuki, Lattice Dielectric Properties of Rutile \ce{TiO2}: First-Principles Anharmonic Self-Consistent Phonon Study, Phys. Rev. B 107, 094305 (2023). \href{https://link.aps.org/doi/10.1103/PhysRevB.107.094305}{[Link]} \href{http://arxiv.org/abs/2210.15873}{[arXiv]}}
+
+\subsection{Conference Proceedings}
+
+\cvlistitem{\underline{T. Amano}, T. Yamazaki, and S. Tsuneyuki, The first-principles study of THz dielectric properties with a machine learning model for dipole moment, accepted for Proceedings of 34rd IUPAP Conference on Computational Physics (refereed)}
+
+\subsection{Book}
+
+ \cvlistitem{\underline{T. Amano}, First-Principles and Machine Learning Study of Anharmonic Vibration and Dielectric Properties of Materials, Springer Thesis (2025). \href{https://link.springer.com/book/10.1007/978-981-96-4024-9}{[Link]}}
+
+\section{Oral Presentation}
+\subsection{domestic}
+
+\cvlistitem{\underline{T. Amano} ``First-principles and machine learning study of anharmonic vibration and dielectric properties of materials'' Theory Seminar at the Institute for Solid State Physics, Chiba, Japan, Jan. 26, 2024 (invited)}
+
+\cvlistitem{\underline{T. Amano}, T. Yamazaki, and S. Tsuneyuki ``Dielectric properties of polymers by machine-learning local dipole moments`` The Physical Society of Japan (JPS) 2023 Autumn Meeting, Sendai, Japan, Sep. 17, 2023}
+
+\cvlistitem{\underline{T. Amano}, T. Yamazaki, and S. Tsuneyuki ``First-principles study of THz dielectric properties using a machine learning model for dipole moment`` The Physical Society of Japan (JPS) 2023 Spring Meeting, online, Mar. 22, 2023}
+
+\cvlistitem{\underline{T. Amano}, T. Yamazaki, R. Akashi，T. Tadano, S. Tsuneyuki ``First-principles study of lattice dielectric function in rutile \ce{TiO2}`` YITP Workshop Fundamentals in density functional theory (DFT2022), Kyoto, Japan, Dec. 12, 2022}
+
+\cvlistitem{\underline{T. Amano}, T. Yamazaki, R. Akashi, T. Tadano, and S. Tsuneyuki ``First-principles study of lattice dielectric function in rutile \ce{TiO2}'' The Physical Society of Japan (JPS) 2022 Autumn Meeting, Tokyo, Japan, Sep. 14, 2022}
+
+
+\subsection{international}
+
+\cvlistitem{\underline{T. Amano}, T. Yamazaki, S. Tsuneyuki "The first-principles study of THz dielectric properties with a machine learning model for dipole moment" Advanced Materials Research Grand Meeting MRM2023, Kyoto, Japan, Dec. 12, 2023}
+
+\cvlistitem{\underline{T. Amano}, T. Yamazaki, S. Tsuneyuki ``First-principles study of THz dielectric properties of liquid molecules with a machine learning model for dipole moments`` American Physics Society April Meeting 2023, Minneapolis, USA, Jul. 7, 2023}
+
+\cvlistitem{\underline{T. Amano}, T. Yamazaki, R. Akashi, S. Tsuneyuki ``The first-principles study of THz dielectric properties with a machine learning model for dipole moment'' International Workshop on Theory of Many-Body Problems: Hierarchical Structure and Machine Learning (HISML) 2023, Chiba, Japan, Oct. 10, 2023}
+
+\cvlistitem{\underline{T. Amano}, T. Yamazaki, R. Akashi, S. Tsuneyuki ``First-principles study of lattice dielectric function in rutile \ce{TiO2}'' 33rd IUPAP Conference on Computational Physics, Aug. 04, 2022}
+
+
+\section{Poster presentations}
+\subsection{domestic}
+
+\cvlistitem{\underline{T. Amano}, T. Yamazaki, S. Tsuneyuki ``The machine learning simulation of THz dielectric properties(hp230124)`` The 11th Project Report Meeting of the HPCI System Including Fugaku, Oct. 25, 2024}
+
+\cvlistitem{\underline{T. Amano}, T. Yamazaki, S. Tsuneyuki ``The first-principles study of THz dielectric properties with a machine learning model for dipole moment`` ipi Daikin symposium2023, Oct. 24, 2023}
+
+\cvlistitem{\underline{T. Amano}, T. Yamazaki, R. Akashi，T. Tadano, S. Tsuneyuki ``Lattice Dielectric Properties of Rutile \ce{TiO2}: First-Principles Anharmonic Self-Consistent Phonon Study'' Frontiers of Computational Materials Science2023, Chiba, Japan, Apr. 03, 2023}
+
+\cvlistitem{\underline{T. Amano}, T. Yamazaki, S. Tsuneyuki ``The first-principles study of THz dielectric properties of liquid molecules with a machine learning model for dipole moment'' Spring School on Computational Physics2023, Mar. 13, 2023}
+
+\cvlistitem{\underline{T. Amano}, R. Akashi, S. Tsuneyuki ``First-principles study of lattice dielectric function in rutile TiO2'' Frontiers of Computational Materials Science2022, Chiba, Japan, May, 12, 2022}
+
+
+\subsection{international}
+
+\cvlistitem{\underline{T. Amano}, T. Yamazaki, S. Tsuneyuki "First-principles study of THz dielectric properties of molecular liquids with a machine learning model for dipole moments" Psi-k 2025, Lausanne, Switzerland, Aug. 27, 2025}
+
+\cvlistitem{\underline{T. Amano}, T. Yamazaki, S. Tsuneyuki "The first-principles study of THz dielectric properties with a machine learning model for dipole moment" 34rd IUPAP Conference on Computational Physics, Kobe, Japan, Aug. 5, 2023}
+
+\cvlistitem{\underline{T. Amano}, N. Ogawa, W. Yamada, T. Ikeda, et al "Efficiency measurement of next generation scintillator GAGG at high energy using the \si{992}{KeV} resonance of the \ce{^{27}Al}($p \& \gamma$) \ce{^{28}Si} reaction" 5th Joint Meeting of the APS Division of Nuclear Physics and the Physical Society of Japan, Hawaii, USA, Oct. 26, 2018}
+
+
+% \section{Extra 2}
+% \cvlistdoubleitem{Item 1}{Item 4}
+% \cvlistdoubleitem{Item 2}{Item 5\cite{book2}}
+% \cvlistdoubleitem{Item 3}{Item 6. Like item 3 in the single column list before, this item is particularly long to wrap over several lines.}
+
+% \section{References}
+% \begin{cvcolumns}
+%   \cvcolumn{Category 1}{\begin{itemize}\item Person 1\item Person 2\item Person 3\end{itemize}}
+%   \cvcolumn{Category 2}{Amongst others:\begin{itemize}\item Person 1, and\item Person 2\end{itemize}(more upon request)}
+%   \cvcolumn[0.5]{All the rest \& some more}{\textit{That} person, and \textbf{those} also (all available upon request).}
+% \end{cvcolumns}
+
+% % Publications from a BibTeX file without multibib
+% %  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
+% %  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
+% \nocite{*}
+% \bibliographystyle{plain}
+% \bibliography{publications}                        % 'publications' is the name of a BibTeX file
+
+% % Publications from a BibTeX file using the multibib package
+% %\section{Publications}
+% %\nocitebook{book1,book2}
+% %\bibliographystylebook{plain}
+% %\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
+% %\nocitemisc{misc1,misc2,misc3}
+% %\bibliographystylemisc{plain}
+% %\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
+
+\clearpage
+\end{document}
