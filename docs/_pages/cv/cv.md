@@ -58,8 +58,6 @@ description: my cv
 * JDLA Deep Learning for GENERAL 2022#3
 * JDLA Deep Learning for ENGINEER 2023#2
 * FP3級
-* 漢字検定準一級
-
 
 
 # Publication List
