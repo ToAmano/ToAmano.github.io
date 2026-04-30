@@ -6,6 +6,22 @@ layout: single
 description: my cv
 ---
 
+
+
+
+
+## Work/Education Experience
+
+- 2026/4--present: Project Researcher, Prof. Synge Todo, The University of Tokyo, Tokyo
+- 2024/4--2026/3: Digital Consultant, PwC Consulting LLC, Tokyo
+- 2024/4--2026/3: Visiting Researcher, Prof. Shinji Tsuneyuki, The University of Tokyo, Tokyo
+- 2021/4--2024/3: PhD Student, Prof. Shinji Tsuneyuki, The University of Tokyo, Tokyo
+- 2019/4--2021/3: Master Student, Prof. Shinji Tsuneyuki, The University of Tokyo, Tokyo
+- 2015/4--2019/3: Bachelor Student, The University of Tokyo, Tokyo
+
+
+
+
 ## Submitted
 
 
@@ -90,6 +106,8 @@ description: my cv
 * JSR Corporation (2022/3-2022/5)
 * National Institute for Materials Science(NIMS) (2023/1)
 * Hitachi R&D (2023/2)
+* Prof. Hiroyoshi Sakurai, Prof. Kathrin Wimmer, The University of Tokyo (2018/4-2018/9)
+
 
 ## Teaching
 * Teaching assistant of theoretical physics exercises (2020/9-2021/3)
