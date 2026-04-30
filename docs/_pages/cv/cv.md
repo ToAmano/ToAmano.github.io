@@ -19,8 +19,48 @@ description: my cv
 - 2019/4--2021/3: Master Student, Prof. Shinji Tsuneyuki, The University of Tokyo, Tokyo
 - 2015/4--2019/3: Bachelor Student, The University of Tokyo, Tokyo
 
+### Others
+
+* [統計検定1級 成績最優秀賞](https://www.toukei-kentei.jp/hubfs/files/past/pbt/pbt_exc201711.pdf)
+* [スーパーコンピュータ富岳令和5年一般課題「高周波誘電特性の第一原理計算」課題代表者](https://www.hpci-office.jp/output/hp230124/outcome.pdf?1745064781d)
+
+## Award
+* [令和5年度理学系研究科研究奨励賞](https://www.s.u-tokyo.ac.jp/ja/info/10252/) https://www.phys.s.u-tokyo.ac.jp/award/41753/
+* [Springer Theses Award](https://link.springer.com/book/10.1007/978-981-96-4024-9)
+
+## Scholarship
+* [統合物質科学リーダー養成プログラム採択生](http://www.merit.t.u-tokyo.ac.jp/merit/member/generation_009_1.html)
+
+## Internship
+* JSR Corporation (2022/3-2022/5)
+* National Institute for Materials Science(NIMS) (2023/1)
+* Hitachi R&D (2023/2)
+* Prof. Hiroyoshi Sakurai, Prof. Kathrin Wimmer, The University of Tokyo (2018/4-2018/9)
 
 
+## Teaching
+* Teaching assistant of theoretical physics exercises (2020/9-2021/3)
+
+## certificates
+
+* 統計検定1級
+* 英語検定1級
+* TOEIC 930
+* 情報処理安全確保支援士 試験合格
+* 応用情報技術者
+* 基本情報技術者
+* ITパスポート
+* 情報セキュリティマネジメント
+* Microsoft Certified: Azure Fundamentals (AZ-900)
+* Microsoft Certified: Azure AI Fundamentals (AI-900)
+* JDLA Deep Learning for GENERAL 2022#3
+* JDLA Deep Learning for ENGINEER 2023#2
+* FP3級
+* 漢字検定準一級
+
+
+
+# Publication List
 
 ## Submitted
 
@@ -89,42 +129,3 @@ description: my cv
 * __天野智仁__, 山崎⺠雄, 常行真司 「双極子モーメントの機械学習モデルによる誘電特性の研究」 計算物理春の学校2023, 沖縄, 2023/3/14
 * __天野智仁__, 明石遼介, 常行真司「ルチル型 TiO<sub>2</sub> における格子誘電関数の第一原理的研究」 計算物質科学の新展開2022, Online, 2022/5/12
 
-
-### Others
-
-* [統計検定1級 成績最優秀賞](https://www.toukei-kentei.jp/hubfs/files/past/pbt/pbt_exc201711.pdf)
-* [スーパーコンピュータ富岳令和5年一般課題「高周波誘電特性の第一原理計算」課題代表者](https://www.hpci-office.jp/output/hp230124/outcome.pdf?1745064781d)
-
-## Award
-* [令和5年度理学系研究科研究奨励賞](https://www.s.u-tokyo.ac.jp/ja/info/10252/) https://www.phys.s.u-tokyo.ac.jp/award/41753/
-* [Springer Theses Award](https://link.springer.com/book/10.1007/978-981-96-4024-9)
-
-## Scholarship
-* [統合物質科学リーダー養成プログラム採択生](http://www.merit.t.u-tokyo.ac.jp/merit/member/generation_009_1.html)
-
-## Internship
-* JSR Corporation (2022/3-2022/5)
-* National Institute for Materials Science(NIMS) (2023/1)
-* Hitachi R&D (2023/2)
-* Prof. Hiroyoshi Sakurai, Prof. Kathrin Wimmer, The University of Tokyo (2018/4-2018/9)
-
-
-## Teaching
-* Teaching assistant of theoretical physics exercises (2020/9-2021/3)
-
-## certificates
-
-* 統計検定1級
-* 英語検定1級
-* TOEIC 930
-* 情報処理安全確保支援士 試験合格
-* 応用情報技術者
-* 基本情報技術者
-* ITパスポート
-* 情報セキュリティマネジメント
-* Microsoft Certified: Azure Fundamentals (AZ-900)
-* Microsoft Certified: Azure AI Fundamentals (AI-900)
-* JDLA Deep Learning for GENERAL 2022#3
-* JDLA Deep Learning for ENGINEER 2023#2
-* FP3級
-* 漢字検定準一級
