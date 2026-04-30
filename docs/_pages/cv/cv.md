@@ -22,7 +22,8 @@ description: my cv
 
 ### Others
 
-* [統計検定1級 成績最優秀賞](https://www.toukei-kentei.jp/hubfs/files/past/pbt/pbt_exc201711.pdf)
+* [統計検定1級 「統計応用」 成績最優秀賞](https://www.toukei-kentei.jp/hubfs/files/past/pbt/pbt_exc201711.pdf)
+* 統計検定準1級 成績最優秀賞
 * [スーパーコンピュータ富岳令和5年一般課題「高周波誘電特性の第一原理計算」課題代表者](https://www.hpci-office.jp/output/hp230124/outcome.pdf?1745064781d)
 
 ## Award
