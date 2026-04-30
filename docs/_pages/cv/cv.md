@@ -18,6 +18,7 @@ description: my cv
 - 2021/4--2024/3: PhD Student, Prof. Shinji Tsuneyuki, The University of Tokyo, Tokyo
 - 2019/4--2021/3: Master Student, Prof. Shinji Tsuneyuki, The University of Tokyo, Tokyo
 - 2015/4--2019/3: Bachelor Student, The University of Tokyo, Tokyo
+- 2012/4--2015/3: Student, Azabu Junior High School, Tokyo
 
 ### Others
 
