@@ -6,8 +6,7 @@ layout: single
 description: my cv
 ---
 
-
-
+!!This CV is only for my personal use (not official one)!!
 
 
 ## Work/Education Experience
@@ -33,7 +32,7 @@ description: my cv
 ## Scholarship
 * [統合物質科学リーダー養成プログラム採択生](http://www.merit.t.u-tokyo.ac.jp/merit/member/generation_009_1.html)
 
-## Internship
+## Internship/Visitor
 * JSR Corporation (2022/3-2022/5)
 * National Institute for Materials Science(NIMS) (2023/1)
 * Hitachi R&D (2023/2)
@@ -43,7 +42,7 @@ description: my cv
 ## Teaching
 * Teaching assistant of theoretical physics exercises (2020/9-2021/3)
 
-## certificates
+## Certificates
 
 * 統計検定1級
 * 英語検定1級
@@ -64,7 +63,6 @@ description: my cv
 
 ## Submitted
 
-
 ## Refereed Papers
 
 4. __T. Amano__, T. Yamazaki, N. Matsumura, Y. Yoshimoto, S. Tsuneyuki, "Transferability of the chemical bond-based machine learning model for dipole moment: the GHz to THz dielectric properties of liquid propylene glycol and polypropylene glycol", Phys. Rev. B **111**, 165149 (2025). [[link](https://doi.org/10.1103/PhysRevB.111.165149)][[arXiv](https://arxiv.org/abs/2410.22718)]
@@ -75,14 +73,13 @@ description: my cv
 
 1. __T. Amano__, T. Yamazaki, R. Akashi, T. Tadano, S. Tsuneyuki, "Lattice dielectric properties of rutile TiO<sub>2</sub>: First-principles anharmonic self-consistent phonon study", Phys. Rev. B **107**, 094305 (2023). [[link](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.107.094305)] [[arXiv](https://arxiv.org/abs/2210.15873)]
 
+## Book
+
+1. __T. Amano__, "First-Principles and Machine Learning Study of Anharmonic Vibration and Dielectric Properties of Materials", Springer Thesis (2025). [[link](https://link.springer.com/book/10.1007/978-981-96-4024-9)]
 
 ## Conference Proceedings
 
 1. __T. Amano__, T. Yamazaki, S. Tsuneyuki, "The first-principles study of THz dielectric properties with a machine learning model for dipole moment", accepted for Proceedings of 34rd IUPAP Conference on Computational Physics (refereed).
-
-## Book
-
-1. __T. Amano__, "First-Principles and Machine Learning Study of Anharmonic Vibration and Dielectric Properties of Materials", Springer Thesis (2025). [[link](https://link.springer.com/book/10.1007/978-981-96-4024-9)]
 
 ## Thesis
 
